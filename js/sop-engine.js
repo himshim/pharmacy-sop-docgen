@@ -4,25 +4,44 @@ const sopSelect = document.getElementById("sopSelect");
 
 let TEMPLATE = "";
 
-/* ===============================
-   LOAD SOP TEMPLATE ONCE
-================================ */
+/* ==================================
+   LOAD SOP TEMPLATE (ONCE)
+================================== */
 fetch("templates/sop-a4.html")
   .then(res => res.text())
   .then(html => {
     TEMPLATE = html;
-    console.log("Template loaded");
+    console.log("SOP template loaded");
   })
   .catch(err => console.error("Template load error", err));
 
-/* ===============================
-   DEPARTMENT CHANGE
-================================ */
+/* ==================================
+   LOAD DEPARTMENTS LIST
+================================== */
+fetch("data/departments.json")
+  .then(res => res.json())
+  .then(data => {
+    data.departments.forEach(dept => {
+      const opt = document.createElement("option");
+      opt.value = dept.key;
+      opt.textContent = dept.name;
+      deptSelect.appendChild(opt);
+    });
+  })
+  .catch(err => {
+    console.error(err);
+    alert("Failed to load departments");
+  });
+
+/* ==================================
+   DEPARTMENT CHANGE → LOAD SOP INDEX
+================================== */
 deptSelect.addEventListener("change", async () => {
   const dept = deptSelect.value;
 
   sopSelect.innerHTML = '<option value="">Select SOP</option>';
   sopSelect.disabled = true;
+  preview.innerHTML = "";
 
   if (!dept) return;
 
@@ -43,9 +62,9 @@ deptSelect.addEventListener("change", async () => {
   }
 });
 
-/* ===============================
-   SOP CHANGE
-================================ */
+/* ==================================
+   SOP CHANGE → LOAD SOP JSON
+================================== */
 sopSelect.addEventListener("change", async () => {
   const sopKey = sopSelect.value;
   const dept = deptSelect.value;
@@ -61,9 +80,9 @@ sopSelect.addEventListener("change", async () => {
   }
 });
 
-/* ===============================
-   RENDER SOP (OLD JSON COMPAT)
-================================ */
+/* ==================================
+   RENDER SOP (OLD JSON FORMAT)
+================================== */
 function renderSOP(raw, deptName) {
   if (!TEMPLATE) return;
 
