@@ -182,8 +182,35 @@ function render() {
     .join("");
 
   const viewData = {
-    ...SOP_DATA,
+    institute: SOP_DATA.institute,
+    department: SOP_DATA.department,
+    title: SOP_DATA.title,
+    sopNumber: SOP_DATA.sopNumber,
+
+    revisionNo: SOP_DATA.revisionNo,
+    effectiveDate: SOP_DATA.effectiveDate,
+    revisionDate: SOP_DATA.revisionDate,
+    nextReviewDate: SOP_DATA.nextReviewDate,
+
+    purpose: SOP_DATA.purpose,
+    scope: SOP_DATA.scope,
+    precautions: SOP_DATA.precautions,
+
     procedure: SOP_DATA.procedure.map((s) => `<li>${s}</li>`).join(""),
+
+    preparedBy: SOP_DATA.preparedBy,
+    preparedDesig: SOP_DATA.preparedDesig,
+    preparedDate: SOP_DATA.preparedDate,
+
+    checkedBy: SOP_DATA.checkedBy,
+    checkedDesig: SOP_DATA.checkedDesig,
+    checkedDate: SOP_DATA.checkedDate,
+
+    approvedBy: SOP_DATA.approvedBy,
+    approvedDesig: SOP_DATA.approvedDesig,
+    approvedDate: SOP_DATA.approvedDate,
+
+    copyType: SOP_DATA.copyType, // ✅ EXPLICITLY PASSED
     changeHistory: changeHistoryHTML,
   };
 
