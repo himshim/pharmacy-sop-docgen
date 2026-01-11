@@ -11,25 +11,22 @@
     <style>
         /* ==================== PRINT STYLES ==================== */
         @media print {
-            /* Hide everything except preview */
             body * {
                 visibility: hidden !important;
             }
 
-            /* Show only the preview content */
+            #preview,
+            #preview *,
             #preview-content,
             #preview-content *,
-            .sop-preview,
-            .sop-preview *,
-            #sop-preview,
-            #sop-preview * {
+            .preview-content,
+            .preview-content * {
                 visibility: visible !important;
             }
 
-            /* Position preview at top */
+            #preview,
             #preview-content,
-            .sop-preview,
-            #sop-preview {
+            .preview-content {
                 position: absolute !important;
                 left: 0 !important;
                 top: 0 !important;
@@ -38,13 +35,11 @@
                 margin: 0 !important;
             }
 
-            /* A4 Page Setup */
             @page {
                 size: A4 portrait;
                 margin: 20mm;
             }
 
-            /* Remove backgrounds and shadows for print */
             * {
                 background: white !important;
                 box-shadow: none !important;
@@ -53,7 +48,6 @@
                 print-color-adjust: exact !important;
             }
 
-            /* Typography for print */
             body {
                 font-size: 12pt !important;
                 line-height: 1.5 !important;
@@ -64,37 +58,18 @@
             h1 { font-size: 18pt !important; margin-bottom: 12pt !important; }
             h2 { font-size: 16pt !important; margin-bottom: 10pt !important; }
             h3 { font-size: 14pt !important; margin-bottom: 8pt !important; }
-
             p { margin-bottom: 6pt !important; }
 
-            /* Hide all UI elements */
-            .header,
-            .sidebar,
-            .controls,
-            .tabs,
-            .action-bar,
-            .bottom-bar,
-            .footer,
-            button,
-            input,
-            select,
-            textarea,
-            .no-print,
-            nav {
+            .header, .sidebar, .controls, .tabs, .action-bar,
+            .bottom-bar, .footer, button, input, select, 
+            textarea, .no-print, nav, .tab-btn, .action-buttons {
                 display: none !important;
                 visibility: hidden !important;
             }
 
-            /* Page breaks */
-            .page-break {
-                page-break-after: always;
-            }
+            .page-break { page-break-after: always; }
+            .page-break-before { page-break-before: always; }
 
-            .page-break-before {
-                page-break-before: always;
-            }
-
-            /* Prevent page breaks inside elements */
             h1, h2, h3, h4, h5, h6 {
                 page-break-after: avoid;
                 page-break-inside: avoid;
@@ -104,7 +79,6 @@
                 page-break-inside: avoid;
             }
 
-            /* Ensure tables print properly */
             table {
                 border-collapse: collapse !important;
                 width: 100% !important;
@@ -198,14 +172,12 @@
         }
 
         /* ==================== RESPONSIVE UI SWITCHING ==================== */
-        /* Hide mobile UI on desktop */
         @media (min-width: 769px) {
             #ui-mobile { 
                 display: none !important; 
             }
         }
 
-        /* Hide desktop UI on mobile */
         @media (max-width: 768px) {
             #ui-desktop { 
                 display: none !important; 
@@ -276,7 +248,7 @@
 
         // ==================== EVENT LISTENER ATTACHMENT ====================
         function attachEventListeners() {
-            console.log('Attaching event listeners...');
+            console.log('ðŸŽ¯ Attaching event listeners...');
 
             // === Mobile UI: Tab Switching ===
             const tabButtons = document.querySelectorAll('.tab-btn, [data-tab]');
@@ -319,48 +291,25 @@
                     newBtn.addEventListener('click', function(e) {
                         e.preventDefault();
                         e.stopPropagation();
-                        console.log('Print button clicked');
+                        console.log('ðŸ–¨ï¸ Print button clicked');
                         window.print();
                     });
                 }
             });
 
-            // === Preview/Settings Button Handler (Mobile) ===
-            const previewBtn = document.querySelector('[data-tab="preview"]');
-            const settingsBtn = document.querySelector('[data-tab="settings"]');
-            const createBtn = document.querySelector('[data-tab="create"]');
-
-            if (previewBtn) {
-                previewBtn.addEventListener('click', function() {
-                    console.log('Preview tab clicked');
-                });
-            }
-
-            if (settingsBtn) {
-                settingsBtn.addEventListener('click', function() {
-                    console.log('Settings tab clicked');
-                });
-            }
-
-            if (createBtn) {
-                createBtn.addEventListener('click', function() {
-                    console.log('Create tab clicked');
-                });
-            }
-
-            console.log('Event listeners attached successfully');
+            console.log('âœ… Event listeners attached successfully');
         }
 
         // ==================== UI LOADING ====================
         async function loadUI() {
-            console.log('Starting UI load...');
+            console.log('ðŸš€ Starting UI load...');
 
             const isMobile = window.innerWidth <= 768;
             const uiFile = isMobile ? 'partials/ui-mobile.html' : 'partials/ui-desktop.html';
             const targetDiv = isMobile ? 'ui-mobile' : 'ui-desktop';
 
-            console.log(`Device: ${isMobile ? 'Mobile' : 'Desktop'}`);
-            console.log(`Loading: ${uiFile}`);
+            console.log(`ðŸ“± Device: ${isMobile ? 'Mobile' : 'Desktop'}`);
+            console.log(`ðŸ“„ Loading: ${uiFile}`);
 
             try {
                 // Fetch UI file
@@ -370,7 +319,7 @@
                 }
 
                 const html = await response.text();
-                console.log(`Loaded ${html.length} bytes from ${uiFile}`);
+                console.log(`âœ… Loaded ${html.length} bytes from ${uiFile}`);
 
                 // Inject HTML into target container
                 const targetElement = document.getElementById(targetDiv);
@@ -379,17 +328,17 @@
                 }
 
                 targetElement.innerHTML = html;
-                console.log('UI injected into DOM');
+                console.log('âœ… UI injected into DOM');
 
                 // Wait for DOM to settle
                 await new Promise(resolve => setTimeout(resolve, 100));
 
                 // Initialize SOP App (from sop-engine.js)
                 if (typeof window.initSOPApp === 'function') {
-                    console.log('Initializing SOP App...');
+                    console.log('âš™ï¸ Initializing SOP App...');
                     window.initSOPApp();
                 } else {
-                    console.warn('initSOPApp function not found');
+                    console.warn('âš ï¸ initSOPApp function not found');
                 }
 
                 // Attach event listeners for dynamic content
@@ -403,11 +352,11 @@
                     loadingScreen.classList.add('hidden');
                     uiContainer.classList.add('loaded');
 
-                    console.log('UI loaded successfully');
+                    console.log('âœ… UI loaded successfully');
                 }, 500);
 
             } catch (error) {
-                console.error('Error loading UI:', error);
+                console.error('âŒ Error loading UI:', error);
 
                 // Show error message
                 const loadingScreen = document.getElementById('loadingScreen');
@@ -432,7 +381,7 @@
 
                 // Reload if device type changed
                 if (wasMobile !== isMobile) {
-                    console.log('Device type changed, reloading...');
+                    console.log('ðŸ”„ Device type changed, reloading...');
                     location.reload();
                 }
             }, 250);
@@ -443,7 +392,6 @@
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', loadUI);
         } else {
-            // DOM already loaded
             loadUI();
         }
 
@@ -451,22 +399,21 @@
         window.addEventListener('resize', handleResize);
 
         // ==================== PRINT HANDLER ====================
-        // Additional print handling
         window.addEventListener('beforeprint', function() {
-            console.log('Print dialog opened');
+            console.log('ðŸ–¨ï¸ Print dialog opened');
         });
 
         window.addEventListener('afterprint', function() {
-            console.log('Print dialog closed');
+            console.log('âœ… Print dialog closed');
         });
 
         // ==================== ERROR HANDLING ====================
         window.addEventListener('error', function(e) {
-            console.error('Global error:', e.error);
+            console.error('âŒ Global error:', e.error);
         });
 
         window.addEventListener('unhandledrejection', function(e) {
-            console.error('Unhandled promise rejection:', e.reason);
+            console.error('âŒ Unhandled promise rejection:', e.reason);
         });
     </script>
 </body>
