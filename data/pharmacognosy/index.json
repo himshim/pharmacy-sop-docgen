@@ -1,0 +1,9 @@
+{
+  "department": "Pharmacognosy",
+  "instruments": [
+    { "key": "compound-microscope", "name": "Compound Microscope" },
+    { "key": "sieve-shaker", "name": "Sieve Shaker" },
+    { "key": "soxhlet", "name": "Soxhlet Extraction Apparatus" },
+    { "key": "clevenger", "name": "Clevenger Apparatus" }
+  ]
+}
