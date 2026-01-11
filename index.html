@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Pharmacy SOP Generator</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>Pharmacy SOP Generator</title>
 
-    <!-- UI styles -->
-    <link rel="stylesheet" href="css/ui-desktop.css" />
-    <link rel="stylesheet" href="css/ui-mobile.css" />
+  <!-- REQUIRED FOR MOBILE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Print -->
-    <link rel="stylesheet" href="css/print-a4.css" />
-  </head>
+  <!-- UI styles -->
+  <link rel="stylesheet" href="css/ui-desktop.css" />
+  <link rel="stylesheet" href="css/ui-mobile.css" />
 
-  <body>
-    <!-- DESKTOP UI -->
-    <div id="ui-desktop">
-      <!-- contents of partials/ui-desktop.html pasted here -->
-    </div>
+  <!-- Print (A4) -->
+  <link rel="stylesheet" href="css/print-a4.css" />
+</head>
 
-    <!-- MOBILE UI -->
-    <div id="ui-mobile">
-      <!-- contents of partials/ui-mobile.html pasted here -->
-    </div>
+<body>
 
-    <!-- CREDIT (SCREEN ONLY) -->
-    <footer class="app-footer">
-      Created by
-      <a href="https://github.com/himshim" target="_blank">@himshim26</a>
-      ·
-      <a href="https://github.com/himshim/pharmacy-sop-docgen" target="_blank">
-        Source Code
-      </a>
-    </footer>
+  <!-- APP ROOT (UI injected here) -->
+  <div id="app"></div>
 
-    <script>
-      (async function () {
-        const app = document.getElementById("app");
-        if (!app) return;
+  <!-- CREDIT (SCREEN ONLY) -->
+  <footer class="app-footer">
+    Created by
+    <a href="https://github.com/himshim" target="_blank" rel="noopener">
+      @himshim26
+    </a>
+    ·
+    <a
+      href="https://github.com/himshim/pharmacy-sop-docgen"
+      target="_blank"
+      rel="noopener"
+    >
+      Source Code
+    </a>
+  </footer>
 
-        const isMobile = window.matchMedia("(max-width: 768px)").matches;
-        const uiFile = isMobile ? "ui-mobile.html" : "ui-desktop.html";
+  <!-- UI LOADER -->
+  <script>
+    (async function () {
+      const app = document.getElementById("app");
+      if (!app) return;
 
-        try {
-          const html = await fetch(uiFile).then((r) => r.text());
-          app.innerHTML = html;
-        } catch (e) {
-          app.innerHTML = "<p style='color:red'>Failed to load UI</p>";
-        }
-      })();
-    </script>
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-    <!-- LOGIC (shared) -->
-    <script src="js/template-engine.js"></script>
-    <script src="js/sop-engine.js"></script>
-  </body>
+      // ✅ CORRECT PATHS
+      const uiFile = isMobile
+        ? "partials/ui-mobile.html"
+        : "partials/ui-desktop.html";
+
+      try {
+        const res = await fetch(uiFile);
+        if (!res.ok) throw new Error(res.status);
+        app.innerHTML = await res.text();
+      } catch (e) {
+        console.error("UI load failed:", e);
+        app.innerHTML =
+          "<p style='padding:20px;color:red'>Failed to load UI</p>";
+      }
+    })();
+  </script>
+
+  <!-- SHARED LOGIC -->
+  <script src="js/template-engine.js"></script>
+  <script src="js/sop-engine.js"></script>
+
+</body>
 </html>
