@@ -1,72 +1,51 @@
-const deptSelect = document.getElementById("departmentSelect");
-const sopSelect = document.getElementById("sopSelect");
 const preview = document.getElementById("preview");
 
-let SOP_TEMPLATE = "";
+let TEMPLATE = "";
 
-// Load SOP HTML template
+// Load template once
 fetch("templates/sop-a4.html")
-  .then(r => r.text())
-  .then(html => SOP_TEMPLATE = html);
+  .then(res => res.text())
+  .then(html => {
+    TEMPLATE = html;
+    console.log("SOP template loaded");
+  })
+  .catch(err => console.error("Template load failed", err));
 
-// Load departments
-fetch("data/pharmaceutics/index.json")
-  .then(r => r.json())
-  .then(data => {
-    data.instruments.forEach(i => {
-      const opt = document.createElement("option");
-      opt.value = i.key;
-      opt.textContent = i.name;
-      deptSelect.appendChild(opt);
-    });
-  });
+// TEST DATA
+function renderTestSOP() {
+  const data = {
+    institute: "K C Institute of Pharmaceutical Sciences",
+    department: "Pharmaceutics",
+    title: "Operation of HPLC System",
+    sopNumber: "SOP/PH/001",
+    purpose: "To describe the procedure for operating the HPLC system.",
+    scope: "Applicable to all trained laboratory personnel.",
+    procedure: [
+      "Switch ON the main power supply.",
+      "Allow the system to equilibrate.",
+      "Set method parameters as per protocol.",
+      "Inject sample and record chromatogram."
+    ],
+    precautions: "Ensure proper grounding. Do not touch electrical parts with wet hands."
+  };
 
-// Department change
-deptSelect.addEventListener("change", async () => {
-  sopSelect.innerHTML = '<option value="">Select SOP</option>';
-  sopSelect.disabled = true;
-
-  const dept = deptSelect.value;
-  if (!dept) return;
-
-  const index = await fetch(`data/${dept}/index.json`).then(r => r.json());
-
-  index.instruments.forEach(sop => {
-    const opt = document.createElement("option");
-    opt.value = sop.key;
-    opt.textContent = sop.name;
-    sopSelect.appendChild(opt);
-  });
-
-  sopSelect.disabled = false;
-});
-
-// SOP change
-sopSelect.addEventListener("change", async () => {
-  const sopKey = sopSelect.value;
-  if (!sopKey) return;
-
-  const data = await fetch(`data/pharmaceutics/${sopKey}.json`).then(r => r.json());
   renderSOP(data);
-});
+}
 
 function renderSOP(data) {
-  let html = SOP_TEMPLATE;
+  let html = TEMPLATE;
 
+  html = html.replace("{{institute}}", data.institute);
+  html = html.replace("{{department}}", data.department);
   html = html.replace("{{title}}", data.title);
+  html = html.replace("{{sopNumber}}", data.sopNumber);
   html = html.replace("{{purpose}}", data.purpose);
   html = html.replace("{{scope}}", data.scope);
   html = html.replace(
     "{{procedure}}",
-    data.procedure.map(p => `<li>${p}</li>`).join("")
+    data.procedure.map(step => `<li>${step}</li>`).join("")
   );
   html = html.replace("{{precautions}}", data.precautions);
-  html = html.replace("{{department}}", data.department);
-  html = html.replace("{{sopNumber}}", data.sopNumber);
 
   preview.innerHTML = html;
-}
-
-function printSOP() {
-  window.print();
 }
