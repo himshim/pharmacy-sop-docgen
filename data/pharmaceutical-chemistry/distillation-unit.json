@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Distillation Unit"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for separation of liquids using a distillation unit.",
+    "scope": "Applicable to simple and fractional distillation in the Pharmaceutical Chemistry laboratory.",
+    "procedure": [
+      "Assemble the distillation unit properly.",
+      "Add the liquid mixture to the distillation flask.",
+      "Fix thermometer and condenser securely.",
+      "Start heating gradually.",
+      "Collect the distillate in a receiving flask.",
+      "Monitor temperature during distillation.",
+      "After completion, switch OFF heating and dismantle the setup."
+    ],
+    "precautions": "Do not overheat. Ensure continuous water flow through condenser."
+  }
+}

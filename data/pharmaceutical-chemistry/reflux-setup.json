@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Reflux Condenser Setup"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for carrying out reactions under reflux conditions.",
+    "scope": "Applicable to chemical reactions performed under reflux in the Pharmaceutical Chemistry laboratory.",
+    "procedure": [
+      "Assemble the reflux condenser setup securely.",
+      "Add reactants and solvent to the round bottom flask.",
+      "Connect the condenser and ensure proper water flow.",
+      "Heat the reaction mixture using a heating mantle.",
+      "Maintain gentle boiling during reflux.",
+      "After completion, switch OFF heating and allow cooling.",
+      "Dismantle the setup carefully."
+    ],
+    "precautions": "Ensure tight connections. Do not allow condenser to run dry."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Rotary Vacuum Evaporator"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for solvent evaporation using a rotary vacuum evaporator.",
+    "scope": "Applicable to concentration of solutions in the Pharmaceutical Chemistry laboratory.",
+    "procedure": [
+      "Ensure the rotary evaporator is clean and properly assembled.",
+      "Transfer the solution into the evaporation flask.",
+      "Set the required temperature of the water bath.",
+      "Apply vacuum gradually.",
+      "Start rotation of the flask.",
+      "Continue evaporation until solvent is removed.",
+      "Release vacuum, stop rotation, and remove the flask."
+    ],
+    "precautions": "Do not apply sudden vacuum. Ensure proper cooling water circulation."
+  }
+}

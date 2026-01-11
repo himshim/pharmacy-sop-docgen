@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Melting Point Apparatus"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for determining melting point using a melting point apparatus.",
+    "scope": "Applicable to determination of melting point of solid substances in the Pharmaceutical Chemistry laboratory.",
+    "procedure": [
+      "Ensure the melting point apparatus is clean and switched OFF.",
+      "Fill the capillary tube with finely powdered sample.",
+      "Place the capillary tube in the heating block.",
+      "Switch ON the apparatus and start heating gradually.",
+      "Observe the temperature at which the sample starts melting.",
+      "Record the melting point range.",
+      "Switch OFF the apparatus after use."
+    ],
+    "precautions": "Do not heat rapidly. Handle capillary tubes carefully to avoid breakage."
+  }
+}
