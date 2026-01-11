@@ -1,0 +1,9 @@
+{
+  "department": "Microbiology",
+  "instruments": [
+    { "key": "autoclave", "name": "Autoclave" },
+    { "key": "laminar-air-flow", "name": "Laminar Air Flow Bench" },
+    { "key": "bacterial-incubator", "name": "Bacterial Incubator" },
+    { "key": "colony-counter", "name": "Colony Counter" }
+  ]
+}
