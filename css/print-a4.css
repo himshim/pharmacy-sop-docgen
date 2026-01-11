@@ -1,18 +1,6 @@
-@page {
-  size: A4;
-  margin: 20mm;
-}
-
-.page {
-  width: 210mm;
-  min-height: 297mm;
-  padding: 20mm;
-  box-sizing: border-box;
-}
-
-.center {
-  text-align: center;
-}
+/* =========================
+   A4 PAGE SETUP
+========================= */
 
 h1 {
   font-size: 16pt;
@@ -23,7 +11,9 @@ h2 {
   margin-top: 16px;
 }
 
-p, li, td {
+p,
+li,
+td {
   font-size: 11pt;
 }
 
@@ -33,31 +23,39 @@ table {
   margin-bottom: 12px;
 }
 
-td {
+td,
+th {
   border: 1px solid black;
   padding: 6px;
 }
 
-/* SCREEN PREVIEW */
+.center {
+  text-align: center;
+}
+
+/* =========================
+   SCREEN PREVIEW
+========================= */
+
 #preview-wrapper {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   overflow: auto;
   max-height: 90vh;
+  padding-bottom: 20px;
 }
 
-/* A4 PAGE */
 #preview {
   width: 210mm;
   min-height: 297mm;
   background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   padding: 20mm;
   box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-/* SCALE DOWN ON SMALL SCREENS */
+/* Scale preview visually, never resize it */
 @media screen and (max-width: 900px) {
   #preview {
     transform: scale(0.7);
@@ -72,12 +70,18 @@ td {
   }
 }
 
+/* =========================
+   PRINT MODE
+========================= */
+
 @media print {
 
+  /* Hide everything */
   body * {
     visibility: hidden;
   }
 
+  /* Show only SOP */
   #preview-wrapper,
   #preview,
   #preview * {
@@ -86,9 +90,7 @@ td {
 
   #preview-wrapper {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+    inset: 0;
   }
 
   #preview {
