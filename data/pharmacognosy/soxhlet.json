@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Soxhlet Extraction Apparatus"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for extraction of constituents using Soxhlet apparatus.",
+    "scope": "Applicable to extraction of crude drugs in the Pharmacognosy laboratory.",
+    "procedure": [
+      "Assemble the Soxhlet extraction apparatus properly.",
+      "Place the powdered drug in the extraction thimble.",
+      "Add suitable solvent to the round bottom flask.",
+      "Heat the assembly gently using a heating mantle.",
+      "Allow the extraction cycle to continue for the required duration.",
+      "After extraction, allow the apparatus to cool.",
+      "Collect the extract for further analysis."
+    ],
+    "precautions": "Ensure proper assembly to prevent solvent leakage. Handle hot apparatus carefully."
+  }
+}

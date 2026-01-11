@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Clevenger Apparatus"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for isolation of volatile oils using a Clevenger apparatus.",
+    "scope": "Applicable to volatile oil estimation in the Pharmacognosy laboratory.",
+    "procedure": [
+      "Assemble the Clevenger apparatus correctly.",
+      "Place the plant material and water in the distillation flask.",
+      "Heat the assembly gently.",
+      "Allow distillation to proceed for the specified time.",
+      "Collect the condensed oil in the graduated arm.",
+      "Measure the volume of volatile oil obtained.",
+      "After completion, switch OFF heating and dismantle the apparatus."
+    ],
+    "precautions": "Avoid excessive heating. Handle glassware carefully to prevent breakage."
+  }
+}
