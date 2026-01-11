@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pharmacy SOP Generator</title>
+
+  <link rel="stylesheet" href="css/print-a4.css" />
+
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+    }
+    select, button {
+      margin: 8px 0;
+      padding: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Pharmacy SOP Generator</h2>
+
+<!-- CONTROLS -->
+<select id="departmentSelect">
+  <option value="">Select Department</option>
+</select>
+
+<select id="sopSelect" disabled>
+  <option value="">Select SOP Template</option>
+</select>
+
+<button onclick="printSOP()">Print SOP</button>
+
+<hr />
+
+<!-- PREVIEW -->
+<div id="preview"></div>
+
+<!-- TEMPLATE (HIDDEN) -->
+<template id="sop-template"></template>
+
+<script src="js/sop-engine.js"></script>
+</body>
+</html>
