@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Plethysmometer"
+  },
+  "sections": {
+    "purpose": "To determine paw volume using a plethysmometer for inflammation studies.",
+    "scope": "Applicable to experimental pharmacology studies in the Pharmacology laboratory.",
+    "procedure": [
+      "Fill the plethysmometer cell with appropriate fluid.",
+      "Switch ON the instrument.",
+      "Calibrate the apparatus if required.",
+      "Gently immerse the animal paw up to the marked level.",
+      "Record the paw volume reading.",
+      "Remove the paw and wipe gently.",
+      "Switch OFF the instrument after use."
+    ],
+    "precautions": "Avoid injury to the animal. Maintain cleanliness of the fluid cell."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Rota Rod Apparatus"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for evaluating motor coordination using the Rota Rod apparatus.",
+    "scope": "Applicable to pharmacological experiments conducted in the Pharmacology laboratory.",
+    "procedure": [
+      "Ensure the apparatus is clean and properly installed.",
+      "Switch ON the Rota Rod apparatus.",
+      "Set the desired rotation speed.",
+      "Place the animal gently on the rotating rod.",
+      "Start the timer and observe the fall-off time.",
+      "Record the time taken for the animal to fall.",
+      "After completion, switch OFF the apparatus."
+    ],
+    "precautions": "Handle animals gently. Do not expose animals to unnecessary stress."
+  }
+}

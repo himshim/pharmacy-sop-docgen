@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Analgesiometer"
+  },
+  "sections": {
+    "purpose": "To assess analgesic activity using an Analgesiometer.",
+    "scope": "Applicable to pain response studies in Pharmacology laboratory.",
+    "procedure": [
+      "Ensure the analgesiometer is clean and functional.",
+      "Switch ON the instrument.",
+      "Set the desired stimulus intensity.",
+      "Place the animal carefully in the apparatus.",
+      "Apply the stimulus and note the reaction time.",
+      "Record the response time accurately.",
+      "Switch OFF the instrument after completion."
+    ],
+    "precautions": "Do not exceed cut-off time. Follow ethical guidelines for animal experimentation."
+  }
+}
