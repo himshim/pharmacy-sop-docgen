@@ -1,84 +1,89 @@
 <div class="sop">
+  <h1 style="text-align: center; letter-spacing: 1px">
+    STANDARD OPERATING PROCEDURE (SOP)
+  </h1>
 
-<h1 style="text-align:center; letter-spacing:1px;">
-STANDARD OPERATING PROCEDURE (SOP)
-</h1>
+  <table border="1" width="100%" cellpadding="6" cellspacing="0">
+    <tr>
+      <td><strong>Institution</strong></td>
+      <td>{{institute}}</td>
+    </tr>
+    <tr>
+      <td><strong>Department</strong></td>
+      <td>{{department}}</td>
+    </tr>
+    <tr>
+      <td><strong>SOP Title</strong></td>
+      <td>{{title}}</td>
+    </tr>
+    <tr>
+      <td><strong>SOP No.</strong></td>
+      <td>{{sopNumber}}</td>
+    </tr>
+    <tr>
+      <td><strong>Effective Date</strong></td>
+      <td>{{effectiveDate}}</td>
+    </tr>
+    <tr>
+      <td><strong>Last Revision Date</strong></td>
+      <td>{{revisionDate}}</td>
+    </tr>
+  </table>
 
-<table border="1" width="100%" cellpadding="6" cellspacing="0">
-<tr>
-  <td width="30%"><strong>Institution</strong></td>
-  <td>{{institute}}</td>
-</tr>
-<tr>
-  <td><strong>Department</strong></td>
-  <td>{{department}}</td>
-</tr>
-<tr>
-  <td><strong>Title of SOP</strong></td>
-  <td>{{title}}</td>
-</tr>
-<tr>
-  <td><strong>SOP Number</strong></td>
-  <td>{{sopNumber}}</td>
-</tr>
-</table>
+  <h2>1. Purpose</h2>
+  <p>{{purpose}}</p>
 
-<h2>1. Purpose</h2>
-<p>{{purpose}}</p>
+  <h2>2. Scope</h2>
+  <p>{{scope}}</p>
 
-<h2>2. Scope</h2>
-<p>{{scope}}</p>
+  <h2>3. Responsibility</h2>
+  <p>
+    The responsibility for implementation of this SOP lies with the Head of
+    Department, faculty members, technical staff, and students as applicable.
+  </p>
 
-<h2>3. Responsibility</h2>
-<p>
-The responsibility for implementation of this SOP lies with the
-Head of Department, faculty members, technical staff, and students
-as applicable.
-</p>
+  <h2>4. Procedure</h2>
+  <ol>
+    {{procedure}}
+  </ol>
 
-<h2>4. Procedure</h2>
-<ol>
-{{procedure}}
-</ol>
+  <h2>5. Precautions / Safety Measures</h2>
+  <p>{{precautions}}</p>
 
-<h2>5. Precautions / Safety Measures</h2>
-<p>{{precautions}}</p>
+  <h2>6. Documentation & Records</h2>
+  <p>
+    All records related to this SOP shall be maintained by the department and
+    produced during internal and external audits including NAAC.
+  </p>
 
-<h2>6. Documentation & Records</h2>
-<p>
-All records related to this SOP shall be maintained by the department
-and produced during internal and external audits including NAAC.
-</p>
+  <p style="text-align: center; margin-top: 40px">
+    <strong>— End of SOP —</strong>
+  </p>
 
-<p style="text-align:center; margin-top:40px;">
-<strong>— End of SOP —</strong>
-</p>
+  <h2>Authorization</h2>
 
-<h2>Authorization</h2>
-
-<table border="1" width="100%" cellpadding="8" cellspacing="0">
-<tr>
-  <th>Prepared By</th>
-  <th>Checked By</th>
-  <th>Approved By</th>
-</tr>
-<tr>
-  <td>
-    <strong>{{preparedBy}}</strong><br>
-    {{preparedDesig}}<br>
-    Date: {{preparedDate}}
-  </td>
-  <td>
-    <strong>{{checkedBy}}</strong><br>
-    {{checkedDesig}}<br>
-    Date: {{checkedDate}}
-  </td>
-  <td>
-    <strong>{{approvedBy}}</strong><br>
-    {{approvedDesig}}<br>
-    Date: {{approvedDate}}
-  </td>
-</tr>
-</table>
-
+  <table border="1" width="100%" cellpadding="8" cellspacing="0">
+    <tr>
+      <th>Prepared By</th>
+      <th>Checked By</th>
+      <th>Approved By</th>
+    </tr>
+    <tr>
+      <td>
+        <strong>{{preparedBy}}</strong><br />
+        {{preparedDesig}}<br />
+        Date: {{preparedDate}}
+      </td>
+      <td>
+        <strong>{{checkedBy}}</strong><br />
+        {{checkedDesig}}<br />
+        Date: {{checkedDate}}
+      </td>
+      <td>
+        <strong>{{approvedBy}}</strong><br />
+        {{approvedDesig}}<br />
+        Date: {{approvedDate}}
+      </td>
+    </tr>
+  </table>
 </div>

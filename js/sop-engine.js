@@ -5,6 +5,9 @@ const sopSelect = document.getElementById("sopSelect");
 const templateSelect = document.getElementById("templateSelect");
 
 const inputs = {
+  effectiveDate: document.getElementById("effectiveDate"),
+  revisionDate: document.getElementById("revisionDate"),
+
   institute: document.getElementById("institute"),
   department: document.getElementById("department"),
   title: document.getElementById("title"),
@@ -24,7 +27,7 @@ const inputs = {
 
   approvedBy: document.getElementById("approvedBy"),
   approvedDesig: document.getElementById("approvedDesig"),
-  approvedDate: document.getElementById("approvedDate")
+  approvedDate: document.getElementById("approvedDate"),
 };
 
 let TEMPLATE_HTML = "";
@@ -34,10 +37,10 @@ let SOP_DATA = {};
    LOAD DEPARTMENTS
 ========================= */
 fetch("data/departments.json")
-  .then(r => r.json())
-  .then(d => {
+  .then((r) => r.json())
+  .then((d) => {
     departmentSelect.innerHTML = `<option value="">Select</option>`;
-    d.departments.forEach(dep => {
+    d.departments.forEach((dep) => {
       departmentSelect.innerHTML += `<option value="${dep.key}">${dep.name}</option>`;
     });
   });
@@ -53,9 +56,9 @@ departmentSelect.addEventListener("change", async () => {
   const dept = departmentSelect.value;
   if (!dept) return;
 
-  const index = await fetch(`data/${dept}/index.json`).then(r => r.json());
+  const index = await fetch(`data/${dept}/index.json`).then((r) => r.json());
 
-  index.instruments.forEach(sop => {
+  index.instruments.forEach((sop) => {
     sopSelect.innerHTML += `<option value="${sop.key}">${sop.name}</option>`;
   });
 
@@ -70,13 +73,16 @@ sopSelect.addEventListener("change", async () => {
   const sop = sopSelect.value;
   if (!dept || !sop) return;
 
-  const raw = await fetch(`data/${dept}/${sop}.json`).then(r => r.json());
+  const raw = await fetch(`data/${dept}/${sop}.json`).then((r) => r.json());
 
   SOP_DATA = {
     institute: "",
     department: dept,
     title: raw.meta?.title || "",
     sopNumber: "",
+
+    effectiveDate: "",
+    revisionDate: "",
 
     purpose: raw.sections?.purpose || "",
     scope: raw.sections?.scope || "",
@@ -93,7 +99,7 @@ sopSelect.addEventListener("change", async () => {
 
     approvedBy: "",
     approvedDesig: "",
-    approvedDate: ""
+    approvedDate: "",
   };
 
   syncInputs();
@@ -107,14 +113,14 @@ templateSelect.addEventListener("change", loadTemplate);
 
 async function loadTemplate() {
   const name = templateSelect.value;
-  TEMPLATE_HTML = await fetch(`templates/${name}`).then(r => r.text());
+  TEMPLATE_HTML = await fetch(`templates/${name}`).then((r) => r.text());
   render();
 }
 
 /* =========================
    INPUT → STATE
 ========================= */
-Object.keys(inputs).forEach(key => {
+Object.keys(inputs).forEach((key) => {
   inputs[key].addEventListener("input", () => {
     SOP_DATA[key] =
       key === "procedure"
@@ -129,7 +135,7 @@ Object.keys(inputs).forEach(key => {
    SYNC INPUTS
 ========================= */
 function syncInputs() {
-  Object.keys(inputs).forEach(key => {
+  Object.keys(inputs).forEach((key) => {
     if (key === "procedure") {
       inputs[key].value = SOP_DATA[key].join("\n");
     } else {
@@ -146,7 +152,7 @@ function render() {
 
   const viewData = {
     ...SOP_DATA,
-    procedure: SOP_DATA.procedure.map(s => `<li>${s}</li>`).join("")
+    procedure: SOP_DATA.procedure.map((s) => `<li>${s}</li>`).join(""),
   };
 
   preview.innerHTML = renderTemplate(TEMPLATE_HTML, viewData);

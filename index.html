@@ -1,143 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Pharmacy SOP Generator</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pharmacy SOP Generator</title>
 
-  <link rel="stylesheet" href="css/print-a4.css">
+    <link rel="stylesheet" href="css/print-a4.css" />
 
-  <style>
-    body {
-      font-family: "Times New Roman", serif;
-      margin: 20px;
-    }
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        margin: 20px;
+      }
 
-    label {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-    }
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
 
-    input, textarea, select {
-      width: 100%;
-      padding: 6px;
-      margin-top: 4px;
-    }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 6px;
+        margin-top: 4px;
+      }
 
-    textarea {
-      min-height: 80px;
-    }
+      textarea {
+        min-height: 80px;
+      }
 
-    .layout {
-      display: grid;
-      grid-template-columns: 420px 1fr;
-      gap: 20px;
-    }
+      .layout {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 20px;
+      }
 
-    #preview {
-      border-left: 1px solid #ccc;
-      padding-left: 20px;
-    }
-  </style>
-</head>
+      #preview {
+        border-left: 1px solid #ccc;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
+    <h2>Pharmacy SOP Generator</h2>
 
-<h2>Pharmacy SOP Generator</h2>
+    <label>
+      Department
+      <select id="departmentSelect"></select>
+    </label>
 
-<label>
-  Department
-  <select id="departmentSelect"></select>
-</label>
+    <label>
+      SOP
+      <select id="sopSelect" disabled></select>
+    </label>
 
-<label>
-  SOP
-  <select id="sopSelect" disabled></select>
-</label>
+    <label>
+      Design Template
+      <select id="templateSelect">
+        <option value="sop-a4-classic.html">Classic</option>
+        <option value="sop-a4-naac.html">NAAC Format</option>
+        <option value="sop-a4-pci.html">PCI Format</option>
+        <option value="sop-a4-iso.html">ISO Format</option>
+      </select>
+    </label>
 
-<label>
-  Design Template
-  <select id="templateSelect">
-  <option value="sop-a4-classic.html">Classic</option>
-  <option value="sop-a4-naac.html">NAAC Format</option>
-  <option value="sop-a4-pci.html">PCI Format</option>
-  <option value="sop-a4-iso.html">ISO Format</option>
-</select>
-</label>
+    <hr />
 
-<hr>
+    <div class="layout">
+      <!-- EDITOR -->
+      <div>
+        <label>Institution</label>
+        <input id="institute" />
 
-<div class="layout">
+        <label>Department</label>
+        <input id="department" />
 
-  <!-- EDITOR -->
-  <div>
-    <label>Institution</label>
-    <input id="institute">
+        <label>SOP Title</label>
+        <input id="title" />
 
-    <label>Department</label>
-    <input id="department">
+        <label>SOP Number</label>
+        <input id="sopNumber" />
 
-    <label>SOP Title</label>
-    <input id="title">
+        <label>Effective Date</label>
+        <input type="date" id="effectiveDate" />
 
-    <label>SOP Number</label>
-    <input id="sopNumber">
+        <label>Last Revision Date</label>
+        <input type="date" id="revisionDate" />
 
-    <label>Purpose</label>
-    <textarea id="purpose"></textarea>
+        <label>Purpose</label>
+        <textarea id="purpose"></textarea>
 
-    <label>Scope</label>
-    <textarea id="scope"></textarea>
+        <label>Scope</label>
+        <textarea id="scope"></textarea>
 
-    <label>Procedure (one per line)</label>
-    <textarea id="procedure"></textarea>
+        <label>Procedure (one per line)</label>
+        <textarea id="procedure"></textarea>
 
-    <label>Precautions</label>
-    <textarea id="precautions"></textarea>
+        <label>Precautions</label>
+        <textarea id="precautions"></textarea>
 
-<h3>Authorization & Approval</h3>
+        <h3>Authorization & Approval</h3>
 
-<label>Prepared By (Name)</label>
-<input id="preparedBy">
+        <label>Prepared By (Name)</label>
+        <input id="preparedBy" />
 
-<label>Prepared By (Designation)</label>
-<input id="preparedDesig">
+        <label>Prepared By (Designation)</label>
+        <input id="preparedDesig" />
 
-<label>Date</label>
-<input type="date" id="preparedDate">
+        <label>Date</label>
+        <input type="date" id="preparedDate" />
 
-<hr>
+        <hr />
 
-<label>Checked By (Name)</label>
-<input id="checkedBy">
+        <label>Checked By (Name)</label>
+        <input id="checkedBy" />
 
-<label>Checked By (Designation)</label>
-<input id="checkedDesig">
+        <label>Checked By (Designation)</label>
+        <input id="checkedDesig" />
 
-<label>Date</label>
-<input type="date" id="checkedDate">
+        <label>Date</label>
+        <input type="date" id="checkedDate" />
 
-<hr>
+        <hr />
 
-<label>Approved By (Name)</label>
-<input id="approvedBy">
+        <label>Approved By (Name)</label>
+        <input id="approvedBy" />
 
-<label>Approved By (Designation)</label>
-<input id="approvedDesig">
+        <label>Approved By (Designation)</label>
+        <input id="approvedDesig" />
 
-<label>Date</label>
-<input type="date" id="approvedDate">
+        <label>Date</label>
+        <input type="date" id="approvedDate" />
 
-    <button onclick="window.print()">Print SOP</button>
-  </div>
+        <button onclick="window.print()">Print SOP</button>
+      </div>
 
-  <!-- PREVIEW -->
-  <div id="preview"></div>
+      <!-- PREVIEW -->
+      <div id="preview"></div>
+    </div>
 
-</div>
-
-<script src="js/template-engine.js"></script>
-<script src="js/sop-engine.js"></script>
-
-</body>
+    <script src="js/template-engine.js"></script>
+    <script src="js/sop-engine.js"></script>
+  </body>
 </html>
