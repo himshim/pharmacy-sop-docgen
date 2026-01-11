@@ -1,180 +1,129 @@
 const preview = document.getElementById("preview");
-const deptSelect = document.getElementById("departmentSelect");
+
+const departmentSelect = document.getElementById("departmentSelect");
 const sopSelect = document.getElementById("sopSelect");
+const templateSelect = document.getElementById("templateSelect");
 
-/* INPUT FIELDS */
-const instituteInput = document.getElementById("instituteInput");
-const departmentInput = document.getElementById("departmentInput");
-const titleInput = document.getElementById("titleInput");
-const sopNumberInput = document.getElementById("sopNumberInput");
-const purposeInput = document.getElementById("purposeInput");
-const scopeInput = document.getElementById("scopeInput");
-const procedureInput = document.getElementById("procedureInput");
-const precautionsInput = document.getElementById("precautionsInput");
+const inputs = {
+  institute: document.getElementById("institute"),
+  department: document.getElementById("department"),
+  title: document.getElementById("title"),
+  sopNumber: document.getElementById("sopNumber"),
+  purpose: document.getElementById("purpose"),
+  scope: document.getElementById("scope"),
+  procedure: document.getElementById("procedure"),
+  precautions: document.getElementById("precautions")
+};
 
-let TEMPLATE = "";
-let currentSOP = null;
+let TEMPLATE_HTML = "";
+let SOP_DATA = {};
 
-/* ===============================
-   LOAD TEMPLATE
-================================ */
-fetch("templates/sop-a4.html")
-  .then(res => res.text())
-  .then(html => {
-    TEMPLATE = html;
-    console.log("Template loaded");
-  });
-
-/* ===============================
+/* =========================
    LOAD DEPARTMENTS
-================================ */
+========================= */
 fetch("data/departments.json")
-  .then(res => res.json())
-  .then(data => {
-    data.departments.forEach(d => {
-      const opt = document.createElement("option");
-      opt.value = d.key;
-      opt.textContent = d.name;
-      deptSelect.appendChild(opt);
+  .then(r => r.json())
+  .then(d => {
+    departmentSelect.innerHTML = `<option value="">Select</option>`;
+    d.departments.forEach(dep => {
+      departmentSelect.innerHTML += `<option value="${dep.key}">${dep.name}</option>`;
     });
   });
 
-/* ===============================
+/* =========================
    DEPARTMENT CHANGE
-================================ */
-deptSelect.addEventListener("change", async () => {
-  const dept = deptSelect.value;
-
-  sopSelect.innerHTML = '<option value="">Select SOP</option>';
+========================= */
+departmentSelect.addEventListener("change", async () => {
   sopSelect.disabled = true;
+  sopSelect.innerHTML = `<option>Select SOP</option>`;
   preview.innerHTML = "";
-  clearInputs();
 
+  const dept = departmentSelect.value;
   if (!dept) return;
 
   const index = await fetch(`data/${dept}/index.json`).then(r => r.json());
 
-  index.instruments.forEach(item => {
-    const opt = document.createElement("option");
-    opt.value = item.key;
-    opt.textContent = item.name;
-    sopSelect.appendChild(opt);
+  index.instruments.forEach(sop => {
+    sopSelect.innerHTML += `<option value="${sop.key}">${sop.name}</option>`;
   });
 
   sopSelect.disabled = false;
 });
 
-/* ===============================
+/* =========================
    SOP CHANGE
-================================ */
+========================= */
 sopSelect.addEventListener("change", async () => {
-  const sopKey = sopSelect.value;
-  const dept = deptSelect.value;
+  const dept = departmentSelect.value;
+  const sop = sopSelect.value;
+  if (!dept || !sop) return;
 
-  if (!sopKey || !dept) return;
+  const raw = await fetch(`data/${dept}/${sop}.json`).then(r => r.json());
 
-  const raw = await fetch(`data/${dept}/${sopKey}.json`).then(r => r.json());
-
-  /* BUILD STATE FROM JSON (OLD FORMAT SAFE) */
-  currentSOP = {
-    institute: raw.meta?.institute || "",
+  SOP_DATA = {
+    institute: "",
     department: dept,
     title: raw.meta?.title || "",
-    sopNumber: raw.meta?.sopNumber || "",
+    sopNumber: "",
     purpose: raw.sections?.purpose || "",
     scope: raw.sections?.scope || "",
-    procedure: Array.isArray(raw.sections?.procedure)
-      ? raw.sections.procedure
-      : [],
+    procedure: raw.sections?.procedure || [],
     precautions: raw.sections?.precautions || ""
   };
 
-  populateInputs();
-  renderSOP();
+  syncInputs();
+  loadTemplate();
 });
 
-/* ===============================
-   INPUT → STATE → PREVIEW
-================================ */
-[
-  instituteInput,
-  departmentInput,
-  titleInput,
-  sopNumberInput,
-  purposeInput,
-  scopeInput,
-  procedureInput,
-  precautionsInput
-].forEach(input => {
-  input.addEventListener("input", () => {
-    if (!currentSOP) return;
+/* =========================
+   TEMPLATE CHANGE
+========================= */
+templateSelect.addEventListener("change", loadTemplate);
 
-    currentSOP.institute = instituteInput.value;
-    currentSOP.department = departmentInput.value;
-    currentSOP.title = titleInput.value;
-    currentSOP.sopNumber = sopNumberInput.value;
-    currentSOP.purpose = purposeInput.value;
-    currentSOP.scope = scopeInput.value;
-    currentSOP.procedure = procedureInput.value
-      .split("\n")
-      .map(v => v.trim())
-      .filter(Boolean);
-    currentSOP.precautions = precautionsInput.value;
+async function loadTemplate() {
+  const name = templateSelect.value;
+  TEMPLATE_HTML = await fetch(`templates/${name}`).then(r => r.text());
+  render();
+}
 
-    renderSOP();
+/* =========================
+   INPUT → STATE
+========================= */
+Object.keys(inputs).forEach(key => {
+  inputs[key].addEventListener("input", () => {
+    SOP_DATA[key] =
+      key === "procedure"
+        ? inputs[key].value.split("\n").filter(Boolean)
+        : inputs[key].value;
+
+    render();
   });
 });
 
-/* ===============================
-   POPULATE INPUTS FROM STATE
-================================ */
-function populateInputs() {
-  instituteInput.value = currentSOP.institute;
-  departmentInput.value = currentSOP.department;
-  titleInput.value = currentSOP.title;
-  sopNumberInput.value = currentSOP.sopNumber;
-  purposeInput.value = currentSOP.purpose;
-  scopeInput.value = currentSOP.scope;
-  procedureInput.value = currentSOP.procedure.join("\n");
-  precautionsInput.value = currentSOP.precautions;
+/* =========================
+   SYNC INPUTS
+========================= */
+function syncInputs() {
+  inputs.institute.value = SOP_DATA.institute;
+  inputs.department.value = SOP_DATA.department;
+  inputs.title.value = SOP_DATA.title;
+  inputs.sopNumber.value = SOP_DATA.sopNumber;
+  inputs.purpose.value = SOP_DATA.purpose;
+  inputs.scope.value = SOP_DATA.scope;
+  inputs.procedure.value = SOP_DATA.procedure.join("\n");
+  inputs.precautions.value = SOP_DATA.precautions;
 }
 
-/* ===============================
-   CLEAR INPUTS
-================================ */
-function clearInputs() {
-  instituteInput.value = "";
-  departmentInput.value = "";
-  titleInput.value = "";
-  sopNumberInput.value = "";
-  purposeInput.value = "";
-  scopeInput.value = "";
-  procedureInput.value = "";
-  precautionsInput.value = "";
-}
+/* =========================
+   RENDER
+========================= */
+function render() {
+  if (!TEMPLATE_HTML) return;
 
-/* ===============================
-   RENDER SOP
-================================ */
-function renderSOP() {
-  if (!TEMPLATE || !currentSOP) return;
+  const viewData = {
+    ...SOP_DATA,
+    procedure: SOP_DATA.procedure.map(s => `<li>${s}</li>`).join("")
+  };
 
-  let html = TEMPLATE;
-
-  html = html.replace("{{institute}}", currentSOP.institute || "________________");
-  html = html.replace("{{department}}", currentSOP.department || "");
-  html = html.replace("{{title}}", currentSOP.title || "");
-  html = html.replace("{{sopNumber}}", currentSOP.sopNumber || "");
-
-  html = html.replace("{{purpose}}", currentSOP.purpose || "");
-  html = html.replace("{{scope}}", currentSOP.scope || "");
-
-  html = html.replace(
-    "{{procedure}}",
-    currentSOP.procedure.map(step => `<li>${step}</li>`).join("")
-  );
-
-  html = html.replace("{{precautions}}", currentSOP.precautions || "");
-
-  preview.innerHTML = html;
+  preview.innerHTML = renderTemplate(TEMPLATE_HTML, viewData);
 }
