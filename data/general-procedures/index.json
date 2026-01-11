@@ -1,0 +1,15 @@
+{
+  "department": "General Procedures",
+  "instruments": [
+    { "key": "laboratory-entry", "name": "Laboratory Entry Procedure" },
+    { "key": "laboratory-exit", "name": "Laboratory Exit Procedure" },
+    { "key": "equipment-cleaning", "name": "Cleaning of Laboratory Equipment" },
+    { "key": "equipment-shutdown", "name": "Shutdown of Laboratory Equipment" },
+    { "key": "equipment-maintenance", "name": "Routine Maintenance of Equipment" },
+    { "key": "equipment-validation", "name": "Validation of Laboratory Equipment" },
+    { "key": "weighing-procedure", "name": "General Weighing Procedure" },
+    { "key": "waste-disposal", "name": "Laboratory Waste Disposal Procedure" },
+    { "key": "chemical-storage", "name": "Chemical Storage Procedure" },
+    { "key": "chemical-issuing", "name": "Chemical Issuing Procedure" }
+  ]
+}
