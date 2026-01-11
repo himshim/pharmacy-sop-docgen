@@ -19,7 +19,7 @@
       padding: 16px;
     }
 
-    /* HEADER */
+    /* ================= HEADER ================= */
     .app-header {
       display: flex;
       justify-content: space-between;
@@ -31,7 +31,15 @@
       margin: 0;
     }
 
-    /* FORM ELEMENTS */
+    /* ================= CONTROLS ================= */
+    .top-controls {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 14px;
+      margin-bottom: 16px;
+    }
+
     label {
       display: block;
       margin-top: 12px;
@@ -56,7 +64,6 @@
     }
 
     button {
-      margin-top: 18px;
       padding: 8px 16px;
       background: #2c3e50;
       color: #fff;
@@ -69,26 +76,25 @@
       background: #1a252f;
     }
 
-    h3 {
-      margin-top: 26px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 4px;
-    }
-
     hr {
       margin: 18px 0;
       border: none;
       border-top: 1px solid #ccc;
     }
 
-    /* LAYOUT */
+    h3 {
+      margin: 20px 0 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+    }
+
+    /* ================= LAYOUT ================= */
     .layout {
       display: grid;
       grid-template-columns: 420px 1fr;
       gap: 24px;
     }
 
-    /* EDITOR PANEL */
     .editor-panel {
       background: #ffffff;
       border: 1px solid #ddd;
@@ -98,14 +104,13 @@
       overflow-y: auto;
     }
 
-    /* PREVIEW WRAPPER */
     #preview-wrapper {
       display: flex;
       justify-content: center;
       align-items: flex-start;
     }
 
-    /* CHECKBOX GROUP */
+    /* ================= CHECKBOX GROUPS ================= */
     .checkbox-group {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -124,13 +129,34 @@
       margin-right: 6px;
     }
 
-    /* STICKY TOP CONTROLS (SAFE) */
-    .top-controls {
-      background: #ffffff;
+    /* ================= COLLAPSIBLE SECTIONS ================= */
+    .section-box {
       border: 1px solid #ddd;
       border-radius: 6px;
+      margin-top: 16px;
+      background: #fafafa;
+    }
+
+    .section-toggle {
+      background: #e9ecef;
+      padding: 8px 12px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .section-toggle::after {
+      content: "▾";
+    }
+
+    .section-toggle.collapsed::after {
+      content: "▸";
+    }
+
+    .section-content {
       padding: 12px;
-      margin-bottom: 16px;
     }
   </style>
 </head>
@@ -165,22 +191,25 @@
     </label>
   </div>
 
-  <h3>Optional Sections</h3>
-  <div class="checkbox-group">
-    <label><input type="checkbox" id="toggleDocControl" checked> Document Control</label>
-    <label><input type="checkbox" id="toggleApplicability"> Applicability</label>
-    <label><input type="checkbox" id="toggleAbbreviations"> Abbreviations</label>
-    <label><input type="checkbox" id="toggleReferences"> References</label>
-    <label><input type="checkbox" id="toggleAnnexures"> Annexures</label>
-    <label><input type="checkbox" id="toggleChangeHistory"> Change History</label>
-  </div>
+  <!-- TOGGLES -->
+  <div class="top-controls">
+    <h3>Optional Sections</h3>
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="toggleDocControl" checked> Document Control</label>
+      <label><input type="checkbox" id="toggleApplicability"> Applicability</label>
+      <label><input type="checkbox" id="toggleAbbreviations"> Abbreviations</label>
+      <label><input type="checkbox" id="toggleReferences"> References</label>
+      <label><input type="checkbox" id="toggleAnnexures"> Annexures</label>
+      <label><input type="checkbox" id="toggleChangeHistory"> Change History</label>
+    </div>
 
-  <h3>Optional Header Fields</h3>
-  <div class="checkbox-group">
-    <label><input type="checkbox" id="toggleSopNumber" checked> SOP Number</label>
-    <label><input type="checkbox" id="toggleEffectiveDate" checked> Effective Date</label>
-    <label><input type="checkbox" id="toggleRevisionDate" checked> Last Revision Date</label>
-    <label><input type="checkbox" id="toggleCopyType" checked> Controlled / Uncontrolled Copy</label>
+    <h3>Optional Header Fields</h3>
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="toggleSopNumber" checked> SOP Number</label>
+      <label><input type="checkbox" id="toggleEffectiveDate" checked> Effective Date</label>
+      <label><input type="checkbox" id="toggleRevisionDate" checked> Last Revision Date</label>
+      <label><input type="checkbox" id="toggleCopyType" checked> Controlled / Uncontrolled Copy</label>
+    </div>
   </div>
 
   <div class="layout">
@@ -202,19 +231,14 @@
 
       <div id="sectionDocControl">
         <h3>Document Control</h3>
-
         <label>Revision Number</label>
         <input id="revisionNo" />
-
         <label>Effective Date</label>
         <input type="date" id="effectiveDate" />
-
         <label>Last Revision Date</label>
         <input type="date" id="revisionDate" />
-
         <label>Next Review Due Date</label>
         <input type="date" id="nextReviewDate" />
-
         <label>Copy Type</label>
         <select id="copyType">
           <option value="CONTROLLED">CONTROLLED COPY</option>
@@ -228,19 +252,14 @@
       </div>
 
       <h3>SOP Content</h3>
-
       <label>Purpose</label>
       <textarea id="purpose"></textarea>
-
       <label>Scope</label>
       <textarea id="scope"></textarea>
-
       <label>Responsibility</label>
       <textarea id="responsibility"></textarea>
-
       <label>Procedure</label>
       <textarea id="procedure"></textarea>
-
       <label>Precautions</label>
       <textarea id="precautions"></textarea>
 
@@ -265,31 +284,22 @@
       </div>
 
       <h3>Authorization</h3>
-
       <label>Prepared By</label>
       <input id="preparedBy" />
-
       <label>Prepared Designation</label>
       <input id="preparedDesig" />
-
       <label>Date</label>
       <input type="date" id="preparedDate" />
-
       <label>Checked By</label>
       <input id="checkedBy" />
-
       <label>Checked Designation</label>
       <input id="checkedDesig" />
-
       <label>Date</label>
       <input type="date" id="checkedDate" />
-
       <label>Approved By</label>
       <input id="approvedBy" />
-
       <label>Approved Designation</label>
       <input id="approvedDesig" />
-
       <label>Date</label>
       <input type="date" id="approvedDate" />
     </div>
