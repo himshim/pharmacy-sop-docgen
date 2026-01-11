@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of pH Meter"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for measuring pH using a pH meter.",
+    "scope": "Applicable to routine pH measurements in Pharmaceutical Analysis laboratory.",
+    "procedure": [
+      "Switch ON the pH meter.",
+      "Calibrate the instrument using standard buffer solutions.",
+      "Rinse the electrode with distilled water.",
+      "Immerse the electrode in the sample solution.",
+      "Allow the reading to stabilize.",
+      "Record the pH value.",
+      "After use, rinse and store the electrode properly."
+    ],
+    "precautions": "Do not allow the electrode to dry. Handle electrode gently."
+  }
+}

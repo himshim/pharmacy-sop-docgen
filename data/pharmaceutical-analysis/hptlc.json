@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of HPTLC System"
+  },
+  "sections": {
+    "purpose": "To outline the procedure for performing analysis using High Performance Thin Layer Chromatography.",
+    "scope": "Applicable to qualitative and quantitative analysis in Pharmaceutical Analysis laboratory.",
+    "procedure": [
+      "Prepare the mobile phase as per experimental requirement.",
+      "Activate and mark the TLC plate.",
+      "Apply standard and sample solutions using applicator.",
+      "Saturate the development chamber with mobile phase.",
+      "Develop the plate to the specified distance.",
+      "Dry the plate and scan using densitometer.",
+      "Record and interpret chromatographic data."
+    ],
+    "precautions": "Avoid touching the plate surface. Ensure uniform application of samples."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of UV–Visible Spectrophotometer"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for operating the UV–Visible Spectrophotometer for quantitative analysis.",
+    "scope": "Applicable to Pharmaceutical Analysis laboratory.",
+    "procedure": [
+      "Switch ON the instrument and allow sufficient warm-up time.",
+      "Select the required wavelength or wavelength range.",
+      "Prepare blank and sample solutions as per experiment.",
+      "Place the blank solution in the cuvette holder and set baseline.",
+      "Replace blank with sample solution.",
+      "Measure absorbance or transmittance.",
+      "Record the readings for further calculations."
+    ],
+    "precautions": "Use clean cuvettes. Avoid fingerprints on optical surfaces. Handle samples carefully."
+  }
+}

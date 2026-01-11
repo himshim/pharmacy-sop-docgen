@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Conductivity Meter"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for measuring conductivity of solutions.",
+    "scope": "Applicable to conductivity measurements in Pharmaceutical Analysis laboratory.",
+    "procedure": [
+      "Switch ON the conductivity meter.",
+      "Calibrate the instrument using standard conductivity solution.",
+      "Rinse the probe with distilled water.",
+      "Immerse the probe in the sample solution.",
+      "Allow the reading to stabilize.",
+      "Record the conductivity value.",
+      "Clean and store the probe after use."
+    ],
+    "precautions": "Avoid air bubbles around the probe. Clean the probe after each measurement."
+  }
+}
