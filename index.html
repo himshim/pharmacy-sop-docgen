@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Pharmacy SOP Generator</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pharmacy SOP Generator</title>
 
-  <!-- UI styles -->
-  <link rel="stylesheet" href="css/ui-desktop.css">
-  <link rel="stylesheet" href="css/ui-mobile.css">
+    <!-- UI styles -->
+    <link rel="stylesheet" href="css/ui-desktop.css" />
+    <link rel="stylesheet" href="css/ui-mobile.css" />
 
-  <!-- Print -->
-  <link rel="stylesheet" href="css/print-a4.css">
-</head>
+    <!-- Print -->
+    <link rel="stylesheet" href="css/print-a4.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- DESKTOP UI -->
+    <div id="ui-desktop">
+      <!-- contents of partials/ui-desktop.html pasted here -->
+    </div>
 
-  <!-- DESKTOP UI -->
-  <div id="ui-desktop">
-    <!-- contents of partials/ui-desktop.html pasted here -->
-  </div>
+    <!-- MOBILE UI -->
+    <div id="ui-mobile">
+      <!-- contents of partials/ui-mobile.html pasted here -->
+    </div>
 
-  <!-- MOBILE UI -->
-  <div id="ui-mobile">
-    <!-- contents of partials/ui-mobile.html pasted here -->
-  </div>
+    <!-- CREDIT (SCREEN ONLY) -->
+    <footer class="app-footer">
+      Created by
+      <a href="https://github.com/himshim" target="_blank">@himshim26</a>
+      ·
+      <a href="https://github.com/himshim/pharmacy-sop-docgen" target="_blank">
+        Source Code
+      </a>
+    </footer>
 
-  <!-- CREDIT (SCREEN ONLY) -->
-  <footer class="app-footer">
-    Created by
-    <a href="https://github.com/himshim" target="_blank">@himshim26</a>
-    ·
-    <a
-      href="https://github.com/himshim/pharmacy-sop-docgen"
-      target="_blank"
-    >
-      Source Code
-    </a>
-  </footer>
+    <script>
+      (async function () {
+        const app = document.getElementById("app");
+        if (!app) return;
 
-  <!-- LOGIC (shared) -->
-  <script src="js/template-engine.js"></script>
-  <script src="js/sop-engine.js"></script>
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+        const uiFile = isMobile ? "ui-mobile.html" : "ui-desktop.html";
 
-</body>
+        try {
+          const html = await fetch(uiFile).then((r) => r.text());
+          app.innerHTML = html;
+        } catch (e) {
+          app.innerHTML = "<p style='color:red'>Failed to load UI</p>";
+        }
+      })();
+    </script>
+
+    <!-- LOGIC (shared) -->
+    <script src="js/template-engine.js"></script>
+    <script src="js/sop-engine.js"></script>
+  </body>
 </html>
