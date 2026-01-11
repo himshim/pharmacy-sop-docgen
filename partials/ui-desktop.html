@@ -32,6 +32,36 @@
         --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
+<script>
+(function() {
+    console.log('📱 Initializing mobile tabs...');
+    function initTabs() {
+        const tabs = document.querySelectorAll('.tab-btn');
+        const contents = document.querySelectorAll('.tab-content');
+        if (tabs.length === 0) return;
+        tabs.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = this.getAttribute('data-tab');
+                if (!target) return;
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+                const targetEl = document.getElementById(target);
+                if (targetEl) targetEl.classList.add('active');
+            });
+        });
+        console.log('✅ Mobile tabs ready');
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTabs);
+    } else {
+        initTabs();
+    }
+    setTimeout(initTabs, 500);
+})();
+</script>
+
       body {
         font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, sans-serif;
