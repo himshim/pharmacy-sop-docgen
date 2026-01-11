@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Pharmacy SOP Generator</title>
 
+  <!-- A4 Print Styles -->
   <link rel="stylesheet" href="css/print-a4.css" />
 
   <style>
@@ -11,9 +12,24 @@
       font-family: "Times New Roman", serif;
       margin: 20px;
     }
-    button {
-      padding: 6px 12px;
+
+    h2 {
       margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    select, button {
+      padding: 6px 10px;
+      margin-top: 5px;
+      min-width: 250px;
+    }
+
+    #preview {
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -27,12 +43,8 @@
   Department:
   <select id="departmentSelect">
     <option value="">Select Department</option>
-    <option value="pharmaceutics">Pharmaceutics</option>
-    <!-- add more later -->
   </select>
 </label>
-
-<br><br>
 
 <label>
   SOP Template:
@@ -41,14 +53,17 @@
   </select>
 </label>
 
-<br><br>
+<br>
 
 <button onclick="window.print()">Print SOP</button>
 
 <hr>
 
-<!-- PREVIEW -->
+<!-- SOP PREVIEW -->
 <div id="preview"></div>
 
+<!-- SCRIPT -->
 <script src="js/sop-engine.js"></script>
+
 </body>
+</html>
