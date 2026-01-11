@@ -1,75 +1,73 @@
-<div style="text-align: right; font-weight: bold">{{copyType}} COPY</div>
-  <h1 style="text-align: center; letter-spacing: 1px">
-    STANDARD OPERATING PROCEDURE (SOP)
-  </h1>
+<style>
+  /* Hide optional sections if empty */
+  .optional[data-content=""] {
+    display: none;
+  }
+</style>
 
-  <table border="1" width="100%" cellpadding="6" cellspacing="0">
-    <tr>
-      <td><strong>Institution</strong></td>
-      <td>{{institute}}</td>
-    </tr>
-    <tr>
-      <td><strong>Department</strong></td>
-      <td>{{department}}</td>
-    </tr>
-    <tr>
-      <td><strong>SOP Title</strong></td>
-      <td>{{title}}</td>
-    </tr>
-    <tr>
-      <td><strong>SOP No.</strong></td>
-      <td>{{sopNumber}}</td>
-    </tr>
-    <tr>
-      <td><strong>Effective Date</strong></td>
-      <td>{{effectiveDate}}</td>
-    </tr>
-    <tr>
-      <td><strong>Last Revision Date</strong></td>
-      <td>{{revisionDate}}</td>
-    </tr>
-  </table>
+<div style="text-align: right; font-weight: bold">
+  {{copyType}} COPY
+</div>
 
-  <h2>1. Purpose</h2>
-  <p>{{purpose}}</p>
+<h1 style="text-align: center; letter-spacing: 1px">
+  STANDARD OPERATING PROCEDURE (SOP)
+</h1>
 
-  <h2>2. Scope</h2>
-  <p>{{scope}}</p>
+<table border="1" width="100%" cellpadding="6" cellspacing="0">
+  <tr><td><strong>Institution</strong></td><td>{{institute}}</td></tr>
+  <tr><td><strong>Department</strong></td><td>{{department}}</td></tr>
+  <tr><td><strong>SOP Title</strong></td><td>{{title}}</td></tr>
+  <tr><td><strong>SOP No.</strong></td><td>{{sopNumber}}</td></tr>
+  <tr><td><strong>Effective Date</strong></td><td>{{effectiveDate}}</td></tr>
+  <tr><td><strong>Last Revision Date</strong></td><td>{{revisionDate}}</td></tr>
+</table>
 
-  <h2>3. Responsibility</h2>
+<h2>1. Purpose</h2>
+<p>{{purpose}}</p>
+
+<h2>2. Scope</h2>
+<p>{{scope}}</p>
+
+<h2>3. Responsibility</h2>
 <p>{{responsibility}}</p>
 
+<h2>4. Procedure</h2>
+<ol>{{procedure}}</ol>
 
-  <h2>4. Procedure</h2>
-  <ol>
-    {{procedure}}
-  </ol>
+<h2>5. Precautions / Safety Measures</h2>
+<p>{{precautions}}</p>
 
-  <h2>5. Precautions / Safety Measures</h2>
-  <p>{{precautions}}</p>
+<!-- NAAC-MANDATORY SECTION -->
+<h2>6. Documentation & Records</h2>
+<p>
+  All records related to this SOP shall be maintained by the department and
+  produced during internal and external audits including NAAC.
+</p>
 
-  <h2>6. Documentation & Records</h2>
-  <p>
-    All records related to this SOP shall be maintained by the department and
-    produced during internal and external audits including NAAC.
-  </p>
+<!-- OPTIONAL SECTIONS -->
 
+<div class="optional" data-content="{{applicability}}">
   <h2>Applicability</h2>
   <p>{{applicability}}</p>
+</div>
 
+<div class="optional" data-content="{{abbreviations}}">
   <h2>Abbreviations / Definitions</h2>
   <p>{{abbreviations}}</p>
+</div>
 
+<div class="optional" data-content="{{references}}">
   <h2>References</h2>
   <p>{{references}}</p>
+</div>
 
+<div class="optional" data-content="{{annexures}}">
   <h2>Annexures</h2>
   <p>{{annexures}}</p>
+</div>
 
-  <h2>Authorization</h2>
-
+<div class="optional" data-content="{{changeHistory}}">
   <h2>Change History</h2>
-
   <table border="1" width="100%" cellpadding="6" cellspacing="0">
     <tr>
       <th>Revision</th>
@@ -78,34 +76,35 @@
     </tr>
     {{changeHistory}}
   </table>
-
-  <table border="1" width="100%" cellpadding="8" cellspacing="0">
-    <tr>
-      <th>Prepared By</th>
-      <th>Checked By</th>
-      <th>Approved By</th>
-    </tr>
-    <tr>
-      <td>
-        <strong>{{preparedBy}}</strong><br />
-        {{preparedDesig}}<br />
-        Date: {{preparedDate}}
-      </td>
-      <td>
-        <strong>{{checkedBy}}</strong><br />
-        {{checkedDesig}}<br />
-        Date: {{checkedDate}}
-      </td>
-      <td>
-        <strong>{{approvedBy}}</strong><br />
-        {{approvedDesig}}<br />
-        Date: {{approvedDate}}
-      </td>
-    </tr>
-  </table>
 </div>
 
-  <p style="text-align: center; margin-top: 40px">
-    <strong>— End of SOP —</strong>
-  </p>
-</div>
+<h2>Authorization</h2>
+
+<table border="1" width="100%" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>Prepared By</th>
+    <th>Checked By</th>
+    <th>Approved By</th>
+  </tr>
+  <tr>
+    <td>
+      <strong>{{preparedBy}}</strong><br />
+      {{preparedDesig}}<br />
+      Date: {{preparedDate}}
+    </td>
+    <td>
+      <strong>{{checkedBy}}</strong><br />
+      {{checkedDesig}}<br />
+      Date: {{checkedDate}}
+    </td>
+    <td>
+      <strong>{{approvedBy}}</strong><br />
+      {{approvedDesig}}<br />
+      Date: {{approvedDate}}
+    </td>
+  </tr>
+</table>
+
+<p style="text-align: center; margin-top: 40px">
+  <strong>— End of SOP —</strong>
+</p>

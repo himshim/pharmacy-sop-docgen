@@ -1,33 +1,24 @@
-<div style="text-align: right; font-weight: bold">{{copyType}} COPY</div>
+<style>
+  .optional[data-content=""] {
+    display: none;
+  }
+</style>
+
+<div style="text-align: right; font-weight: bold">
+  {{copyType}} COPY
+</div>
 
 <div class="sop">
+
   <h1 style="text-align: center">STANDARD OPERATING PROCEDURE</h1>
 
   <table border="1" width="100%" cellpadding="6" cellspacing="0">
-    <tr>
-      <td><strong>Institution</strong></td>
-      <td>{{institute}}</td>
-    </tr>
-    <tr>
-      <td><strong>Department</strong></td>
-      <td>{{department}}</td>
-    </tr>
-    <tr>
-      <td><strong>SOP Title</strong></td>
-      <td>{{title}}</td>
-    </tr>
-    <tr>
-      <td><strong>SOP No.</strong></td>
-      <td>{{sopNumber}}</td>
-    </tr>
-    <tr>
-      <td><strong>Effective Date</strong></td>
-      <td>{{effectiveDate}}</td>
-    </tr>
-    <tr>
-      <td><strong>Last Revision Date</strong></td>
-      <td>{{revisionDate}}</td>
-    </tr>
+    <tr><td><strong>Institution</strong></td><td>{{institute}}</td></tr>
+    <tr><td><strong>Department</strong></td><td>{{department}}</td></tr>
+    <tr><td><strong>SOP Title</strong></td><td>{{title}}</td></tr>
+    <tr><td><strong>SOP No.</strong></td><td>{{sopNumber}}</td></tr>
+    <tr><td><strong>Effective Date</strong></td><td>{{effectiveDate}}</td></tr>
+    <tr><td><strong>Last Revision Date</strong></td><td>{{revisionDate}}</td></tr>
   </table>
 
   <h2>1. PURPOSE</h2>
@@ -36,38 +27,48 @@
   <h2>2. SCOPE</h2>
   <p>{{scope}}</p>
 
-  <h2>3. Responsibility</h2>
+  <h2>3. RESPONSIBILITY</h2>
   <p>{{responsibility}}</p>
 
   <h2>4. PROCEDURE</h2>
-  <ol>
-    {{procedure}}
-  </ol>
+  <ol>{{procedure}}</ol>
 
   <h2>5. PRECAUTIONS</h2>
   <p>{{precautions}}</p>
-  <h2>Change History</h2>
 
-  <h2>Applicability</h2>
-  <p>{{applicability}}</p>
+  <!-- OPTIONAL SECTIONS -->
 
-  <h2>Abbreviations / Definitions</h2>
-  <p>{{abbreviations}}</p>
+  <div class="optional" data-content="{{applicability}}">
+    <h2>Applicability</h2>
+    <p>{{applicability}}</p>
+  </div>
 
-  <h2>References</h2>
-  <p>{{references}}</p>
+  <div class="optional" data-content="{{abbreviations}}">
+    <h2>Abbreviations / Definitions</h2>
+    <p>{{abbreviations}}</p>
+  </div>
 
-  <h2>Annexures</h2>
-  <p>{{annexures}}</p>
+  <div class="optional" data-content="{{references}}">
+    <h2>References</h2>
+    <p>{{references}}</p>
+  </div>
 
-  <table border="1" width="100%" cellpadding="6" cellspacing="0">
-    <tr>
-      <th>Revision</th>
-      <th>Description of Change</th>
-      <th>Date</th>
-    </tr>
-    {{changeHistory}}
-  </table>
+  <div class="optional" data-content="{{annexures}}">
+    <h2>Annexures</h2>
+    <p>{{annexures}}</p>
+  </div>
+
+  <div class="optional" data-content="{{changeHistory}}">
+    <h2>Change History</h2>
+    <table border="1" width="100%" cellpadding="6" cellspacing="0">
+      <tr>
+        <th>Revision</th>
+        <th>Description of Change</th>
+        <th>Date</th>
+      </tr>
+      {{changeHistory}}
+    </table>
+  </div>
 
   <h2>Authorization</h2>
 
@@ -95,4 +96,5 @@
       </td>
     </tr>
   </table>
+
 </div>

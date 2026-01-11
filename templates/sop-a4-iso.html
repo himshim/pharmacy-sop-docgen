@@ -1,33 +1,25 @@
-<div style="text-align: right; font-weight: bold">{{copyType}} COPY</div>
+<style>
+  /* Hide optional sections completely if empty */
+  .optional[data-content=""] {
+    display: none;
+  }
+</style>
+
+<div style="text-align: right; font-weight: bold">
+  {{copyType}} COPY
+</div>
 
 <div class="sop">
+
   <h1 style="text-align: center">STANDARD OPERATING PROCEDURE</h1>
 
   <table border="1" width="100%" cellpadding="6" cellspacing="0">
-    <tr>
-      <td><strong>Institution</strong></td>
-      <td>{{institute}}</td>
-    </tr>
-    <tr>
-      <td><strong>Department</strong></td>
-      <td>{{department}}</td>
-    </tr>
-    <tr>
-      <td><strong>SOP Title</strong></td>
-      <td>{{title}}</td>
-    </tr>
-    <tr>
-      <td><strong>SOP No.</strong></td>
-      <td>{{sopNumber}}</td>
-    </tr>
-    <tr>
-      <td><strong>Effective Date</strong></td>
-      <td>{{effectiveDate}}</td>
-    </tr>
-    <tr>
-      <td><strong>Last Revision Date</strong></td>
-      <td>{{revisionDate}}</td>
-    </tr>
+    <tr><td><strong>Institution</strong></td><td>{{institute}}</td></tr>
+    <tr><td><strong>Department</strong></td><td>{{department}}</td></tr>
+    <tr><td><strong>SOP Title</strong></td><td>{{title}}</td></tr>
+    <tr><td><strong>SOP No.</strong></td><td>{{sopNumber}}</td></tr>
+    <tr><td><strong>Effective Date</strong></td><td>{{effectiveDate}}</td></tr>
+    <tr><td><strong>Last Revision Date</strong></td><td>{{revisionDate}}</td></tr>
   </table>
 
   <h2>1. Purpose</h2>
@@ -40,48 +32,57 @@
   <p>{{responsibility}}</p>
 
   <h2>4. Procedure</h2>
-  <ol>
-    {{procedure}}
-  </ol>
+  <ol>{{procedure}}</ol>
 
   <h2>5. Risk & Precautions</h2>
   <p>{{precautions}}</p>
 
+  <!-- ISO-MANDATORY SECTION (ALWAYS VISIBLE) -->
   <h2>6. Records & Audit</h2>
   <p>
-    Records generated through implementation of this SOP shall be maintained and
-    reviewed during internal and external ISO audits.
+    Records generated through implementation of this SOP shall be maintained,
+    controlled, and reviewed during internal and external ISO audits.
   </p>
 
   <p style="text-align: center; margin-top: 40px">
     <strong>— Controlled Document —</strong>
   </p>
 
+  <!-- OPTIONAL SECTIONS -->
+
+  <div class="optional" data-content="{{applicability}}">
+    <h2>Applicability</h2>
+    <p>{{applicability}}</p>
+  </div>
+
+  <div class="optional" data-content="{{abbreviations}}">
+    <h2>Abbreviations / Definitions</h2>
+    <p>{{abbreviations}}</p>
+  </div>
+
+  <div class="optional" data-content="{{references}}">
+    <h2>References</h2>
+    <p>{{references}}</p>
+  </div>
+
+  <div class="optional" data-content="{{annexures}}">
+    <h2>Annexures</h2>
+    <p>{{annexures}}</p>
+  </div>
+
+  <div class="optional" data-content="{{changeHistory}}">
+    <h2>Change History</h2>
+    <table border="1" width="100%" cellpadding="6" cellspacing="0">
+      <tr>
+        <th>Revision</th>
+        <th>Description of Change</th>
+        <th>Date</th>
+      </tr>
+      {{changeHistory}}
+    </table>
+  </div>
+
   <h2>Authorization</h2>
-
-  <h2>Change History</h2>
-
-  <table border="1" width="100%" cellpadding="6" cellspacing="0">
-    <tr>
-      <th>Revision</th>
-      <th>Description of Change</th>
-      <th>Date</th>
-    </tr>
-    {{changeHistory}}
-  </table>
-
-  
-  <h2>Applicability</h2>
-  <p>{{applicability}}</p>
-
-  <h2>Abbreviations / Definitions</h2>
-  <p>{{abbreviations}}</p>
-
-  <h2>References</h2>
-  <p>{{references}}</p>
-
-  <h2>Annexures</h2>
-  <p>{{annexures}}</p>
 
   <table border="1" width="100%" cellpadding="8" cellspacing="0">
     <tr>
@@ -107,4 +108,5 @@
       </td>
     </tr>
   </table>
+
 </div>
