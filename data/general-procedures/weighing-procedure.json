@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "General Weighing Procedure"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for accurate weighing of materials.",
+    "scope": "Applicable to weighing operations in all laboratories.",
+    "procedure": [
+      "Ensure the balance is clean and leveled.",
+      "Switch ON the balance and allow stabilization.",
+      "Calibrate the balance if required.",
+      "Place container on balance and tare.",
+      "Add material carefully and record weight.",
+      "After weighing, clean the balance."
+    ],
+    "precautions": "Avoid air drafts and vibration during weighing."
+  }
+}

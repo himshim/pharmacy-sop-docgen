@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Validation of Laboratory Equipment"
+  },
+  "sections": {
+    "purpose": "To ensure that laboratory equipment performs as intended.",
+    "scope": "Applicable to validation of laboratory equipment used for academic purposes.",
+    "procedure": [
+      "Identify equipment requiring validation.",
+      "Perform validation using standard procedures or reference materials.",
+      "Record validation results.",
+      "Label equipment with validation status.",
+      "Review validation records periodically."
+    ],
+    "precautions": "Validation should be performed by trained personnel only."
+  }
+}

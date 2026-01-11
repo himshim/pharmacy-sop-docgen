@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Laboratory Entry Procedure"
+  },
+  "sections": {
+    "purpose": "To ensure safe and orderly entry into the laboratory.",
+    "scope": "Applicable to all students, faculty, and staff entering the laboratory.",
+    "procedure": [
+      "Wear appropriate laboratory coat and safety gear.",
+      "Remove footwear as per laboratory rules, if applicable.",
+      "Wash hands before entering the laboratory.",
+      "Carry only required materials into the laboratory.",
+      "Enter the laboratory in an orderly manner."
+    ],
+    "precautions": "Do not bring food or drinks into the laboratory."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Shutdown of Laboratory Equipment"
+  },
+  "sections": {
+    "purpose": "To ensure safe shutdown of laboratory equipment after use.",
+    "scope": "Applicable to all laboratory instruments.",
+    "procedure": [
+      "Complete the ongoing operation.",
+      "Save data, if applicable.",
+      "Switch OFF the instrument as per manufacturer instructions.",
+      "Turn OFF main power supply.",
+      "Cover the equipment properly."
+    ],
+    "precautions": "Do not switch OFF equipment abruptly unless in emergency."
+  }
+}

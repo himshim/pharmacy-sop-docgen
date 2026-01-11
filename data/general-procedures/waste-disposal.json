@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Laboratory Waste Disposal Procedure"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for safe disposal of laboratory waste.",
+    "scope": "Applicable to disposal of laboratory waste generated during practical work.",
+    "procedure": [
+      "Segregate waste as per type.",
+      "Dispose waste in designated containers.",
+      "Label waste containers appropriately.",
+      "Hand over waste for final disposal as per institutional guidelines.",
+      "Clean disposal area regularly."
+    ],
+    "precautions": "Do not mix incompatible wastes."
+  }
+}

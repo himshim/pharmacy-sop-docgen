@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Cleaning of Laboratory Equipment"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for cleaning laboratory equipment after use.",
+    "scope": "Applicable to all laboratory equipment used in teaching laboratories.",
+    "procedure": [
+      "Switch OFF and unplug the equipment before cleaning.",
+      "Remove residues using suitable cleaning agents.",
+      "Wipe external surfaces with clean cloth.",
+      "Allow equipment to dry completely.",
+      "Store equipment in designated location."
+    ],
+    "precautions": "Do not use abrasive materials. Follow manufacturer cleaning recommendations."
+  }
+}

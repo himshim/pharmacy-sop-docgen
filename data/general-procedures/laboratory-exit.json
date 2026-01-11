@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Laboratory Exit Procedure"
+  },
+  "sections": {
+    "purpose": "To ensure proper exit from the laboratory after completion of work.",
+    "scope": "Applicable to all laboratory users.",
+    "procedure": [
+      "Switch OFF all instruments after use.",
+      "Clean the working area.",
+      "Return equipment and materials to designated places.",
+      "Remove laboratory coat before leaving.",
+      "Wash hands thoroughly before exit."
+    ],
+    "precautions": "Ensure no equipment is left running unattended."
+  }
+}

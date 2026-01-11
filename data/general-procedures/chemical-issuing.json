@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Chemical Issuing Procedure"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for issuing chemicals from the laboratory store.",
+    "scope": "Applicable to issuing of chemicals to students, faculty, and staff.",
+    "procedure": [
+      "Issue chemicals only against proper authorization.",
+      "Verify the chemical name and quantity before issuing.",
+      "Record details of issued chemicals in the issue register.",
+      "Provide appropriate container for issued chemicals.",
+      "Instruct the user on safe handling of the chemical.",
+      "Update chemical inventory after issuing."
+    ],
+    "precautions": "Do not issue chemicals without authorization. Avoid spillage during transfer."
+  }
+}

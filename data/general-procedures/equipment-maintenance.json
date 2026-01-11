@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Routine Maintenance of Laboratory Equipment"
+  },
+  "sections": {
+    "purpose": "To describe routine maintenance activities for laboratory equipment.",
+    "scope": "Applicable to all laboratory instruments requiring periodic maintenance.",
+    "procedure": [
+      "Inspect equipment visually before use.",
+      "Clean external surfaces regularly.",
+      "Check cables and connections.",
+      "Report any malfunction to laboratory in-charge.",
+      "Maintain records of maintenance activities."
+    ],
+    "precautions": "Do not attempt repairs without authorization."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Chemical Storage Procedure"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for safe and systematic storage of chemicals in the laboratory.",
+    "scope": "Applicable to storage of chemicals used in teaching and research laboratories.",
+    "procedure": [
+      "Store chemicals in designated storage areas or cabinets.",
+      "Label all chemical containers clearly with name and date of receipt.",
+      "Segregate chemicals based on their compatibility.",
+      "Store flammable chemicals away from heat sources.",
+      "Ensure containers are tightly closed after use.",
+      "Maintain an updated inventory of stored chemicals."
+    ],
+    "precautions": "Do not store incompatible chemicals together. Handle chemical containers carefully."
+  }
+}
