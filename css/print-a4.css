@@ -1,5 +1,5 @@
 /* =========================
-   A4 PAGE SETUP
+   TYPOGRAPHY (A4)
 ========================= */
 
 h1 {
@@ -13,9 +13,14 @@ h2 {
 
 p,
 li,
-td {
+td,
+th {
   font-size: 11pt;
 }
+
+/* =========================
+   TABLES
+========================= */
 
 table {
   width: 100%;
@@ -27,10 +32,6 @@ td,
 th {
   border: 1px solid black;
   padding: 6px;
-}
-
-.center {
-  text-align: center;
 }
 
 /* =========================
@@ -55,7 +56,7 @@ th {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-/* Scale preview visually, never resize it */
+/* Visual scaling only (never affects print) */
 @media screen and (max-width: 900px) {
   #preview {
     transform: scale(0.7);
@@ -76,12 +77,10 @@ th {
 
 @media print {
 
-  /* Hide everything */
   body * {
     visibility: hidden;
   }
 
-  /* Show only SOP */
   #preview-wrapper,
   #preview,
   #preview * {
