@@ -6,15 +6,31 @@
 .page {
   width: 210mm;
   min-height: 297mm;
+  padding: 20mm;
+  box-sizing: border-box;
 }
 
 .center {
   text-align: center;
 }
 
+h1 {
+  font-size: 16pt;
+}
+
+h2 {
+  font-size: 12pt;
+  margin-top: 16px;
+}
+
+p, li, td {
+  font-size: 11pt;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 12px;
 }
 
 td {
