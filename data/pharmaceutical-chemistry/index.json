@@ -1,0 +1,9 @@
+{
+  "department": "Pharmaceutical Chemistry",
+  "instruments": [
+    { "key": "melting-point", "name": "Melting Point Apparatus" },
+    { "key": "reflux-setup", "name": "Reflux Condenser Setup" },
+    { "key": "distillation-unit", "name": "Distillation Unit" },
+    { "key": "rotavapor", "name": "Rotary Vacuum Evaporator" }
+  ]
+}
