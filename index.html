@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Pharmacy SOP Generator</title>
+  <base href="/pharmacy-sop-docgen/" />
+
 
   <!-- REQUIRED for mobile compatibility -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,7 +44,7 @@
         : "partials/ui-desktop.html";
 
       try {
-        const html = await fetch(uiFile).then(r => r.text());
+        const html = await fetch(`${uiFile}?v=${Date.now()}`).then(r => r.text());
         app.innerHTML = html;
 
         // 🔥 IMPORTANT: initialize logic ONLY after UI exists
@@ -61,6 +63,13 @@
   <!-- LOGIC (shared) -->
   <script src="js/template-engine.js"></script>
   <script src="js/sop-engine.js"></script>
+
+  app.innerHTML = html;
+
+// 🔥 Edge needs a tick
+setTimeout(() => {
+  window.initSOPApp?.();
+}, 0);
 
 </body>
 </html>
