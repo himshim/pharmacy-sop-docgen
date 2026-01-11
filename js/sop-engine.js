@@ -8,6 +8,8 @@ const inputs = {
   effectiveDate: document.getElementById("effectiveDate"),
   revisionDate: document.getElementById("revisionDate"),
 
+  changeHistoryInput: document.getElementById("changeHistoryInput"),
+
   institute: document.getElementById("institute"),
   department: document.getElementById("department"),
   title: document.getElementById("title"),
@@ -81,8 +83,14 @@ sopSelect.addEventListener("change", async () => {
     title: raw.meta?.title || "",
     sopNumber: "",
 
+    changeHistory: [],
+
+    revisionNo: "00",
     effectiveDate: "",
     revisionDate: "",
+    nextReviewDate: "",
+
+    changeHistory: [],
 
     purpose: raw.sections?.purpose || "",
     scope: raw.sections?.scope || "",
@@ -100,6 +108,8 @@ sopSelect.addEventListener("change", async () => {
     approvedBy: "",
     approvedDesig: "",
     approvedDate: "",
+
+    copyType: "CONTROLLED",
   };
 
   syncInputs();
@@ -122,10 +132,19 @@ async function loadTemplate() {
 ========================= */
 Object.keys(inputs).forEach((key) => {
   inputs[key].addEventListener("input", () => {
-    SOP_DATA[key] =
-      key === "procedure"
-        ? inputs[key].value.split("\n").filter(Boolean)
-        : inputs[key].value;
+    if (key === "procedure") {
+      SOP_DATA.procedure = inputs[key].value
+        .split("\n")
+        .map((v) => v.trim())
+        .filter(Boolean);
+    } else if (key === "changeHistoryInput") {
+      SOP_DATA.changeHistory = inputs[key].value
+        .split("\n")
+        .map((v) => v.trim())
+        .filter(Boolean);
+    } else {
+      SOP_DATA[key] = inputs[key].value;
+    }
 
     render();
   });
@@ -141,6 +160,7 @@ function syncInputs() {
     } else {
       inputs[key].value = SOP_DATA[key] || "";
     }
+    inputs.changeHistoryInput.value = SOP_DATA.changeHistory.join("\n");
   });
 }
 
@@ -150,9 +170,21 @@ function syncInputs() {
 function render() {
   if (!TEMPLATE_HTML) return;
 
+  const changeHistoryHTML = SOP_DATA.changeHistory
+    .map((row) => {
+      const parts = row.split("|");
+      return `<tr>
+        <td>${parts[0]?.trim() || ""}</td>
+        <td>${parts[1]?.trim() || ""}</td>
+        <td>${parts[2]?.trim() || ""}</td>
+      </tr>`;
+    })
+    .join("");
+
   const viewData = {
     ...SOP_DATA,
     procedure: SOP_DATA.procedure.map((s) => `<li>${s}</li>`).join(""),
+    changeHistory: changeHistoryHTML,
   };
 
   preview.innerHTML = renderTemplate(TEMPLATE_HTML, viewData);

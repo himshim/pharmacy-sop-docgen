@@ -83,6 +83,36 @@
         <label>SOP Number</label>
         <input id="sopNumber" />
 
+        <h3>Document Control</h3>
+
+        <label>Revision Number</label>
+        <input id="revisionNo" placeholder="00" />
+
+        <label>Effective Date</label>
+        <input type="date" id="effectiveDate" />
+
+        <label>Last Revision Date</label>
+        <input type="date" id="revisionDate" />
+
+        <label>Next Review Due Date</label>
+        <input type="date" id="nextReviewDate" />
+
+        <label>Copy Type</label>
+        <select id="copyType">
+          <option value="CONTROLLED">CONTROLLED COPY</option>
+          <option value="UNCONTROLLED">UNCONTROLLED COPY</option>
+        </select>
+        <h3>Change History</h3>
+
+        <label>Change History (one entry per line)</label>
+        <textarea
+          id="changeHistoryInput"
+          placeholder="00 | Initial issue | 01-01-2026
+01 | Minor update | 15-06-2026"
+        ></textarea>
+
+        <small>Format: Revision | Description | Date</small>
+
         <label>Effective Date</label>
         <input type="date" id="effectiveDate" />
 
