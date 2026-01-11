@@ -1,0 +1,9 @@
+{
+  "department": "Pharmacology",
+  "instruments": [
+    { "key": "rota-rod", "name": "Rota Rod Apparatus" },
+    { "key": "actophotometer", "name": "Actophotometer" },
+    { "key": "plethysmometer", "name": "Plethysmometer" },
+    { "key": "analgesiometer", "name": "Analgesiometer" }
+  ]
+}
