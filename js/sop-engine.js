@@ -2,40 +2,43 @@ const preview = document.getElementById("preview");
 const deptSelect = document.getElementById("departmentSelect");
 const sopSelect = document.getElementById("sopSelect");
 
-let TEMPLATE = "";
+/* INPUTS */
+const instituteInput = document.getElementById("instituteInput");
+const departmentInput = document.getElementById("departmentInput");
+const titleInput = document.getElementById("titleInput");
+const sopNumberInput = document.getElementById("sopNumberInput");
+const purposeInput = document.getElementById("purposeInput");
+const scopeInput = document.getElementById("scopeInput");
+const procedureInput = document.getElementById("procedureInput");
+const precautionsInput = document.getElementById("precautionsInput");
 
-/* ==================================
-   LOAD SOP TEMPLATE (ONCE)
-================================== */
+let TEMPLATE = "";
+let currentSOP = {};
+
+/* ===============================
+   LOAD TEMPLATE
+================================ */
 fetch("templates/sop-a4.html")
   .then(res => res.text())
-  .then(html => {
-    TEMPLATE = html;
-    console.log("SOP template loaded");
-  })
-  .catch(err => console.error("Template load error", err));
+  .then(html => TEMPLATE = html);
 
-/* ==================================
-   LOAD DEPARTMENTS LIST
-================================== */
+/* ===============================
+   LOAD DEPARTMENTS
+================================ */
 fetch("data/departments.json")
   .then(res => res.json())
   .then(data => {
-    data.departments.forEach(dept => {
+    data.departments.forEach(d => {
       const opt = document.createElement("option");
-      opt.value = dept.key;
-      opt.textContent = dept.name;
+      opt.value = d.key;
+      opt.textContent = d.name;
       deptSelect.appendChild(opt);
     });
-  })
-  .catch(err => {
-    console.error(err);
-    alert("Failed to load departments");
   });
 
-/* ==================================
-   DEPARTMENT CHANGE → LOAD SOP INDEX
-================================== */
+/* ===============================
+   DEPARTMENT CHANGE
+================================ */
 deptSelect.addEventListener("change", async () => {
   const dept = deptSelect.value;
 
@@ -45,68 +48,102 @@ deptSelect.addEventListener("change", async () => {
 
   if (!dept) return;
 
-  try {
-    const index = await fetch(`data/${dept}/index.json`).then(r => r.json());
+  const index = await fetch(`data/${dept}/index.json`).then(r => r.json());
+  index.instruments.forEach(item => {
+    const opt = document.createElement("option");
+    opt.value = item.key;
+    opt.textContent = item.name;
+    sopSelect.appendChild(opt);
+  });
 
-    index.instruments.forEach(item => {
-      const opt = document.createElement("option");
-      opt.value = item.key;
-      opt.textContent = item.name;
-      sopSelect.appendChild(opt);
-    });
-
-    sopSelect.disabled = false;
-  } catch (e) {
-    console.error(e);
-    alert("Failed to load SOP list");
-  }
+  sopSelect.disabled = false;
 });
 
-/* ==================================
-   SOP CHANGE → LOAD SOP JSON
-================================== */
+/* ===============================
+   SOP CHANGE
+================================ */
 sopSelect.addEventListener("change", async () => {
   const sopKey = sopSelect.value;
   const dept = deptSelect.value;
-
   if (!sopKey || !dept) return;
 
-  try {
-    const raw = await fetch(`data/${dept}/${sopKey}.json`).then(r => r.json());
-    renderSOP(raw, dept);
-  } catch (e) {
-    console.error(e);
-    alert("Failed to load SOP");
-  }
+  const raw = await fetch(`data/${dept}/${sopKey}.json`).then(r => r.json());
+
+  currentSOP = {
+    institute: "",
+    department: dept,
+    title: raw.meta?.title || "",
+    sopNumber: "",
+    purpose: raw.sections?.purpose || "",
+    scope: raw.sections?.scope || "",
+    procedure: raw.sections?.procedure || [],
+    precautions: raw.sections?.precautions || ""
+  };
+
+  syncInputs();
+  renderSOP();
 });
 
-/* ==================================
-   RENDER SOP (OLD JSON FORMAT)
-================================== */
-function renderSOP(raw, deptName) {
+/* ===============================
+   INPUT → STATE → PREVIEW
+================================ */
+function syncInputs() {
+  instituteInput.value = currentSOP.institute;
+  departmentInput.value = currentSOP.department;
+  titleInput.value = currentSOP.title;
+  sopNumberInput.value = currentSOP.sopNumber;
+  purposeInput.value = currentSOP.purpose;
+  scopeInput.value = currentSOP.scope;
+  procedureInput.value = currentSOP.procedure.join("\n");
+  precautionsInput.value = currentSOP.precautions;
+}
+
+[
+  instituteInput,
+  departmentInput,
+  titleInput,
+  sopNumberInput,
+  purposeInput,
+  scopeInput,
+  procedureInput,
+  precautionsInput
+].forEach(input => {
+  input.addEventListener("input", () => {
+    currentSOP = {
+      ...currentSOP,
+      institute: instituteInput.value,
+      department: departmentInput.value,
+      title: titleInput.value,
+      sopNumber: sopNumberInput.value,
+      purpose: purposeInput.value,
+      scope: scopeInput.value,
+      procedure: procedureInput.value.split("\n").filter(Boolean),
+      precautions: precautionsInput.value
+    };
+    renderSOP();
+  });
+});
+
+/* ===============================
+   RENDER SOP
+================================ */
+function renderSOP() {
   if (!TEMPLATE) return;
 
   let html = TEMPLATE;
 
-  const title = raw.meta?.title || "";
-  const sections = raw.sections || {};
+  html = html.replace("{{institute}}", currentSOP.institute || "________________");
+  html = html.replace("{{department}}", currentSOP.department || "");
+  html = html.replace("{{title}}", currentSOP.title || "");
+  html = html.replace("{{sopNumber}}", currentSOP.sopNumber || "");
 
-  html = html.replace("{{institute}}", "____________________________");
-  html = html.replace("{{department}}", deptName);
-  html = html.replace("{{title}}", title);
-  html = html.replace("{{sopNumber}}", "________________");
-
-  html = html.replace("{{purpose}}", sections.purpose || "");
-  html = html.replace("{{scope}}", sections.scope || "");
-
+  html = html.replace("{{purpose}}", currentSOP.purpose || "");
+  html = html.replace("{{scope}}", currentSOP.scope || "");
   html = html.replace(
     "{{procedure}}",
-    Array.isArray(sections.procedure)
-      ? sections.procedure.map(step => `<li>${step}</li>`).join("")
-      : ""
+    currentSOP.procedure.map(step => `<li>${step}</li>`).join("")
   );
-
-  html = html.replace("{{precautions}}", sections.precautions || "");
+  html = html.replace("{{precautions}}", currentSOP.precautions || "");
 
   preview.innerHTML = html;
 }
