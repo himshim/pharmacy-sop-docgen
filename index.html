@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Pharmacy SOP Generator</title>
 
-  <!-- A4 Print Styles -->
   <link rel="stylesheet" href="css/print-a4.css" />
 
   <style>
@@ -13,23 +12,45 @@
       margin: 20px;
     }
 
-    h2 {
-      margin-bottom: 10px;
+    h2, h3 {
+      margin-top: 20px;
     }
 
     label {
       display: block;
       margin-top: 10px;
+      font-weight: bold;
     }
 
-    select, button {
-      padding: 6px 10px;
-      margin-top: 5px;
-      min-width: 250px;
+    input, textarea, select {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 80px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .editor {
+      max-width: 700px;
     }
 
     #preview {
-      margin-top: 20px;
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 14px;
     }
   </style>
 </head>
@@ -38,7 +59,7 @@
 
 <h2>Pharmacy SOP Generator</h2>
 
-<!-- CONTROLS -->
+<!-- SELECTION -->
 <label>
   Department:
   <select id="departmentSelect">
@@ -53,17 +74,46 @@
   </select>
 </label>
 
-<br>
-
-<button onclick="window.print()">Print SOP</button>
-
 <hr>
 
-<!-- SOP PREVIEW -->
-<div id="preview"></div>
+<div class="layout">
 
-<!-- SCRIPT -->
+  <!-- EDITOR -->
+  <div class="editor">
+    <h3>Edit SOP Details</h3>
+
+    <label>Institution Name</label>
+    <input id="instituteInput" type="text" />
+
+    <label>Department</label>
+    <input id="departmentInput" type="text" />
+
+    <label>SOP Title</label>
+    <input id="titleInput" type="text" />
+
+    <label>SOP Number</label>
+    <input id="sopNumberInput" type="text" />
+
+    <label>Purpose</label>
+    <textarea id="purposeInput"></textarea>
+
+    <label>Scope</label>
+    <textarea id="scopeInput"></textarea>
+
+    <label>Procedure (one step per line)</label>
+    <textarea id="procedureInput"></textarea>
+
+    <label>Precautions</label>
+    <textarea id="precautionsInput"></textarea>
+
+    <button onclick="window.print()">Print SOP</button>
+  </div>
+
+  <!-- PREVIEW -->
+  <div id="preview"></div>
+
+</div>
+
 <script src="js/sop-engine.js"></script>
-
 </body>
 </html>
