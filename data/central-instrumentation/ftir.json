@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of FTIR Spectrophotometer"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for operating the FTIR Spectrophotometer for functional group analysis.",
+    "scope": "Applicable to analysis carried out in the Central Instrumentation Facility.",
+    "procedure": [
+      "Ensure the FTIR instrument is clean and free from dust.",
+      "Switch ON the instrument and allow it to stabilize.",
+      "Prepare the sample using suitable method (e.g., KBr pellet or ATR).",
+      "Place the background sample and record background spectrum.",
+      "Place the test sample in the sample holder.",
+      "Record the FTIR spectrum.",
+      "Save and interpret the spectrum as required."
+    ],
+    "precautions": "Handle IR windows and crystals carefully. Avoid moisture contamination."
+  }
+}

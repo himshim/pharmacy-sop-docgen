@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Particle Size Analyzer"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for determination of particle size using a particle size analyzer.",
+    "scope": "Applicable to particle size analysis carried out in the Central Instrumentation Facility.",
+    "procedure": [
+      "Switch ON the particle size analyzer.",
+      "Allow the instrument to initialize and stabilize.",
+      "Prepare the sample dispersion as per guidelines.",
+      "Load the sample into the measurement cell.",
+      "Set analysis parameters using the software.",
+      "Start the measurement and record particle size distribution.",
+      "After analysis, clean the sample cell and switch OFF the instrument."
+    ],
+    "precautions": "Ensure proper dispersion of sample. Avoid air bubbles during measurement."
+  }
+}

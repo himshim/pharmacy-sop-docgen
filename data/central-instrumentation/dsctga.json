@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of DSC / TGA Analyzer"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for thermal analysis using DSC or TGA analyzer.",
+    "scope": "Applicable to thermal analysis performed in the Central Instrumentation Facility.",
+    "procedure": [
+      "Ensure the instrument is clean and properly calibrated.",
+      "Switch ON the DSC/TGA analyzer and associated software.",
+      "Weigh the sample accurately and place it in the sample pan.",
+      "Load the sample pan into the instrument.",
+      "Set the temperature program as per requirement.",
+      "Start the analysis and monitor the run.",
+      "After completion, save the data and remove the sample pan."
+    ],
+    "precautions": "Do not overload sample pans. Handle hot components carefully."
+  }
+}
