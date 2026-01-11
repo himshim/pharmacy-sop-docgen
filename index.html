@@ -1,105 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Pharmacy SOP Generator</title>
+<meta charset="UTF-8" />
+<title>Pharmacy SOP Generator</title>
 
-  <link rel="stylesheet" href="css/print-a4.css" />
+<link rel="stylesheet" href="css/print-a4.css" />
 
-  <style>
-    body {
-      font-family: "Times New Roman", serif;
-      margin: 20px;
-      background: #f5f6f8;
-    }
+<style>
+/* ======================
+   BASE
+====================== */
+body {
+  font-family: "Times New Roman", serif;
+  margin: 0;
+  background: #f4f6f8;
+}
 
-    h2 {
-      margin-bottom: 10px;
-    }
+.app-shell {
+  max-width: 1500px;
+  margin: auto;
+  padding: 16px;
+}
 
-    h3 {
-      margin-top: 24px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 4px;
-    }
+/* ======================
+   TOP TOOLBAR
+====================== */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    label {
-      display: block;
-      margin-top: 12px;
-      font-weight: bold;
-      font-size: 13px;
-    }
+.top-bar strong {
+  font-size: 14px;
+}
 
-    input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 6px;
-      margin-top: 4px;
-      border: 1px solid #bbb;
-      border-radius: 4px;
-      font-family: inherit;
-    }
+.top-bar button {
+  padding: 6px 14px;
+  background: #1f2937;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-    textarea {
-      min-height: 80px;
-    }
+/* ======================
+   LAYOUT
+====================== */
+.layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 24px;
+  margin-top: 16px;
+}
 
-    button {
-      margin-top: 16px;
-      padding: 8px 14px;
-      background: #2c3e50;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+/* ======================
+   EDITOR PANEL
+====================== */
+.editor-panel {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 16px;
+  max-height: 88vh;
+  overflow-y: auto;
+}
 
-    button:hover {
-      background: #1a252f;
-    }
+/* ======================
+   SECTION BLOCKS
+====================== */
+.section {
+  margin-top: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
 
-    .app-shell {
-      max-width: 1400px;
-      margin: auto;
-    }
+.section-header {
+  background: #f1f5f9;
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .layout {
-      display: grid;
-      grid-template-columns: 420px 1fr;
-      gap: 24px;
-    }
+.section-content {
+  padding: 12px;
+}
 
-    /* LEFT PANEL */
-    .editor-panel {
-      background: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 16px;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
+/* ======================
+   INPUTS
+====================== */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 13px;
+}
 
-    /* CHECKBOX GROUPS */
-    .checkbox-group label {
-      font-weight: normal;
-      font-size: 13px;
-    }
+input, textarea, select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
 
-  </style>
+/* ======================
+   TOGGLE SWITCH
+====================== */
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.switch input {
+  appearance: none;
+  width: 38px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.switch input:checked {
+  background: #2563eb;
+}
+
+.switch input::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.switch input:checked::before {
+  left: 20px;
+}
+</style>
 </head>
 
 <body>
 
 <div class="app-shell">
 
-  <h2>Pharmacy SOP Generator</h2>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <strong>Pharmacy SOP Generator</strong>
+    <button onclick="window.print()">Print SOP</button>
+  </div>
 
+  <!-- SELECTORS -->
   <label>Department
     <select id="departmentSelect"></select>
   </label>
 
-  <label>SOP
+  <label>SOP Template
     <select id="sopSelect" disabled></select>
   </label>
 
@@ -112,26 +180,17 @@
     </select>
   </label>
 
-  <hr />
-
-  <h3>Optional Sections</h3>
-  <div class="checkbox-group">
-    <label><input type="checkbox" id="toggleDocControl" checked> Document Control</label>
-    <label><input type="checkbox" id="toggleApplicability"> Applicability</label>
-    <label><input type="checkbox" id="toggleAbbreviations"> Abbreviations</label>
-    <label><input type="checkbox" id="toggleReferences"> References</label>
-    <label><input type="checkbox" id="toggleAnnexures"> Annexures</label>
-    <label><input type="checkbox" id="toggleChangeHistory"> Change History</label>
-  </div>
-
-  <hr />
-
-  <h3>Optional Header Fields</h3>
-  <div class="checkbox-group">
-    <label><input type="checkbox" id="toggleSopNumber" checked> SOP Number</label>
-    <label><input type="checkbox" id="toggleEffectiveDate" checked> Effective Date</label>
-    <label><input type="checkbox" id="toggleRevisionDate" checked> Last Revision Date</label>
-    <label><input type="checkbox" id="toggleCopyType" checked> Controlled / Uncontrolled Copy</label>
+  <!-- TOGGLES -->
+  <div class="section">
+    <div class="section-header">Optional Sections</div>
+    <div class="section-content">
+      <div class="switch"><input type="checkbox" id="toggleDocControl" checked> Document Control</div>
+      <div class="switch"><input type="checkbox" id="toggleApplicability"> Applicability</div>
+      <div class="switch"><input type="checkbox" id="toggleAbbreviations"> Abbreviations</div>
+      <div class="switch"><input type="checkbox" id="toggleReferences"> References</div>
+      <div class="switch"><input type="checkbox" id="toggleAnnexures"> Annexures</div>
+      <div class="switch"><input type="checkbox" id="toggleChangeHistory"> Change History</div>
+    </div>
   </div>
 
   <div class="layout">
@@ -139,112 +198,42 @@
     <!-- EDITOR -->
     <div class="editor-panel">
 
-      <label>Institution</label>
-      <input id="institute" />
-
-      <label>Department</label>
-      <input id="department" />
-
-      <label>SOP Title</label>
-      <input id="title" />
-
-      <label>SOP Number</label>
-      <input id="sopNumber" />
-
-      <div id="sectionDocControl">
-        <h3>Document Control</h3>
-
-        <label>Revision Number</label>
-        <input id="revisionNo" />
-
-        <label>Effective Date</label>
-        <input type="date" id="effectiveDate" />
-
-        <label>Last Revision Date</label>
-        <input type="date" id="revisionDate" />
-
-        <label>Next Review Due Date</label>
-        <input type="date" id="nextReviewDate" />
-
-        <label>Copy Type</label>
-        <select id="copyType">
-          <option value="CONTROLLED">CONTROLLED COPY</option>
-          <option value="UNCONTROLLED">UNCONTROLLED COPY</option>
-        </select>
+      <div class="section">
+        <div class="section-header">Institution Details</div>
+        <div class="section-content">
+          <label>Institution</label><input id="institute">
+          <label>Department</label><input id="department">
+          <label>SOP Title</label><input id="title">
+          <label>SOP Number</label><input id="sopNumber">
+        </div>
       </div>
 
-      <div id="sectionChangeHistory">
-        <h3>Change History</h3>
-        <textarea id="changeHistoryInput"></textarea>
+      <div class="section" id="sectionDocControl">
+        <div class="section-header">Document Control</div>
+        <div class="section-content">
+          <label>Revision No</label><input id="revisionNo">
+          <label>Effective Date</label><input type="date" id="effectiveDate">
+          <label>Last Revision Date</label><input type="date" id="revisionDate">
+          <label>Next Review Date</label><input type="date" id="nextReviewDate">
+          <label>Copy Type</label>
+          <select id="copyType">
+            <option value="CONTROLLED">CONTROLLED COPY</option>
+            <option value="UNCONTROLLED">UNCONTROLLED COPY</option>
+          </select>
+        </div>
       </div>
 
-      <h3>SOP Content</h3>
-
-      <label>Purpose</label>
-      <textarea id="purpose"></textarea>
-
-      <label>Scope</label>
-      <textarea id="scope"></textarea>
-
-      <label>Responsibility</label>
-      <textarea id="responsibility"></textarea>
-
-      <label>Procedure</label>
-      <textarea id="procedure"></textarea>
-
-      <label>Precautions</label>
-      <textarea id="precautions"></textarea>
-
-      <div id="sectionApplicability">
-        <label>Applicability</label>
-        <textarea id="applicability"></textarea>
+      <div class="section">
+        <div class="section-header">SOP Content</div>
+        <div class="section-content">
+          <label>Purpose</label><textarea id="purpose"></textarea>
+          <label>Scope</label><textarea id="scope"></textarea>
+          <label>Responsibility</label><textarea id="responsibility"></textarea>
+          <label>Procedure</label><textarea id="procedure"></textarea>
+          <label>Precautions</label><textarea id="precautions"></textarea>
+        </div>
       </div>
 
-      <div id="sectionAbbreviations">
-        <label>Abbreviations</label>
-        <textarea id="abbreviations"></textarea>
-      </div>
-
-      <div id="sectionReferences">
-        <label>References</label>
-        <textarea id="references"></textarea>
-      </div>
-
-      <div id="sectionAnnexures">
-        <label>Annexures</label>
-        <textarea id="annexures"></textarea>
-      </div>
-
-      <h3>Authorization</h3>
-
-      <label>Prepared By</label>
-      <input id="preparedBy" />
-
-      <label>Prepared Designation</label>
-      <input id="preparedDesig" />
-
-      <label>Date</label>
-      <input type="date" id="preparedDate" />
-
-      <label>Checked By</label>
-      <input id="checkedBy" />
-
-      <label>Checked Designation</label>
-      <input id="checkedDesig" />
-
-      <label>Date</label>
-      <input type="date" id="checkedDate" />
-
-      <label>Approved By</label>
-      <input id="approvedBy" />
-
-      <label>Approved Designation</label>
-      <input id="approvedDesig" />
-
-      <label>Date</label>
-      <input type="date" id="approvedDate" />
-
-      <button onclick="window.print()">Print SOP</button>
     </div>
 
     <!-- PREVIEW -->
