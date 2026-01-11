@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOP Generator - Desktop</title>
     <style>
         * {
             margin: 0;
@@ -27,7 +25,6 @@
             overflow: hidden;
         }
 
-        /* Header */
         .app-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -46,14 +43,12 @@
             opacity: 0.9;
         }
 
-        /* Main Layout */
         .main-layout {
             display: grid;
             grid-template-columns: 420px 1fr;
             height: calc(100vh - 140px);
         }
 
-        /* Left Panel - Controls */
         .controls-panel {
             background: #f8f9fa;
             border-right: 1px solid #e0e0e0;
@@ -78,7 +73,6 @@
             background: #555;
         }
 
-        /* Section Styles */
         .control-section {
             background: white;
             border-radius: 12px;
@@ -108,7 +102,6 @@
             border-radius: 2px;
         }
 
-        /* Form Elements */
         .form-group {
             margin-bottom: 16px;
         }
@@ -147,7 +140,6 @@
             min-height: 80px;
         }
 
-        /* Checkbox Group */
         .checkbox-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -182,7 +174,6 @@
             font-size: 13px;
         }
 
-        /* Collapsible Sections */
         .collapsible-section {
             margin-bottom: 16px;
         }
@@ -217,7 +208,6 @@
             background: white;
         }
 
-        /* Preview Panel */
         .preview-panel {
             background: #e9ecef;
             display: flex;
@@ -295,7 +285,6 @@
             border-radius: 4px;
         }
 
-        /* Status Bar */
         .status-bar {
             background: #f8f9fa;
             padding: 12px 24px;
@@ -307,7 +296,6 @@
             color: #666;
         }
 
-        /* Responsive Adjustments */
         @media (max-width: 1400px) {
             .main-layout {
                 grid-template-columns: 380px 1fr;
@@ -323,18 +311,14 @@
 </head>
 <body>
     <div class="app-container">
-        <!-- Header -->
         <header class="app-header">
             <h1>📋 SOP Document Generator</h1>
             <p>Create professional Standard Operating Procedures with ease</p>
         </header>
 
-        <!-- Main Layout -->
         <div class="main-layout">
-            <!-- Left Panel - Controls -->
             <aside class="controls-panel">
 
-                <!-- Department Selection -->
                 <div class="control-section">
                     <h2 class="section-title">Department & SOP</h2>
                     <div class="form-group">
@@ -352,13 +336,14 @@
                     <div class="form-group">
                         <label for="templateSelect">Template Style</label>
                         <select id="templateSelect">
-                            <option value="template1.html">Modern Template</option>
-                            <option value="template2.html">Classic Template</option>
+                            <option value="sop-a4-classic.html">Classic Template</option>
+                            <option value="sop-a4-iso.html">ISO Template</option>
+                            <option value="sop-a4-naac.html">NAAC Template</option>
+                            <option value="sop-a4-pci.html">PCI Template</option>
                         </select>
                     </div>
                 </div>
 
-                <!-- Document Info -->
                 <div class="control-section" id="sectionDocControl" style="display:none;">
                     <h2 class="section-title">Document Information</h2>
                     <div class="form-group">
@@ -402,7 +387,6 @@
                     </div>
                 </div>
 
-                <!-- Content Sections -->
                 <div class="control-section">
                     <h2 class="section-title">Content Sections</h2>
 
@@ -452,7 +436,6 @@
                     </div>
                 </div>
 
-                <!-- Optional Sections -->
                 <div class="control-section" id="sectionApplicability" style="display:none;">
                     <h2 class="section-title">Applicability</h2>
                     <textarea id="applicability" placeholder="Define applicability..."></textarea>
@@ -478,7 +461,6 @@
                     <textarea id="changeHistoryInput" placeholder="Format: Version|Date|Changes|Approved By (one per line)"></textarea>
                 </div>
 
-                <!-- Section Toggles -->
                 <div class="control-section">
                     <h2 class="section-title">Section Visibility</h2>
                     <div class="checkbox-grid">
@@ -509,7 +491,6 @@
                     </div>
                 </div>
 
-                <!-- Field Toggles -->
                 <div class="control-section">
                     <h2 class="section-title">Field Visibility</h2>
                     <div class="checkbox-grid">
@@ -532,7 +513,6 @@
                     </div>
                 </div>
 
-                <!-- Approval Section -->
                 <div class="control-section">
                     <h2 class="section-title">Approval Information</h2>
 
@@ -581,7 +561,6 @@
 
             </aside>
 
-            <!-- Right Panel - Preview -->
             <main class="preview-panel">
                 <div class="preview-toolbar">
                     <h2>📄 Document Preview</h2>
@@ -600,15 +579,10 @@
             </main>
         </div>
 
-        <!-- Status Bar -->
         <footer class="status-bar">
             <span>✓ Ready</span>
             <span>SOP Generator v2.0</span>
         </footer>
     </div>
-
-    <script src="template-engine.js"></script>
-    <script src="sop-engine.js"></script>
-    <script>window.initSOPApp();</script>
 </body>
 </html>

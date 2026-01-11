@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional SOP Document Generator for creating Standard Operating Procedures">
+    <meta name="description" content="Professional SOP Document Generator">
     <title>SOP Generator - Professional Document Creator</title>
 
-    <!-- Print Styles -->
-    <link rel="stylesheet" href="print-a4.css">
-
-    <!-- Desktop UI -->
-    <link rel="stylesheet" href="ui-desktop.css">
-
-    <!-- Mobile UI -->
-    <link rel="stylesheet" href="ui-mobile.css">
+    <!-- CSS Files from css folder -->
+    <link rel="stylesheet" href="css/print-a4.css">
+    <link rel="stylesheet" href="css/ui-desktop.css">
+    <link rel="stylesheet" href="css/ui-mobile.css">
 
     <style>
-        /* Base loading styles */
+        /* Loading Screen */
         .loading-screen {
             position: fixed;
             top: 0;
@@ -55,7 +51,6 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Responsive container */
         #ui-container {
             opacity: 0;
             transition: opacity 0.5s;
@@ -84,15 +79,15 @@
         <div id="ui-mobile"></div>
     </div>
 
-    <!-- Scripts -->
-    <script src="template-engine.js"></script>
-    <script src="sop-engine.js"></script>
+    <!-- Scripts from js folder -->
+    <script src="js/template-engine.js"></script>
+    <script src="js/sop-engine.js"></script>
 
     <script>
         // Load appropriate UI based on device
         async function loadUI() {
             const isMobile = window.innerWidth <= 768;
-            const uiFile = isMobile ? 'ui-mobile-optimized.html' : 'ui-desktop-optimized.html';
+            const uiFile = isMobile ? 'partials/ui-mobile.html' : 'partials/ui-desktop.html';
             const targetDiv = isMobile ? 'ui-mobile' : 'ui-desktop';
 
             try {
@@ -128,7 +123,7 @@
         // Load UI on page load
         window.addEventListener('DOMContentLoaded', loadUI);
 
-        // Reload UI on orientation change (mobile devices)
+        // Reload UI on orientation change
         let resizeTimer;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);

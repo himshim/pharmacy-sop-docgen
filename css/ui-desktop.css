@@ -1,4 +1,4 @@
-/* Desktop UI Styles - Optimized */
+/* Desktop UI Styles */
 #ui-desktop { 
     display: block; 
 }
@@ -16,7 +16,7 @@
     }
 }
 
-/* Additional responsive enhancements */
+/* Responsive enhancements */
 @media (min-width: 769px) and (max-width: 1024px) {
     .main-layout {
         grid-template-columns: 360px 1fr !important;

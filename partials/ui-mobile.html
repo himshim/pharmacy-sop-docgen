@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>SOP Generator - Mobile</title>
     <style>
         * {
             margin: 0;
@@ -18,7 +16,6 @@
             overflow-x: hidden;
         }
 
-        /* Header */
         .mobile-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -40,7 +37,6 @@
             opacity: 0.9;
         }
 
-        /* Tab Navigation */
         .tab-navigation {
             display: flex;
             background: white;
@@ -73,7 +69,6 @@
             background: #f0f0f0;
         }
 
-        /* Content Container */
         .mobile-content {
             padding: 16px;
             padding-bottom: 80px;
@@ -93,7 +88,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Card Sections */
         .card {
             background: white;
             border-radius: 12px;
@@ -120,7 +114,6 @@
             border-radius: 2px;
         }
 
-        /* Form Elements */
         .form-group {
             margin-bottom: 14px;
         }
@@ -169,7 +162,6 @@
             line-height: 1.5;
         }
 
-        /* Expandable Sections */
         .expandable {
             margin-bottom: 12px;
         }
@@ -217,7 +209,6 @@
             background: white;
         }
 
-        /* Toggle Switches */
         .toggle-list {
             display: grid;
             gap: 10px;
@@ -282,7 +273,6 @@
             transform: translateX(22px);
         }
 
-        /* Preview */
         #preview-wrapper {
             background: #e9ecef;
             border-radius: 8px;
@@ -301,7 +291,6 @@
             transform-origin: top left;
         }
 
-        /* Bottom Action Bar */
         .bottom-action-bar {
             position: fixed;
             bottom: 0;
@@ -348,7 +337,6 @@
             transform: scale(0.98);
         }
 
-        /* Subsection Headers */
         .subsection-title {
             font-size: 13px;
             font-weight: 600;
@@ -358,7 +346,6 @@
             border-bottom: 1px solid #e0e0e0;
         }
 
-        /* Empty State */
         .empty-state {
             text-align: center;
             padding: 40px 20px;
@@ -370,14 +357,6 @@
             margin-bottom: 16px;
         }
 
-        /* Loading State */
-        .loading {
-            text-align: center;
-            padding: 20px;
-            color: #667eea;
-        }
-
-        /* Accessibility */
         select:disabled,
         input:disabled {
             background: #f0f0f0;
@@ -387,26 +366,21 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="mobile-header">
         <h1>📋 SOP Generator</h1>
         <p>Create professional SOPs on the go</p>
     </header>
 
-    <!-- Tab Navigation -->
     <nav class="tab-navigation">
         <button class="tab-btn active" onclick="switchTab(0)">📝 Create</button>
         <button class="tab-btn" onclick="switchTab(1)">👁️ Preview</button>
         <button class="tab-btn" onclick="switchTab(2)">⚙️ Options</button>
     </nav>
 
-    <!-- Content -->
     <div class="mobile-content">
 
-        <!-- Tab 1: Create -->
         <div class="tab-panel active" id="tab-create">
 
-            <!-- Selection -->
             <div class="card">
                 <h2 class="card-title">Selection</h2>
                 <div class="form-group">
@@ -424,13 +398,14 @@
                 <div class="form-group">
                     <label for="templateSelect">Template</label>
                     <select id="templateSelect">
-                        <option value="template1.html">Modern</option>
-                        <option value="template2.html">Classic</option>
+                        <option value="sop-a4-classic.html">Classic</option>
+                        <option value="sop-a4-iso.html">ISO</option>
+                        <option value="sop-a4-naac.html">NAAC</option>
+                        <option value="sop-a4-pci.html">PCI</option>
                     </select>
                 </div>
             </div>
 
-            <!-- Document Info -->
             <div class="card" id="sectionDocControl" style="display:none;">
                 <h2 class="card-title">Document Info</h2>
                 <div class="form-group">
@@ -474,7 +449,6 @@
                 </div>
             </div>
 
-            <!-- Content Sections -->
             <div class="card">
                 <h2 class="card-title">Content</h2>
 
@@ -529,7 +503,6 @@
                 </div>
             </div>
 
-            <!-- Optional Sections -->
             <div class="card" id="sectionApplicability" style="display:none;">
                 <h2 class="card-title">Applicability</h2>
                 <textarea id="applicability" placeholder="Define applicability..."></textarea>
@@ -555,7 +528,6 @@
                 <textarea id="changeHistoryInput" placeholder="Format: Version|Date|Changes|Approved By"></textarea>
             </div>
 
-            <!-- Approval -->
             <div class="card">
                 <h2 class="card-title">Approval</h2>
 
@@ -603,7 +575,6 @@
             </div>
         </div>
 
-        <!-- Tab 2: Preview -->
         <div class="tab-panel" id="tab-preview">
             <div class="card">
                 <h2 class="card-title">Document Preview</h2>
@@ -618,10 +589,8 @@
             </div>
         </div>
 
-        <!-- Tab 3: Options -->
         <div class="tab-panel" id="tab-options">
 
-            <!-- Section Toggles -->
             <div class="card">
                 <h2 class="card-title">Section Visibility</h2>
                 <div class="toggle-list">
@@ -670,7 +639,6 @@
                 </div>
             </div>
 
-            <!-- Field Toggles -->
             <div class="card">
                 <h2 class="card-title">Field Visibility</h2>
                 <div class="toggle-list">
@@ -708,14 +676,12 @@
         </div>
     </div>
 
-    <!-- Bottom Action Bar -->
     <div class="bottom-action-bar">
         <button class="action-btn btn-secondary" onclick="window.print()">🖨️ Print</button>
         <button class="action-btn btn-primary" onclick="window.print()">💾 Save PDF</button>
     </div>
 
     <script>
-        // Tab Switching
         function switchTab(index) {
             const tabs = document.querySelectorAll('.tab-btn');
             const panels = document.querySelectorAll('.tab-panel');
@@ -729,15 +695,10 @@
             });
         }
 
-        // Expandable Sections
         function toggleExpand(header) {
             const expandable = header.parentElement;
             expandable.classList.toggle('open');
         }
     </script>
-
-    <script src="template-engine.js"></script>
-    <script src="sop-engine.js"></script>
-    <script>window.initSOPApp();</script>
 </body>
 </html>

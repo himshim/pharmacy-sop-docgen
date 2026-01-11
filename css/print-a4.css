@@ -67,7 +67,7 @@ th {
     font-family: 'Times New Roman', serif;
 }
 
-/* Visual scaling only (never affects print) */
+/* Visual scaling (screen only) */
 @media screen and (max-width: 900px) {
     #preview {
         transform: scale(0.7);
@@ -116,7 +116,6 @@ th {
         margin: 0;
     }
 
-    /* Prevent page breaks in inappropriate places */
     h1, h2, h3 {
         page-break-after: avoid;
     }
@@ -127,7 +126,7 @@ th {
 }
 
 /* =========================
-   MOBILE OPTIMIZATION (SAFE)
+   MOBILE OPTIMIZATION
    ========================= */
 @media screen and (max-width: 900px) {
     .layout {
@@ -177,7 +176,6 @@ th {
         padding: 10px;
     }
 
-    /* PREVIEW SCALE (SCREEN ONLY) */
     #preview {
         transform: scale(0.85);
         transform-origin: top center;

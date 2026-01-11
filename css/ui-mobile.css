@@ -1,4 +1,4 @@
-/* Mobile UI Styles - Optimized */
+/* Mobile UI Styles */
 #ui-mobile { 
     display: block; 
 }
@@ -16,7 +16,7 @@
     }
 }
 
-/* Safe zone for iPhone X and similar devices */
+/* Safe zone for iPhone X */
 @supports(padding: max(0px)) {
     .mobile-header {
         padding-top: max(16px, env(safe-area-inset-top));
@@ -29,7 +29,7 @@
     }
 }
 
-/* Landscape mode adjustments */
+/* Landscape mode */
 @media (max-width: 768px) and (orientation: landscape) {
     .mobile-header {
         padding: 12px 16px;
