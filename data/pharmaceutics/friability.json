@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Friability Test Apparatus"
+  },
+  "sections": {
+    "purpose": "To describe the method for determining friability of tablets.",
+    "scope": "Applicable to evaluation of tablet dosage forms in the Pharmaceutics laboratory.",
+    "procedure": [
+      "Clean and dry the friabilator drum.",
+      "Weigh the sample tablets accurately.",
+      "Place tablets in the friabilator.",
+      "Set the apparatus for the specified number of rotations.",
+      "Start the apparatus and allow it to run.",
+      "Remove tablets, dust them, and reweigh.",
+      "Calculate percentage friability."
+    ],
+    "precautions": "Ensure tablets are free from moisture before testing."
+  }
+}

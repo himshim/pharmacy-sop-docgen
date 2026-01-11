@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Dissolution Test Apparatus"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for conducting dissolution testing of solid dosage forms.",
+    "scope": "Applicable to dissolution studies in the Pharmaceutics laboratory.",
+    "procedure": [
+      "Fill dissolution vessels with specified dissolution medium.",
+      "Set temperature to 37 ± 0.5°C.",
+      "Fix paddles or baskets at specified height.",
+      "Place dosage form in each vessel.",
+      "Start the apparatus at specified speed.",
+      "Withdraw samples at specified time intervals.",
+      "Analyze samples using suitable analytical method."
+    ],
+    "precautions": "Ensure temperature uniformity. Avoid vibration of the apparatus during operation."
+  }
+}

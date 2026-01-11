@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of HPLC System"
+  },
+  "sections": {
+    "purpose": "To outline the procedure for operating the High Performance Liquid Chromatography system.",
+    "scope": "Applicable to analysis carried out in the Pharmaceutics laboratory.",
+    "procedure": [
+      "Switch ON the HPLC system and associated modules.",
+      "Prepare and filter mobile phase.",
+      "Prime the pump with mobile phase.",
+      "Set chromatographic conditions in the software.",
+      "Inject the sample solution.",
+      "Record and analyze the chromatogram.",
+      "After analysis, flush the system with suitable solvent."
+    ],
+    "precautions": "Ensure mobile phase is free from air bubbles. Do not exceed pressure limits."
+  }
+}
