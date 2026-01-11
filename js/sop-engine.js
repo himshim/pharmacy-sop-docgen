@@ -2,7 +2,7 @@ const preview = document.getElementById("preview");
 const deptSelect = document.getElementById("departmentSelect");
 const sopSelect = document.getElementById("sopSelect");
 
-/* INPUTS */
+/* INPUT FIELDS */
 const instituteInput = document.getElementById("instituteInput");
 const departmentInput = document.getElementById("departmentInput");
 const titleInput = document.getElementById("titleInput");
@@ -13,14 +13,17 @@ const procedureInput = document.getElementById("procedureInput");
 const precautionsInput = document.getElementById("precautionsInput");
 
 let TEMPLATE = "";
-let currentSOP = {};
+let currentSOP = null;
 
 /* ===============================
    LOAD TEMPLATE
 ================================ */
 fetch("templates/sop-a4.html")
   .then(res => res.text())
-  .then(html => TEMPLATE = html);
+  .then(html => {
+    TEMPLATE = html;
+    console.log("Template loaded");
+  });
 
 /* ===============================
    LOAD DEPARTMENTS
@@ -45,10 +48,12 @@ deptSelect.addEventListener("change", async () => {
   sopSelect.innerHTML = '<option value="">Select SOP</option>';
   sopSelect.disabled = true;
   preview.innerHTML = "";
+  clearInputs();
 
   if (!dept) return;
 
   const index = await fetch(`data/${dept}/index.json`).then(r => r.json());
+
   index.instruments.forEach(item => {
     const opt = document.createElement("option");
     opt.value = item.key;
@@ -65,39 +70,32 @@ deptSelect.addEventListener("change", async () => {
 sopSelect.addEventListener("change", async () => {
   const sopKey = sopSelect.value;
   const dept = deptSelect.value;
+
   if (!sopKey || !dept) return;
 
   const raw = await fetch(`data/${dept}/${sopKey}.json`).then(r => r.json());
 
+  /* BUILD STATE FROM JSON (OLD FORMAT SAFE) */
   currentSOP = {
-    institute: "",
+    institute: raw.meta?.institute || "",
     department: dept,
     title: raw.meta?.title || "",
-    sopNumber: "",
+    sopNumber: raw.meta?.sopNumber || "",
     purpose: raw.sections?.purpose || "",
     scope: raw.sections?.scope || "",
-    procedure: raw.sections?.procedure || [],
+    procedure: Array.isArray(raw.sections?.procedure)
+      ? raw.sections.procedure
+      : [],
     precautions: raw.sections?.precautions || ""
   };
 
-  syncInputs();
+  populateInputs();
   renderSOP();
 });
 
 /* ===============================
    INPUT → STATE → PREVIEW
 ================================ */
-function syncInputs() {
-  instituteInput.value = currentSOP.institute;
-  departmentInput.value = currentSOP.department;
-  titleInput.value = currentSOP.title;
-  sopNumberInput.value = currentSOP.sopNumber;
-  purposeInput.value = currentSOP.purpose;
-  scopeInput.value = currentSOP.scope;
-  procedureInput.value = currentSOP.procedure.join("\n");
-  precautionsInput.value = currentSOP.precautions;
-}
-
 [
   instituteInput,
   departmentInput,
@@ -109,26 +107,57 @@ function syncInputs() {
   precautionsInput
 ].forEach(input => {
   input.addEventListener("input", () => {
-    currentSOP = {
-      ...currentSOP,
-      institute: instituteInput.value,
-      department: departmentInput.value,
-      title: titleInput.value,
-      sopNumber: sopNumberInput.value,
-      purpose: purposeInput.value,
-      scope: scopeInput.value,
-      procedure: procedureInput.value.split("\n").filter(Boolean),
-      precautions: precautionsInput.value
-    };
+    if (!currentSOP) return;
+
+    currentSOP.institute = instituteInput.value;
+    currentSOP.department = departmentInput.value;
+    currentSOP.title = titleInput.value;
+    currentSOP.sopNumber = sopNumberInput.value;
+    currentSOP.purpose = purposeInput.value;
+    currentSOP.scope = scopeInput.value;
+    currentSOP.procedure = procedureInput.value
+      .split("\n")
+      .map(v => v.trim())
+      .filter(Boolean);
+    currentSOP.precautions = precautionsInput.value;
+
     renderSOP();
   });
 });
 
 /* ===============================
+   POPULATE INPUTS FROM STATE
+================================ */
+function populateInputs() {
+  instituteInput.value = currentSOP.institute;
+  departmentInput.value = currentSOP.department;
+  titleInput.value = currentSOP.title;
+  sopNumberInput.value = currentSOP.sopNumber;
+  purposeInput.value = currentSOP.purpose;
+  scopeInput.value = currentSOP.scope;
+  procedureInput.value = currentSOP.procedure.join("\n");
+  precautionsInput.value = currentSOP.precautions;
+}
+
+/* ===============================
+   CLEAR INPUTS
+================================ */
+function clearInputs() {
+  instituteInput.value = "";
+  departmentInput.value = "";
+  titleInput.value = "";
+  sopNumberInput.value = "";
+  purposeInput.value = "";
+  scopeInput.value = "";
+  procedureInput.value = "";
+  precautionsInput.value = "";
+}
+
+/* ===============================
    RENDER SOP
 ================================ */
 function renderSOP() {
-  if (!TEMPLATE) return;
+  if (!TEMPLATE || !currentSOP) return;
 
   let html = TEMPLATE;
 
@@ -139,10 +168,12 @@ function renderSOP() {
 
   html = html.replace("{{purpose}}", currentSOP.purpose || "");
   html = html.replace("{{scope}}", currentSOP.scope || "");
+
   html = html.replace(
     "{{procedure}}",
     currentSOP.procedure.map(step => `<li>${step}</li>`).join("")
   );
+
   html = html.replace("{{precautions}}", currentSOP.precautions || "");
 
   preview.innerHTML = html;
