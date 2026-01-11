@@ -16,6 +16,7 @@ const inputs = {
   sopNumber: document.getElementById("sopNumber"),
   purpose: document.getElementById("purpose"),
   scope: document.getElementById("scope"),
+  responsibility: document.getElementById("responsibility"),
   procedure: document.getElementById("procedure"),
   precautions: document.getElementById("precautions"),
 
@@ -94,6 +95,9 @@ sopSelect.addEventListener("change", async () => {
 
     purpose: raw.sections?.purpose || "",
     scope: raw.sections?.scope || "",
+    responsibility:
+      "Laboratory In-charge, faculty members, technical staff, and authorized users are responsible for implementation and compliance of this SOP.",
+
     procedure: raw.sections?.procedure || [],
     precautions: raw.sections?.precautions || "",
 
@@ -162,6 +166,7 @@ function syncInputs() {
     }
     inputs.changeHistoryInput.value = SOP_DATA.changeHistory.join("\n");
   });
+  inputs.responsibility.value = SOP_DATA.responsibility;
 }
 
 /* =========================
@@ -195,6 +200,8 @@ function render() {
     purpose: SOP_DATA.purpose,
     scope: SOP_DATA.scope,
     precautions: SOP_DATA.precautions,
+
+    responsibility: SOP_DATA.responsibility,
 
     procedure: SOP_DATA.procedure.map((s) => `<li>${s}</li>`).join(""),
 
