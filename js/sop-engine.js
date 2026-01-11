@@ -4,14 +4,23 @@ const sopSelect = document.getElementById("sopSelect");
 
 let TEMPLATE = "";
 
-// Load SOP template once
+/* ===============================
+   LOAD SOP TEMPLATE ONCE
+================================ */
 fetch("templates/sop-a4.html")
   .then(res => res.text())
-  .then(html => TEMPLATE = html);
+  .then(html => {
+    TEMPLATE = html;
+    console.log("Template loaded");
+  })
+  .catch(err => console.error("Template load error", err));
 
-// Department change → load SOP index
+/* ===============================
+   DEPARTMENT CHANGE
+================================ */
 deptSelect.addEventListener("change", async () => {
   const dept = deptSelect.value;
+
   sopSelect.innerHTML = '<option value="">Select SOP</option>';
   sopSelect.disabled = true;
 
@@ -34,36 +43,51 @@ deptSelect.addEventListener("change", async () => {
   }
 });
 
-// SOP change → load SOP JSON
+/* ===============================
+   SOP CHANGE
+================================ */
 sopSelect.addEventListener("change", async () => {
   const sopKey = sopSelect.value;
   const dept = deptSelect.value;
+
   if (!sopKey || !dept) return;
 
   try {
-    const data = await fetch(`data/${dept}/${sopKey}.json`).then(r => r.json());
-    renderSOP(data);
+    const raw = await fetch(`data/${dept}/${sopKey}.json`).then(r => r.json());
+    renderSOP(raw, dept);
   } catch (e) {
     console.error(e);
     alert("Failed to load SOP");
   }
 });
 
-// Render SOP
-function renderSOP(data) {
+/* ===============================
+   RENDER SOP (OLD JSON COMPAT)
+================================ */
+function renderSOP(raw, deptName) {
+  if (!TEMPLATE) return;
+
   let html = TEMPLATE;
 
-  html = html.replace("{{institute}}", data.institute || "");
-  html = html.replace("{{department}}", data.department || "");
-  html = html.replace("{{title}}", data.title || "");
-  html = html.replace("{{sopNumber}}", data.sopNumber || "");
-  html = html.replace("{{purpose}}", data.purpose || "");
-  html = html.replace("{{scope}}", data.scope || "");
+  const title = raw.meta?.title || "";
+  const sections = raw.sections || {};
+
+  html = html.replace("{{institute}}", "____________________________");
+  html = html.replace("{{department}}", deptName);
+  html = html.replace("{{title}}", title);
+  html = html.replace("{{sopNumber}}", "________________");
+
+  html = html.replace("{{purpose}}", sections.purpose || "");
+  html = html.replace("{{scope}}", sections.scope || "");
+
   html = html.replace(
     "{{procedure}}",
-    (data.procedure || []).map(step => `<li>${step}</li>`).join("")
+    Array.isArray(sections.procedure)
+      ? sections.procedure.map(step => `<li>${step}</li>`).join("")
+      : ""
   );
-  html = html.replace("{{precautions}}", data.precautions || "");
+
+  html = html.replace("{{precautions}}", sections.precautions || "");
 
   preview.innerHTML = html;
 }
