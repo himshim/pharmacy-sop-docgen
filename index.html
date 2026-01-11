@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Pharmacy SOP Generator</title>
 
-  <link rel="stylesheet" href="css/print-a4.css" />
+  <link rel="stylesheet" href="css/print-a4.css">
 
   <style>
     body {
       font-family: "Times New Roman", serif;
       margin: 20px;
-    }
-
-    h2, h3 {
-      margin-top: 20px;
     }
 
     label {
@@ -26,7 +22,6 @@
       width: 100%;
       padding: 6px;
       margin-top: 4px;
-      font-family: inherit;
     }
 
     textarea {
@@ -35,22 +30,13 @@
 
     .layout {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 420px 1fr;
       gap: 20px;
-    }
-
-    .editor {
-      max-width: 700px;
     }
 
     #preview {
       border-left: 1px solid #ccc;
       padding-left: 20px;
-    }
-
-    button {
-      margin-top: 10px;
-      padding: 8px 14px;
     }
   </style>
 </head>
@@ -59,18 +45,20 @@
 
 <h2>Pharmacy SOP Generator</h2>
 
-<!-- SELECTION -->
 <label>
-  Department:
-  <select id="departmentSelect">
-    <option value="">Select Department</option>
-  </select>
+  Department
+  <select id="departmentSelect"></select>
 </label>
 
 <label>
-  SOP Template:
-  <select id="sopSelect" disabled>
-    <option value="">Select SOP</option>
+  SOP
+  <select id="sopSelect" disabled></select>
+</label>
+
+<label>
+  Design Template
+  <select id="templateSelect">
+    <option value="sop-a4-classic.html">Classic A4</option>
   </select>
 </label>
 
@@ -79,32 +67,30 @@
 <div class="layout">
 
   <!-- EDITOR -->
-  <div class="editor">
-    <h3>Edit SOP Details</h3>
-
-    <label>Institution Name</label>
-    <input id="instituteInput" type="text" />
+  <div>
+    <label>Institution</label>
+    <input id="institute">
 
     <label>Department</label>
-    <input id="departmentInput" type="text" />
+    <input id="department">
 
     <label>SOP Title</label>
-    <input id="titleInput" type="text" />
+    <input id="title">
 
     <label>SOP Number</label>
-    <input id="sopNumberInput" type="text" />
+    <input id="sopNumber">
 
     <label>Purpose</label>
-    <textarea id="purposeInput"></textarea>
+    <textarea id="purpose"></textarea>
 
     <label>Scope</label>
-    <textarea id="scopeInput"></textarea>
+    <textarea id="scope"></textarea>
 
-    <label>Procedure (one step per line)</label>
-    <textarea id="procedureInput"></textarea>
+    <label>Procedure (one per line)</label>
+    <textarea id="procedure"></textarea>
 
     <label>Precautions</label>
-    <textarea id="precautionsInput"></textarea>
+    <textarea id="precautions"></textarea>
 
     <button onclick="window.print()">Print SOP</button>
   </div>
@@ -114,6 +100,8 @@
 
 </div>
 
+<script src="js/template-engine.js"></script>
 <script src="js/sop-engine.js"></script>
+
 </body>
 </html>
