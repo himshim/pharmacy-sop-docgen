@@ -1,7 +1,34 @@
-#ui-desktop { display: block; }
-#ui-mobile { display: none; }
+/* Desktop UI Styles - Optimized */
+#ui-desktop { 
+    display: block; 
+}
+
+#ui-mobile { 
+    display: none; 
+}
 
 @media (max-width: 768px) {
-  #ui-desktop { display: none; }
-  #ui-mobile { display: block; }
+    #ui-desktop { 
+        display: none; 
+    }
+    #ui-mobile { 
+        display: block; 
+    }
+}
+
+/* Additional responsive enhancements */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-layout {
+        grid-template-columns: 360px 1fr !important;
+    }
+
+    .controls-panel {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .app-container {
+        max-width: 1800px;
+    }
 }

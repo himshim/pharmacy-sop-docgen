@@ -1,75 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Pharmacy SOP Generator</title>
-  <base href="/pharmacy-sop-docgen/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional SOP Document Generator for creating Standard Operating Procedures">
+    <title>SOP Generator - Professional Document Creator</title>
 
+    <!-- Print Styles -->
+    <link rel="stylesheet" href="print-a4.css">
 
-  <!-- REQUIRED for mobile compatibility -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Desktop UI -->
+    <link rel="stylesheet" href="ui-desktop.css">
 
-  <!-- UI styles -->
-  <link rel="stylesheet" href="css/ui-desktop.css" />
-  <link rel="stylesheet" href="css/ui-mobile.css" />
+    <!-- Mobile UI -->
+    <link rel="stylesheet" href="ui-mobile.css">
 
-  <!-- Print -->
-  <link rel="stylesheet" href="css/print-a4.css" />
-</head>
-
-<body>
-
-  <!-- UI MOUNT POINT -->
-  <div id="app"></div>
-
-  <!-- CREDIT (SCREEN ONLY) -->
-  <footer class="app-footer">
-    Created by
-    <a href="https://github.com/himshim" target="_blank">@himshim26</a>
-    ·
-    <a href="https://github.com/himshim/pharmacy-sop-docgen" target="_blank">
-      Source Code
-    </a>
-  </footer>
-
-  <!-- UI LOADER -->
-  <script>
-    async function loadUI() {
-      const app = document.getElementById("app");
-      if (!app) return;
-
-      const isMobile = window.matchMedia("(max-width: 768px)").matches;
-      const uiFile = isMobile
-        ? "partials/ui-mobile.html"
-        : "partials/ui-desktop.html";
-
-      try {
-        const html = await fetch(`${uiFile}?v=${Date.now()}`).then(r => r.text());
-        app.innerHTML = html;
-
-        // 🔥 IMPORTANT: initialize logic ONLY after UI exists
-        if (window.initSOPApp) {
-          window.initSOPApp();
+    <style>
+        /* Base loading styles */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s, visibility 0.5s;
         }
-      } catch (e) {
-        app.innerHTML = "<p style='color:red'>Failed to load UI</p>";
-        console.error(e);
-      }
-    }
 
-    loadUI();
-  </script>
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
 
-  <!-- LOGIC (shared) -->
-  <script src="js/template-engine.js"></script>
-  <script src="js/sop-engine.js"></script>
+        .loading-content {
+            text-align: center;
+            color: white;
+        }
 
-  app.innerHTML = html;
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
 
-// 🔥 Edge needs a tick
-setTimeout(() => {
-  window.initSOPApp?.();
-}, 0);
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
 
+        /* Responsive container */
+        #ui-container {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        #ui-container.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h2>Loading SOP Generator...</h2>
+        </div>
+    </div>
+
+    <!-- UI Container -->
+    <div id="ui-container">
+        <!-- Desktop UI -->
+        <div id="ui-desktop"></div>
+
+        <!-- Mobile UI -->
+        <div id="ui-mobile"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="template-engine.js"></script>
+    <script src="sop-engine.js"></script>
+
+    <script>
+        // Load appropriate UI based on device
+        async function loadUI() {
+            const isMobile = window.innerWidth <= 768;
+            const uiFile = isMobile ? 'ui-mobile-optimized.html' : 'ui-desktop-optimized.html';
+            const targetDiv = isMobile ? 'ui-mobile' : 'ui-desktop';
+
+            try {
+                const response = await fetch(uiFile);
+                const html = await response.text();
+
+                // Extract body content from loaded HTML
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const bodyContent = doc.body.innerHTML;
+
+                // Inject into appropriate container
+                document.getElementById(targetDiv).innerHTML = bodyContent;
+
+                // Initialize SOP App
+                if (window.initSOPApp) {
+                    window.initSOPApp();
+                }
+
+                // Hide loading screen
+                setTimeout(() => {
+                    document.getElementById('loadingScreen').classList.add('hidden');
+                    document.getElementById('ui-container').classList.add('loaded');
+                }, 500);
+
+            } catch (error) {
+                console.error('Error loading UI:', error);
+                document.getElementById('loadingScreen').innerHTML = 
+                    '<div class="loading-content"><h2>Error loading application</h2><p>Please refresh the page</p></div>';
+            }
+        }
+
+        // Load UI on page load
+        window.addEventListener('DOMContentLoaded', loadUI);
+
+        // Reload UI on orientation change (mobile devices)
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                const wasMobile = document.getElementById('ui-mobile').innerHTML !== '';
+                const isMobile = window.innerWidth <= 768;
+
+                if (wasMobile !== isMobile) {
+                    location.reload();
+                }
+            }, 250);
+        });
+    </script>
 </body>
 </html>

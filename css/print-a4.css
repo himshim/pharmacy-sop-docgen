@@ -1,169 +1,185 @@
 /* =========================
    TYPOGRAPHY (A4)
-========================= */
-
+   ========================= */
 h1 {
-  font-size: 16pt;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-bottom: 12px;
 }
 
 h2 {
-  font-size: 12pt;
-  margin-top: 16px;
+    font-size: 12pt;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
 }
 
-p,
-li,
-td,
-th {
-  font-size: 11pt;
+p, li, td, th {
+    font-size: 11pt;
+    line-height: 1.5;
 }
 
 /* =========================
    TABLES
-========================= */
-
+   ========================= */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 12px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+    page-break-inside: auto;
 }
 
-td,
+tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: left;
+}
+
 th {
-  border: 1px solid black;
-  padding: 6px;
+    background-color: #f0f0f0;
+    font-weight: 600;
 }
 
 /* =========================
    SCREEN PREVIEW
-========================= */
-
+   ========================= */
 #preview-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: auto;
-  max-height: 90vh;
-  padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: auto;
+    max-height: 90vh;
+    padding-bottom: 20px;
 }
 
 #preview {
-  width: 210mm;
-  min-height: 297mm;
-  background: white;
-  padding: 20mm;
-  box-sizing: border-box;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    padding: 20mm;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    font-family: 'Times New Roman', serif;
 }
 
 /* Visual scaling only (never affects print) */
 @media screen and (max-width: 900px) {
-  #preview {
-    transform: scale(0.7);
-    transform-origin: top center;
-  }
+    #preview {
+        transform: scale(0.7);
+        transform-origin: top center;
+    }
 }
 
 @media screen and (max-width: 600px) {
-  #preview {
-    transform: scale(0.5);
-    transform-origin: top center;
-  }
+    #preview {
+        transform: scale(0.5);
+        transform-origin: top center;
+    }
 }
 
 /* =========================
    PRINT MODE
-========================= */
-
+   ========================= */
 @media print {
+    body * {
+        visibility: hidden;
+    }
 
-  body * {
-    visibility: hidden;
-  }
+    #preview-wrapper,
+    #preview,
+    #preview * {
+        visibility: visible;
+    }
 
-  #preview-wrapper,
-  #preview,
-  #preview * {
-    visibility: visible;
-  }
+    #preview-wrapper {
+        position: absolute;
+        inset: 0;
+        overflow: visible;
+    }
 
-  #preview-wrapper {
-    position: absolute;
-    inset: 0;
-  }
+    #preview {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 20mm;
+        box-shadow: none;
+        transform: none !important;
+        page-break-after: auto;
+    }
 
-  #preview {
-    width: 210mm;
-    min-height: 297mm;
-    padding: 20mm;
-    box-shadow: none;
-    transform: none !important;
-  }
+    @page {
+        size: A4;
+        margin: 0;
+    }
 
-  @page {
-    size: A4;
-    margin: 0;
-  }
+    /* Prevent page breaks in inappropriate places */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    ul, ol {
+        page-break-inside: avoid;
+    }
 }
+
 /* =========================
    MOBILE OPTIMIZATION (SAFE)
-========================= */
-
+   ========================= */
 @media screen and (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
 
-  .layout {
-    grid-template-columns: 1fr;
-  }
+    .editor-panel {
+        max-height: none;
+    }
 
-  .editor-panel {
-    max-height: none;
-  }
-
-  #preview-wrapper {
-    margin-top: 20px;
-  }
+    #preview-wrapper {
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
 
-  body {
-    font-size: 14px;
-  }
+    .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 
-  .app-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+    .top-controls {
+        padding: 10px;
+    }
 
-  .top-controls {
-    padding: 10px;
-  }
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
 
-  .checkbox-group {
-    grid-template-columns: 1fr;
-  }
+    label {
+        font-size: 14px;
+    }
 
-  label {
-    font-size: 14px;
-  }
+    input, textarea, select {
+        font-size: 14px;
+        padding: 8px;
+    }
 
-  input,
-  textarea,
-  select {
-    font-size: 14px;
-    padding: 8px;
-  }
+    button {
+        width: 100%;
+        font-size: 15px;
+        padding: 10px;
+    }
 
-  button {
-    width: 100%;
-    font-size: 15px;
-    padding: 10px;
-  }
-
-  /* PREVIEW SCALE (SCREEN ONLY) */
-  #preview {
-    transform: scale(0.85);
-    transform-origin: top center;
-  }
+    /* PREVIEW SCALE (SCREEN ONLY) */
+    #preview {
+        transform: scale(0.85);
+        transform-origin: top center;
+    }
 }
