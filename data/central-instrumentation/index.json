@@ -1,0 +1,8 @@
+{
+  "department": "Central Instrumentation Facility",
+  "instruments": [
+    { "key": "ftir", "name": "FTIR Spectrophotometer" },
+    { "key": "dsctga", "name": "DSC / TGA Analyzer" },
+    { "key": "particle-size", "name": "Particle Size Analyzer" }
+  ]
+}
