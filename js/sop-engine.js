@@ -20,6 +20,11 @@ const inputs = {
   procedure: document.getElementById("procedure"),
   precautions: document.getElementById("precautions"),
 
+  applicability: document.getElementById("applicability"),
+  abbreviations: document.getElementById("abbreviations"),
+  references: document.getElementById("references"),
+  annexures: document.getElementById("annexures"),
+
   preparedBy: document.getElementById("preparedBy"),
   preparedDesig: document.getElementById("preparedDesig"),
   preparedDate: document.getElementById("preparedDate"),
@@ -101,6 +106,18 @@ sopSelect.addEventListener("change", async () => {
     procedure: raw.sections?.procedure || [],
     precautions: raw.sections?.precautions || "",
 
+    applicability:
+      "This SOP is applicable to all personnel involved in laboratory activities related to this procedure.",
+
+    abbreviations:
+      "SOP: Standard Operating Procedure\nUV: Ultraviolet\nHPLC: High Performance Liquid Chromatography",
+
+    references:
+      "Indian Pharmacopoeia (IP)\nUnited States Pharmacopoeia (USP)\nPharmacy Council of India (PCI) Guidelines\nInstitutional Quality Manual",
+
+    annexures:
+      "Annexure I: Equipment Log Book\nAnnexure II: Maintenance Record\nAnnexure III: Calibration Record",
+
     preparedBy: "",
     preparedDesig: "",
     preparedDate: "",
@@ -167,6 +184,10 @@ function syncInputs() {
     inputs.changeHistoryInput.value = SOP_DATA.changeHistory.join("\n");
   });
   inputs.responsibility.value = SOP_DATA.responsibility;
+  inputs.applicability.value = SOP_DATA.applicability;
+  inputs.abbreviations.value = SOP_DATA.abbreviations;
+  inputs.references.value = SOP_DATA.references;
+  inputs.annexures.value = SOP_DATA.annexures;
 }
 
 /* =========================
@@ -204,6 +225,11 @@ function render() {
     responsibility: SOP_DATA.responsibility,
 
     procedure: SOP_DATA.procedure.map((s) => `<li>${s}</li>`).join(""),
+
+    applicability: SOP_DATA.applicability,
+    abbreviations: SOP_DATA.abbreviations.replace(/\n/g, "<br>"),
+    references: SOP_DATA.references.replace(/\n/g, "<br>"),
+    annexures: SOP_DATA.annexures.replace(/\n/g, "<br>"),
 
     preparedBy: SOP_DATA.preparedBy,
     preparedDesig: SOP_DATA.preparedDesig,
