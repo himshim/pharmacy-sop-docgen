@@ -6,10 +6,10 @@
     <meta name="description" content="Professional SOP Document Generator">
     <title>SOP Generator - Professional Document Creator</title>
 
-    <!-- CSS Files from css folder -->
-    <link rel="stylesheet" href="css/print-a4.css">
-    <link rel="stylesheet" href="css/ui-desktop.css">
-    <link rel="stylesheet" href="css/ui-mobile.css">
+    <!-- ❌ REMOVE THESE LINES - they're looking for non-existent files! -->
+    <!-- <link rel="stylesheet" href="css/print-a4.css"> -->
+    <!-- <link rel="stylesheet" href="css/ui-desktop.css"> -->
+    <!-- <link rel="stylesheet" href="css/ui-mobile.css"> -->
 
     <style>
         /* Loading Screen */
@@ -59,6 +59,15 @@
         #ui-container.loaded {
             opacity: 1;
         }
+
+        /* Hide opposite UI */
+        @media (min-width: 769px) {
+            #ui-mobile { display: none; }
+        }
+
+        @media (max-width: 768px) {
+            #ui-desktop { display: none; }
+        }
     </style>
 </head>
 <body>
@@ -92,15 +101,13 @@
 
             try {
                 const response = await fetch(uiFile);
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${uiFile}: ${response.status}`);
+                }
                 const html = await response.text();
 
-                // Extract body content from loaded HTML
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const bodyContent = doc.body.innerHTML;
-
-                // Inject into appropriate container
-                document.getElementById(targetDiv).innerHTML = bodyContent;
+                // Inject the entire HTML (includes embedded styles)
+                document.getElementById(targetDiv).innerHTML = html;
 
                 // Initialize SOP App
                 if (window.initSOPApp) {
