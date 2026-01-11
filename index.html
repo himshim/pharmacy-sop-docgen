@@ -3,16 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional SOP Document Generator">
+    <meta name="description" content="Professional SOP Document Generator for Pharmacy Education">
+    <meta name="keywords" content="SOP, Standard Operating Procedure, Pharmacy, Document Generator">
+    <meta name="author" content="@himshim26">
     <title>SOP Generator - Professional Document Creator</title>
 
-    <!-- ❌ REMOVE THESE LINES - they're looking for non-existent files! -->
-    <!-- <link rel="stylesheet" href="css/print-a4.css"> -->
-    <!-- <link rel="stylesheet" href="css/ui-desktop.css"> -->
-    <!-- <link rel="stylesheet" href="css/ui-mobile.css"> -->
-
     <style>
-        /* Loading Screen */
+        /* ==================== PRINT STYLES ==================== */
+        @media print {
+            /* Hide everything except preview */
+            body * {
+                visibility: hidden !important;
+            }
+
+            /* Show only the preview content */
+            #preview-content,
+            #preview-content *,
+            .sop-preview,
+            .sop-preview *,
+            #sop-preview,
+            #sop-preview * {
+                visibility: visible !important;
+            }
+
+            /* Position preview at top */
+            #preview-content,
+            .sop-preview,
+            #sop-preview {
+                position: absolute !important;
+                left: 0 !important;
+                top: 0 !important;
+                width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            /* A4 Page Setup */
+            @page {
+                size: A4 portrait;
+                margin: 20mm;
+            }
+
+            /* Remove backgrounds and shadows for print */
+            * {
+                background: white !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            /* Typography for print */
+            body {
+                font-size: 12pt !important;
+                line-height: 1.5 !important;
+                color: black !important;
+                font-family: 'Times New Roman', Times, serif !important;
+            }
+
+            h1 { font-size: 18pt !important; margin-bottom: 12pt !important; }
+            h2 { font-size: 16pt !important; margin-bottom: 10pt !important; }
+            h3 { font-size: 14pt !important; margin-bottom: 8pt !important; }
+
+            p { margin-bottom: 6pt !important; }
+
+            /* Hide all UI elements */
+            .header,
+            .sidebar,
+            .controls,
+            .tabs,
+            .action-bar,
+            .bottom-bar,
+            .footer,
+            button,
+            input,
+            select,
+            textarea,
+            .no-print,
+            nav {
+                display: none !important;
+                visibility: hidden !important;
+            }
+
+            /* Page breaks */
+            .page-break {
+                page-break-after: always;
+            }
+
+            .page-break-before {
+                page-break-before: always;
+            }
+
+            /* Prevent page breaks inside elements */
+            h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid;
+                page-break-inside: avoid;
+            }
+
+            table, figure, img {
+                page-break-inside: avoid;
+            }
+
+            /* Ensure tables print properly */
+            table {
+                border-collapse: collapse !important;
+                width: 100% !important;
+            }
+
+            th, td {
+                border: 1px solid #000 !important;
+                padding: 8px !important;
+            }
+        }
+
+        /* ==================== BASE STYLES ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+                         'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        }
+
+        /* ==================== LOADING SCREEN ==================== */
         .loading-screen {
             position: fixed;
             top: 0;
@@ -24,17 +146,19 @@
             align-items: center;
             justify-content: center;
             z-index: 9999;
-            transition: opacity 0.5s, visibility 0.5s;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
         }
 
         .loading-screen.hidden {
             opacity: 0;
             visibility: hidden;
+            pointer-events: none;
         }
 
         .loading-content {
             text-align: center;
             color: white;
+            padding: 20px;
         }
 
         .spinner {
@@ -51,22 +175,75 @@
             to { transform: rotate(360deg); }
         }
 
+        .loading-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .loading-content p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* ==================== UI CONTAINER ==================== */
         #ui-container {
             opacity: 0;
-            transition: opacity 0.5s;
+            transition: opacity 0.5s ease;
+            min-height: 100vh;
         }
 
         #ui-container.loaded {
             opacity: 1;
         }
 
-        /* Hide opposite UI */
+        /* ==================== RESPONSIVE UI SWITCHING ==================== */
+        /* Hide mobile UI on desktop */
         @media (min-width: 769px) {
-            #ui-mobile { display: none; }
+            #ui-mobile { 
+                display: none !important; 
+            }
         }
 
+        /* Hide desktop UI on mobile */
         @media (max-width: 768px) {
-            #ui-desktop { display: none; }
+            #ui-desktop { 
+                display: none !important; 
+            }
+        }
+
+        /* ==================== ERROR DISPLAY ==================== */
+        .error-content {
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .error-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+
+        .error-content p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .error-content button {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .error-content button:hover {
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -76,72 +253,220 @@
         <div class="loading-content">
             <div class="spinner"></div>
             <h2>Loading SOP Generator...</h2>
+            <p>Please wait while we prepare your workspace</p>
         </div>
     </div>
 
     <!-- UI Container -->
     <div id="ui-container">
-        <!-- Desktop UI -->
+        <!-- Desktop UI (loaded dynamically) -->
         <div id="ui-desktop"></div>
 
-        <!-- Mobile UI -->
+        <!-- Mobile UI (loaded dynamically) -->
         <div id="ui-mobile"></div>
     </div>
 
-    <!-- Scripts from js folder -->
+    <!-- Core Scripts -->
     <script src="js/template-engine.js"></script>
     <script src="js/sop-engine.js"></script>
 
+    <!-- Main Application Script -->
     <script>
-        // Load appropriate UI based on device
+        'use strict';
+
+        // ==================== EVENT LISTENER ATTACHMENT ====================
+        function attachEventListeners() {
+            console.log('Attaching event listeners...');
+
+            // === Mobile UI: Tab Switching ===
+            const tabButtons = document.querySelectorAll('.tab-btn, [data-tab]');
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetTab = this.getAttribute('data-tab') || this.dataset.tab;
+
+                    if (!targetTab) return;
+
+                    // Remove active class from all tabs and contents
+                    document.querySelectorAll('.tab-btn, [data-tab]').forEach(t => {
+                        t.classList.remove('active');
+                    });
+                    document.querySelectorAll('.tab-content').forEach(c => {
+                        c.classList.remove('active');
+                    });
+
+                    // Add active class to clicked tab and its content
+                    this.classList.add('active');
+                    const targetContent = document.getElementById(targetTab);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // === Print Button Handler ===
+            const printButtons = document.querySelectorAll(
+                '.print-btn, #print-btn, [class*="print"], button'
+            );
+
+            printButtons.forEach(btn => {
+                const btnText = btn.textContent.toLowerCase();
+                if (btnText.includes('print') || btnText.includes('à¤ªà¥à¤°à¤¿à¤‚à¤Ÿ')) {
+                    // Remove existing listeners to prevent duplicates
+                    const newBtn = btn.cloneNode(true);
+                    btn.parentNode.replaceChild(newBtn, btn);
+
+                    newBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Print button clicked');
+                        window.print();
+                    });
+                }
+            });
+
+            // === Preview/Settings Button Handler (Mobile) ===
+            const previewBtn = document.querySelector('[data-tab="preview"]');
+            const settingsBtn = document.querySelector('[data-tab="settings"]');
+            const createBtn = document.querySelector('[data-tab="create"]');
+
+            if (previewBtn) {
+                previewBtn.addEventListener('click', function() {
+                    console.log('Preview tab clicked');
+                });
+            }
+
+            if (settingsBtn) {
+                settingsBtn.addEventListener('click', function() {
+                    console.log('Settings tab clicked');
+                });
+            }
+
+            if (createBtn) {
+                createBtn.addEventListener('click', function() {
+                    console.log('Create tab clicked');
+                });
+            }
+
+            console.log('Event listeners attached successfully');
+        }
+
+        // ==================== UI LOADING ====================
         async function loadUI() {
+            console.log('Starting UI load...');
+
             const isMobile = window.innerWidth <= 768;
             const uiFile = isMobile ? 'partials/ui-mobile.html' : 'partials/ui-desktop.html';
             const targetDiv = isMobile ? 'ui-mobile' : 'ui-desktop';
 
+            console.log(`Device: ${isMobile ? 'Mobile' : 'Desktop'}`);
+            console.log(`Loading: ${uiFile}`);
+
             try {
+                // Fetch UI file
                 const response = await fetch(uiFile);
                 if (!response.ok) {
-                    throw new Error(`Failed to load ${uiFile}: ${response.status}`);
+                    throw new Error(`HTTP ${response.status}: Failed to load ${uiFile}`);
                 }
+
                 const html = await response.text();
+                console.log(`Loaded ${html.length} bytes from ${uiFile}`);
 
-                // Inject the entire HTML (includes embedded styles)
-                document.getElementById(targetDiv).innerHTML = html;
-
-                // Initialize SOP App
-                if (window.initSOPApp) {
-                    window.initSOPApp();
+                // Inject HTML into target container
+                const targetElement = document.getElementById(targetDiv);
+                if (!targetElement) {
+                    throw new Error(`Target element #${targetDiv} not found`);
                 }
 
-                // Hide loading screen
+                targetElement.innerHTML = html;
+                console.log('UI injected into DOM');
+
+                // Wait for DOM to settle
+                await new Promise(resolve => setTimeout(resolve, 100));
+
+                // Initialize SOP App (from sop-engine.js)
+                if (typeof window.initSOPApp === 'function') {
+                    console.log('Initializing SOP App...');
+                    window.initSOPApp();
+                } else {
+                    console.warn('initSOPApp function not found');
+                }
+
+                // Attach event listeners for dynamic content
+                attachEventListeners();
+
+                // Hide loading screen and show UI
                 setTimeout(() => {
-                    document.getElementById('loadingScreen').classList.add('hidden');
-                    document.getElementById('ui-container').classList.add('loaded');
+                    const loadingScreen = document.getElementById('loadingScreen');
+                    const uiContainer = document.getElementById('ui-container');
+
+                    loadingScreen.classList.add('hidden');
+                    uiContainer.classList.add('loaded');
+
+                    console.log('UI loaded successfully');
                 }, 500);
 
             } catch (error) {
                 console.error('Error loading UI:', error);
-                document.getElementById('loadingScreen').innerHTML = 
-                    '<div class="loading-content"><h2>Error loading application</h2><p>Please refresh the page</p></div>';
+
+                // Show error message
+                const loadingScreen = document.getElementById('loadingScreen');
+                loadingScreen.innerHTML = `
+                    <div class="error-content">
+                        <h2>âš ï¸ Error Loading Application</h2>
+                        <p>${error.message}</p>
+                        <p>Please check your internet connection and try again.</p>
+                        <button onclick="location.reload()">Reload Page</button>
+                    </div>
+                `;
             }
         }
 
-        // Load UI on page load
-        window.addEventListener('DOMContentLoaded', loadUI);
-
-        // Reload UI on orientation change
+        // ==================== ORIENTATION/RESIZE HANDLER ====================
         let resizeTimer;
-        window.addEventListener('resize', () => {
+        function handleResize() {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
                 const wasMobile = document.getElementById('ui-mobile').innerHTML !== '';
                 const isMobile = window.innerWidth <= 768;
 
+                // Reload if device type changed
                 if (wasMobile !== isMobile) {
+                    console.log('Device type changed, reloading...');
                     location.reload();
                 }
             }, 250);
+        }
+
+        // ==================== INITIALIZATION ====================
+        // Load UI when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadUI);
+        } else {
+            // DOM already loaded
+            loadUI();
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', handleResize);
+
+        // ==================== PRINT HANDLER ====================
+        // Additional print handling
+        window.addEventListener('beforeprint', function() {
+            console.log('Print dialog opened');
+        });
+
+        window.addEventListener('afterprint', function() {
+            console.log('Print dialog closed');
+        });
+
+        // ==================== ERROR HANDLING ====================
+        window.addEventListener('error', function(e) {
+            console.error('Global error:', e.error);
+        });
+
+        window.addEventListener('unhandledrejection', function(e) {
+            console.error('Unhandled promise rejection:', e.reason);
         });
     </script>
 </body>
