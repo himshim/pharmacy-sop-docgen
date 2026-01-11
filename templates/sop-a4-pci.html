@@ -1,31 +1,55 @@
 <style>
-  /* Hide optional sections completely when empty */
   .optional[data-content=""] {
     display: none;
   }
 </style>
 
-<div style="text-align: right; font-weight: bold">
+<!-- COPY TYPE -->
+<div class="optional" data-content="{{copyType}}" style="text-align: right; font-weight: bold">
   {{copyType}} COPY
 </div>
 
 <div class="sop">
 
-  <h1 style="text-align: center">STANDARD OPERATING PROCEDURE</h1>
+  <!-- MAIN HEADING -->
+  <h1 style="text-align: center">
+    STANDARD OPERATING PROCEDURE
+  </h1>
 
-  <p style="text-align: center">
-    (As per Pharmacy Council of India Requirements)
-  </p>
-
+  <!-- DOCUMENT DETAILS -->
   <table border="1" width="100%" cellpadding="6" cellspacing="0">
-    <tr><td><strong>Institution</strong></td><td>{{institute}}</td></tr>
-    <tr><td><strong>Department</strong></td><td>{{department}}</td></tr>
-    <tr><td><strong>SOP Title</strong></td><td>{{title}}</td></tr>
-    <tr><td><strong>SOP No.</strong></td><td>{{sopNumber}}</td></tr>
-    <tr><td><strong>Effective Date</strong></td><td>{{effectiveDate}}</td></tr>
-    <tr><td><strong>Last Revision Date</strong></td><td>{{revisionDate}}</td></tr>
+    <tr>
+      <td><strong>Institution</strong></td>
+      <td>{{institute}}</td>
+    </tr>
+
+    <tr>
+      <td><strong>Department</strong></td>
+      <td>{{department}}</td>
+    </tr>
+
+    <tr>
+      <td><strong>SOP Title</strong></td>
+      <td>{{title}}</td>
+    </tr>
+
+    <tr class="optional" data-content="{{sopNumber}}">
+      <td><strong>SOP No.</strong></td>
+      <td>{{sopNumber}}</td>
+    </tr>
+
+    <tr class="optional" data-content="{{effectiveDate}}">
+      <td><strong>Effective Date</strong></td>
+      <td>{{effectiveDate}}</td>
+    </tr>
+
+    <tr class="optional" data-content="{{revisionDate}}">
+      <td><strong>Last Revision Date</strong></td>
+      <td>{{revisionDate}}</td>
+    </tr>
   </table>
 
+  <!-- CORE SECTIONS -->
   <h2>1. Objective</h2>
   <p>{{purpose}}</p>
 
@@ -35,21 +59,23 @@
   <h2>3. Responsibility</h2>
   <p>{{responsibility}}</p>
 
-  <h2>4. Detailed Procedure</h2>
-  <ol>{{procedure}}</ol>
+  <h2>4. Procedure</h2>
+  <ol>
+    {{procedure}}
+  </ol>
 
   <h2>5. Safety & Precautions</h2>
   <p>{{precautions}}</p>
 
-  <!-- PCI-MANDATORY -->
+  <!-- COMPLIANCE (GENERIC, NON-INSPECTION-SPECIFIC) -->
   <h2>6. Compliance</h2>
   <p>
-    This SOP complies with the norms prescribed by the Pharmacy Council of India
-    (PCI) for diploma and degree pharmacy institutions.
+    This SOP is implemented in accordance with applicable statutory,
+    regulatory, and institutional requirements relevant to pharmacy education
+    and laboratory practices.
   </p>
 
   <!-- OPTIONAL SECTIONS -->
-
   <div class="optional" data-content="{{applicability}}">
     <h2>Applicability</h2>
     <p>{{applicability}}</p>
@@ -82,6 +108,7 @@
     </table>
   </div>
 
+  <!-- AUTHORIZATION -->
   <h2>Authorization</h2>
 
   <table border="1" width="100%" cellpadding="8" cellspacing="0">

@@ -1,27 +1,53 @@
 <style>
-  /* Hide optional sections if empty */
   .optional[data-content=""] {
     display: none;
   }
 </style>
 
-<div style="text-align: right; font-weight: bold">
+<!-- COPY TYPE -->
+<div class="optional" data-content="{{copyType}}" style="text-align: right; font-weight: bold">
   {{copyType}} COPY
 </div>
 
+<!-- MAIN HEADING -->
 <h1 style="text-align: center; letter-spacing: 1px">
-  STANDARD OPERATING PROCEDURE (SOP)
+  STANDARD OPERATING PROCEDURE
 </h1>
 
+<!-- DOCUMENT DETAILS -->
 <table border="1" width="100%" cellpadding="6" cellspacing="0">
-  <tr><td><strong>Institution</strong></td><td>{{institute}}</td></tr>
-  <tr><td><strong>Department</strong></td><td>{{department}}</td></tr>
-  <tr><td><strong>SOP Title</strong></td><td>{{title}}</td></tr>
-  <tr><td><strong>SOP No.</strong></td><td>{{sopNumber}}</td></tr>
-  <tr><td><strong>Effective Date</strong></td><td>{{effectiveDate}}</td></tr>
-  <tr><td><strong>Last Revision Date</strong></td><td>{{revisionDate}}</td></tr>
+  <tr>
+    <td><strong>Institution</strong></td>
+    <td>{{institute}}</td>
+  </tr>
+
+  <tr>
+    <td><strong>Department</strong></td>
+    <td>{{department}}</td>
+  </tr>
+
+  <tr>
+    <td><strong>SOP Title</strong></td>
+    <td>{{title}}</td>
+  </tr>
+
+  <tr class="optional" data-content="{{sopNumber}}">
+    <td><strong>SOP No.</strong></td>
+    <td>{{sopNumber}}</td>
+  </tr>
+
+  <tr class="optional" data-content="{{effectiveDate}}">
+    <td><strong>Effective Date</strong></td>
+    <td>{{effectiveDate}}</td>
+  </tr>
+
+  <tr class="optional" data-content="{{revisionDate}}">
+    <td><strong>Last Revision Date</strong></td>
+    <td>{{revisionDate}}</td>
+  </tr>
 </table>
 
+<!-- CORE SECTIONS -->
 <h2>1. Purpose</h2>
 <p>{{purpose}}</p>
 
@@ -32,20 +58,22 @@
 <p>{{responsibility}}</p>
 
 <h2>4. Procedure</h2>
-<ol>{{procedure}}</ol>
+<ol>
+  {{procedure}}
+</ol>
 
 <h2>5. Precautions / Safety Measures</h2>
 <p>{{precautions}}</p>
 
-<!-- NAAC-MANDATORY SECTION -->
+<!-- DOCUMENTATION (NEUTRAL, NON-INSPECTION-SPECIFIC) -->
 <h2>6. Documentation & Records</h2>
 <p>
-  All records related to this SOP shall be maintained by the department and
-  produced during internal and external audits including NAAC.
+  Records generated during the implementation of this SOP shall be maintained,
+  controlled, and retained in accordance with the institution’s documented
+  procedures.
 </p>
 
 <!-- OPTIONAL SECTIONS -->
-
 <div class="optional" data-content="{{applicability}}">
   <h2>Applicability</h2>
   <p>{{applicability}}</p>
@@ -78,6 +106,7 @@
   </table>
 </div>
 
+<!-- AUTHORIZATION -->
 <h2>Authorization</h2>
 
 <table border="1" width="100%" cellpadding="8" cellspacing="0">
