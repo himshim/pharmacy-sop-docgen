@@ -1,0 +1,36 @@
+{
+  "departments": [
+    {
+      "key": "central-instrumentation",
+      "name": "Central Instrumentation"
+    },
+    {
+      "key": "general-procedures",
+      "name": "General Procedures"
+    },
+    {
+      "key": "microbiology",
+      "name": "Microbiology"
+    },
+    {
+      "key": "pharmaceutical-analysis",
+      "name": "Pharmaceutical Analysis"
+    },
+    {
+      "key": "pharmaceutical-chemistry",
+      "name": "Pharmaceutical Chemistry"
+    },
+    {
+      "key": "pharmaceutics",
+      "name": "Pharmaceutics"
+    },
+    {
+      "key": "pharmacognosy",
+      "name": "Pharmacognosy"
+    },
+    {
+      "key": "pharmacology",
+      "name": "Pharmacology"
+    }
+  ]
+}
