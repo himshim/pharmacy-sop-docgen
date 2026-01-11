@@ -1,0 +1,10 @@
+{
+  "department": "Pharmaceutical Analysis",
+  "instruments": [
+    { "key": "uv-visible", "name": "UV–Visible Spectrophotometer" },
+    { "key": "hptlc", "name": "HPTLC System" },
+    { "key": "gc", "name": "Gas Chromatography System" },
+    { "key": "ph-meter", "name": "pH Meter" },
+    { "key": "conductivity", "name": "Conductivity Meter" }
+  ]
+}
