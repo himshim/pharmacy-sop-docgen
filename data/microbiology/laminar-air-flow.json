@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Laminar Air Flow Bench"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for aseptic operations using a Laminar Air Flow bench.",
+    "scope": "Applicable to aseptic handling of microbiological samples in the Microbiology laboratory.",
+    "procedure": [
+      "Switch ON the laminar air flow blower.",
+      "Allow the air flow to stabilize for at least 10 minutes.",
+      "Wipe the working surface with suitable disinfectant.",
+      "Arrange materials required for aseptic operation.",
+      "Carry out work within the sterile zone.",
+      "After completion, clean the work surface.",
+      "Switch OFF the blower after use."
+    ],
+    "precautions": "Do not block air grills. Avoid rapid movements that disturb laminar air flow."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Colony Counter"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for counting microbial colonies using a colony counter.",
+    "scope": "Applicable to enumeration of microbial colonies in the Microbiology laboratory.",
+    "procedure": [
+      "Switch ON the colony counter.",
+      "Place the culture plate on the counting platform.",
+      "Adjust illumination for clear visibility of colonies.",
+      "Mark and count colonies using the counting probe.",
+      "Record the total colony count.",
+      "Remove the culture plate after counting.",
+      "Switch OFF the instrument after use."
+    ],
+    "precautions": "Handle culture plates carefully. Avoid contamination during counting."
+  }
+}

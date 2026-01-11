@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Autoclave"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for sterilization of laboratory materials using an autoclave.",
+    "scope": "Applicable to sterilization activities in the Microbiology laboratory.",
+    "procedure": [
+      "Ensure the autoclave chamber is clean.",
+      "Add sufficient water to the autoclave as per manufacturer instructions.",
+      "Load materials to be sterilized without overcrowding.",
+      "Close the lid securely and set temperature and pressure.",
+      "Allow the autoclave cycle to complete.",
+      "After pressure returns to zero, open the lid carefully.",
+      "Remove sterilized materials and allow them to cool."
+    ],
+    "precautions": "Do not open the autoclave under pressure. Use heat-resistant gloves while handling sterilized materials."
+  }
+}

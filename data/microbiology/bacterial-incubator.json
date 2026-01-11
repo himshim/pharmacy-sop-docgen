@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Operation of Bacterial Incubator"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for incubation of microbial cultures using a bacterial incubator.",
+    "scope": "Applicable to incubation of microbial cultures in the Microbiology laboratory.",
+    "procedure": [
+      "Switch ON the incubator.",
+      "Set the required incubation temperature.",
+      "Allow the incubator to stabilize at set temperature.",
+      "Place inoculated culture plates or tubes inside.",
+      "Close the incubator door securely.",
+      "Incubate for the specified time period.",
+      "Remove cultures after incubation and switch OFF the incubator if not required."
+    ],
+    "precautions": "Avoid frequent opening of the incubator door. Handle cultures carefully."
+  }
+}
