@@ -1,3 +1,5 @@
+window.initSOPApp = function () {
+
 /* =========================
    SAFE DOM HELPERS
 ========================= */
@@ -278,3 +280,4 @@ function render() {
     changeHistory: SOP_DATA.sectionsEnabled.changeHistory ? changeHistoryHTML : "",
   });
 }
+};
