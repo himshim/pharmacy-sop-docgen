@@ -1,0 +1,187 @@
+<div class="app-shell mobile-ui">
+
+  <!-- HEADER -->
+  <div class="app-header">
+    <h2>Pharmacy SOP Generator</h2>
+    <button onclick="window.print()">Print</button>
+  </div>
+
+  <!-- SELECTORS -->
+  <div class="card">
+    <label>Department</label>
+    <select id="departmentSelect"></select>
+
+    <label>SOP Template</label>
+    <select id="sopSelect" disabled></select>
+
+    <label>Design</label>
+    <select id="templateSelect">
+      <option value="sop-a4-classic.html">Classic</option>
+      <option value="sop-a4-naac.html">NAAC</option>
+      <option value="sop-a4-pci.html">PCI</option>
+      <option value="sop-a4-iso.html">ISO</option>
+    </select>
+  </div>
+
+  <!-- TOGGLES -->
+  <div class="card">
+    <h3>Sections</h3>
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="toggleDocControl" checked> Document Control</label>
+      <label><input type="checkbox" id="toggleApplicability"> Applicability</label>
+      <label><input type="checkbox" id="toggleAbbreviations"> Abbreviations</label>
+      <label><input type="checkbox" id="toggleReferences"> References</label>
+      <label><input type="checkbox" id="toggleAnnexures"> Annexures</label>
+      <label><input type="checkbox" id="toggleChangeHistory"> Change History</label>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Header Fields</h3>
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="toggleSopNumber" checked> SOP Number</label>
+      <label><input type="checkbox" id="toggleEffectiveDate" checked> Effective Date</label>
+      <label><input type="checkbox" id="toggleRevisionDate" checked> Revision Date</label>
+      <label><input type="checkbox" id="toggleCopyType" checked> Copy Type</label>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="card">
+    <h3>Basic Details</h3>
+
+    <label>Institution</label>
+    <input id="institute" />
+
+    <label>Department</label>
+    <input id="department" />
+
+    <label>SOP Title</label>
+    <input id="title" />
+
+    <label>SOP Number</label>
+    <input id="sopNumber" />
+  </div>
+
+  <!-- DOCUMENT CONTROL -->
+  <div class="card" id="sectionDocControl">
+    <h3>Document Control</h3>
+
+    <label>Revision No.</label>
+    <input id="revisionNo" />
+
+    <label>Effective Date</label>
+    <input type="date" id="effectiveDate" />
+
+    <label>Last Revision Date</label>
+    <input type="date" id="revisionDate" />
+
+    <label>Next Review Date</label>
+    <input type="date" id="nextReviewDate" />
+
+    <label>Copy Type</label>
+    <select id="copyType">
+      <option value="CONTROLLED">CONTROLLED COPY</option>
+      <option value="UNCONTROLLED">UNCONTROLLED COPY</option>
+    </select>
+  </div>
+
+  <!-- CHANGE HISTORY -->
+  <div class="card" id="sectionChangeHistory">
+    <h3>Change History</h3>
+    <textarea id="changeHistoryInput"></textarea>
+  </div>
+
+  <!-- SOP CONTENT -->
+  <div class="card">
+    <h3>SOP Content</h3>
+
+    <label>Purpose</label>
+    <textarea id="purpose"></textarea>
+
+    <label>Scope</label>
+    <textarea id="scope"></textarea>
+
+    <label>Responsibility</label>
+    <textarea id="responsibility"></textarea>
+
+    <label>Procedure</label>
+    <textarea id="procedure"></textarea>
+
+    <label>Precautions</label>
+    <textarea id="precautions"></textarea>
+
+    <div id="sectionApplicability">
+      <label>Applicability</label>
+      <textarea id="applicability"></textarea>
+    </div>
+
+    <div id="sectionAbbreviations">
+      <label>Abbreviations</label>
+      <textarea id="abbreviations"></textarea>
+    </div>
+
+    <div id="sectionReferences">
+      <label>References</label>
+      <textarea id="references"></textarea>
+    </div>
+
+    <div id="sectionAnnexures">
+      <label>Annexures</label>
+      <textarea id="annexures"></textarea>
+    </div>
+  </div>
+
+  <!-- AUTHORIZATION -->
+  <div class="card">
+    <h3>Authorization</h3>
+
+    <label>Prepared By</label>
+    <input id="preparedBy" />
+
+    <label>Designation</label>
+    <input id="preparedDesig" />
+
+    <label>Date</label>
+    <input type="date" id="preparedDate" />
+
+    <label>Checked By</label>
+    <input id="checkedBy" />
+
+    <label>Designation</label>
+    <input id="checkedDesig" />
+
+    <label>Date</label>
+    <input type="date" id="checkedDate" />
+
+    <label>Approved By</label>
+    <input id="approvedBy" />
+
+    <label>Designation</label>
+    <input id="approvedDesig" />
+
+    <label>Date</label>
+    <input type="date" id="approvedDate" />
+  </div>
+
+  <!-- PREVIEW -->
+  <div class="card preview-card">
+    <h3>Preview (A4)</h3>
+    <div id="preview-wrapper">
+      <div id="preview"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>
+      Built by
+      <a href="https://github.com/himshim" target="_blank">@himshim26</a> ·
+      Source:
+      <a href="https://github.com/himshim/pharmacy-sop-docgen" target="_blank">
+        pharmacy-sop-docgen
+      </a>
+    </p>
+  </div>
+
+</div>

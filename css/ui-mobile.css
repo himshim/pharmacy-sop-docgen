@@ -1,0 +1,8 @@
+#ui-mobile {
+  padding: 12px;
+}
+
+#ui-mobile .editor-panel {
+  border-radius: 0;
+  border: none;
+}

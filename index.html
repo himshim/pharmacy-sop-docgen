@@ -4,316 +4,43 @@
   <meta charset="UTF-8" />
   <title>Pharmacy SOP Generator</title>
 
-  <link rel="stylesheet" href="css/print-a4.css" />
+  <!-- UI styles -->
+  <link rel="stylesheet" href="css/ui-base.css">
+  <link rel="stylesheet" href="css/ui-desktop.css">
+  <link rel="stylesheet" href="css/ui-mobile.css">
 
-  <style>
-    body {
-      font-family: "Times New Roman", serif;
-      margin: 0;
-      background: #f5f6f8;
-    }
-
-    .app-shell {
-      max-width: 1450px;
-      margin: auto;
-      padding: 16px;
-    }
-
-    /* ================= HEADER ================= */
-    .app-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-    }
-
-    .app-header h2 {
-      margin: 0;
-    }
-
-    /* ================= CONTROLS ================= */
-    .top-controls {
-      background: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 14px;
-      margin-bottom: 16px;
-    }
-
-    label {
-      display: block;
-      margin-top: 12px;
-      font-weight: bold;
-      font-size: 13px;
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 6px;
-      margin-top: 4px;
-      border: 1px solid #bbb;
-      border-radius: 4px;
-      font-family: inherit;
-      background: #fff;
-    }
-
-    textarea {
-      min-height: 80px;
-    }
-
-    button {
-      padding: 8px 16px;
-      background: #2c3e50;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #1a252f;
-    }
-
-    hr {
-      margin: 18px 0;
-      border: none;
-      border-top: 1px solid #ccc;
-    }
-
-    h3 {
-      margin: 20px 0 10px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 4px;
-    }
-
-    /* ================= LAYOUT ================= */
-    .layout {
-      display: grid;
-      grid-template-columns: 420px 1fr;
-      gap: 24px;
-    }
-
-    .editor-panel {
-      background: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 16px;
-      max-height: calc(100vh - 140px);
-      overflow-y: auto;
-    }
-
-    #preview-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    /* ================= CHECKBOX GROUPS ================= */
-    .checkbox-group {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px 12px;
-      margin-top: 8px;
-    }
-
-    .checkbox-group label {
-      font-weight: normal;
-      font-size: 13px;
-      cursor: pointer;
-    }
-
-    .checkbox-group input {
-      width: auto;
-      margin-right: 6px;
-    }
-
-    /* ================= COLLAPSIBLE SECTIONS ================= */
-    .section-box {
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      margin-top: 16px;
-      background: #fafafa;
-    }
-
-    .section-toggle {
-      background: #e9ecef;
-      padding: 8px 12px;
-      font-weight: bold;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .section-toggle::after {
-      content: "▾";
-    }
-
-    .section-toggle.collapsed::after {
-      content: "▸";
-    }
-
-    .section-content {
-      padding: 12px;
-    }
-  </style>
+  <!-- Print -->
+  <link rel="stylesheet" href="css/print-a4.css">
 </head>
 
 <body>
 
-<div class="app-shell">
-
-  <!-- HEADER -->
-  <div class="app-header">
-    <h2>Pharmacy SOP Generator</h2>
-    <button onclick="window.print()">Print SOP</button>
+  <!-- DESKTOP UI -->
+  <div id="ui-desktop">
+    <!-- contents of partials/ui-desktop.html pasted here -->
   </div>
 
-  <!-- TOP CONTROLS -->
-  <div class="top-controls">
-    <label>Department
-      <select id="departmentSelect"></select>
-    </label>
-
-    <label>SOP
-      <select id="sopSelect" disabled></select>
-    </label>
-
-    <label>Design Template
-      <select id="templateSelect">
-        <option value="sop-a4-classic.html">Classic</option>
-        <option value="sop-a4-naac.html">NAAC</option>
-        <option value="sop-a4-pci.html">PCI</option>
-        <option value="sop-a4-iso.html">ISO</option>
-      </select>
-    </label>
+  <!-- MOBILE UI -->
+  <div id="ui-mobile">
+    <!-- contents of partials/ui-mobile.html pasted here -->
   </div>
 
-  <!-- TOGGLES -->
-  <div class="top-controls">
-    <h3>Optional Sections</h3>
-    <div class="checkbox-group">
-      <label><input type="checkbox" id="toggleDocControl" checked> Document Control</label>
-      <label><input type="checkbox" id="toggleApplicability"> Applicability</label>
-      <label><input type="checkbox" id="toggleAbbreviations"> Abbreviations</label>
-      <label><input type="checkbox" id="toggleReferences"> References</label>
-      <label><input type="checkbox" id="toggleAnnexures"> Annexures</label>
-      <label><input type="checkbox" id="toggleChangeHistory"> Change History</label>
-    </div>
+  <!-- CREDIT (SCREEN ONLY) -->
+  <footer class="app-footer">
+    Created by
+    <a href="https://github.com/himshim" target="_blank">@himshim26</a>
+    ·
+    <a
+      href="https://github.com/himshim/pharmacy-sop-docgen"
+      target="_blank"
+    >
+      Source Code
+    </a>
+  </footer>
 
-    <h3>Optional Header Fields</h3>
-    <div class="checkbox-group">
-      <label><input type="checkbox" id="toggleSopNumber" checked> SOP Number</label>
-      <label><input type="checkbox" id="toggleEffectiveDate" checked> Effective Date</label>
-      <label><input type="checkbox" id="toggleRevisionDate" checked> Last Revision Date</label>
-      <label><input type="checkbox" id="toggleCopyType" checked> Controlled / Uncontrolled Copy</label>
-    </div>
-  </div>
-
-  <div class="layout">
-
-    <!-- EDITOR -->
-    <div class="editor-panel">
-
-      <label>Institution</label>
-      <input id="institute" />
-
-      <label>Department</label>
-      <input id="department" />
-
-      <label>SOP Title</label>
-      <input id="title" />
-
-      <label>SOP Number</label>
-      <input id="sopNumber" />
-
-      <div id="sectionDocControl">
-        <h3>Document Control</h3>
-        <label>Revision Number</label>
-        <input id="revisionNo" />
-        <label>Effective Date</label>
-        <input type="date" id="effectiveDate" />
-        <label>Last Revision Date</label>
-        <input type="date" id="revisionDate" />
-        <label>Next Review Due Date</label>
-        <input type="date" id="nextReviewDate" />
-        <label>Copy Type</label>
-        <select id="copyType">
-          <option value="CONTROLLED">CONTROLLED COPY</option>
-          <option value="UNCONTROLLED">UNCONTROLLED COPY</option>
-        </select>
-      </div>
-
-      <div id="sectionChangeHistory">
-        <h3>Change History</h3>
-        <textarea id="changeHistoryInput"></textarea>
-      </div>
-
-      <h3>SOP Content</h3>
-      <label>Purpose</label>
-      <textarea id="purpose"></textarea>
-      <label>Scope</label>
-      <textarea id="scope"></textarea>
-      <label>Responsibility</label>
-      <textarea id="responsibility"></textarea>
-      <label>Procedure</label>
-      <textarea id="procedure"></textarea>
-      <label>Precautions</label>
-      <textarea id="precautions"></textarea>
-
-      <div id="sectionApplicability">
-        <label>Applicability</label>
-        <textarea id="applicability"></textarea>
-      </div>
-
-      <div id="sectionAbbreviations">
-        <label>Abbreviations</label>
-        <textarea id="abbreviations"></textarea>
-      </div>
-
-      <div id="sectionReferences">
-        <label>References</label>
-        <textarea id="references"></textarea>
-      </div>
-
-      <div id="sectionAnnexures">
-        <label>Annexures</label>
-        <textarea id="annexures"></textarea>
-      </div>
-
-      <h3>Authorization</h3>
-      <label>Prepared By</label>
-      <input id="preparedBy" />
-      <label>Prepared Designation</label>
-      <input id="preparedDesig" />
-      <label>Date</label>
-      <input type="date" id="preparedDate" />
-      <label>Checked By</label>
-      <input id="checkedBy" />
-      <label>Checked Designation</label>
-      <input id="checkedDesig" />
-      <label>Date</label>
-      <input type="date" id="checkedDate" />
-      <label>Approved By</label>
-      <input id="approvedBy" />
-      <label>Approved Designation</label>
-      <input id="approvedDesig" />
-      <label>Date</label>
-      <input type="date" id="approvedDate" />
-    </div>
-
-    <!-- PREVIEW -->
-    <div id="preview-wrapper">
-      <div id="preview"></div>
-    </div>
-
-  </div>
-</div>
-
-<script src="js/template-engine.js"></script>
-<script src="js/sop-engine.js"></script>
+  <!-- LOGIC (shared) -->
+  <script src="js/template-engine.js"></script>
+  <script src="js/sop-engine.js"></script>
 
 </body>
 </html>

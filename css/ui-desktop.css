@@ -1,0 +1,7 @@
+#ui-desktop { display: block; }
+#ui-mobile { display: none; }
+
+@media (max-width: 768px) {
+  #ui-desktop { display: none; }
+  #ui-mobile { display: block; }
+}
