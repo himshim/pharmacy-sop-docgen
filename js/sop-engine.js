@@ -12,7 +12,19 @@ const inputs = {
   purpose: document.getElementById("purpose"),
   scope: document.getElementById("scope"),
   procedure: document.getElementById("procedure"),
-  precautions: document.getElementById("precautions")
+  precautions: document.getElementById("precautions"),
+
+  preparedBy: document.getElementById("preparedBy"),
+  preparedDesig: document.getElementById("preparedDesig"),
+  preparedDate: document.getElementById("preparedDate"),
+
+  checkedBy: document.getElementById("checkedBy"),
+  checkedDesig: document.getElementById("checkedDesig"),
+  checkedDate: document.getElementById("checkedDate"),
+
+  approvedBy: document.getElementById("approvedBy"),
+  approvedDesig: document.getElementById("approvedDesig"),
+  approvedDate: document.getElementById("approvedDate")
 };
 
 let TEMPLATE_HTML = "";
@@ -65,10 +77,23 @@ sopSelect.addEventListener("change", async () => {
     department: dept,
     title: raw.meta?.title || "",
     sopNumber: "",
+
     purpose: raw.sections?.purpose || "",
     scope: raw.sections?.scope || "",
     procedure: raw.sections?.procedure || [],
-    precautions: raw.sections?.precautions || ""
+    precautions: raw.sections?.precautions || "",
+
+    preparedBy: "",
+    preparedDesig: "",
+    preparedDate: "",
+
+    checkedBy: "",
+    checkedDesig: "",
+    checkedDate: "",
+
+    approvedBy: "",
+    approvedDesig: "",
+    approvedDate: ""
   };
 
   syncInputs();
@@ -104,14 +129,13 @@ Object.keys(inputs).forEach(key => {
    SYNC INPUTS
 ========================= */
 function syncInputs() {
-  inputs.institute.value = SOP_DATA.institute;
-  inputs.department.value = SOP_DATA.department;
-  inputs.title.value = SOP_DATA.title;
-  inputs.sopNumber.value = SOP_DATA.sopNumber;
-  inputs.purpose.value = SOP_DATA.purpose;
-  inputs.scope.value = SOP_DATA.scope;
-  inputs.procedure.value = SOP_DATA.procedure.join("\n");
-  inputs.precautions.value = SOP_DATA.precautions;
+  Object.keys(inputs).forEach(key => {
+    if (key === "procedure") {
+      inputs[key].value = SOP_DATA[key].join("\n");
+    } else {
+      inputs[key].value = SOP_DATA[key] || "";
+    }
+  });
 }
 
 /* =========================
