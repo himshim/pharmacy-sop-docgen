@@ -1,21 +1,396 @@
 /* ═══════════════════════════════════════════════════════════════════
-   PRINT STYLES FOR SOP GENERATOR
-   Works with html2pdf.js for perfect PDF generation
+   PRINT & PDF STYLES - OPTIMIZED FOR html2pdf.js
+   Perfect A4 rendering for professional SOP documents
    ═══════════════════════════════════════════════════════════════ */
 
-/* Basic print styles (fallback for browser print) */
+/* ==================== SCREEN PREVIEW STYLES ==================== */
+#preview {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #000;
+    background: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+#preview h1 {
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 0 0 16pt 0;
+    text-align: center;
+    color: #000;
+    page-break-after: avoid;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+}
+
+#preview h2 {
+    font-size: 13pt;
+    font-weight: bold;
+    margin: 16pt 0 10pt 0;
+    color: #000;
+    page-break-after: avoid;
+    border-bottom: 1.5pt solid #333;
+    padding-bottom: 4pt;
+}
+
+#preview h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    margin: 12pt 0 8pt 0;
+    color: #000;
+    page-break-after: avoid;
+}
+
+#preview h4 {
+    font-size: 11pt;
+    font-weight: bold;
+    margin: 10pt 0 6pt 0;
+    color: #333;
+    page-break-after: avoid;
+}
+
+#preview p {
+    margin: 0 0 10pt 0;
+    text-align: justify;
+    orphans: 3;
+    widows: 3;
+}
+
+#preview strong,
+#preview b {
+    font-weight: bold;
+}
+
+#preview em,
+#preview i {
+    font-style: italic;
+}
+
+/* ==================== LISTS ==================== */
+#preview ol,
+#preview ul {
+    margin: 10pt 0;
+    padding-left: 30pt;
+    page-break-inside: avoid;
+}
+
+#preview ol {
+    list-style-type: decimal;
+}
+
+#preview ul {
+    list-style-type: disc;
+}
+
+#preview li {
+    margin: 6pt 0;
+    line-height: 1.6;
+    page-break-inside: avoid;
+}
+
+#preview ol ol {
+    list-style-type: lower-alpha;
+    margin-top: 6pt;
+}
+
+#preview ol ol ol {
+    list-style-type: lower-roman;
+}
+
+/* ==================== TABLES ==================== */
+#preview table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14pt 0;
+    font-size: 10pt;
+    page-break-inside: avoid;
+}
+
+#preview th,
+#preview td {
+    border: 1pt solid #333;
+    padding: 8pt 10pt;
+    text-align: left;
+    vertical-align: top;
+}
+
+#preview th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-align: center;
+}
+
+#preview thead {
+    display: table-header-group;
+}
+
+#preview tbody {
+    display: table-row-group;
+}
+
+#preview tfoot {
+    display: table-footer-group;
+}
+
+/* Specific table cell styles */
+#preview .label-cell {
+    font-weight: bold;
+    background-color: #f5f5f5;
+    width: 35%;
+}
+
+#preview .value-cell {
+    background-color: white;
+}
+
+/* ==================== DOCUMENT HEADER ==================== */
+#preview .doc-header {
+    text-align: center;
+    margin-bottom: 20pt;
+    padding-bottom: 12pt;
+    border-bottom: 2.5pt double #000;
+    page-break-after: avoid;
+}
+
+#preview .institute-name {
+    font-size: 16pt;
+    font-weight: bold;
+    margin-bottom: 6pt;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+}
+
+#preview .department-name {
+    font-size: 13pt;
+    font-weight: 600;
+    margin-bottom: 4pt;
+    color: #333;
+}
+
+#preview .doc-type {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 8pt;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2pt;
+}
+
+/* ==================== INFO TABLE ==================== */
+#preview .info-table {
+    margin: 16pt 0;
+    border: 2pt solid #000;
+}
+
+#preview .info-table th {
+    background-color: #e8e8e8;
+    font-weight: bold;
+    padding: 8pt;
+}
+
+#preview .info-table td {
+    padding: 8pt 10pt;
+}
+
+/* ==================== SECTIONS ==================== */
+#preview .section {
+    margin: 16pt 0;
+    page-break-inside: avoid;
+}
+
+#preview .section-title {
+    font-size: 12pt;
+    font-weight: bold;
+    margin: 14pt 0 8pt 0;
+    padding: 6pt 10pt;
+    background: #f0f0f0;
+    border-left: 4pt solid #333;
+    page-break-after: avoid;
+}
+
+#preview .section-content {
+    margin: 8pt 0;
+    padding-left: 10pt;
+}
+
+/* ==================== PROCEDURE STEPS ==================== */
+#preview .procedure-list {
+    counter-reset: procedure-counter;
+    list-style: none;
+    padding-left: 0;
+    margin: 10pt 0;
+}
+
+#preview .procedure-list > li {
+    counter-increment: procedure-counter;
+    margin: 8pt 0;
+    padding-left: 35pt;
+    position: relative;
+    page-break-inside: avoid;
+}
+
+#preview .procedure-list > li::before {
+    content: counter(procedure-counter) ".";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    min-width: 25pt;
+}
+
+/* ==================== SIGNATURE BLOCK ==================== */
+#preview .signature-block {
+    margin-top: 30pt;
+    page-break-inside: avoid;
+}
+
+#preview .signature-table {
+    border: 2pt solid #000;
+    margin-top: 20pt;
+}
+
+#preview .signature-table th {
+    background-color: #e8e8e8;
+    padding: 10pt;
+    font-weight: bold;
+}
+
+#preview .signature-table td {
+    padding: 12pt 10pt;
+    min-height: 50pt;
+}
+
+#preview .signature-line {
+    border-bottom: 1pt solid #000;
+    min-height: 40pt;
+    margin: 10pt 0 4pt 0;
+}
+
+/* ==================== MARKERS & BADGES ==================== */
+#preview .controlled-doc,
+#preview .end-marker {
+    text-align: center;
+    font-weight: bold;
+    font-size: 11pt;
+    margin: 20pt 0;
+    padding: 10pt;
+    border-top: 2pt solid #000;
+    border-bottom: 2pt solid #000;
+    page-break-inside: avoid;
+}
+
+#preview .confidential-marker {
+    text-align: center;
+    font-weight: bold;
+    font-size: 10pt;
+    color: #666;
+    margin: 10pt 0;
+}
+
+#preview .copy-type {
+    position: absolute;
+    top: 10pt;
+    right: 10pt;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 6pt 12pt;
+    border: 2pt solid #000;
+    background: #fff;
+}
+
+/* ==================== PAGE BREAKS ==================== */
+#preview .page-break {
+    page-break-after: always;
+}
+
+#preview .page-break-before {
+    page-break-before: always;
+}
+
+#preview .avoid-break {
+    page-break-inside: avoid;
+}
+
+/* Avoid breaks after headings */
+#preview h1,
+#preview h2,
+#preview h3,
+#preview h4 {
+    page-break-after: avoid;
+}
+
+/* Avoid orphans and widows */
+#preview p,
+#preview li {
+    orphans: 3;
+    widows: 3;
+}
+
+/* ==================== UTILITIES ==================== */
+#preview .text-center {
+    text-align: center;
+}
+
+#preview .text-right {
+    text-align: right;
+}
+
+#preview .text-justify {
+    text-align: justify;
+}
+
+#preview .font-bold {
+    font-weight: bold;
+}
+
+#preview .font-italic {
+    font-style: italic;
+}
+
+#preview .uppercase {
+    text-transform: uppercase;
+}
+
+#preview .underline {
+    text-decoration: underline;
+}
+
+#preview .margin-top {
+    margin-top: 20pt;
+}
+
+#preview .margin-bottom {
+    margin-bottom: 20pt;
+}
+
+#preview .no-margin {
+    margin: 0;
+}
+
+/* ==================== PRINT MEDIA QUERY ==================== */
 @media print {
-    /* Hide UI elements */
+    /* Hide all UI elements */
+    body > *:not(#preview) {
+        display: none !important;
+    }
+
     .sidebar,
     .mobile-header,
     .tab-navigation,
     .form-wrapper,
     .preview-actions,
     .action-bar,
+    .bottom-action-bar,
+    .preview-toolbar,
+    .controls-panel,
+    .status-bar,
     .no-print,
     button,
     nav,
     header:not(.doc-header),
+    footer:not(.doc-footer),
     input,
     textarea,
     select {
@@ -25,131 +400,98 @@
     /* Page setup */
     @page {
         size: A4 portrait;
-        margin: 20mm;
+        margin: 20mm 20mm 20mm 20mm;
     }
 
     /* Reset body */
     body {
-        margin: 0;
-        padding: 0;
-        background: white;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
     }
 
     /* Show only preview */
-    #preview,
-    .preview-content {
+    #preview {
         display: block !important;
         margin: 0 !important;
         padding: 0 !important;
         box-shadow: none !important;
         border: none !important;
-    }
-}
-
-/* Screen preview styles */
-@media screen {
-    #preview {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 11pt;
-        line-height: 1.5;
-        color: #000;
+        width: 100% !important;
+        max-width: none !important;
     }
 
-    #preview table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 12pt 0;
-        font-size: 10pt;
+    /* Force black text */
+    #preview * {
+        color: #000 !important;
+        background: transparent !important;
     }
 
+    /* Table borders in print */
+    #preview table,
     #preview th,
     #preview td {
-        border: 1pt solid #000;
-        padding: 6pt 8pt;
-        text-align: left;
-        vertical-align: top;
+        border-color: #000 !important;
     }
 
     #preview th {
-        background-color: #f0f0f0;
-        font-weight: bold;
-    }
-
-    #preview h1 {
-        font-size: 16pt;
-        font-weight: bold;
-        margin: 0 0 12pt 0;
-        text-align: center;
-    }
-
-    #preview h2 {
-        font-size: 14pt;
-        font-weight: bold;
-        margin: 12pt 0 8pt 0;
-    }
-
-    #preview h3 {
-        font-size: 12pt;
-        font-weight: bold;
-        margin: 10pt 0 6pt 0;
-    }
-
-    #preview p {
-        margin: 0 0 8pt 0;
-        text-align: justify;
-    }
-
-    #preview ol,
-    #preview ul {
-        margin: 8pt 0;
-        padding-left: 24pt;
-    }
-
-    #preview li {
-        margin: 4pt 0;
-    }
-
-    #preview .doc-header {
-        text-align: center;
-        margin-bottom: 16pt;
-        padding-bottom: 8pt;
-        border-bottom: 2pt solid #000;
-    }
-
-    #preview .institute-name {
-        font-size: 14pt;
-        font-weight: bold;
-        margin-bottom: 4pt;
-    }
-
-    #preview .department-name {
-        font-size: 12pt;
-        margin-bottom: 8pt;
-    }
-
-    #preview .label-cell {
-        font-weight: bold;
-        background-color: #f8f8f8;
-        width: 30%;
-    }
-
-    #preview .section {
-        margin: 12pt 0;
-    }
-
-    #preview .signature-block {
-        margin-top: 24pt;
-        page-break-inside: avoid;
-    }
-
-    #preview .controlled-doc,
-    #preview .end-marker {
-        text-align: center;
-        font-weight: bold;
-        font-size: 10pt;
-        margin: 16pt 0;
-        padding: 8pt;
-        border-top: 1pt solid #000;
-        border-bottom: 1pt solid #000;
+        background-color: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 }
+
+/* ==================== PDF OPTIMIZATION (html2pdf.js) ==================== */
+/* These styles are specifically for html2pdf.js rendering */
+.pdf-rendering #preview {
+    width: 210mm !important;
+    min-height: 297mm !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.pdf-rendering #preview * {
+    box-sizing: border-box;
+}
+
+/* Ensure images fit page */
+#preview img {
+    max-width: 100%;
+    height: auto;
+    page-break-inside: avoid;
+}
+
+/* Prevent table splitting across pages */
+#preview table {
+    page-break-inside: avoid;
+}
+
+/* Long tables can split if needed */
+#preview table.allow-split {
+    page-break-inside: auto;
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+#preview abbr {
+    text-decoration: none;
+    border-bottom: 1pt dotted #666;
+}
+
+#preview code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10pt;
+    background: #f5f5f5;
+    padding: 2pt 4pt;
+}
+
+#preview pre {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 9pt;
+    background: #f5f5f5;
+    padding: 10pt;
+    border-left: 3pt solid #ccc;
+    overflow-x: auto;
+    page-break-inside: avoid;
+}
+
+/* ==================== END ==================== */

@@ -2,148 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <style>
-    body { font-family: 'Times New Roman', Times, serif; font-size: 11pt; line-height: 1.5; color: #000; margin: 0; padding: 0; }
-    table { width: 100%; border-collapse: collapse; margin: 12pt 0; font-size: 10pt; }
-    th, td { border: 1pt solid #000; padding: 6pt 8pt; text-align: left; vertical-align: top; }
-    th { background-color: #f0f0f0; font-weight: bold; }
-    h1 { font-size: 16pt; font-weight: bold; margin: 0 0 12pt 0; text-align: center; }
-    h2 { font-size: 14pt; font-weight: bold; margin: 12pt 0 8pt 0; }
-    p { margin: 0 0 8pt 0; text-align: justify; }
-    ol { margin: 8pt 0; padding-left: 24pt; list-style-type: decimal; }
-    li { margin: 4pt 0; }
-    .doc-header { text-align: center; margin-bottom: 16pt; padding-bottom: 8pt; border-bottom: 2pt solid #000; }
-    .institute-name { font-size: 14pt; font-weight: bold; margin-bottom: 4pt; }
-    .department-name { font-size: 12pt; margin-bottom: 8pt; }
-    .label-cell { font-weight: bold; background-color: #f8f8f8; width: 30%; }
-    .section { margin: 12pt 0; }
-    .signature-block { margin-top: 24pt; page-break-inside: avoid; }
-    .end-marker { text-align: center; font-weight: bold; font-size: 10pt; margin-top: 16pt; padding: 8pt; border-top: 2pt solid #000; }
-    </style>
+    <title>SOP Document - NAAC Compliant</title>
 </head>
 <body>
-    <div class="doc-header">
+    <!-- Document Header -->
+    <header class="doc-header">
         <div class="institute-name">{{institute}}</div>
-        <div class="department-name">{{department}}</div>
-        <h1>STANDARD OPERATING PROCEDURE</h1>
-        <h1>{{title}}</h1>
-    </div>
+        <div class="department-name">Department of {{department}}</div>
+        <div class="doc-type">Standard Operating Procedure</div>
+        <p style="font-size: 10pt; margin-top: 8pt;">
+            (As per NAAC Guidelines for Quality Assurance in Higher Education)
+        </p>
+    </header>
 
-    <table>
-        <tr>
-            <td class="label-cell">Institution</td>
-            <td>{{institute}}</td>
-            <td class="label-cell">SOP No.</td>
-            <td>{{sopNumber}}</td>
-        </tr>
-        <tr>
-            <td class="label-cell">Department</td>
-            <td>{{department}}</td>
-            <td class="label-cell">Effective Date</td>
-            <td>{{effectiveDate}}</td>
-        </tr>
-        <tr>
-            <td class="label-cell">SOP Title</td>
-            <td colspan="3">{{title}}</td>
-        </tr>
-        <tr>
-            <td class="label-cell">Revision No.</td>
-            <td>{{revisionNo}}</td>
-            <td class="label-cell">Last Revision Date</td>
-            <td>{{revisionDate}}</td>
-        </tr>
+    <!-- Document Information Table -->
+    <table class="info-table">
+        <tbody>
+            <tr>
+                <td class="label-cell">SOP Title</td>
+                <td class="value-cell">{{title}}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">SOP Number</td>
+                <td class="value-cell">{{sopNumber}}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Revision Number</td>
+                <td class="value-cell">{{revisionNo}}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Effective Date</td>
+                <td class="value-cell">{{effectiveDate}}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Revision Date</td>
+                <td class="value-cell">{{revisionDate}}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Next Review Date</td>
+                <td class="value-cell">{{nextReviewDate}}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Document Type</td>
+                <td class="value-cell"><strong>{{copyType}} COPY</strong></td>
+            </tr>
+        </tbody>
     </table>
 
-    <div class="section">
-        <h2>1. PURPOSE</h2>
-        <p>{{purpose}}</p>
+    <!-- Purpose Section -->
+    <div class="section avoid-break">
+        <h2 class="section-title">1. Purpose</h2>
+        <div class="section-content">
+            <p>{{purpose}}</p>
+        </div>
     </div>
 
-    <div class="section">
-        <h2>2. SCOPE</h2>
-        <p>{{scope}}</p>
+    <!-- Scope Section -->
+    <div class="section avoid-break">
+        <h2 class="section-title">2. Scope</h2>
+        <div class="section-content">
+            <p>{{scope}}</p>
+        </div>
     </div>
 
-    <div class="section">
-        <h2>3. RESPONSIBILITY</h2>
-        <p>{{responsibility}}</p>
+    <!-- Responsibility Section -->
+    <div class="section avoid-break">
+        <h2 class="section-title">3. Responsibility</h2>
+        <div class="section-content">
+            <p>{{responsibility}}</p>
+        </div>
     </div>
 
+    <!-- Procedure Section -->
     <div class="section">
-        <h2>4. PROCEDURE</h2>
-        <ol>{{procedure}}</ol>
+        <h2 class="section-title">4. Procedure</h2>
+        <div class="section-content">
+            <ol class="procedure-list">
+                {{procedure}}
+            </ol>
+        </div>
     </div>
 
-    <div class="section">
-        <h2>5. SAFETY & QUALITY MEASURES</h2>
-        <p>{{precautions}}</p>
+    <!-- Precautions Section -->
+    <div class="section avoid-break">
+        <h2 class="section-title">5. Safety Precautions</h2>
+        <div class="section-content">
+            <p>{{precautions}}</p>
+        </div>
     </div>
 
-    <div class="section">
-        <h2>6. QUALITY ASSURANCE</h2>
-        <p>Records generated during the implementation of this SOP shall be maintained, controlled, and retained in accordance with the institution's documented procedures and quality management system.</p>
+    <!-- Documentation & Records (NAAC Compliance) -->
+    <div class="section avoid-break">
+        <h2 class="section-title">6. Documentation & Record Keeping</h2>
+        <div class="section-content">
+            <p>All records generated during the implementation of this SOP shall be maintained, controlled, and retained in accordance with the institution's documented procedures and NAAC accreditation requirements. Records shall be:</p>
+            <ul>
+                <li>Properly documented and dated</li>
+                <li>Maintained for the duration specified by institutional policy</li>
+                <li>Available for inspection during NAAC assessment</li>
+                <li>Retained as evidence of quality assurance practices</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="page-break-indicator"></div>
-
-    <div class="section">
-        <h2>REVISION HISTORY</h2>
-        <table>
-            <tr>
-                <th style="width: 15%;">Revision</th>
-                <th style="width: 55%;">Description of Change</th>
-                <th style="width: 30%;">Date</th>
-            </tr>
-            <tr>
-                <td>{{revisionNo}}</td>
-                <td>Initial Release</td>
-                <td>{{revisionDate}}</td>
-            </tr>
-        </table>
+    <!-- Applicability (if enabled) -->
+    <div class="section avoid-break" id="section-applicability">
+        <h2 class="section-title">7. Applicability</h2>
+        <div class="section-content">
+            <p>{{applicability}}</p>
+        </div>
     </div>
 
+    <!-- Abbreviations (if enabled) -->
+    <div class="section avoid-break" id="section-abbreviations">
+        <h2 class="section-title">8. Abbreviations</h2>
+        <div class="section-content">
+            <p>{{abbreviations}}</p>
+        </div>
+    </div>
+
+    <!-- References (if enabled) -->
+    <div class="section avoid-break" id="section-references">
+        <h2 class="section-title">9. References</h2>
+        <div class="section-content">
+            <p>{{references}}</p>
+        </div>
+    </div>
+
+    <!-- Annexures (if enabled) -->
+    <div class="section avoid-break" id="section-annexures">
+        <h2 class="section-title">10. Annexures</h2>
+        <div class="section-content">
+            <p>{{annexures}}</p>
+        </div>
+    </div>
+
+    <!-- Signature Block -->
     <div class="signature-block">
-        <table>
-            <tr>
-                <th colspan="2">Prepared By</th>
-                <th colspan="2">Checked By</th>
-                <th colspan="2">Approved By</th>
-            </tr>
-            <tr>
-                <td class="label-cell">Name</td>
-                <td>{{preparedBy}}</td>
-                <td class="label-cell">Name</td>
-                <td>{{checkedBy}}</td>
-                <td class="label-cell">Name</td>
-                <td>{{approvedBy}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Designation</td>
-                <td>{{preparedDesig}}</td>
-                <td class="label-cell">Designation</td>
-                <td>{{checkedDesig}}</td>
-                <td class="label-cell">Designation</td>
-                <td>{{approvedDesig}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Date</td>
-                <td>{{preparedDate}}</td>
-                <td class="label-cell">Date</td>
-                <td>{{checkedDate}}</td>
-                <td class="label-cell">Date</td>
-                <td>{{approvedDate}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Signature</td>
-                <td>&nbsp;</td>
-                <td class="label-cell">Signature</td>
-                <td>&nbsp;</td>
-                <td class="label-cell">Signature</td>
-                <td>&nbsp;</td>
-            </tr>
+        <h3>Document Verification & Approval</h3>
+        <table class="signature-table">
+            <thead>
+                <tr>
+                    <th>Prepared By</th>
+                    <th>Verified By</th>
+                    <th>Approved By</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>Name:</strong> {{preparedBy}}<br>
+                        <strong>Designation:</strong> {{preparedDesig}}<br>
+                        <div class="signature-line"></div>
+                        <strong>Date:</strong> {{preparedDate}}
+                    </td>
+                    <td>
+                        <strong>Name:</strong> {{checkedBy}}<br>
+                        <strong>Designation:</strong> {{checkedDesig}}<br>
+                        <div class="signature-line"></div>
+                        <strong>Date:</strong> {{checkedDate}}
+                    </td>
+                    <td>
+                        <strong>Name:</strong> {{approvedBy}}<br>
+                        <strong>Designation:</strong> {{approvedDesig}}<br>
+                        <div class="signature-line"></div>
+                        <strong>Date:</strong> {{approvedDate}}
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
 
-    <div class="end-marker">— END OF SOP —</div>
+    <!-- NAAC Compliance Footer -->
+    <div class="end-marker">
+        — END OF DOCUMENT —<br>
+        <span style="font-size: 9pt; font-weight: normal;">
+            This SOP is part of the institution's Quality Assurance Framework as per NAAC guidelines.
+        </span>
+    </div>
 </body>
 </html>
