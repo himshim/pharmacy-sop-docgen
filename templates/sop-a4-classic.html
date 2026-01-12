@@ -15,19 +15,36 @@
         <th width="30%">Title</th>
         <td width="70%"><b>{{title}}</b></td>
     </tr>
+    {{#if sectionSopNumber}}
     <tr>
         <th>SOP Number</th>
         <td>{{sopNumber}}</td>
     </tr>
+    {{/if}}
+    {{#if sectionEffectiveDate}}
     <tr>
         <th>Effective Date</th>
         <td>{{effectiveDate}}</td>
     </tr>
+    {{/if}}
+    {{#if sectionRevisionDate}}
+    <tr>
+        <th>Revision Date</th>
+        <td>{{revisionDate}}</td>
+    </tr>
+    {{/if}}
     <tr>
         <th>Revision No.</th>
         <td>{{revisionNo}}</td>
     </tr>
+    {{#if sectionCopyType}}
+    <tr>
+        <th>Copy Type</th>
+        <td>{{copyType}}</td>
+    </tr>
+    {{/if}}
 </table>
+
 
 <!-- MAIN CONTENT -->
 {{#if sectionDocControl}}
