@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional SOP Document Generator for Pharmacy Education">
-    <meta name="keywords" content="SOP, Standard Operating Procedure, Pharmacy, Document Generator">
+    <meta name="description" content="Professional SOP Document Generator for Pharmacy Education - ISO, PCI, NAAC Compliant">
+    <meta name="keywords" content="SOP, Standard Operating Procedure, Pharmacy, Document Generator, ISO, PCI, NAAC">
     <meta name="author" content="@himshim26">
+    <meta name="theme-color" content="#667eea">
     <title>SOP Generator - Professional Document Creator</title>
 
     <style>
@@ -18,26 +19,23 @@
             #preview,
             #preview *,
             #preview-content,
-            #preview-content *,
-            .preview-content,
-            .preview-content * {
+            #preview-content * {
                 visibility: visible !important;
             }
 
-            #preview,
-            #preview-content,
-            .preview-content {
+            #preview {
                 position: absolute !important;
                 left: 0 !important;
                 top: 0 !important;
                 width: 100% !important;
-                padding: 0 !important;
+                padding: 20mm !important;
                 margin: 0 !important;
+                background: white !important;
             }
 
             @page {
                 size: A4 portrait;
-                margin: 20mm;
+                margin: 0;
             }
 
             * {
@@ -55,38 +53,16 @@
                 font-family: 'Times New Roman', Times, serif !important;
             }
 
-            h1 { font-size: 18pt !important; margin-bottom: 12pt !important; }
-            h2 { font-size: 16pt !important; margin-bottom: 10pt !important; }
-            h3 { font-size: 14pt !important; margin-bottom: 8pt !important; }
-            p { margin-bottom: 6pt !important; }
+            h1 { font-size: 18pt !important; page-break-after: avoid; }
+            h2 { font-size: 16pt !important; page-break-after: avoid; }
+            h3 { font-size: 14pt !important; page-break-after: avoid; }
 
-            .header, .sidebar, .controls, .tabs, .action-bar,
-            .bottom-bar, .footer, button, input, select, 
-            textarea, .no-print, nav, .tab-btn, .action-buttons {
+            table { page-break-inside: avoid; border-collapse: collapse !important; }
+            td, th { border: 1px solid #000 !important; padding: 8px !important; }
+
+            .no-print, header, footer, .sidebar, .controls, 
+            .tabs, button, input, select, textarea, nav {
                 display: none !important;
-                visibility: hidden !important;
-            }
-
-            .page-break { page-break-after: always; }
-            .page-break-before { page-break-before: always; }
-
-            h1, h2, h3, h4, h5, h6 {
-                page-break-after: avoid;
-                page-break-inside: avoid;
-            }
-
-            table, figure, img {
-                page-break-inside: avoid;
-            }
-
-            table {
-                border-collapse: collapse !important;
-                width: 100% !important;
-            }
-
-            th, td {
-                border: 1px solid #000 !important;
-                padding: 8px !important;
             }
         }
 
@@ -160,6 +136,43 @@
             opacity: 0.9;
         }
 
+        /* ==================== ERROR SCREEN ==================== */
+        .error-content {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            max-width: 500px;
+        }
+
+        .error-content h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .error-content p {
+            font-size: 1rem;
+            opacity: 0.95;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .error-content button {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .error-content button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
         /* ==================== UI CONTAINER ==================== */
         #ui-container {
             opacity: 0;
@@ -183,40 +196,6 @@
                 display: none !important; 
             }
         }
-
-        /* ==================== ERROR DISPLAY ==================== */
-        .error-content {
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
-
-        .error-content h2 {
-            font-size: 1.8rem;
-            margin-bottom: 16px;
-        }
-
-        .error-content p {
-            font-size: 1rem;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-
-        .error-content button {
-            background: white;
-            color: #667eea;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .error-content button:hover {
-            transform: translateY(-2px);
-        }
     </style>
 </head>
 <body>
@@ -225,7 +204,7 @@
         <div class="loading-content">
             <div class="spinner"></div>
             <h2>Loading SOP Generator...</h2>
-            <p>Please wait while we prepare your workspace</p>
+            <p>Preparing your professional workspace</p>
         </div>
     </div>
 
@@ -246,128 +225,183 @@
     <script>
         'use strict';
 
+        // ==================== CONSTANTS ====================
+        const MOBILE_BREAKPOINT = 768;
+        const LOAD_TIMEOUT = 10000;
+        const RETRY_DELAY = 1000;
+
+        // ==================== UTILITY FUNCTIONS ====================
+        function isMobile() {
+            return window.innerWidth <= MOBILE_BREAKPOINT;
+        }
+
+        function showError(message, details = '') {
+            const loadingScreen = document.getElementById('loadingScreen');
+            loadingScreen.innerHTML = `
+                <div class="error-content">
+                    <h2>⚠️ Error Loading Application</h2>
+                    <p><strong>${message}</strong></p>
+                    ${details ? `<p>${details}</p>` : ''}
+                    <p>Please check your internet connection and try again.</p>
+                    <button onclick="location.reload()">🔄 Reload Page</button>
+                </div>
+            `;
+        }
+
         // ==================== EVENT LISTENER ATTACHMENT ====================
         function attachEventListeners() {
-            console.log('ðŸŽ¯ Attaching event listeners...');
+            console.log('🎯 Attaching event listeners...');
 
             // === Mobile UI: Tab Switching ===
             const tabButtons = document.querySelectorAll('.tab-btn, [data-tab]');
-            tabButtons.forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetTab = this.getAttribute('data-tab') || this.dataset.tab;
+            if (tabButtons.length > 0) {
+                tabButtons.forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const targetTab = this.getAttribute('data-tab') || this.dataset.tab;
 
-                    if (!targetTab) return;
+                        if (!targetTab) {
+                            console.warn('⚠️ Tab button missing data-tab attribute');
+                            return;
+                        }
 
-                    // Remove active class from all tabs and contents
-                    document.querySelectorAll('.tab-btn, [data-tab]').forEach(t => {
-                        t.classList.remove('active');
+                        console.log(`📑 Switching to tab: ${targetTab}`);
+
+                        document.querySelectorAll('.tab-btn, [data-tab]').forEach(t => {
+                            t.classList.remove('active');
+                        });
+                        document.querySelectorAll('.tab-content, .tab-panel').forEach(c => {
+                            c.classList.remove('active');
+                        });
+
+                        this.classList.add('active');
+                        const targetContent = document.getElementById(targetTab) || 
+                                            document.getElementById('tab-' + targetTab);
+                        if (targetContent) {
+                            targetContent.classList.add('active');
+                            console.log(`✅ Tab ${targetTab} activated`);
+                        } else {
+                            console.error(`❌ Tab content #${targetTab} not found`);
+                        }
                     });
-                    document.querySelectorAll('.tab-content').forEach(c => {
-                        c.classList.remove('active');
-                    });
-
-                    // Add active class to clicked tab and its content
-                    this.classList.add('active');
-                    const targetContent = document.getElementById(targetTab);
-                    if (targetContent) {
-                        targetContent.classList.add('active');
-                    }
                 });
-            });
+                console.log(`✅ Attached listeners to ${tabButtons.length} tab buttons`);
+            }
 
             // === Print Button Handler ===
             const printButtons = document.querySelectorAll(
-                '.print-btn, #print-btn, [class*="print"], button'
+                '.print-btn, #print-btn, [onclick*="print"], button'
             );
 
             printButtons.forEach(btn => {
-                const btnText = btn.textContent.toLowerCase();
-                if (btnText.includes('print') || btnText.includes('à¤ªà¥à¤°à¤¿à¤‚à¤Ÿ')) {
-                    // Remove existing listeners to prevent duplicates
+                const btnText = (btn.textContent || btn.innerText || '').toLowerCase();
+                if (btnText.includes('print') || btnText.includes('🖨️')) {
+                    btn.removeAttribute('onclick');
                     const newBtn = btn.cloneNode(true);
                     btn.parentNode.replaceChild(newBtn, btn);
 
                     newBtn.addEventListener('click', function(e) {
                         e.preventDefault();
                         e.stopPropagation();
-                        console.log('ðŸ–¨ï¸ Print button clicked');
-                        window.print();
+                        console.log('🖨️ Print button clicked');
+
+                        const preview = document.getElementById('preview');
+                        if (preview && preview.innerHTML.trim()) {
+                            window.print();
+                        } else {
+                            alert('⚠️ Please select a department and SOP first to preview the document.');
+                        }
                     });
                 }
             });
 
-            console.log('âœ… Event listeners attached successfully');
+            console.log('✅ Event listeners attached successfully');
         }
 
-        // ==================== UI LOADING ====================
+        // ==================== UI LOADING WITH RETRY ====================
+        async function loadUIWithRetry(retries = 3) {
+            for (let attempt = 1; attempt <= retries; attempt++) {
+                try {
+                    console.log(`🔄 Load attempt ${attempt}/${retries}`);
+                    await loadUI();
+                    return;
+                } catch (error) {
+                    console.error(`❌ Attempt ${attempt} failed:`, error);
+
+                    if (attempt === retries) {
+                        throw error;
+                    }
+
+                    await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+                }
+            }
+        }
+
         async function loadUI() {
-            console.log('ðŸš€ Starting UI load...');
+            console.log('🚀 Starting UI load...');
 
-            const isMobile = window.innerWidth <= 768;
-            const uiFile = isMobile ? 'partials/ui-mobile.html' : 'partials/ui-desktop.html';
-            const targetDiv = isMobile ? 'ui-mobile' : 'ui-desktop';
+            const mobile = isMobile();
+            const uiFile = mobile ? 'partials/ui-mobile.html' : 'partials/ui-desktop.html';
+            const targetDiv = mobile ? 'ui-mobile' : 'ui-desktop';
 
-            console.log(`ðŸ“± Device: ${isMobile ? 'Mobile' : 'Desktop'}`);
-            console.log(`ðŸ“„ Loading: ${uiFile}`);
+            console.log(`📱 Device: ${mobile ? 'Mobile' : 'Desktop'} (${window.innerWidth}px)`);
+            console.log(`📄 Loading: ${uiFile}`);
+
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), LOAD_TIMEOUT);
 
             try {
-                // Fetch UI file
-                const response = await fetch(uiFile);
+                const response = await fetch(uiFile, {
+                    signal: controller.signal,
+                    cache: 'no-cache'
+                });
+
+                clearTimeout(timeoutId);
+
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: Failed to load ${uiFile}`);
                 }
 
                 const html = await response.text();
-                console.log(`âœ… Loaded ${html.length} bytes from ${uiFile}`);
+                console.log(`✅ Loaded ${html.length} bytes from ${uiFile}`);
 
-                // Inject HTML into target container
                 const targetElement = document.getElementById(targetDiv);
                 if (!targetElement) {
-                    throw new Error(`Target element #${targetDiv} not found`);
+                    throw new Error(`Target element #${targetDiv} not found in DOM`);
                 }
 
                 targetElement.innerHTML = html;
-                console.log('âœ… UI injected into DOM');
+                console.log('✅ UI injected into DOM');
 
-                // Wait for DOM to settle
                 await new Promise(resolve => setTimeout(resolve, 100));
 
-                // Initialize SOP App (from sop-engine.js)
                 if (typeof window.initSOPApp === 'function') {
-                    console.log('âš™ï¸ Initializing SOP App...');
+                    console.log('⚙️ Initializing SOP App...');
                     window.initSOPApp();
                 } else {
-                    console.warn('âš ï¸ initSOPApp function not found');
+                    console.warn('⚠️ initSOPApp function not found - check if sop-engine.js loaded');
                 }
 
-                // Attach event listeners for dynamic content
                 attachEventListeners();
 
-                // Hide loading screen and show UI
                 setTimeout(() => {
                     const loadingScreen = document.getElementById('loadingScreen');
                     const uiContainer = document.getElementById('ui-container');
 
-                    loadingScreen.classList.add('hidden');
-                    uiContainer.classList.add('loaded');
+                    if (loadingScreen) loadingScreen.classList.add('hidden');
+                    if (uiContainer) uiContainer.classList.add('loaded');
 
-                    console.log('âœ… UI loaded successfully');
-                }, 500);
+                    console.log('✅ UI loaded successfully');
+                }, 300);
 
             } catch (error) {
-                console.error('âŒ Error loading UI:', error);
+                clearTimeout(timeoutId);
 
-                // Show error message
-                const loadingScreen = document.getElementById('loadingScreen');
-                loadingScreen.innerHTML = `
-                    <div class="error-content">
-                        <h2>âš ï¸ Error Loading Application</h2>
-                        <p>${error.message}</p>
-                        <p>Please check your internet connection and try again.</p>
-                        <button onclick="location.reload()">Reload Page</button>
-                    </div>
-                `;
+                if (error.name === 'AbortError') {
+                    throw new Error('Request timeout - Server took too long to respond');
+                }
+
+                throw error;
             }
         }
 
@@ -376,45 +410,65 @@
         function handleResize() {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
-                const wasMobile = document.getElementById('ui-mobile').innerHTML !== '';
-                const isMobile = window.innerWidth <= 768;
+                const desktopLoaded = document.getElementById('ui-desktop').innerHTML !== '';
+                const mobileLoaded = document.getElementById('ui-mobile').innerHTML !== '';
+                const currentlyMobile = isMobile();
 
-                // Reload if device type changed
-                if (wasMobile !== isMobile) {
-                    console.log('ðŸ”„ Device type changed, reloading...');
+                if ((currentlyMobile && desktopLoaded) || (!currentlyMobile && mobileLoaded)) {
+                    console.log('🔄 Device type changed, reloading UI...');
                     location.reload();
                 }
             }, 250);
         }
 
         // ==================== INITIALIZATION ====================
-        // Load UI when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', loadUI);
-        } else {
-            loadUI();
+        async function init() {
+            try {
+                await loadUIWithRetry(3);
+            } catch (error) {
+                console.error('❌ Fatal error loading UI:', error);
+                showError(
+                    error.message || 'Failed to load application',
+                    'This could be due to network issues or missing files.'
+                );
+            }
         }
 
-        // Handle window resize
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+
         window.addEventListener('resize', handleResize);
 
-        // ==================== PRINT HANDLER ====================
+        // ==================== PRINT HANDLERS ====================
         window.addEventListener('beforeprint', function() {
-            console.log('ðŸ–¨ï¸ Print dialog opened');
+            console.log('🖨️ Print dialog opened');
         });
 
         window.addEventListener('afterprint', function() {
-            console.log('âœ… Print dialog closed');
+            console.log('✅ Print dialog closed');
         });
 
-        // ==================== ERROR HANDLING ====================
+        // ==================== GLOBAL ERROR HANDLING ====================
         window.addEventListener('error', function(e) {
-            console.error('âŒ Global error:', e.error);
+            console.error('❌ Global error:', e.error);
         });
 
         window.addEventListener('unhandledrejection', function(e) {
-            console.error('âŒ Unhandled promise rejection:', e.reason);
+            console.error('❌ Unhandled promise rejection:', e.reason);
         });
+
+        // ==================== EXPORT FOR DEBUGGING ====================
+        window.sopApp = {
+            version: '2.0.0',
+            isMobile: isMobile,
+            reload: () => location.reload(),
+            attachListeners: attachEventListeners
+        };
+
+        console.log('📦 SOP Generator v2.0.0 initialized');
     </script>
 </body>
 </html>

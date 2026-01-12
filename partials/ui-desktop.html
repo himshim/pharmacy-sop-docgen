@@ -1,1123 +1,482 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      :root {
-        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        --accent-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        --primary-color: #667eea;
-        --primary-dark: #5568d3;
-        --accent-color: #f5576c;
-        --bg-light: #f8f9fa;
-        --bg-white: #ffffff;
-        --text-dark: #2d3748;
-        --text-medium: #4a5568;
-        --text-light: #718096;
-        --border-color: #e2e8f0;
-        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
-        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-        --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.2);
-        --radius-sm: 8px;
-        --radius-md: 12px;
-        --radius-lg: 16px;
-        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-<script>
-(function() {
-    console.log('📱 Initializing mobile tabs...');
-    function initTabs() {
-        const tabs = document.querySelectorAll('.tab-btn');
-        const contents = document.querySelectorAll('.tab-content');
-        if (tabs.length === 0) return;
-        tabs.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = this.getAttribute('data-tab');
-                if (!target) return;
-                tabs.forEach(t => t.classList.remove('active'));
-                contents.forEach(c => c.classList.remove('active'));
-                this.classList.add('active');
-                const targetEl = document.getElementById(target);
-                if (targetEl) targetEl.classList.add('active');
-            });
-        });
-        console.log('✅ Mobile tabs ready');
-    }
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initTabs);
-    } else {
-        initTabs();
-    }
-    setTimeout(initTabs, 500);
-})();
-</script>
-
-      body {
-        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, sans-serif;
-        background: var(--primary-gradient);
-        min-height: 100vh;
-        padding: 20px;
-        line-height: 1.6;
-      }
-
-      .app-container {
-        max-width: 1800px;
-        margin: 0 auto;
-        background: var(--bg-white);
-        border-radius: 24px;
-        box-shadow: var(--shadow-xl);
-        overflow: hidden;
-        animation: slideUp 0.6s ease-out;
-      }
-
-      @keyframes slideUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* PREMIUM HEADER */
-      .app-header {
-        background: var(--primary-gradient);
-        color: white;
-        padding: 32px 40px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .app-header::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-        opacity: 0.3;
-      }
-
-      .header-content {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .header-left h1 {
-        font-size: 32px;
-        font-weight: 700;
-        margin-bottom: 8px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .logo-icon {
-        width: 48px;
-        height: 48px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        backdrop-filter: blur(10px);
-      }
-
-      .header-left p {
-        font-size: 16px;
-        opacity: 0.95;
-        font-weight: 400;
-      }
-
-      .header-right {
-        text-align: right;
-      }
-
-      .version-badge {
-        display: inline-block;
-        background: rgba(255, 255, 255, 0.2);
-        padding: 6px 16px;
-        border-radius: 20px;
-        font-size: 13px;
-        font-weight: 600;
-        backdrop-filter: blur(10px);
-        margin-bottom: 8px;
-      }
-
-      .credit-link {
-        font-size: 13px;
-        color: rgba(255, 255, 255, 0.9);
-        text-decoration: none;
-        transition: var(--transition);
-        display: block;
-      }
-
-      .credit-link:hover {
-        color: white;
-        transform: translateX(-4px);
-      }
-
-      /* MAIN LAYOUT */
-      .main-layout {
-        display: grid;
-        grid-template-columns: 440px 1fr;
-        height: calc(100vh - 200px);
-        min-height: 600px;
-      }
-
-      /* CONTROL PANEL */
-      .controls-panel {
-        background: var(--bg-light);
-        border-right: 1px solid var(--border-color);
-        overflow-y: auto;
-        padding: 28px;
-      }
-
-      .controls-panel::-webkit-scrollbar {
-        width: 10px;
-      }
-
-      .controls-panel::-webkit-scrollbar-track {
-        background: transparent;
-      }
-
-      .controls-panel::-webkit-scrollbar-thumb {
-        background: linear-gradient(180deg, #667eea, #764ba2);
-        border-radius: 10px;
-      }
-
-      .controls-panel::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(180deg, #5568d3, #6a3f8f);
-      }
-
-      .control-section {
-        background: white;
-        border-radius: var(--radius-md);
-        padding: 24px;
-        margin-bottom: 20px;
-        box-shadow: var(--shadow-sm);
-        border: 1px solid var(--border-color);
-        transition: var(--transition);
-      }
-
-      .control-section:hover {
-        box-shadow: var(--shadow-md);
-        transform: translateY(-2px);
-      }
-
-      .section-title {
-        font-size: 17px;
-        font-weight: 700;
-        color: var(--text-dark);
-        margin-bottom: 18px;
-        padding-bottom: 14px;
-        border-bottom: 3px solid transparent;
-        background: linear-gradient(to right, var(--primary-color), transparent)
-          bottom / 100% 3px no-repeat;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .section-title::before {
-        content: "";
-        width: 6px;
-        height: 24px;
-        background: var(--primary-gradient);
-        border-radius: 3px;
-        box-shadow: 0 0 12px rgba(102, 126, 234, 0.4);
-      }
-
-      .section-icon {
-        font-size: 20px;
-      }
-
-      /* FORM ELEMENTS */
-      .form-group {
-        margin-bottom: 18px;
-      }
-
-      label {
-        display: block;
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--text-medium);
-        margin-bottom: 8px;
-        letter-spacing: 0.3px;
-      }
-
-      input[type="text"],
-      input[type="date"],
-      select,
-      textarea {
-        width: 100%;
-        padding: 12px 16px;
-        border: 2px solid var(--border-color);
-        border-radius: var(--radius-sm);
-        font-size: 14px;
-        font-family: inherit;
-        color: var(--text-dark);
-        background: white;
-        transition: var(--transition);
-      }
-
-      input:focus,
-      select:focus,
-      textarea:focus {
-        outline: none;
-        border-color: var(--primary-color);
-        box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
-        transform: translateY(-1px);
-      }
-
-      input:hover,
-      select:hover,
-      textarea:hover {
-        border-color: #cbd5e0;
-      }
-
-      select {
-        cursor: pointer;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23667eea' d='M8 11L3 6h10z'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: right 12px center;
-        padding-right: 40px;
-        appearance: none;
-      }
-
-      textarea {
-        resize: vertical;
-        min-height: 90px;
-        line-height: 1.6;
-      }
-
-      /* CHECKBOX GRID */
-      .checkbox-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-
-      .checkbox-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 14px;
-        background: var(--bg-light);
-        border-radius: var(--radius-sm);
-        cursor: pointer;
-        transition: var(--transition);
-        border: 2px solid transparent;
-      }
-
-      .checkbox-item:hover {
-        background: #e6f0ff;
-        border-color: var(--primary-color);
-        transform: translateY(-2px);
-      }
-
-      .checkbox-item input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        accent-color: var(--primary-color);
-      }
-
-      .checkbox-item label {
-        margin: 0;
-        cursor: pointer;
-        font-size: 13px;
-        font-weight: 500;
-      }
-
-      /* COLLAPSIBLE SECTIONS */
-      .collapsible-section {
-        margin-bottom: 14px;
-      }
-
-      .collapsible-header {
-        background: var(--bg-light);
-        padding: 14px 18px;
-        border-radius: var(--radius-sm);
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: var(--transition);
-        border: 2px solid transparent;
-      }
-
-      .collapsible-header:hover {
-        background: #e6f0ff;
-        border-color: var(--primary-color);
-      }
-
-      .collapsible-header h3 {
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--text-dark);
-      }
-
-      .collapsible-icon {
-        transition: transform 0.3s;
-        color: var(--primary-color);
-        font-weight: bold;
-      }
-
-      .collapsible-header:hover .collapsible-icon {
-        transform: scale(1.2);
-      }
-
-      .collapsible-content {
-        padding: 18px;
-        border: 2px solid var(--border-color);
-        border-top: none;
-        border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-        background: white;
-      }
-
-      /* PREVIEW PANEL */
-      .preview-panel {
-        background: #e9ecef;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-      }
-
-      .preview-toolbar {
-        background: white;
-        padding: 20px 32px;
-        border-bottom: 1px solid var(--border-color);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: var(--shadow-sm);
-      }
-
-      .preview-toolbar h2 {
-        font-size: 20px;
-        font-weight: 700;
-        color: var(--text-dark);
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .toolbar-buttons {
-        display: flex;
-        gap: 12px;
-      }
-
-      button {
-        padding: 12px 24px;
-        border: none;
-        border-radius: var(--radius-sm);
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: var(--transition);
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      button::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.3);
-        transform: translate(-50%, -50%);
-        transition: width 0.6s, height 0.6s;
-      }
-
-      button:hover::before {
-        width: 300px;
-        height: 300px;
-      }
-
-      .btn-primary {
-        background: var(--primary-gradient);
-        color: white;
-        box-shadow: 0 4px 14px rgba(102, 126, 234, 0.4);
-      }
-
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
-      }
-
-      .btn-primary:active {
-        transform: translateY(0);
-      }
-
-      .btn-secondary {
-        background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
-        color: white;
-        box-shadow: 0 4px 14px rgba(108, 117, 125, 0.3);
-      }
-
-      .btn-secondary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
-      }
-
-      #preview-wrapper {
-        flex: 1;
-        overflow-y: auto;
-        padding: 32px;
-        display: flex;
-        justify-content: center;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      }
-
-      #preview {
-        width: 210mm;
-        min-height: 297mm;
-        background: white;
-        padding: 20mm;
-        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
-        border-radius: 4px;
-        animation: fadeIn 0.6s ease;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: scale(0.98);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-
-      /* STATUS BAR */
-      .status-bar {
-        background: white;
-        padding: 16px 32px;
-        border-top: 1px solid var(--border-color);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 13px;
-        color: var(--text-light);
-      }
-
-      .status-left {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .status-indicator {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-
-      .status-dot {
-        width: 8px;
-        height: 8px;
-        background: #10b981;
-        border-radius: 50%;
-        animation: pulse 2s infinite;
-      }
-
-      @keyframes pulse {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.5;
-        }
-      }
-
-      .credit-footer {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 12px;
-      }
-
-      .credit-footer a {
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: 600;
-        transition: var(--transition);
-      }
-
-      .credit-footer a:hover {
-        color: var(--primary-dark);
-        text-decoration: underline;
-      }
-
-      /* SUBSECTION */
-      .subsection-title {
-        font-size: 13px;
-        font-weight: 600;
-        color: var(--primary-color);
-        margin: 20px 0 12px;
-        padding-bottom: 8px;
-        border-bottom: 2px solid var(--border-color);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      /* RESPONSIVE */
-      @media (max-width: 1600px) {
-        .main-layout {
-          grid-template-columns: 400px 1fr;
-        }
-      }
-
-      @media (max-width: 1400px) {
-        .main-layout {
-          grid-template-columns: 360px 1fr;
-        }
-        .controls-panel {
-          padding: 20px;
-        }
-      }
-
-      @media (max-width: 1200px) {
-        .checkbox-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      /* TOOLTIPS */
-      [data-tooltip] {
-        position: relative;
-      }
-
-      [data-tooltip]:hover::after {
-        content: attr(data-tooltip);
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 6px 12px;
-        background: var(--text-dark);
-        color: white;
-        font-size: 12px;
-        border-radius: 6px;
-        white-space: nowrap;
-        z-index: 1000;
-        margin-bottom: 8px;
-      }
-
-      /* ===================================
-           PRINT STYLES - FIXED FOR DESKTOP
-           =================================== */
-      @media print {
-        /* Hide everything first */
-        body * {
-          visibility: hidden !important;
-        }
-
-        /* Show only preview and its children */
-        #preview,
-        #preview * {
-          visibility: visible !important;
-        }
-
-        /* Position preview for print */
-        #preview {
-          position: absolute !important;
-          left: 0 !important;
-          top: 0 !important;
-          width: 210mm !important;
-          min-height: 297mm !important;
-          margin: 0 !important;
-          padding: 20mm !important;
-          background: white !important;
-          box-shadow: none !important;
-          border-radius: 0 !important;
-          transform: none !important;
-          animation: none !important;
-        }
-
-        /* Remove wrapper backgrounds */
-        #preview-wrapper {
-          position: static !important;
-          background: white !important;
-          padding: 0 !important;
-        }
-
-        /* Page settings */
-        @page {
-          size: A4;
-          margin: 0;
-        }
-
-        /* Prevent page breaks in wrong places */
-        h1,
-        h2,
-        h3 {
-          page-break-after: avoid !important;
-        }
-
-        table,
-        ul,
-        ol {
-          page-break-inside: avoid !important;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="app-container">
-      <header class="app-header">
-        <div class="header-content">
-          <div class="header-left">
-            <h1>
-              <span class="logo-icon">📋</span>
-              SOP Document Generator
-            </h1>
-            <p>Create professional Standard Operating Procedures with ease</p>
-          </div>
-          <div class="header-right">
-            <span class="version-badge">Pharma</span>
-            <a
-              href="https://github.com/himshim/pharmacy-sop-docgen"
-              target="_blank"
-              class="credit-link"
-            >
-              Created by @himshim26
-            </a>
-          </div>
-        </div>
-      </header>
-
-      <div class="main-layout">
-        <aside class="controls-panel">
-          <div class="control-section">
-            <h2 class="section-title">
-              <span class="section-icon">🎯</span>
-              Department & SOP
-            </h2>
-            <div class="form-group">
-              <label for="departmentSelect">Select Department</label>
-              <select id="departmentSelect">
-                <option value="">Choose department...</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="sopSelect">Select SOP</label>
-              <select id="sopSelect" disabled>
-                <option value="">Choose SOP...</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="templateSelect">Template Style</label>
-              <select id="templateSelect">
-                <option value="sop-a4-classic.html">Classic Template</option>
-                <option value="sop-a4-iso.html">ISO Template</option>
-                <option value="sop-a4-naac.html">NAAC Template</option>
-                <option value="sop-a4-pci.html">PCI Template</option>
-              </select>
-            </div>
-          </div>
-
-          <div
-            class="control-section"
-            id="sectionDocControl"
-            style="display: none"
-          >
-            <h2 class="section-title">
-              <span class="section-icon">📄</span>
-              Document Information
-            </h2>
-            <div class="form-group">
-              <label for="institute">Institute Name</label>
-              <input
-                type="text"
-                id="institute"
-                placeholder="Enter institute name"
-              />
-            </div>
-            <div class="form-group">
-              <label for="department">Department</label>
-              <input
-                type="text"
-                id="department"
-                placeholder="Enter department"
-              />
-            </div>
-            <div class="form-group">
-              <label for="title">Document Title</label>
-              <input type="text" id="title" placeholder="Enter SOP title" />
-            </div>
-            <div class="form-group">
-              <label for="sopNumber">SOP Number</label>
-              <input type="text" id="sopNumber" placeholder="e.g., SOP-001" />
-            </div>
-            <div class="form-group">
-              <label for="revisionNo">Revision Number</label>
-              <input type="text" id="revisionNo" placeholder="00" />
-            </div>
-            <div class="form-group">
-              <label for="effectiveDate">Effective Date</label>
-              <input type="date" id="effectiveDate" />
-            </div>
-            <div class="form-group">
-              <label for="revisionDate">Revision Date</label>
-              <input type="date" id="revisionDate" />
-            </div>
-            <div class="form-group">
-              <label for="nextReviewDate">Next Review Date</label>
-              <input type="date" id="nextReviewDate" />
-            </div>
-            <div class="form-group">
-              <label for="copyType">Copy Type</label>
-              <select id="copyType">
-                <option value="CONTROLLED">Controlled Copy</option>
-                <option value="UNCONTROLLED">Uncontrolled Copy</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="control-section">
-            <h2 class="section-title">
-              <span class="section-icon">✏️</span>
-              Content Sections
-            </h2>
-
-            <div class="collapsible-section">
-              <div class="collapsible-header">
-                <h3>Purpose</h3>
-                <span class="collapsible-icon">▼</span>
-              </div>
-              <div class="collapsible-content">
-                <textarea
-                  id="purpose"
-                  placeholder="Describe the purpose of this SOP..."
-                ></textarea>
-              </div>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/ui-desktop.css">
+    <link rel="stylesheet" href="../css/print-a4.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 style="font-size: 1.5rem; color: #667eea; margin-bottom: 8px;">📋 SOP Generator</h1>
+                <p style="font-size: 0.875rem; color: #666;">Professional Document Creator</p>
             </div>
 
-            <div class="collapsible-section">
-              <div class="collapsible-header">
-                <h3>Scope</h3>
-                <span class="collapsible-icon">▼</span>
-              </div>
-              <div class="collapsible-content">
-                <textarea
-                  id="scope"
-                  placeholder="Define the scope and applicability..."
-                ></textarea>
-              </div>
+            <div class="sidebar-content">
+                <!-- Department Selection -->
+                <div class="form-section">
+                    <label for="departmentSelect" class="form-label">Department</label>
+                    <select id="departmentSelect" class="form-select" aria-label="Select Department">
+                        <option value="">-- Loading... --</option>
+                    </select>
+                </div>
+
+                <!-- SOP Selection -->
+                <div class="form-section">
+                    <label for="sopSelect" class="form-label">Select SOP</label>
+                    <select id="sopSelect" class="form-select" disabled aria-label="Select SOP">
+                        <option value="">-- Select Department First --</option>
+                    </select>
+                </div>
+
+                <!-- Template Selection -->
+                <div class="form-section">
+                    <label for="templateSelect" class="form-label">Template</label>
+                    <select id="templateSelect" class="form-select" aria-label="Select Template">
+                        <option value="sop-a4-classic.html">Classic</option>
+                        <option value="sop-a4-iso.html">ISO Format</option>
+                        <option value="sop-a4-pci.html">PCI Compliant</option>
+                        <option value="sop-a4-naac.html">NAAC Format</option>
+                    </select>
+                </div>
+
+                <!-- Institute Info -->
+                <div class="form-section">
+                    <label for="institute" class="form-label">Institute Name</label>
+                    <input type="text" id="institute" class="form-input" placeholder="Enter institute name" aria-label="Institute Name">
+                </div>
+
+                <div class="form-section">
+                    <label for="department" class="form-label">Department Name</label>
+                    <input type="text" id="department" class="form-input" placeholder="e.g., Quality Assurance" aria-label="Department Name">
+                </div>
+
+                <div class="form-section">
+                    <label for="title" class="form-label">SOP Title</label>
+                    <input type="text" id="title" class="form-input" placeholder="Enter SOP title" aria-label="SOP Title">
+                </div>
+
+                <!-- Document Control Section -->
+                <div class="form-section" id="sectionDocControl">
+                    <h3 class="section-title">Document Control</h3>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="toggleSopNumber" checked>
+                            <span>Show SOP Number</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="toggleEffectiveDate" checked>
+                            <span>Show Effective Date</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="toggleRevisionDate" checked>
+                            <span>Show Revision Date</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="toggleCopyType" checked>
+                            <span>Show Copy Type</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sopNumber">SOP Number</label>
+                        <input type="text" id="sopNumber" placeholder="e.g., QA/SOP/001">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="revisionNo">Revision No.</label>
+                        <input type="text" id="revisionNo" value="00" placeholder="00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="effectiveDate">Effective Date</label>
+                        <input type="date" id="effectiveDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="revisionDate">Revision Date</label>
+                        <input type="date" id="revisionDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nextReviewDate">Next Review Date</label>
+                        <input type="date" id="nextReviewDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="copyType">Copy Type</label>
+                        <select id="copyType">
+                            <option value="CONTROLLED">Controlled</option>
+                            <option value="UNCONTROLLED">Uncontrolled</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Optional Sections -->
+                <div class="form-section">
+                    <h3 class="section-title">Optional Sections</h3>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="toggleDocControl" checked>
+                            <span>Document Control</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="toggleApplicability">
+                            <span>Applicability</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="toggleAbbreviations">
+                            <span>Abbreviations</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="toggleReferences">
+                            <span>References</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="toggleAnnexures">
+                            <span>Annexures</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="toggleChangeHistory">
+                            <span>Change History</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="form-section">
+                    <h3 class="section-title">Purpose</h3>
+                    <textarea id="purpose" rows="3" placeholder="Enter purpose of this SOP..."></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="section-title">Scope</h3>
+                    <textarea id="scope" rows="3" placeholder="Define scope..."></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="section-title">Responsibility</h3>
+                    <textarea id="responsibility" rows="3" placeholder="Who is responsible?"></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="section-title">Procedure</h3>
+                    <textarea id="procedure" rows="8" placeholder="Enter procedure steps (one per line)..."></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="section-title">Precautions</h3>
+                    <textarea id="precautions" rows="4" placeholder="Safety precautions and notes..."></textarea>
+                </div>
+
+                <!-- Optional Fields -->
+                <div class="form-section" id="sectionApplicability" style="display: none;">
+                    <h3 class="section-title">Applicability</h3>
+                    <textarea id="applicability" rows="3" placeholder="Where this SOP applies..."></textarea>
+                </div>
+
+                <div class="form-section" id="sectionAbbreviations" style="display: none;">
+                    <h3 class="section-title">Abbreviations</h3>
+                    <textarea id="abbreviations" rows="4" placeholder="List abbreviations..."></textarea>
+                </div>
+
+                <div class="form-section" id="sectionReferences" style="display: none;">
+                    <h3 class="section-title">References</h3>
+                    <textarea id="references" rows="4" placeholder="Reference documents..."></textarea>
+                </div>
+
+                <div class="form-section" id="sectionAnnexures" style="display: none;">
+                    <h3 class="section-title">Annexures</h3>
+                    <textarea id="annexures" rows="4" placeholder="Annexure details..."></textarea>
+                </div>
+
+                <div class="form-section" id="sectionChangeHistory" style="display: none;">
+                    <h3 class="section-title">Change History</h3>
+                    <textarea id="changeHistoryInput" rows="4" placeholder="Format: Rev No | Date | Changes | Prepared By (one per line, separated by |)"></textarea>
+                </div>
+
+                <!-- Signatures -->
+                <div class="form-section">
+                    <h3 class="section-title">Signatures</h3>
+
+                    <div class="signature-group">
+                        <h4>Prepared By</h4>
+                        <input type="text" id="preparedBy" placeholder="Name">
+                        <input type="text" id="preparedDesig" placeholder="Designation">
+                        <input type="date" id="preparedDate">
+                    </div>
+
+                    <div class="signature-group">
+                        <h4>Checked By</h4>
+                        <input type="text" id="checkedBy" placeholder="Name">
+                        <input type="text" id="checkedDesig" placeholder="Designation">
+                        <input type="date" id="checkedDate">
+                    </div>
+
+                    <div class="signature-group">
+                        <h4>Approved By</h4>
+                        <input type="text" id="approvedBy" placeholder="Name">
+                        <input type="text" id="approvedDesig" placeholder="Designation">
+                        <input type="date" id="approvedDate">
+                    </div>
+                </div>
             </div>
 
-            <div class="collapsible-section">
-              <div class="collapsible-header">
-                <h3>Responsibility</h3>
-                <span class="collapsible-icon">▼</span>
-              </div>
-              <div class="collapsible-content">
-                <textarea
-                  id="responsibility"
-                  placeholder="List responsible personnel and their roles..."
-                ></textarea>
-              </div>
+            <div class="sidebar-footer">
+                <p style="font-size: 0.75rem; color: #999; text-align: center;">
+                    Developed by <a href="https://github.com/himshim26" target="_blank" style="color: #667eea;">@himshim26</a>
+                </p>
             </div>
-
-            <div class="collapsible-section">
-              <div class="collapsible-header">
-                <h3>Procedure</h3>
-                <span class="collapsible-icon">▼</span>
-              </div>
-              <div class="collapsible-content">
-                <textarea
-                  id="procedure"
-                  placeholder="Enter procedure steps (one per line)..."
-                ></textarea>
-              </div>
-            </div>
-
-            <div class="collapsible-section">
-              <div class="collapsible-header">
-                <h3>Precautions & Safety</h3>
-                <span class="collapsible-icon">▼</span>
-              </div>
-              <div class="collapsible-content">
-                <textarea
-                  id="precautions"
-                  placeholder="List safety precautions and warnings..."
-                ></textarea>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="control-section"
-            id="sectionApplicability"
-            style="display: none"
-          >
-            <h2 class="section-title">
-              <span class="section-icon">🎯</span>
-              Applicability
-            </h2>
-            <textarea
-              id="applicability"
-              placeholder="Define where this SOP applies..."
-            ></textarea>
-          </div>
-
-          <div
-            class="control-section"
-            id="sectionAbbreviations"
-            style="display: none"
-          >
-            <h2 class="section-title">
-              <span class="section-icon">📝</span>
-              Abbreviations
-            </h2>
-            <textarea
-              id="abbreviations"
-              placeholder="List abbreviations used..."
-            ></textarea>
-          </div>
-
-          <div
-            class="control-section"
-            id="sectionReferences"
-            style="display: none"
-          >
-            <h2 class="section-title">
-              <span class="section-icon">📚</span>
-              References
-            </h2>
-            <textarea
-              id="references"
-              placeholder="List reference documents..."
-            ></textarea>
-          </div>
-
-          <div
-            class="control-section"
-            id="sectionAnnexures"
-            style="display: none"
-          >
-            <h2 class="section-title">
-              <span class="section-icon">📎</span>
-              Annexures
-            </h2>
-            <textarea
-              id="annexures"
-              placeholder="List annexures and attachments..."
-            ></textarea>
-          </div>
-
-          <div
-            class="control-section"
-            id="sectionChangeHistory"
-            style="display: none"
-          >
-            <h2 class="section-title">
-              <span class="section-icon">📊</span>
-              Change History
-            </h2>
-            <textarea
-              id="changeHistoryInput"
-              placeholder="Format: Version|Date|Changes|Approved By (one per line)"
-            ></textarea>
-          </div>
-
-          <div class="control-section">
-            <h2 class="section-title">
-              <span class="section-icon">👁️</span>
-              Section Visibility
-            </h2>
-            <div class="checkbox-grid">
-              <div class="checkbox-item">
-                <input type="checkbox" id="toggleDocControl" checked />
-                <label for="toggleDocControl">Document Control</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="toggleApplicability" />
-                <label for="toggleApplicability">Applicability</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="toggleAbbreviations" />
-                <label for="toggleAbbreviations">Abbreviations</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="toggleReferences" />
-                <label for="toggleReferences">References</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="toggleAnnexures" />
-                <label for="toggleAnnexures">Annexures</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="toggleChangeHistory" />
-                <label for="toggleChangeHistory">Change History</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="control-section">
-            <h2 class="section-title">
-              <span class="section-icon">⚙️</span>
-              Field Visibility
-            </h2>
-            <div class="checkbox-grid">
-              <div class="checkbox-item">
-                <input type="checkbox" id="toggleSopNumber" checked />
-                <label for="toggleSopNumber">SOP Number</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="toggleEffectiveDate" checked />
-                <label for="toggleEffectiveDate">Effective Date</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="toggleRevisionDate" checked />
-                <label for="toggleRevisionDate">Revision Date</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="toggleCopyType" checked />
-                <label for="toggleCopyType">Copy Type</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="control-section">
-            <h2 class="section-title">
-              <span class="section-icon">✅</span>
-              Approval Information
-            </h2>
-
-            <div class="subsection-title">Prepared By</div>
-            <div class="form-group">
-              <label for="preparedBy">Name</label>
-              <input type="text" id="preparedBy" placeholder="Full name" />
-            </div>
-            <div class="form-group">
-              <label for="preparedDesig">Designation</label>
-              <input type="text" id="preparedDesig" placeholder="Job title" />
-            </div>
-            <div class="form-group">
-              <label for="preparedDate">Date</label>
-              <input type="date" id="preparedDate" />
-            </div>
-
-            <div class="subsection-title">Checked By</div>
-            <div class="form-group">
-              <label for="checkedBy">Name</label>
-              <input type="text" id="checkedBy" placeholder="Full name" />
-            </div>
-            <div class="form-group">
-              <label for="checkedDesig">Designation</label>
-              <input type="text" id="checkedDesig" placeholder="Job title" />
-            </div>
-            <div class="form-group">
-              <label for="checkedDate">Date</label>
-              <input type="date" id="checkedDate" />
-            </div>
-
-            <div class="subsection-title">Approved By</div>
-            <div class="form-group">
-              <label for="approvedBy">Name</label>
-              <input type="text" id="approvedBy" placeholder="Full name" />
-            </div>
-            <div class="form-group">
-              <label for="approvedDesig">Designation</label>
-              <input type="text" id="approvedDesig" placeholder="Job title" />
-            </div>
-            <div class="form-group">
-              <label for="approvedDate">Date</label>
-              <input type="date" id="approvedDate" />
-            </div>
-          </div>
         </aside>
 
-        <main class="preview-panel">
-          <div class="preview-toolbar">
-            <h2>
-              <span>📄</span>
-              Document Preview
-            </h2>
-            <div class="toolbar-buttons">
-              <button
-                class="btn-secondary"
-                onclick="window.print()"
-                data-tooltip="Print Document"
-              >
-                🖨️ Print
-              </button>
-              <button
-                class="btn-primary"
-                onclick="window.print()"
-                data-tooltip="Save as PDF"
-              >
-                💾 Save as PDF
-              </button>
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Action Bar -->
+            <div class="action-bar no-print">
+                <h2 style="font-size: 1.25rem; color: #333;">Document Preview</h2>
+                <div class="action-buttons">
+                    <button class="btn btn-primary print-btn" aria-label="Print Document">
+                        🖨️ Print
+                    </button>
+                    <button class="btn btn-secondary" onclick="window.print()" aria-label="Save as PDF">
+                        💾 Save as PDF
+                    </button>
+                </div>
             </div>
-          </div>
-          <div id="preview-wrapper">
-            <div id="preview">
-                <div id="preview-content"> 
-              <p
-                style="
-                  text-align: center;
-                  color: #999;
-                  margin-top: 100px;
-                  font-size: 16px;
-                "
-              >
-                📂 Select a department and SOP to begin...
-              </p>
-               </div>
-            </div>
-          </div>
-        </main>
-      </div>
 
-      <footer class="status-bar">
-        <div class="status-left">
-          <div class="status-indicator">
-            <span class="status-dot"></span>
-            <span>Ready</span>
-          </div>
-          <span>SOP Generator</span>
-        </div>
-        <div class="credit-footer">
-          <span>Developed by</span>
-          <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
-          <span>•</span>
-          <a
-            href="https://github.com/himshim/pharmacy-sop-docgen"
-            target="_blank"
-            >View Source</a
-          >
-        </div>
-      </footer>
+            <!-- Preview Area - FIXED with A4 Aspect Ratio -->
+            <div class="preview-wrapper">
+                <div id="preview-wrapper">
+                    <div id="preview">
+                        <div id="preview-content">
+                            <div style="text-align: center; padding: 100px 20px; color: #999;">
+                                <div style="font-size: 48px; margin-bottom: 20px;">📂</div>
+                                <h3 style="color: #666; margin-bottom: 12px;">Select a department and SOP to begin</h3>
+                                <p style="font-size: 14px;">Choose from the sidebar to generate your professional SOP document</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-  </body>
+
+    <style>
+        /* Desktop Layout Styles */
+        .layout {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            border-right: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            background: white;
+        }
+
+        .sidebar-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .sidebar-footer {
+            padding: 16px;
+            border-top: 1px solid #e0e0e0;
+            background: white;
+        }
+
+        .form-section {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 6px;
+        }
+
+        .form-select,
+        .form-input,
+        textarea,
+        select,
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-select:focus,
+        .form-input:focus,
+        textarea:focus,
+        select:focus,
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            font-size: 0.875rem;
+            cursor: pointer;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            margin-right: 8px;
+            width: auto;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 4px;
+        }
+
+        .signature-group {
+            margin-bottom: 16px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+
+        .signature-group h4 {
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+            color: #667eea;
+        }
+
+        .signature-group input {
+            margin-bottom: 8px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .action-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            border-bottom: 1px solid #e0e0e0;
+            background: white;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .preview-wrapper {
+            flex: 1;
+            overflow: auto;
+            padding: 24px;
+            background: #f5f5f5;
+        }
+
+        #preview-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 🎯 A4 ASPECT RATIO IMPLEMENTATION */
+        #preview {
+            aspect-ratio: 210 / 297;  /* ⭐ Maintains perfect A4 proportions */
+            max-width: 210mm;
+            width: 100%;
+            background: white;
+            padding: 20mm;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Times New Roman', serif;
+            overflow-y: auto;  /* Allow scrolling within preview if content overflows */
+        }
+
+        @media (max-width: 1200px) {
+            .layout {
+                grid-template-columns: 300px 1fr;
+            }
+        }
+    </style>
+</body>
 </html>
