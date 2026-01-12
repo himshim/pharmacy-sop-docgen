@@ -1,183 +1,171 @@
-/* =========================
-   TYPOGRAPHY (A4)
-   ========================= */
-h1 {
-    font-size: 16pt;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
+/* ═══════════════════════════════════════════════════════════════════
+   A4 PRINT STYLES - FIXED VERSION
+   Ensures proper printing on all devices
+   ═══════════════════════════════════════════════════════════════ */
 
-h2 {
-    font-size: 12pt;
-    margin-top: 16px;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-p, li, td, th {
-    font-size: 11pt;
-    line-height: 1.5;
-}
-
-/* =========================
-   TABLES
-   ========================= */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 12px;
-    page-break-inside: auto;
-}
-
-tr {
-    page-break-inside: avoid;
-    page-break-after: auto;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 6px;
-    text-align: left;
-}
-
-th {
-    background-color: #f0f0f0;
-    font-weight: 600;
-}
-
-/* =========================
-   SCREEN PREVIEW
-   ========================= */
-#preview-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: auto;
-    max-height: 90vh;
-    padding-bottom: 20px;
-}
-
-#preview {
-    width: 210mm;
-    min-height: 297mm;
-    background: white;
-    padding: 20mm;
-    box-sizing: border-box;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    font-family: 'Times New Roman', serif;
-}
-
-/* Visual scaling (screen only) */
-@media screen and (max-width: 900px) {
-    #preview {
-        transform: scale(0.7);
-        transform-origin: top center;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #preview {
-        transform: scale(0.5);
-        transform-origin: top center;
-    }
-}
-
-/* =========================
-   PRINT MODE
-   ========================= */
 @media print {
-    body * {
-        visibility: hidden;
+    /* ═══ HIDE ALL UI ELEMENTS ═══ */
+    .sidebar,
+    .action-bar,
+    .action-buttons,
+    .preview-actions,
+    .mobile-header,
+    .tab-navigation,
+    .no-print,
+    button,
+    .btn,
+    .print-btn {
+        display: none !important;
     }
 
-    #preview-wrapper,
-    #preview,
-    #preview * {
-        visibility: visible;
+    /* ═══ RESET PAGE STRUCTURE ═══ */
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
     }
 
-    #preview-wrapper {
-        position: absolute;
-        inset: 0;
-        overflow: visible;
+    html, body {
+        width: 210mm !important;
+        height: 297mm !important;
+        overflow: visible !important;
     }
 
-    #preview {
-        width: 210mm;
-        min-height: 297mm;
-        padding: 20mm;
-        box-shadow: none;
-        transform: none !important;
-        page-break-after: auto;
-    }
-
+    /* ═══ FORCE A4 PAGE SIZE ═══ */
     @page {
-        size: A4;
+        size: A4 portrait;
         margin: 0;
     }
 
-    h1, h2, h3 {
-        page-break-after: avoid;
+    /* ═══ SHOW ONLY PREVIEW CONTENT ═══ */
+    .layout,
+    .main-content,
+    .preview-wrapper,
+    #preview-wrapper,
+    .mobile-container,
+    .tab-container,
+    .tab-panel,
+    .preview-container,
+    .preview-scroll {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: white !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: visible !important;
     }
 
-    ul, ol {
+    /* ═══ CRITICAL: SHOW PREVIEW WITH PROPER STYLING ═══ */
+    #preview,
+    #preview-content,
+    .preview-content {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        /* A4 Dimensions */
+        width: 210mm !important;
+        max-width: 210mm !important;
+        min-height: 297mm !important;
+
+        /* Proper margins (20mm on all sides) */
+        padding: 20mm !important;
+        margin: 0 !important;
+
+        /* Reset aspect ratio for print */
+        aspect-ratio: unset !important;
+
+        /* Background and borders */
+        background: white !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+
+        /* Typography */
+        font-family: 'Times New Roman', Times, serif !important;
+        font-size: 12pt !important;
+        line-height: 1.6 !important;
+        color: #000 !important;
+
+        /* Ensure content is visible */
+        overflow: visible !important;
+    }
+
+    /* ═══ PAGE BREAKS ═══ */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
         page-break-inside: avoid;
     }
-}
 
-/* =========================
-   MOBILE OPTIMIZATION
-   ========================= */
-@media screen and (max-width: 900px) {
-    .layout {
-        grid-template-columns: 1fr;
+    table, figure, img {
+        page-break-inside: avoid;
     }
 
-    .editor-panel {
-        max-height: none;
+    p, li {
+        orphans: 3;
+        widows: 3;
     }
 
-    #preview-wrapper {
-        margin-top: 20px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-
-    .app-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .top-controls {
-        padding: 10px;
-    }
-
-    .checkbox-group {
-        grid-template-columns: 1fr;
-    }
-
-    label {
-        font-size: 14px;
-    }
-
-    input, textarea, select {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    button {
+    /* ═══ PRINT-SPECIFIC FORMATTING ═══ */
+    table {
         width: 100%;
-        font-size: 15px;
-        padding: 10px;
+        border-collapse: collapse;
+        margin: 10pt 0;
     }
 
+    th, td {
+        border: 1px solid #000;
+        padding: 8pt;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f0f0f0 !important;
+        font-weight: bold;
+    }
+
+    /* Lists */
+    ul, ol {
+        margin: 10pt 0;
+        padding-left: 20pt;
+    }
+
+    li {
+        margin: 4pt 0;
+    }
+
+    /* Headers */
+    h1 { font-size: 18pt; margin: 12pt 0 8pt 0; }
+    h2 { font-size: 16pt; margin: 10pt 0 6pt 0; }
+    h3 { font-size: 14pt; margin: 8pt 0 4pt 0; }
+    h4 { font-size: 12pt; margin: 6pt 0 3pt 0; }
+
+    /* Links */
+    a {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+
+    /* Remove screen-only decorations */
+    .no-print,
+    [class*="button"],
+    [class*="action"],
+    [class*="control"] {
+        display: none !important;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SCREEN STYLES (Preview only - not for print)
+   ═══════════════════════════════════════════════════════════════ */
+
+@media screen {
+    /* These styles apply only on screen, not in print */
     #preview {
-        transform: scale(0.85);
-        transform-origin: top center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
     }
 }

@@ -213,7 +213,7 @@
                 </div>
             </div>
 
-            <!-- PREVIEW TAB - With A4 Aspect Ratio -->
+            <!-- PREVIEW TAB - FIXED MARGINS -->
             <div class="tab-panel" id="tab-preview">
                 <div class="preview-container">
                     <div class="preview-actions no-print">
@@ -307,7 +307,7 @@
                     <div class="card">
                         <h2 class="card-title">ℹ️ About</h2>
                         <p style="font-size: 0.875rem; color: #666; line-height: 1.6; margin-bottom: 12px;">
-                            SOP Generator v2.0 - Professional document creator for pharmacy education
+                            SOP Generator v2.1 - Professional document creator for pharmacy education
                         </p>
                         <p style="font-size: 0.875rem; color: #999;">
                             Developed by <a href="https://github.com/himshim26" target="_blank" style="color: #667eea; text-decoration: none;">@himshim26</a>
@@ -528,18 +528,26 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        /* 🎯 A4 ASPECT RATIO IMPLEMENTATION FOR MOBILE */
+        /* 🎯 FIXED: Mobile Preview with Correct Margins */
         #preview {
-            aspect-ratio: 210 / 297;  /* ⭐ Perfect A4 proportions */
+            aspect-ratio: 210 / 297;  /* A4 proportions */
             width: 100%;
             max-width: 100%;
             background: white;
-            padding: 16px;  /* Smaller padding for mobile */
+
+            /* 🔧 FIX: Use same padding as desktop (20mm converted to pixels) */
+            /* 20mm ≈ 75.6px at 96 DPI, rounded to 76px for simplicity */
+            padding: 76px;  /* Same as desktop 20mm! */
+
             min-height: 400px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             overflow-y: auto;
-            font-size: 0.875rem;  /* Slightly smaller text for mobile readability */
+
+            /* Text sizing for readability */
+            font-size: 11px;  /* Scaled down proportionally */
+            line-height: 1.5;
+            font-family: 'Times New Roman', serif;
         }
 
         .btn {
@@ -579,21 +587,21 @@
             }
 
             #preview {
-                padding: 20px;  /* More padding on larger screens */
-                font-size: 1rem;
+                padding: 80px;  /* Slightly larger on tablets */
+                font-size: 12px;
             }
         }
 
         /* Very small phones */
         @media (max-width: 360px) {
             #preview {
-                padding: 12px;
-                font-size: 0.75rem;
+                padding: 60px;  /* Proportionally smaller but still consistent ratio */
+                font-size: 10px;
             }
         }
     </style>
 
-    <!-- Mobile Tab Switching Script - CRITICAL FIX -->
+    <!-- Mobile Tab Switching Script -->
     <script>
     (function() {
         'use strict';
