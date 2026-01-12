@@ -700,3 +700,5 @@ To use this feature, add these scripts to your index.html <head>:
         CoreModule.init();
     }
 };
+// Call the initialization function
+window.initSOPApp();
