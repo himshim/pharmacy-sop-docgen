@@ -1,192 +1,248 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- * NUCLEAR OPTION: White Background Height Fix
- * This overrides EVERYTHING with maximum CSS specificity
+ * MS WORD A4 WYSIWYG PRINT STYLES - FINAL VALIDATED
+ * Matches Microsoft Word's default A4 layout (210mm x 297mm)
+ * Fixed: CSS Syntax Errors, Mobile Zoom, Desktop Blank Pages
  * ═══════════════════════════════════════════════════════════════════
  */
 
-/* ==================== PREVIEW WRAPPER ==================== */
-#preview-wrapper,
-div#preview-wrapper,
-div.preview-panel #preview-wrapper {
-    background: #525659 !important;
-    padding: 40px 20px !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    height: 100% !important;
-    max-height: calc(100vh - 200px) !important;
+/* ============ 1. PAGE SETUP ============ */
+@page {
+    size: A4 portrait;
+    margin: 20mm;
 }
 
-#preview-wrapper::-webkit-scrollbar {
-    width: 12px;
-    background: #3e3e42;
+/* ============ 2. PAGE BREAKS ============ */
+.page-break-before {
+    page-break-before: always !important;
+    break-before: page !important;
+    display: block;
+    height: 1px;
+    margin: 0;
+}
+.page-break-after {
+    page-break-after: always !important;
+    break-after: page !important;
 }
 
-#preview-wrapper::-webkit-scrollbar-thumb {
-    background: #686868;
-    border-radius: 6px;
+/* ============ 3. DESKTOP PREVIEW ============ */
+#preview-wrapper {
+    background: #525659;
+    padding: 30px 0;
+    overflow-y: auto;
+    height: 100vh;
+    display: block;
+    text-align: center;
 }
 
-/* ==================== PREVIEW CONTAINER - NUCLEAR FIX! ==================== */
-#preview,
-div#preview,
-#preview-wrapper #preview,
-#preview-wrapper > #preview,
-.preview-panel #preview {
-    /* Width */
+#preview {
     width: 210mm !important;
-    max-width: 210mm !important;
-    min-width: 210mm !important;
-
-    /* HEIGHT - ABSOLUTE OVERRIDE */
+    min-height: 297mm !important;
     height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-
-    /* White background */
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    color: #000000 !important;
-
-    /* Positioning */
-    margin: 0 auto 40px auto !important;
+    margin: 0 auto 40px auto;
     padding: 20mm !important;
-
-    /* Visual */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important;
-
-    /* Display */
-    display: block !important;
-    position: relative !important;
-
-    /* Box model */
-    box-sizing: border-box !important;
-
-    /* Typography */
-    font-family: 'Times New Roman', Times, serif !important;
-    font-size: 11pt !important;
-    line-height: 1.6 !important;
-}
-
-/* Also target any nested divs */
-#preview > *,
-#preview-content,
-#preview > div,
-#preview > div > *,
-div#preview > * {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-}
-
-/* Make absolutely sure preview expands */
-#preview::before {
-    content: '';
-    display: block;
-    height: 0;
-    clear: both;
-}
-
-#preview::after {
-    content: '';
-    display: block;
-    height: 0;
-    clear: both;
-}
-
-/* ==================== PAGE BREAK INDICATORS ==================== */
-.page-break-indicator {
+    background: white !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    text-align: left;
+    display: inline-block;
     position: relative;
-    height: 1px;
-    margin: 30mm 0;
-    background: transparent;
+    box-sizing: border-box;
+    
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    color: #000 !important;
 }
 
-.page-break-indicator::before {
-    content: '--- Page Break ---';
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    color: #999;
-    font-size: 9pt;
-    font-family: Arial, sans-serif;
-    padding: 0 10px;
-    white-space: nowrap;
+/* ============ 4. MOBILE PREVIEW (Readable Zoom) ============ */
+@media screen and (max-width: 850px) {
+    #preview-wrapper {
+        padding: 10px 0 !important;
+        overflow-x: hidden !important;
+        background: #e0e0e5 !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        height: auto !important;
+        min-height: 100vh !important;
+    }
+
+    #preview {
+        /* Keep A4 Size but Scale Down */
+        width: 210mm !important;
+        min-width: 210mm !important;
+        
+        /* 
+           STANDARD TRANSFORM 
+           (Replaced -moz- specific properties with standard ones)
+        */
+        transform: scale(0.45);
+        transform-origin: top center;
+        
+        margin: 0 !important;
+        /* Negative margin to pull footer up since element shrunk */
+        margin-bottom: -150px !important; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    }
 }
 
-.page-break-indicator::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent 0%, #ccc 20%, #ccc 80%, transparent 100%);
-}
-
-/* ==================== TYPOGRAPHY ==================== */
-#preview h1 { font-size: 18pt !important; font-weight: bold !important; margin: 0 0 16pt 0 !important; text-align: center !important; color: #000 !important; text-transform: uppercase !important; }
-#preview h2 { font-size: 13pt !important; font-weight: bold !important; margin: 16pt 0 10pt 0 !important; color: #000 !important; border-bottom: 1.5pt solid #333 !important; padding-bottom: 4pt !important; }
-#preview h3 { font-size: 12pt !important; font-weight: bold !important; margin: 12pt 0 8pt 0 !important; color: #000 !important; }
-#preview p { margin: 0 0 10pt 0 !important; text-align: justify !important; color: #000 !important; }
-#preview strong, #preview b { font-weight: bold !important; color: #000 !important; }
-
-/* ==================== LISTS ==================== */
-#preview ol, #preview ul { margin: 10pt 0 !important; padding-left: 30pt !important; color: #000 !important; }
-#preview li { margin: 6pt 0 !important; color: #000 !important; }
-
-/* ==================== TABLES ==================== */
-#preview table { width: 100% !important; border-collapse: collapse !important; margin: 14pt 0 !important; background: #fff !important; }
-#preview th, #preview td { border: 1pt solid #333 !important; padding: 8pt 10pt !important; color: #000 !important; }
-#preview th { background-color: #f0f0f0 !important; font-weight: bold !important; text-align: center !important; }
-
-/* ==================== SECTIONS ==================== */
-#preview .section { margin: 16pt 0 !important; }
-#preview .section-title { background: #f0f0f0 !important; padding: 6pt 10pt !important; border-left: 4pt solid #333 !important; color: #000 !important; }
-
-/* ==================== PRINT ==================== */
+/* ============ 5. PRINT MODE (Layout Unlock) ============ */
 @media print {
-    body { margin: 0 !important; padding: 0 !important; background: white !important; }
-    .sidebar, .controls-panel, button, nav, input, textarea { display: none !important; }
-    #preview-wrapper { background: white !important; padding: 0 !important; overflow: visible !important; height: auto !important; max-height: none !important; }
-    #preview { box-shadow: none !important; margin: 0 !important; padding: 0 !important; width: 100% !important; max-width: none !important; }
-    .page-break-indicator { display: none !important; }
-    @page { size: A4; margin: 20mm; }
+    /* RESET EVERYTHING */
+    :root, html, body {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        background: white !important;
+        display: block !important;
+    }
+
+    /* HIDE UI COMPONENTS (NOT app-container!) */
+    .app-header, .controls-panel, .status-bar, 
+    .toolbar-buttons, .preview-toolbar,
+    .mobile-header, .tab-navigation,
+    .page-break-indicator, .tab-panel:not(#tab-preview),
+    header, nav, footer, aside {
+        display: none !important;
+    }
+
+    /* Keep main structure visible */
+    .app-container,
+    .main-layout,
+    .preview-panel {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: white !important;
+    }
+
+    /* UNWRAP CONTENT */
+    #preview-wrapper {
+        position: static !important;
+        display: block !important;
+        overflow: visible !important;
+        height: auto !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+    }
+
+    /* PAGE CONTENT */
+    #preview {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important; /* Margins handled by @page */
+        position: static !important;
+        display: block !important;
+        visibility: visible !important;
+        overflow: visible !important;
+        
+        /* Reset Effects */
+        transform: none !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* Ensure Print Colors */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
 }
 
-/* ==================== PDF MODE ==================== */
-.pdf-rendering #preview-wrapper { background: transparent !important; padding: 0 !important; overflow: visible !important; }
-.pdf-rendering #preview { box-shadow: none !important; margin: 0 !important; }
-.pdf-rendering .page-break-indicator { display: none !important; }
+/* ============ 6. JS PRINT HELPER ============ */
+body.printing-mode .app-container,
+body.printing-mode header,
+body.printing-mode nav,
+body.printing-mode aside { display: none !important; }
 
-/* ==================== DARK MODE ==================== */
-[data-theme="dark"] #preview,
-.dark-mode #preview,
-body.dark #preview {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    color: #000000 !important;
+body.printing-mode #preview-wrapper {
+    position: static !important;
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+/* ════════════════════════════════════════════════════════════════
+   PROFESSIONAL ENHANCEMENTS - Auto-Numbering & Typography
+   ════════════════════════════════════════════════════════════════ */
+
+/* Counter Setup */
+#preview {
+    counter-reset: section;
 }
 
-[data-theme="dark"] #preview *,
-.dark-mode #preview *,
-body.dark #preview * {
-    color: #000000 !important;
+/* Auto-Number Main Sections (Only visible ones!) */
+#preview h2 {
+    counter-increment: section;
 }
 
-[data-theme="dark"] #preview-wrapper,
-.dark-mode #preview-wrapper {
-    background: #525659 !important;
+#preview h2::before {
+    content: counter(section) ". ";
+    color: #667eea;
+    font-weight: bold;
 }
 
-/* ==================== RESPONSIVE ==================== */
-@media screen and (max-width: 768px) {
-    #preview-wrapper { padding: 20px 10px !important; }
-    #preview { transform: scale(0.95) !important; transform-origin: top center !important; }
+/* Professional Typography */
+#preview p {
+    text-align: justify;
+    hyphens: auto;
+    orphans: 3;
+    widows: 3;
 }
 
-@media screen and (max-width: 480px) {
-    #preview { transform: scale(0.75) !important; }
+#preview ul {
+    margin-left: 25pt;
+    line-height: 1.8;
+}
+
+#preview ul li {
+    margin-bottom: 8pt;
+}
+
+/* Table Enhancements */
+#preview table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15pt 0;
+}
+
+#preview table th,
+#preview table td {
+    border: 1px solid #333;
+    padding: 8pt;
+    text-align: left;
+    vertical-align: top;
+}
+
+#preview table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+#preview table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Page Break Control */
+#preview h2 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+}
+
+#preview table {
+    page-break-inside: avoid;
+}
+
+/* Print Color Preservation */
+@media print {
+    #preview h2::before {
+        color: #000 !important; /* Black numbers for print */
+    }
 }
