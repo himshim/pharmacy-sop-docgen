@@ -99,12 +99,26 @@
         display: block !important;
     }
 
-    /* HIDE UI */
-    .app-container, header, nav, footer, aside,
-    .controls-panel, .status-bar, .toolbar-buttons,
-    .mobile-header, .tab-navigation, .preview-toolbar,
-    .page-break-indicator, .tab-panel:not(#tab-preview) {
+    /* HIDE UI COMPONENTS (NOT app-container!) */
+    .app-header, .controls-panel, .status-bar, 
+    .toolbar-buttons, .preview-toolbar,
+    .mobile-header, .tab-navigation,
+    .page-break-indicator, .tab-panel:not(#tab-preview),
+    header, nav, footer, aside {
         display: none !important;
+    }
+
+    /* Keep main structure visible */
+    .app-container,
+    .main-layout,
+    .preview-panel {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: white !important;
     }
 
     /* UNWRAP CONTENT */
