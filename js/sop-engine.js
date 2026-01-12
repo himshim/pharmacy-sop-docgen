@@ -87,7 +87,7 @@ window.initSOPApp = function () {
     let SOP_DATA = null;
 
     /* ========================= LOAD DEPARTMENTS ========================= */
-    fetchJSON("data/departments.json")
+    fetchJSON("../data/departments.json")
         .then((d) => {
             departmentSelect.innerHTML = `<option value="">Select Department</option>`;
             d.departments.forEach((dep) => {
@@ -112,7 +112,7 @@ window.initSOPApp = function () {
         console.log(`🔍 Loading SOPs for department: ${dept}`);
 
         try {
-            const index = await fetchJSON(`data/${dept}/index.json`);
+            const index = await fetchJSON(`../data/${dept}/index.json`);
             index.instruments.forEach((sop) => {
                 sopSelect.innerHTML += `<option value="${sop.id}">${sop.name}</option>`;
             });
@@ -133,7 +133,7 @@ window.initSOPApp = function () {
         console.log(`📄 Loading SOP: ${sop}`);
 
         try {
-            const raw = await fetchJSON(`data/${dept}/${sop}.json`);
+            const raw = await fetchJSON(`../data/${dept}/${sop}.json`);
             SOP_DATA = {
                 institute: "",
                 department: dept,
@@ -205,7 +205,7 @@ window.initSOPApp = function () {
         console.log(`📋 Loading template: ${template}`);
 
         try {
-            TEMPLATE_HTML = await fetchText(`templates/${template}.html`);
+            TEMPLATE_HTML = await fetchText(`../templates/${template}.html`);
             renderPreview();
             console.log('✅ Template loaded and rendered');
         } catch (e) {
@@ -266,6 +266,29 @@ window.initSOPApp = function () {
                 toggle.checked = isEnabled;
             }
         });
+
+        // Update section display based on toggles
+        updateToggleVisibility();
+    }
+
+    /* ========================= UPDATE TOGGLE VISIBILITY ========================= */
+    function updateToggleVisibility() {
+        const sections = {
+            'toggleDocControl': 'sectionDocControl',
+            'toggleApplicability': 'sectionApplicability',
+            'toggleAbbreviations': 'sectionAbbreviations',
+            'toggleReferences': 'sectionReferences',
+            'toggleAnnexures': 'sectionAnnexures',
+            'toggleChangeHistory': 'sectionChangeHistory'
+        };
+
+        Object.keys(sections).forEach(toggleId => {
+            const toggle = $(toggleId);
+            const section = $(sections[toggleId]);
+            if (toggle && section) {
+                section.style.display = toggle.checked ? 'block' : 'none';
+            }
+        });
     }
 
     /* ========================= INPUT CHANGE LISTENERS ========================= */
@@ -293,6 +316,7 @@ window.initSOPApp = function () {
                     if (SOP_DATA.fieldsEnabled) {
                         SOP_DATA.fieldsEnabled[key] = toggle.checked;
                     }
+                    updateToggleVisibility();
                     renderPreview();
                 }
             });

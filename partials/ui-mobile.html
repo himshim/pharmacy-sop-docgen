@@ -4,216 +4,357 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SOP Generator - Mobile</title>
-    <link rel="stylesheet" href="css/ui-mobile.css">
-    <link rel="stylesheet" href="css/print-a4.css">
+    <link rel="stylesheet" href="../css/ui-mobile.css">
+    <link rel="stylesheet" href="../css/print-a4.css">
 </head>
 <body>
-    <div class="mobile-container">
-        <!-- Header -->
-        <header class="mobile-header">
-            <h1>📋 SOP Generator</h1>
-            <p>Mobile Version</p>
-        </header>
+    <header class="mobile-header">
+        <div class="header-content">
+            <h1><span class="logo-badge">📋</span> SOP Generator</h1>
+            <p>Professional Standard Operating Procedures</p>
+            <span class="header-badge">v2.0 Professional</span>
+        </div>
+    </header>
 
-        <!-- Tab Navigation -->
-        <nav class="tab-navigation">
-            <button class="tab-btn active" data-tab="form">📝 Form</button>
-            <button class="tab-btn" data-tab="preview">👁️ Preview</button>
-        </nav>
+    <nav class="tab-navigation">
+        <button class="tab-btn active" onclick="switchTab(0)">📝 Create</button>
+        <button class="tab-btn" onclick="switchTab(1)">👁️ Preview</button>
+        <button class="tab-btn" onclick="switchTab(2)">⚙️ Settings</button>
+    </nav>
 
-        <!-- Tab Content -->
-        <div class="tab-container">
-            <!-- Form Tab -->
-            <div id="tab-form" class="tab-panel active">
-                <div class="form-wrapper">
-                    <div class="form-section">
-                        <h3>Select Department & SOP</h3>
-
-                        <div class="form-group">
-                            <label for="departmentSelect">Department</label>
-                            <select id="departmentSelect">
-                                <option value="">Loading...</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="sopSelect">SOP</label>
-                            <select id="sopSelect" disabled>
-                                <option value="">Select Department First</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="templateSelect">Template</label>
-                            <select id="templateSelect">
-                                <option value="sop-a4-classic">Classic</option>
-                                <option value="sop-a4-iso">ISO Format</option>
-                                <option value="sop-a4-pci">PCI Format</option>
-                                <option value="sop-a4-naac">NAAC Format</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <h3>Document Details</h3>
-
-                        <div class="form-group">
-                            <label for="institute">Institution Name</label>
-                            <input type="text" id="institute" placeholder="Your Institution">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="department">Department</label>
-                            <input type="text" id="department" placeholder="Department">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="title">SOP Title</label>
-                            <input type="text" id="title" placeholder="SOP Title">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="sopNumber">SOP Number</label>
-                            <input type="text" id="sopNumber" placeholder="SOP/001/2026">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="revisionNo">Revision No.</label>
-                            <input type="text" id="revisionNo" value="00">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="effectiveDate">Effective Date</label>
-                            <input type="date" id="effectiveDate">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="revisionDate">Last Revision Date</label>
-                            <input type="date" id="revisionDate">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nextReviewDate">Next Review Date</label>
-                            <input type="date" id="nextReviewDate">
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <h3>SOP Content</h3>
-
-                        <div class="form-group">
-                            <label for="purpose">Purpose</label>
-                            <textarea id="purpose" rows="3"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="scope">Scope</label>
-                            <textarea id="scope" rows="3"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="responsibility">Responsibility</label>
-                            <textarea id="responsibility" rows="3"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="procedure">Procedure (one per line)</label>
-                            <textarea id="procedure" rows="5"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="precautions">Precautions</label>
-                            <textarea id="precautions" rows="3"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <h3>Signatures</h3>
-
-                        <div class="form-group">
-                            <label for="preparedBy">Prepared By</label>
-                            <input type="text" id="preparedBy">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="preparedDesig">Designation</label>
-                            <input type="text" id="preparedDesig">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="preparedDate">Date</label>
-                            <input type="date" id="preparedDate">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="checkedBy">Checked By</label>
-                            <input type="text" id="checkedBy">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="checkedDesig">Designation</label>
-                            <input type="text" id="checkedDesig">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="checkedDate">Date</label>
-                            <input type="date" id="checkedDate">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="approvedBy">Approved By</label>
-                            <input type="text" id="approvedBy">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="approvedDesig">Designation</label>
-                            <input type="text" id="approvedDesig">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="approvedDate">Date</label>
-                            <input type="date" id="approvedDate">
-                        </div>
-                    </div>
-
-                    <!-- Hidden fields for compatibility -->
-                    <input type="checkbox" id="toggleDocControl" checked style="display:none">
-                    <input type="checkbox" id="toggleApplicability" style="display:none">
-                    <input type="checkbox" id="toggleAbbreviations" style="display:none">
-                    <input type="checkbox" id="toggleReferences" style="display:none">
-                    <input type="checkbox" id="toggleAnnexures" style="display:none">
-                    <input type="checkbox" id="toggleChangeHistory" style="display:none">
-                    <input type="checkbox" id="toggleSopNumber" checked style="display:none">
-                    <input type="checkbox" id="toggleEffectiveDate" checked style="display:none">
-                    <input type="checkbox" id="toggleRevisionDate" checked style="display:none">
-                    <input type="checkbox" id="toggleCopyType" checked style="display:none">
-                    <input type="hidden" id="copyType" value="CONTROLLED">
-                    <input type="hidden" id="applicability">
-                    <input type="hidden" id="abbreviations">
-                    <input type="hidden" id="references">
-                    <input type="hidden" id="annexures">
-                    <input type="hidden" id="changeHistoryInput">
+    <div class="mobile-content">
+        <!-- TAB 1: CREATE -->
+        <div class="tab-panel active" id="tab-create">
+            <!-- Selection Card -->
+            <div class="card">
+                <h2 class="card-title">📁 Selection</h2>
+                <div class="form-group">
+                    <label for="departmentSelect">Department</label>
+                    <select id="departmentSelect">
+                        <option value="">Choose department...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sopSelect">SOP Document</label>
+                    <select id="sopSelect" disabled>
+                        <option value="">Choose SOP...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="templateSelect">Template Style</label>
+                    <select id="templateSelect">
+                        <option value="sop-a4-classic">Classic</option>
+                        <option value="sop-a4-iso">ISO</option>
+                        <option value="sop-a4-naac">NAAC</option>
+                        <option value="sop-a4-pci">PCI</option>
+                    </select>
                 </div>
             </div>
 
-            <!-- Preview Tab -->
-            <div id="tab-preview" class="tab-panel">
-                <div class="preview-actions">
-                    <button id="print-btn" class="btn btn-print">
-                        🖨️ Save PDF
-                    </button>
+            <!-- Document Info Card -->
+            <div class="card" id="sectionDocControl" style="display:none;">
+                <h2 class="card-title">📋 Document Info</h2>
+                <div class="form-group">
+                    <label for="institute">Institute</label>
+                    <input type="text" id="institute" placeholder="Institute name">
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" id="department" placeholder="Department">
+                </div>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="SOP title">
+                </div>
+                <div class="form-group">
+                    <label for="sopNumber">SOP Number</label>
+                    <input type="text" id="sopNumber" placeholder="e.g., SOP-001">
+                </div>
+                <div class="form-group">
+                    <label for="revisionNo">Revision No.</label>
+                    <input type="text" id="revisionNo" placeholder="00">
+                </div>
+                <div class="form-group">
+                    <label for="effectiveDate">Effective Date</label>
+                    <input type="date" id="effectiveDate">
+                </div>
+                <div class="form-group">
+                    <label for="revisionDate">Revision Date</label>
+                    <input type="date" id="revisionDate">
+                </div>
+                <div class="form-group">
+                    <label for="nextReviewDate">Next Review</label>
+                    <input type="date" id="nextReviewDate">
+                </div>
+                <div class="form-group">
+                    <label for="copyType">Copy Type</label>
+                    <select id="copyType">
+                        <option value="CONTROLLED">Controlled</option>
+                        <option value="UNCONTROLLED">Uncontrolled</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Content Card -->
+            <div class="card">
+                <h2 class="card-title">📝 Content</h2>
+
+                <div class="expandable">
+                    <div class="expandable-header" onclick="toggleExpand(this)">
+                        <h3>Purpose</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="expandable-content">
+                        <textarea id="purpose" placeholder="Describe the purpose..."></textarea>
+                    </div>
                 </div>
 
-                <div class="preview-scroll">
-                    <div id="preview" class="preview-content">
-                        <div style="padding: 40px; text-align: center; color: #999;">
-                            <h2>📂 Select Department & SOP</h2>
-                            <p>Switch to Form tab to begin</p>
+                <div class="expandable">
+                    <div class="expandable-header" onclick="toggleExpand(this)">
+                        <h3>Scope</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="expandable-content">
+                        <textarea id="scope" placeholder="Define the scope..."></textarea>
+                    </div>
+                </div>
+
+                <div class="expandable">
+                    <div class="expandable-header" onclick="toggleExpand(this)">
+                        <h3>Responsibility</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="expandable-content">
+                        <textarea id="responsibility" placeholder="List responsibilities..."></textarea>
+                    </div>
+                </div>
+
+                <div class="expandable">
+                    <div class="expandable-header" onclick="toggleExpand(this)">
+                        <h3>Procedure</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="expandable-content">
+                        <textarea id="procedure" placeholder="Steps (one per line)..."></textarea>
+                    </div>
+                </div>
+
+                <div class="expandable">
+                    <div class="expandable-header" onclick="toggleExpand(this)">
+                        <h3>Precautions</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="expandable-content">
+                        <textarea id="precautions" placeholder="Safety precautions..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Applicability Card -->
+            <div class="card" id="sectionApplicability" style="display:none;">
+                <h2 class="card-title">🎯 Applicability</h2>
+                <textarea id="applicability" placeholder="Define applicability..."></textarea>
+            </div>
+
+            <!-- Abbreviations Card -->
+            <div class="card" id="sectionAbbreviations" style="display:none;">
+                <h2 class="card-title">📖 Abbreviations</h2>
+                <textarea id="abbreviations" placeholder="List abbreviations..."></textarea>
+            </div>
+
+            <!-- References Card -->
+            <div class="card" id="sectionReferences" style="display:none;">
+                <h2 class="card-title">📚 References</h2>
+                <textarea id="references" placeholder="List references..."></textarea>
+            </div>
+
+            <!-- Annexures Card -->
+            <div class="card" id="sectionAnnexures" style="display:none;">
+                <h2 class="card-title">📎 Annexures</h2>
+                <textarea id="annexures" placeholder="List annexures..."></textarea>
+            </div>
+
+            <!-- Change History Card -->
+            <div class="card" id="sectionChangeHistory" style="display:none;">
+                <h2 class="card-title">📜 Change History</h2>
+                <textarea id="changeHistoryInput" placeholder="Format: Version|Date|Changes|Approved By"></textarea>
+            </div>
+
+            <!-- Approval Card -->
+            <div class="card">
+                <h2 class="card-title">✍️ Approval</h2>
+
+                <div class="subsection-title">Prepared By</div>
+                <div class="form-group">
+                    <label for="preparedBy">Name</label>
+                    <input type="text" id="preparedBy" placeholder="Full name">
+                </div>
+                <div class="form-group">
+                    <label for="preparedDesig">Designation</label>
+                    <input type="text" id="preparedDesig" placeholder="Job title">
+                </div>
+                <div class="form-group">
+                    <label for="preparedDate">Date</label>
+                    <input type="date" id="preparedDate">
+                </div>
+
+                <div class="subsection-title">Checked By</div>
+                <div class="form-group">
+                    <label for="checkedBy">Name</label>
+                    <input type="text" id="checkedBy" placeholder="Full name">
+                </div>
+                <div class="form-group">
+                    <label for="checkedDesig">Designation</label>
+                    <input type="text" id="checkedDesig" placeholder="Job title">
+                </div>
+                <div class="form-group">
+                    <label for="checkedDate">Date</label>
+                    <input type="date" id="checkedDate">
+                </div>
+
+                <div class="subsection-title">Approved By</div>
+                <div class="form-group">
+                    <label for="approvedBy">Name</label>
+                    <input type="text" id="approvedBy" placeholder="Full name">
+                </div>
+                <div class="form-group">
+                    <label for="approvedDesig">Designation</label>
+                    <input type="text" id="approvedDesig" placeholder="Job title">
+                </div>
+                <div class="form-group">
+                    <label for="approvedDate">Date</label>
+                    <input type="date" id="approvedDate">
+                </div>
+            </div>
+
+            <!-- Credit Badge -->
+            <div class="credit-badge">
+                <p>Developed by</p>
+                <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
+                <p style="margin-top: 6px; font-size: 12px;">
+                    <a href="https://github.com/himshim/pharmacy-sop-docgen" target="_blank">View Source Code</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB 2: PREVIEW -->
+        <div class="tab-panel" id="tab-preview">
+            <div class="card">
+                <h2 class="card-title">📄 Document Preview</h2>
+                <div id="preview-wrapper">
+                    <div id="preview">
+                        <div id="preview-content">
+                            <div class="empty-state">
+                                <div class="empty-state-icon">📂</div>
+                                <p>Select a department and SOP<br>to preview your document</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- TAB 3: SETTINGS (Toggles) -->
+        <div class="tab-panel" id="tab-options">
+            <!-- Section Visibility -->
+            <div class="card">
+                <h2 class="card-title">👁️ Section Visibility</h2>
+                <div class="toggle-list">
+                    <div class="toggle-item">
+                        <label for="toggleDocControl">Document Control</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggleDocControl" checked>
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+                    <div class="toggle-item">
+                        <label for="toggleApplicability">Applicability</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggleApplicability">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+                    <div class="toggle-item">
+                        <label for="toggleAbbreviations">Abbreviations</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggleAbbreviations">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+                    <div class="toggle-item">
+                        <label for="toggleReferences">References</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggleReferences">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+                    <div class="toggle-item">
+                        <label for="toggleAnnexures">Annexures</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggleAnnexures">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+                    <div class="toggle-item">
+                        <label for="toggleChangeHistory">Change History</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggleChangeHistory">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Field Visibility -->
+            <div class="card">
+                <h2 class="card-title">🔧 Field Visibility</h2>
+                <div class="toggle-list">
+                    <div class="toggle-item">
+                        <label for="toggleSopNumber">SOP Number</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggleSopNumber" checked>
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+                    <div class="toggle-item">
+                        <label for="toggleEffectiveDate">Effective Date</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggleEffectiveDate" checked>
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+                    <div class="toggle-item">
+                        <label for="toggleRevisionDate">Revision Date</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggleRevisionDate" checked>
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+                    <div class="toggle-item">
+                        <label for="toggleCopyType">Copy Type</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggleCopyType" checked>
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Credit -->
+            <div class="credit-badge">
+                <p>Original Source Code</p>
+                <a href="https://github.com/himshim/pharmacy-sop-docgen" target="_blank">himshim/pharmacy-sop-docgen</a>
+                <p style="margin-top: 12px; font-size: 12px;">
+                    Created by <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Action Bar -->
+    <div class="bottom-action-bar">
+        <button class="action-btn btn-secondary" onclick="window.print()">🖨️ Print</button>
+        <button id="print-btn" class="action-btn btn-primary">💾 Save PDF</button>
     </div>
 
     <!-- html2pdf.js Library for Perfect PDF Generation -->
@@ -222,210 +363,47 @@
             crossorigin="anonymous" 
             referrerpolicy="no-referrer"></script>
 
-    <!-- Tab Navigation Script -->
+    <!-- Tab Switching Script -->
     <script>
-        // Tab switching for mobile
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tabName = btn.getAttribute('data-tab');
+        function switchTab(index) {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const panels = document.querySelectorAll('.tab-panel');
 
-                // Update buttons
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+            tabs.forEach((tab, i) => {
+                tab.classList.toggle('active', i === index);
+            });
 
-                // Update panels
-                document.querySelectorAll('.tab-panel').forEach(panel => {
-                    panel.classList.remove('active');
+            panels.forEach((panel, i) => {
+                panel.classList.toggle('active', i === index);
+            });
+        }
+
+        function toggleExpand(header) {
+            const expandable = header.parentElement;
+            expandable.classList.toggle('open');
+        }
+
+        // Add active class to toggle items when checked
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleItems = document.querySelectorAll('.toggle-item');
+            toggleItems.forEach(item => {
+                const checkbox = item.querySelector('input[type="checkbox"]');
+                checkbox.addEventListener('change', function() {
+                    if(this.checked) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
                 });
-                document.getElementById('tab-' + tabName).classList.add('active');
+                // Set initial state
+                if(checkbox.checked) {
+                    item.classList.add('active');
+                }
             });
         });
     </script>
 
     <!-- SOP Engine with html2pdf Integration -->
-    <script src="js/sop-engine.js"></script>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f7fa;
-            overflow: hidden;
-        }
-
-        .mobile-container {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
-
-        .mobile-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .mobile-header h1 {
-            font-size: 1.5em;
-            margin-bottom: 5px;
-        }
-
-        .mobile-header p {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-
-        .tab-navigation {
-            display: flex;
-            background: white;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .tab-btn {
-            flex: 1;
-            padding: 15px;
-            border: none;
-            background: white;
-            color: #666;
-            font-size: 0.95em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            border-bottom: 3px solid transparent;
-        }
-
-        .tab-btn.active {
-            color: #667eea;
-            border-bottom-color: #667eea;
-        }
-
-        .tab-container {
-            flex: 1;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .tab-panel {
-            display: none;
-            height: 100%;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .tab-panel.active {
-            display: block;
-        }
-
-        .form-wrapper {
-            padding: 20px;
-        }
-
-        .form-section {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .form-section h3 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 6px;
-            color: #555;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 16px; /* Prevents zoom on iOS */
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
-        .preview-actions {
-            padding: 15px 20px;
-            background: white;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .btn {
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1em;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-print {
-            background: #667eea;
-            color: white;
-        }
-
-        .btn-print:active:not(:disabled) {
-            background: #5568d3;
-        }
-
-        .btn-print:disabled {
-            background: #ccc;
-        }
-
-        .preview-scroll {
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            padding: 20px;
-            height: calc(100% - 70px);
-        }
-
-        .preview-content {
-            background: white;
-            padding: 40px 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            min-height: 400px;
-        }
-
-        @media (min-width: 600px) {
-            .preview-content {
-                padding: 60px 40px;
-            }
-        }
-    </style>
+    <script src="../js/sop-engine.js"></script>
 </body>
 </html>
