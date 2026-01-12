@@ -1,164 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SOP Document</title>
-</head>
-<body>
-    <!-- Document Header -->
-    <header class="doc-header">
-        <div class="institute-name">{{institute}}</div>
-        <div class="department-name">{{department}}</div>
-        <div class="doc-type">Standard Operating Procedure</div>
-    </header>
+<!-- 
+  SOP CLASSIC TEMPLATE (A4)
+  Optimized for WYSIWYG Print
+-->
 
-    <!-- Document Information Table -->
-    <table class="info-table">
+<!-- HEADER -->
+<div style="text-align: center; margin-bottom: 20px;">
+    <h1 style="border:none; margin-bottom: 5px;">{{institute}}</h1>
+    <div style="font-size: 14pt; font-weight: bold;">Department of {{department}}</div>
+</div>
+
+<!-- TITLE BLOCK -->
+<table cellspacing="0">
+    <tr>
+        <th width="30%">Title</th>
+        <td width="70%"><b>{{title}}</b></td>
+    </tr>
+    <tr>
+        <th>SOP Number</th>
+        <td>{{sopNumber}}</td>
+    </tr>
+    <tr>
+        <th>Effective Date</th>
+        <td>{{effectiveDate}}</td>
+    </tr>
+    <tr>
+        <th>Revision No.</th>
+        <td>{{revisionNo}}</td>
+    </tr>
+</table>
+
+<!-- MAIN CONTENT -->
+{{#if sectionDocControl}}
+    <!-- (Optional Doc Control Info if needed, usually covered by table above) -->
+{{/if}}
+
+<h2>1. PURPOSE</h2>
+<p>{{purpose}}</p>
+
+<h2>2. SCOPE</h2>
+<p>{{scope}}</p>
+
+<h2>3. RESPONSIBILITY</h2>
+<p>{{responsibility}}</p>
+
+<h2>4. PROCEDURE</h2>
+<ul>
+    {{procedure}}
+</ul>
+
+<h2>5. PRECAUTIONS</h2>
+<p>{{precautions}}</p>
+
+{{#if sectionApplicability}}
+    <h2>6. APPLICABILITY</h2>
+    <p>{{applicability}}</p>
+{{/if}}
+
+{{#if sectionAbbreviations}}
+    <h2>7. ABBREVIATIONS</h2>
+    <p>{{abbreviations}}</p>
+{{/if}}
+
+{{#if sectionReferences}}
+    <h2>8. REFERENCES</h2>
+    <p>{{references}}</p>
+{{/if}}
+
+{{#if sectionAnnexures}}
+    <h2>9. ANNEXURES</h2>
+    <p>{{annexures}}</p>
+{{/if}}
+
+{{#if sectionChangeHistory}}
+    <h2>CHANGE HISTORY</h2>
+    <table>
+        <thead>
+            <tr>
+                <th width="15%">Rev No.</th>
+                <th width="20%">Date</th>
+                <th width="65%">Description of Changes</th>
+            </tr>
+        </thead>
         <tbody>
-            <tr>
-                <td class="label-cell">SOP Title</td>
-                <td class="value-cell">{{title}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">SOP Number</td>
-                <td class="value-cell">{{sopNumber}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Revision Number</td>
-                <td class="value-cell">{{revisionNo}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Effective Date</td>
-                <td class="value-cell">{{effectiveDate}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Revision Date</td>
-                <td class="value-cell">{{revisionDate}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Next Review Date</td>
-                <td class="value-cell">{{nextReviewDate}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Copy Type</td>
-                <td class="value-cell"><strong>{{copyType}} COPY</strong></td>
-            </tr>
+            {{changeHistoryRows}}
         </tbody>
     </table>
+{{/if}}
 
-    <!-- Purpose Section -->
-    <div class="section avoid-break">
-        <h2 class="section-title">1. Purpose</h2>
-        <div class="section-content">
-            <p>{{purpose}}</p>
-        </div>
-    </div>
+<!-- FORCE PAGE BREAK BEFORE SIGNATURES -->
+<div class="page-break-before page-break-indicator"></div>
 
-    <!-- Scope Section -->
-    <div class="section avoid-break">
-        <h2 class="section-title">2. Scope</h2>
-        <div class="section-content">
-            <p>{{scope}}</p>
-        </div>
-    </div>
-
-    <!-- Responsibility Section -->
-    <div class="section avoid-break">
-        <h2 class="section-title">3. Responsibility</h2>
-        <div class="section-content">
-            <p>{{responsibility}}</p>
-        </div>
-    </div>
-
-    <!-- Procedure Section -->
-    <div class="section">
-        <h2 class="section-title">4. Procedure</h2>
-        <div class="section-content">
-            <ol class="procedure-list">
-                {{procedure}}
-            </ol>
-        </div>
-    </div>
-
-    <!-- Precautions Section -->
-    <div class="section avoid-break">
-        <h2 class="section-title">5. Precautions & Safety</h2>
-        <div class="section-content">
-            <p>{{precautions}}</p>
-        </div>
-    </div>
-
-    <!-- Applicability (if enabled) -->
-    <div class="section avoid-break" id="section-applicability">
-        <h2 class="section-title">6. Applicability</h2>
-        <div class="section-content">
-            <p>{{applicability}}</p>
-        </div>
-    </div>
-
-    <!-- Abbreviations (if enabled) -->
-    <div class="section avoid-break" id="section-abbreviations">
-        <h2 class="section-title">7. Abbreviations</h2>
-        <div class="section-content">
-            <p>{{abbreviations}}</p>
-        </div>
-    </div>
-
-    <!-- References (if enabled) -->
-    <div class="section avoid-break" id="section-references">
-        <h2 class="section-title">8. References</h2>
-        <div class="section-content">
-            <p>{{references}}</p>
-        </div>
-    </div>
-
-    <!-- Annexures (if enabled) -->
-    <div class="section avoid-break" id="section-annexures">
-        <h2 class="section-title">9. Annexures</h2>
-        <div class="section-content">
-            <p>{{annexures}}</p>
-        </div>
-    </div>
-
-    <!-- Signature Block -->
-    <div class="signature-block">
-        <h3>Document Approval</h3>
-        <table class="signature-table">
-            <thead>
-                <tr>
-                    <th>Prepared By</th>
-                    <th>Checked By</th>
-                    <th>Approved By</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <strong>Name:</strong> {{preparedBy}}<br>
-                        <strong>Designation:</strong> {{preparedDesig}}<br>
-                        <div class="signature-line"></div>
-                        <strong>Date:</strong> {{preparedDate}}
-                    </td>
-                    <td>
-                        <strong>Name:</strong> {{checkedBy}}<br>
-                        <strong>Designation:</strong> {{checkedDesig}}<br>
-                        <div class="signature-line"></div>
-                        <strong>Date:</strong> {{checkedDate}}
-                    </td>
-                    <td>
-                        <strong>Name:</strong> {{approvedBy}}<br>
-                        <strong>Designation:</strong> {{approvedDesig}}<br>
-                        <div class="signature-line"></div>
-                        <strong>Date:</strong> {{approvedDate}}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- End Marker -->
-    <div class="end-marker">
-        — END OF DOCUMENT —
-    </div>
-</body>
-</html>
+<h2>APPROVAL</h2>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="33%">Prepared By</th>
+            <th width="33%">Checked By</th>
+            <th width="33%">Approved By</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="height: 100px;">
+            <td style="vertical-align: bottom;">
+                <div><b>Name:</b> {{preparedBy}}</div>
+                <div><b>Desig:</b> {{preparedDesig}}</div>
+                <div><b>Date:</b> {{preparedDate}}</div>
+            </td>
+            <td style="vertical-align: bottom;">
+                <div><b>Name:</b> {{checkedBy}}</div>
+                <div><b>Desig:</b> {{checkedDesig}}</div>
+                <div><b>Date:</b> {{checkedDate}}</div>
+            </td>
+            <td style="vertical-align: bottom;">
+                <div><b>Name:</b> {{approvedBy}}</div>
+                <div><b>Desig:</b> {{approvedDesig}}</div>
+                <div><b>Date:</b> {{approvedDate}}</div>
+            </td>
+        </tr>
+    </tbody>
+</table>

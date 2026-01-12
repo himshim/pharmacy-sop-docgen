@@ -1,192 +1,185 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- * NUCLEAR OPTION: White Background Height Fix
- * This overrides EVERYTHING with maximum CSS specificity
+ * MS WORD A4 WYSIWYG PRINT STYLES
+ * Matches Microsoft Word's default A4 layout (210mm x 297mm)
  * ═══════════════════════════════════════════════════════════════════
  */
 
-/* ==================== PREVIEW WRAPPER ==================== */
-#preview-wrapper,
-div#preview-wrapper,
-div.preview-panel #preview-wrapper {
-    background: #525659 !important;
-    padding: 40px 20px !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    height: 100% !important;
-    max-height: calc(100vh - 200px) !important;
+/* ============ 1. PAGE SETUP (The Foundation) ============ */
+@page {
+    size: A4 portrait;      /* 210mm x 297mm */
+    margin: 20mm;           /* Word 'Normal' Margins */
 }
 
-#preview-wrapper::-webkit-scrollbar {
-    width: 12px;
-    background: #3e3e42;
+/* ============ 2. PAGE BREAK UTILITIES (Like Word Section Breaks) ============ */
+.page-break-before {
+    page-break-before: always !important;
+    break-before: page !important;
+    display: block;
+    height: 0;
+    margin: 0;
 }
 
-#preview-wrapper::-webkit-scrollbar-thumb {
-    background: #686868;
-    border-radius: 6px;
+.page-break-after {
+    page-break-after: always !important;
+    break-after: page !important;
 }
 
-/* ==================== PREVIEW CONTAINER - NUCLEAR FIX! ==================== */
-#preview,
-div#preview,
-#preview-wrapper #preview,
-#preview-wrapper > #preview,
-.preview-panel #preview {
-    /* Width */
+/* ============ 3. SCREEN PREVIEW (WYSIWYG Mode) ============ */
+#preview-wrapper {
+    background: #525659;    /* Dark grey background like Word/Acrobat */
+    padding: 40px 0;        /* Spacing around the paper */
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#preview {
+    /* Exact A4 Dimensions */
     width: 210mm !important;
-    max-width: 210mm !important;
-    min-width: 210mm !important;
-
-    /* HEIGHT - ABSOLUTE OVERRIDE */
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-
-    /* White background */
-    background: #ffffff !important;
-    background-color: #ffffff !important;
+    min-height: 297mm !important; 
+    padding: 20mm !important; /* Matches @page margin */
+    
+    /* Paper Look */
+    background: white !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    margin: 0 auto;
+    box-sizing: border-box;
+    
+    /* Typography - Word Defaults */
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
     color: #000000 !important;
-
-    /* Positioning */
-    margin: 0 auto 40px auto !important;
-    padding: 20mm !important;
-
-    /* Visual */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important;
-
-    /* Display */
-    display: block !important;
-    position: relative !important;
-
-    /* Box model */
-    box-sizing: border-box !important;
-
-    /* Typography */
-    font-family: 'Times New Roman', Times, serif !important;
-    font-size: 11pt !important;
-    line-height: 1.6 !important;
+    text-align: justify;
 }
 
-/* Also target any nested divs */
-#preview > *,
-#preview-content,
-#preview > div,
-#preview > div > *,
-div#preview > * {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-}
-
-/* Make absolutely sure preview expands */
-#preview::before {
-    content: '';
-    display: block;
-    height: 0;
-    clear: both;
-}
-
-#preview::after {
-    content: '';
-    display: block;
-    height: 0;
-    clear: both;
-}
-
-/* ==================== PAGE BREAK INDICATORS ==================== */
-.page-break-indicator {
-    position: relative;
-    height: 1px;
-    margin: 30mm 0;
-    background: transparent;
-}
-
-.page-break-indicator::before {
-    content: '--- Page Break ---';
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    color: #999;
-    font-size: 9pt;
-    font-family: Arial, sans-serif;
-    padding: 0 10px;
-    white-space: nowrap;
-}
-
-.page-break-indicator::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent 0%, #ccc 20%, #ccc 80%, transparent 100%);
-}
-
-/* ==================== TYPOGRAPHY ==================== */
-#preview h1 { font-size: 18pt !important; font-weight: bold !important; margin: 0 0 16pt 0 !important; text-align: center !important; color: #000 !important; text-transform: uppercase !important; }
-#preview h2 { font-size: 13pt !important; font-weight: bold !important; margin: 16pt 0 10pt 0 !important; color: #000 !important; border-bottom: 1.5pt solid #333 !important; padding-bottom: 4pt !important; }
-#preview h3 { font-size: 12pt !important; font-weight: bold !important; margin: 12pt 0 8pt 0 !important; color: #000 !important; }
-#preview p { margin: 0 0 10pt 0 !important; text-align: justify !important; color: #000 !important; }
-#preview strong, #preview b { font-weight: bold !important; color: #000 !important; }
-
-/* ==================== LISTS ==================== */
-#preview ol, #preview ul { margin: 10pt 0 !important; padding-left: 30pt !important; color: #000 !important; }
-#preview li { margin: 6pt 0 !important; color: #000 !important; }
-
-/* ==================== TABLES ==================== */
-#preview table { width: 100% !important; border-collapse: collapse !important; margin: 14pt 0 !important; background: #fff !important; }
-#preview th, #preview td { border: 1pt solid #333 !important; padding: 8pt 10pt !important; color: #000 !important; }
-#preview th { background-color: #f0f0f0 !important; font-weight: bold !important; text-align: center !important; }
-
-/* ==================== SECTIONS ==================== */
-#preview .section { margin: 16pt 0 !important; }
-#preview .section-title { background: #f0f0f0 !important; padding: 6pt 10pt !important; border-left: 4pt solid #333 !important; color: #000 !important; }
-
-/* ==================== PRINT ==================== */
+/* ============ 4. PRINT MODE (Printer Output) ============ */
 @media print {
-    body { margin: 0 !important; padding: 0 !important; background: white !important; }
-    .sidebar, .controls-panel, button, nav, input, textarea { display: none !important; }
-    #preview-wrapper { background: white !important; padding: 0 !important; overflow: visible !important; height: auto !important; max-height: none !important; }
-    #preview { box-shadow: none !important; margin: 0 !important; padding: 0 !important; width: 100% !important; max-width: none !important; }
-    .page-break-indicator { display: none !important; }
-    @page { size: A4; margin: 20mm; }
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+    }
+
+    /* Hide EVERYTHING except the document */
+    .app-container, header, nav, .controls-panel, .status-bar, 
+    .toolbar-buttons, button, .mobile-header, .tab-navigation,
+    .page-break-indicator {
+        display: none !important;
+    }
+
+    /* Reset Preview Wrapper */
+    #preview-wrapper {
+        background: white !important;
+        padding: 0 !important;
+        height: auto !important;
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    /* The Document Itself */
+    #preview {
+        width: 100% !important; /* Let @page handle width */
+        margin: 0 !important;
+        padding: 0 !important;  /* @page handles margins */
+        box-shadow: none !important;
+        min-height: 0 !important;
+        border: none !important;
+    }
+
+    /* Ensure backgrounds print (for table headers) */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
 }
 
-/* ==================== PDF MODE ==================== */
-.pdf-rendering #preview-wrapper { background: transparent !important; padding: 0 !important; overflow: visible !important; }
-.pdf-rendering #preview { box-shadow: none !important; margin: 0 !important; }
-.pdf-rendering .page-break-indicator { display: none !important; }
-
-/* ==================== DARK MODE ==================== */
-[data-theme="dark"] #preview,
-.dark-mode #preview,
-body.dark #preview {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    color: #000000 !important;
+/* ============ 5. CONTENT STYLES (Word-like formatting) ============ */
+/* Headings */
+#preview h1 {
+    font-size: 16pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 24pt;
+    border-bottom: 2px solid #000;
+    padding-bottom: 4pt;
 }
 
-[data-theme="dark"] #preview *,
-.dark-mode #preview *,
-body.dark #preview * {
-    color: #000000 !important;
+#preview h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 18pt;
+    margin-bottom: 12pt;
+    background-color: #f2f2f2; /* Light grey background */
+    padding: 2pt 8pt;
+    border-left: 4pt solid #000;
 }
 
-[data-theme="dark"] #preview-wrapper,
-.dark-mode #preview-wrapper {
-    background: #525659 !important;
+#preview h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 14pt;
+    margin-bottom: 6pt;
+    text-decoration: underline;
 }
 
-/* ==================== RESPONSIVE ==================== */
-@media screen and (max-width: 768px) {
-    #preview-wrapper { padding: 20px 10px !important; }
-    #preview { transform: scale(0.95) !important; transform-origin: top center !important; }
+/* Paragraphs */
+#preview p {
+    margin-bottom: 12pt;
+    widows: 3;
+    orphans: 3;
 }
 
-@media screen and (max-width: 480px) {
-    #preview { transform: scale(0.75) !important; }
+/* Lists */
+#preview ul, #preview ol {
+    margin-bottom: 12pt;
+    padding-left: 24pt;
+}
+
+#preview li {
+    margin-bottom: 4pt;
+}
+
+/* Tables (Word Style Grid) */
+#preview table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 14pt;
+    border: 1px solid #000;
+    page-break-inside: avoid;
+}
+
+#preview th, #preview td {
+    border: 1px solid #000;
+    padding: 6pt;
+    vertical-align: top;
+    font-size: 11pt;
+}
+
+#preview th {
+    background-color: #e6e6e6;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Page Break Indicator (Screen Only) */
+.page-break-indicator {
+    border-top: 1px dashed #999;
+    color: #999;
+    font-size: 10px;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    pointer-events: none;
+}
+.page-break-indicator::before {
+    content: "--- Page Break ---";
+    background: #525659;
+    color: white;
+    padding: 2px 8px;
+    position: relative;
+    top: -10px;
 }
