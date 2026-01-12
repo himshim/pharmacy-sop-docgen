@@ -1,14 +1,14 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- * SOP GENERATOR ENGINE v3.0 - PRODUCTION READY
- * Fixed: PDF generation, Print functionality, Auto-expanding preview
+ * SOP GENERATOR ENGINE v3.1 - PRODUCTION (ALL BUGS FIXED)
+ * Fixed: Form visibility, PDF generation, Print, Dynamic preview height
  * ═══════════════════════════════════════════════════════════════════
  */
 
 window.initSOPApp = function() {
     'use strict';
 
-    console.log('🚀 Initializing SOP App v3.0 (Production Ready)...');
+    console.log('🚀 Initializing SOP App v3.1 (Complete Fix)...');
 
     /* ==================== CONFIGURATION ==================== */
     const CONFIG = {
@@ -56,7 +56,17 @@ window.initSOPApp = function() {
     console.log('✅ Core elements found');
     console.log('📺 Preview element:', preview.id || preview.className);
 
-    /* ==================== TOGGLES & INPUTS ==================== */
+    /* ==================== SECTIONS (Hidden by default) ==================== */
+    const sections = {
+        docControl: $('sectionDocControl'),
+        applicability: $('sectionApplicability'),
+        abbreviations: $('sectionAbbreviations'),
+        references: $('sectionReferences'),
+        annexures: $('sectionAnnexures'),
+        changeHistory: $('sectionChangeHistory')
+    };
+
+    /* ==================== TOGGLES ==================== */
     const toggles = {
         docControl: $('toggleDocControl'),
         applicability: $('toggleApplicability'),
@@ -70,6 +80,7 @@ window.initSOPApp = function() {
         copyType: $('toggleCopyType')
     };
 
+    /* ==================== INPUTS ==================== */
     const inputs = {
         institute: $('institute'),
         department: $('department'),
@@ -124,6 +135,9 @@ window.initSOPApp = function() {
         sopSelect.innerHTML = `<option value="">Choose SOP...</option>`;
         sopSelect.disabled = true;
         if (preview) preview.innerHTML = '';
+
+        // Hide form sections when department changes
+        hideAllSections();
 
         const dept = departmentSelect.value;
         if (!dept) return;
@@ -204,7 +218,7 @@ window.initSOPApp = function() {
             };
 
             syncInputs();
-            updateSectionVisibility();
+            updateSectionVisibility(); // THIS SHOWS THE FORM SECTIONS!
             await loadTemplate();
 
             console.log('✅ SOP data loaded successfully');
@@ -301,10 +315,21 @@ window.initSOPApp = function() {
         console.log('✅ Inputs synced');
     }
 
-    /* ==================== UPDATE VISIBILITY ==================== */
+    /* ==================== HIDE ALL SECTIONS ==================== */
+    function hideAllSections() {
+        Object.keys(sections).forEach(key => {
+            const section = sections[key];
+            if (section) {
+                section.style.display = 'none';
+            }
+        });
+    }
+
+    /* ==================== UPDATE VISIBILITY (FIXED!) ==================== */
     function updateSectionVisibility() {
         if (!SOP_DATA) return;
 
+        // Update toggle states
         Object.keys(toggles).forEach(key => {
             const toggle = toggles[key];
             if (toggle) {
@@ -312,6 +337,22 @@ window.initSOPApp = function() {
                                SOP_DATA.fieldsEnabled?.[key] || 
                                false;
                 toggle.checked = enabled;
+            }
+        });
+
+        // Show/hide sections based on SOP data
+        Object.keys(sections).forEach(key => {
+            const section = sections[key];
+            const toggle = toggles[key];
+
+            if (section) {
+                // Show section if enabled in SOP data
+                if (SOP_DATA.sectionsEnabled?.[key]) {
+                    section.style.display = 'block';
+                    console.log(`✅ Showing section: ${key}`);
+                } else {
+                    section.style.display = 'none';
+                }
             }
         });
 
@@ -344,6 +385,7 @@ window.initSOPApp = function() {
         toggle.addEventListener('change', () => {
             if (!SOP_DATA) return;
 
+            // Update SOP data
             if (SOP_DATA.sectionsEnabled) {
                 SOP_DATA.sectionsEnabled[key] = toggle.checked;
             }
@@ -351,11 +393,17 @@ window.initSOPApp = function() {
                 SOP_DATA.fieldsEnabled[key] = toggle.checked;
             }
 
+            // Update section visibility
+            const section = sections[key];
+            if (section) {
+                section.style.display = toggle.checked ? 'block' : 'none';
+            }
+
             renderPreview();
         });
     });
 
-    /* ==================== BROWSER PRINT HANDLER (FIXED!) ==================== */
+    /* ==================== BROWSER PRINT HANDLER ==================== */
     if (browserPrintBtn) {
         browserPrintBtn.addEventListener('click', function() {
             if (!preview || !preview.innerHTML.trim()) {
@@ -364,15 +412,12 @@ window.initSOPApp = function() {
             }
 
             console.log('🖨️ Initiating browser print...');
-
-            // Just trigger browser print - CSS will handle the rest
             window.print();
-
             console.log('✅ Print dialog opened');
         });
     }
 
-    /* ==================== PDF GENERATION HANDLER (FIXED!) ==================== */
+    /* ==================== PDF GENERATION HANDLER ==================== */
     if (printBtn) {
         printBtn.addEventListener('click', async function() {
             if (!preview || !preview.innerHTML.trim()) {
@@ -380,7 +425,6 @@ window.initSOPApp = function() {
                 return;
             }
 
-            // Check if html2pdf is loaded
             if (typeof html2pdf === 'undefined') {
                 alert('PDF library not loaded. Please refresh the page and try again.');
                 console.error('❌ html2pdf.js not loaded');
@@ -394,21 +438,16 @@ window.initSOPApp = function() {
             try {
                 console.log('📄 Starting PDF generation...');
 
-                // Clone preview to avoid modifying original
                 const clonedPreview = preview.cloneNode(true);
-
-                // Remove page break indicators from clone
                 const pageBreaks = clonedPreview.querySelectorAll('.page-break-indicator');
                 pageBreaks.forEach(pb => pb.remove());
 
-                // Generate filename
                 const sopNum = inputs.sopNumber?.value || '001';
                 const title = inputs.title?.value || 'SOP';
                 const cleanTitle = title.replace(/[^a-z0-9]/gi, '_').substring(0, 30);
                 const date = new Date().toISOString().split('T')[0];
                 const filename = `SOP_${sopNum}_${cleanTitle}_${date}.pdf`;
 
-                // html2pdf configuration
                 const options = {
                     margin: [20, 20, 20, 20],
                     filename: filename,
@@ -418,8 +457,8 @@ window.initSOPApp = function() {
                         useCORS: true,
                         letterRendering: true,
                         logging: false,
-                        windowWidth: 794, // A4 width in pixels at 96 DPI
-                        windowHeight: 1123 // A4 height in pixels at 96 DPI
+                        windowWidth: 794,
+                        windowHeight: 1123
                     },
                     jsPDF: { 
                         unit: 'mm', 
@@ -435,13 +474,8 @@ window.initSOPApp = function() {
                     }
                 };
 
-                // Add PDF rendering class to hide scrollbars
                 document.body.classList.add('pdf-rendering');
-
-                // Generate PDF
                 await html2pdf().set(options).from(clonedPreview).save();
-
-                // Remove PDF rendering class
                 document.body.classList.remove('pdf-rendering');
 
                 console.log(`✅ PDF generated successfully: ${filename}`);
@@ -457,7 +491,7 @@ window.initSOPApp = function() {
         });
     }
 
-    console.log('🎉 SOP App v3.0 initialized successfully!');
+    console.log('🎉 SOP App v3.1 initialized successfully!');
 };
 
 /* ==================== AUTO-INITIALIZE ==================== */

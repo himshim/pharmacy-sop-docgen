@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════════
-   PRINT & PDF STYLES - MS WORD STYLE (PRODUCTION READY)
-   Perfect A4 rendering for professional SOP documents
+   PRINT & PREVIEW STYLES - MS WORD STYLE v3.1 (DYNAMIC HEIGHT)
+   Perfect A4 rendering with auto-expanding content
    ═══════════════════════════════════════════════════════════════ */
 
 /* ==================== MS WORD PREVIEW WRAPPER ==================== */
@@ -29,15 +29,15 @@
     background: #7a7a7a;
 }
 
-/* ==================== A4 PREVIEW CONTAINER ==================== */
+/* ==================== A4 PREVIEW CONTAINER (DYNAMIC HEIGHT!) ==================== */
 #preview {
     /* A4 width */
     width: 210mm !important;
     max-width: 210mm !important;
 
-    /* AUTO-EXPAND HEIGHT - No min-height restriction! */
-    min-height: auto;
-    height: auto;
+    /* DYNAMIC HEIGHT - Expands with content! */
+    min-height: initial !important;
+    height: auto !important;
 
     /* Always white background (even in dark mode) */
     background: #ffffff !important;
@@ -69,10 +69,10 @@
     position: relative;
 }
 
-/* Also ensure preview-content expands */
+/* Also ensure preview-content expands dynamically */
 #preview-content {
-    min-height: auto;
-    height: auto;
+    min-height: initial !important;
+    height: auto !important;
 }
 
 /* Force white background on all child elements */
@@ -310,7 +310,7 @@
         background: white !important;
     }
 
-    /* Hide UI elements ONLY (not all body children!) */
+    /* Hide UI elements ONLY */
     .sidebar,
     .form-panel,
     .controls-panel,
@@ -332,7 +332,8 @@
     select,
     .btn,
     .btn-primary,
-    .btn-secondary {
+    .btn-secondary,
+    .control-section {
         display: none !important;
         visibility: hidden !important;
     }
