@@ -166,10 +166,16 @@ window.initSOPApp = function () {
     // 5. EXPORT MODULE (Print & PDF)
     // ════════════════════════════════════════════════════════════════
     const ExportModule = {
-        print() {
+                print() {
             const preview = UtilsModule.$('preview') || UtilsModule.$('preview-content');
             if (preview && preview.innerHTML.trim()) {
-                window.print();
+                // Focus the window to ensure print dialogue captures correct context
+                window.focus();
+                
+                // Small delay to ensure styles are applied
+                setTimeout(() => {
+                    window.print();
+                }, 100);
             } else {
                 alert('Please generate a document first.');
             }
