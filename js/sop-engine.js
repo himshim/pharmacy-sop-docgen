@@ -1,12 +1,29 @@
 window.initSOPApp = function () {
     'use strict';
 
-    console.log('🚀 Initializing SOP App v2.0.2 (REAL FIX)...');
+    console.log('🚀 Initializing SOP App v2.1.0 (Dynamic Engine)...');
 
     /* ========================= CONSTANTS ========================= */
     const DEFAULT_RESPONSIBILITY = "Laboratory In-charge, faculty members, technical staff, and authorized users are responsible for implementation and compliance of this SOP.";
     const DEFAULT_REVISION = "00";
     const DEFAULT_COPY_TYPE = "CONTROLLED";
+
+    /* ========================= SMART PROPERTY DETECTOR ========================= */
+    /**
+     * Intelligently extracts identifier from object
+     * Tries multiple common property names: key, file, folder, id, slug
+     */
+    function getIdentifier(obj) {
+        return obj.key || obj.file || obj.folder || obj.id || obj.slug || null;
+    }
+
+    /**
+     * Intelligently extracts display name from object
+     * Tries multiple common property names: name, title, label, displayName
+     */
+    function getDisplayName(obj) {
+        return obj.name || obj.title || obj.label || obj.displayName || null;
+    }
 
     /* ========================= SAFE DOM HELPERS ========================= */
     const $ = (id) => {
@@ -180,25 +197,25 @@ window.initSOPApp = function () {
 
             let addedCount = 0;
             d.departments.forEach((dep) => {
-                // ⭐ REAL FIX: Accept both 'folder' AND 'key' properties
-                const folderValue = dep.folder || dep.key;
-                const nameValue = dep.name;
+                // 🌟 DYNAMIC: Try multiple property names automatically
+                const identifier = getIdentifier(dep);
+                const displayName = getDisplayName(dep);
 
-                if (folderValue && nameValue) {
+                if (identifier && displayName) {
                     const option = document.createElement('option');
-                    option.value = folderValue;
-                    option.textContent = nameValue;
+                    option.value = identifier;
+                    option.textContent = displayName;
                     departmentSelect.appendChild(option);
                     addedCount++;
-                    console.log(`  ✓ Added department: ${nameValue} (${folderValue})`);
+                    console.log(`  ✓ Added department: ${displayName} (${identifier})`);
                 } else {
                     console.warn(`  ⚠️  Skipped invalid department:`, dep);
-                    console.warn(`     Missing: ${!folderValue ? 'folder/key' : ''} ${!nameValue ? 'name' : ''}`);
+                    console.warn(`     Missing: ${!identifier ? 'identifier (key/file/folder/id)' : ''} ${!displayName ? 'display name (name/title/label)' : ''}`);
                 }
             });
 
             if (addedCount === 0) {
-                throw new Error('No valid departments found. Each department needs "folder" (or "key") and "name" properties.');
+                throw new Error('No valid departments found. Each department needs an identifier (key/file/folder/id) and display name (name/title/label) property.');
             }
 
             console.log(`✅ Loaded ${addedCount} departments successfully`);
@@ -253,42 +270,49 @@ window.initSOPApp = function () {
             const index = await fetchJSON(indexPath);
             console.log('📊 SOP index received:', index);
 
-            // Check for different possible property names
+            // 🌟 DYNAMIC: Check for different possible array property names
             let sopList = null;
-            if (index.instruments && Array.isArray(index.instruments)) {
-                sopList = index.instruments;
-                console.log('  ✓ Found SOPs in "instruments" property');
-            } else if (index.sops && Array.isArray(index.sops)) {
-                sopList = index.sops;
-                console.log('  ✓ Found SOPs in "sops" property');
-            } else if (index.items && Array.isArray(index.items)) {
-                sopList = index.items;
-                console.log('  ✓ Found SOPs in "items" property');
-            } else if (Array.isArray(index)) {
+            const possibleArrayNames = ['instruments', 'sops', 'items', 'files', 'documents', 'procedures'];
+
+            for (const propName of possibleArrayNames) {
+                if (index[propName] && Array.isArray(index[propName])) {
+                    sopList = index[propName];
+                    console.log(`  ✓ Found SOPs in "${propName}" property`);
+                    break;
+                }
+            }
+
+            // If no named array found, check if index itself is an array
+            if (!sopList && Array.isArray(index)) {
                 sopList = index;
                 console.log('  ✓ Index is directly an array');
             }
 
             if (!sopList || sopList.length === 0) {
-                throw new Error(`No SOPs found in ${indexPath}. Expected array in "instruments", "sops", "items" property or direct array.`);
+                throw new Error(`No SOPs found in ${indexPath}. Expected an array in one of these properties: ${possibleArrayNames.join(', ')}, or a direct array.`);
             }
 
             let addedSopCount = 0;
             sopList.forEach((sop) => {
-                if (sop.file && sop.name) {
+                // 🌟 DYNAMIC: Try multiple property names automatically
+                const identifier = getIdentifier(sop);
+                const displayName = getDisplayName(sop);
+
+                if (identifier && displayName) {
                     const option = document.createElement('option');
-                    option.value = sop.file;
-                    option.textContent = sop.name;
+                    option.value = identifier;
+                    option.textContent = displayName;
                     sopSelect.appendChild(option);
                     addedSopCount++;
-                    console.log(`  ✓ Added SOP: ${sop.name} (${sop.file})`);
+                    console.log(`  ✓ Added SOP: ${displayName} (${identifier})`);
                 } else {
                     console.warn(`  ⚠️  Skipped invalid SOP:`, sop);
+                    console.warn(`     Missing: ${!identifier ? 'identifier (key/file/folder/id)' : ''} ${!displayName ? 'display name (name/title/label)' : ''}`);
                 }
             });
 
             if (addedSopCount === 0) {
-                throw new Error('No valid SOPs found. Each SOP needs "file" and "name" properties.');
+                throw new Error('No valid SOPs found. Each SOP needs an identifier (key/file/folder/id) and display name (name/title/label) property.');
             }
 
             sopSelect.disabled = false;
@@ -579,10 +603,13 @@ window.initSOPApp = function () {
         }
     }
 
-    console.log('✅ SOP App v2.0.2 initialized successfully');
+    console.log('✅ SOP App v2.1.0 initialized successfully');
+    console.log('🌟 DYNAMIC MODE: Automatically detects property names');
     console.log('📊 Status: Waiting for user to select department...');
 };
 
 // Make sure it's available globally
-console.log('📦 sop-engine.js v2.0.2 loaded successfully');
-console.log('🔧 FIX APPLIED: Now accepts both "folder" and "key" properties in departments.json');
+console.log('📦 sop-engine.js v2.1.0 loaded successfully');
+console.log('🌟 DYNAMIC ENGINE: Supports flexible JSON property names');
+console.log('   Identifiers: key, file, folder, id, slug');
+console.log('   Display names: name, title, label, displayName');
