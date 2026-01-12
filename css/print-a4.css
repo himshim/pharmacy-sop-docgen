@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   PRINT & PDF STYLES - OPTIMIZED FOR html2pdf.js
+   PRINT & PDF STYLES - MS WORD STYLE
    Perfect A4 rendering for professional SOP documents
    ═══════════════════════════════════════════════════════════════ */
 
@@ -146,13 +146,119 @@
     background-color: white;
 }
 
+/* ==================== MS WORD PREVIEW WRAPPER ==================== */
+#preview-wrapper {
+    background: #525659 !important; /* Dark gray background like MS Word */
+    padding: 40px 20px;
+    overflow-y: auto !important; /* Enable scrolling */
+    overflow-x: hidden;
+    height: 100%;
+    max-height: calc(100vh - 200px); /* Adjust based on your layout */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* MS Word style scrollbar (visible in preview, hidden in print) */
+#preview-wrapper::-webkit-scrollbar {
+    width: 12px;
+    background: #3e3e42;
+}
+
+#preview-wrapper::-webkit-scrollbar-thumb {
+    background: #686868;
+    border-radius: 6px;
+}
+
+#preview-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #7a7a7a;
+}
+
+/* ==================== A4 PREVIEW CONTAINER ==================== */
+#preview {
+    /* A4 dimensions at 96 DPI */
+    width: 210mm !important;
+    min-height: 297mm;
+    max-width: 210mm !important;
+
+    /* Always white background (even in dark mode) */
+    background: #ffffff !important;
+    color: #000000 !important;
+
+    /* Center the page */
+    margin: 0 auto 40px auto !important;
+
+    /* Padding (20mm margins) */
+    padding: 20mm !important;
+
+    /* Paper shadow effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
+                0 0 2px rgba(0, 0, 0, 0.2) !important;
+
+    /* Professional fonts */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 11pt;
+    line-height: 1.6;
+
+    /* Box sizing */
+    box-sizing: border-box !important;
+
+    /* Smooth fonts */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Prevent text selection issues */
+    position: relative;
+}
+
+/* Force white background on all child elements in preview */
+#preview * {
+    box-sizing: border-box;
+}
+
+/* ==================== PAGE BREAK INDICATORS (MS Word Style) ==================== */
+.page-break-indicator {
+    position: relative;
+    height: 1px;
+    margin: 30mm 0;
+    background: transparent;
+}
+
+.page-break-indicator::before {
+    content: '--- Page Break ---';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #999;
+    font-size: 9pt;
+    font-family: Arial, sans-serif;
+    padding: 0 10px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.page-break-indicator::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, 
+        transparent 0%, 
+        #ccc 20%, 
+        #ccc 80%, 
+        transparent 100%);
+    z-index: 5;
+}
+
 /* ==================== DOCUMENT HEADER ==================== */
 #preview .doc-header {
     text-align: center;
     margin-bottom: 20pt;
     padding-bottom: 12pt;
     border-bottom: 2.5pt double #000;
-    page-break-after: avoid;
+    color: #000 !important;
 }
 
 #preview .institute-name {
@@ -161,20 +267,21 @@
     margin-bottom: 6pt;
     text-transform: uppercase;
     letter-spacing: 1pt;
+    color: #000 !important;
 }
 
 #preview .department-name {
     font-size: 13pt;
     font-weight: 600;
     margin-bottom: 4pt;
-    color: #333;
+    color: #000 !important;
 }
 
 #preview .doc-type {
     font-size: 12pt;
     font-weight: bold;
     margin-top: 8pt;
-    color: #000;
+    color: #000 !important;
     text-transform: uppercase;
     letter-spacing: 2pt;
 }
@@ -182,13 +289,15 @@
 /* ==================== INFO TABLE ==================== */
 #preview .info-table {
     margin: 16pt 0;
-    border: 2pt solid #000;
+    border: 2pt solid #000 !important;
 }
 
 #preview .info-table th {
-    background-color: #e8e8e8;
+    background-color: #e8e8e8 !important;
     font-weight: bold;
     padding: 8pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 #preview .info-table td {
@@ -198,7 +307,6 @@
 /* ==================== SECTIONS ==================== */
 #preview .section {
     margin: 16pt 0;
-    page-break-inside: avoid;
 }
 
 #preview .section-title {
@@ -206,14 +314,17 @@
     font-weight: bold;
     margin: 14pt 0 8pt 0;
     padding: 6pt 10pt;
-    background: #f0f0f0;
+    background: #f0f0f0 !important;
     border-left: 4pt solid #333;
-    page-break-after: avoid;
+    color: #000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 #preview .section-content {
     margin: 8pt 0;
     padding-left: 10pt;
+    color: #000 !important;
 }
 
 /* ==================== PROCEDURE STEPS ==================== */
@@ -229,7 +340,7 @@
     margin: 8pt 0;
     padding-left: 35pt;
     position: relative;
-    page-break-inside: avoid;
+    color: #000 !important;
 }
 
 #preview .procedure-list > li::before {
@@ -238,23 +349,25 @@
     left: 0;
     font-weight: bold;
     min-width: 25pt;
+    color: #000 !important;
 }
 
 /* ==================== SIGNATURE BLOCK ==================== */
 #preview .signature-block {
     margin-top: 30pt;
-    page-break-inside: avoid;
 }
 
 #preview .signature-table {
-    border: 2pt solid #000;
+    border: 2pt solid #000 !important;
     margin-top: 20pt;
 }
 
 #preview .signature-table th {
-    background-color: #e8e8e8;
+    background-color: #e8e8e8 !important;
     padding: 10pt;
     font-weight: bold;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 #preview .signature-table td {
@@ -278,14 +391,14 @@
     padding: 10pt;
     border-top: 2pt solid #000;
     border-bottom: 2pt solid #000;
-    page-break-inside: avoid;
+    color: #000 !important;
 }
 
 #preview .confidential-marker {
     text-align: center;
     font-weight: bold;
     font-size: 10pt;
-    color: #666;
+    color: #666 !important;
     margin: 10pt 0;
 }
 
@@ -297,7 +410,8 @@
     font-size: 10pt;
     padding: 6pt 12pt;
     border: 2pt solid #000;
-    background: #fff;
+    background: #fff !important;
+    color: #000 !important;
 }
 
 /* ==================== PAGE BREAKS ==================== */
@@ -371,8 +485,22 @@
 
 /* ==================== PRINT MEDIA QUERY ==================== */
 @media print {
+    /* Hide wrapper background and scrollbar */
+    #preview-wrapper {
+        background: white !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    /* Hide scrollbar in print */
+    #preview-wrapper::-webkit-scrollbar {
+        display: none !important;
+    }
+
     /* Hide all UI elements */
-    body > *:not(#preview) {
+    body > *:not(#preview-wrapper) {
         display: none !important;
     }
 
@@ -397,10 +525,17 @@
         display: none !important;
     }
 
+    /* Hide page break indicators in print */
+    .page-break-indicator,
+    .page-break-indicator::before,
+    .page-break-indicator::after {
+        display: none !important;
+    }
+
     /* Page setup */
     @page {
         size: A4 portrait;
-        margin: 20mm 20mm 20mm 20mm;
+        margin: 20mm;
     }
 
     /* Reset body */
@@ -410,65 +545,99 @@
         background: white !important;
     }
 
-    /* Show only preview */
+    /* Remove preview shadow in print */
     #preview {
-        display: block !important;
-        margin: 0 !important;
-        padding: 0 !important;
         box-shadow: none !important;
-        border: none !important;
+        margin: 0 !important;
         width: 100% !important;
         max-width: none !important;
+        padding: 0 !important;
     }
 
     /* Force black text */
     #preview * {
         color: #000 !important;
-        background: transparent !important;
     }
 
-    /* Table borders in print */
-    #preview table,
+    /* Ensure table backgrounds print */
     #preview th,
-    #preview td {
-        border-color: #000 !important;
-    }
-
-    #preview th {
-        background-color: #f0f0f0 !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+    #preview .label-cell,
+    #preview .section-title {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
 }
 
 /* ==================== PDF OPTIMIZATION (html2pdf.js) ==================== */
-/* These styles are specifically for html2pdf.js rendering */
-.pdf-rendering #preview {
-    width: 210mm !important;
-    min-height: 297mm !important;
+/* Remove scrollbar and wrapper styling for PDF generation */
+.pdf-rendering #preview-wrapper {
+    background: transparent !important;
     padding: 0 !important;
+    overflow: visible !important;
+    height: auto !important;
+}
+
+.pdf-rendering #preview {
+    box-shadow: none !important;
     margin: 0 !important;
 }
 
-.pdf-rendering #preview * {
-    box-sizing: border-box;
+/* Hide page break indicators in PDF */
+.pdf-rendering .page-break-indicator,
+.pdf-rendering .page-break-indicator::before,
+.pdf-rendering .page-break-indicator::after {
+    display: none !important;
 }
 
-/* Ensure images fit page */
+/* ==================== RESPONSIVE (Mobile Preview) ==================== */
+@media screen and (max-width: 768px) {
+    #preview-wrapper {
+        padding: 20px 10px;
+        max-height: calc(100vh - 250px);
+    }
+
+    #preview {
+        /* Scale down to fit mobile screen */
+        transform: scale(0.95);
+        transform-origin: top center;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #preview {
+        /* Further scale for small phones */
+        transform: scale(0.75);
+        transform-origin: top center;
+    }
+}
+
+/* ==================== DARK MODE OVERRIDE ==================== */
+/* Force white background even if dark mode is active */
+[data-theme="dark"] #preview,
+.dark-mode #preview,
+body.dark #preview {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+[data-theme="dark"] #preview *,
+.dark-mode #preview *,
+body.dark #preview * {
+    color: #000000 !important;
+}
+
+/* Keep wrapper dark in dark mode (MS Word style) */
+[data-theme="dark"] #preview-wrapper,
+.dark-mode #preview-wrapper,
+body.dark #preview-wrapper {
+    background: #525659 !important;
+}
+
+/* ==================== IMAGES ==================== */
 #preview img {
     max-width: 100%;
     height: auto;
-    page-break-inside: avoid;
-}
-
-/* Prevent table splitting across pages */
-#preview table {
-    page-break-inside: avoid;
-}
-
-/* Long tables can split if needed */
-#preview table.allow-split {
-    page-break-inside: auto;
 }
 
 /* ==================== ACCESSIBILITY ==================== */
@@ -480,18 +649,19 @@
 #preview code {
     font-family: 'Courier New', Courier, monospace;
     font-size: 10pt;
-    background: #f5f5f5;
+    background: #f5f5f5 !important;
     padding: 2pt 4pt;
+    color: #000 !important;
 }
 
 #preview pre {
     font-family: 'Courier New', Courier, monospace;
     font-size: 9pt;
-    background: #f5f5f5;
+    background: #f5f5f5 !important;
     padding: 10pt;
     border-left: 3pt solid #ccc;
     overflow-x: auto;
-    page-break-inside: avoid;
+    color: #000 !important;
 }
 
 /* ==================== END ==================== */

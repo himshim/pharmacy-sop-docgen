@@ -1,16 +1,14 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- * SOP GENERATOR ENGINE v2.1 - PRODUCTION READY
+ * SOP GENERATOR ENGINE v2.2 - PRODUCTION + MS WORD PREVIEW
  * ═══════════════════════════════════════════════════════════════════
- * Dynamic, optimized engine for handling bulk SOP uploads
- * Supports both "key" and "id" fields automatically
- * Enhanced error handling and performance optimization
+ * Now with automatic page break indicators for better preview
  */
 
 (function() {
     'use strict';
 
-    console.log('🚀 Initializing SOP App v2.1 (Production)...');
+    console.log('🚀 Initializing SOP App v2.2 (MS Word Preview)...');
 
     /* ==================== CONFIGURATION ==================== */
     const CONFIG = {
@@ -18,7 +16,9 @@
         TEMPLATE_PATH: '../templates/',
         CACHE_ENABLED: true,
         DEBUG_MODE: true,
-        DEFAULT_RESPONSIBILITY: 'Laboratory In-charge, faculty members, technical staff, and authorized users are responsible for implementation and compliance of this SOP.'
+        DEFAULT_RESPONSIBILITY: 'Laboratory In-charge, faculty members, technical staff, and authorized users are responsible for implementation and compliance of this SOP.',
+        PAGE_HEIGHT_MM: 257, // A4 height (297mm) - margins (40mm)
+        APPROX_MM_PER_SECTION: 35 // Approximate height per section
     };
 
     /* ==================== CACHE SYSTEM ==================== */
@@ -30,15 +30,12 @@
 
     /* ==================== UTILITIES ==================== */
     const Utils = {
-        // Safe DOM selector
         $: (id) => document.getElementById(id),
 
-        // Get value from object using key or id (dynamic!)
         getValue: (obj, primaryField = 'id', fallbackField = 'key') => {
             return obj[primaryField] || obj[fallbackField] || null;
         },
 
-        // Fetch with cache support
         fetchJSON: async (url, cacheKey = null) => {
             if (CONFIG.CACHE_ENABLED && cacheKey && CACHE.sopData[cacheKey]) {
                 if (CONFIG.DEBUG_MODE) console.log(`📦 Using cached: ${cacheKey}`);
@@ -75,21 +72,17 @@
             return text;
         },
 
-        // Convert array or string to textarea-friendly format
         toTextarea: (value) => {
             if (Array.isArray(value)) return value.join('\n');
             return value || '';
         },
 
-        // Convert textarea to array
         fromTextarea: (text) => {
             return text.split('\n').filter(line => line.trim());
         },
 
-        // Generate cache key
         cacheKey: (...parts) => parts.join('_'),
 
-        // Log with timestamp (debug mode)
         log: (icon, message, data = null) => {
             if (CONFIG.DEBUG_MODE) {
                 const time = new Date().toLocaleTimeString();
@@ -97,7 +90,6 @@
             }
         },
 
-        // Error handler
         handleError: (context, error) => {
             console.error(`❌ ${context}:`, error);
             return {
@@ -130,15 +122,11 @@
 
     /* ==================== DOM REFERENCES ==================== */
     const DOM = {
-        // Selects
         departmentSelect: Utils.$("departmentSelect"),
         sopSelect: Utils.$("sopSelect"),
         templateSelect: Utils.$("templateSelect"),
-
-        // Preview
         preview: Utils.$("preview") || Utils.$("preview-content"),
 
-        // Toggles
         toggles: {
             docControl: Utils.$("toggleDocControl"),
             applicability: Utils.$("toggleApplicability"),
@@ -152,7 +140,6 @@
             copyType: Utils.$("toggleCopyType")
         },
 
-        // Inputs
         inputs: {
             institute: Utils.$("institute"),
             department: Utils.$("department"),
@@ -184,7 +171,6 @@
             approvedDate: Utils.$("approvedDate")
         },
 
-        // Sections (for toggle visibility)
         sections: {
             docControl: Utils.$("sectionDocControl"),
             applicability: Utils.$("sectionApplicability"),
@@ -225,7 +211,6 @@
             DOM.departmentSelect.innerHTML = '<option value="">Choose department...</option>';
 
             data.departments.forEach((dept) => {
-                // DYNAMIC: Support both "id" and "key" fields
                 const deptId = Utils.getValue(dept, 'id', 'key');
                 const deptName = dept.name || dept.title || deptId;
 
@@ -259,7 +244,6 @@
             }
 
             data.instruments.forEach((sop) => {
-                // DYNAMIC: Support both "id" and "key" fields
                 const sopId = Utils.getValue(sop, 'id', 'key');
                 const sopName = sop.name || sop.title || sopId;
 
@@ -289,14 +273,11 @@
                 cacheKey
             );
 
-            // Validate structure
             if (!raw.meta || !raw.sections) {
                 throw new Error('Invalid SOP JSON: missing "meta" or "sections"');
             }
 
-            // Build normalized SOP data structure
             const sopData = {
-                // Document info
                 institute: '',
                 department: deptId,
                 title: raw.meta.title || raw.meta.name || '',
@@ -307,7 +288,6 @@
                 nextReviewDate: '',
                 copyType: 'CONTROLLED',
 
-                // Section visibility
                 sectionsEnabled: {
                     docControl: true,
                     applicability: false,
@@ -317,7 +297,6 @@
                     changeHistory: false
                 },
 
-                // Field visibility
                 fieldsEnabled: {
                     sopNumber: true,
                     effectiveDate: true,
@@ -325,7 +304,6 @@
                     copyType: true
                 },
 
-                // Content sections
                 purpose: raw.sections.purpose || '',
                 scope: raw.sections.scope || '',
                 responsibility: raw.sections.responsibility || CONFIG.DEFAULT_RESPONSIBILITY,
@@ -336,7 +314,6 @@
                 references: raw.sections.references || '',
                 annexures: raw.sections.annexures || '',
 
-                // Approval info
                 preparedBy: '',
                 preparedDesig: '',
                 preparedDate: '',
@@ -347,7 +324,6 @@
                 approvedDesig: '',
                 approvedDate: '',
 
-                // Change history
                 changeHistory: []
             };
 
@@ -381,6 +357,30 @@
         }
     }
 
+    /* ==================== PAGE BREAK INSERTION ==================== */
+    function insertPageBreaks(html) {
+        // Add page break indicators after signature block
+        // This helps users see where pages will split
+
+        // Find signature block
+        const signatureIndex = html.indexOf('class="signature-block"');
+
+        if (signatureIndex > -1) {
+            // Insert page break before signature if content is long
+            const sections = (html.match(/<div class="section/g) || []).length;
+
+            if (sections > 6) {
+                const insertPoint = html.lastIndexOf('<div class="signature-block"');
+                if (insertPoint > -1) {
+                    const pageBreak = '<div class="page-break-indicator"></div>\n';
+                    html = html.slice(0, insertPoint) + pageBreak + html.slice(insertPoint);
+                }
+            }
+        }
+
+        return html;
+    }
+
     /* ==================== RENDERER ==================== */
     function renderPreview() {
         if (!State.templateHTML || !State.sopData) {
@@ -400,7 +400,7 @@
                 }
             });
 
-            // Handle procedure array - convert to <li> items
+            // Handle procedure array
             if (Array.isArray(State.sopData.procedure)) {
                 const procedureHTML = State.sopData.procedure
                     .map(step => `<li>${step}</li>`)
@@ -408,11 +408,14 @@
                 html = html.replace(/{{procedure}}/g, procedureHTML);
             }
 
-            // Clean up any remaining placeholders
+            // Clean up remaining placeholders
             html = html.replace(/{{.*?}}/g, '');
 
+            // Add page break indicators
+            html = insertPageBreaks(html);
+
             DOM.preview.innerHTML = html;
-            Utils.log('✅', 'Preview rendered');
+            Utils.log('✅', 'Preview rendered with page breaks');
 
         } catch (error) {
             Utils.handleError('renderPreview', error);
@@ -438,7 +441,6 @@
     function updateSectionVisibility() {
         if (!State.sopData) return;
 
-        // Update toggle states
         Object.keys(DOM.toggles).forEach((key) => {
             const toggle = DOM.toggles[key];
             if (toggle) {
@@ -449,7 +451,6 @@
             }
         });
 
-        // Update section display
         Object.keys(DOM.sections).forEach((key) => {
             const section = DOM.sections[key];
             const toggle = DOM.toggles[key];
@@ -463,11 +464,9 @@
 
     /* ==================== EVENT HANDLERS ==================== */
     function setupEventHandlers() {
-        // Department change
         DOM.departmentSelect?.addEventListener('change', async (e) => {
             const deptId = e.target.value;
 
-            // Reset SOP select
             DOM.sopSelect.innerHTML = '<option value="">Choose SOP...</option>';
             DOM.sopSelect.disabled = true;
             DOM.preview.innerHTML = '';
@@ -479,7 +478,6 @@
             await loadSOPIndex(deptId);
         });
 
-        // SOP change
         DOM.sopSelect?.addEventListener('change', async (e) => {
             const sopId = e.target.value;
             if (!sopId || !State.currentDept) return;
@@ -494,7 +492,6 @@
                 if (State.templateHTML) {
                     renderPreview();
                 } else {
-                    // Load default template if none selected
                     await loadTemplate(DOM.templateSelect.value || 'sop-a4-classic');
                     renderPreview();
                 }
@@ -503,7 +500,6 @@
             }
         });
 
-        // Template change
         DOM.templateSelect?.addEventListener('change', async (e) => {
             const templateId = e.target.value;
             if (!templateId) return;
@@ -513,7 +509,6 @@
             renderPreview();
         });
 
-        // Input changes - update state and re-render
         Object.keys(DOM.inputs).forEach((key) => {
             const input = DOM.inputs[key];
             if (!input) return;
@@ -531,7 +526,6 @@
             });
         });
 
-        // Toggle changes
         Object.keys(DOM.toggles).forEach((key) => {
             const toggle = DOM.toggles[key];
             if (!toggle) return;
@@ -575,6 +569,11 @@
             printBtn.disabled = true;
 
             try {
+                // Clone preview and remove page break indicators
+                const clonedPreview = DOM.preview.cloneNode(true);
+                const pageBreaks = clonedPreview.querySelectorAll('.page-break-indicator');
+                pageBreaks.forEach(pb => pb.remove());
+
                 const sopNum = DOM.inputs.sopNumber?.value || '001';
                 const title = DOM.inputs.title?.value || 'SOP';
                 const cleanTitle = title.replace(/[^a-z0-9]/gi, '_').substring(0, 30);
@@ -602,11 +601,17 @@
                     }
                 };
 
-                await html2pdf().set(options).from(DOM.preview).save();
+                // Mark as PDF rendering to hide page breaks
+                document.body.classList.add('pdf-rendering');
+
+                await html2pdf().set(options).from(clonedPreview).save();
+
+                document.body.classList.remove('pdf-rendering');
 
                 Utils.log('✅', `PDF generated: ${filename}`);
 
             } catch (error) {
+                document.body.classList.remove('pdf-rendering');
                 Utils.handleError('PDF Generation', error);
                 alert('Error generating PDF. Please try again.');
             } finally {
@@ -622,22 +627,18 @@
     async function initialize() {
         Utils.log('🔧', 'Starting initialization...');
 
-        // Validate DOM
         if (!validateDOMElements()) {
             console.error('❌ Critical DOM elements missing. App cannot start.');
             return;
         }
 
-        // Setup handlers
         setupEventHandlers();
         setupPDFButton();
 
-        // Load initial data
         await loadDepartments();
 
-        Utils.log('🎉', 'SOP App v2.1 fully initialized and ready!');
+        Utils.log('🎉', 'SOP App v2.2 fully initialized with MS Word preview!');
 
-        // Expose API for external access (optional)
         window.SOPApp = {
             state: State,
             cache: CACHE,
