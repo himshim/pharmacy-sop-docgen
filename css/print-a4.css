@@ -1,160 +1,148 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- * MS WORD A4 WYSIWYG PRINT STYLES - NUCLEAR FIX v3
- * Overrides ALL UI frameworks for Print & Mobile
+ * SOP PRINT STYLES - FINAL MOBILE & PRINT FIX
  * ═══════════════════════════════════════════════════════════════════
  */
 
 /* ============ 1. PAGE SETUP ============ */
 @page {
     size: A4 portrait;
-    margin: 20mm;
+    margin: 15mm; /* Slightly safer margin */
 }
 
-/* ============ 2. PAGE BREAKS ============ */
-.page-break-before { page-break-before: always !important; break-before: page !important; display: block; height: 1px; margin: 0; }
-.page-break-after { page-break-after: always !important; break-after: page !important; }
-
-/* ============ 3. SCREEN PREVIEW (Desktop) ============ */
+/* ============ 2. DESKTOP PREVIEW ============ */
 #preview-wrapper {
     background: #525659;
-    padding: 40px 0;
-    overflow-y: auto !important; /* Force scroll */
-    height: 100% !important;
-    display: block !important;   /* Kill Flex/Grid */
+    padding: 30px 0;
+    overflow: auto;
+    height: 100vh;
+    display: block;
     text-align: center;
-    position: relative;
-    z-index: 1;
 }
 
 #preview {
-    /* Dimensions */
     width: 210mm !important;
-    min-width: 210mm !important;
-    height: auto !important;
     min-height: 297mm !important;
-    
-    /* Layout */
-    margin: 0 auto 40px auto !important;
+    height: auto !important;
+    margin: 0 auto;
     padding: 20mm !important;
-    display: inline-block !important;
-    position: relative !important;
-    box-sizing: border-box !important;
-    text-align: left;
-    
-    /* Appearance */
     background: white !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    color: #000 !important;
-    
-    /* Typography */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+
     font-family: "Times New Roman", Times, serif !important;
     font-size: 12pt !important;
     line-height: 1.5 !important;
+    color: #000 !important;
 }
 
-/* ============ 4. MOBILE PREVIEW (Zoom Fix) ============ */
+/* ============ 3. MOBILE PREVIEW FIX (The "Zoom Out" Logic) ============ */
 @media screen and (max-width: 850px) {
     #preview-wrapper {
-        /* Reset padding to allow full width scaling */
-        padding: 20px 0 !important;
+        padding: 10px 0 !important;
         overflow-x: hidden !important;
-        overflow-y: auto !important;
-        width: 100% !important;
+        width: 100vw !important;
         display: flex !important;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        background: #f0f0f5 !important; /* Lighter bg for mobile */
     }
 
     #preview {
-        /* Keep A4 Size */
-        width: 210mm !important;
+        /* Force exact A4 dimensions */
+        width: 210mm !important; 
         min-width: 210mm !important;
+        max-width: 210mm !important;
         
-        /* SCALING MAGIC */
-        transform-origin: top center;
-        /* Using 800px as base A4 width for safety */
-        /* Formula: Scale = DeviceWidth / 800 */
-        transform: scale(calc(90vw / 800)) !important; 
+        /* 
+           SCALE LOGIC:
+           A4 Width = 210mm ≈ 794px
+           Mobile Screen ≈ 360px - 400px
+           Scale Factor ≈ 0.45 
+        */
+        transform: scale(0.42) !important; 
+        transform-origin: top center !important;
         
+        /* Reset layout for scaled element */
         margin: 0 !important;
-        margin-bottom: 20px !important;
+        margin-top: 10px !important;
+        
+        /* Fix the empty space below caused by scaling */
+        margin-bottom: -50% !important; 
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
     }
 }
 
-/* ============ 5. PRINT MODE (Nuclear Reset) ============ */
+/* ============ 4. PRINT FIX (The "Blank Page" Killer) ============ */
 @media print {
-    /* 1. Reset Root */
+    /* RESET EVERYTHING */
     :root, html, body {
-        height: auto !important;
         width: 100% !important;
-        overflow: visible !important;
+        height: auto !important;
         margin: 0 !important;
         padding: 0 !important;
+        overflow: visible !important;
         background: white !important;
         display: block !important;
-        position: static !important;
     }
 
-    /* 2. Hide UI Chrome (Add every possible wrapper class) */
-    .app-container, .main-layout, header, nav, aside, footer,
-    .controls-panel, .status-bar, .toolbar-buttons, button, 
-    .mobile-header, .tab-navigation, .preview-toolbar, 
-    .page-break-indicator, .tab-panel:not(.active) {
+    /* HIDE UI */
+    .app-container, header, nav, footer, aside,
+    .controls-panel, .status-bar, .toolbar-buttons,
+    .mobile-header, .tab-navigation, .preview-toolbar,
+    .page-break-indicator, .tab-panel:not(#tab-preview) {
         display: none !important;
     }
 
-    /* 3. Force Wrapper to be Invisible Container */
-    #preview-wrapper, .tab-panel, .mobile-content, .content, #tab-preview {
+    /* UNWRAP CONTENT */
+    #preview-wrapper, .mobile-content, .tab-panel, .content {
         position: static !important;
         display: block !important;
-        visibility: visible !important;
+        overflow: visible !important;
         height: auto !important;
         width: 100% !important;
-        overflow: visible !important;
-        background: transparent !important;
-        padding: 0 !important;
         margin: 0 !important;
-        border: none !important;
+        padding: 0 !important;
+        background: transparent !important;
         transform: none !important;
+        border: none !important;
     }
 
-    /* 4. Force The Page */
+    /* FORCE PAGE VISIBILITY */
     #preview {
-        /* Let @page handle size */
-        width: 100% !important; 
-        max-width: none !important;
+        /* Let the printer determine width */
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        
+        /* Reset positioning */
         margin: 0 !important;
-        padding: 0 !important; /* @page handles margins */
-        
-        /* Reset Screen Styles */
+        padding: 0 !important; /* Margins handled by @page */
         position: static !important;
-        display: block !important;
-        float: none !important;
-        transform: none !important; /* NO SCALING */
-        box-shadow: none !important;
-        border: none !important;
         
-        /* Ensure Visibility */
+        display: block !important;
         visibility: visible !important;
         overflow: visible !important;
-        page-break-inside: auto !important;
+        
+        /* Disable effects */
+        transform: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        float: none !important;
     }
-
-    /* 5. Content Resets */
+    
+    /* Ensure content inside prints */
     #preview * {
         visibility: visible !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
+    
+    /* Page Breaks */
+    .page-break-before { page-break-before: always !important; height: 1px; display: block; }
+    h1, h2 { page-break-after: avoid !important; }
+    table, tr, td { page-break-inside: avoid !important; }
 }
-
-/* ============ 6. TYPOGRAPHY (Word Exact) ============ */
-#preview h1 { font-size: 16pt; font-weight: bold; text-transform: uppercase; text-align: center; margin-bottom: 24pt; border-bottom: 2px solid #000; padding-bottom: 4pt; color: #000; }
-#preview h2 { font-size: 14pt; font-weight: bold; margin-top: 18pt; margin-bottom: 12pt; background-color: #f2f2f2; padding: 2pt 8pt; border-left: 4pt solid #000; color: #000; }
-#preview h3 { font-size: 12pt; font-weight: bold; margin-top: 14pt; margin-bottom: 6pt; text-decoration: underline; color: #000; }
-#preview p, #preview li { font-size: 12pt; margin-bottom: 12pt; text-align: justify; widows: 3; orphans: 3; color: #000; }
-#preview table { width: 100%; border-collapse: collapse; margin-bottom: 14pt; border: 1px solid #000; page-break-inside: avoid; }
-#preview th, #preview td { border: 1px solid #000; padding: 6pt; vertical-align: top; font-size: 11pt; color: #000; }
-#preview th { background-color: #e6e6e6; font-weight: bold; text-align: center; }
-.page-break-indicator { border-top: 1px dashed #999; color: #999; font-size: 10px; text-align: center; margin: 20px 0; }
