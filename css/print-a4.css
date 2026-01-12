@@ -1,20 +1,35 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- * SOP PRINT STYLES - FINAL MOBILE & PRINT FIX
+ * MS WORD A4 WYSIWYG PRINT STYLES - FINAL VALIDATED
+ * Matches Microsoft Word's default A4 layout (210mm x 297mm)
+ * Fixed: CSS Syntax Errors, Mobile Zoom, Desktop Blank Pages
  * ═══════════════════════════════════════════════════════════════════
  */
 
 /* ============ 1. PAGE SETUP ============ */
 @page {
     size: A4 portrait;
-    margin: 15mm; /* Slightly safer margin */
+    margin: 20mm;
 }
 
-/* ============ 2. DESKTOP PREVIEW ============ */
+/* ============ 2. PAGE BREAKS ============ */
+.page-break-before {
+    page-break-before: always !important;
+    break-before: page !important;
+    display: block;
+    height: 1px;
+    margin: 0;
+}
+.page-break-after {
+    page-break-after: always !important;
+    break-after: page !important;
+}
+
+/* ============ 3. DESKTOP PREVIEW ============ */
 #preview-wrapper {
     background: #525659;
     padding: 30px 0;
-    overflow: auto;
+    overflow-y: auto;
     height: 100vh;
     display: block;
     text-align: center;
@@ -24,49 +39,54 @@
     width: 210mm !important;
     min-height: 297mm !important;
     height: auto !important;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     padding: 20mm !important;
     background: white !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     text-align: left;
     display: inline-block;
     position: relative;
     box-sizing: border-box;
-
+    
     font-family: "Times New Roman", Times, serif !important;
     font-size: 12pt !important;
     line-height: 1.5 !important;
     color: #000 !important;
 }
 
-/* ============ 4. MOBILE PREVIEW (Scrollable - High Fidelity) ============ */
+/* ============ 4. MOBILE PREVIEW (Readable Zoom) ============ */
 @media screen and (max-width: 850px) {
     #preview-wrapper {
-        display: block !important;
-        padding: 20px 10px !important;
-        /* Allow horizontal scroll so the A4 paper keeps its integrity */
-        overflow-x: auto !important; 
-        -webkit-overflow-scrolling: touch;
-        background: #f0f0f5 !important;
-        text-align: left !important; /* Align left so scrolling feels natural */
+        padding: 10px 0 !important;
+        overflow-x: hidden !important;
+        background: #e0e0e5 !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        height: auto !important;
+        min-height: 100vh !important;
     }
 
     #preview {
-        /* Keep Exact A4 dimensions - DO NOT SHRINK */
-        /* Shrinking breaks the "Word-like" layout flow */
+        /* Keep A4 Size but Scale Down */
         width: 210mm !important;
         min-width: 210mm !important;
         
-        /* No Transform - Just let it be a document */
-        transform: none !important; 
-        margin: 0 auto !important;
+        /* 
+           STANDARD TRANSFORM 
+           (Replaced -moz- specific properties with standard ones)
+        */
+        transform: scale(0.45);
+        transform-origin: top center;
         
-        /* Ensure it looks like a paper */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+        margin: 0 !important;
+        /* Negative margin to pull footer up since element shrunk */
+        margin-bottom: -150px !important; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
     }
 }
 
-/* ============ 4. PRINT FIX (The "Blank Page" Killer) ============ */
+/* ============ 5. PRINT MODE (Layout Unlock) ============ */
 @media print {
     /* RESET EVERYTHING */
     :root, html, body {
@@ -88,7 +108,7 @@
     }
 
     /* UNWRAP CONTENT */
-    #preview-wrapper, .mobile-content, .tab-panel, .content {
+    #preview-wrapper {
         position: static !important;
         display: block !important;
         overflow: visible !important;
@@ -97,42 +117,41 @@
         margin: 0 !important;
         padding: 0 !important;
         background: transparent !important;
-        transform: none !important;
-        border: none !important;
     }
 
-    /* FORCE PAGE VISIBILITY */
+    /* PAGE CONTENT */
     #preview {
-        /* Let the printer determine width */
         width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        
-        /* Reset positioning */
+        max-width: none !important;
         margin: 0 !important;
         padding: 0 !important; /* Margins handled by @page */
         position: static !important;
-        
         display: block !important;
         visibility: visible !important;
         overflow: visible !important;
         
-        /* Disable effects */
+        /* Reset Effects */
         transform: none !important;
         box-shadow: none !important;
         border: none !important;
-        float: none !important;
     }
-    
-    /* Ensure content inside prints */
-    #preview * {
-        visibility: visible !important;
+
+    /* Ensure Print Colors */
+    * {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
-    
-    /* Page Breaks */
-    .page-break-before { page-break-before: always !important; height: 1px; display: block; }
-    h1, h2 { page-break-after: avoid !important; }
-    table, tr, td { page-break-inside: avoid !important; }
+}
+
+/* ============ 6. JS PRINT HELPER ============ */
+body.printing-mode .app-container,
+body.printing-mode header,
+body.printing-mode nav,
+body.printing-mode aside { display: none !important; }
+
+body.printing-mode #preview-wrapper {
+    position: static !important;
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
 }

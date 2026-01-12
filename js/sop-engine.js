@@ -1,13 +1,13 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- * SOP ENGINE v4.0 - MODULAR ARCHITECTURE
+ * SOP ENGINE v4.2 - MODULAR ARCHITECTURE (FIXED)
  * 
  * MODULES:
  * 1. ConfigModule   - Settings & Path Detection
  * 2. UtilsModule    - Helpers (Logging, DOM)
  * 3. DataModule     - API Calls & Caching
  * 4. TemplateModule - Rendering Logic
- * 5. ExportModule   - PDF & Printing
+ * 5. ExportModule   - Print, PDF & DOCX
  * 6. UIModule       - DOM Elements & Event Listeners
  * 7. CoreModule     - Main Application Logic
  * ═══════════════════════════════════════════════════════════════════
@@ -22,8 +22,8 @@ window.initSOPApp = function () {
     const ConfigModule = {
         DEBUG: true,
         PATHS: {
-            DATA: null,      // Auto-detected later
-            TEMPLATES: null  // Auto-detected later
+            DATA: null,      // Auto-detected
+            TEMPLATES: null  // Auto-detected
         },
         DEFAULTS: {
             RESPONSIBILITY: 'Laboratory In-charge, faculty members, technical staff, and authorized users are responsible for implementation and compliance of this SOP.',
@@ -37,10 +37,8 @@ window.initSOPApp = function () {
     const UtilsModule = {
         log: (...args) => ConfigModule.DEBUG && console.log(...args),
         error: (...args) => console.error(...args),
-        
         $: (id) => document.getElementById(id),
         
-        // Safe string escape for HTML
         escapeHtml: (str) => {
             if (typeof str !== 'string') return str;
             return str.replace(/&/g, "&amp;")
@@ -62,12 +60,10 @@ window.initSOPApp = function () {
         },
 
         async resolvePaths() {
-            const candidates = ['../', './']; // Try parent (partials) then current (root)
-            
+            const candidates = ['../', './'];
             for (const prefix of candidates) {
                 try {
-                    const testUrl = `${prefix}data/departments.json?v=${Date.now()}`;
-                    const res = await fetch(testUrl);
+                    const res = await fetch(`${prefix}data/departments.json?v=${Date.now()}`);
                     if (res.ok) {
                         ConfigModule.PATHS.DATA = `${prefix}data/`;
                         ConfigModule.PATHS.TEMPLATES = `${prefix}templates/`;
@@ -76,11 +72,9 @@ window.initSOPApp = function () {
                     }
                 } catch (e) { /* continue */ }
             }
-            
             // Fallback
             ConfigModule.PATHS.DATA = '../data/';
             ConfigModule.PATHS.TEMPLATES = '../templates/';
-            UtilsModule.log('⚠️ Path detection failed. Using default: ../data/');
             return false;
         },
 
@@ -93,11 +87,9 @@ window.initSOPApp = function () {
 
         async fetchTemplate(filename) {
             if (this.cache.templates[filename]) return this.cache.templates[filename];
-            
             const url = `${ConfigModule.PATHS.TEMPLATES}${filename}.html`;
             const res = await fetch(`${url}?v=${Date.now()}`);
             if (!res.ok) throw new Error(`Failed to load template: ${filename}`);
-            
             const text = await res.text();
             this.cache.templates[filename] = text;
             return text;
@@ -106,7 +98,6 @@ window.initSOPApp = function () {
         async getSOP(dept, sopId) {
             const key = `${dept}/${sopId}`;
             if (this.cache.sops[key]) return this.cache.sops[key];
-
             const data = await this.fetchJSON(`${dept}/${sopId}.json`);
             this.cache.sops[key] = data;
             return data;
@@ -121,19 +112,18 @@ window.initSOPApp = function () {
             if (!templateStr) return '';
             let html = templateStr;
 
-            // 1. Conditional Blocks: {{#if key}}...{{/if}}
+            // Conditional Blocks: {{#if key}}...{{/if}}
             html = html.replace(/\{\{#if ([^}]+)\}\}([\s\S]*?)\{\{\/if\}\}/g, (match, key, content) => {
                 const val = data[key];
                 const isTruthy = val && (Array.isArray(val) ? val.length > 0 : String(val).trim() !== '');
                 return isTruthy ? content : '';
             });
 
-            // 2. Variable Replacement: {{key}}
+            // Variable Replacement: {{key}}
             Object.keys(data).forEach(key => {
                 let value = data[key];
                 if (value === undefined || value === null) value = '';
 
-                // Auto-escape unless it's a known rich-text field
                 if (typeof value === 'string') {
                     const isRichText = ['procedure', 'changeHistoryRows'].includes(key);
                     if (!isRichText && /[<>]/.test(value)) {
@@ -145,7 +135,6 @@ window.initSOPApp = function () {
                 html = html.replace(regex, value);
             });
 
-            // 3. Cleanup empty tags
             return html.replace(/\{\{[^}]+\}\}/g, '');
         },
 
@@ -162,10 +151,11 @@ window.initSOPApp = function () {
         }
     };
 
-        // ════════════════════════════════════════════════════════════════
-    // 5. EXPORT MODULE (Print & PDF) - IFRAME METHOD (Guaranteed Fix)
+    // ════════════════════════════════════════════════════════════════
+    // 5. EXPORT MODULE (Print, PDF & DOCX)
     // ════════════════════════════════════════════════════════════════
     const ExportModule = {
+        // [FIXED] LAYOUT UNLOCK PRINT METHOD
         print() {
             const preview = UtilsModule.$('preview') || UtilsModule.$('preview-content');
             if (!preview || !preview.innerHTML.trim()) {
@@ -173,70 +163,39 @@ window.initSOPApp = function () {
                 return;
             }
 
-            // Create a hidden iframe
-            const iframe = document.createElement('iframe');
-            iframe.style.position = 'absolute';
-            iframe.style.width = '0px';
-            iframe.style.height = '0px';
-            iframe.style.border = 'none';
-            document.body.appendChild(iframe);
+            // 1. SAVE STATE
+            const originalBodyStyle = document.body.style.cssText;
+            const originalWrapperStyle = UtilsModule.$('preview-wrapper').style.cssText;
 
-            const doc = iframe.contentWindow.document;
-            
-            // Write the clean document structure
-            // We inline the CSS to ensure it renders exactly as intended without external interference
-            doc.write(`
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <title>SOP Print</title>
-                    <style>
-                        @page { size: A4; margin: 15mm; }
-                        body { margin: 0; padding: 0; font-family: "Times New Roman", serif; }
-                        #print-content { width: 100%; max-width: 210mm; margin: 0 auto; }
-                        
-                        /* Core Word-like Styles */
-                        h1 { font-size: 16pt; font-weight: bold; text-align: center; text-transform: uppercase; border-bottom: 2px solid #000; padding-bottom: 5px; margin-bottom: 20px; }
-                        h2 { font-size: 14pt; font-weight: bold; background: #f0f0f0; padding: 2px 5px; border-left: 4px solid #000; margin-top: 20px; }
-                        h3 { font-size: 12pt; font-weight: bold; text-decoration: underline; margin-top: 15px; }
-                        p, li, td { font-size: 12pt; line-height: 1.5; text-align: justify; }
-                        table { width: 100%; border-collapse: collapse; margin: 15px 0; border: 1px solid #000; }
-                        th, td { border: 1px solid #000; padding: 5px; vertical-align: top; }
-                        th { background: #e0e0e0; font-weight: bold; text-align: center; }
-                        
-                        /* Page Breaks */
-                        .page-break-before { page-break-before: always; height: 0; display: block; }
-                        
-                        /* Hide Screen Indicators */
-                        .page-break-indicator { display: none; }
-                    </style>
-                </head>
-                <body>
-                    <div id="print-content">
-                        ${preview.innerHTML}
-                    </div>
-                </body>
-                </html>
-            `);
-            doc.close();
+            // 2. UNLOCK LAYOUT (Force browser to see full document flow)
+            document.body.style.cssText = "height: auto !important; overflow: visible !important; position: static !important; display: block !important;";
+            document.body.classList.add('printing-mode');
 
-            // Print after slight delay to allow rendering
-            iframe.contentWindow.focus();
+            // 3. PRINT
+            window.print();
+
+            // 4. RESTORE STATE
             setTimeout(() => {
-                iframe.contentWindow.print();
-                // cleanup
-                setTimeout(() => document.body.removeChild(iframe), 1000);
+                document.body.classList.remove('printing-mode');
+                document.body.style.cssText = originalBodyStyle;
+                UtilsModule.$('preview-wrapper').style.cssText = originalWrapperStyle;
             }, 500);
         },
 
         async generatePDF(filename) {
-           // ... (Keep your existing PDF logic, it works fine) ...
-           if (typeof html2pdf === 'undefined') {
+            if (confirm('For best quality and editable text, please choose "Save as PDF" in the print dialog.\n\nClick OK to open Print Dialog, or Cancel to use the image-based generator.')) {
+                this.print();
+                return;
+            }
+
+            if (typeof html2pdf === 'undefined') {
                 alert('PDF library not loaded.');
                 return;
             }
-            const element = UtilsModule.$('preview');
-            // Clone and clean
+
+            const element = UtilsModule.$('preview') || UtilsModule.$('preview-content');
+            if (!element) return;
+
             const clone = element.cloneNode(true);
             clone.querySelectorAll('.page-break-indicator').forEach(el => el.remove());
 
@@ -244,10 +203,39 @@ window.initSOPApp = function () {
                 margin: [10, 10, 10, 10],
                 filename: filename || 'document.pdf',
                 image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2, useCORS: true },
+                html2canvas: { scale: 2, useCORS: true, letterRendering: true },
                 jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
             };
+
             await html2pdf().set(opt).from(clone).save();
+        },
+
+        // [NEW] SAVE AS DOCX
+        async saveDOCX(filename) {
+            const preview = UtilsModule.$('preview') || UtilsModule.$('preview-content');
+            if (!preview || !preview.innerHTML.trim()) {
+                alert('Please generate a document first.');
+                return;
+            }
+
+            if (typeof htmlDocx === 'undefined') {
+                alert('DOCX library (html-docx-js) not found. Add the script tag to index.html.');
+                return;
+            }
+
+            const content = `<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+                body { font-family: 'Times New Roman', serif; font-size: 12pt; }
+                table { width: 100%; border-collapse: collapse; border: 1px solid #000; }
+                td, th { border: 1px solid #000; padding: 5px; }
+            </style></head><body>${preview.innerHTML}</body></html>`;
+
+            try {
+                const converted = htmlDocx.asBlob(content, { orientation: 'portrait' });
+                saveAs(converted, filename || 'document.docx');
+            } catch (e) {
+                console.error(e);
+                alert('Error generating DOCX.');
+            }
         }
     };
 
@@ -258,7 +246,6 @@ window.initSOPApp = function () {
         elements: {},
         
         init() {
-            // Cache essential elements
             this.elements = {
                 preview: UtilsModule.$('preview') || UtilsModule.$('preview-content'),
                 deptSelect: UtilsModule.$('departmentSelect'),
@@ -268,14 +255,24 @@ window.initSOPApp = function () {
                 pdfBtn: UtilsModule.$('print-btn')
             };
 
-            if (!this.elements.deptSelect) {
-                UtilsModule.error('Critical UI elements missing');
-                return false;
+            // DYNAMIC BUTTON: DOCX Export
+            const toolbar = document.querySelector('.toolbar-buttons') || document.querySelector('.bottom-action-bar');
+            if (toolbar && !document.getElementById('docx-btn')) {
+                const btn = document.createElement('button');
+                btn.id = 'docx-btn';
+                btn.className = this.elements.pdfBtn ? this.elements.pdfBtn.className : 'action-btn';
+                btn.style.marginLeft = '10px';
+                btn.style.backgroundColor = '#2b5797';
+                btn.style.color = 'white';
+                btn.innerHTML = '💾 Word';
+                if (this.elements.pdfBtn) toolbar.insertBefore(btn, this.elements.pdfBtn);
+                else toolbar.appendChild(btn);
+                this.elements.docxBtn = btn;
             }
-            return true;
+
+            return !!this.elements.deptSelect;
         },
 
-        // Map of UI Input IDs to Data Keys
         inputMap: {
             'institute': 'institute', 'department': 'department', 'title': 'title',
             'sopNumber': 'sopNumber', 'revisionNo': 'revisionNo', 'effectiveDate': 'effectiveDate',
@@ -288,7 +285,6 @@ window.initSOPApp = function () {
             'approvedBy': 'approvedBy', 'approvedDesig': 'approvedDesig', 'approvedDate': 'approvedDate'
         },
 
-        // Map of Toggle IDs to Visibility Keys
         toggleMap: {
             'toggleDocControl': 'docControl', 'toggleApplicability': 'applicability',
             'toggleAbbreviations': 'abbreviations', 'toggleReferences': 'references',
@@ -327,14 +323,12 @@ window.initSOPApp = function () {
             Object.entries(this.toggleMap).forEach(([id, key]) => {
                 const el = UtilsModule.$(id);
                 const section = UtilsModule.$(`section${key.charAt(0).toUpperCase() + key.slice(1)}`);
-                
                 if (el) {
                     const isVisible = data.sectionsEnabled?.[key] || data.fieldsEnabled?.[key] || false;
                     el.checked = isVisible;
                 }
                 if (section) {
-                    const isVisible = data.sectionsEnabled?.[key];
-                    section.style.display = isVisible ? 'block' : 'none';
+                    section.style.display = data.sectionsEnabled?.[key] ? 'block' : 'none';
                 }
             });
         }
@@ -352,7 +346,6 @@ window.initSOPApp = function () {
 
         async init() {
             if (!UIModule.init()) return;
-
             await DataModule.resolvePaths();
 
             try {
@@ -362,48 +355,40 @@ window.initSOPApp = function () {
                 this.bindEvents();
             } catch (e) {
                 UtilsModule.error('Init failed', e);
-                UIModule.elements.preview.innerHTML = `<p style="color:red">Error loading departments: ${e.message}</p>`;
             }
         },
 
         bindEvents() {
-            // Department Change
             UIModule.elements.deptSelect.addEventListener('change', async (e) => {
                 const dept = e.target.value;
                 if (!dept) return;
-                
                 try {
                     const index = await DataModule.fetchJSON(`${dept}/index.json`);
                     UIModule.populateSOPs(index.instruments);
                 } catch (e) { console.error(e); }
             });
 
-            // SOP Change
             UIModule.elements.sopSelect.addEventListener('change', async (e) => {
                 const dept = UIModule.elements.deptSelect.value;
                 const sopId = e.target.value;
                 if (dept && sopId) await this.loadSOP(dept, sopId);
             });
 
-            // Template Change
             UIModule.elements.tmplSelect.addEventListener('change', (e) => {
                 this.state.templateName = e.target.value;
                 this.refreshPreview();
             });
 
-            // Input Changes
             Object.keys(UIModule.inputMap).forEach(id => {
                 const el = UtilsModule.$(id);
                 if (el) el.addEventListener('input', () => this.handleInput(id, el.value));
             });
 
-            // Toggle Changes
             Object.keys(UIModule.toggleMap).forEach(id => {
                 const el = UtilsModule.$(id);
                 if (el) el.addEventListener('change', () => this.handleToggle(id, el.checked));
             });
 
-            // Buttons
             if (UIModule.elements.printBtn) {
                 UIModule.elements.printBtn.addEventListener('click', () => ExportModule.print());
             }
@@ -420,26 +405,28 @@ window.initSOPApp = function () {
                     UIModule.elements.pdfBtn.disabled = false;
                 });
             }
+            // DOCX Event Listener
+            if (UIModule.elements.docxBtn) {
+                UIModule.elements.docxBtn.addEventListener('click', () => {
+                    const filename = `SOP_${this.state.sopData?.sopNumber || 'Draft'}.docx`;
+                    ExportModule.saveDOCX(filename);
+                });
+            }
         },
 
         async loadSOP(dept, sopId) {
             try {
                 const raw = await DataModule.getSOP(dept, sopId);
-                
-                // Initialize clean state
                 this.state.sopData = {
                     ...raw,
-                    // Standardize keys
                     title: raw.meta?.title || raw.title || '',
                     department: dept,
                     sopNumber: '', revisionNo: '00',
                     effectiveDate: '', revisionDate: '', nextReviewDate: '',
                     copyType: 'CONTROLLED',
                     responsibility: ConfigModule.DEFAULTS.RESPONSIBILITY,
-                    // Visibility Defaults
                     sectionsEnabled: { docControl: true, sopNumber: true, effectiveDate: true, copyType: true },
                     fieldsEnabled: { sopNumber: true, effectiveDate: true, revisionDate: true, copyType: true },
-                    // Content Defaults
                     procedure: raw.sections?.procedure || raw.procedure || [],
                     purpose: raw.sections?.purpose || raw.purpose || '',
                     scope: raw.sections?.scope || raw.scope || '',
@@ -449,15 +436,12 @@ window.initSOPApp = function () {
                 UIModule.syncInputs(this.state.sopData);
                 UIModule.syncToggles(this.state.sopData);
                 await this.refreshPreview();
-            } catch (e) {
-                UtilsModule.error(e);
-            }
+            } catch (e) { UtilsModule.error(e); }
         },
 
         handleInput(id, value) {
             if (!this.state.sopData) return;
             const key = UIModule.inputMap[id];
-            
             if (key === 'procedure') {
                 this.state.sopData[key] = value.split('\n').filter(l => l.trim());
             } else {
@@ -469,15 +453,9 @@ window.initSOPApp = function () {
         handleToggle(id, isChecked) {
             if (!this.state.sopData) return;
             const key = UIModule.toggleMap[id];
-            
-            // Update both objects to be safe
             if (!this.state.sopData.sectionsEnabled) this.state.sopData.sectionsEnabled = {};
-            if (!this.state.sopData.fieldsEnabled) this.state.sopData.fieldsEnabled = {};
-            
             this.state.sopData.sectionsEnabled[key] = isChecked;
-            this.state.sopData.fieldsEnabled[key] = isChecked;
-            
-            UIModule.syncToggles(this.state.sopData); // Update UI blocks
+            UIModule.syncToggles(this.state.sopData);
             this.refreshPreview();
         },
 
@@ -488,17 +466,11 @@ window.initSOPApp = function () {
 
         async refreshPreview() {
             if (!this.state.sopData) return;
-            
             const tmpl = await DataModule.fetchTemplate(this.state.templateName);
-            
-            // Prepare view data
             const viewData = { ...this.state.sopData };
-            
-            // Add formatted fields
             viewData.procedure = TemplateModule.formatProcedure(viewData.procedure);
             viewData.changeHistoryRows = TemplateModule.formatHistory(viewData.changeHistory);
             
-            // Add Section flags (e.g., sectionDocControl)
             if (viewData.sectionsEnabled) {
                 Object.keys(viewData.sectionsEnabled).forEach(k => {
                     const flagName = `section${k.charAt(0).toUpperCase() + k.slice(1)}`;
@@ -511,15 +483,9 @@ window.initSOPApp = function () {
         }
     };
 
-    // 🚀 BOOTSTRAP
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => CoreModule.init());
     } else {
         CoreModule.init();
     }
 };
-
-// Auto-start if not called manually
-if (typeof window.initSOPApp === 'function') {
-    window.initSOPApp();
-}
