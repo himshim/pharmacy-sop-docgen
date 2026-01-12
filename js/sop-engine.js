@@ -506,39 +506,3 @@ if (document.readyState === 'loading') {
         window.initSOPApp();
     }
 }
-// Add this at the END of sop-engine.js
-
-/* ==================== FORCE WHITE BACKGROUND EXPANSION ==================== */
-function forcePreviewHeight() {
-    const preview = document.getElementById('preview') || document.getElementById('preview-content');
-
-    if (preview) {
-        // Remove all height constraints
-        preview.style.height = 'auto';
-        preview.style.minHeight = '0';
-        preview.style.maxHeight = 'none';
-        preview.style.display = 'block';
-
-        console.log('✅ Forced preview height to auto');
-        console.log('Preview actual height:', preview.offsetHeight + 'px');
-    }
-}
-
-// Run after preview renders
-const originalRenderPreview = renderPreview;
-renderPreview = function() {
-    originalRenderPreview();
-
-    // Force height after render
-    setTimeout(() => {
-        forcePreviewHeight();
-    }, 100);
-};
-
-// Also run on window resize
-window.addEventListener('resize', forcePreviewHeight);
-
-// Run immediately
-setTimeout(forcePreviewHeight, 500);
-
-console.log('🔧 Height force-fix loaded');
