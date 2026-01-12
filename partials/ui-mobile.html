@@ -231,9 +231,6 @@
             <div class="credit-badge">
                 <p>Developed by</p>
                 <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
-                <p style="margin-top: 6px; font-size: 12px;">
-                    <a href="https://github.com/himshim/pharmacy-sop-docgen" target="_blank">View Source Code</a>
-                </p>
             </div>
         </div>
 
@@ -342,11 +339,8 @@
 
             <!-- Credit -->
             <div class="credit-badge">
-                <p>Original Source Code</p>
-                <a href="https://github.com/himshim/pharmacy-sop-docgen" target="_blank">himshim/pharmacy-sop-docgen</a>
-                <p style="margin-top: 12px; font-size: 12px;">
-                    Created by <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
-                </p>
+                <p>Created by</p>
+                <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
             </div>
         </div>
     </div>
@@ -357,13 +351,13 @@
         <button id="print-btn" class="action-btn btn-primary">💾 Save PDF</button>
     </div>
 
-    <!-- html2pdf.js Library for Perfect PDF Generation -->
+    <!-- html2pdf.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
             integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
             crossorigin="anonymous" 
             referrerpolicy="no-referrer"></script>
 
-    <!-- Tab Switching Script -->
+    <!-- Tab Switching & Expand Functions -->
     <script>
         function switchTab(index) {
             const tabs = document.querySelectorAll('.tab-btn');
@@ -383,19 +377,14 @@
             expandable.classList.toggle('open');
         }
 
-        // Add active class to toggle items when checked
+        // Toggle active state for toggle items
         document.addEventListener('DOMContentLoaded', function() {
             const toggleItems = document.querySelectorAll('.toggle-item');
             toggleItems.forEach(item => {
                 const checkbox = item.querySelector('input[type="checkbox"]');
                 checkbox.addEventListener('change', function() {
-                    if(this.checked) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
+                    item.classList.toggle('active', this.checked);
                 });
-                // Set initial state
                 if(checkbox.checked) {
                     item.classList.add('active');
                 }
@@ -403,7 +392,7 @@
         });
     </script>
 
-    <!-- SOP Engine with html2pdf Integration -->
+    <!-- SOP Engine -->
     <script src="../js/sop-engine.js"></script>
 </body>
 </html>

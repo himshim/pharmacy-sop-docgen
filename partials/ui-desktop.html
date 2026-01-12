@@ -16,8 +16,8 @@
                     <p>Create professional Standard Operating Procedures with ease</p>
                 </div>
                 <div class="header-right">
-                    <span class="version-badge">Pharma</span>
-                    <a href="https://github.com/himshim/pharmacy-sop-docgen" target="_blank" class="credit-link">
+                    <span class="version-badge">Pharma Edition</span>
+                    <a href="https://github.com/himshim26" target="_blank" class="credit-link">
                         Created by @himshim26
                     </a>
                 </div>
@@ -287,10 +287,10 @@
                 <div class="preview-toolbar">
                     <h2><span>📄</span> Document Preview</h2>
                     <div class="toolbar-buttons">
-                        <button class="btn-secondary" onclick="window.print()" data-tooltip="Print Document">
+                        <button class="btn-secondary" onclick="window.print()">
                             🖨️ Print
                         </button>
-                        <button id="print-btn" class="btn-primary" data-tooltip="Save as PDF">
+                        <button id="print-btn" class="btn-primary">
                             💾 Save as PDF
                         </button>
                     </div>
@@ -314,29 +314,25 @@
                     <span class="status-dot"></span>
                     <span>Ready</span>
                 </div>
-                <span>SOP Generator</span>
+                <span>SOP Generator v2.0</span>
             </div>
             <div class="credit-footer">
                 <span>Developed by</span>
                 <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
-                <span>•</span>
-                <a href="https://github.com/himshim/pharmacy-sop-docgen" target="_blank">
-                    View Source
-                </a>
             </div>
         </footer>
     </div>
 
-    <!-- html2pdf.js Library for Perfect PDF Generation -->
+    <!-- html2pdf.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
             integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
             crossorigin="anonymous" 
             referrerpolicy="no-referrer"></script>
 
-    <!-- SOP Engine with html2pdf Integration -->
+    <!-- SOP Engine -->
     <script src="../js/sop-engine.js"></script>
 
-    <!-- Collapsible Sections Script -->
+    <!-- Collapsible Sections Handler -->
     <script>
         document.querySelectorAll('.collapsible-header').forEach(header => {
             header.addEventListener('click', () => {
