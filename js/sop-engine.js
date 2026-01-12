@@ -1,7 +1,7 @@
 window.initSOPApp = function () {
     'use strict';
 
-    console.log('🚀 Initializing SOP App v2.0.1 (Fixed)...');
+    console.log('🚀 Initializing SOP App v2.0.2 (REAL FIX)...');
 
     /* ========================= CONSTANTS ========================= */
     const DEFAULT_RESPONSIBILITY = "Laboratory In-charge, faculty members, technical staff, and authorized users are responsible for implementation and compliance of this SOP.";
@@ -178,24 +178,37 @@ window.initSOPApp = function () {
 
             departmentSelect.innerHTML = `<option value="">-- Select Department --</option>`;
 
+            let addedCount = 0;
             d.departments.forEach((dep) => {
-                if (dep.folder && dep.name) {
+                // ⭐ REAL FIX: Accept both 'folder' AND 'key' properties
+                const folderValue = dep.folder || dep.key;
+                const nameValue = dep.name;
+
+                if (folderValue && nameValue) {
                     const option = document.createElement('option');
-                    option.value = dep.folder;
-                    option.textContent = dep.name;
+                    option.value = folderValue;
+                    option.textContent = nameValue;
                     departmentSelect.appendChild(option);
-                    console.log(`  ✓ Added department: ${dep.name} (${dep.folder})`);
+                    addedCount++;
+                    console.log(`  ✓ Added department: ${nameValue} (${folderValue})`);
+                } else {
+                    console.warn(`  ⚠️  Skipped invalid department:`, dep);
+                    console.warn(`     Missing: ${!folderValue ? 'folder/key' : ''} ${!nameValue ? 'name' : ''}`);
                 }
             });
 
-            console.log(`✅ Loaded ${d.departments.length} departments successfully`);
+            if (addedCount === 0) {
+                throw new Error('No valid departments found. Each department needs "folder" (or "key") and "name" properties.');
+            }
+
+            console.log(`✅ Loaded ${addedCount} departments successfully`);
 
             preview.innerHTML = `
                 <div style="text-align: center; padding: 60px 20px; color: #666;">
                     <div style="font-size: 48px; margin-bottom: 20px;">📂</div>
                     <h3 style="margin-bottom: 12px; color: #333;">Welcome to SOP Generator</h3>
                     <p>Select a department from the dropdown to begin</p>
-                    <p style="font-size: 12px; color: #999; margin-top: 16px;">${d.departments.length} departments available</p>
+                    <p style="font-size: 12px; color: #999; margin-top: 16px;">${addedCount} departments available</p>
                 </div>
             `;
         })
@@ -260,26 +273,32 @@ window.initSOPApp = function () {
                 throw new Error(`No SOPs found in ${indexPath}. Expected array in "instruments", "sops", "items" property or direct array.`);
             }
 
+            let addedSopCount = 0;
             sopList.forEach((sop) => {
                 if (sop.file && sop.name) {
                     const option = document.createElement('option');
                     option.value = sop.file;
                     option.textContent = sop.name;
                     sopSelect.appendChild(option);
+                    addedSopCount++;
                     console.log(`  ✓ Added SOP: ${sop.name} (${sop.file})`);
                 } else {
                     console.warn(`  ⚠️  Skipped invalid SOP:`, sop);
                 }
             });
 
+            if (addedSopCount === 0) {
+                throw new Error('No valid SOPs found. Each SOP needs "file" and "name" properties.');
+            }
+
             sopSelect.disabled = false;
-            console.log(`✅ Loaded ${sopList.length} SOPs successfully`);
+            console.log(`✅ Loaded ${addedSopCount} SOPs successfully`);
 
             preview.innerHTML = `
                 <div style="text-align: center; padding: 60px 20px; color: #666;">
                     <div style="font-size: 48px; margin-bottom: 20px;">📄</div>
                     <p style="font-size: 18px; margin-bottom: 8px;">Select an SOP to preview</p>
-                    <p style="font-size: 12px; color: #999;">${sopList.length} SOPs available in ${dept}</p>
+                    <p style="font-size: 12px; color: #999;">${addedSopCount} SOPs available in ${dept}</p>
                 </div>
             `;
         } catch (e) {
@@ -560,9 +579,10 @@ window.initSOPApp = function () {
         }
     }
 
-    console.log('✅ SOP App v2.0.1 initialized successfully');
+    console.log('✅ SOP App v2.0.2 initialized successfully');
     console.log('📊 Status: Waiting for user to select department...');
 };
 
 // Make sure it's available globally
-console.log('📦 sop-engine.js v2.0.1 loaded successfully');
+console.log('📦 sop-engine.js v2.0.2 loaded successfully');
+console.log('🔧 FIX APPLIED: Now accepts both "folder" and "key" properties in departments.json');
