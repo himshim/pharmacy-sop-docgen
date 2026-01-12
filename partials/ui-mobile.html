@@ -2,329 +2,250 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/ui-mobile.css">
-    <link rel="stylesheet" href="../css/print-a4.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SOP Generator - Mobile</title>
+    <link rel="stylesheet" href="css/ui-mobile.css">
+    <link rel="stylesheet" href="css/print-a4.css">
 </head>
 <body>
     <div class="mobile-container">
-        <!-- Mobile Header -->
+        <!-- Header -->
         <header class="mobile-header">
             <h1>📋 SOP Generator</h1>
-            <p>Professional Document Creator</p>
+            <p>Mobile Version</p>
         </header>
 
         <!-- Tab Navigation -->
         <nav class="tab-navigation">
-            <button class="tab-btn active" data-tab="tab-create" aria-label="Create Tab">
-                ✏️ Create
-            </button>
-            <button class="tab-btn" data-tab="tab-preview" aria-label="Preview Tab">
-                👁️ Preview
-            </button>
-            <button class="tab-btn" data-tab="tab-settings" aria-label="Settings Tab">
-                ⚙️ Settings
-            </button>
+            <button class="tab-btn active" data-tab="form">📝 Form</button>
+            <button class="tab-btn" data-tab="preview">👁️ Preview</button>
         </nav>
 
         <!-- Tab Content -->
         <div class="tab-container">
-            <!-- CREATE TAB -->
-            <div class="tab-panel active" id="tab-create">
+            <!-- Form Tab -->
+            <div id="tab-form" class="tab-panel active">
                 <div class="form-wrapper">
-                    <!-- Basic Info -->
-                    <div class="card">
-                        <h2 class="card-title">📂 Select Document</h2>
+                    <div class="form-section">
+                        <h3>Select Department & SOP</h3>
 
                         <div class="form-group">
                             <label for="departmentSelect">Department</label>
-                            <select id="departmentSelect" class="form-control" aria-label="Select Department">
-                                <option value="">-- Loading... --</option>
+                            <select id="departmentSelect">
+                                <option value="">Loading...</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="sopSelect">SOP</label>
-                            <select id="sopSelect" class="form-control" disabled aria-label="Select SOP">
-                                <option value="">-- Select Department First --</option>
+                            <select id="sopSelect" disabled>
+                                <option value="">Select Department First</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="templateSelect">Template</label>
-                            <select id="templateSelect" class="form-control" aria-label="Select Template">
-                                <option value="sop-a4-classic.html">Classic</option>
-                                <option value="sop-a4-iso.html">ISO Format</option>
-                                <option value="sop-a4-pci.html">PCI Compliant</option>
-                                <option value="sop-a4-naac.html">NAAC Format</option>
+                            <select id="templateSelect">
+                                <option value="sop-a4-classic">Classic</option>
+                                <option value="sop-a4-iso">ISO Format</option>
+                                <option value="sop-a4-pci">PCI Format</option>
+                                <option value="sop-a4-naac">NAAC Format</option>
                             </select>
                         </div>
                     </div>
 
-                    <!-- Institute Details -->
-                    <div class="card">
-                        <h2 class="card-title">🏫 Institute Details</h2>
+                    <div class="form-section">
+                        <h3>Document Details</h3>
 
                         <div class="form-group">
-                            <label for="institute">Institute Name</label>
-                            <input type="text" id="institute" class="form-control" placeholder="Enter institute name">
+                            <label for="institute">Institution Name</label>
+                            <input type="text" id="institute" placeholder="Your Institution">
                         </div>
 
                         <div class="form-group">
-                            <label for="department">Department Name</label>
-                            <input type="text" id="department" class="form-control" placeholder="e.g., Quality Assurance">
+                            <label for="department">Department</label>
+                            <input type="text" id="department" placeholder="Department">
                         </div>
 
                         <div class="form-group">
                             <label for="title">SOP Title</label>
-                            <input type="text" id="title" class="form-control" placeholder="Enter SOP title">
+                            <input type="text" id="title" placeholder="SOP Title">
                         </div>
-                    </div>
-
-                    <!-- Document Control -->
-                    <div class="card" id="sectionDocControl">
-                        <h2 class="card-title">📋 Document Control</h2>
 
                         <div class="form-group">
                             <label for="sopNumber">SOP Number</label>
-                            <input type="text" id="sopNumber" class="form-control" placeholder="e.g., QA/SOP/001">
+                            <input type="text" id="sopNumber" placeholder="SOP/001/2026">
                         </div>
 
                         <div class="form-group">
                             <label for="revisionNo">Revision No.</label>
-                            <input type="text" id="revisionNo" class="form-control" value="00">
+                            <input type="text" id="revisionNo" value="00">
                         </div>
 
                         <div class="form-group">
                             <label for="effectiveDate">Effective Date</label>
-                            <input type="date" id="effectiveDate" class="form-control">
+                            <input type="date" id="effectiveDate">
                         </div>
 
                         <div class="form-group">
-                            <label for="revisionDate">Revision Date</label>
-                            <input type="date" id="revisionDate" class="form-control">
+                            <label for="revisionDate">Last Revision Date</label>
+                            <input type="date" id="revisionDate">
                         </div>
 
                         <div class="form-group">
                             <label for="nextReviewDate">Next Review Date</label>
-                            <input type="date" id="nextReviewDate" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="copyType">Copy Type</label>
-                            <select id="copyType" class="form-control">
-                                <option value="CONTROLLED">Controlled</option>
-                                <option value="UNCONTROLLED">Uncontrolled</option>
-                            </select>
+                            <input type="date" id="nextReviewDate">
                         </div>
                     </div>
 
-                    <!-- Main Content -->
-                    <div class="card">
-                        <h2 class="card-title">📝 Content</h2>
+                    <div class="form-section">
+                        <h3>SOP Content</h3>
 
                         <div class="form-group">
                             <label for="purpose">Purpose</label>
-                            <textarea id="purpose" class="form-control" rows="3" placeholder="Enter purpose..."></textarea>
+                            <textarea id="purpose" rows="3"></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="scope">Scope</label>
-                            <textarea id="scope" class="form-control" rows="3" placeholder="Define scope..."></textarea>
+                            <textarea id="scope" rows="3"></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="responsibility">Responsibility</label>
-                            <textarea id="responsibility" class="form-control" rows="3" placeholder="Who is responsible?"></textarea>
+                            <textarea id="responsibility" rows="3"></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="procedure">Procedure</label>
-                            <textarea id="procedure" class="form-control" rows="6" placeholder="Enter procedure steps (one per line)..."></textarea>
+                            <label for="procedure">Procedure (one per line)</label>
+                            <textarea id="procedure" rows="5"></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="precautions">Precautions</label>
-                            <textarea id="precautions" class="form-control" rows="4" placeholder="Safety precautions..."></textarea>
+                            <textarea id="precautions" rows="3"></textarea>
                         </div>
                     </div>
 
-                    <!-- Optional Sections -->
-                    <div class="card" id="sectionApplicability" style="display: none;">
-                        <h2 class="card-title">📌 Applicability</h2>
+                    <div class="form-section">
+                        <h3>Signatures</h3>
+
                         <div class="form-group">
-                            <textarea id="applicability" class="form-control" rows="3" placeholder="Where this SOP applies..."></textarea>
+                            <label for="preparedBy">Prepared By</label>
+                            <input type="text" id="preparedBy">
                         </div>
-                    </div>
 
-                    <div class="card" id="sectionAbbreviations" style="display: none;">
-                        <h2 class="card-title">🔤 Abbreviations</h2>
                         <div class="form-group">
-                            <textarea id="abbreviations" class="form-control" rows="4" placeholder="List abbreviations..."></textarea>
+                            <label for="preparedDesig">Designation</label>
+                            <input type="text" id="preparedDesig">
                         </div>
-                    </div>
 
-                    <div class="card" id="sectionReferences" style="display: none;">
-                        <h2 class="card-title">📚 References</h2>
                         <div class="form-group">
-                            <textarea id="references" class="form-control" rows="4" placeholder="Reference documents..."></textarea>
+                            <label for="preparedDate">Date</label>
+                            <input type="date" id="preparedDate">
                         </div>
-                    </div>
 
-                    <div class="card" id="sectionAnnexures" style="display: none;">
-                        <h2 class="card-title">📎 Annexures</h2>
                         <div class="form-group">
-                            <textarea id="annexures" class="form-control" rows="4" placeholder="Annexure details..."></textarea>
+                            <label for="checkedBy">Checked By</label>
+                            <input type="text" id="checkedBy">
                         </div>
-                    </div>
 
-                    <div class="card" id="sectionChangeHistory" style="display: none;">
-                        <h2 class="card-title">📊 Change History</h2>
                         <div class="form-group">
-                            <textarea id="changeHistoryInput" class="form-control" rows="4" placeholder="Format: Rev No | Date | Changes | Prepared By"></textarea>
+                            <label for="checkedDesig">Designation</label>
+                            <input type="text" id="checkedDesig">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkedDate">Date</label>
+                            <input type="date" id="checkedDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="approvedBy">Approved By</label>
+                            <input type="text" id="approvedBy">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="approvedDesig">Designation</label>
+                            <input type="text" id="approvedDesig">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="approvedDate">Date</label>
+                            <input type="date" id="approvedDate">
                         </div>
                     </div>
 
-                    <!-- Signatures -->
-                    <div class="card">
-                        <h2 class="card-title">✍️ Signatures</h2>
-
-                        <div class="signature-section">
-                            <h3>Prepared By</h3>
-                            <input type="text" id="preparedBy" class="form-control" placeholder="Name">
-                            <input type="text" id="preparedDesig" class="form-control" placeholder="Designation">
-                            <input type="date" id="preparedDate" class="form-control">
-                        </div>
-
-                        <div class="signature-section">
-                            <h3>Checked By</h3>
-                            <input type="text" id="checkedBy" class="form-control" placeholder="Name">
-                            <input type="text" id="checkedDesig" class="form-control" placeholder="Designation">
-                            <input type="date" id="checkedDate" class="form-control">
-                        </div>
-
-                        <div class="signature-section">
-                            <h3>Approved By</h3>
-                            <input type="text" id="approvedBy" class="form-control" placeholder="Name">
-                            <input type="text" id="approvedDesig" class="form-control" placeholder="Designation">
-                            <input type="date" id="approvedDate" class="form-control">
-                        </div>
-                    </div>
+                    <!-- Hidden fields for compatibility -->
+                    <input type="checkbox" id="toggleDocControl" checked style="display:none">
+                    <input type="checkbox" id="toggleApplicability" style="display:none">
+                    <input type="checkbox" id="toggleAbbreviations" style="display:none">
+                    <input type="checkbox" id="toggleReferences" style="display:none">
+                    <input type="checkbox" id="toggleAnnexures" style="display:none">
+                    <input type="checkbox" id="toggleChangeHistory" style="display:none">
+                    <input type="checkbox" id="toggleSopNumber" checked style="display:none">
+                    <input type="checkbox" id="toggleEffectiveDate" checked style="display:none">
+                    <input type="checkbox" id="toggleRevisionDate" checked style="display:none">
+                    <input type="checkbox" id="toggleCopyType" checked style="display:none">
+                    <input type="hidden" id="copyType" value="CONTROLLED">
+                    <input type="hidden" id="applicability">
+                    <input type="hidden" id="abbreviations">
+                    <input type="hidden" id="references">
+                    <input type="hidden" id="annexures">
+                    <input type="hidden" id="changeHistoryInput">
                 </div>
             </div>
 
-            <!-- PREVIEW TAB - FIXED MARGINS -->
-            <div class="tab-panel" id="tab-preview">
-                <div class="preview-container">
-                    <div class="preview-actions no-print">
-                        <button class="btn btn-primary print-btn" aria-label="Print Document">
-                            🖨️ Print
-                        </button>
-                        <button class="btn btn-secondary" onclick="window.print()" aria-label="Save as PDF">
-                            💾 PDF
-                        </button>
-                    </div>
-
-                    <div class="preview-scroll">
-                        <div id="preview">
-                            <div id="preview-content">
-                                <div style="text-align: center; padding: 60px 20px; color: #999;">
-                                    <div style="font-size: 48px; margin-bottom: 20px;">📄</div>
-                                    <h3 style="color: #666; margin-bottom: 12px;">Select a department and SOP</h3>
-                                    <p style="font-size: 14px;">to preview your document</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Preview Tab -->
+            <div id="tab-preview" class="tab-panel">
+                <div class="preview-actions">
+                    <button id="print-btn" class="btn btn-print">
+                        🖨️ Save PDF
+                    </button>
                 </div>
-            </div>
 
-            <!-- SETTINGS TAB -->
-            <div class="tab-panel" id="tab-settings">
-                <div class="settings-wrapper">
-                    <div class="card">
-                        <h2 class="card-title">⚙️ Document Settings</h2>
-
-                        <div class="toggle-group">
-                            <label class="toggle-label">
-                                <input type="checkbox" id="toggleDocControl" checked>
-                                <span>Document Control Section</span>
-                            </label>
-
-                            <label class="toggle-label">
-                                <input type="checkbox" id="toggleApplicability">
-                                <span>Applicability</span>
-                            </label>
-
-                            <label class="toggle-label">
-                                <input type="checkbox" id="toggleAbbreviations">
-                                <span>Abbreviations</span>
-                            </label>
-
-                            <label class="toggle-label">
-                                <input type="checkbox" id="toggleReferences">
-                                <span>References</span>
-                            </label>
-
-                            <label class="toggle-label">
-                                <input type="checkbox" id="toggleAnnexures">
-                                <span>Annexures</span>
-                            </label>
-
-                            <label class="toggle-label">
-                                <input type="checkbox" id="toggleChangeHistory">
-                                <span>Change History</span>
-                            </label>
+                <div class="preview-scroll">
+                    <div id="preview" class="preview-content">
+                        <div style="padding: 40px; text-align: center; color: #999;">
+                            <h2>📂 Select Department & SOP</h2>
+                            <p>Switch to Form tab to begin</p>
                         </div>
-                    </div>
-
-                    <div class="card">
-                        <h2 class="card-title">🔢 Field Visibility</h2>
-
-                        <div class="toggle-group">
-                            <label class="toggle-label">
-                                <input type="checkbox" id="toggleSopNumber" checked>
-                                <span>SOP Number</span>
-                            </label>
-
-                            <label class="toggle-label">
-                                <input type="checkbox" id="toggleEffectiveDate" checked>
-                                <span>Effective Date</span>
-                            </label>
-
-                            <label class="toggle-label">
-                                <input type="checkbox" id="toggleRevisionDate" checked>
-                                <span>Revision Date</span>
-                            </label>
-
-                            <label class="toggle-label">
-                                <input type="checkbox" id="toggleCopyType" checked>
-                                <span>Copy Type</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h2 class="card-title">ℹ️ About</h2>
-                        <p style="font-size: 0.875rem; color: #666; line-height: 1.6; margin-bottom: 12px;">
-                            SOP Generator v2.1 - Professional document creator for pharmacy education
-                        </p>
-                        <p style="font-size: 0.875rem; color: #999;">
-                            Developed by <a href="https://github.com/himshim26" target="_blank" style="color: #667eea; text-decoration: none;">@himshim26</a>
-                        </p>
-                        <p style="font-size: 0.75rem; color: #999; margin-top: 16px;">
-                            <a href="https://github.com/himshim26/sop-generator" target="_blank" style="color: #667eea;">
-                                View Source Code
-                            </a>
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- html2pdf.js Library for Perfect PDF Generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
+            integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer"></script>
+
+    <!-- Tab Navigation Script -->
+    <script>
+        // Tab switching for mobile
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabName = btn.getAttribute('data-tab');
+
+                // Update buttons
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Update panels
+                document.querySelectorAll('.tab-panel').forEach(panel => {
+                    panel.classList.remove('active');
+                });
+                document.getElementById('tab-' + tabName).classList.add('active');
+            });
+        });
+    </script>
+
+    <!-- SOP Engine with html2pdf Integration -->
+    <script src="js/sop-engine.js"></script>
+
     <style>
-        /* Mobile Styles */
         * {
             margin: 0;
             padding: 0;
@@ -332,15 +253,15 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            overflow: hidden;
         }
 
         .mobile-container {
-            width: 100%;
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
+            height: 100vh;
         }
 
         .mobile-header {
@@ -351,52 +272,47 @@
         }
 
         .mobile-header h1 {
-            font-size: 1.5rem;
-            margin-bottom: 4px;
+            font-size: 1.5em;
+            margin-bottom: 5px;
         }
 
         .mobile-header p {
-            font-size: 0.875rem;
+            font-size: 0.9em;
             opacity: 0.9;
         }
 
         .tab-navigation {
             display: flex;
             background: white;
-            border-bottom: 2px solid #e0e0e0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .tab-btn {
             flex: 1;
-            padding: 16px 8px;
+            padding: 15px;
             border: none;
             background: white;
             color: #666;
-            font-size: 0.875rem;
+            font-size: 0.95em;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s;
             border-bottom: 3px solid transparent;
         }
 
         .tab-btn.active {
             color: #667eea;
             border-bottom-color: #667eea;
-            background: #f8f9ff;
         }
 
         .tab-container {
             flex: 1;
-            position: relative;
             overflow: hidden;
+            position: relative;
         }
 
         .tab-panel {
             display: none;
-            width: 100%;
             height: 100%;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
@@ -406,266 +322,110 @@
             display: block;
         }
 
-        .form-wrapper,
-        .settings-wrapper {
-            padding: 16px;
+        .form-wrapper {
+            padding: 20px;
         }
 
-        .card {
+        .form-section {
             background: white;
             border-radius: 12px;
             padding: 20px;
-            margin-bottom: 16px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
-        .card-title {
-            font-size: 1.125rem;
+        .form-section h3 {
             color: #333;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #667eea;
+            margin-bottom: 15px;
+            font-size: 1.1em;
         }
 
         .form-group {
-            margin-bottom: 16px;
+            margin-bottom: 15px;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: #555;
             margin-bottom: 6px;
+            color: #555;
+            font-size: 0.9em;
+            font-weight: 500;
         }
 
-        .form-control {
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
             padding: 12px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.2s;
+            font-family: inherit;
+            font-size: 16px; /* Prevents zoom on iOS */
+            transition: border-color 0.3s;
         }
 
-        .form-control:focus {
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
 
-        textarea.form-control {
+        .form-group textarea {
             resize: vertical;
-            font-family: inherit;
-        }
-
-        .signature-section {
-            margin-bottom: 20px;
-            padding: 16px;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-
-        .signature-section h3 {
-            font-size: 0.875rem;
-            color: #667eea;
-            margin-bottom: 12px;
-        }
-
-        .signature-section input {
-            margin-bottom: 8px;
-        }
-
-        .toggle-group {
-            display: grid;
-            gap: 12px;
-        }
-
-        .toggle-label {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .toggle-label:active {
-            background: #e9ecef;
-        }
-
-        .toggle-label input[type="checkbox"] {
-            margin-right: 12px;
-            width: 20px;
-            height: 20px;
-        }
-
-        .toggle-label span {
-            font-size: 0.875rem;
-            color: #333;
-        }
-
-        .preview-container {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            background: #f5f5f5;
+            min-height: 80px;
         }
 
         .preview-actions {
-            display: flex;
-            gap: 8px;
-            padding: 12px;
+            padding: 15px 20px;
             background: white;
             border-bottom: 1px solid #e0e0e0;
         }
 
-        .preview-scroll {
-            flex: 1;
-            overflow: auto;
-            padding: 16px;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        /* 🎯 FIXED: Mobile Preview with Correct Margins */
-        #preview {
-            aspect-ratio: 210 / 297;  /* A4 proportions */
-            width: 100%;
-            max-width: 100%;
-            background: white;
-
-            /* 🔧 FIX: Use same padding as desktop (20mm converted to pixels) */
-            /* 20mm ≈ 75.6px at 96 DPI, rounded to 76px for simplicity */
-            padding: 76px;  /* Same as desktop 20mm! */
-
-            min-height: 400px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow-y: auto;
-
-            /* Text sizing for readability */
-            font-size: 11px;  /* Scaled down proportionally */
-            line-height: 1.5;
-            font-family: 'Times New Roman', serif;
-        }
-
         .btn {
-            flex: 1;
-            padding: 12px 16px;
+            width: 100%;
+            padding: 14px;
             border: none;
             border-radius: 8px;
-            font-size: 0.875rem;
             font-weight: 600;
+            font-size: 1em;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s;
         }
 
-        .btn-primary {
+        .btn-print {
             background: #667eea;
             color: white;
         }
 
-        .btn-primary:active {
+        .btn-print:active:not(:disabled) {
             background: #5568d3;
         }
 
-        .btn-secondary {
-            background: #6c757d;
-            color: white;
+        .btn-print:disabled {
+            background: #ccc;
         }
 
-        .btn-secondary:active {
-            background: #5a6268;
+        .preview-scroll {
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 20px;
+            height: calc(100% - 70px);
         }
 
-        /* Tablet and larger screens */
-        @media (min-width: 769px) {
-            .mobile-container {
-                max-width: 768px;
-                margin: 0 auto;
-            }
-
-            #preview {
-                padding: 80px;  /* Slightly larger on tablets */
-                font-size: 12px;
-            }
+        .preview-content {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            min-height: 400px;
         }
 
-        /* Very small phones */
-        @media (max-width: 360px) {
-            #preview {
-                padding: 60px;  /* Proportionally smaller but still consistent ratio */
-                font-size: 10px;
+        @media (min-width: 600px) {
+            .preview-content {
+                padding: 60px 40px;
             }
         }
     </style>
-
-    <!-- Mobile Tab Switching Script -->
-    <script>
-    (function() {
-        'use strict';
-        console.log('📱 Initializing mobile tabs...');
-
-        function initTabs() {
-            const tabButtons = document.querySelectorAll('.tab-btn');
-            const tabPanels = document.querySelectorAll('.tab-panel');
-
-            if (tabButtons.length === 0) {
-                console.warn('⚠️ No tab buttons found');
-                return;
-            }
-
-            console.log(`Found ${tabButtons.length} tab buttons and ${tabPanels.length} panels`);
-
-            tabButtons.forEach(function(btn) {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-
-                    const targetTab = this.getAttribute('data-tab');
-                    if (!targetTab) {
-                        console.warn('⚠️ Tab button missing data-tab attribute');
-                        return;
-                    }
-
-                    console.log(`Switching to tab: ${targetTab}`);
-
-                    // Remove active from all
-                    tabButtons.forEach(function(t) {
-                        t.classList.remove('active');
-                    });
-                    tabPanels.forEach(function(p) {
-                        p.classList.remove('active');
-                    });
-
-                    // Add active to clicked tab
-                    this.classList.add('active');
-
-                    // Find and activate target panel
-                    const panel = document.getElementById(targetTab);
-
-                    if (panel) {
-                        panel.classList.add('active');
-                        console.log(`✅ Tab ${targetTab} activated`);
-                    } else {
-                        console.error(`❌ Panel #${targetTab} not found`);
-                    }
-                });
-            });
-
-            console.log('✅ Mobile tabs initialized');
-        }
-
-        // Initialize when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initTabs);
-        } else {
-            initTabs();
-        }
-
-        // Also try after a delay (for dynamic loading)
-        setTimeout(initTabs, 300);
-    })();
-    </script>
 </body>
 </html>

@@ -1,98 +1,40 @@
 window.initSOPApp = function () {
     'use strict';
-
-    console.log('🚀 Initializing SOP App v2.1.0 (Dynamic Engine)...');
-
-    /* ========================= CONSTANTS ========================= */
-    const DEFAULT_RESPONSIBILITY = "Laboratory In-charge, faculty members, technical staff, and authorized users are responsible for implementation and compliance of this SOP.";
-    const DEFAULT_REVISION = "00";
-    const DEFAULT_COPY_TYPE = "CONTROLLED";
-
-    /* ========================= SMART PROPERTY DETECTOR ========================= */
-    /**
-     * Intelligently extracts identifier from object
-     * Tries multiple common property names: key, file, folder, id, slug
-     */
-    function getIdentifier(obj) {
-        return obj.key || obj.file || obj.folder || obj.id || obj.slug || null;
-    }
-
-    /**
-     * Intelligently extracts display name from object
-     * Tries multiple common property names: name, title, label, displayName
-     */
-    function getDisplayName(obj) {
-        return obj.name || obj.title || obj.label || obj.displayName || null;
-    }
+    console.log('🚀 Initializing SOP App with html2pdf.js...');
 
     /* ========================= SAFE DOM HELPERS ========================= */
-    const $ = (id) => {
-        const el = document.getElementById(id);
-        if (!el) {
-            console.warn(`⚠️  Element #${id} not found`);
-        }
-        return el;
-    };
-
-    const fetchJSON = (url) => {
-        console.log(`📥 Fetching: ${url}`);
-        return fetch(`${url}?v=${Date.now()}`)
-            .then((r) => {
-                console.log(`📡 Response for ${url}: ${r.status} ${r.statusText}`);
-                if (!r.ok) throw new Error(`HTTP ${r.status}: ${url}`);
-                return r.json();
-            })
-            .then((data) => {
-                console.log(`✅ Loaded data from ${url}:`, data);
-                return data;
-            });
-    };
-
-    const fetchText = (url) =>
-        fetch(`${url}?v=${Date.now()}`)
-            .then((r) => {
-                if (!r.ok) throw new Error(`HTTP ${r.status}: ${url}`);
-                return r.text();
-            });
-
-    /* ========================= FIND PREVIEW ELEMENT ========================= */
-    const preview = $("preview") || 
-                    $("preview-content") || 
-                    document.querySelector('.preview-content') ||
-                    document.querySelector('[id*="preview"]');
-
-    if (!preview) {
-        console.error("❌ CRITICAL: Preview element not found!");
-        console.error("Expected: <div id='preview'> or class='preview-content'");
-        alert("⚠️ Preview element not found. UI may not be loaded correctly.");
-        return;
-    }
-
-    console.log(`✅ Preview element found: #${preview.id || preview.className}`);
+    const $ = (id) => document.getElementById(id);
+    const fetchJSON = (url) => fetch(`${url}?v=${Date.now()}`)
+        .then((r) => {
+            if (!r.ok) throw new Error(`Fetch failed: ${url}`);
+            return r.json();
+        });
+    const fetchText = (url) => fetch(`${url}?v=${Date.now()}`)
+        .then((r) => {
+            if (!r.ok) throw new Error(`Fetch failed: ${url}`);
+            return r.text();
+        });
 
     /* ========================= CORE ELEMENTS ========================= */
+    const preview = $("preview") || $("preview-content") || 
+                     document.querySelector('.preview-content') || 
+                     document.querySelector('[class*="preview"]');
     const departmentSelect = $("departmentSelect");
     const sopSelect = $("sopSelect");
     const templateSelect = $("templateSelect");
 
     if (!departmentSelect || !sopSelect || !templateSelect) {
-        console.error("❌ CRITICAL: Core UI elements missing!");
-        console.error("Found:", {
-            departmentSelect: !!departmentSelect,
-            sopSelect: !!sopSelect,
-            templateSelect: !!templateSelect
-        });
-
-        // Retry after delay
-        console.log("🔄 Retrying initialization in 500ms...");
-        setTimeout(() => {
-            console.log("🔄 Second attempt to initialize...");
-            window.initSOPApp();
-        }, 500);
+        console.warn("⚠️ SOP engine aborted: UI not ready");
         return;
     }
 
-    console.log('✅ Core form elements found');
+    if (!preview) {
+        console.error("❌ Preview element not found! Check HTML for id='preview'");
+        return;
+    }
+
+    console.log('✅ Core elements found');
+    console.log('📺 Preview element:', preview.id || preview.className);
 
     /* ========================= TOGGLES ========================= */
     const toggles = {
@@ -144,235 +86,64 @@ window.initSOPApp = function () {
     let TEMPLATE_HTML = "";
     let SOP_DATA = null;
 
-    /* ========================= INPUT VALIDATION ========================= */
-    function validateDate(dateString) {
-        if (!dateString) return true;
-        const date = new Date(dateString);
-        return !isNaN(date.getTime());
-    }
-
-    function sanitizeHTML(str) {
-        const div = document.createElement('div');
-        div.textContent = str;
-        return div.innerHTML;
-    }
-
-    /* ========================= LOADING STATE ========================= */
-    function showLoading(element, message = 'Loading...') {
-        if (element) {
-            element.innerHTML = `
-                <div style="text-align: center; padding: 40px; color: #666;">
-                    <div style="font-size: 24px; margin-bottom: 12px;">⏳</div>
-                    <div>${message}</div>
-                </div>
-            `;
-        }
-    }
-
-    function showError(element, message, details = '') {
-        if (element) {
-            element.innerHTML = `
-                <div style="text-align: center; padding: 40px; color: #dc3545;">
-                    <div style="font-size: 32px; margin-bottom: 16px;">⚠️</div>
-                    <h3 style="margin-bottom: 12px;">${message}</h3>
-                    ${details ? `<p style="color: #666; font-size: 14px;">${details}</p>` : ''}
-                </div>
-            `;
-        }
-    }
-
     /* ========================= LOAD DEPARTMENTS ========================= */
-    console.log('📂 Loading departments...');
-    showLoading(preview, 'Loading departments...');
-
     fetchJSON("data/departments.json")
         .then((d) => {
-            console.log('📊 Departments data received:', d);
-
-            if (!d || !d.departments || !Array.isArray(d.departments)) {
-                throw new Error('Invalid departments data format. Expected: {departments: [...]}');
-            }
-
-            departmentSelect.innerHTML = `<option value="">-- Select Department --</option>`;
-
-            let addedCount = 0;
+            departmentSelect.innerHTML = `<option value="">Select Department</option>`;
             d.departments.forEach((dep) => {
-                // 🌟 DYNAMIC: Try multiple property names automatically
-                const identifier = getIdentifier(dep);
-                const displayName = getDisplayName(dep);
-
-                if (identifier && displayName) {
-                    const option = document.createElement('option');
-                    option.value = identifier;
-                    option.textContent = displayName;
-                    departmentSelect.appendChild(option);
-                    addedCount++;
-                    console.log(`  ✓ Added department: ${displayName} (${identifier})`);
-                } else {
-                    console.warn(`  ⚠️  Skipped invalid department:`, dep);
-                    console.warn(`     Missing: ${!identifier ? 'identifier (key/file/folder/id)' : ''} ${!displayName ? 'display name (name/title/label)' : ''}`);
-                }
+                departmentSelect.innerHTML += `<option value="${dep.id}">${dep.name}</option>`;
             });
-
-            if (addedCount === 0) {
-                throw new Error('No valid departments found. Each department needs an identifier (key/file/folder/id) and display name (name/title/label) property.');
-            }
-
-            console.log(`✅ Loaded ${addedCount} departments successfully`);
-
-            preview.innerHTML = `
-                <div style="text-align: center; padding: 60px 20px; color: #666;">
-                    <div style="font-size: 48px; margin-bottom: 20px;">📂</div>
-                    <h3 style="margin-bottom: 12px; color: #333;">Welcome to SOP Generator</h3>
-                    <p>Select a department from the dropdown to begin</p>
-                    <p style="font-size: 12px; color: #999; margin-top: 16px;">${addedCount} departments available</p>
-                </div>
-            `;
+            console.log(`✅ Loaded ${d.departments.length} departments`);
         })
         .catch((e) => {
             console.error("❌ Failed to load departments:", e);
-            console.error("Error details:", e.message);
-            console.error("Check if data/departments.json exists and is valid JSON");
-
-            departmentSelect.innerHTML = `<option value="">❌ Error loading departments</option>`;
-            showError(preview, 'Failed to Load Departments', 
-                `${e.message}<br><br>Check console (F12) for details`);
+            departmentSelect.innerHTML = `<option value="">Error loading departments</option>`;
         });
 
     /* ========================= DEPARTMENT CHANGE ========================= */
-    console.log('🔗 Attaching department change listener...');
-
-    departmentSelect.addEventListener("change", async function() {
-        const dept = this.value;
-
-        console.log(`📁 Department selected: "${dept}"`);
-
-        sopSelect.innerHTML = `<option value="">-- Select SOP --</option>`;
+    departmentSelect.addEventListener("change", async () => {
+        sopSelect.innerHTML = `<option value="">Select SOP</option>`;
         sopSelect.disabled = true;
-        preview.innerHTML = "";
+        if (preview) preview.innerHTML = "";
 
-        if (!dept) {
-            console.log('  ℹ️  Empty selection, showing welcome message');
-            preview.innerHTML = `
-                <div style="text-align: center; padding: 60px 20px; color: #666;">
-                    <div style="font-size: 48px; margin-bottom: 20px;">📂</div>
-                    <p>Select a department to continue</p>
-                </div>
-            `;
-            return;
-        }
+        const dept = departmentSelect.value;
+        if (!dept) return;
 
-        const indexPath = `data/${dept}/index.json`;
-        console.log(`📥 Loading SOPs from: ${indexPath}`);
-        showLoading(preview, 'Loading SOPs...');
+        console.log(`🔍 Loading SOPs for department: ${dept}`);
 
         try {
-            const index = await fetchJSON(indexPath);
-            console.log('📊 SOP index received:', index);
-
-            // 🌟 DYNAMIC: Check for different possible array property names
-            let sopList = null;
-            const possibleArrayNames = ['instruments', 'sops', 'items', 'files', 'documents', 'procedures'];
-
-            for (const propName of possibleArrayNames) {
-                if (index[propName] && Array.isArray(index[propName])) {
-                    sopList = index[propName];
-                    console.log(`  ✓ Found SOPs in "${propName}" property`);
-                    break;
-                }
-            }
-
-            // If no named array found, check if index itself is an array
-            if (!sopList && Array.isArray(index)) {
-                sopList = index;
-                console.log('  ✓ Index is directly an array');
-            }
-
-            if (!sopList || sopList.length === 0) {
-                throw new Error(`No SOPs found in ${indexPath}. Expected an array in one of these properties: ${possibleArrayNames.join(', ')}, or a direct array.`);
-            }
-
-            let addedSopCount = 0;
-            sopList.forEach((sop) => {
-                // 🌟 DYNAMIC: Try multiple property names automatically
-                const identifier = getIdentifier(sop);
-                const displayName = getDisplayName(sop);
-
-                if (identifier && displayName) {
-                    const option = document.createElement('option');
-                    option.value = identifier;
-                    option.textContent = displayName;
-                    sopSelect.appendChild(option);
-                    addedSopCount++;
-                    console.log(`  ✓ Added SOP: ${displayName} (${identifier})`);
-                } else {
-                    console.warn(`  ⚠️  Skipped invalid SOP:`, sop);
-                    console.warn(`     Missing: ${!identifier ? 'identifier (key/file/folder/id)' : ''} ${!displayName ? 'display name (name/title/label)' : ''}`);
-                }
+            const index = await fetchJSON(`data/${dept}/index.json`);
+            index.instruments.forEach((sop) => {
+                sopSelect.innerHTML += `<option value="${sop.id}">${sop.name}</option>`;
             });
-
-            if (addedSopCount === 0) {
-                throw new Error('No valid SOPs found. Each SOP needs an identifier (key/file/folder/id) and display name (name/title/label) property.');
-            }
-
             sopSelect.disabled = false;
-            console.log(`✅ Loaded ${addedSopCount} SOPs successfully`);
-
-            preview.innerHTML = `
-                <div style="text-align: center; padding: 60px 20px; color: #666;">
-                    <div style="font-size: 48px; margin-bottom: 20px;">📄</div>
-                    <p style="font-size: 18px; margin-bottom: 8px;">Select an SOP to preview</p>
-                    <p style="font-size: 12px; color: #999;">${addedSopCount} SOPs available in ${dept}</p>
-                </div>
-            `;
+            console.log(`✅ Loaded ${index.instruments.length} SOPs`);
         } catch (e) {
-            console.error(`❌ Failed to load SOPs from ${indexPath}:`, e);
-            console.error("Error details:", e.message);
-
-            sopSelect.innerHTML = `<option value="">❌ Error loading SOPs</option>`;
-            showError(preview, 'Failed to Load SOPs', 
-                `${e.message}<br><br>Department: ${dept}<br>Path: ${indexPath}<br><br>Check console (F12) for details`);
+            console.error("❌ Failed to load SOPs:", e);
+            sopSelect.innerHTML = `<option value="">Error loading SOPs</option>`;
         }
     });
 
-    console.log('✅ Department change listener attached');
-
     /* ========================= SOP CHANGE ========================= */
-    console.log('🔗 Attaching SOP change listener...');
-
-    sopSelect.addEventListener("change", async function() {
+    sopSelect.addEventListener("change", async () => {
         const dept = departmentSelect.value;
-        const sop = this.value;
+        const sop = sopSelect.value;
+        if (!dept || !sop) return;
 
-        console.log(`📄 SOP selected: "${sop}" from department "${dept}"`);
-
-        if (!dept || !sop) {
-            console.log('  ℹ️  Incomplete selection');
-            return;
-        }
-
-        const sopPath = `data/${dept}/${sop}.json`;
-        console.log(`📥 Loading SOP data from: ${sopPath}`);
-        showLoading(preview, 'Loading SOP data...');
+        console.log(`📄 Loading SOP: ${sop}`);
 
         try {
-            const raw = await fetchJSON(sopPath);
-            console.log('📊 SOP data received:', raw);
-
-            if (!raw || !raw.meta) {
-                throw new Error('Invalid SOP data format - missing "meta" property');
-            }
-
+            const raw = await fetchJSON(`data/${dept}/${sop}.json`);
             SOP_DATA = {
                 institute: "",
                 department: dept,
                 title: raw.meta?.title || "",
                 sopNumber: "",
-                revisionNo: DEFAULT_REVISION,
+                revisionNo: "00",
                 effectiveDate: "",
                 revisionDate: "",
                 nextReviewDate: "",
-                copyType: DEFAULT_COPY_TYPE,
+                copyType: "CONTROLLED",
                 sectionsEnabled: {
                     docControl: true,
                     applicability: false,
@@ -390,8 +161,8 @@ window.initSOPApp = function () {
                 changeHistory: [],
                 purpose: raw.sections?.purpose || "",
                 scope: raw.sections?.scope || "",
-                responsibility: DEFAULT_RESPONSIBILITY,
-                procedure: Array.isArray(raw.sections?.procedure) ? raw.sections.procedure : [],
+                responsibility: "Laboratory In-charge, faculty members, technical staff, and authorized users are responsible for implementation and compliance of this SOP.",
+                procedure: raw.sections?.procedure || [],
                 precautions: raw.sections?.precautions || "",
                 applicability: "",
                 abbreviations: "",
@@ -408,208 +179,223 @@ window.initSOPApp = function () {
                 approvedDate: "",
             };
 
-            console.log('✅ SOP_DATA created:', SOP_DATA);
-
             syncInputs();
             updateSectionVisibility();
             await loadTemplate();
-
-            console.log('✅ SOP loaded and rendered successfully');
+            console.log('✅ SOP data loaded successfully');
         } catch (e) {
-            console.error(`❌ Failed to load SOP from ${sopPath}:`, e);
-            console.error("Error details:", e.message);
-
-            showError(preview, 'Failed to Load SOP', 
-                `${e.message}<br><br>SOP: ${sop}<br>Path: ${sopPath}<br><br>Check console (F12) for details`);
-            SOP_DATA = null;
+            console.error("❌ Failed to load SOP:", e);
+            if (preview) {
+                preview.innerHTML = `
+                    <div style="padding: 40px; text-align: center; color: #721c24; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; margin: 20px;">
+                        <h2>❌ Error Loading SOP</h2>
+                        <p>${e.message}</p>
+                        <p>Please try selecting a different SOP or refresh the page.</p>
+                    </div>
+                `;
+            }
         }
     });
 
-    console.log('✅ SOP change listener attached');
-
-    /* ========================= TEMPLATE LOADING ========================= */
-    console.log('🔗 Attaching template change listener...');
-    templateSelect.addEventListener("change", loadTemplate);
-
+    /* ========================= LOAD TEMPLATE ========================= */
     async function loadTemplate() {
-        if (!SOP_DATA) {
-            console.warn('⚠️  No SOP data available for template');
-            return;
-        }
+        const template = templateSelect.value;
+        if (!template) return;
 
-        const templateFile = templateSelect.value;
-        const templatePath = `templates/${templateFile}`;
-        console.log(`📋 Loading template: ${templatePath}`);
-        showLoading(preview, 'Loading template...');
+        console.log(`📋 Loading template: ${template}`);
 
         try {
-            TEMPLATE_HTML = await fetchText(templatePath);
-
-            if (!TEMPLATE_HTML || TEMPLATE_HTML.length < 100) {
-                throw new Error('Template file appears to be empty or corrupted');
-            }
-
-            render();
-            console.log(`✅ Template loaded: ${templateFile} (${TEMPLATE_HTML.length} bytes)`);
+            TEMPLATE_HTML = await fetchText(`templates/${template}.html`);
+            renderPreview();
+            console.log('✅ Template loaded and rendered');
         } catch (e) {
-            console.error(`❌ Failed to load template from ${templatePath}:`, e);
-            console.error("Error details:", e.message);
-
-            showError(preview, 'Failed to Load Template', 
-                `${e.message}<br><br>Template: ${templateFile}<br><br>Check console (F12) for details`);
+            console.error("❌ Failed to load template:", e);
+            if (preview) {
+                preview.innerHTML = `<div style="padding: 20px; color: red;">Error loading template: ${e.message}</div>`;
+            }
         }
     }
 
-    /* ========================= TOGGLES HANDLING ========================= */
-    Object.keys(toggles).forEach((k) => {
-        if (!toggles[k]) return;
+    templateSelect.addEventListener("change", loadTemplate);
 
-        toggles[k].addEventListener("change", () => {
-            if (!SOP_DATA) return;
+    /* ========================= RENDER PREVIEW ========================= */
+    function renderPreview() {
+        if (!TEMPLATE_HTML || !SOP_DATA) return;
 
-            if (SOP_DATA.sectionsEnabled?.[k] !== undefined) {
-                SOP_DATA.sectionsEnabled[k] = toggles[k].checked;
-                updateSectionVisibility();
-                console.log(`🔘 Section toggle: ${k} = ${toggles[k].checked}`);
-            }
+        let html = TEMPLATE_HTML;
 
-            if (SOP_DATA.fieldsEnabled?.[k] !== undefined) {
-                SOP_DATA.fieldsEnabled[k] = toggles[k].checked;
-                console.log(`🔘 Field toggle: ${k} = ${toggles[k].checked}`);
-            }
-
-            render();
-        });
-    });
-
-    function updateSectionVisibility() {
-        const sectionMap = {
-            docControl: "sectionDocControl",
-            applicability: "sectionApplicability",
-            abbreviations: "sectionAbbreviations",
-            references: "sectionReferences",
-            annexures: "sectionAnnexures",
-            changeHistory: "sectionChangeHistory",
-        };
-
-        Object.keys(sectionMap).forEach((key) => {
-            const element = $(sectionMap[key]);
-            if (element && SOP_DATA) {
-                element.style.display = SOP_DATA.sectionsEnabled[key] ? "block" : "none";
+        // Replace placeholders
+        Object.keys(SOP_DATA).forEach((key) => {
+            const value = SOP_DATA[key];
+            if (typeof value === 'string') {
+                html = html.replace(new RegExp(`{{${key}}}`, 'g'), value);
+            } else if (Array.isArray(value) && key === 'procedure') {
+                const procedureHTML = value.map(step => `<li>${step}</li>`).join('');
+                html = html.replace(/{{procedure}}/g, procedureHTML);
             }
         });
+
+        // Remove unused placeholders
+        html = html.replace(/{{.*?}}/g, '');
+
+        if (preview) {
+            preview.innerHTML = html;
+        }
     }
-
-    /* ========================= INPUTS HANDLING ========================= */
-    Object.keys(inputs).forEach((k) => {
-        if (!inputs[k]) return;
-
-        inputs[k].addEventListener("input", () => {
-            if (!SOP_DATA) return;
-
-            if (k.includes('Date') && inputs[k].value) {
-                if (!validateDate(inputs[k].value)) {
-                    inputs[k].setCustomValidity('Invalid date format');
-                    return;
-                } else {
-                    inputs[k].setCustomValidity('');
-                }
-            }
-
-            if (k === "procedure") {
-                SOP_DATA.procedure = inputs[k].value
-                    .split("\n")
-                    .map(line => line.trim())
-                    .filter(Boolean);
-            } else if (k === "changeHistoryInput") {
-                SOP_DATA.changeHistory = inputs[k].value
-                    .split("\n")
-                    .map(line => line.trim())
-                    .filter(Boolean);
-            } else {
-                SOP_DATA[k] = inputs[k].value;
-            }
-
-            render();
-        });
-    });
 
     /* ========================= SYNC INPUTS ========================= */
     function syncInputs() {
-        if (!SOP_DATA) return;
-
-        Object.keys(inputs).forEach((k) => {
-            if (!inputs[k]) return;
-
-            if (k === "procedure") {
-                inputs[k].value = SOP_DATA.procedure.join("\n");
-            } else if (k === "changeHistoryInput") {
-                inputs[k].value = SOP_DATA.changeHistory.join("\n");
-            } else {
-                inputs[k].value = SOP_DATA[k] || "";
+        Object.keys(inputs).forEach((key) => {
+            const input = inputs[key];
+            if (input && SOP_DATA && SOP_DATA[key] !== undefined) {
+                input.value = Array.isArray(SOP_DATA[key]) 
+                    ? SOP_DATA[key].join('\n') 
+                    : SOP_DATA[key];
             }
         });
     }
 
-    /* ========================= RENDER ========================= */
-    function render() {
-        if (!TEMPLATE_HTML || !preview || !SOP_DATA) {
-            console.warn('⚠️  Render skipped: missing template, preview, or data');
+    /* ========================= UPDATE SECTION VISIBILITY ========================= */
+    function updateSectionVisibility() {
+        if (!SOP_DATA) return;
+
+        Object.keys(toggles).forEach((key) => {
+            const toggle = toggles[key];
+            if (toggle) {
+                const isEnabled = SOP_DATA.sectionsEnabled?.[key] || SOP_DATA.fieldsEnabled?.[key];
+                toggle.checked = isEnabled;
+            }
+        });
+    }
+
+    /* ========================= INPUT CHANGE LISTENERS ========================= */
+    Object.keys(inputs).forEach((key) => {
+        const input = inputs[key];
+        if (input) {
+            input.addEventListener('input', () => {
+                if (SOP_DATA) {
+                    SOP_DATA[key] = input.value;
+                    renderPreview();
+                }
+            });
+        }
+    });
+
+    /* ========================= TOGGLE LISTENERS ========================= */
+    Object.keys(toggles).forEach((key) => {
+        const toggle = toggles[key];
+        if (toggle) {
+            toggle.addEventListener('change', () => {
+                if (SOP_DATA) {
+                    if (SOP_DATA.sectionsEnabled) {
+                        SOP_DATA.sectionsEnabled[key] = toggle.checked;
+                    }
+                    if (SOP_DATA.fieldsEnabled) {
+                        SOP_DATA.fieldsEnabled[key] = toggle.checked;
+                    }
+                    renderPreview();
+                }
+            });
+        }
+    });
+
+    /* ========================= PRINT/SAVE PDF WITH html2pdf.js ========================= */
+    function setupPrintButton() {
+        const printBtn = $("print-btn");
+        if (!printBtn) {
+            console.warn('⚠️ Print button not found');
             return;
         }
 
-        try {
-            const changeHistoryHTML = SOP_DATA.changeHistory
-                .map((row) => {
-                    const parts = row.split("|").map(p => sanitizeHTML(p.trim()));
-                    return `<tr>
-                        <td>${parts[0] || ""}</td>
-                        <td>${parts[1] || ""}</td>
-                        <td>${parts[2] || ""}</td>
-                        <td>${parts[3] || ""}</td>
-                    </tr>`;
-                })
-                .join("");
+        printBtn.addEventListener('click', function() {
+            if (!preview || !preview.innerHTML.trim()) {
+                alert('Please generate a document first by selecting department and SOP.');
+                return;
+            }
 
-            const procedureHTML = SOP_DATA.procedure
-                .map((step) => `<li>${sanitizeHTML(step)}</li>`)
-                .join("");
+            // Check if html2pdf is loaded
+            if (typeof html2pdf === 'undefined') {
+                console.error('❌ html2pdf.js not loaded!');
+                alert('PDF library not loaded. Please refresh the page.');
+                return;
+            }
 
-            let html = TEMPLATE_HTML;
+            // Show loading state
+            const originalText = printBtn.innerHTML;
+            printBtn.innerHTML = '⏳ Generating PDF...';
+            printBtn.disabled = true;
 
-            Object.keys(SOP_DATA).forEach((key) => {
-                const value = SOP_DATA[key];
+            // Generate filename
+            const sopNum = inputs.sopNumber?.value || '001';
+            const title = inputs.title?.value || 'SOP';
+            const dept = inputs.department?.value || 'Department';
+            const cleanTitle = title.replace(/[^a-z0-9]/gi, '_').substring(0, 30);
+            const date = new Date().toISOString().split('T')[0];
+            const filename = `SOP_${sopNum}_${cleanTitle}_${date}.pdf`;
 
-                if (key === "procedure") {
-                    html = html.replace(/{{procedure}}/g, procedureHTML);
-                } else if (key === "changeHistory") {
-                    html = html.replace(/{{changeHistory}}/g, changeHistoryHTML);
-                } else if (typeof value === "string") {
-                    const regex = new RegExp(`{{${key}}}`, "g");
-                    html = html.replace(regex, sanitizeHTML(value));
-                } else if (typeof value === "number") {
-                    const regex = new RegExp(`{{${key}}}`, "g");
-                    html = html.replace(regex, value);
+            // Configure PDF options
+            const opt = {
+                margin: [20, 20, 20, 20],  // 20mm margins (top, right, bottom, left)
+                filename: filename,
+                image: { 
+                    type: 'jpeg', 
+                    quality: 0.98 
+                },
+                html2canvas: { 
+                    scale: 2,              // Higher quality
+                    useCORS: true,         // Handle external images
+                    letterRendering: true, // Better text rendering
+                    logging: false         // Disable console logs
+                },
+                jsPDF: { 
+                    unit: 'mm', 
+                    format: 'a4', 
+                    orientation: 'portrait',
+                    compress: true
+                },
+                pagebreak: { 
+                    mode: ['avoid-all', 'css', 'legacy'],
+                    before: '.page-break',
+                    after: '.page-break-after'
                 }
-            });
+            };
 
-            html = html.replace(/{{[^}]+}}/g, "");
+            // Generate and save PDF
+            html2pdf()
+                .set(opt)
+                .from(preview)
+                .save()
+                .then(function() {
+                    // Reset button state
+                    printBtn.innerHTML = originalText;
+                    printBtn.disabled = false;
+                    console.log('✅ PDF generated successfully:', filename);
+                })
+                .catch(function(error) {
+                    // Handle errors
+                    console.error('❌ PDF generation error:', error);
+                    alert('Error generating PDF. Please try again or check console for details.');
+                    printBtn.innerHTML = originalText;
+                    printBtn.disabled = false;
+                });
+        });
 
-            preview.innerHTML = html;
-            console.log('✅ Preview rendered successfully');
-        } catch (e) {
-            console.error('❌ Render error:', e);
-            showError(preview, 'Rendering Error', e.message);
-        }
+        console.log('✅ Print button with html2pdf.js initialized');
     }
 
-    console.log('✅ SOP App v2.1.0 initialized successfully');
-    console.log('🌟 DYNAMIC MODE: Automatically detects property names');
-    console.log('📊 Status: Waiting for user to select department...');
+    // Initialize print button when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupPrintButton);
+    } else {
+        setupPrintButton();
+    }
+
+    console.log('✅ SOP App initialized successfully');
 };
 
-// Make sure it's available globally
-console.log('📦 sop-engine.js v2.1.0 loaded successfully');
-console.log('🌟 DYNAMIC ENGINE: Supports flexible JSON property names');
-console.log('   Identifiers: key, file, folder, id, slug');
-console.log('   Display names: name, title, label, displayName');
+// Auto-initialize if DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', window.initSOPApp);
+} else {
+    window.initSOPApp();
+}
