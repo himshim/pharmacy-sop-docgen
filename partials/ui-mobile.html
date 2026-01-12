@@ -1,402 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>SOP Generator - Mobile</title>
-    <link rel="stylesheet" href="../css/ui-mobile.css">
-    <link rel="stylesheet" href="../css/print-a4.css">
-    
+    <link rel="stylesheet" href="../css/ui-mobile.css" />
+    <link rel="stylesheet" href="../css/print-a4.css" />
+
     <!-- Word Export Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script src="https://unpkg.com/html-docx-js@0.3.1/dist/html-docx.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="mobile-header">
-        <div class="header-content">
-            <h1><span class="logo-badge">📋</span> SOP Generator</h1>
-            <p>Professional Standard Operating Procedures</p>
-            <span class="header-badge">v2.0 Professional</span>
-        </div>
+      <div class="header-content">
+        <h1><span class="logo-badge">📋</span> SOP Generator</h1>
+        <p>Professional Standard Operating Procedures</p>
+        <span class="header-badge">v2.0 Professional</span>
+      </div>
     </header>
 
     <nav class="tab-navigation">
-        <button class="tab-btn active" onclick="switchTab(0)">📝 Create</button>
-        <button class="tab-btn" onclick="switchTab(1)">👁️ Preview</button>
-        <button class="tab-btn" onclick="switchTab(2)">⚙️ Settings</button>
+      <button class="tab-btn active" onclick="switchTab(0)">📝 Create</button>
+      <button class="tab-btn" onclick="switchTab(1)">👁️ Preview</button>
+      <button class="tab-btn" onclick="switchTab(2)">⚙️ Settings</button>
     </nav>
 
     <div class="mobile-content">
-        <!-- TAB 1: CREATE -->
-        <div class="tab-panel active" id="tab-create">
-            <!-- Selection Card -->
-            <div class="card">
-                <h2 class="card-title">📁 Selection</h2>
-                <div class="form-group">
-                    <label for="departmentSelect">Department</label>
-                    <select id="departmentSelect">
-                        <option value="">Choose department...</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="sopSelect">SOP Document</label>
-                    <select id="sopSelect" disabled>
-                        <option value="">Choose SOP...</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="templateSelect">Template Style</label>
-                    <select id="templateSelect">
-                        <option value="sop-a4-classic">Classic</option>
-                        <option value="sop-a4-iso">ISO</option>
-                        <option value="sop-a4-naac">NAAC</option>
-                        <option value="sop-a4-pci">PCI</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Document Info Card -->
-            <div class="card" id="sectionDocControl" style="display:none;">
-                <h2 class="card-title">📋 Document Info</h2>
-                <div class="form-group">
-                    <label for="institute">Institute</label>
-                    <input type="text" id="institute" placeholder="Institute name">
-                </div>
-                <div class="form-group">
-                    <label for="department">Department</label>
-                    <input type="text" id="department" placeholder="Department">
-                </div>
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" placeholder="SOP title">
-                </div>
-                <div class="form-group">
-                    <label for="sopNumber">SOP Number</label>
-                    <input type="text" id="sopNumber" placeholder="e.g., SOP-001">
-                </div>
-                <div class="form-group">
-                    <label for="revisionNo">Revision No.</label>
-                    <input type="text" id="revisionNo" placeholder="00">
-                </div>
-                <div class="form-group">
-                    <label for="effectiveDate">Effective Date</label>
-                    <input type="date" id="effectiveDate">
-                </div>
-                <div class="form-group">
-                    <label for="revisionDate">Revision Date</label>
-                    <input type="date" id="revisionDate">
-                </div>
-                <div class="form-group">
-                    <label for="nextReviewDate">Next Review</label>
-                    <input type="date" id="nextReviewDate">
-                </div>
-                <div class="form-group">
-                    <label for="copyType">Copy Type</label>
-                    <select id="copyType">
-                        <option value="CONTROLLED">Controlled</option>
-                        <option value="UNCONTROLLED">Uncontrolled</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Content Card -->
-            <div class="card">
-                <h2 class="card-title">📝 Content</h2>
-
-                <div class="expandable">
-                    <div class="expandable-header" onclick="toggleExpand(this)">
-                        <h3>Purpose</h3>
-                        <span class="expand-icon">▼</span>
-                    </div>
-                    <div class="expandable-content">
-                        <textarea id="purpose" placeholder="Describe the purpose..."></textarea>
-                    </div>
-                </div>
-
-                <div class="expandable">
-                    <div class="expandable-header" onclick="toggleExpand(this)">
-                        <h3>Scope</h3>
-                        <span class="expand-icon">▼</span>
-                    </div>
-                    <div class="expandable-content">
-                        <textarea id="scope" placeholder="Define the scope..."></textarea>
-                    </div>
-                </div>
-
-                <div class="expandable">
-                    <div class="expandable-header" onclick="toggleExpand(this)">
-                        <h3>Responsibility</h3>
-                        <span class="expand-icon">▼</span>
-                    </div>
-                    <div class="expandable-content">
-                        <textarea id="responsibility" placeholder="List responsibilities..."></textarea>
-                    </div>
-                </div>
-
-                <div class="expandable">
-                    <div class="expandable-header" onclick="toggleExpand(this)">
-                        <h3>Procedure</h3>
-                        <span class="expand-icon">▼</span>
-                    </div>
-                    <div class="expandable-content">
-                        <textarea id="procedure" placeholder="Steps (one per line)..."></textarea>
-                    </div>
-                </div>
-
-                <div class="expandable">
-                    <div class="expandable-header" onclick="toggleExpand(this)">
-                        <h3>Precautions</h3>
-                        <span class="expand-icon">▼</span>
-                    </div>
-                    <div class="expandable-content">
-                        <textarea id="precautions" placeholder="Safety precautions..."></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Applicability Card -->
-            <div class="card" id="sectionApplicability" style="display:none;">
-                <h2 class="card-title">🎯 Applicability</h2>
-                <textarea id="applicability" placeholder="Define applicability..."></textarea>
-            </div>
-
-            <!-- Abbreviations Card -->
-            <div class="card" id="sectionAbbreviations" style="display:none;">
-                <h2 class="card-title">📖 Abbreviations</h2>
-                <textarea id="abbreviations" placeholder="List abbreviations..."></textarea>
-            </div>
-
-            <!-- References Card -->
-            <div class="card" id="sectionReferences" style="display:none;">
-                <h2 class="card-title">📚 References</h2>
-                <textarea id="references" placeholder="List references..."></textarea>
-            </div>
-
-            <!-- Annexures Card -->
-            <div class="card" id="sectionAnnexures" style="display:none;">
-                <h2 class="card-title">📎 Annexures</h2>
-                <textarea id="annexures" placeholder="List annexures..."></textarea>
-            </div>
-
-            <!-- Change History Card -->
-            <div class="card" id="sectionChangeHistory" style="display:none;">
-                <h2 class="card-title">📜 Change History</h2>
-                <textarea id="changeHistoryInput" placeholder="Format: Version|Date|Changes|Approved By"></textarea>
-            </div>
-
-            <!-- Approval Card -->
-            <div class="card">
-                <h2 class="card-title">✍️ Approval</h2>
-
-                <div class="subsection-title">Prepared By</div>
-                <div class="form-group">
-                    <label for="preparedBy">Name</label>
-                    <input type="text" id="preparedBy" placeholder="Full name">
-                </div>
-                <div class="form-group">
-                    <label for="preparedDesig">Designation</label>
-                    <input type="text" id="preparedDesig" placeholder="Job title">
-                </div>
-                <div class="form-group">
-                    <label for="preparedDate">Date</label>
-                    <input type="date" id="preparedDate">
-                </div>
-
-                <div class="subsection-title">Checked By</div>
-                <div class="form-group">
-                    <label for="checkedBy">Name</label>
-                    <input type="text" id="checkedBy" placeholder="Full name">
-                </div>
-                <div class="form-group">
-                    <label for="checkedDesig">Designation</label>
-                    <input type="text" id="checkedDesig" placeholder="Job title">
-                </div>
-                <div class="form-group">
-                    <label for="checkedDate">Date</label>
-                    <input type="date" id="checkedDate">
-                </div>
-
-                <div class="subsection-title">Approved By</div>
-                <div class="form-group">
-                    <label for="approvedBy">Name</label>
-                    <input type="text" id="approvedBy" placeholder="Full name">
-                </div>
-                <div class="form-group">
-                    <label for="approvedDesig">Designation</label>
-                    <input type="text" id="approvedDesig" placeholder="Job title">
-                </div>
-                <div class="form-group">
-                    <label for="approvedDate">Date</label>
-                    <input type="date" id="approvedDate">
-                </div>
-            </div>
-
-            <!-- Credit Badge -->
-            <div class="credit-badge">
-                <p>Developed by</p>
-                <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
-            </div>
+      <!-- TAB 1: CREATE -->
+      <div class="tab-panel active" id="tab-create">
+        <!-- Selection Card -->
+        <div class="card">
+          <h2 class="card-title">📁 Selection</h2>
+          <div class="form-group">
+            <label for="departmentSelect">Department</label>
+            <select id="departmentSelect">
+              <option value="">Choose department...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="sopSelect">SOP Document</label>
+            <select id="sopSelect" disabled>
+              <option value="">Choose SOP...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="templateSelect">Template Style</label>
+            <select id="templateSelect">
+              <option value="sop-a4-classic">Classic</option>
+              <option value="sop-a4-iso">ISO</option>
+              <option value="sop-a4-naac">NAAC</option>
+              <option value="sop-a4-pci">PCI</option>
+            </select>
+          </div>
         </div>
 
-        <!-- TAB 2: PREVIEW -->
-        <div class="tab-panel" id="tab-preview">
-            <div class="card">
-                <h2 class="card-title">📄 Document Preview</h2>
-                <div id="preview-wrapper">
-                    <div id="preview">
-                        <div id="preview-content">
-                            <div class="empty-state">
-                                <div class="empty-state-icon">📂</div>
-                                <p>Select a department and SOP<br>to preview your document</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Document Info Card -->
+        <div class="card" id="sectionDocControl" style="display: none">
+          <h2 class="card-title">📋 Document Info</h2>
+          <div class="form-group">
+            <label for="institute">Institute</label>
+            <input type="text" id="institute" placeholder="Institute name" />
+          </div>
+          <div class="form-group">
+            <label for="department">Department</label>
+            <input type="text" id="department" placeholder="Department" />
+          </div>
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" placeholder="SOP title" />
+          </div>
+          <div class="form-group">
+            <label for="sopNumber">SOP Number</label>
+            <input type="text" id="sopNumber" placeholder="e.g., SOP-001" />
+          </div>
+          <div class="form-group">
+            <label for="revisionNo">Revision No.</label>
+            <input type="text" id="revisionNo" placeholder="00" />
+          </div>
+          <div class="form-group">
+            <label for="effectiveDate">Effective Date</label>
+            <input type="date" id="effectiveDate" />
+          </div>
+          <div class="form-group">
+            <label for="revisionDate">Revision Date</label>
+            <input type="date" id="revisionDate" />
+          </div>
+          <div class="form-group">
+            <label for="nextReviewDate">Next Review</label>
+            <input type="date" id="nextReviewDate" />
+          </div>
+          <div class="form-group">
+            <label for="copyType">Copy Type</label>
+            <select id="copyType">
+              <option value="CONTROLLED">Controlled</option>
+              <option value="UNCONTROLLED">Uncontrolled</option>
+            </select>
+          </div>
         </div>
 
-        <!-- TAB 3: SETTINGS (Toggles) -->
-        <div class="tab-panel" id="tab-options">
-            <!-- Section Visibility -->
-            <div class="card">
-                <h2 class="card-title">👁️ Section Visibility</h2>
-                <div class="toggle-list">
-                    <div class="toggle-item">
-                        <label for="toggleDocControl">Document Control</label>
-                        <div class="toggle-switch">
-                            <input type="checkbox" id="toggleDocControl" checked>
-                            <span class="slider"></span>
-                        </div>
-                    </div>
-                    <div class="toggle-item">
-                        <label for="toggleApplicability">Applicability</label>
-                        <div class="toggle-switch">
-                            <input type="checkbox" id="toggleApplicability">
-                            <span class="slider"></span>
-                        </div>
-                    </div>
-                    <div class="toggle-item">
-                        <label for="toggleAbbreviations">Abbreviations</label>
-                        <div class="toggle-switch">
-                            <input type="checkbox" id="toggleAbbreviations">
-                            <span class="slider"></span>
-                        </div>
-                    </div>
-                    <div class="toggle-item">
-                        <label for="toggleReferences">References</label>
-                        <div class="toggle-switch">
-                            <input type="checkbox" id="toggleReferences">
-                            <span class="slider"></span>
-                        </div>
-                    </div>
-                    <div class="toggle-item">
-                        <label for="toggleAnnexures">Annexures</label>
-                        <div class="toggle-switch">
-                            <input type="checkbox" id="toggleAnnexures">
-                            <span class="slider"></span>
-                        </div>
-                    </div>
-                    <div class="toggle-item">
-                        <label for="toggleChangeHistory">Change History</label>
-                        <div class="toggle-switch">
-                            <input type="checkbox" id="toggleChangeHistory">
-                            <span class="slider"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Content Card -->
+        <div class="card">
+          <h2 class="card-title">📝 Content</h2>
 
-            <!-- Field Visibility -->
-            <div class="card">
-                <h2 class="card-title">🔧 Field Visibility</h2>
-                <div class="toggle-list">
-                    <div class="toggle-item">
-                        <label for="toggleSopNumber">SOP Number</label>
-                        <div class="toggle-switch">
-                            <input type="checkbox" id="toggleSopNumber" checked>
-                            <span class="slider"></span>
-                        </div>
-                    </div>
-                    <div class="toggle-item">
-                        <label for="toggleEffectiveDate">Effective Date</label>
-                        <div class="toggle-switch">
-                            <input type="checkbox" id="toggleEffectiveDate" checked>
-                            <span class="slider"></span>
-                        </div>
-                    </div>
-                    <div class="toggle-item">
-                        <label for="toggleRevisionDate">Revision Date</label>
-                        <div class="toggle-switch">
-                            <input type="checkbox" id="toggleRevisionDate" checked>
-                            <span class="slider"></span>
-                        </div>
-                    </div>
-                    <div class="toggle-item">
-                        <label for="toggleCopyType">Copy Type</label>
-                        <div class="toggle-switch">
-                            <input type="checkbox" id="toggleCopyType" checked>
-                            <span class="slider"></span>
-                        </div>
-                    </div>
-                </div>
+          <div class="expandable">
+            <div class="expandable-header" onclick="toggleExpand(this)">
+              <h3>Purpose</h3>
+              <span class="expand-icon">▼</span>
             </div>
+            <div class="expandable-content">
+              <textarea
+                id="purpose"
+                placeholder="Describe the purpose..."
+              ></textarea>
+            </div>
+          </div>
 
-            <!-- Credit -->
-            <div class="credit-badge">
-                <p>Created by</p>
-                <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
+          <div class="expandable">
+            <div class="expandable-header" onclick="toggleExpand(this)">
+              <h3>Scope</h3>
+              <span class="expand-icon">▼</span>
             </div>
+            <div class="expandable-content">
+              <textarea id="scope" placeholder="Define the scope..."></textarea>
+            </div>
+          </div>
+
+          <div class="expandable">
+            <div class="expandable-header" onclick="toggleExpand(this)">
+              <h3>Responsibility</h3>
+              <span class="expand-icon">▼</span>
+            </div>
+            <div class="expandable-content">
+              <textarea
+                id="responsibility"
+                placeholder="List responsibilities..."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="expandable">
+            <div class="expandable-header" onclick="toggleExpand(this)">
+              <h3>Procedure</h3>
+              <span class="expand-icon">▼</span>
+            </div>
+            <div class="expandable-content">
+              <textarea
+                id="procedure"
+                placeholder="Steps (one per line)..."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="expandable">
+            <div class="expandable-header" onclick="toggleExpand(this)">
+              <h3>Precautions</h3>
+              <span class="expand-icon">▼</span>
+            </div>
+            <div class="expandable-content">
+              <textarea
+                id="precautions"
+                placeholder="Safety precautions..."
+              ></textarea>
+            </div>
+          </div>
         </div>
+
+        <!-- Applicability Card -->
+        <div class="card" id="sectionApplicability" style="display: none">
+          <h2 class="card-title">🎯 Applicability</h2>
+          <textarea
+            id="applicability"
+            placeholder="Define applicability..."
+          ></textarea>
+        </div>
+
+        <!-- Abbreviations Card -->
+        <div class="card" id="sectionAbbreviations" style="display: none">
+          <h2 class="card-title">📖 Abbreviations</h2>
+          <textarea
+            id="abbreviations"
+            placeholder="List abbreviations..."
+          ></textarea>
+        </div>
+
+        <!-- References Card -->
+        <div class="card" id="sectionReferences" style="display: none">
+          <h2 class="card-title">📚 References</h2>
+          <textarea id="references" placeholder="List references..."></textarea>
+        </div>
+
+        <!-- Annexures Card -->
+        <div class="card" id="sectionAnnexures" style="display: none">
+          <h2 class="card-title">📎 Annexures</h2>
+          <textarea id="annexures" placeholder="List annexures..."></textarea>
+        </div>
+
+        <!-- Change History Card -->
+        <div class="card" id="sectionChangeHistory" style="display: none">
+          <h2 class="card-title">📜 Change History</h2>
+          <textarea
+            id="changeHistoryInput"
+            placeholder="Format: Version|Date|Changes|Approved By"
+          ></textarea>
+        </div>
+
+        <!-- Approval Card -->
+        <div class="card">
+          <h2 class="card-title">✍️ Approval</h2>
+
+          <div class="subsection-title">Prepared By</div>
+          <div class="form-group">
+            <label for="preparedBy">Name</label>
+            <input type="text" id="preparedBy" placeholder="Full name" />
+          </div>
+          <div class="form-group">
+            <label for="preparedDesig">Designation</label>
+            <input type="text" id="preparedDesig" placeholder="Job title" />
+          </div>
+          <div class="form-group">
+            <label for="preparedDate">Date</label>
+            <input type="date" id="preparedDate" />
+          </div>
+
+          <div class="subsection-title">Checked By</div>
+          <div class="form-group">
+            <label for="checkedBy">Name</label>
+            <input type="text" id="checkedBy" placeholder="Full name" />
+          </div>
+          <div class="form-group">
+            <label for="checkedDesig">Designation</label>
+            <input type="text" id="checkedDesig" placeholder="Job title" />
+          </div>
+          <div class="form-group">
+            <label for="checkedDate">Date</label>
+            <input type="date" id="checkedDate" />
+          </div>
+
+          <div class="subsection-title">Approved By</div>
+          <div class="form-group">
+            <label for="approvedBy">Name</label>
+            <input type="text" id="approvedBy" placeholder="Full name" />
+          </div>
+          <div class="form-group">
+            <label for="approvedDesig">Designation</label>
+            <input type="text" id="approvedDesig" placeholder="Job title" />
+          </div>
+          <div class="form-group">
+            <label for="approvedDate">Date</label>
+            <input type="date" id="approvedDate" />
+          </div>
+        </div>
+
+        <!-- Credit Badge -->
+        <div class="credit-badge">
+          <p>Developed by</p>
+          <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
+        </div>
+      </div>
+
+      <!-- TAB 2: PREVIEW -->
+      <div class="tab-panel" id="tab-preview">
+        <div class="card">
+          <h2 class="card-title">📄 Document Preview</h2>
+          <div id="preview-wrapper">
+            <div id="preview">
+              <div class="empty-state">
+                <div class="empty-state-icon">📂</div>
+                <p>Select a department and SOP<br />to preview your document</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: SETTINGS (Toggles) -->
+      <div class="tab-panel" id="tab-options">
+        <!-- Section Visibility -->
+        <div class="card">
+          <h2 class="card-title">👁️ Section Visibility</h2>
+          <div class="toggle-list">
+            <div class="toggle-item">
+              <label for="toggleDocControl">Document Control</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="toggleDocControl" checked />
+                <span class="slider"></span>
+              </div>
+            </div>
+            <div class="toggle-item">
+              <label for="toggleApplicability">Applicability</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="toggleApplicability" />
+                <span class="slider"></span>
+              </div>
+            </div>
+            <div class="toggle-item">
+              <label for="toggleAbbreviations">Abbreviations</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="toggleAbbreviations" />
+                <span class="slider"></span>
+              </div>
+            </div>
+            <div class="toggle-item">
+              <label for="toggleReferences">References</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="toggleReferences" />
+                <span class="slider"></span>
+              </div>
+            </div>
+            <div class="toggle-item">
+              <label for="toggleAnnexures">Annexures</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="toggleAnnexures" />
+                <span class="slider"></span>
+              </div>
+            </div>
+            <div class="toggle-item">
+              <label for="toggleChangeHistory">Change History</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="toggleChangeHistory" />
+                <span class="slider"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Field Visibility -->
+        <div class="card">
+          <h2 class="card-title">🔧 Field Visibility</h2>
+          <div class="toggle-list">
+            <div class="toggle-item">
+              <label for="toggleSopNumber">SOP Number</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="toggleSopNumber" checked />
+                <span class="slider"></span>
+              </div>
+            </div>
+            <div class="toggle-item">
+              <label for="toggleEffectiveDate">Effective Date</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="toggleEffectiveDate" checked />
+                <span class="slider"></span>
+              </div>
+            </div>
+            <div class="toggle-item">
+              <label for="toggleRevisionDate">Revision Date</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="toggleRevisionDate" checked />
+                <span class="slider"></span>
+              </div>
+            </div>
+            <div class="toggle-item">
+              <label for="toggleCopyType">Copy Type</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="toggleCopyType" checked />
+                <span class="slider"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Credit -->
+        <div class="credit-badge">
+          <p>Created by</p>
+          <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
+        </div>
+      </div>
     </div>
 
     <!-- Bottom Action Bar -->
     <div class="bottom-action-bar">
-        <button class="action-btn btn-secondary" onclick="window.print()">🖨️ Print</button>
-        <button id="print-btn" class="action-btn btn-primary">💾 Save PDF</button>
+      <button class="action-btn btn-secondary" onclick="window.print()">
+        🖨️ Print
+      </button>
+      <button id="print-btn" class="action-btn btn-primary">💾 Save PDF</button>
     </div>
 
     <!-- html2pdf.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
-            integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
-            crossorigin="anonymous" 
-            referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- Tab Switching & Expand Functions -->
     <script>
-        function switchTab(index) {
-            const tabs = document.querySelectorAll('.tab-btn');
-            const panels = document.querySelectorAll('.tab-panel');
+      function switchTab(index) {
+        const tabs = document.querySelectorAll(".tab-btn");
+        const panels = document.querySelectorAll(".tab-panel");
 
-            tabs.forEach((tab, i) => {
-                tab.classList.toggle('active', i === index);
-            });
-
-            panels.forEach((panel, i) => {
-                panel.classList.toggle('active', i === index);
-            });
-        }
-
-        function toggleExpand(header) {
-            const expandable = header.parentElement;
-            expandable.classList.toggle('open');
-        }
-
-        // Toggle active state for toggle items
-        document.addEventListener('DOMContentLoaded', function() {
-            const toggleItems = document.querySelectorAll('.toggle-item');
-            toggleItems.forEach(item => {
-                const checkbox = item.querySelector('input[type="checkbox"]');
-                checkbox.addEventListener('change', function() {
-                    item.classList.toggle('active', this.checked);
-                });
-                if(checkbox.checked) {
-                    item.classList.add('active');
-                }
-            });
+        tabs.forEach((tab, i) => {
+          tab.classList.toggle("active", i === index);
         });
+
+        panels.forEach((panel, i) => {
+          panel.classList.toggle("active", i === index);
+        });
+      }
+
+      function toggleExpand(header) {
+        const expandable = header.parentElement;
+        expandable.classList.toggle("open");
+      }
+
+      // Toggle active state AND section visibility
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleItems = document.querySelectorAll(".toggle-item");
+        toggleItems.forEach((item) => {
+          const checkbox = item.querySelector('input[type="checkbox"]');
+
+          // Find the corresponding section
+          const toggleId = checkbox.id; // e.g., "toggleDocControl"
+          const sectionName = toggleId.replace("toggle", ""); // e.g., "DocControl"
+          const sectionId = "section" + sectionName; // e.g., "sectionDocControl"
+          const section = document.getElementById(sectionId);
+
+          // Set initial visibility based on checkbox state
+          if (section) {
+            section.style.display = checkbox.checked ? "block" : "none";
+          }
+
+          // Handle checkbox changes
+          checkbox.addEventListener("change", function () {
+            // Visual feedback
+            item.classList.toggle("active", this.checked);
+
+            // Toggle actual section visibility
+            if (section) {
+              section.style.display = this.checked ? "block" : "none";
+            }
+          });
+
+          // Set initial active state
+          if (checkbox.checked) {
+            item.classList.add("active");
+          }
+        });
+      });
     </script>
 
     <!-- SOP Engine -->
     <script src="../js/sop-engine.js"></script>
-</body>
+  </body>
 </html>
