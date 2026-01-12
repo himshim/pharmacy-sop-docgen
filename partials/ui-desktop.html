@@ -1,353 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SOP Generator - Desktop</title>
-    <link rel="stylesheet" href="../css/ui-desktop.css">
-    <link rel="stylesheet" href="../css/print-a4.css">
-    
+    <link rel="stylesheet" href="../css/ui-desktop.css" />
+    <link rel="stylesheet" href="../css/print-a4.css" />
+
     <!-- Word Export Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script src="https://unpkg.com/html-docx-js@0.3.1/dist/html-docx.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="app-container">
-        <header class="app-header">
-            <div class="header-content">
-                <div class="header-left">
-                    <h1><span class="logo-icon">📋</span> SOP Document Generator</h1>
-                    <p>Create professional Standard Operating Procedures with ease</p>
-                </div>
-                <div class="header-right">
-                    <span class="version-badge">Pharma Edition</span>
-                    <a href="https://github.com/himshim26" target="_blank" class="credit-link">
-                        Created by @himshim26
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <div class="main-layout">
-            <aside class="controls-panel">
-                <!-- Department & SOP Selection -->
-                <div class="control-section">
-                    <h2 class="section-title"><span class="section-icon">📁</span> Department & SOP</h2>
-                    <div class="form-group">
-                        <label for="departmentSelect">Select Department</label>
-                        <select id="departmentSelect">
-                            <option value="">Choose department...</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="sopSelect">Select SOP</label>
-                        <select id="sopSelect" disabled>
-                            <option value="">Choose SOP...</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="templateSelect">Template Style</label>
-                        <select id="templateSelect">
-                            <option value="sop-a4-classic">Classic Template</option>
-                            <option value="sop-a4-iso">ISO Template</option>
-                            <option value="sop-a4-naac">NAAC Template</option>
-                            <option value="sop-a4-pci">PCI Template</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Document Information -->
-                <div class="control-section" id="sectionDocControl" style="display: none;">
-                    <h2 class="section-title"><span class="section-icon">📋</span> Document Information</h2>
-                    <div class="form-group">
-                        <label for="institute">Institute Name</label>
-                        <input type="text" id="institute" placeholder="Enter institute name">
-                    </div>
-                    <div class="form-group">
-                        <label for="department">Department</label>
-                        <input type="text" id="department" placeholder="Enter department">
-                    </div>
-                    <div class="form-group">
-                        <label for="title">Document Title</label>
-                        <input type="text" id="title" placeholder="Enter SOP title">
-                    </div>
-                    <div class="form-group">
-                        <label for="sopNumber">SOP Number</label>
-                        <input type="text" id="sopNumber" placeholder="e.g., SOP-001">
-                    </div>
-                    <div class="form-group">
-                        <label for="revisionNo">Revision Number</label>
-                        <input type="text" id="revisionNo" placeholder="00">
-                    </div>
-                    <div class="form-group">
-                        <label for="effectiveDate">Effective Date</label>
-                        <input type="date" id="effectiveDate">
-                    </div>
-                    <div class="form-group">
-                        <label for="revisionDate">Revision Date</label>
-                        <input type="date" id="revisionDate">
-                    </div>
-                    <div class="form-group">
-                        <label for="nextReviewDate">Next Review Date</label>
-                        <input type="date" id="nextReviewDate">
-                    </div>
-                    <div class="form-group">
-                        <label for="copyType">Copy Type</label>
-                        <select id="copyType">
-                            <option value="CONTROLLED">Controlled Copy</option>
-                            <option value="UNCONTROLLED">Uncontrolled Copy</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Content Sections -->
-                <div class="control-section">
-                    <h2 class="section-title"><span class="section-icon">📝</span> Content Sections</h2>
-
-                    <div class="collapsible-section">
-                        <div class="collapsible-header">
-                            <h3>Purpose</h3>
-                            <span class="collapsible-icon">▼</span>
-                        </div>
-                        <div class="collapsible-content">
-                            <textarea id="purpose" placeholder="Describe the purpose of this SOP..."></textarea>
-                        </div>
-                    </div>
-
-                    <div class="collapsible-section">
-                        <div class="collapsible-header">
-                            <h3>Scope</h3>
-                            <span class="collapsible-icon">▼</span>
-                        </div>
-                        <div class="collapsible-content">
-                            <textarea id="scope" placeholder="Define the scope and applicability..."></textarea>
-                        </div>
-                    </div>
-
-                    <div class="collapsible-section">
-                        <div class="collapsible-header">
-                            <h3>Responsibility</h3>
-                            <span class="collapsible-icon">▼</span>
-                        </div>
-                        <div class="collapsible-content">
-                            <textarea id="responsibility" placeholder="List responsible personnel and their roles..."></textarea>
-                        </div>
-                    </div>
-
-                    <div class="collapsible-section">
-                        <div class="collapsible-header">
-                            <h3>Procedure</h3>
-                            <span class="collapsible-icon">▼</span>
-                        </div>
-                        <div class="collapsible-content">
-                            <textarea id="procedure" placeholder="Enter procedure steps (one per line)..."></textarea>
-                        </div>
-                    </div>
-
-                    <div class="collapsible-section">
-                        <div class="collapsible-header">
-                            <h3>Precautions & Safety</h3>
-                            <span class="collapsible-icon">▼</span>
-                        </div>
-                        <div class="collapsible-content">
-                            <textarea id="precautions" placeholder="List safety precautions and warnings..."></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Applicability -->
-                <div class="control-section" id="sectionApplicability" style="display: none;">
-                    <h2 class="section-title"><span class="section-icon">🎯</span> Applicability</h2>
-                    <textarea id="applicability" placeholder="Define where this SOP applies..."></textarea>
-                </div>
-
-                <!-- Abbreviations -->
-                <div class="control-section" id="sectionAbbreviations" style="display: none;">
-                    <h2 class="section-title"><span class="section-icon">📖</span> Abbreviations</h2>
-                    <textarea id="abbreviations" placeholder="List abbreviations used..."></textarea>
-                </div>
-
-                <!-- References -->
-                <div class="control-section" id="sectionReferences" style="display: none;">
-                    <h2 class="section-title"><span class="section-icon">📚</span> References</h2>
-                    <textarea id="references" placeholder="List reference documents..."></textarea>
-                </div>
-
-                <!-- Annexures -->
-                <div class="control-section" id="sectionAnnexures" style="display: none;">
-                    <h2 class="section-title"><span class="section-icon">📎</span> Annexures</h2>
-                    <textarea id="annexures" placeholder="List annexures and attachments..."></textarea>
-                </div>
-
-                <!-- Change History -->
-                <div class="control-section" id="sectionChangeHistory" style="display: none;">
-                    <h2 class="section-title"><span class="section-icon">📜</span> Change History</h2>
-                    <textarea id="changeHistoryInput" placeholder="Format: Version|Date|Changes|Approved By (one per line)"></textarea>
-                </div>
-
-                <!-- Section Visibility Toggles -->
-                <div class="control-section">
-                    <h2 class="section-title"><span class="section-icon">👁️</span> Section Visibility</h2>
-                    <div class="checkbox-grid">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="toggleDocControl" checked>
-                            <label for="toggleDocControl">Document Control</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="toggleApplicability">
-                            <label for="toggleApplicability">Applicability</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="toggleAbbreviations">
-                            <label for="toggleAbbreviations">Abbreviations</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="toggleReferences">
-                            <label for="toggleReferences">References</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="toggleAnnexures">
-                            <label for="toggleAnnexures">Annexures</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="toggleChangeHistory">
-                            <label for="toggleChangeHistory">Change History</label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Field Visibility Toggles -->
-                <div class="control-section">
-                    <h2 class="section-title"><span class="section-icon">🔧</span> Field Visibility</h2>
-                    <div class="checkbox-grid">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="toggleSopNumber" checked>
-                            <label for="toggleSopNumber">SOP Number</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="toggleEffectiveDate" checked>
-                            <label for="toggleEffectiveDate">Effective Date</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="toggleRevisionDate" checked>
-                            <label for="toggleRevisionDate">Revision Date</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="toggleCopyType" checked>
-                            <label for="toggleCopyType">Copy Type</label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Approval Information -->
-                <div class="control-section">
-                    <h2 class="section-title"><span class="section-icon">✍️</span> Approval Information</h2>
-
-                    <div class="subsection-title">Prepared By</div>
-                    <div class="form-group">
-                        <label for="preparedBy">Name</label>
-                        <input type="text" id="preparedBy" placeholder="Full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="preparedDesig">Designation</label>
-                        <input type="text" id="preparedDesig" placeholder="Job title">
-                    </div>
-                    <div class="form-group">
-                        <label for="preparedDate">Date</label>
-                        <input type="date" id="preparedDate">
-                    </div>
-
-                    <div class="subsection-title">Checked By</div>
-                    <div class="form-group">
-                        <label for="checkedBy">Name</label>
-                        <input type="text" id="checkedBy" placeholder="Full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="checkedDesig">Designation</label>
-                        <input type="text" id="checkedDesig" placeholder="Job title">
-                    </div>
-                    <div class="form-group">
-                        <label for="checkedDate">Date</label>
-                        <input type="date" id="checkedDate">
-                    </div>
-
-                    <div class="subsection-title">Approved By</div>
-                    <div class="form-group">
-                        <label for="approvedBy">Name</label>
-                        <input type="text" id="approvedBy" placeholder="Full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="approvedDesig">Designation</label>
-                        <input type="text" id="approvedDesig" placeholder="Job title">
-                    </div>
-                    <div class="form-group">
-                        <label for="approvedDate">Date</label>
-                        <input type="date" id="approvedDate">
-                    </div>
-                </div>
-            </aside>
-
-            <main class="preview-panel">
-                <div class="preview-toolbar">
-                    <h2><span>📄</span> Document Preview</h2>
-                    <div class="toolbar-buttons">
-                        <button class="btn-secondary" onclick="window.print()">
-                            🖨️ Print
-                        </button>
-                        <button id="print-btn" class="btn-primary">
-                            💾 Save as PDF
-                        </button>
-                    </div>
-                </div>
-
-                <div id="preview-wrapper">
-                    <div id="preview">
-                        <div id="preview-content">
-                            <p style="text-align: center; color: #999; margin-top: 100px; font-size: 16px;">
-                                📂 Select a department and SOP to begin...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </main>
+      <header class="app-header">
+        <div class="header-content">
+          <div class="header-left">
+            <h1><span class="logo-icon">📋</span> SOP Document Generator</h1>
+            <p>Create professional Standard Operating Procedures with ease</p>
+          </div>
+          <div class="header-right">
+            <span class="version-badge">Pharma Edition</span>
+            <a
+              href="https://github.com/himshim26"
+              target="_blank"
+              class="credit-link"
+            >
+              Created by @himshim26
+            </a>
+          </div>
         </div>
+      </header>
 
-        <footer class="status-bar">
-            <div class="status-left">
-                <div class="status-indicator">
-                    <span class="status-dot"></span>
-                    <span>Ready</span>
-                </div>
-                <span>SOP Generator v2.0</span>
+      <div class="main-layout">
+        <aside class="controls-panel">
+          <!-- Department & SOP Selection -->
+          <div class="control-section">
+            <h2 class="section-title">
+              <span class="section-icon">📁</span> Department & SOP
+            </h2>
+            <div class="form-group">
+              <label for="departmentSelect">Select Department</label>
+              <select id="departmentSelect">
+                <option value="">Choose department...</option>
+              </select>
             </div>
-            <div class="credit-footer">
-                <span>Developed by</span>
-                <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
+            <div class="form-group">
+              <label for="sopSelect">Select SOP</label>
+              <select id="sopSelect" disabled>
+                <option value="">Choose SOP...</option>
+              </select>
             </div>
-        </footer>
+            <div class="form-group">
+              <label for="templateSelect">Template Style</label>
+              <select id="templateSelect">
+                <option value="sop-a4-classic">Classic Template</option>
+                <option value="sop-a4-iso">ISO Template</option>
+                <option value="sop-a4-naac">NAAC Template</option>
+                <option value="sop-a4-pci">PCI Template</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Document Information -->
+          <div
+            class="control-section"
+            id="sectionDocControl"
+            style="display: none"
+          >
+            <h2 class="section-title">
+              <span class="section-icon">📋</span> Document Information
+            </h2>
+            <div class="form-group">
+              <label for="institute">Institute Name</label>
+              <input
+                type="text"
+                id="institute"
+                placeholder="Enter institute name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="department">Department</label>
+              <input
+                type="text"
+                id="department"
+                placeholder="Enter department"
+              />
+            </div>
+            <div class="form-group">
+              <label for="title">Document Title</label>
+              <input type="text" id="title" placeholder="Enter SOP title" />
+            </div>
+            <div class="form-group">
+              <label for="sopNumber">SOP Number</label>
+              <input type="text" id="sopNumber" placeholder="e.g., SOP-001" />
+            </div>
+            <div class="form-group">
+              <label for="revisionNo">Revision Number</label>
+              <input type="text" id="revisionNo" placeholder="00" />
+            </div>
+            <div class="form-group">
+              <label for="effectiveDate">Effective Date</label>
+              <input type="date" id="effectiveDate" />
+            </div>
+            <div class="form-group">
+              <label for="revisionDate">Revision Date</label>
+              <input type="date" id="revisionDate" />
+            </div>
+            <div class="form-group">
+              <label for="nextReviewDate">Next Review Date</label>
+              <input type="date" id="nextReviewDate" />
+            </div>
+            <div class="form-group">
+              <label for="copyType">Copy Type</label>
+              <select id="copyType">
+                <option value="CONTROLLED">Controlled Copy</option>
+                <option value="UNCONTROLLED">Uncontrolled Copy</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Content Sections -->
+          <div class="control-section">
+            <h2 class="section-title">
+              <span class="section-icon">📝</span> Content Sections
+            </h2>
+
+            <div class="collapsible-section">
+              <div class="collapsible-header">
+                <h3>Purpose</h3>
+                <span class="collapsible-icon">▼</span>
+              </div>
+              <div class="collapsible-content">
+                <textarea
+                  id="purpose"
+                  placeholder="Describe the purpose of this SOP..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="collapsible-section">
+              <div class="collapsible-header">
+                <h3>Scope</h3>
+                <span class="collapsible-icon">▼</span>
+              </div>
+              <div class="collapsible-content">
+                <textarea
+                  id="scope"
+                  placeholder="Define the scope and applicability..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="collapsible-section">
+              <div class="collapsible-header">
+                <h3>Responsibility</h3>
+                <span class="collapsible-icon">▼</span>
+              </div>
+              <div class="collapsible-content">
+                <textarea
+                  id="responsibility"
+                  placeholder="List responsible personnel and their roles..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="collapsible-section">
+              <div class="collapsible-header">
+                <h3>Procedure</h3>
+                <span class="collapsible-icon">▼</span>
+              </div>
+              <div class="collapsible-content">
+                <textarea
+                  id="procedure"
+                  placeholder="Enter procedure steps (one per line)..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="collapsible-section">
+              <div class="collapsible-header">
+                <h3>Precautions & Safety</h3>
+                <span class="collapsible-icon">▼</span>
+              </div>
+              <div class="collapsible-content">
+                <textarea
+                  id="precautions"
+                  placeholder="List safety precautions and warnings..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Applicability -->
+          <div
+            class="control-section"
+            id="sectionApplicability"
+            style="display: none"
+          >
+            <h2 class="section-title">
+              <span class="section-icon">🎯</span> Applicability
+            </h2>
+            <textarea
+              id="applicability"
+              placeholder="Define where this SOP applies..."
+            ></textarea>
+          </div>
+
+          <!-- Abbreviations -->
+          <div
+            class="control-section"
+            id="sectionAbbreviations"
+            style="display: none"
+          >
+            <h2 class="section-title">
+              <span class="section-icon">📖</span> Abbreviations
+            </h2>
+            <textarea
+              id="abbreviations"
+              placeholder="List abbreviations used..."
+            ></textarea>
+          </div>
+
+          <!-- References -->
+          <div
+            class="control-section"
+            id="sectionReferences"
+            style="display: none"
+          >
+            <h2 class="section-title">
+              <span class="section-icon">📚</span> References
+            </h2>
+            <textarea
+              id="references"
+              placeholder="List reference documents..."
+            ></textarea>
+          </div>
+
+          <!-- Annexures -->
+          <div
+            class="control-section"
+            id="sectionAnnexures"
+            style="display: none"
+          >
+            <h2 class="section-title">
+              <span class="section-icon">📎</span> Annexures
+            </h2>
+            <textarea
+              id="annexures"
+              placeholder="List annexures and attachments..."
+            ></textarea>
+          </div>
+
+          <!-- Change History -->
+          <div
+            class="control-section"
+            id="sectionChangeHistory"
+            style="display: none"
+          >
+            <h2 class="section-title">
+              <span class="section-icon">📜</span> Change History
+            </h2>
+            <textarea
+              id="changeHistoryInput"
+              placeholder="Format: Version|Date|Changes|Approved By (one per line)"
+            ></textarea>
+          </div>
+
+          <!-- Section Visibility Toggles -->
+          <div class="control-section">
+            <h2 class="section-title">
+              <span class="section-icon">👁️</span> Section Visibility
+            </h2>
+            <div class="checkbox-grid">
+              <div class="checkbox-item">
+                <input type="checkbox" id="toggleDocControl" checked />
+                <label for="toggleDocControl">Document Control</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="toggleApplicability" />
+                <label for="toggleApplicability">Applicability</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="toggleAbbreviations" />
+                <label for="toggleAbbreviations">Abbreviations</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="toggleReferences" />
+                <label for="toggleReferences">References</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="toggleAnnexures" />
+                <label for="toggleAnnexures">Annexures</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="toggleChangeHistory" />
+                <label for="toggleChangeHistory">Change History</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Field Visibility Toggles -->
+          <div class="control-section">
+            <h2 class="section-title">
+              <span class="section-icon">🔧</span> Field Visibility
+            </h2>
+            <div class="checkbox-grid">
+              <div class="checkbox-item">
+                <input type="checkbox" id="toggleSopNumber" checked />
+                <label for="toggleSopNumber">SOP Number</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="toggleEffectiveDate" checked />
+                <label for="toggleEffectiveDate">Effective Date</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="toggleRevisionDate" checked />
+                <label for="toggleRevisionDate">Revision Date</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="toggleCopyType" checked />
+                <label for="toggleCopyType">Copy Type</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approval Information -->
+          <div class="control-section">
+            <h2 class="section-title">
+              <span class="section-icon">✍️</span> Approval Information
+            </h2>
+
+            <div class="subsection-title">Prepared By</div>
+            <div class="form-group">
+              <label for="preparedBy">Name</label>
+              <input type="text" id="preparedBy" placeholder="Full name" />
+            </div>
+            <div class="form-group">
+              <label for="preparedDesig">Designation</label>
+              <input type="text" id="preparedDesig" placeholder="Job title" />
+            </div>
+            <div class="form-group">
+              <label for="preparedDate">Date</label>
+              <input type="date" id="preparedDate" />
+            </div>
+
+            <div class="subsection-title">Checked By</div>
+            <div class="form-group">
+              <label for="checkedBy">Name</label>
+              <input type="text" id="checkedBy" placeholder="Full name" />
+            </div>
+            <div class="form-group">
+              <label for="checkedDesig">Designation</label>
+              <input type="text" id="checkedDesig" placeholder="Job title" />
+            </div>
+            <div class="form-group">
+              <label for="checkedDate">Date</label>
+              <input type="date" id="checkedDate" />
+            </div>
+
+            <div class="subsection-title">Approved By</div>
+            <div class="form-group">
+              <label for="approvedBy">Name</label>
+              <input type="text" id="approvedBy" placeholder="Full name" />
+            </div>
+            <div class="form-group">
+              <label for="approvedDesig">Designation</label>
+              <input type="text" id="approvedDesig" placeholder="Job title" />
+            </div>
+            <div class="form-group">
+              <label for="approvedDate">Date</label>
+              <input type="date" id="approvedDate" />
+            </div>
+          </div>
+        </aside>
+
+        <main class="preview-panel">
+          <div class="preview-toolbar">
+            <h2><span>📄</span> Document Preview</h2>
+            <div class="toolbar-buttons">
+              <button class="btn-secondary" onclick="window.print()">
+                🖨️ Print
+              </button>
+              <button id="print-btn" class="btn-primary">💾 Save as PDF</button>
+            </div>
+          </div>
+
+          <div id="preview-wrapper">
+            <div id="preview">
+              <p
+                style="
+                  text-align: center;
+                  color: #999;
+                  margin-top: 100px;
+                  font-size: 16px;
+                "
+              >
+                📂 Select a department and SOP to begin...
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <footer class="status-bar">
+        <div class="status-left">
+          <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span>Ready</span>
+          </div>
+          <span>SOP Generator v2.0</span>
+        </div>
+        <div class="credit-footer">
+          <span>Developed by</span>
+          <a href="https://github.com/himshim26" target="_blank">@himshim26</a>
+        </div>
+      </footer>
     </div>
 
     <!-- html2pdf.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
-            integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
-            crossorigin="anonymous" 
-            referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- SOP Engine -->
     <script src="../js/sop-engine.js"></script>
 
     <!-- Collapsible Sections Handler -->
     <script>
-        document.querySelectorAll('.collapsible-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const section = header.parentElement;
-                const content = section.querySelector('.collapsible-content');
-                const isOpen = content.style.display === 'block';
+      document.querySelectorAll(".collapsible-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const section = header.parentElement;
+          const content = section.querySelector(".collapsible-content");
+          const isOpen = content.style.display === "block";
 
-                content.style.display = isOpen ? 'none' : 'block';
-                header.querySelector('.collapsible-icon').textContent = isOpen ? '▼' : '▲';
-            });
+          content.style.display = isOpen ? "none" : "block";
+          header.querySelector(".collapsible-icon").textContent = isOpen
+            ? "▼"
+            : "▲";
         });
+      });
     </script>
-</body>
+  </body>
 </html>

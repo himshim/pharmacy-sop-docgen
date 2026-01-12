@@ -582,93 +582,29 @@ button:hover::before {
 
 /* ============ PRINT STYLES ============ */
 @media print {
-    /* Hide EVERYTHING first */
-    body * {
+    body {
         visibility: hidden !important;
     }
-    
-    /* Then show ONLY the preview and its children */
-    #preview,
-    #preview *,
-    #preview-content,
-    #preview-content * {
+
+    #preview, #preview * {
         visibility: visible !important;
     }
-    
-    /* Hide Netlify banner and other floaters */
-    .netlify-badge,
-    [class*="netlify"],
-    [class*="deploy"],
-    iframe,
-    .toolbar-buttons,
-    button {
-        display: none !important;
-        visibility: hidden !important;
-    }
-    
-    /* Reset body and containers */
-    body {
-        background: white !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        height: auto !important;
-        overflow: visible !important;
-    }
-    
-    .app-container {
-        box-shadow: none !important;
-        border-radius: 0 !important;
-        height: auto !important;
-        overflow: visible !important;
-    }
-    
-    .main-layout {
-        display: block !important;
-        height: auto !important;
-        grid-template-columns: none !important;
-    }
-    
-    .preview-panel {
-        border: none !important;
-        height: auto !important;
-    }
-    
-    #preview-wrapper {
-        padding: 0 !important;
-        background: white !important;
-        height: auto !important;
-        overflow: visible !important;
-    }
-    
-    /* Position the preview for printing */
+
     #preview {
         position: absolute !important;
         left: 0 !important;
         top: 0 !important;
         width: 210mm !important;
-        min-height: auto !important;
+        min-height: 297mm !important;
         margin: 0 !important;
-        padding: 15mm !important;
+        padding: 20mm !important;
+        background: white !important;
         box-shadow: none !important;
         border-radius: 0 !important;
     }
-    
-    /* Page setup */
+
     @page {
         size: A4;
-        margin: 10mm;
-    }
-    
-    /* Prevent awkward breaks */
-    h1, h2, h3, h4, h5, h6 {
-        page-break-after: avoid !important;
-    }
-    
-    table, ul, ol, img {
-        page-break-inside: avoid !important;
-    }
-    
-    tr, li {
-        page-break-inside: avoid !important;
+        margin: 0;
     }
 }
