@@ -1,150 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════════
-   PRINT & PDF STYLES - MS WORD STYLE
+   PRINT & PDF STYLES - MS WORD STYLE (PRODUCTION READY)
    Perfect A4 rendering for professional SOP documents
    ═══════════════════════════════════════════════════════════════ */
-
-/* ==================== SCREEN PREVIEW STYLES ==================== */
-#preview {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 11pt;
-    line-height: 1.6;
-    color: #000;
-    background: white;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* ==================== TYPOGRAPHY ==================== */
-#preview h1 {
-    font-size: 18pt;
-    font-weight: bold;
-    margin: 0 0 16pt 0;
-    text-align: center;
-    color: #000;
-    page-break-after: avoid;
-    text-transform: uppercase;
-    letter-spacing: 0.5pt;
-}
-
-#preview h2 {
-    font-size: 13pt;
-    font-weight: bold;
-    margin: 16pt 0 10pt 0;
-    color: #000;
-    page-break-after: avoid;
-    border-bottom: 1.5pt solid #333;
-    padding-bottom: 4pt;
-}
-
-#preview h3 {
-    font-size: 12pt;
-    font-weight: bold;
-    margin: 12pt 0 8pt 0;
-    color: #000;
-    page-break-after: avoid;
-}
-
-#preview h4 {
-    font-size: 11pt;
-    font-weight: bold;
-    margin: 10pt 0 6pt 0;
-    color: #333;
-    page-break-after: avoid;
-}
-
-#preview p {
-    margin: 0 0 10pt 0;
-    text-align: justify;
-    orphans: 3;
-    widows: 3;
-}
-
-#preview strong,
-#preview b {
-    font-weight: bold;
-}
-
-#preview em,
-#preview i {
-    font-style: italic;
-}
-
-/* ==================== LISTS ==================== */
-#preview ol,
-#preview ul {
-    margin: 10pt 0;
-    padding-left: 30pt;
-    page-break-inside: avoid;
-}
-
-#preview ol {
-    list-style-type: decimal;
-}
-
-#preview ul {
-    list-style-type: disc;
-}
-
-#preview li {
-    margin: 6pt 0;
-    line-height: 1.6;
-    page-break-inside: avoid;
-}
-
-#preview ol ol {
-    list-style-type: lower-alpha;
-    margin-top: 6pt;
-}
-
-#preview ol ol ol {
-    list-style-type: lower-roman;
-}
-
-/* ==================== TABLES ==================== */
-#preview table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 14pt 0;
-    font-size: 10pt;
-    page-break-inside: avoid;
-}
-
-#preview th,
-#preview td {
-    border: 1pt solid #333;
-    padding: 8pt 10pt;
-    text-align: left;
-    vertical-align: top;
-}
-
-#preview th {
-    background-color: #f0f0f0;
-    font-weight: bold;
-    text-align: center;
-}
-
-#preview thead {
-    display: table-header-group;
-}
-
-#preview tbody {
-    display: table-row-group;
-}
-
-#preview tfoot {
-    display: table-footer-group;
-}
-
-/* Specific table cell styles */
-#preview .label-cell {
-    font-weight: bold;
-    background-color: #f5f5f5;
-    width: 35%;
-}
-
-#preview .value-cell {
-    background-color: white;
-}
 
 /* ==================== MS WORD PREVIEW WRAPPER ==================== */
 #preview-wrapper {
@@ -153,7 +10,7 @@
     overflow-y: auto !important; /* Enable scrolling */
     overflow-x: hidden;
     height: 100%;
-    max-height: calc(100vh - 200px); /* Adjust based on your layout */
+    max-height: calc(100vh - 200px);
     -webkit-overflow-scrolling: touch;
 }
 
@@ -174,10 +31,13 @@
 
 /* ==================== A4 PREVIEW CONTAINER ==================== */
 #preview {
-    /* A4 dimensions at 96 DPI */
+    /* A4 width */
     width: 210mm !important;
-    min-height: 297mm;
     max-width: 210mm !important;
+
+    /* AUTO-EXPAND HEIGHT - No min-height restriction! */
+    min-height: auto;
+    height: auto;
 
     /* Always white background (even in dark mode) */
     background: #ffffff !important;
@@ -209,12 +69,19 @@
     position: relative;
 }
 
-/* Force white background on all child elements in preview */
-#preview * {
+/* Also ensure preview-content expands */
+#preview-content {
+    min-height: auto;
+    height: auto;
+}
+
+/* Force white background on all child elements */
+#preview *,
+#preview-content * {
     box-sizing: border-box;
 }
 
-/* ==================== PAGE BREAK INDICATORS (MS Word Style) ==================== */
+/* ==================== PAGE BREAK INDICATORS ==================== */
 .page-break-indicator {
     position: relative;
     height: 1px;
@@ -252,8 +119,151 @@
     z-index: 5;
 }
 
-/* ==================== DOCUMENT HEADER ==================== */
-#preview .doc-header {
+/* ==================== TYPOGRAPHY ==================== */
+#preview h1,
+#preview-content h1 {
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 0 0 16pt 0;
+    text-align: center;
+    color: #000 !important;
+    page-break-after: avoid;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+}
+
+#preview h2,
+#preview-content h2 {
+    font-size: 13pt;
+    font-weight: bold;
+    margin: 16pt 0 10pt 0;
+    color: #000 !important;
+    page-break-after: avoid;
+    border-bottom: 1.5pt solid #333;
+    padding-bottom: 4pt;
+}
+
+#preview h3,
+#preview-content h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    margin: 12pt 0 8pt 0;
+    color: #000 !important;
+    page-break-after: avoid;
+}
+
+#preview h4,
+#preview-content h4 {
+    font-size: 11pt;
+    font-weight: bold;
+    margin: 10pt 0 6pt 0;
+    color: #333 !important;
+    page-break-after: avoid;
+}
+
+#preview p,
+#preview-content p {
+    margin: 0 0 10pt 0;
+    text-align: justify;
+    color: #000 !important;
+}
+
+#preview strong,
+#preview-content strong,
+#preview b,
+#preview-content b {
+    font-weight: bold;
+    color: #000 !important;
+}
+
+#preview em,
+#preview-content em,
+#preview i,
+#preview-content i {
+    font-style: italic;
+}
+
+/* ==================== LISTS ==================== */
+#preview ol,
+#preview-content ol,
+#preview ul,
+#preview-content ul {
+    margin: 10pt 0;
+    padding-left: 30pt;
+    color: #000 !important;
+}
+
+#preview ol,
+#preview-content ol {
+    list-style-type: decimal;
+}
+
+#preview ul,
+#preview-content ul {
+    list-style-type: disc;
+}
+
+#preview li,
+#preview-content li {
+    margin: 6pt 0;
+    line-height: 1.6;
+    color: #000 !important;
+}
+
+#preview ol ol,
+#preview-content ol ol {
+    list-style-type: lower-alpha;
+    margin-top: 6pt;
+}
+
+#preview ol ol ol,
+#preview-content ol ol ol {
+    list-style-type: lower-roman;
+}
+
+/* ==================== TABLES ==================== */
+#preview table,
+#preview-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14pt 0;
+    font-size: 10pt;
+    background: #fff !important;
+}
+
+#preview th,
+#preview-content th,
+#preview td,
+#preview-content td {
+    border: 1pt solid #333 !important;
+    padding: 8pt 10pt;
+    text-align: left;
+    vertical-align: top;
+    color: #000 !important;
+    background: transparent;
+}
+
+#preview th,
+#preview-content th {
+    background-color: #f0f0f0 !important;
+    font-weight: bold;
+    text-align: center;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+#preview .label-cell,
+#preview-content .label-cell {
+    font-weight: bold;
+    background-color: #f5f5f5 !important;
+    width: 35%;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+/* ==================== DOCUMENT SECTIONS ==================== */
+#preview .doc-header,
+#preview-content .doc-header {
     text-align: center;
     margin-bottom: 20pt;
     padding-bottom: 12pt;
@@ -261,55 +271,13 @@
     color: #000 !important;
 }
 
-#preview .institute-name {
-    font-size: 16pt;
-    font-weight: bold;
-    margin-bottom: 6pt;
-    text-transform: uppercase;
-    letter-spacing: 1pt;
-    color: #000 !important;
-}
-
-#preview .department-name {
-    font-size: 13pt;
-    font-weight: 600;
-    margin-bottom: 4pt;
-    color: #000 !important;
-}
-
-#preview .doc-type {
-    font-size: 12pt;
-    font-weight: bold;
-    margin-top: 8pt;
-    color: #000 !important;
-    text-transform: uppercase;
-    letter-spacing: 2pt;
-}
-
-/* ==================== INFO TABLE ==================== */
-#preview .info-table {
-    margin: 16pt 0;
-    border: 2pt solid #000 !important;
-}
-
-#preview .info-table th {
-    background-color: #e8e8e8 !important;
-    font-weight: bold;
-    padding: 8pt;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-}
-
-#preview .info-table td {
-    padding: 8pt 10pt;
-}
-
-/* ==================== SECTIONS ==================== */
-#preview .section {
+#preview .section,
+#preview-content .section {
     margin: 16pt 0;
 }
 
-#preview .section-title {
+#preview .section-title,
+#preview-content .section-title {
     font-size: 12pt;
     font-weight: bold;
     margin: 14pt 0 8pt 0;
@@ -321,190 +289,31 @@
     print-color-adjust: exact;
 }
 
-#preview .section-content {
-    margin: 8pt 0;
-    padding-left: 10pt;
-    color: #000 !important;
-}
-
-/* ==================== PROCEDURE STEPS ==================== */
-#preview .procedure-list {
-    counter-reset: procedure-counter;
-    list-style: none;
-    padding-left: 0;
-    margin: 10pt 0;
-}
-
-#preview .procedure-list > li {
-    counter-increment: procedure-counter;
-    margin: 8pt 0;
-    padding-left: 35pt;
-    position: relative;
-    color: #000 !important;
-}
-
-#preview .procedure-list > li::before {
-    content: counter(procedure-counter) ".";
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-    min-width: 25pt;
-    color: #000 !important;
-}
-
 /* ==================== SIGNATURE BLOCK ==================== */
-#preview .signature-block {
+#preview .signature-block,
+#preview-content .signature-block {
     margin-top: 30pt;
 }
 
-#preview .signature-table {
+#preview .signature-table,
+#preview-content .signature-table {
     border: 2pt solid #000 !important;
     margin-top: 20pt;
 }
 
-#preview .signature-table th {
-    background-color: #e8e8e8 !important;
-    padding: 10pt;
-    font-weight: bold;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-}
-
-#preview .signature-table td {
-    padding: 12pt 10pt;
-    min-height: 50pt;
-}
-
-#preview .signature-line {
-    border-bottom: 1pt solid #000;
-    min-height: 40pt;
-    margin: 10pt 0 4pt 0;
-}
-
-/* ==================== MARKERS & BADGES ==================== */
-#preview .controlled-doc,
-#preview .end-marker {
-    text-align: center;
-    font-weight: bold;
-    font-size: 11pt;
-    margin: 20pt 0;
-    padding: 10pt;
-    border-top: 2pt solid #000;
-    border-bottom: 2pt solid #000;
-    color: #000 !important;
-}
-
-#preview .confidential-marker {
-    text-align: center;
-    font-weight: bold;
-    font-size: 10pt;
-    color: #666 !important;
-    margin: 10pt 0;
-}
-
-#preview .copy-type {
-    position: absolute;
-    top: 10pt;
-    right: 10pt;
-    font-weight: bold;
-    font-size: 10pt;
-    padding: 6pt 12pt;
-    border: 2pt solid #000;
-    background: #fff !important;
-    color: #000 !important;
-}
-
-/* ==================== PAGE BREAKS ==================== */
-#preview .page-break {
-    page-break-after: always;
-}
-
-#preview .page-break-before {
-    page-break-before: always;
-}
-
-#preview .avoid-break {
-    page-break-inside: avoid;
-}
-
-/* Avoid breaks after headings */
-#preview h1,
-#preview h2,
-#preview h3,
-#preview h4 {
-    page-break-after: avoid;
-}
-
-/* Avoid orphans and widows */
-#preview p,
-#preview li {
-    orphans: 3;
-    widows: 3;
-}
-
-/* ==================== UTILITIES ==================== */
-#preview .text-center {
-    text-align: center;
-}
-
-#preview .text-right {
-    text-align: right;
-}
-
-#preview .text-justify {
-    text-align: justify;
-}
-
-#preview .font-bold {
-    font-weight: bold;
-}
-
-#preview .font-italic {
-    font-style: italic;
-}
-
-#preview .uppercase {
-    text-transform: uppercase;
-}
-
-#preview .underline {
-    text-decoration: underline;
-}
-
-#preview .margin-top {
-    margin-top: 20pt;
-}
-
-#preview .margin-bottom {
-    margin-bottom: 20pt;
-}
-
-#preview .no-margin {
-    margin: 0;
-}
-
-/* ==================== PRINT MEDIA QUERY ==================== */
+/* ==================== PRINT MEDIA QUERY (FIXED!) ==================== */
 @media print {
-    /* Hide wrapper background and scrollbar */
-    #preview-wrapper {
-        background: white !important;
+    /* Reset body - DO NOT HIDE EVERYTHING! */
+    body {
+        margin: 0 !important;
         padding: 0 !important;
-        overflow: visible !important;
-        height: auto !important;
-        max-height: none !important;
+        background: white !important;
     }
 
-    /* Hide scrollbar in print */
-    #preview-wrapper::-webkit-scrollbar {
-        display: none !important;
-    }
-
-    /* Hide all UI elements */
-    body > *:not(#preview-wrapper) {
-        display: none !important;
-    }
-
+    /* Hide UI elements ONLY (not all body children!) */
     .sidebar,
+    .form-panel,
+    .controls-panel,
     .mobile-header,
     .tab-navigation,
     .form-wrapper,
@@ -512,7 +321,6 @@
     .action-bar,
     .bottom-action-bar,
     .preview-toolbar,
-    .controls-panel,
     .status-bar,
     .no-print,
     button,
@@ -521,8 +329,41 @@
     footer:not(.doc-footer),
     input,
     textarea,
-    select {
+    select,
+    .btn,
+    .btn-primary,
+    .btn-secondary {
         display: none !important;
+        visibility: hidden !important;
+    }
+
+    /* Show ONLY the preview wrapper and preview */
+    #preview-wrapper {
+        display: block !important;
+        visibility: visible !important;
+        background: white !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    #preview,
+    #preview-content {
+        display: block !important;
+        visibility: visible !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+    }
+
+    /* Make sure all preview children are visible */
+    #preview *,
+    #preview-content * {
+        visibility: visible !important;
+        color: #000 !important;
     }
 
     /* Hide page break indicators in print */
@@ -532,44 +373,30 @@
         display: none !important;
     }
 
+    /* Hide scrollbar */
+    #preview-wrapper::-webkit-scrollbar {
+        display: none !important;
+    }
+
     /* Page setup */
     @page {
         size: A4 portrait;
         margin: 20mm;
     }
 
-    /* Reset body */
-    body {
-        margin: 0 !important;
-        padding: 0 !important;
-        background: white !important;
-    }
-
-    /* Remove preview shadow in print */
-    #preview {
-        box-shadow: none !important;
-        margin: 0 !important;
-        width: 100% !important;
-        max-width: none !important;
-        padding: 0 !important;
-    }
-
-    /* Force black text */
-    #preview * {
-        color: #000 !important;
-    }
-
     /* Ensure table backgrounds print */
     #preview th,
+    #preview-content th,
     #preview .label-cell,
-    #preview .section-title {
+    #preview-content .label-cell,
+    #preview .section-title,
+    #preview-content .section-title {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
 }
 
-/* ==================== PDF OPTIMIZATION (html2pdf.js) ==================== */
-/* Remove scrollbar and wrapper styling for PDF generation */
+/* ==================== PDF GENERATION MODE ==================== */
 .pdf-rendering #preview-wrapper {
     background: transparent !important;
     padding: 0 !important;
@@ -582,14 +409,13 @@
     margin: 0 !important;
 }
 
-/* Hide page break indicators in PDF */
 .pdf-rendering .page-break-indicator,
 .pdf-rendering .page-break-indicator::before,
 .pdf-rendering .page-break-indicator::after {
     display: none !important;
 }
 
-/* ==================== RESPONSIVE (Mobile Preview) ==================== */
+/* ==================== RESPONSIVE ==================== */
 @media screen and (max-width: 768px) {
     #preview-wrapper {
         padding: 20px 10px;
@@ -597,7 +423,6 @@
     }
 
     #preview {
-        /* Scale down to fit mobile screen */
         transform: scale(0.95);
         transform-origin: top center;
         margin-bottom: 20px;
@@ -606,62 +431,44 @@
 
 @media screen and (max-width: 480px) {
     #preview {
-        /* Further scale for small phones */
         transform: scale(0.75);
         transform-origin: top center;
     }
 }
 
 /* ==================== DARK MODE OVERRIDE ==================== */
-/* Force white background even if dark mode is active */
 [data-theme="dark"] #preview,
 .dark-mode #preview,
-body.dark #preview {
+body.dark #preview,
+[data-theme="dark"] #preview-content,
+.dark-mode #preview-content,
+body.dark #preview-content {
     background: #ffffff !important;
     color: #000000 !important;
 }
 
 [data-theme="dark"] #preview *,
 .dark-mode #preview *,
-body.dark #preview * {
+body.dark #preview *,
+[data-theme="dark"] #preview-content *,
+.dark-mode #preview-content *,
+body.dark #preview-content * {
     color: #000000 !important;
 }
 
-/* Keep wrapper dark in dark mode (MS Word style) */
 [data-theme="dark"] #preview-wrapper,
 .dark-mode #preview-wrapper,
 body.dark #preview-wrapper {
     background: #525659 !important;
 }
 
-/* ==================== IMAGES ==================== */
-#preview img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* ==================== ACCESSIBILITY ==================== */
-#preview abbr {
-    text-decoration: none;
-    border-bottom: 1pt dotted #666;
-}
-
-#preview code {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 10pt;
-    background: #f5f5f5 !important;
-    padding: 2pt 4pt;
-    color: #000 !important;
-}
-
-#preview pre {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 9pt;
-    background: #f5f5f5 !important;
-    padding: 10pt;
-    border-left: 3pt solid #ccc;
-    overflow-x: auto;
-    color: #000 !important;
-}
+/* ==================== UTILITIES ==================== */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+.font-bold { font-weight: bold; }
+.font-italic { font-style: italic; }
+.uppercase { text-transform: uppercase; }
+.underline { text-decoration: underline; }
 
 /* ==================== END ==================== */
