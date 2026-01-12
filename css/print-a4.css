@@ -169,3 +169,80 @@ body.printing-mode #preview-wrapper {
     height: auto !important;
     overflow: visible !important;
 }
+/* ════════════════════════════════════════════════════════════════
+   PROFESSIONAL ENHANCEMENTS - Auto-Numbering & Typography
+   ════════════════════════════════════════════════════════════════ */
+
+/* Counter Setup */
+#preview {
+    counter-reset: section;
+}
+
+/* Auto-Number Main Sections (Only visible ones!) */
+#preview h2 {
+    counter-increment: section;
+}
+
+#preview h2::before {
+    content: counter(section) ". ";
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Professional Typography */
+#preview p {
+    text-align: justify;
+    hyphens: auto;
+    orphans: 3;
+    widows: 3;
+}
+
+#preview ul {
+    margin-left: 25pt;
+    line-height: 1.8;
+}
+
+#preview ul li {
+    margin-bottom: 8pt;
+}
+
+/* Table Enhancements */
+#preview table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15pt 0;
+}
+
+#preview table th,
+#preview table td {
+    border: 1px solid #333;
+    padding: 8pt;
+    text-align: left;
+    vertical-align: top;
+}
+
+#preview table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+#preview table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Page Break Control */
+#preview h2 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+}
+
+#preview table {
+    page-break-inside: avoid;
+}
+
+/* Print Color Preservation */
+@media print {
+    #preview h2::before {
+        color: #000 !important; /* Black numbers for print */
+    }
+}

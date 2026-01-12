@@ -1,6 +1,6 @@
 <!-- 
-  SOP CLASSIC TEMPLATE (A4)
-  Optimized for WYSIWYG Print & Word
+  SOP CLASSIC TEMPLATE (A4) - OPTIMIZED
+  Auto-numbering + Smart Formatting
 -->
 
 <!-- HEADER -->
@@ -34,41 +34,45 @@
     <!-- Metadata included in table above -->
 {{/if}}
 
-<h2>1. PURPOSE</h2>
-<p>{{purpose}}</p>
+<h2>PURPOSE</h2>
+{{purpose}}
 
-<h2>2. SCOPE</h2>
-<p>{{scope}}</p>
+<h2>SCOPE</h2>
+{{scope}}
 
-<h2>3. RESPONSIBILITY</h2>
-<p>{{responsibility}}</p>
-
-<h2>4. PROCEDURE</h2>
+<h2>RESPONSIBILITY</h2>
 <ul>
-    {{procedure}}
+    {{responsibility}}
 </ul>
 
-<h2>5. PRECAUTIONS</h2>
-<p>{{precautions}}</p>
+<h2>PROCEDURE</h2>
+<ol>
+    {{procedure}}
+</ol>
+
+<h2>PRECAUTIONS</h2>
+<ul>
+    {{precautions}}
+</ul>
 
 {{#if sectionApplicability}}
-    <h2>6. APPLICABILITY</h2>
-    <p>{{applicability}}</p>
+    <h2>APPLICABILITY</h2>
+    {{applicability}}
 {{/if}}
 
 {{#if sectionAbbreviations}}
-    <h2>7. ABBREVIATIONS</h2>
-    <p>{{abbreviations}}</p>
+    <h2>ABBREVIATIONS</h2>
+    {{abbreviations}}
 {{/if}}
 
 {{#if sectionReferences}}
-    <h2>8. REFERENCES</h2>
-    <p>{{references}}</p>
+    <h2>REFERENCES</h2>
+    {{references}}
 {{/if}}
 
 {{#if sectionAnnexures}}
-    <h2>9. ANNEXURES</h2>
-    <p>{{annexures}}</p>
+    <h2>ANNEXURES</h2>
+    {{annexures}}
 {{/if}}
 
 {{#if sectionChangeHistory}}

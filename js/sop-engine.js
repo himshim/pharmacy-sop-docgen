@@ -104,52 +104,69 @@ window.initSOPApp = function () {
         }
     };
 
-    // ════════════════════════════════════════════════════════════════
-    // 4. TEMPLATE MODULE (Rendering Engine)
-    // ════════════════════════════════════════════════════════════════
-    const TemplateModule = {
-        render(templateStr, data) {
-            if (!templateStr) return '';
-            let html = templateStr;
+// ════════════════════════════════════════════════════════════════
+// 4. TEMPLATE MODULE (Rendering Engine)
+// ════════════════════════════════════════════════════════════════
+const TemplateModule = {
+    render(templateStr, data) {
+        if (!templateStr) return '';
+        let html = templateStr;
 
-            // Conditional Blocks: {{#if key}}...{{/if}}
-            html = html.replace(/\{\{#if ([^}]+)\}\}([\s\S]*?)\{\{\/if\}\}/g, (match, key, content) => {
-                const val = data[key];
-                const isTruthy = val && (Array.isArray(val) ? val.length > 0 : String(val).trim() !== '');
-                return isTruthy ? content : '';
-            });
+        // Conditional Blocks: {{#if key}}...{{/if}}
+        html = html.replace(/\{\{#if ([^}]+)\}\}([\s\S]*?)\{\{\/if\}\}/g, (match, key, content) => {
+            const val = data[key];
+            const isTruthy = val && (Array.isArray(val) ? val.length > 0 : String(val).trim() !== '');
+            return isTruthy ? content : '';
+        });
 
-            // Variable Replacement: {{key}}
-            Object.keys(data).forEach(key => {
-                let value = data[key];
-                if (value === undefined || value === null) value = '';
+        // Variable Replacement: {{key}}
+        Object.keys(data).forEach(key => {
+            let value = data[key];
+            if (value === undefined || value === null) value = '';
 
-                if (typeof value === 'string') {
-                    const isRichText = ['procedure', 'changeHistoryRows'].includes(key);
-                    if (!isRichText && /[<>]/.test(value)) {
-                        value = UtilsModule.escapeHtml(value);
-                    }
+            if (typeof value === 'string') {
+                const isRichText = ['procedure', 'changeHistoryRows'].includes(key);
+                if (!isRichText && /[<>]/.test(value)) {
+                    value = UtilsModule.escapeHtml(value);
                 }
+            }
 
-                const regex = new RegExp(`{{${key}}}`, 'g');
-                html = html.replace(regex, value);
-            });
+            const regex = new RegExp(`{{${key}}}`, 'g');
+            html = html.replace(regex, value);
+        });
 
-            return html.replace(/\{\{[^}]+\}\}/g, '');
-        },
+        return html.replace(/\{\{[^}]+\}\}/g, '');
+    },
 
-        formatProcedure(procArray) {
-            if (!Array.isArray(procArray)) return '';
-            return procArray.map(step => `<li>${step}</li>`).join('');
-        },
+    formatProcedure(procArray) {
+        if (!Array.isArray(procArray)) return '';
+        return procArray.map(step => `<li>${step}</li>`).join('');
+    },
 
-        formatHistory(histArray) {
-            if (!Array.isArray(histArray)) return '';
-            return histArray.map(h => 
-                `<tr><td>${h.rev}</td><td>${h.date}</td><td>${h.desc}</td></tr>`
-            ).join('');
+    formatHistory(histArray) {
+        if (!Array.isArray(histArray)) return '';
+        return histArray.map(h => 
+            `<tr><td>${h.rev}</td><td>${h.date}</td><td>${h.desc}</td></tr>`
+        ).join('');
+    },  // ✅ COMMA ADDED HERE
+
+    // Smart Multi-line Formatter
+    formatMultiline(text, type = 'paragraph') {
+        if (!text || typeof text !== 'string') return '';
+        
+        const lines = text.split('\n').filter(l => l.trim());
+        if (lines.length === 0) return '';
+        
+        switch(type) {
+            case 'list':
+                return lines.map(l => `<li>${l.trim()}</li>`).join('');
+            case 'paragraph':
+                return lines.map(l => `<p>${l.trim()}</p>`).join('');
+            default:
+                return `<p>${lines.join('<br>')}</p>`;
         }
-    };
+    }  // ✅ NO COMMA (last item)
+};  // ✅ ONLY ONE CLOSING BRACE
 
     // ════════════════════════════════════════════════════════════════
     // 5. EXPORT MODULE (Print, PDF & DOCX) - UNIVERSAL v2.0
@@ -668,29 +685,45 @@ To use this feature, add these scripts to your index.html <head>:
             this.state.debounce = setTimeout(() => this.refreshPreview(), 50);
         },
 
-        async refreshPreview() {
-            if (!this.state.sopData) return;
-            
-            try {
-                const tmpl = await DataModule.fetchTemplate(this.state.templateName);
-                const viewData = { ...this.state.sopData };
-                
-                viewData.procedure = TemplateModule.formatProcedure(viewData.procedure);
-                viewData.changeHistoryRows = TemplateModule.formatHistory(viewData.changeHistory);
-                
-                if (viewData.sectionsEnabled) {
-                    Object.keys(viewData.sectionsEnabled).forEach(k => {
-                        const flagName = `section${k.charAt(0).toUpperCase() + k.slice(1)}`;
-                        viewData[flagName] = viewData.sectionsEnabled[k];
-                    });
-                }
-
-                const html = TemplateModule.render(tmpl, viewData);
-                UIModule.renderPreview(html);
-            } catch (e) {
-                UtilsModule.error('Failed to refresh preview:', e);
+async refreshPreview() {
+    if (!this.state.sopData) return;
+    
+    try {
+        const tmpl = await DataModule.fetchTemplate(this.state.templateName);
+        const viewData = { ...this.state.sopData };
+        
+        viewData.procedure = TemplateModule.formatProcedure(viewData.procedure);
+        viewData.changeHistoryRows = TemplateModule.formatHistory(viewData.changeHistory);
+        
+        // ✅ ADD THIS BLOCK HERE ↓↓↓
+        // Smart format other fields if they're strings
+        ['precautions', 'responsibility'].forEach(key => {
+            if (typeof viewData[key] === 'string' && viewData[key].includes('\n')) {
+                viewData[key] = TemplateModule.formatMultiline(viewData[key], 'list');
             }
+        });
+
+        ['purpose', 'scope', 'applicability', 'abbreviations', 'references', 'annexures'].forEach(key => {
+            if (typeof viewData[key] === 'string' && viewData[key].includes('\n')) {
+                viewData[key] = TemplateModule.formatMultiline(viewData[key], 'paragraph');
+            }
+        });
+        // ✅ END OF NEW CODE ↑↑↑
+        
+        if (viewData.sectionsEnabled) {
+            Object.keys(viewData.sectionsEnabled).forEach(k => {
+                const flagName = `section${k.charAt(0).toUpperCase() + k.slice(1)}`;
+                viewData[flagName] = viewData.sectionsEnabled[k];
+            });
         }
+
+        const html = TemplateModule.render(tmpl, viewData);
+        UIModule.renderPreview(html);
+    } catch (e) {
+        UtilsModule.error('Failed to refresh preview:', e);
+    }
+}
+
     };
 
     // Bootstrap
