@@ -1,17 +1,20 @@
-/* ═══════════════════════════════════════════════════════════════════
-   PRINT & PREVIEW STYLES - v3.2 (WHITE BACKGROUND FIX)
-   Ultra-simplified dynamic height
-   ═══════════════════════════════════════════════════════════════ */
+/**
+ * ═══════════════════════════════════════════════════════════════════
+ * NUCLEAR OPTION: White Background Height Fix
+ * This overrides EVERYTHING with maximum CSS specificity
+ * ═══════════════════════════════════════════════════════════════════
+ */
 
-/* ==================== MS WORD PREVIEW WRAPPER ==================== */
-#preview-wrapper {
+/* ==================== PREVIEW WRAPPER ==================== */
+#preview-wrapper,
+div#preview-wrapper,
+div.preview-panel #preview-wrapper {
     background: #525659 !important;
-    padding: 40px 20px;
+    padding: 40px 20px !important;
     overflow-y: auto !important;
-    overflow-x: hidden;
-    height: 100%;
-    max-height: calc(100vh - 200px);
-    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden !important;
+    height: 100% !important;
+    max-height: calc(100vh - 200px) !important;
 }
 
 #preview-wrapper::-webkit-scrollbar {
@@ -24,58 +27,71 @@
     border-radius: 6px;
 }
 
-#preview-wrapper::-webkit-scrollbar-thumb:hover {
-    background: #7a7a7a;
-}
-
-/* ==================== A4 PREVIEW - DYNAMIC HEIGHT FIX! ==================== */
-#preview {
+/* ==================== PREVIEW CONTAINER - NUCLEAR FIX! ==================== */
+#preview,
+div#preview,
+#preview-wrapper #preview,
+#preview-wrapper > #preview,
+.preview-panel #preview {
     /* Width */
     width: 210mm !important;
     max-width: 210mm !important;
+    min-width: 210mm !important;
 
-    /* CRITICAL: Remove ALL height constraints! */
-    min-height: auto !important;
-    max-height: none !important;
+    /* HEIGHT - ABSOLUTE OVERRIDE */
     height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
 
     /* White background */
     background: #ffffff !important;
+    background-color: #ffffff !important;
     color: #000000 !important;
 
-    /* Centering */
+    /* Positioning */
     margin: 0 auto 40px auto !important;
-
-    /* Padding */
     padding: 20mm !important;
 
-    /* Paper effect */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
-                0 0 2px rgba(0, 0, 0, 0.2) !important;
+    /* Visual */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important;
+
+    /* Display */
+    display: block !important;
+    position: relative !important;
+
+    /* Box model */
+    box-sizing: border-box !important;
 
     /* Typography */
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 11pt;
-    line-height: 1.6;
-
-    box-sizing: border-box !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 11pt !important;
+    line-height: 1.6 !important;
 }
 
-/* Also fix preview-content if it exists */
+/* Also target any nested divs */
+#preview > *,
 #preview-content,
-#preview > div {
-    min-height: auto !important;
-    max-height: none !important;
+#preview > div,
+#preview > div > *,
+div#preview > * {
     height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
 }
 
-/* Make sure all children expand properly */
-#preview *,
-#preview-content * {
-    box-sizing: border-box;
+/* Make absolutely sure preview expands */
+#preview::before {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+#preview::after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
 }
 
 /* ==================== PAGE BREAK INDICATORS ==================== */
@@ -98,7 +114,6 @@
     font-family: Arial, sans-serif;
     padding: 0 10px;
     white-space: nowrap;
-    z-index: 10;
 }
 
 .page-break-indicator::after {
@@ -109,84 +124,69 @@
     right: 0;
     height: 1px;
     background: linear-gradient(to right, transparent 0%, #ccc 20%, #ccc 80%, transparent 100%);
-    z-index: 5;
 }
 
 /* ==================== TYPOGRAPHY ==================== */
-#preview h1 { font-size: 18pt; font-weight: bold; margin: 0 0 16pt 0; text-align: center; color: #000 !important; page-break-after: avoid; text-transform: uppercase; letter-spacing: 0.5pt; }
-#preview h2 { font-size: 13pt; font-weight: bold; margin: 16pt 0 10pt 0; color: #000 !important; page-break-after: avoid; border-bottom: 1.5pt solid #333; padding-bottom: 4pt; }
-#preview h3 { font-size: 12pt; font-weight: bold; margin: 12pt 0 8pt 0; color: #000 !important; page-break-after: avoid; }
-#preview h4 { font-size: 11pt; font-weight: bold; margin: 10pt 0 6pt 0; color: #333 !important; page-break-after: avoid; }
-#preview p { margin: 0 0 10pt 0; text-align: justify; color: #000 !important; }
-#preview strong, #preview b { font-weight: bold; color: #000 !important; }
-#preview em, #preview i { font-style: italic; }
+#preview h1 { font-size: 18pt !important; font-weight: bold !important; margin: 0 0 16pt 0 !important; text-align: center !important; color: #000 !important; text-transform: uppercase !important; }
+#preview h2 { font-size: 13pt !important; font-weight: bold !important; margin: 16pt 0 10pt 0 !important; color: #000 !important; border-bottom: 1.5pt solid #333 !important; padding-bottom: 4pt !important; }
+#preview h3 { font-size: 12pt !important; font-weight: bold !important; margin: 12pt 0 8pt 0 !important; color: #000 !important; }
+#preview p { margin: 0 0 10pt 0 !important; text-align: justify !important; color: #000 !important; }
+#preview strong, #preview b { font-weight: bold !important; color: #000 !important; }
 
 /* ==================== LISTS ==================== */
-#preview ol, #preview ul { margin: 10pt 0; padding-left: 30pt; color: #000 !important; }
-#preview ol { list-style-type: decimal; }
-#preview ul { list-style-type: disc; }
-#preview li { margin: 6pt 0; line-height: 1.6; color: #000 !important; }
-#preview ol ol { list-style-type: lower-alpha; margin-top: 6pt; }
-#preview ol ol ol { list-style-type: lower-roman; }
+#preview ol, #preview ul { margin: 10pt 0 !important; padding-left: 30pt !important; color: #000 !important; }
+#preview li { margin: 6pt 0 !important; color: #000 !important; }
 
 /* ==================== TABLES ==================== */
-#preview table { width: 100%; border-collapse: collapse; margin: 14pt 0; font-size: 10pt; background: #fff !important; }
-#preview th, #preview td { border: 1pt solid #333 !important; padding: 8pt 10pt; text-align: left; vertical-align: top; color: #000 !important; }
-#preview th { background-color: #f0f0f0 !important; font-weight: bold; text-align: center; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-#preview .label-cell { font-weight: bold; background-color: #f5f5f5 !important; width: 35%; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+#preview table { width: 100% !important; border-collapse: collapse !important; margin: 14pt 0 !important; background: #fff !important; }
+#preview th, #preview td { border: 1pt solid #333 !important; padding: 8pt 10pt !important; color: #000 !important; }
+#preview th { background-color: #f0f0f0 !important; font-weight: bold !important; text-align: center !important; }
 
-/* ==================== DOCUMENT SECTIONS ==================== */
-#preview .doc-header { text-align: center; margin-bottom: 20pt; padding-bottom: 12pt; border-bottom: 2.5pt double #000; color: #000 !important; }
-#preview .section { margin: 16pt 0; }
-#preview .section-title { font-size: 12pt; font-weight: bold; margin: 14pt 0 8pt 0; padding: 6pt 10pt; background: #f0f0f0 !important; border-left: 4pt solid #333; color: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-#preview .signature-block { margin-top: 30pt; }
-#preview .signature-table { border: 2pt solid #000 !important; margin-top: 20pt; }
+/* ==================== SECTIONS ==================== */
+#preview .section { margin: 16pt 0 !important; }
+#preview .section-title { background: #f0f0f0 !important; padding: 6pt 10pt !important; border-left: 4pt solid #333 !important; color: #000 !important; }
 
-/* ==================== PRINT MEDIA QUERY ==================== */
+/* ==================== PRINT ==================== */
 @media print {
     body { margin: 0 !important; padding: 0 !important; background: white !important; }
-
-    .sidebar, .form-panel, .controls-panel, .mobile-header, .tab-navigation,
-    .preview-actions, .action-bar, button, nav, header:not(.doc-header),
-    input, textarea, select, .btn { display: none !important; }
-
+    .sidebar, .controls-panel, button, nav, input, textarea { display: none !important; }
     #preview-wrapper { background: white !important; padding: 0 !important; overflow: visible !important; height: auto !important; max-height: none !important; }
-    #preview { box-shadow: none !important; margin: 0 !important; width: 100% !important; max-width: none !important; padding: 0 !important; }
-    #preview *, #preview-content * { visibility: visible !important; color: #000 !important; }
-
-    .page-break-indicator, .page-break-indicator::before, .page-break-indicator::after { display: none !important; }
-    #preview-wrapper::-webkit-scrollbar { display: none !important; }
-
-    @page { size: A4 portrait; margin: 20mm; }
-
-    #preview th, #preview .label-cell, #preview .section-title { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    #preview { box-shadow: none !important; margin: 0 !important; padding: 0 !important; width: 100% !important; max-width: none !important; }
+    .page-break-indicator { display: none !important; }
+    @page { size: A4; margin: 20mm; }
 }
 
 /* ==================== PDF MODE ==================== */
-.pdf-rendering #preview-wrapper { background: transparent !important; padding: 0 !important; overflow: visible !important; height: auto !important; }
+.pdf-rendering #preview-wrapper { background: transparent !important; padding: 0 !important; overflow: visible !important; }
 .pdf-rendering #preview { box-shadow: none !important; margin: 0 !important; }
 .pdf-rendering .page-break-indicator { display: none !important; }
 
+/* ==================== DARK MODE ==================== */
+[data-theme="dark"] #preview,
+.dark-mode #preview,
+body.dark #preview {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+[data-theme="dark"] #preview *,
+.dark-mode #preview *,
+body.dark #preview * {
+    color: #000000 !important;
+}
+
+[data-theme="dark"] #preview-wrapper,
+.dark-mode #preview-wrapper {
+    background: #525659 !important;
+}
+
 /* ==================== RESPONSIVE ==================== */
 @media screen and (max-width: 768px) {
-    #preview-wrapper { padding: 20px 10px; max-height: calc(100vh - 250px); }
-    #preview { transform: scale(0.95); transform-origin: top center; margin-bottom: 20px; }
+    #preview-wrapper { padding: 20px 10px !important; }
+    #preview { transform: scale(0.95) !important; transform-origin: top center !important; }
 }
 
 @media screen and (max-width: 480px) {
-    #preview { transform: scale(0.75); transform-origin: top center; }
+    #preview { transform: scale(0.75) !important; }
 }
-
-/* ==================== DARK MODE ==================== */
-[data-theme="dark"] #preview, .dark-mode #preview, body.dark #preview { background: #ffffff !important; color: #000000 !important; }
-[data-theme="dark"] #preview *, .dark-mode #preview *, body.dark #preview * { color: #000000 !important; }
-[data-theme="dark"] #preview-wrapper, .dark-mode #preview-wrapper, body.dark #preview-wrapper { background: #525659 !important; }
-
-/* ==================== UTILITIES ==================== */
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-.text-justify { text-align: justify; }
-.font-bold { font-weight: bold; }
-.font-italic { font-style: italic; }
-.uppercase { text-transform: uppercase; }
-.underline { text-decoration: underline; }
