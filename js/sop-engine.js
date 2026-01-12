@@ -505,47 +505,40 @@ To use this feature, add these scripts to your index.html <head>:
     syncToggles(data) {
       Object.entries(this.toggleMap).forEach(([id, key]) => {
         const el = UtilsModule.$(id);
-        const section = UtilsModule.$(
-          `section${key.charAt(0).toUpperCase() + key.slice(1)}`
-        );
-
-        // Set checkbox state
+        const section = UtilsModule.$(`section${key.charAt(0).toUpperCase() + key.slice(1)}`);
+        
+        // ✅ Calculate visibility ONCE (default to true if not explicitly set to false)
+        const isVisible = data.sectionsEnabled?.[key] !== false;
+        
+        // Update checkbox visual state
         if (el) {
-          const isVisible =
-            data.sectionsEnabled?.[key] || data.fieldsEnabled?.[key] || false;
           el.checked = isVisible;
         }
-
+        
         // Handle section visibility (cards like Document Control)
         if (section) {
-          section.style.display = data.sectionsEnabled?.[key]
-            ? "block"
-            : "none";
+          section.style.display = isVisible ? 'block' : 'none';
         }
-
-        // ✅ Handle individual field visibility
-        const fieldIds = [
-          "sopNumber",
-          "effectiveDate",
-          "revisionDate",
-          "copyType",
-        ];
+        
+        // Handle individual field visibility
+        const fieldIds = ['sopNumber', 'effectiveDate', 'revisionDate', 'copyType'];
         if (fieldIds.includes(key)) {
           const field = UtilsModule.$(key);
           if (field) {
-            const formGroup = field.closest(".form-group");
+            const formGroup = field.closest('.form-group');
             if (formGroup) {
-              const isVisible = data.sectionsEnabled?.[key] !== false;
-              formGroup.style.display = isVisible ? "block" : "none";
+              formGroup.style.display = isVisible ? 'block' : 'none';
             }
           }
         }
       });
-    },
-  };
+    }
+  };  // ✅ CLOSES UIModule
+
 
   // ════════════════════════════════════════════════════════════════
   // 7. CORE MODULE (Main Logic)
+
   // ════════════════════════════════════════════════════════════════
   const CoreModule = {
     state: {
@@ -739,12 +732,19 @@ To use this feature, add these scripts to your index.html <head>:
           nextReviewDate: "",
           copyType: "CONTROLLED",
           responsibility: ConfigModule.DEFAULTS.RESPONSIBILITY,
-          sectionsEnabled: {
-            docControl: true,
-            sopNumber: true,
-            effectiveDate: true,
-            copyType: true,
-          },
+          sectionsEnabled: { 
+    docControl: true,
+    applicability: false,
+    abbreviations: false,
+    references: false,
+    annexures: false,
+    changeHistory: false,
+    sopNumber: true, 
+    effectiveDate: true,
+    revisionDate: true,
+    copyType: true 
+},
+
           fieldsEnabled: {
             sopNumber: true,
             effectiveDate: true,
