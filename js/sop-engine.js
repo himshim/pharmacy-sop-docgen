@@ -1,7 +1,7 @@
 window.initSOPApp = function () {
     'use strict';
 
-    console.log('🚀 Initializing SOP App v2.0...');
+    console.log('🚀 Initializing SOP App v2.0.1 (Fixed)...');
 
     /* ========================= CONSTANTS ========================= */
     const DEFAULT_RESPONSIBILITY = "Laboratory In-charge, faculty members, technical staff, and authorized users are responsible for implementation and compliance of this SOP.";
@@ -9,14 +9,27 @@ window.initSOPApp = function () {
     const DEFAULT_COPY_TYPE = "CONTROLLED";
 
     /* ========================= SAFE DOM HELPERS ========================= */
-    const $ = (id) => document.getElementById(id);
+    const $ = (id) => {
+        const el = document.getElementById(id);
+        if (!el) {
+            console.warn(`⚠️  Element #${id} not found`);
+        }
+        return el;
+    };
 
-    const fetchJSON = (url) =>
-        fetch(`${url}?v=${Date.now()}`)
+    const fetchJSON = (url) => {
+        console.log(`📥 Fetching: ${url}`);
+        return fetch(`${url}?v=${Date.now()}`)
             .then((r) => {
+                console.log(`📡 Response for ${url}: ${r.status} ${r.statusText}`);
                 if (!r.ok) throw new Error(`HTTP ${r.status}: ${url}`);
                 return r.json();
+            })
+            .then((data) => {
+                console.log(`✅ Loaded data from ${url}:`, data);
+                return data;
             });
+    };
 
     const fetchText = (url) =>
         fetch(`${url}?v=${Date.now()}`)
@@ -34,10 +47,11 @@ window.initSOPApp = function () {
     if (!preview) {
         console.error("❌ CRITICAL: Preview element not found!");
         console.error("Expected: <div id='preview'> or class='preview-content'");
+        alert("⚠️ Preview element not found. UI may not be loaded correctly.");
         return;
     }
 
-    console.log(`✅ Preview element found: ${preview.id || preview.className}`);
+    console.log(`✅ Preview element found: #${preview.id || preview.className}`);
 
     /* ========================= CORE ELEMENTS ========================= */
     const departmentSelect = $("departmentSelect");
@@ -45,12 +59,19 @@ window.initSOPApp = function () {
     const templateSelect = $("templateSelect");
 
     if (!departmentSelect || !sopSelect || !templateSelect) {
-        console.warn("⚠️ SOP engine aborted: Core UI elements not ready");
-        console.warn("Missing:", {
+        console.error("❌ CRITICAL: Core UI elements missing!");
+        console.error("Found:", {
             departmentSelect: !!departmentSelect,
             sopSelect: !!sopSelect,
             templateSelect: !!templateSelect
         });
+
+        // Retry after delay
+        console.log("🔄 Retrying initialization in 500ms...");
+        setTimeout(() => {
+            console.log("🔄 Second attempt to initialize...");
+            window.initSOPApp();
+        }, 500);
         return;
     }
 
@@ -108,14 +129,9 @@ window.initSOPApp = function () {
 
     /* ========================= INPUT VALIDATION ========================= */
     function validateDate(dateString) {
-        if (!dateString) return true; // Optional field
+        if (!dateString) return true;
         const date = new Date(dateString);
         return !isNaN(date.getTime());
-    }
-
-    function validateNumber(numString) {
-        if (!numString) return true; // Optional field
-        return !isNaN(parseFloat(numString));
     }
 
     function sanitizeHTML(str) {
@@ -149,46 +165,64 @@ window.initSOPApp = function () {
     }
 
     /* ========================= LOAD DEPARTMENTS ========================= */
+    console.log('📂 Loading departments...');
     showLoading(preview, 'Loading departments...');
 
     fetchJSON("data/departments.json")
         .then((d) => {
+            console.log('📊 Departments data received:', d);
+
             if (!d || !d.departments || !Array.isArray(d.departments)) {
-                throw new Error('Invalid departments data format');
+                throw new Error('Invalid departments data format. Expected: {departments: [...]}');
             }
 
             departmentSelect.innerHTML = `<option value="">-- Select Department --</option>`;
 
             d.departments.forEach((dep) => {
                 if (dep.folder && dep.name) {
-                    departmentSelect.innerHTML += `<option value="${dep.folder}">${dep.name}</option>`;
+                    const option = document.createElement('option');
+                    option.value = dep.folder;
+                    option.textContent = dep.name;
+                    departmentSelect.appendChild(option);
+                    console.log(`  ✓ Added department: ${dep.name} (${dep.folder})`);
                 }
             });
 
-            console.log(`✅ Loaded ${d.departments.length} departments`);
+            console.log(`✅ Loaded ${d.departments.length} departments successfully`);
 
             preview.innerHTML = `
                 <div style="text-align: center; padding: 60px 20px; color: #666;">
                     <div style="font-size: 48px; margin-bottom: 20px;">📂</div>
                     <h3 style="margin-bottom: 12px; color: #333;">Welcome to SOP Generator</h3>
-                    <p>Select a department and SOP to begin creating your document</p>
+                    <p>Select a department from the dropdown to begin</p>
+                    <p style="font-size: 12px; color: #999; margin-top: 16px;">${d.departments.length} departments available</p>
                 </div>
             `;
         })
         .catch((e) => {
             console.error("❌ Failed to load departments:", e);
-            departmentSelect.innerHTML = `<option value="">Error loading departments</option>`;
-            showError(preview, 'Failed to Load Departments', e.message);
+            console.error("Error details:", e.message);
+            console.error("Check if data/departments.json exists and is valid JSON");
+
+            departmentSelect.innerHTML = `<option value="">❌ Error loading departments</option>`;
+            showError(preview, 'Failed to Load Departments', 
+                `${e.message}<br><br>Check console (F12) for details`);
         });
 
     /* ========================= DEPARTMENT CHANGE ========================= */
-    departmentSelect.addEventListener("change", async () => {
+    console.log('🔗 Attaching department change listener...');
+
+    departmentSelect.addEventListener("change", async function() {
+        const dept = this.value;
+
+        console.log(`📁 Department selected: "${dept}"`);
+
         sopSelect.innerHTML = `<option value="">-- Select SOP --</option>`;
         sopSelect.disabled = true;
         preview.innerHTML = "";
 
-        const dept = departmentSelect.value;
         if (!dept) {
+            console.log('  ℹ️  Empty selection, showing welcome message');
             preview.innerHTML = `
                 <div style="text-align: center; padding: 60px 20px; color: #666;">
                     <div style="font-size: 48px; margin-bottom: 20px;">📂</div>
@@ -198,57 +232,92 @@ window.initSOPApp = function () {
             return;
         }
 
-        console.log(`📁 Loading SOPs for department: ${dept}`);
+        const indexPath = `data/${dept}/index.json`;
+        console.log(`📥 Loading SOPs from: ${indexPath}`);
         showLoading(preview, 'Loading SOPs...');
 
         try {
-            const index = await fetchJSON(`data/${dept}/index.json`);
+            const index = await fetchJSON(indexPath);
+            console.log('📊 SOP index received:', index);
 
-            if (!index || !index.instruments || !Array.isArray(index.instruments)) {
-                throw new Error('Invalid SOP index format');
+            // Check for different possible property names
+            let sopList = null;
+            if (index.instruments && Array.isArray(index.instruments)) {
+                sopList = index.instruments;
+                console.log('  ✓ Found SOPs in "instruments" property');
+            } else if (index.sops && Array.isArray(index.sops)) {
+                sopList = index.sops;
+                console.log('  ✓ Found SOPs in "sops" property');
+            } else if (index.items && Array.isArray(index.items)) {
+                sopList = index.items;
+                console.log('  ✓ Found SOPs in "items" property');
+            } else if (Array.isArray(index)) {
+                sopList = index;
+                console.log('  ✓ Index is directly an array');
             }
 
-            if (index.instruments.length === 0) {
-                throw new Error('No SOPs found in this department');
+            if (!sopList || sopList.length === 0) {
+                throw new Error(`No SOPs found in ${indexPath}. Expected array in "instruments", "sops", "items" property or direct array.`);
             }
 
-            index.instruments.forEach((sop) => {
+            sopList.forEach((sop) => {
                 if (sop.file && sop.name) {
-                    sopSelect.innerHTML += `<option value="${sop.file}">${sop.name}</option>`;
+                    const option = document.createElement('option');
+                    option.value = sop.file;
+                    option.textContent = sop.name;
+                    sopSelect.appendChild(option);
+                    console.log(`  ✓ Added SOP: ${sop.name} (${sop.file})`);
+                } else {
+                    console.warn(`  ⚠️  Skipped invalid SOP:`, sop);
                 }
             });
 
             sopSelect.disabled = false;
-            console.log(`✅ Loaded ${index.instruments.length} SOPs`);
+            console.log(`✅ Loaded ${sopList.length} SOPs successfully`);
 
             preview.innerHTML = `
                 <div style="text-align: center; padding: 60px 20px; color: #666;">
                     <div style="font-size: 48px; margin-bottom: 20px;">📄</div>
-                    <p>Select an SOP to preview</p>
+                    <p style="font-size: 18px; margin-bottom: 8px;">Select an SOP to preview</p>
+                    <p style="font-size: 12px; color: #999;">${sopList.length} SOPs available in ${dept}</p>
                 </div>
             `;
         } catch (e) {
-            console.error("❌ Failed to load SOPs:", e);
-            sopSelect.innerHTML = `<option value="">Error loading SOPs</option>`;
-            showError(preview, 'Failed to Load SOPs', e.message);
+            console.error(`❌ Failed to load SOPs from ${indexPath}:`, e);
+            console.error("Error details:", e.message);
+
+            sopSelect.innerHTML = `<option value="">❌ Error loading SOPs</option>`;
+            showError(preview, 'Failed to Load SOPs', 
+                `${e.message}<br><br>Department: ${dept}<br>Path: ${indexPath}<br><br>Check console (F12) for details`);
         }
     });
 
+    console.log('✅ Department change listener attached');
+
     /* ========================= SOP CHANGE ========================= */
-    sopSelect.addEventListener("change", async () => {
+    console.log('🔗 Attaching SOP change listener...');
+
+    sopSelect.addEventListener("change", async function() {
         const dept = departmentSelect.value;
-        const sop = sopSelect.value;
+        const sop = this.value;
 
-        if (!dept || !sop) return;
+        console.log(`📄 SOP selected: "${sop}" from department "${dept}"`);
 
-        console.log(`📄 Loading SOP: ${sop}`);
+        if (!dept || !sop) {
+            console.log('  ℹ️  Incomplete selection');
+            return;
+        }
+
+        const sopPath = `data/${dept}/${sop}.json`;
+        console.log(`📥 Loading SOP data from: ${sopPath}`);
         showLoading(preview, 'Loading SOP data...');
 
         try {
-            const raw = await fetchJSON(`data/${dept}/${sop}.json`);
+            const raw = await fetchJSON(sopPath);
+            console.log('📊 SOP data received:', raw);
 
             if (!raw || !raw.meta) {
-                throw new Error('Invalid SOP data format - missing meta information');
+                throw new Error('Invalid SOP data format - missing "meta" property');
             }
 
             SOP_DATA = {
@@ -296,33 +365,42 @@ window.initSOPApp = function () {
                 approvedDate: "",
             };
 
+            console.log('✅ SOP_DATA created:', SOP_DATA);
+
             syncInputs();
             updateSectionVisibility();
             await loadTemplate();
 
-            console.log('✅ SOP data loaded and rendered successfully');
+            console.log('✅ SOP loaded and rendered successfully');
         } catch (e) {
-            console.error("❌ Failed to load SOP:", e);
-            showError(preview, 'Failed to Load SOP', e.message);
+            console.error(`❌ Failed to load SOP from ${sopPath}:`, e);
+            console.error("Error details:", e.message);
+
+            showError(preview, 'Failed to Load SOP', 
+                `${e.message}<br><br>SOP: ${sop}<br>Path: ${sopPath}<br><br>Check console (F12) for details`);
             SOP_DATA = null;
         }
     });
 
+    console.log('✅ SOP change listener attached');
+
     /* ========================= TEMPLATE LOADING ========================= */
+    console.log('🔗 Attaching template change listener...');
     templateSelect.addEventListener("change", loadTemplate);
 
     async function loadTemplate() {
         if (!SOP_DATA) {
-            console.warn('⚠️ No SOP data available');
+            console.warn('⚠️  No SOP data available for template');
             return;
         }
 
         const templateFile = templateSelect.value;
-        console.log(`📋 Loading template: ${templateFile}`);
+        const templatePath = `templates/${templateFile}`;
+        console.log(`📋 Loading template: ${templatePath}`);
         showLoading(preview, 'Loading template...');
 
         try {
-            TEMPLATE_HTML = await fetchText(`templates/${templateFile}`);
+            TEMPLATE_HTML = await fetchText(templatePath);
 
             if (!TEMPLATE_HTML || TEMPLATE_HTML.length < 100) {
                 throw new Error('Template file appears to be empty or corrupted');
@@ -331,8 +409,11 @@ window.initSOPApp = function () {
             render();
             console.log(`✅ Template loaded: ${templateFile} (${TEMPLATE_HTML.length} bytes)`);
         } catch (e) {
-            console.error("❌ Failed to load template:", e);
-            showError(preview, 'Failed to Load Template', e.message);
+            console.error(`❌ Failed to load template from ${templatePath}:`, e);
+            console.error("Error details:", e.message);
+
+            showError(preview, 'Failed to Load Template', 
+                `${e.message}<br><br>Template: ${templateFile}<br><br>Check console (F12) for details`);
         }
     }
 
@@ -383,7 +464,6 @@ window.initSOPApp = function () {
         inputs[k].addEventListener("input", () => {
             if (!SOP_DATA) return;
 
-            // Validate date inputs
             if (k.includes('Date') && inputs[k].value) {
                 if (!validateDate(inputs[k].value)) {
                     inputs[k].setCustomValidity('Invalid date format');
@@ -393,7 +473,6 @@ window.initSOPApp = function () {
                 }
             }
 
-            // Handle special fields
             if (k === "procedure") {
                 SOP_DATA.procedure = inputs[k].value
                     .split("\n")
@@ -432,12 +511,11 @@ window.initSOPApp = function () {
     /* ========================= RENDER ========================= */
     function render() {
         if (!TEMPLATE_HTML || !preview || !SOP_DATA) {
-            console.warn('⚠️ Render skipped: missing template, preview, or data');
+            console.warn('⚠️  Render skipped: missing template, preview, or data');
             return;
         }
 
         try {
-            // Build change history table
             const changeHistoryHTML = SOP_DATA.changeHistory
                 .map((row) => {
                     const parts = row.split("|").map(p => sanitizeHTML(p.trim()));
@@ -450,12 +528,10 @@ window.initSOPApp = function () {
                 })
                 .join("");
 
-            // Build procedure list
             const procedureHTML = SOP_DATA.procedure
                 .map((step) => `<li>${sanitizeHTML(step)}</li>`)
                 .join("");
 
-            // Replace template variables
             let html = TEMPLATE_HTML;
 
             Object.keys(SOP_DATA).forEach((key) => {
@@ -474,7 +550,6 @@ window.initSOPApp = function () {
                 }
             });
 
-            // Clean up any remaining template variables
             html = html.replace(/{{[^}]+}}/g, "");
 
             preview.innerHTML = html;
@@ -485,5 +560,9 @@ window.initSOPApp = function () {
         }
     }
 
-    console.log('✅ SOP App initialized successfully');
+    console.log('✅ SOP App v2.0.1 initialized successfully');
+    console.log('📊 Status: Waiting for user to select department...');
 };
+
+// Make sure it's available globally
+console.log('📦 sop-engine.js v2.0.1 loaded successfully');
