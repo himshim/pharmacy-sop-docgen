@@ -407,40 +407,7 @@
         expandable.classList.toggle("open");
       }
 
-      // Toggle active state AND section visibility
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggleItems = document.querySelectorAll(".toggle-item");
-        toggleItems.forEach((item) => {
-          const checkbox = item.querySelector('input[type="checkbox"]');
 
-          // Find the corresponding section
-          const toggleId = checkbox.id; // e.g., "toggleDocControl"
-          const sectionName = toggleId.replace("toggle", ""); // e.g., "DocControl"
-          const sectionId = "section" + sectionName; // e.g., "sectionDocControl"
-          const section = document.getElementById(sectionId);
-
-          // Set initial visibility based on checkbox state
-          if (section) {
-            section.style.display = checkbox.checked ? "block" : "none";
-          }
-
-          // Handle checkbox changes
-          checkbox.addEventListener("change", function () {
-            // Visual feedback
-            item.classList.toggle("active", this.checked);
-
-            // Toggle actual section visibility
-            if (section) {
-              section.style.display = this.checked ? "block" : "none";
-            }
-          });
-
-          // Set initial active state
-          if (checkbox.checked) {
-            item.classList.add("active");
-          }
-        });
-      });
     </script>
 
     <!-- SOP Engine -->
