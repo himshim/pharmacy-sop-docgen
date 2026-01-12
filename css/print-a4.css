@@ -1,20 +1,19 @@
 /* ═══════════════════════════════════════════════════════════════════
-   PRINT & PREVIEW STYLES - MS WORD STYLE v3.1 (DYNAMIC HEIGHT)
-   Perfect A4 rendering with auto-expanding content
+   PRINT & PREVIEW STYLES - v3.2 (WHITE BACKGROUND FIX)
+   Ultra-simplified dynamic height
    ═══════════════════════════════════════════════════════════════ */
 
 /* ==================== MS WORD PREVIEW WRAPPER ==================== */
 #preview-wrapper {
-    background: #525659 !important; /* Dark gray background like MS Word */
+    background: #525659 !important;
     padding: 40px 20px;
-    overflow-y: auto !important; /* Enable scrolling */
+    overflow-y: auto !important;
     overflow-x: hidden;
     height: 100%;
     max-height: calc(100vh - 200px);
     -webkit-overflow-scrolling: touch;
 }
 
-/* MS Word style scrollbar (visible in preview, hidden in print) */
 #preview-wrapper::-webkit-scrollbar {
     width: 12px;
     background: #3e3e42;
@@ -29,53 +28,51 @@
     background: #7a7a7a;
 }
 
-/* ==================== A4 PREVIEW CONTAINER (DYNAMIC HEIGHT!) ==================== */
+/* ==================== A4 PREVIEW - DYNAMIC HEIGHT FIX! ==================== */
 #preview {
-    /* A4 width */
+    /* Width */
     width: 210mm !important;
     max-width: 210mm !important;
 
-    /* DYNAMIC HEIGHT - Expands with content! */
-    min-height: initial !important;
+    /* CRITICAL: Remove ALL height constraints! */
+    min-height: auto !important;
+    max-height: none !important;
     height: auto !important;
 
-    /* Always white background (even in dark mode) */
+    /* White background */
     background: #ffffff !important;
     color: #000000 !important;
 
-    /* Center the page */
+    /* Centering */
     margin: 0 auto 40px auto !important;
 
-    /* Padding (20mm margins) */
+    /* Padding */
     padding: 20mm !important;
 
-    /* Paper shadow effect */
+    /* Paper effect */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
                 0 0 2px rgba(0, 0, 0, 0.2) !important;
 
-    /* Professional fonts */
+    /* Typography */
     font-family: 'Times New Roman', Times, serif;
     font-size: 11pt;
     line-height: 1.6;
 
-    /* Box sizing */
     box-sizing: border-box !important;
-
-    /* Smooth fonts */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    /* Prevent text selection issues */
     position: relative;
 }
 
-/* Also ensure preview-content expands dynamically */
-#preview-content {
-    min-height: initial !important;
+/* Also fix preview-content if it exists */
+#preview-content,
+#preview > div {
+    min-height: auto !important;
+    max-height: none !important;
     height: auto !important;
 }
 
-/* Force white background on all child elements */
+/* Make sure all children expand properly */
 #preview *,
 #preview-content * {
     box-sizing: border-box;
@@ -111,357 +108,79 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(to right, 
-        transparent 0%, 
-        #ccc 20%, 
-        #ccc 80%, 
-        transparent 100%);
+    background: linear-gradient(to right, transparent 0%, #ccc 20%, #ccc 80%, transparent 100%);
     z-index: 5;
 }
 
 /* ==================== TYPOGRAPHY ==================== */
-#preview h1,
-#preview-content h1 {
-    font-size: 18pt;
-    font-weight: bold;
-    margin: 0 0 16pt 0;
-    text-align: center;
-    color: #000 !important;
-    page-break-after: avoid;
-    text-transform: uppercase;
-    letter-spacing: 0.5pt;
-}
-
-#preview h2,
-#preview-content h2 {
-    font-size: 13pt;
-    font-weight: bold;
-    margin: 16pt 0 10pt 0;
-    color: #000 !important;
-    page-break-after: avoid;
-    border-bottom: 1.5pt solid #333;
-    padding-bottom: 4pt;
-}
-
-#preview h3,
-#preview-content h3 {
-    font-size: 12pt;
-    font-weight: bold;
-    margin: 12pt 0 8pt 0;
-    color: #000 !important;
-    page-break-after: avoid;
-}
-
-#preview h4,
-#preview-content h4 {
-    font-size: 11pt;
-    font-weight: bold;
-    margin: 10pt 0 6pt 0;
-    color: #333 !important;
-    page-break-after: avoid;
-}
-
-#preview p,
-#preview-content p {
-    margin: 0 0 10pt 0;
-    text-align: justify;
-    color: #000 !important;
-}
-
-#preview strong,
-#preview-content strong,
-#preview b,
-#preview-content b {
-    font-weight: bold;
-    color: #000 !important;
-}
-
-#preview em,
-#preview-content em,
-#preview i,
-#preview-content i {
-    font-style: italic;
-}
+#preview h1 { font-size: 18pt; font-weight: bold; margin: 0 0 16pt 0; text-align: center; color: #000 !important; page-break-after: avoid; text-transform: uppercase; letter-spacing: 0.5pt; }
+#preview h2 { font-size: 13pt; font-weight: bold; margin: 16pt 0 10pt 0; color: #000 !important; page-break-after: avoid; border-bottom: 1.5pt solid #333; padding-bottom: 4pt; }
+#preview h3 { font-size: 12pt; font-weight: bold; margin: 12pt 0 8pt 0; color: #000 !important; page-break-after: avoid; }
+#preview h4 { font-size: 11pt; font-weight: bold; margin: 10pt 0 6pt 0; color: #333 !important; page-break-after: avoid; }
+#preview p { margin: 0 0 10pt 0; text-align: justify; color: #000 !important; }
+#preview strong, #preview b { font-weight: bold; color: #000 !important; }
+#preview em, #preview i { font-style: italic; }
 
 /* ==================== LISTS ==================== */
-#preview ol,
-#preview-content ol,
-#preview ul,
-#preview-content ul {
-    margin: 10pt 0;
-    padding-left: 30pt;
-    color: #000 !important;
-}
-
-#preview ol,
-#preview-content ol {
-    list-style-type: decimal;
-}
-
-#preview ul,
-#preview-content ul {
-    list-style-type: disc;
-}
-
-#preview li,
-#preview-content li {
-    margin: 6pt 0;
-    line-height: 1.6;
-    color: #000 !important;
-}
-
-#preview ol ol,
-#preview-content ol ol {
-    list-style-type: lower-alpha;
-    margin-top: 6pt;
-}
-
-#preview ol ol ol,
-#preview-content ol ol ol {
-    list-style-type: lower-roman;
-}
+#preview ol, #preview ul { margin: 10pt 0; padding-left: 30pt; color: #000 !important; }
+#preview ol { list-style-type: decimal; }
+#preview ul { list-style-type: disc; }
+#preview li { margin: 6pt 0; line-height: 1.6; color: #000 !important; }
+#preview ol ol { list-style-type: lower-alpha; margin-top: 6pt; }
+#preview ol ol ol { list-style-type: lower-roman; }
 
 /* ==================== TABLES ==================== */
-#preview table,
-#preview-content table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 14pt 0;
-    font-size: 10pt;
-    background: #fff !important;
-}
-
-#preview th,
-#preview-content th,
-#preview td,
-#preview-content td {
-    border: 1pt solid #333 !important;
-    padding: 8pt 10pt;
-    text-align: left;
-    vertical-align: top;
-    color: #000 !important;
-    background: transparent;
-}
-
-#preview th,
-#preview-content th {
-    background-color: #f0f0f0 !important;
-    font-weight: bold;
-    text-align: center;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-}
-
-#preview .label-cell,
-#preview-content .label-cell {
-    font-weight: bold;
-    background-color: #f5f5f5 !important;
-    width: 35%;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-}
+#preview table { width: 100%; border-collapse: collapse; margin: 14pt 0; font-size: 10pt; background: #fff !important; }
+#preview th, #preview td { border: 1pt solid #333 !important; padding: 8pt 10pt; text-align: left; vertical-align: top; color: #000 !important; }
+#preview th { background-color: #f0f0f0 !important; font-weight: bold; text-align: center; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+#preview .label-cell { font-weight: bold; background-color: #f5f5f5 !important; width: 35%; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
 /* ==================== DOCUMENT SECTIONS ==================== */
-#preview .doc-header,
-#preview-content .doc-header {
-    text-align: center;
-    margin-bottom: 20pt;
-    padding-bottom: 12pt;
-    border-bottom: 2.5pt double #000;
-    color: #000 !important;
-}
+#preview .doc-header { text-align: center; margin-bottom: 20pt; padding-bottom: 12pt; border-bottom: 2.5pt double #000; color: #000 !important; }
+#preview .section { margin: 16pt 0; }
+#preview .section-title { font-size: 12pt; font-weight: bold; margin: 14pt 0 8pt 0; padding: 6pt 10pt; background: #f0f0f0 !important; border-left: 4pt solid #333; color: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+#preview .signature-block { margin-top: 30pt; }
+#preview .signature-table { border: 2pt solid #000 !important; margin-top: 20pt; }
 
-#preview .section,
-#preview-content .section {
-    margin: 16pt 0;
-}
-
-#preview .section-title,
-#preview-content .section-title {
-    font-size: 12pt;
-    font-weight: bold;
-    margin: 14pt 0 8pt 0;
-    padding: 6pt 10pt;
-    background: #f0f0f0 !important;
-    border-left: 4pt solid #333;
-    color: #000 !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-}
-
-/* ==================== SIGNATURE BLOCK ==================== */
-#preview .signature-block,
-#preview-content .signature-block {
-    margin-top: 30pt;
-}
-
-#preview .signature-table,
-#preview-content .signature-table {
-    border: 2pt solid #000 !important;
-    margin-top: 20pt;
-}
-
-/* ==================== PRINT MEDIA QUERY (FIXED!) ==================== */
+/* ==================== PRINT MEDIA QUERY ==================== */
 @media print {
-    /* Reset body - DO NOT HIDE EVERYTHING! */
-    body {
-        margin: 0 !important;
-        padding: 0 !important;
-        background: white !important;
-    }
+    body { margin: 0 !important; padding: 0 !important; background: white !important; }
 
-    /* Hide UI elements ONLY */
-    .sidebar,
-    .form-panel,
-    .controls-panel,
-    .mobile-header,
-    .tab-navigation,
-    .form-wrapper,
-    .preview-actions,
-    .action-bar,
-    .bottom-action-bar,
-    .preview-toolbar,
-    .status-bar,
-    .no-print,
-    button,
-    nav,
-    header:not(.doc-header),
-    footer:not(.doc-footer),
-    input,
-    textarea,
-    select,
-    .btn,
-    .btn-primary,
-    .btn-secondary,
-    .control-section {
-        display: none !important;
-        visibility: hidden !important;
-    }
+    .sidebar, .form-panel, .controls-panel, .mobile-header, .tab-navigation,
+    .preview-actions, .action-bar, button, nav, header:not(.doc-header),
+    input, textarea, select, .btn { display: none !important; }
 
-    /* Show ONLY the preview wrapper and preview */
-    #preview-wrapper {
-        display: block !important;
-        visibility: visible !important;
-        background: white !important;
-        padding: 0 !important;
-        overflow: visible !important;
-        height: auto !important;
-        max-height: none !important;
-    }
+    #preview-wrapper { background: white !important; padding: 0 !important; overflow: visible !important; height: auto !important; max-height: none !important; }
+    #preview { box-shadow: none !important; margin: 0 !important; width: 100% !important; max-width: none !important; padding: 0 !important; }
+    #preview *, #preview-content * { visibility: visible !important; color: #000 !important; }
 
-    #preview,
-    #preview-content {
-        display: block !important;
-        visibility: visible !important;
-        box-shadow: none !important;
-        margin: 0 !important;
-        width: 100% !important;
-        max-width: none !important;
-        padding: 0 !important;
-    }
+    .page-break-indicator, .page-break-indicator::before, .page-break-indicator::after { display: none !important; }
+    #preview-wrapper::-webkit-scrollbar { display: none !important; }
 
-    /* Make sure all preview children are visible */
-    #preview *,
-    #preview-content * {
-        visibility: visible !important;
-        color: #000 !important;
-    }
+    @page { size: A4 portrait; margin: 20mm; }
 
-    /* Hide page break indicators in print */
-    .page-break-indicator,
-    .page-break-indicator::before,
-    .page-break-indicator::after {
-        display: none !important;
-    }
-
-    /* Hide scrollbar */
-    #preview-wrapper::-webkit-scrollbar {
-        display: none !important;
-    }
-
-    /* Page setup */
-    @page {
-        size: A4 portrait;
-        margin: 20mm;
-    }
-
-    /* Ensure table backgrounds print */
-    #preview th,
-    #preview-content th,
-    #preview .label-cell,
-    #preview-content .label-cell,
-    #preview .section-title,
-    #preview-content .section-title {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
+    #preview th, #preview .label-cell, #preview .section-title { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 }
 
-/* ==================== PDF GENERATION MODE ==================== */
-.pdf-rendering #preview-wrapper {
-    background: transparent !important;
-    padding: 0 !important;
-    overflow: visible !important;
-    height: auto !important;
-}
-
-.pdf-rendering #preview {
-    box-shadow: none !important;
-    margin: 0 !important;
-}
-
-.pdf-rendering .page-break-indicator,
-.pdf-rendering .page-break-indicator::before,
-.pdf-rendering .page-break-indicator::after {
-    display: none !important;
-}
+/* ==================== PDF MODE ==================== */
+.pdf-rendering #preview-wrapper { background: transparent !important; padding: 0 !important; overflow: visible !important; height: auto !important; }
+.pdf-rendering #preview { box-shadow: none !important; margin: 0 !important; }
+.pdf-rendering .page-break-indicator { display: none !important; }
 
 /* ==================== RESPONSIVE ==================== */
 @media screen and (max-width: 768px) {
-    #preview-wrapper {
-        padding: 20px 10px;
-        max-height: calc(100vh - 250px);
-    }
-
-    #preview {
-        transform: scale(0.95);
-        transform-origin: top center;
-        margin-bottom: 20px;
-    }
+    #preview-wrapper { padding: 20px 10px; max-height: calc(100vh - 250px); }
+    #preview { transform: scale(0.95); transform-origin: top center; margin-bottom: 20px; }
 }
 
 @media screen and (max-width: 480px) {
-    #preview {
-        transform: scale(0.75);
-        transform-origin: top center;
-    }
+    #preview { transform: scale(0.75); transform-origin: top center; }
 }
 
-/* ==================== DARK MODE OVERRIDE ==================== */
-[data-theme="dark"] #preview,
-.dark-mode #preview,
-body.dark #preview,
-[data-theme="dark"] #preview-content,
-.dark-mode #preview-content,
-body.dark #preview-content {
-    background: #ffffff !important;
-    color: #000000 !important;
-}
-
-[data-theme="dark"] #preview *,
-.dark-mode #preview *,
-body.dark #preview *,
-[data-theme="dark"] #preview-content *,
-.dark-mode #preview-content *,
-body.dark #preview-content * {
-    color: #000000 !important;
-}
-
-[data-theme="dark"] #preview-wrapper,
-.dark-mode #preview-wrapper,
-body.dark #preview-wrapper {
-    background: #525659 !important;
-}
+/* ==================== DARK MODE ==================== */
+[data-theme="dark"] #preview, .dark-mode #preview, body.dark #preview { background: #ffffff !important; color: #000000 !important; }
+[data-theme="dark"] #preview *, .dark-mode #preview *, body.dark #preview * { color: #000000 !important; }
+[data-theme="dark"] #preview-wrapper, .dark-mode #preview-wrapper, body.dark #preview-wrapper { background: #525659 !important; }
 
 /* ==================== UTILITIES ==================== */
 .text-center { text-align: center; }
@@ -471,5 +190,3 @@ body.dark #preview-wrapper {
 .font-italic { font-style: italic; }
 .uppercase { text-transform: uppercase; }
 .underline { text-decoration: underline; }
-
-/* ==================== END ==================== */
