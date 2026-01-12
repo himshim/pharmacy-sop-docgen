@@ -149,8 +149,7 @@ body {
 .main-layout {
     display: grid;
     grid-template-columns: 440px 1fr;
-    height: calc(100vh - 200px);
-    min-height: 600px;
+    min-height: calc(100vh - 200px);
 }
 
 /* ============ CONTROL PANEL (SIDEBAR) ============ */
