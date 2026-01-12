@@ -780,32 +780,40 @@ To use this feature, add these scripts to your index.html <head>:
     },
 
     handleToggle(id, isChecked) {
-      if (!this.state.sopData) return;
-      const key = UIModule.toggleMap[id];
-      if (!this.state.sopData.sectionsEnabled)
-        this.state.sopData.sectionsEnabled = {};
-      this.state.sopData.sectionsEnabled[key] = isChecked;
-
-      // ✅ Handle Field Visibility (sopNumber, effectiveDate, etc.)
-      const fieldIds = [
-        "sopNumber",
-        "effectiveDate",
-        "revisionDate",
-        "copyType",
-      ];
-      if (fieldIds.includes(key)) {
+    if (!this.state.sopData) return;
+    const key = UIModule.toggleMap[id];
+    if (!this.state.sopData.sectionsEnabled) this.state.sopData.sectionsEnabled = {};
+    this.state.sopData.sectionsEnabled[key] = isChecked;
+    
+    // ✅ DEBUG: Log what's happening
+    console.log('🔧 Toggle:', id, '→ Key:', key, '→ Checked:', isChecked);
+    
+    // Handle Field Visibility
+    const fieldIds = ['sopNumber', 'effectiveDate', 'revisionDate', 'copyType'];
+    if (fieldIds.includes(key)) {
+        console.log('📋 This is a FIELD toggle');
         const field = UtilsModule.$(key);
+        console.log('🎯 Found field element:', field);
+        
         if (field) {
-          const formGroup = field.closest(".form-group");
-          if (formGroup) {
-            formGroup.style.display = isChecked ? "block" : "none";
-          }
+            const formGroup = field.closest('.form-group');
+            console.log('📦 Found form-group:', formGroup);
+            
+            if (formGroup) {
+                formGroup.style.display = isChecked ? 'block' : 'none';
+                console.log('✅ Set display to:', isChecked ? 'block' : 'none');
+            } else {
+                console.log('❌ No .form-group parent found!');
+            }
+        } else {
+            console.log('❌ Field element not found!');
         }
-      }
+    }
+    
+    UIModule.syncToggles(this.state.sopData);
+    this.refreshPreview();
+},
 
-      UIModule.syncToggles(this.state.sopData);
-      this.refreshPreview();
-    },
 
     debouncedRender() {
       clearTimeout(this.state.debounce);
