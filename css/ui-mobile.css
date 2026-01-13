@@ -587,19 +587,14 @@ textarea {
         border-radius: 0 !important;
     }
     
-    /* Remove spacing from first elements */
-    #preview > *:first-child {
+    /* Remove all top spacing from content */
+    #preview * {
         margin-top: 0 !important;
-        padding-top: 0 !important;
     }
     
-    #preview > *:first-child * {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-    
-    #preview > div:first-child + table {
-        margin-top: 0 !important;
+    /* Restore spacing between elements (but not at top) */
+    #preview * + * {
+        margin-top: 12pt !important;
     }
 
     @page {
