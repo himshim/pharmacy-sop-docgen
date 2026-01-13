@@ -1,226 +1,249 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- * MS WORD A4 WYSIWYG PRINT STYLES - FINAL OPTIMIZED v2.0
- * Matches Microsoft Word's default A4 layout (210mm x 297mm)
- * Fixed: Mobile top margin, Desktop padding, Multi-page margins
+ * MS WORD A4 WYSIWYG PRINT STYLES - FINAL v2.1 BULLETPROOF
+ * Mobile Top Margin: NUCLEAR FIX
  * ═══════════════════════════════════════════════════════════════════
  */
 
+
 /* ============ 1. PAGE SETUP - ALL PAGES ============ */
 @page {
-  size: A4 portrait;
-  margin: 20mm; /* ✅ Fixed: Desktop needs margins on all pages */
+    size: A4 portrait;
+    margin: 20mm;
 }
 
-/* Explicit margins for multi-page support */
 @page :first {
-  margin: 20mm;
+    margin: 20mm;
 }
 
 @page :left {
-  margin: 20mm;
+    margin: 20mm;
 }
 
 @page :right {
-  margin: 20mm;
+    margin: 20mm;
 }
+
 
 /* ============ 2. PAGE BREAKS ============ */
 .page-break-before {
-  page-break-before: always !important;
-  break-before: page !important;
-  display: block;
-  height: 1px;
-  margin: 0;
+    page-break-before: always !important;
+    break-before: page !important;
+    display: block;
+    height: 1px;
+    margin: 0;
 }
 
 .page-break-after {
-  page-break-after: always !important;
-  break-after: page !important;
+    page-break-after: always !important;
+    break-after: page !important;
 }
 
-/* Prevent awkward breaks */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  page-break-after: avoid !important;
-  break-after: avoid !important;
+h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
 }
 
 table {
-  page-break-inside: avoid !important;
-  break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
 }
+
 
 /* ============ 3. DESKTOP PREVIEW ============ */
 #preview-wrapper {
-  background: #525659;
-  padding: 30px 0;
-  overflow-y: auto;
-  height: 100vh;
-  display: block;
-  text-align: center;
+    background: #525659;
+    padding: 30px 0;
+    overflow-y: auto;
+    height: 100vh;
+    display: block;
+    text-align: center;
 }
 
 #preview {
-  width: 210mm !important;
-  min-height: 297mm !important;
-  height: auto !important;
-  margin: 0 auto 40px auto;
-  padding: 20mm !important;
-  background: white !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  text-align: left;
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    height: auto !important;
+    margin: 0 auto 40px auto;
+    padding: 20mm !important;
+    background: white !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
 
-  font-family: "Times New Roman", Times, serif !important;
-  font-size: 12pt !important;
-  line-height: 1.5 !important;
-  color: #000 !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    color: #000 !important;
 }
+
 
 /* ============ 4. MOBILE PREVIEW (Readable Zoom) ============ */
 @media screen and (max-width: 850px) {
-  #preview-wrapper {
-    padding: 10px 0 !important;
-    overflow-x: hidden !important;
-    background: #e0e0e5 !important;
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    height: auto !important;
-    min-height: 100vh !important;
-  }
+    #preview-wrapper {
+        padding: 10px 0 !important;
+        overflow-x: hidden !important;
+        background: #e0e0e5 !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        height: auto !important;
+        min-height: 100vh !important;
+    }
 
-  #preview {
-    /* Keep A4 Size but Scale Down */
-    width: 210mm !important;
-    min-width: 210mm !important;
-
-    /* Standard transform for mobile readability */
-    transform: scale(0.45);
-    transform-origin: top center;
-
-    margin: 0 !important;
-    /* Negative margin to pull footer up since element shrunk */
-    margin-bottom: -150px !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
-  }
+    #preview {
+        width: 210mm !important;
+        min-width: 210mm !important;
+        transform: scale(0.45);
+        transform-origin: top center;
+        margin: 0 !important;
+        margin-bottom: -150px !important; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    }
 }
+
 
 /* ============ 5. PRINT MODE (Layout Unlock) ============ */
 @media print {
-  /* RESET EVERYTHING */
-  :root,
-  html,
-  body {
-    width: 100% !important;
-    height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: visible !important;
-    background: white !important;
-    display: block !important;
-  }
+    /* RESET EVERYTHING */
+    :root, html, body {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        background: white !important;
+        display: block !important;
+    }
 
-  /* HIDE UI COMPONENTS */
-  .app-header,
-  .controls-panel,
-  .status-bar,
-  .toolbar-buttons,
-  .preview-toolbar,
-  .mobile-header,
-  .tab-navigation,
-  .page-break-indicator,
-  .tab-panel:not(#tab-preview),
-  header,
-  nav,
-  footer,
-  aside {
-    display: none !important;
-  }
+    /* HIDE UI COMPONENTS */
+    .app-header, .controls-panel, .status-bar, 
+    .toolbar-buttons, .preview-toolbar,
+    .mobile-header, .tab-navigation,
+    .page-break-indicator, .tab-panel:not(#tab-preview),
+    header, nav, footer, aside {
+        display: none !important;
+    }
 
-  /* Keep main structure visible */
-  .app-container,
-  .main-layout,
-  .preview-panel {
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
-    overflow: visible !important;
-    border: none !important;
-    box-shadow: none !important;
-    background: white !important;
-  }
+    /* Keep main structure visible */
+    .app-container,
+    .main-layout,
+    .preview-panel {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: white !important;
+    }
 
-  /* UNWRAP CONTENT */
-  #preview-wrapper {
-    position: static !important;
-    display: block !important;
-    overflow: visible !important;
-    height: auto !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-  }
+    /* UNWRAP CONTENT */
+    #preview-wrapper {
+        position: static !important;
+        display: block !important;
+        overflow: visible !important;
+        height: auto !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+    }
 
-  /* PAGE CONTENT */
-  #preview {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important; /* ✅ Let @page handle margins (all pages) */
-    position: static !important;
-    display: block !important;
-    visibility: visible !important;
-    overflow: visible !important;
-    transform: none !important;
-    box-shadow: none !important;
-    border: none !important;
-    box-sizing: border-box !important;
-  }
+    /* PAGE CONTENT */
+    #preview {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: static !important;
+        display: block !important;
+        visibility: visible !important;
+        overflow: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        box-sizing: border-box !important;
+    }
 
-  /* ✅ FIX: Remove top margin from first element (Mobile issue) */
-  #preview > *:first-child,
-  #preview > *:first-child > *:first-child,
-  #preview > table:first-child {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
+    /* ═══════════════════════════════════════════════════════════════
+       NUCLEAR FIX: Mobile Top Margin Removal (Maximum Specificity)
+       ═══════════════════════════════════════════════════════════════ */
 
-  /* ✅ FIX: Prevent content overflow on all pages */
-  #preview * {
-    box-sizing: border-box !important;
-    max-width: 100% !important;
-  }
+    /* Target EVERYTHING that could be first */
+    #preview > *:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
 
-  /* Ensure Print Colors */
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
+    /* Nested first children */
+    #preview > *:first-child > *:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Deeper nesting */
+    #preview > div:first-child > *:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* All possible first tables */
+    #preview table:first-child,
+    #preview > table:first-child,
+    #preview > *:first-child table:first-of-type,
+    #preview > div:first-child table:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Override global table margins for ALL tables in print */
+    #preview table {
+        margin-top: 12pt !important;
+        margin-bottom: 12pt !important;
+    }
+
+    /* But FORCE first table to have NO top margin */
+    #preview > table:first-child,
+    #preview > table:first-of-type,
+    #preview > *:first-child > table:first-child,
+    #preview > *:first-child > table:first-of-type {
+        margin-top: 0 !important;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════ */
+
+    /* Prevent content overflow */
+    #preview * {
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+    }
+
+    /* Ensure Print Colors */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
 }
+
 
 /* ============ 6. JS PRINT HELPER ============ */
 body.printing-mode .app-container,
 body.printing-mode header,
 body.printing-mode nav,
-body.printing-mode aside {
-  display: none !important;
+body.printing-mode aside { 
+    display: none !important; 
 }
 
 body.printing-mode #preview-wrapper {
-  position: static !important;
-  display: block !important;
-  height: auto !important;
-  overflow: visible !important;
+    position: static !important;
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
 }
+
 
 /* ════════════════════════════════════════════════════════════════
    PROFESSIONAL ENHANCEMENTS - Auto-Numbering & Typography
@@ -228,74 +251,86 @@ body.printing-mode #preview-wrapper {
 
 /* Counter Setup */
 #preview {
-  counter-reset: section;
+    counter-reset: section;
 }
 
 /* Auto-Number Main Sections */
 #preview h2 {
-  counter-increment: section;
+    counter-increment: section;
 }
 
 #preview h2::before {
-  content: counter(section) ". ";
-  color: #667eea;
-  font-weight: bold;
+    content: counter(section) ". ";
+    color: #667eea;
+    font-weight: bold;
 }
 
 /* Professional Typography */
 #preview p {
-  text-align: justify;
-  hyphens: auto;
-  orphans: 3;
-  widows: 3;
+    text-align: justify;
+    hyphens: auto;
+    orphans: 3;
+    widows: 3;
 }
 
 #preview ul {
-  margin-left: 25pt;
-  line-height: 1.8;
+    margin-left: 25pt;
+    line-height: 1.8;
 }
 
 #preview ul li {
-  margin-bottom: 8pt;
+    margin-bottom: 8pt;
 }
 
-/* Table Enhancements */
-#preview table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 15pt 0;
+/* Table Enhancements - SCREEN ONLY to avoid print conflicts */
+@media screen {
+    #preview table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 15pt 0;
+    }
 }
 
+/* Table styling for PRINT (with controlled margins) */
+@media print {
+    #preview table {
+        border-collapse: collapse;
+        width: 100%;
+        /* Margins handled by specific rules above */
+    }
+}
+
+/* Table borders and styling (applies to both screen and print) */
 #preview table th,
 #preview table td {
-  border: 1px solid #333;
-  padding: 8pt;
-  text-align: left;
-  vertical-align: top;
+    border: 1px solid #333;
+    padding: 8pt;
+    text-align: left;
+    vertical-align: top;
 }
 
 #preview table th {
-  background-color: #f0f0f0;
-  font-weight: bold;
+    background-color: #f0f0f0;
+    font-weight: bold;
 }
 
 #preview table tr:nth-child(even) {
-  background-color: #fafafa;
+    background-color: #fafafa;
 }
 
 /* Page Break Control */
 #preview h2 {
-  page-break-after: avoid;
-  page-break-inside: avoid;
+    page-break-after: avoid;
+    page-break-inside: avoid;
 }
 
 #preview table {
-  page-break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 /* Print Color Preservation */
 @media print {
-  #preview h2::before {
-    color: #000 !important; /* Black numbers for print */
-  }
+    #preview h2::before {
+        color: #000 !important;
+    }
 }
