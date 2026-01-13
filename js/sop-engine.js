@@ -967,7 +967,18 @@ To use this feature, add these scripts to your index.html <head>:
           });
         }
 
-        const html = TemplateModule.render(tmpl, viewData);
+        let html = TemplateModule.render(tmpl, viewData);
+
+        /* =====================================================
+          FINAL GLOBAL SANITIZATION (ALL OUTPUTS)
+           ===================================================== */
+
+        /* Remove empty {} */
+        html = html.replace(/\{\s*\}/g, "");
+
+        /* Unwrap {text} → text */
+        html = html.replace(/\{\s*([^{}]+?)\s*\}/g, "$1");
+
         UIModule.renderPreview(html);
       } catch (e) {
         UtilsModule.error("Failed to refresh preview:", e);
