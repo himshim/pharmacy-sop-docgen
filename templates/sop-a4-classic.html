@@ -10,7 +10,11 @@
 <!-- =====================================================
      DOCUMENT TITLE
 ===================================================== -->
-<h1 style="text-align:center; font-size:16pt; margin-bottom:14pt;">
+<h1 style="text-align:center; font-size:16pt; margin-bottom:10pt;">
+  <strong>STANDARD OPERATING PROCEDURE</strong>
+</h1>
+
+<h1 style="text-align:center; font-size:14pt; margin-bottom:14pt;">
   {{title}}
 </h1>
 
@@ -28,6 +32,7 @@
       <td style="padding:4pt 6pt;"><strong>Institute</strong></td>
       <td style="padding:4pt 6pt;">{{institute}}</td>
     </tr>
+
     <tr>
       <td style="padding:4pt 6pt;"><strong>Department</strong></td>
       <td style="padding:4pt 6pt;">{{department}}</td>
@@ -40,10 +45,12 @@
     </tr>
     {{/if}}
 
+    {{#if revisionNo}}
     <tr>
       <td style="padding:4pt 6pt;"><strong>Revision Number</strong></td>
       <td style="padding:4pt 6pt;">{{revisionNo}}</td>
     </tr>
+    {{/if}}
 
     {{#if sectionEffectiveDate}}
     <tr>
@@ -86,7 +93,9 @@
   <p><strong>SOP Number:</strong> {{sopNumber}}</p>
   {{/if}}
 
+  {{#if revisionNo}}
   <p><strong>Revision Number:</strong> {{revisionNo}}</p>
+  {{/if}}
 
   {{#if sectionEffectiveDate}}
   <p><strong>Effective Date:</strong> {{effectiveDate}}</p>
@@ -108,18 +117,17 @@
 <hr style="margin:14pt 0;">
 
 <!-- =====================================================
-     PURPOSE
+     SOP CONTENT
 ===================================================== -->
+
 <h2>Purpose</h2>
-<p>{{{purpose}}}</p>
+{{{purpose}}}
 
 <h2>Scope</h2>
-<p>{{{scope}}}</p>
+{{{scope}}}
 
 <h2>Responsibility</h2>
-<ul style="margin-top:6pt;">
-  {{{responsibility}}}
-</ul>
+{{{responsibility}}}
 
 <h2>Procedure</h2>
 <ol style="margin-top:6pt;">
@@ -127,28 +135,26 @@
 </ol>
 
 <h2>Safety Precautions</h2>
-<ul style="margin-top:6pt;">
-  {{{precautions}}}
-</ul>
+{{{precautions}}}
 
 {{#if sectionApplicability}}
 <h2>Applicability</h2>
-<p>{{{applicability}}}</p>
+{{{applicability}}}
 {{/if}}
 
 {{#if sectionAbbreviations}}
 <h2>Abbreviations</h2>
-<p>{{{abbreviations}}}</p>
+{{{abbreviations}}}
 {{/if}}
 
 {{#if sectionReferences}}
 <h2>References</h2>
-<p>{{{references}}}</p>
+{{{references}}}
 {{/if}}
 
 {{#if sectionAnnexures}}
 <h2>Annexures</h2>
-<p>{{{annexures}}}</p>
+{{{annexures}}}
 {{/if}}
 
 <!-- =====================================================
