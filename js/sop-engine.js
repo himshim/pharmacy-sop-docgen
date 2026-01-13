@@ -238,7 +238,7 @@ window.initSOPApp = function () {
       }
     },
 
-    // ────── 2. PDF EXPORT (DESKTOP BUG FIXED – FINAL, SAFE) ──────
+    // ────── 2. PDF EXPORT (FINAL STABLE VERSION) ──────
 async exportPDF(filename) {
   if (!this.hasContent()) {
     alert("❌ No content to export. Please generate a document first.");
@@ -253,41 +253,23 @@ async exportPDF(filename) {
   try {
     UtilsModule.log("📄 Generating PDF...");
 
-    const sourceElement = this.getPreviewElement();
-    const clonedElement = sourceElement.cloneNode(true);
+    const preview = this.getPreviewElement();
 
     /* =====================================================
-       CLEAN PREVIEW-ONLY VISUALS
+       TEMPORARILY NEUTRALIZE PREVIEW-ONLY STYLES
        ===================================================== */
-    clonedElement.style.boxShadow = "none";
-    clonedElement.style.background = "#ffffff";
-    clonedElement.style.margin = "0";
-    clonedElement.style.padding = "0";
+    const originalStyles = {
+      boxShadow: preview.style.boxShadow,
+      background: preview.style.background,
+      transform: preview.style.transform,
+    };
 
-    clonedElement
-      .querySelectorAll(
-        ".toolbar-buttons, .action-bar, .no-print, .ui-controls"
-      )
-      .forEach((el) => el.remove());
-
-    /* =====================================================
-       ZERO-ORIGIN CAPTURE ROOT (MUST BE IN DOM)
-       ===================================================== */
-    const captureRoot = document.createElement("div");
-    captureRoot.style.position = "fixed";
-    captureRoot.style.top = "0";
-    captureRoot.style.left = "0";
-    captureRoot.style.width = "210mm";
-    captureRoot.style.background = "#ffffff";
-    captureRoot.style.margin = "0";
-    captureRoot.style.padding = "0";
-    captureRoot.style.zIndex = "-1"; // invisible but renderable
-
-    captureRoot.appendChild(clonedElement);
-    document.body.appendChild(captureRoot); // 🔴 REQUIRED
+    preview.style.boxShadow = "none";
+    preview.style.background = "#ffffff";
+    preview.style.transform = "none";
 
     /* =====================================================
-       PDF OPTIONS (STABLE)
+       PDF OPTIONS (PROVEN STABLE)
        ===================================================== */
     const options = {
       margin: [0, 10, 10, 10],
@@ -300,7 +282,7 @@ async exportPDF(filename) {
       },
 
       html2canvas: {
-        scale: this.CONFIG.PDF_SCALE,
+        scale: 2,
         backgroundColor: "#ffffff",
         useCORS: true,
         allowTaint: true,
@@ -309,7 +291,7 @@ async exportPDF(filename) {
 
       jsPDF: {
         unit: "mm",
-        format: this.CONFIG.PDF_FORMAT,
+        format: "a4",
         orientation: "portrait",
         compress: true,
       },
@@ -320,12 +302,14 @@ async exportPDF(filename) {
       },
     };
 
-    await html2pdf().set(options).from(captureRoot).save();
+    await html2pdf().set(options).from(preview).save();
 
     /* =====================================================
-       CLEANUP (CRITICAL)
+       RESTORE PREVIEW STYLES
        ===================================================== */
-    document.body.removeChild(captureRoot);
+    preview.style.boxShadow = originalStyles.boxShadow;
+    preview.style.background = originalStyles.background;
+    preview.style.transform = originalStyles.transform;
 
     UtilsModule.log("✅ PDF exported successfully");
     alert("✅ PDF saved successfully!");
@@ -333,7 +317,8 @@ async exportPDF(filename) {
     UtilsModule.error("❌ PDF export failed:", error);
     alert(`❌ PDF export failed: ${error.message}`);
   }
-},
+}
+,
 
 // ────── 3. WORD EXPORT (PATCHED – DUAL LAYOUT SAFE) ──────
 async exportDOCX(filename) {
