@@ -270,3 +270,17 @@ body.printing-mode #preview-wrapper {
 #preview h2 + ol {
     margin-top: 6pt !important;
 }
+/* =====================================================
+   DOCUMENT CONTROL – TEXT ONLY (GLOBAL)
+   ===================================================== */
+
+/* Hide document information table everywhere */
+.doc-control-table {
+  display: none !important;
+}
+
+/* Ensure text version is visible */
+.doc-control-text {
+  display: block !important;
+  margin-bottom: 12pt;
+}
