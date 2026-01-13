@@ -51,7 +51,12 @@ window.renderTemplate = function(template, data) {
     }
 
     // 3. CLEANUP REMAINING PLACEHOLDERS
-    html = html.replace(REGEX_CLEANUP, '');
+html = html.replace(REGEX_CLEANUP, '');
 
-    return html;
+// 4. FINAL SANITIZATION: REMOVE STRAY SINGLE-BRACE BLOCKS
+html = html
+  .replace(/\{\s*\}/g, '')
+  .replace(/\{\s*([^{}]+?)\s*\}/g, '$1');
+
+return html;
 };
