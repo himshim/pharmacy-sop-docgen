@@ -628,3 +628,38 @@ body.pdf-export #preview-wrapper {
 body.pdf-export #preview {
   background: #ffffff !important;
 }
+/* =====================================================
+   PDF PAGE BREAK CONTROL – SAFE & WORD-LIKE
+   ===================================================== */
+
+/* Never split headings from their content */
+#preview h2,
+#preview h3 {
+  page-break-after: avoid !important;
+  break-after: avoid-page !important;
+}
+
+/* Never split tables */
+#preview table {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+/* Never split lists */
+#preview ol,
+#preview ul {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+/* Avoid splitting list items */
+#preview li {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+/* Avoid splitting approval/signature block */
+#preview .approvals,
+#preview .signature-table {
+  page-break-inside: avoid !important;
+}
