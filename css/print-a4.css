@@ -9,7 +9,7 @@
 /* ============ 1. PAGE SETUP ============ */
 @page {
     size: A4 portrait;
-    margin: 20mm;
+    margin: 0mm;
 }
 
 /* ============ 2. PAGE BREAKS ============ */
@@ -138,13 +138,11 @@
         width: 100% !important;
         max-width: none !important;
         margin: 0 !important;
-        padding: 0 !important; /* Margins handled by @page */
+        padding: 20mm !important; /* ✅ FIXED - Restore padding */
         position: static !important;
         display: block !important;
         visibility: visible !important;
         overflow: visible !important;
-        
-        /* Reset Effects */
         transform: none !important;
         box-shadow: none !important;
         border: none !important;
