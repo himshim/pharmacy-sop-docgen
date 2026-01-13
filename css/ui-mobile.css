@@ -609,28 +609,32 @@ textarea {
         width: 210mm !important;
         min-height: 297mm !important;
         margin: 0 !important;
-        padding: 20mm !important;
+        padding: 0 !important; /* Let @page handle margins */
         background: white !important;
         box-shadow: none !important;
         border-radius: 0 !important;
     }
     
-    /* Only remove top spacing from FIRST page elements */
-    #preview > div:first-child,
-    #preview > div:first-child > *,
-    #preview > div:first-child > * > * {
+    /* Remove spacing from first elements to prevent double margin */
+    #preview > *:first-child {
         margin-top: 0 !important;
         padding-top: 0 !important;
     }
     
-    /* Also target first table if it comes early */
-    #preview > table:first-of-type,
+    #preview > *:first-child * {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* First table after header div */
     #preview > div:first-child + table {
         margin-top: 0 !important;
     }
 
+    /* Use @page margins for all pages */
     @page {
         size: A4;
-        margin: 0 !important;
+        margin: 20mm !important;
     }
 }
+
