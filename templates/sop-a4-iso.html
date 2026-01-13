@@ -3,67 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        /* Auto-numbering with professional gray color */
-        body { 
-            counter-reset: section; 
-            font-family: 'Calibri', 'Arial', sans-serif; 
+        body {
+            counter-reset: section;
+            font-family: 'Calibri', 'Arial', sans-serif;
             line-height: 1.5;
             color: #333333;
         }
         h2:not(.no-counter) { counter-increment: section; }
-        h2:not(.no-counter)::before { 
-            content: counter(section) ". "; 
+        h2:not(.no-counter)::before {
+            content: counter(section) ". ";
             color: #2c3e50;
             font-weight: bold;
         }
 
         table { width: 100%; border-collapse: collapse; margin: 12px 0; }
         table, th, td { border: 1px solid #999999; }
-        th, td { padding: 10px; text-align: left; font-size: 11pt; }
+        th, td { padding: 8px; text-align: left; font-size: 11pt; }
         th { background-color: #f0f0f0; color: #2c3e50; font-weight: bold; }
-        .header-row { background-color: #f2f2f2; font-weight: bold; color: #505050; }
-        .value-cell { background-color: #ffffff; }
 
-        h1 { 
-            text-align: center; 
-            font-size: 18pt; 
-            margin: 20px 0 15px 0; 
+        h1 {
+            text-align: center;
+            font-size: 18pt;
+            margin: 20px 0 15px 0;
             color: #2c3e50;
             border-bottom: 3px solid #2c3e50;
             padding-bottom: 10px;
             font-weight: bold;
             letter-spacing: 0.5px;
         }
-        h2 { 
-            font-size: 13pt; 
-            margin: 15px 0 10px 0; 
-            color: #2c3e50; 
+        h2 {
+            font-size: 13pt;
+            margin: 15px 0 10px 0;
+            color: #2c3e50;
             font-weight: bold;
             page-break-after: avoid;
         }
-        h3 { 
-            font-size: 11pt;
-            margin: 12px 0 8px 0;
-            color: #34495e;
-            font-weight: bold;
-        }
-        p, ul, ol { 
-            margin: 8px 0; 
+        p, ul, ol {
+            margin: 8px 0;
             font-size: 11pt;
             text-align: justify;
         }
         li { margin: 5px 0; }
 
-        .doc-control-table {
-            width: 100%;
-            margin: 15px 0;
-            border-collapse: collapse;
-        }
-        .doc-control-table td {
-            border: 1px solid #999999;
-            padding: 8px;
-            font-size: 10pt;
-        }
+        .doc-control-table { margin-top: 10px; }
         .doc-control-label {
             background-color: #f0f0f0;
             font-weight: bold;
@@ -71,15 +53,8 @@
             width: 25%;
         }
 
-        .signature-section {
-            margin-top: 20px;
-            page-break-inside: avoid;
-        }
-        .signature-table {
-            width: 100%;
-            margin: 15px 0;
-            border-collapse: collapse;
-        }
+        .signature-section { margin-top: 20px; page-break-inside: avoid; }
+        .signature-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
         .signature-table td {
             border: 1px solid #999999;
             padding: 12px;
@@ -95,19 +70,10 @@
             color: #2c3e50;
         }
 
-        .change-history {
-            margin: 15px 0;
-            page-break-inside: avoid;
-        }
-        .change-history table {
-            width: 100%;
-        }
-
         @media print {
             body { font-size: 11pt; }
             h1 { page-break-after: avoid; }
             h2 { page-break-after: avoid; }
-            .signature-section { page-break-before: avoid; }
         }
     </style>
 </head>
@@ -118,39 +84,49 @@
 <table class="doc-control-table">
     <tr>
         <td class="doc-control-label">Institute</td>
-        <td>{{institute}}</td>
+        <td colspan="3">{{institute}}</td>
+    </tr>
+    <tr>
         <td class="doc-control-label">Department</td>
-        <td>{{department}}</td>
+        <td colspan="3">{{department}}</td>
     </tr>
     <tr>
         <td class="doc-control-label">Title</td>
         <td colspan="3">{{title}}</td>
     </tr>
-    {{#if sectionSopNumber}}<tr>
+    {{#if sectionSopNumber}}
+    <tr>
         <td class="doc-control-label">SOP Number</td>
         <td>{{sopNumber}}</td>
         <td class="doc-control-label">Revision No.</td>
         <td>{{revisionNo}}</td>
-    </tr>{{/if}}
-    {{#if sectionEffectiveDate}}<tr>
+    </tr>
+    {{/if}}
+    {{#if sectionEffectiveDate}}
+    <tr>
         <td class="doc-control-label">Effective Date</td>
         <td>{{effectiveDate}}</td>
         <td class="doc-control-label">Revision Date</td>
         <td>{{revisionDate}}</td>
-    </tr>{{/if}}
-    {{#if sectionRevisionDate}}<tr>
+    </tr>
+    {{/if}}
+    {{#if sectionRevisionDate}}
+    <tr>
         <td class="doc-control-label">Next Review Date</td>
         <td colspan="3">{{nextReviewDate}}</td>
-    </tr>{{/if}}
-    {{#if sectionCopyType}}<tr>
+    </tr>
+    {{/if}}
+    {{#if sectionCopyType}}
+    <tr>
         <td class="doc-control-label">Copy Type</td>
         <td colspan="3">{{copyType}}</td>
-    </tr>{{/if}}
+    </tr>
+    {{/if}}
 </table>
 
 {{#if sectionDocControl}}
 <h2>Document Control</h2>
-<p>This document is the property of {{institute}}, {{department}} department. Unauthorized reproduction or distribution is strictly prohibited. This SOP is maintained in accordance with quality management system requirements and established operational procedures.</p>
+<p>This document is the property of {{institute}}, {{department}} department. Unauthorized reproduction or distribution is strictly prohibited. This SOP is maintained as part of the established quality management system.</p>
 {{/if}}
 
 {{#if sectionPurpose}}
@@ -200,21 +176,19 @@
 
 {{#if sectionChangeHistory}}
 <h2>Change History</h2>
-<div class="change-history">
-    <table>
-        <thead>
-            <tr>
-                <th style="width: 12%;">Revision No.</th>
-                <th style="width: 15%;">Date</th>
-                <th style="width: 48%;">Changes Made</th>
-                <th style="width: 25%;">Reviewed By</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{{changeHistoryRows}}}
-        </tbody>
-    </table>
-</div>
+<table>
+    <thead>
+        <tr>
+            <th>Revision No.</th>
+            <th>Date</th>
+            <th>Changes Made</th>
+            <th>Reviewed By</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{{changeHistoryRows}}}
+    </tbody>
+</table>
 {{/if}}
 
 <div class="signature-section">
@@ -223,18 +197,27 @@
         <tr>
             <td>
                 <div style="min-height: 60px;"></div>
-                <div class="signature-label">{{approvalName1}}</div>
-                <div style="font-size: 9pt; color: #666666;">{{approvalTitle1}}</div>
+                <div class="signature-label">Name: {{preparedBy}}</div>
+                <div style="font-size: 9pt; color: #666666;">
+                    Designation: {{preparedDesig}}<br>
+                    Date: {{preparedDate}}
+                </div>
             </td>
             <td>
                 <div style="min-height: 60px;"></div>
-                <div class="signature-label">{{approvalName2}}</div>
-                <div style="font-size: 9pt; color: #666666;">{{approvalTitle2}}</div>
+                <div class="signature-label">Name: {{checkedBy}}</div>
+                <div style="font-size: 9pt; color: #666666;">
+                    Designation: {{checkedDesig}}<br>
+                    Date: {{checkedDate}}
+                </div>
             </td>
             <td>
                 <div style="min-height: 60px;"></div>
-                <div class="signature-label">{{approvalName3}}</div>
-                <div style="font-size: 9pt; color: #666666;">{{approvalTitle3}}</div>
+                <div class="signature-label">Name: {{approvedBy}}</div>
+                <div style="font-size: 9pt; color: #666666;">
+                    Designation: {{approvedDesig}}<br>
+                    Date: {{approvedDate}}
+                </div>
             </td>
         </tr>
     </table>
