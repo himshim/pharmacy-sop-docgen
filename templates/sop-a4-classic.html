@@ -3,190 +3,206 @@
 <head>
   <meta charset="UTF-8">
   <title>{{title}}</title>
-
-  <!--
-    IMPORTANT:
-    - NO layout CSS here
-    - All layout handled by print-a4.css
-    - This ensures DOCX export stays editable
-  -->
 </head>
 
 <body>
 
-<!-- =========================================================
+<!-- =====================================================
      DOCUMENT TITLE
-========================================================= -->
-<h1 style="text-align:center; font-size:16pt; margin-bottom:12pt;">
+===================================================== -->
+<h1 style="text-align:center; font-size:16pt; margin-bottom:14pt;">
   {{title}}
 </h1>
 
-<!-- =========================================================
+<!-- =====================================================
      DOCUMENT CONTROL INFORMATION
-========================================================= -->
-<table style="width:100%; border-collapse:collapse; margin-bottom:14pt;">
+===================================================== -->
+<table style="width:100%; border-collapse:collapse; margin-bottom:14pt; page-break-inside:avoid;">
+  <colgroup>
+    <col style="width:30%;">
+    <col style="width:70%;">
+  </colgroup>
+
   <tr>
-    <td style="width:30%;"><strong>Institute</strong></td>
-    <td>{{institute}}</td>
+    <td style="padding:6pt;"><strong>Institute</strong></td>
+    <td style="padding:6pt;">{{institute}}</td>
   </tr>
+
   <tr>
-    <td><strong>Department</strong></td>
-    <td>{{department}}</td>
+    <td style="padding:6pt;"><strong>Department</strong></td>
+    <td style="padding:6pt;">{{department}}</td>
   </tr>
 
   {{#if sectionSopNumber}}
   <tr>
-    <td><strong>SOP Number</strong></td>
-    <td>{{sopNumber}}</td>
+    <td style="padding:6pt;"><strong>SOP Number</strong></td>
+    <td style="padding:6pt;">{{sopNumber}}</td>
   </tr>
   {{/if}}
 
   <tr>
-    <td><strong>Revision Number</strong></td>
-    <td>{{revisionNo}}</td>
+    <td style="padding:6pt;"><strong>Revision Number</strong></td>
+    <td style="padding:6pt;">{{revisionNo}}</td>
   </tr>
 
   {{#if sectionEffectiveDate}}
   <tr>
-    <td><strong>Effective Date</strong></td>
-    <td>{{effectiveDate}}</td>
+    <td style="padding:6pt;"><strong>Effective Date</strong></td>
+    <td style="padding:6pt;">{{effectiveDate}}</td>
   </tr>
   {{/if}}
 
   {{#if sectionRevisionDate}}
   <tr>
-    <td><strong>Revision Date</strong></td>
-    <td>{{revisionDate}}</td>
+    <td style="padding:6pt;"><strong>Revision Date</strong></td>
+    <td style="padding:6pt;">{{revisionDate}}</td>
   </tr>
   {{/if}}
 
+  {{#if nextReviewDate}}
   <tr>
-    <td><strong>Next Review Date</strong></td>
-    <td>{{nextReviewDate}}</td>
+    <td style="padding:6pt;"><strong>Next Review Date</strong></td>
+    <td style="padding:6pt;">{{nextReviewDate}}</td>
   </tr>
+  {{/if}}
 
   {{#if sectionCopyType}}
   <tr>
-    <td><strong>Copy Type</strong></td>
-    <td>{{copyType}}</td>
+    <td style="padding:6pt;"><strong>Copy Type</strong></td>
+    <td style="padding:6pt;">{{copyType}}</td>
   </tr>
   {{/if}}
 </table>
 
 <hr style="margin:16pt 0;">
 
-<!-- =========================================================
+<!-- =====================================================
      PURPOSE
-========================================================= -->
-<h2>Purpose</h2>
+===================================================== -->
+<h2 style="margin-top:18pt;">Purpose</h2>
 {{{purpose}}}
 
-<!-- =========================================================
+<!-- =====================================================
      SCOPE
-========================================================= -->
-<h2>Scope</h2>
+===================================================== -->
+<h2 style="margin-top:18pt;">Scope</h2>
 {{{scope}}}
 
-<!-- =========================================================
+<!-- =====================================================
      RESPONSIBILITY
-========================================================= -->
-<h2>Responsibility</h2>
+===================================================== -->
+<h2 style="margin-top:18pt;">Responsibility</h2>
 <ul>
   {{{responsibility}}}
 </ul>
 
-<!-- =========================================================
+<!-- =====================================================
      PROCEDURE
-========================================================= -->
-<h2>Procedure</h2>
+===================================================== -->
+<h2 style="margin-top:18pt;">Procedure</h2>
 <ol>
   {{{procedure}}}
 </ol>
 
-<!-- =========================================================
+<!-- =====================================================
      SAFETY PRECAUTIONS
-========================================================= -->
-<h2>Safety Precautions</h2>
+===================================================== -->
+<h2 style="margin-top:18pt;">Safety Precautions</h2>
 <ul>
   {{{precautions}}}
 </ul>
 
-<!-- =========================================================
+<!-- =====================================================
      APPLICABILITY (OPTIONAL)
-========================================================= -->
+===================================================== -->
 {{#if sectionApplicability}}
-<h2>Applicability</h2>
+<h2 style="margin-top:18pt;">Applicability</h2>
 {{{applicability}}}
 {{/if}}
 
-<!-- =========================================================
+<!-- =====================================================
      ABBREVIATIONS (OPTIONAL)
-========================================================= -->
+===================================================== -->
 {{#if sectionAbbreviations}}
-<h2>Abbreviations</h2>
+<h2 style="margin-top:18pt;">Abbreviations</h2>
 {{{abbreviations}}}
 {{/if}}
 
-<!-- =========================================================
+<!-- =====================================================
      REFERENCES (OPTIONAL)
-========================================================= -->
+===================================================== -->
 {{#if sectionReferences}}
-<h2>References</h2>
+<h2 style="margin-top:18pt;">References</h2>
 {{{references}}}
 {{/if}}
 
-<!-- =========================================================
+<!-- =====================================================
      ANNEXURES (OPTIONAL)
-========================================================= -->
+===================================================== -->
 {{#if sectionAnnexures}}
-<h2>Annexures</h2>
+<h2 style="margin-top:18pt;">Annexures</h2>
 {{{annexures}}}
 {{/if}}
 
-<!-- =========================================================
-     CHANGE HISTORY (OPTIONAL)
-========================================================= -->
-{{#if sectionChangeHistory}}
-<h2>Change History</h2>
+<!-- =====================================================
+     CHANGE HISTORY (ONLY IF DATA EXISTS)
+===================================================== -->
+{{#if changeHistoryRows}}
+<h2 style="margin-top:18pt;">Change History</h2>
 
-<table style="width:100%; border-collapse:collapse; margin-top:8pt;">
+<table style="width:100%; border-collapse:collapse; margin-top:8pt; page-break-inside:avoid;">
+  <colgroup>
+    <col style="width:15%;">
+    <col style="width:20%;">
+    <col style="width:65%;">
+  </colgroup>
+
   <thead>
     <tr>
-      <th>Revision</th>
-      <th>Date</th>
-      <th>Description</th>
+      <th style="padding:6pt;">Revision</th>
+      <th style="padding:6pt;">Date</th>
+      <th style="padding:6pt;">Description</th>
     </tr>
   </thead>
+
   <tbody>
     {{{changeHistoryRows}}}
   </tbody>
 </table>
 {{/if}}
 
-<!-- =========================================================
+<!-- =====================================================
      APPROVALS (NO AUTO NUMBERING)
-========================================================= -->
-<h2 class="no-counter">Approvals</h2>
+===================================================== -->
+<h2 class="no-counter" style="margin-top:24pt;">Approvals</h2>
 
-<table style="width:100%; border-collapse:collapse; margin-top:14pt;">
+<table style="width:100%; border-collapse:collapse; margin-top:12pt; page-break-inside:avoid;">
+  <colgroup>
+    <col style="width:33.33%;">
+    <col style="width:33.33%;">
+    <col style="width:33.33%;">
+  </colgroup>
+
   <tr>
-    <td style="width:33%; vertical-align:top;">
+    <td style="padding:8pt; vertical-align:top;">
       <strong>Prepared By</strong><br><br>
-      Name: {{preparedBy}}<br>
-      Designation: {{preparedDesig}}<br>
-      Date: {{preparedDate}}
+      <strong>Name:</strong> {{preparedBy}}<br>
+      <strong>Designation:</strong> {{preparedDesig}}<br>
+      <strong>Date:</strong> {{preparedDate}}
     </td>
-    <td style="width:33%; vertical-align:top;">
+
+    <td style="padding:8pt; vertical-align:top;">
       <strong>Checked By</strong><br><br>
-      Name: {{checkedBy}}<br>
-      Designation: {{checkedDesig}}<br>
-      Date: {{checkedDate}}
+      <strong>Name:</strong> {{checkedBy}}<br>
+      <strong>Designation:</strong> {{checkedDesig}}<br>
+      <strong>Date:</strong> {{checkedDate}}
     </td>
-    <td style="width:33%; vertical-align:top;">
+
+    <td style="padding:8pt; vertical-align:top;">
       <strong>Approved By</strong><br><br>
-      Name: {{approvedBy}}<br>
-      Designation: {{approvedDesig}}<br>
-      Date: {{approvedDate}}
+      <strong>Name:</strong> {{approvedBy}}<br>
+      <strong>Designation:</strong> {{approvedDesig}}<br>
+      <strong>Date:</strong> {{approvedDate}}
     </td>
   </tr>
 </table>
