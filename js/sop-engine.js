@@ -183,60 +183,15 @@ window.initSOPApp = function () {
   }; // ✅ ONLY ONE CLOSING BRACE
 
   // ════════════════════════════════════════════════════════════════
-  // 5. EXPORT MODULE (Print, PDF & DOCX) - UNIVERSAL v2.0
+  // 5. EXPORT MODULE (Print, PDF & DOCX) - UNIVERSAL v2.1 FIXED
   // ════════════════════════════════════════════════════════════════
   const ExportModule = {
-        CONFIG: {
+    CONFIG: {
       PRINT_MARGIN_MM: 10,
       PDF_SCALE: 2,
       PDF_FORMAT: "a4",
       WORD_FONT_FAMILY: "Calibri, Arial, sans-serif",
       WORD_FONT_SIZE: "12pt",
-    },
-
-    // ═══════════════════════════════════════════════════════════════
-    // FIX #3: Inject CSS counter values as real text for DOCX export
-    // This makes dynamic numbering (1. PURPOSE, 2. SCOPE) work in Word
-    // ═══════════════════════════════════════════════════════════════
-    injectCountersForDOCX(element) {
-      const clone = element.cloneNode(true);
-      
-      // Get all h2 elements with computed styles
-      const headings = clone.querySelectorAll('h2');
-      
-      headings.forEach((heading, index) => {
-        // Get the computed ::before content
-        const computedStyle = window.getComputedStyle(heading, '::before');
-        const beforeContent = computedStyle.getPropertyValue('content');
-        
-        // Check if there's actual counter content (not "none" or empty)
-        if (beforeContent && beforeContent !== 'none' && beforeContent !== '""') {
-          // Remove quotes from content value
-          let counterText = beforeContent.replace(/^["']|["']$/g, '');
-          
-          // If CSS counters are being used, fall back to manual counting
-          if (counterText.includes('counter')) {
-            counterText = (index + 1) + '. ';
-          }
-          
-          // Get current heading text
-          const currentText = heading.textContent.trim();
-          
-          // Check if number is already present (avoid double-numbering)
-          if (!/^\d+\./.test(currentText)) {
-            // Prepend the counter text
-            heading.textContent = counterText + currentText;
-          }
-        } else {
-          // Fallback: If we can't get ::before content, use manual numbering
-          const currentText = heading.textContent.trim();
-          if (!/^\d+\./.test(currentText)) {
-            heading.textContent = (index + 1) + '. ' + currentText;
-          }
-        }
-      });
-      
-      return clone;
     },
 
     getPreviewElement() {
@@ -251,6 +206,52 @@ window.initSOPApp = function () {
     hasContent() {
       const el = this.getPreviewElement();
       return el && el.innerHTML && el.innerHTML.trim().length > 0;
+    },
+
+    // ═══════════════════════════════════════════════════════════════
+    // FIX #2: Inject numbering for DOCX (reads from LIVE DOM)
+    // ═══════════════════════════════════════════════════════════════
+    injectNumbersForDOCX(element) {
+      // Step 1: Read counter values from LIVE element (still in DOM)
+      const liveHeadings = element.querySelectorAll("h2");
+      const counterValues = [];
+
+      liveHeadings.forEach((heading, index) => {
+        try {
+          // Try to get computed ::before content
+          const beforeStyle = window.getComputedStyle(heading, "::before");
+          const content = beforeStyle.getPropertyValue("content");
+
+          // Check if content exists and is not "none"
+          if (content && content !== "none" && content !== '""') {
+            // Clean the content value
+            let counterText = content.replace(/^["']|["']$/g, "");
+            counterValues.push(counterText);
+          } else {
+            // Fallback to manual numbering
+            counterValues.push(index + 1 + ". ");
+          }
+        } catch (e) {
+          // If anything fails, use manual numbering
+          counterValues.push(index + 1 + ". ");
+        }
+      });
+
+      // Step 2: Now clone and inject the numbers
+      const clonedElement = element.cloneNode(true);
+      const clonedHeadings = clonedElement.querySelectorAll("h2");
+
+      clonedHeadings.forEach((heading, index) => {
+        const currentText = heading.textContent.trim();
+
+        // Only add number if not already present
+        if (!/^\d+\./.test(currentText)) {
+          const numberPrefix = counterValues[index] || index + 1 + ". ";
+          heading.textContent = numberPrefix + currentText;
+        }
+      });
+
+      return clonedElement;
     },
 
     // ────── 1. PRINT ──────
@@ -295,24 +296,21 @@ window.initSOPApp = function () {
         return this.showLibraryMissingError("html2pdf");
       }
 
-          try {
-      UtilsModule.log("📝 Generating DOCX...");
-      const element = this.getPreviewElement();
-      
-      // ← FIX #3: Inject counter values before export
-      const elementWithNumbers = this.injectCountersForDOCX(element);
-      let htmlContent = elementWithNumbers.innerHTML;
+      try {
+        UtilsModule.log("📄 Generating PDF...");
 
-      const temp = document.createElement("div");
-      temp.innerHTML = htmlContent;
-      temp
-        .querySelectorAll(
-          ".toolbar-buttons, .action-bar, .no-print, .ui-controls, .page-break-indicator"
-        )
-        .forEach((el) => {
-          el.remove();
-        });
+        // FIX #3: Clear variable naming to avoid conflicts
+        const sourceElement = this.getPreviewElement();
+        const clonedElement = sourceElement.cloneNode(true);
 
+        // Remove UI elements from clone
+        clonedElement
+          .querySelectorAll(
+            ".toolbar-buttons, .action-bar, .no-print, .ui-controls"
+          )
+          .forEach((el) => {
+            el.remove();
+          });
 
         const options = {
           margin: this.CONFIG.PRINT_MARGIN_MM,
@@ -339,7 +337,7 @@ window.initSOPApp = function () {
           },
         };
 
-        await html2pdf().set(options).from(clone).save();
+        await html2pdf().set(options).from(clonedElement).save();
         UtilsModule.log("✅ PDF exported successfully");
         alert("✅ PDF saved successfully!");
       } catch (error) {
@@ -367,12 +365,15 @@ window.initSOPApp = function () {
 
       try {
         UtilsModule.log("📝 Generating DOCX...");
-        const element = this.getPreviewElement();
-        let htmlContent = element.innerHTML;
 
-        const temp = document.createElement("div");
-        temp.innerHTML = htmlContent;
-        temp
+        // FIX #2: Get element with injected numbers
+        const sourceElement = this.getPreviewElement();
+        const elementWithNumbers = this.injectNumbersForDOCX(sourceElement);
+        let htmlContent = elementWithNumbers.innerHTML;
+
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = htmlContent;
+        tempDiv
           .querySelectorAll(
             ".toolbar-buttons, .action-bar, .no-print, .ui-controls, .page-break-indicator"
           )
@@ -405,7 +406,7 @@ window.initSOPApp = function () {
     </style>
 </head>
 <body>
-    ${temp.innerHTML}
+    ${tempDiv.innerHTML}
 </body>
 </html>`;
 
@@ -556,36 +557,42 @@ To use this feature, add these scripts to your index.html <head>:
     syncToggles(data) {
       Object.entries(this.toggleMap).forEach(([id, key]) => {
         const el = UtilsModule.$(id);
-        const section = UtilsModule.$(`section${key.charAt(0).toUpperCase() + key.slice(1)}`);
-        
+        const section = UtilsModule.$(
+          `section${key.charAt(0).toUpperCase() + key.slice(1)}`
+        );
+
         // ✅ Calculate visibility ONCE (default to true if not explicitly set to false)
         const isVisible = data.sectionsEnabled?.[key] !== false;
-        
+
         // Update checkbox visual state
         if (el) {
           el.checked = isVisible;
         }
-        
+
         // Handle section visibility (cards like Document Control)
         if (section) {
-          section.style.display = isVisible ? 'block' : 'none';
+          section.style.display = isVisible ? "block" : "none";
         }
-        
+
         // Handle individual field visibility
-        const fieldIds = ['sopNumber', 'effectiveDate', 'revisionDate', 'copyType'];
+        const fieldIds = [
+          "sopNumber",
+          "effectiveDate",
+          "revisionDate",
+          "copyType",
+        ];
         if (fieldIds.includes(key)) {
           const field = UtilsModule.$(key);
           if (field) {
-            const formGroup = field.closest('.form-group');
+            const formGroup = field.closest(".form-group");
             if (formGroup) {
-              formGroup.style.display = isVisible ? 'block' : 'none';
+              formGroup.style.display = isVisible ? "block" : "none";
             }
           }
         }
       });
-    }
-  };  // ✅ CLOSES UIModule
-
+    },
+  }; // ✅ CLOSES UIModule
 
   // ════════════════════════════════════════════════════════════════
   // 7. CORE MODULE (Main Logic)
@@ -783,18 +790,18 @@ To use this feature, add these scripts to your index.html <head>:
           nextReviewDate: "",
           copyType: "CONTROLLED",
           responsibility: ConfigModule.DEFAULTS.RESPONSIBILITY,
-          sectionsEnabled: { 
-    docControl: true,
-    applicability: false,
-    abbreviations: false,
-    references: false,
-    annexures: false,
-    changeHistory: false,
-    sopNumber: true, 
-    effectiveDate: true,
-    revisionDate: true,
-    copyType: true 
-},
+          sectionsEnabled: {
+            docControl: true,
+            applicability: false,
+            abbreviations: false,
+            references: false,
+            annexures: false,
+            changeHistory: false,
+            sopNumber: true,
+            effectiveDate: true,
+            revisionDate: true,
+            copyType: true,
+          },
 
           fieldsEnabled: {
             sopNumber: true,
@@ -831,40 +838,45 @@ To use this feature, add these scripts to your index.html <head>:
     },
 
     handleToggle(id, isChecked) {
-    if (!this.state.sopData) return;
-    const key = UIModule.toggleMap[id];
-    if (!this.state.sopData.sectionsEnabled) this.state.sopData.sectionsEnabled = {};
-    this.state.sopData.sectionsEnabled[key] = isChecked;
-    
-    // ✅ DEBUG: Log what's happening
-    console.log('🔧 Toggle:', id, '→ Key:', key, '→ Checked:', isChecked);
-    
-    // Handle Field Visibility
-    const fieldIds = ['sopNumber', 'effectiveDate', 'revisionDate', 'copyType'];
-    if (fieldIds.includes(key)) {
-        console.log('📋 This is a FIELD toggle');
-        const field = UtilsModule.$(key);
-        console.log('🎯 Found field element:', field);
-        
-        if (field) {
-            const formGroup = field.closest('.form-group');
-            console.log('📦 Found form-group:', formGroup);
-            
-            if (formGroup) {
-                formGroup.style.display = isChecked ? 'block' : 'none';
-                console.log('✅ Set display to:', isChecked ? 'block' : 'none');
-            } else {
-                console.log('❌ No .form-group parent found!');
-            }
-        } else {
-            console.log('❌ Field element not found!');
-        }
-    }
-    
-    UIModule.syncToggles(this.state.sopData);
-    this.refreshPreview();
-},
+      if (!this.state.sopData) return;
+      const key = UIModule.toggleMap[id];
+      if (!this.state.sopData.sectionsEnabled)
+        this.state.sopData.sectionsEnabled = {};
+      this.state.sopData.sectionsEnabled[key] = isChecked;
 
+      // ✅ DEBUG: Log what's happening
+      console.log("🔧 Toggle:", id, "→ Key:", key, "→ Checked:", isChecked);
+
+      // Handle Field Visibility
+      const fieldIds = [
+        "sopNumber",
+        "effectiveDate",
+        "revisionDate",
+        "copyType",
+      ];
+      if (fieldIds.includes(key)) {
+        console.log("📋 This is a FIELD toggle");
+        const field = UtilsModule.$(key);
+        console.log("🎯 Found field element:", field);
+
+        if (field) {
+          const formGroup = field.closest(".form-group");
+          console.log("📦 Found form-group:", formGroup);
+
+          if (formGroup) {
+            formGroup.style.display = isChecked ? "block" : "none";
+            console.log("✅ Set display to:", isChecked ? "block" : "none");
+          } else {
+            console.log("❌ No .form-group parent found!");
+          }
+        } else {
+          console.log("❌ Field element not found!");
+        }
+      }
+
+      UIModule.syncToggles(this.state.sopData);
+      this.refreshPreview();
+    },
 
     debouncedRender() {
       clearTimeout(this.state.debounce);
