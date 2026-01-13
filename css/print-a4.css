@@ -1,34 +1,15 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- * MS WORD A4 WYSIWYG PRINT STYLES - FINAL v2.2 SMART UI ISOLATION
- * Mobile Top Margin: Fixed with body.mobile-ui targeting
- * Desktop Margin: Fixed with body.desktop-ui targeting
+ * MS WORD A4 WYSIWYG PRINT STYLES - v3.0 NON-CONFLICTING
+ * 
+ * This file provides SHARED print styles only (typography, tables, etc.)
+ * Individual UI files (ui-mobile.css, ui-desktop.css) handle their own
+ * #preview padding and @page margins to avoid cascade conflicts.
  * ═══════════════════════════════════════════════════════════════════
  */
 
 
-
-/* ============ 1. PAGE SETUP - ALL PAGES ============ */
-@page {
-    size: A4 portrait;
-    margin: 20mm;
-}
-
-@page :first {
-    margin: 20mm;
-}
-
-@page :left {
-    margin: 20mm;
-}
-
-@page :right {
-    margin: 20mm;
-}
-
-
-
-/* ============ 2. PAGE BREAKS ============ */
+/* ============ 1. PAGE BREAKS ============ */
 .page-break-before {
     page-break-before: always !important;
     break-before: page !important;
@@ -53,8 +34,7 @@ table {
 }
 
 
-
-/* ============ 3. DESKTOP PREVIEW ============ */
+/* ============ 2. DESKTOP PREVIEW (SCREEN ONLY) ============ */
 #preview-wrapper {
     background: #525659;
     padding: 30px 0;
@@ -84,8 +64,7 @@ table {
 }
 
 
-
-/* ============ 4. MOBILE PREVIEW (Readable Zoom) ============ */
+/* ============ 3. MOBILE PREVIEW (Readable Zoom) ============ */
 @media screen and (max-width: 850px) {
     #preview-wrapper {
         padding: 10px 0 !important;
@@ -110,8 +89,12 @@ table {
 }
 
 
+/* ════════════════════════════════════════════════════════════════
+   4. PRINT MODE - SHARED STYLES ONLY
 
-/* ============ 5. PRINT MODE (Layout Unlock) ============ */
+   NOTE: #preview padding and @page margins are handled by individual
+   UI CSS files (ui-mobile.css, ui-desktop.css) to avoid conflicts
+   ════════════════════════════════════════════════════════════════ */
 @media print {
     /* RESET EVERYTHING */
     :root, html, body {
@@ -158,12 +141,12 @@ table {
         background: transparent !important;
     }
 
-    /* PAGE CONTENT */
+    /* PAGE CONTENT - MINIMAL RESET ONLY */
     #preview {
         width: 100% !important;
         max-width: none !important;
         margin: 0 !important;
-        padding: 0 !important;
+        /* ⚠️ padding: NOT SET - Let individual CSS handle this */
         position: static !important;
         display: block !important;
         visibility: visible !important;
@@ -188,65 +171,7 @@ table {
 }
 
 
-/* ═══════════════════════════════════════════════════════════════
-   5A. MOBILE-ONLY PRINT FIX (Remove top margin)
-   ═══════════════════════════════════════════════════════════════ */
-@media print {
-    /* ✅ MOBILE ONLY: Target EVERYTHING that could be first */
-    body.mobile-ui #preview > *:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
-    /* Nested first children */
-    body.mobile-ui #preview > *:first-child > *:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
-    /* Deeper nesting */
-    body.mobile-ui #preview > div:first-child > *:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
-    /* All possible first tables */
-    body.mobile-ui #preview table:first-child,
-    body.mobile-ui #preview > table:first-child,
-    body.mobile-ui #preview > *:first-child table:first-of-type,
-    body.mobile-ui #preview > div:first-child table:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
-    /* Override global table margins for ALL tables in mobile print */
-    body.mobile-ui #preview table {
-        margin-top: 12pt !important;
-        margin-bottom: 12pt !important;
-    }
-
-    /* But FORCE first table to have NO top margin */
-    body.mobile-ui #preview > table:first-child,
-    body.mobile-ui #preview > table:first-of-type,
-    body.mobile-ui #preview > *:first-child > table:first-child,
-    body.mobile-ui #preview > *:first-child > table:first-of-type {
-        margin-top: 0 !important;
-    }
-}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   5B. DESKTOP-ONLY PRINT (Natural @page margins)
-   ═══════════════════════════════════════════════════════════════ */
-@media print {
-    /* ✅ DESKTOP: Uses @page margins naturally */
-    /* No special first-child rules needed */
-    /* Tables keep their normal margins for proper spacing */
-}
-
-
-
-/* ============ 6. JS PRINT HELPER ============ */
+/* ============ 5. JS PRINT HELPER ============ */
 body.printing-mode .app-container,
 body.printing-mode header,
 body.printing-mode nav,
@@ -260,7 +185,6 @@ body.printing-mode #preview-wrapper {
     height: auto !important;
     overflow: visible !important;
 }
-
 
 
 /* ════════════════════════════════════════════════════════════════
@@ -300,7 +224,7 @@ body.printing-mode #preview-wrapper {
     margin-bottom: 8pt;
 }
 
-/* Table Enhancements - SCREEN ONLY to avoid print conflicts */
+/* Table Enhancements - SCREEN ONLY */
 @media screen {
     #preview table {
         border-collapse: collapse;
@@ -309,12 +233,12 @@ body.printing-mode #preview-wrapper {
     }
 }
 
-/* Table styling for PRINT (with controlled margins) */
+/* Table styling for PRINT */
 @media print {
     #preview table {
         border-collapse: collapse;
         width: 100%;
-        /* Margins handled by specific rules above */
+        margin: 12pt 0; /* Consistent spacing */
     }
 }
 
