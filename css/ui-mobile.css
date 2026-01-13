@@ -592,3 +592,20 @@ textarea {
         margin: 0; /* ✅ CHANGED: No @page margin like desktop */
     }
 }
+/* ABSOLUTE OVERRIDE */
+@media print {
+    * {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    #preview {
+        padding: 20mm !important;
+        margin: 0 !important;
+    }
+    
+    @page {
+        size: A4 !important;
+        margin: 0 !important;
+    }
+}
