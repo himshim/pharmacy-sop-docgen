@@ -339,10 +339,16 @@ async exportDOCX(filename) {
 
     /* Remove UI-only elements (UNCHANGED) */
     tempDiv
-      .querySelectorAll(
-        ".toolbar-buttons, .action-bar, .no-print, .ui-controls, .page-break-indicator"
-      )
-      .forEach((el) => el.remove());
+     .querySelectorAll(
+      ".toolbar-buttons, .action-bar, .no-print, .ui-controls, .page-break-indicator"
+     )
+     .forEach((el) => el.remove());
+
+     /* ✅ DOCX FIX: remove document info table completely */
+    tempDiv
+     .querySelectorAll(".doc-control-table")
+     .forEach(el => el.remove());
+
 
     /* =====================================================
        DOCX PATCH: WRAP CONTENT FOR DUAL LAYOUT
