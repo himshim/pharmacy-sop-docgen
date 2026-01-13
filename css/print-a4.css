@@ -271,16 +271,25 @@ body.printing-mode #preview-wrapper {
     margin-top: 6pt !important;
 }
 /* =====================================================
-   DOCUMENT CONTROL – TEXT ONLY (GLOBAL)
+   DOCUMENT INFORMATION – FINAL VISIBILITY CONTROL
    ===================================================== */
 
-/* Hide document information table everywhere */
-.doc-control-table {
-  display: none !important;
+/* ===== PREVIEW (SCREEN) ===== */
+#preview .doc-control-table {
+  display: block;
 }
 
-/* Ensure text version is visible */
-.doc-control-text {
-  display: block !important;
-  margin-bottom: 12pt;
+#preview .doc-control-text {
+  display: none;
+}
+
+/* ===== PRINT / PDF ===== */
+@media print {
+  .doc-control-table {
+    display: block;
+  }
+
+  .doc-control-text {
+    display: none;
+  }
 }

@@ -403,13 +403,13 @@ async exportDOCX(filename) {
   /* Hide problematic tables */
   .docx-export .doc-control-table,
   .docx-export .change-history-table {
-    display: none;
+    display: none !important;
   }
 
   /* Show Word-friendly text blocks */
   .docx-export .doc-control-text,
   .docx-export .change-history-text {
-    display: block;
+    display: block !important;
   }
 
   /* Keep signature table only */
