@@ -255,17 +255,32 @@ async exportPDF(filename) {
 
     const previewElement = this.getPreviewElement();
 
-    // ✅ STEP 2 STARTS HERE (EXACT PLACE)
+    // ✅ ENTER PDF RENDER MODE
     document.body.classList.add("pdf-export");
+
+    /* =====================================================
+       STEP 2: CONDITIONAL PAGE BREAK (WORD-LIKE BEHAVIOR)
+       ===================================================== */
+    const approvals = previewElement.querySelector("#approvals-block");
+    if (approvals) {
+      const PAGE_HEIGHT_PX = 1122; // A4 @ ~96 DPI
+      const rect = approvals.getBoundingClientRect();
+      const remaining = PAGE_HEIGHT_PX - rect.top;
+
+      // If heading + table cannot fit → move both
+      if (rect.height > remaining) {
+        const breaker = document.createElement("div");
+        breaker.className = "page-break";
+        approvals.parentNode.insertBefore(breaker, approvals);
+      }
+    }
+    /* ================= END STEP 2 ================= */
 
     const options = {
       margin: [0, 10, 10, 10],
       filename: filename || "SOP_Document.pdf",
 
-      image: {
-        type: "jpeg",
-        quality: 0.98,
-      },
+      image: { type: "jpeg", quality: 0.98 },
 
       html2canvas: {
         scale: this.CONFIG.PDF_SCALE,
@@ -297,7 +312,6 @@ async exportPDF(filename) {
     UtilsModule.error("❌ PDF export failed:", error);
     alert(`❌ PDF export failed: ${error.message}`);
   } finally {
-    // ✅ STEP 2 ENDS HERE (CRITICAL)
     document.body.classList.remove("pdf-export");
   }
 },
