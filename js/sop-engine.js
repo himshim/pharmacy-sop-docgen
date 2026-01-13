@@ -238,7 +238,7 @@ window.initSOPApp = function () {
       }
     },
 
-    // ────── 2. PDF EXPORT (DESKTOP BUG FIXED – FINAL) ──────
+   // ────── 2. PDF EXPORT (DESKTOP BUG FIXED – FINAL) ──────
 async exportPDF(filename) {
   if (!this.hasContent()) {
     alert("❌ No content to export. Please generate a document first.");
@@ -253,29 +253,13 @@ async exportPDF(filename) {
   try {
     UtilsModule.log("📄 Generating PDF...");
 
-    const sourceElement = this.getPreviewElement();
-    const clonedElement = sourceElement.cloneNode(true);
+    const previewElement = this.getPreviewElement();
 
-    /* FIX #1: REMOVE PREVIEW-ONLY VISUAL EFFECTS */
-    clonedElement.style.boxShadow = "none";
-    clonedElement.style.background = "#ffffff";
-
-    const wrapper = clonedElement.closest("#preview-wrapper");
-    if (wrapper) {
-      wrapper.style.background = "#ffffff";
-      wrapper.style.boxShadow = "none";
-    }
-
-    /* Remove UI-only elements */
-    clonedElement
-      .querySelectorAll(
-        ".toolbar-buttons, .action-bar, .no-print, .ui-controls"
-      )
-      .forEach((el) => el.remove());
+    // ✅ STEP 2 STARTS HERE (EXACT PLACE)
+    document.body.classList.add("pdf-export");
 
     const options = {
       margin: [0, 10, 10, 10],
-
       filename: filename || "SOP_Document.pdf",
 
       image: {
@@ -288,8 +272,6 @@ async exportPDF(filename) {
         backgroundColor: "#ffffff",
         useCORS: true,
         allowTaint: true,
-
-        // 🔴 CRITICAL FIX
         letterRendering: false,
       },
 
@@ -306,15 +288,20 @@ async exportPDF(filename) {
       },
     };
 
-    await html2pdf().set(options).from(clonedElement).save();
+    await html2pdf().set(options).from(previewElement).save();
 
     UtilsModule.log("✅ PDF exported successfully");
     alert("✅ PDF saved successfully!");
+
   } catch (error) {
     UtilsModule.error("❌ PDF export failed:", error);
     alert(`❌ PDF export failed: ${error.message}`);
+  } finally {
+    // ✅ STEP 2 ENDS HERE (CRITICAL)
+    document.body.classList.remove("pdf-export");
   }
 },
+
 
 
 // ────── 3. WORD EXPORT (PATCHED – DUAL LAYOUT SAFE) ──────

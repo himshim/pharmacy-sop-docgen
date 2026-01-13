@@ -608,3 +608,23 @@ button:hover::before {
         margin: 0;
     }
 }
+/* =====================================================
+   PDF EXPORT – HARD RESET FOR html2canvas
+   (Desktop overlay & blur fix)
+   ===================================================== */
+body.pdf-export *,
+body.pdf-export *::before,
+body.pdf-export *::after {
+  backdrop-filter: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+}
+
+body.pdf-export #preview-wrapper {
+  background: #ffffff !important;
+}
+
+body.pdf-export #preview {
+  background: #ffffff !important;
+}
