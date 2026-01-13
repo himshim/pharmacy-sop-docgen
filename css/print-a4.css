@@ -138,7 +138,7 @@
         width: 100% !important;
         max-width: none !important;
         margin: 0 !important;
-        padding: 20mm !important; /* ✅ FIXED - Restore padding */
+        padding: 0 !important;
         position: static !important;
         display: block !important;
         visibility: visible !important;
@@ -146,6 +146,14 @@
         transform: none !important;
         box-shadow: none !important;
         border: none !important;
+    }
+    
+    /* ✅ FIX: Remove top margin from first element */
+    #preview > *:first-child,
+    #preview > *:first-child > *:first-child,
+    #preview > table:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
 
     /* Ensure Print Colors */
@@ -155,18 +163,6 @@
     }
 }
 
-/* ============ 6. JS PRINT HELPER ============ */
-body.printing-mode .app-container,
-body.printing-mode header,
-body.printing-mode nav,
-body.printing-mode aside { display: none !important; }
-
-body.printing-mode #preview-wrapper {
-    position: static !important;
-    display: block !important;
-    height: auto !important;
-    overflow: visible !important;
-}
 /* ════════════════════════════════════════════════════════════════
    PROFESSIONAL ENHANCEMENTS - Auto-Numbering & Typography
    ════════════════════════════════════════════════════════════════ */
