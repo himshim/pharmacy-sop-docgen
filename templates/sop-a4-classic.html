@@ -1,225 +1,195 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <style>
-        body {
-            counter-reset: section;
-            font-family: 'Calibri', 'Arial', sans-serif;
-            line-height: 1.5;
-            color: #333333;
-        }
-        h2:not(.no-counter) { counter-increment: section; }
-        h2:not(.no-counter)::before {
-            content: counter(section) ". ";
-            color: #505050;
-            font-weight: bold;
-        }
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
 
-        table { width: 100%; border-collapse: collapse; margin: 12px 0; }
-        table, th, td { border: 1px solid #999999; }
-        th, td { padding: 8px; text-align: left; font-size: 11pt; }
-        th { background-color: #d9d9d9; color: #333333; font-weight: bold; }
-
-        h1 {
-            text-align: center;
-            font-size: 18pt;
-            margin: 20px 0 15px 0;
-            color: #1a1a1a;
-            border-bottom: 2px solid #505050;
-            padding-bottom: 10px;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-        }
-        h2 {
-            font-size: 13pt;
-            margin: 15px 0 10px 0;
-            color: #505050;
-            font-weight: bold;
-            page-break-after: avoid;
-        }
-        p, ul, ol {
-            margin: 8px 0;
-            font-size: 11pt;
-            text-align: justify;
-        }
-        li { margin: 5px 0; }
-
-        .doc-control-table { margin-top: 10px; }
-        .doc-control-label {
-            background-color: #f2f2f2;
-            font-weight: bold;
-            width: 25%;
-        }
-
-        .signature-section { margin-top: 20px; page-break-inside: avoid; }
-        .signature-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-        .signature-table td {
-            border: 1px solid #999999;
-            padding: 12px;
-            text-align: center;
-            font-size: 10pt;
-            vertical-align: bottom;
-            height: 80px;
-        }
-        .signature-label {
-            border-top: 1px solid #333333;
-            padding-top: 5px;
-            font-weight: normal;
-        }
-
-        @media print {
-            body { font-size: 11pt; }
-            h1 { page-break-after: avoid; }
-            h2 { page-break-after: avoid; }
-        }
-    </style>
+  <!--
+    IMPORTANT:
+    - NO layout CSS here
+    - All layout handled by print-a4.css
+    - This ensures DOCX export stays editable
+  -->
 </head>
+
 <body>
 
-<h1>Standard Operating Procedure</h1>
+<!-- =========================================================
+     DOCUMENT TITLE
+========================================================= -->
+<h1 style="text-align:center; font-size:16pt; margin-bottom:12pt;">
+  {{title}}
+</h1>
 
-<table class="doc-control-table">
-    <tr>
-        <td class="doc-control-label">Institute</td>
-        <td colspan="3">{{institute}}</td>
-    </tr>
-    <tr>
-        <td class="doc-control-label">Department</td>
-        <td colspan="3">{{department}}</td>
-    </tr>
-    <tr>
-        <td class="doc-control-label">Title</td>
-        <td colspan="3">{{title}}</td>
-    </tr>
-    {{#if sectionSopNumber}}
-    <tr>
-        <td class="doc-control-label">SOP Number</td>
-        <td>{{sopNumber}}</td>
-        <td class="doc-control-label">Revision No.</td>
-        <td>{{revisionNo}}</td>
-    </tr>
-    {{/if}}
-    {{#if sectionEffectiveDate}}
-    <tr>
-        <td class="doc-control-label">Effective Date</td>
-        <td>{{effectiveDate}}</td>
-        <td class="doc-control-label">Revision Date</td>
-        <td>{{revisionDate}}</td>
-    </tr>
-    {{/if}}
-    {{#if sectionRevisionDate}}
-    <tr>
-        <td class="doc-control-label">Next Review Date</td>
-        <td colspan="3">{{nextReviewDate}}</td>
-    </tr>
-    {{/if}}
-    {{#if sectionCopyType}}
-    <tr>
-        <td class="doc-control-label">Copy Type</td>
-        <td colspan="3">{{copyType}}</td>
-    </tr>
-    {{/if}}
+<!-- =========================================================
+     DOCUMENT CONTROL INFORMATION
+========================================================= -->
+<table style="width:100%; border-collapse:collapse; margin-bottom:14pt;">
+  <tr>
+    <td style="width:30%;"><strong>Institute</strong></td>
+    <td>{{institute}}</td>
+  </tr>
+  <tr>
+    <td><strong>Department</strong></td>
+    <td>{{department}}</td>
+  </tr>
+
+  {{#if sectionSopNumber}}
+  <tr>
+    <td><strong>SOP Number</strong></td>
+    <td>{{sopNumber}}</td>
+  </tr>
+  {{/if}}
+
+  <tr>
+    <td><strong>Revision Number</strong></td>
+    <td>{{revisionNo}}</td>
+  </tr>
+
+  {{#if sectionEffectiveDate}}
+  <tr>
+    <td><strong>Effective Date</strong></td>
+    <td>{{effectiveDate}}</td>
+  </tr>
+  {{/if}}
+
+  {{#if sectionRevisionDate}}
+  <tr>
+    <td><strong>Revision Date</strong></td>
+    <td>{{revisionDate}}</td>
+  </tr>
+  {{/if}}
+
+  <tr>
+    <td><strong>Next Review Date</strong></td>
+    <td>{{nextReviewDate}}</td>
+  </tr>
+
+  {{#if sectionCopyType}}
+  <tr>
+    <td><strong>Copy Type</strong></td>
+    <td>{{copyType}}</td>
+  </tr>
+  {{/if}}
 </table>
 
-{{#if sectionDocControl}}
-<h2>Document Control</h2>
-<p>This document is the property of {{institute}}, {{department}} department. Unauthorized reproduction or distribution is prohibited.</p>
-{{/if}}
+<hr style="margin:16pt 0;">
 
-{{#if sectionPurpose}}
+<!-- =========================================================
+     PURPOSE
+========================================================= -->
 <h2>Purpose</h2>
-<p>{{{purpose}}}</p>
-{{/if}}
+{{{purpose}}}
 
-{{#if sectionScope}}
+<!-- =========================================================
+     SCOPE
+========================================================= -->
 <h2>Scope</h2>
-<p>{{{scope}}}</p>
-{{/if}}
+{{{scope}}}
 
-{{#if sectionResponsibility}}
+<!-- =========================================================
+     RESPONSIBILITY
+========================================================= -->
 <h2>Responsibility</h2>
-<p>{{{responsibility}}}</p>
-{{/if}}
+<ul>
+  {{{responsibility}}}
+</ul>
 
-{{#if sectionProcedure}}
+<!-- =========================================================
+     PROCEDURE
+========================================================= -->
 <h2>Procedure</h2>
-<p>{{{procedure}}}</p>
-{{/if}}
+<ol>
+  {{{procedure}}}
+</ol>
 
-{{#if sectionPrecautions}}
+<!-- =========================================================
+     SAFETY PRECAUTIONS
+========================================================= -->
 <h2>Safety Precautions</h2>
-<p>{{{precautions}}}</p>
-{{/if}}
+<ul>
+  {{{precautions}}}
+</ul>
 
+<!-- =========================================================
+     APPLICABILITY (OPTIONAL)
+========================================================= -->
 {{#if sectionApplicability}}
 <h2>Applicability</h2>
-<p>{{{applicability}}}</p>
+{{{applicability}}}
 {{/if}}
 
+<!-- =========================================================
+     ABBREVIATIONS (OPTIONAL)
+========================================================= -->
 {{#if sectionAbbreviations}}
 <h2>Abbreviations</h2>
-<p>{{{abbreviations}}}</p>
+{{{abbreviations}}}
 {{/if}}
 
+<!-- =========================================================
+     REFERENCES (OPTIONAL)
+========================================================= -->
 {{#if sectionReferences}}
 <h2>References</h2>
-<p>{{{references}}}</p>
+{{{references}}}
 {{/if}}
 
+<!-- =========================================================
+     ANNEXURES (OPTIONAL)
+========================================================= -->
 {{#if sectionAnnexures}}
 <h2>Annexures</h2>
-<p>{{{annexures}}}</p>
+{{{annexures}}}
 {{/if}}
 
+<!-- =========================================================
+     CHANGE HISTORY (OPTIONAL)
+========================================================= -->
 {{#if sectionChangeHistory}}
 <h2>Change History</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Revision No.</th>
-            <th>Date</th>
-            <th>Changes Made</th>
-            <th>Approved By</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{{changeHistoryRows}}}
-    </tbody>
+
+<table style="width:100%; border-collapse:collapse; margin-top:8pt;">
+  <thead>
+    <tr>
+      <th>Revision</th>
+      <th>Date</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{{changeHistoryRows}}}
+  </tbody>
 </table>
 {{/if}}
 
-<div class="signature-section">
-    <h2>Approvals</h2>
-    <table class="signature-table">
-        <tr>
-            <td>
-                <div style="min-height: 60px;"></div>
-                <div class="signature-label">Name: {{preparedBy}}</div>
-                <div style="font-size: 9pt; color: #666666;">
-                    Designation: {{preparedDesig}}<br>
-                    Date: {{preparedDate}}
-                </div>
-            </td>
-            <td>
-                <div style="min-height: 60px;"></div>
-                <div class="signature-label">Name: {{checkedBy}}</div>
-                <div style="font-size: 9pt; color: #666666;">
-                    Designation: {{checkedDesig}}<br>
-                    Date: {{checkedDate}}
-                </div>
-            </td>
-            <td>
-                <div style="min-height: 60px;"></div>
-                <div class="signature-label">Name: {{approvedBy}}</div>
-                <div style="font-size: 9pt; color: #666666;">
-                    Designation: {{approvedDesig}}<br>
-                    Date: {{approvedDate}}
-                </div>
-            </td>
-        </tr>
-    </table>
-</div>
+<!-- =========================================================
+     APPROVALS (NO AUTO NUMBERING)
+========================================================= -->
+<h2 class="no-counter">Approvals</h2>
+
+<table style="width:100%; border-collapse:collapse; margin-top:14pt;">
+  <tr>
+    <td style="width:33%; vertical-align:top;">
+      <strong>Prepared By</strong><br><br>
+      Name: {{preparedBy}}<br>
+      Designation: {{preparedDesig}}<br>
+      Date: {{preparedDate}}
+    </td>
+    <td style="width:33%; vertical-align:top;">
+      <strong>Checked By</strong><br><br>
+      Name: {{checkedBy}}<br>
+      Designation: {{checkedDesig}}<br>
+      Date: {{checkedDate}}
+    </td>
+    <td style="width:33%; vertical-align:top;">
+      <strong>Approved By</strong><br><br>
+      Name: {{approvedBy}}<br>
+      Designation: {{approvedDesig}}<br>
+      Date: {{approvedDate}}
+    </td>
+  </tr>
+</table>
 
 </body>
 </html>
