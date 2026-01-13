@@ -147,6 +147,7 @@ table {
         max-width: none !important;
         margin: 0 !important;
         /* padding: handled by ui-mobile.css and ui-desktop.css */
+        padding: 20mm !important;
         position: static !important;
         display: block !important;
         visibility: visible !important;
