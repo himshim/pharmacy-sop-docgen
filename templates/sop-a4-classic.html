@@ -15,64 +15,95 @@
 </h1>
 
 <!-- =====================================================
-     DOCUMENT CONTROL INFORMATION
+     DOCUMENT CONTROL (TABLE VERSION – PREVIEW / PDF)
 ===================================================== -->
-<table style="width:100%; border-collapse:collapse; margin-bottom:12pt; page-break-inside:avoid;">
-  <colgroup>
-    <col style="width:30%;">
-    <col style="width:70%;">
-  </colgroup>
+<div class="doc-control-table">
+  <table style="width:100%; border-collapse:collapse; margin-bottom:12pt; page-break-inside:avoid;">
+    <colgroup>
+      <col style="width:30%;">
+      <col style="width:70%;">
+    </colgroup>
 
-  <tr style="height:auto;">
-    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Institute</strong></td>
-    <td style="padding:3pt 5pt; line-height:1.2;">{{institute}}</td>
-  </tr>
+    <tr>
+      <td style="padding:4pt 6pt;"><strong>Institute</strong></td>
+      <td style="padding:4pt 6pt;">{{institute}}</td>
+    </tr>
+    <tr>
+      <td style="padding:4pt 6pt;"><strong>Department</strong></td>
+      <td style="padding:4pt 6pt;">{{department}}</td>
+    </tr>
 
-  <tr style="height:auto;">
-    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Department</strong></td>
-    <td style="padding:3pt 5pt; line-height:1.2;">{{department}}</td>
-  </tr>
+    {{#if sectionSopNumber}}
+    <tr>
+      <td style="padding:4pt 6pt;"><strong>SOP Number</strong></td>
+      <td style="padding:4pt 6pt;">{{sopNumber}}</td>
+    </tr>
+    {{/if}}
+
+    <tr>
+      <td style="padding:4pt 6pt;"><strong>Revision Number</strong></td>
+      <td style="padding:4pt 6pt;">{{revisionNo}}</td>
+    </tr>
+
+    {{#if sectionEffectiveDate}}
+    <tr>
+      <td style="padding:4pt 6pt;"><strong>Effective Date</strong></td>
+      <td style="padding:4pt 6pt;">{{effectiveDate}}</td>
+    </tr>
+    {{/if}}
+
+    {{#if sectionRevisionDate}}
+    <tr>
+      <td style="padding:4pt 6pt;"><strong>Revision Date</strong></td>
+      <td style="padding:4pt 6pt;">{{revisionDate}}</td>
+    </tr>
+    {{/if}}
+
+    {{#if nextReviewDate}}
+    <tr>
+      <td style="padding:4pt 6pt;"><strong>Next Review Date</strong></td>
+      <td style="padding:4pt 6pt;">{{nextReviewDate}}</td>
+    </tr>
+    {{/if}}
+
+    {{#if sectionCopyType}}
+    <tr>
+      <td style="padding:4pt 6pt;"><strong>Copy Type</strong></td>
+      <td style="padding:4pt 6pt;">{{copyType}}</td>
+    </tr>
+    {{/if}}
+  </table>
+</div>
+
+<!-- =====================================================
+     DOCUMENT CONTROL (TEXT VERSION – DOCX ONLY)
+===================================================== -->
+<div class="doc-control-text">
+  <p><strong>Institute:</strong> {{institute}}</p>
+  <p><strong>Department:</strong> {{department}}</p>
 
   {{#if sectionSopNumber}}
-  <tr style="height:auto;">
-    <td style="padding:3pt 5pt; line-height:1.2;"><strong>SOP Number</strong></td>
-    <td style="padding:3pt 5pt; line-height:1.2;">{{sopNumber}}</td>
-  </tr>
+  <p><strong>SOP Number:</strong> {{sopNumber}}</p>
   {{/if}}
 
-  <tr style="height:auto;">
-    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Revision Number</strong></td>
-    <td style="padding:3pt 5pt; line-height:1.2;">{{revisionNo}}</td>
-  </tr>
+  <p><strong>Revision Number:</strong> {{revisionNo}}</p>
 
   {{#if sectionEffectiveDate}}
-  <tr style="height:auto;">
-    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Effective Date</strong></td>
-    <td style="padding:3pt 5pt; line-height:1.2;">{{effectiveDate}}</td>
-  </tr>
+  <p><strong>Effective Date:</strong> {{effectiveDate}}</p>
   {{/if}}
 
   {{#if sectionRevisionDate}}
-  <tr style="height:auto;">
-    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Revision Date</strong></td>
-    <td style="padding:3pt 5pt; line-height:1.2;">{{revisionDate}}</td>
-  </tr>
+  <p><strong>Revision Date:</strong> {{revisionDate}}</p>
   {{/if}}
 
   {{#if nextReviewDate}}
-  <tr style="height:auto;">
-    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Next Review Date</strong></td>
-    <td style="padding:3pt 5pt; line-height:1.2;">{{nextReviewDate}}</td>
-  </tr>
+  <p><strong>Next Review Date:</strong> {{nextReviewDate}}</p>
   {{/if}}
 
   {{#if sectionCopyType}}
-  <tr style="height:auto;">
-    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Copy Type</strong></td>
-    <td style="padding:3pt 5pt; line-height:1.2;">{{copyType}}</td>
-  </tr>
+  <p><strong>Copy Type:</strong> {{copyType}}</p>
   {{/if}}
-</table>
+</div>
 
 <hr style="margin:14pt 0;">
 
@@ -82,123 +113,100 @@
 <h2>Purpose</h2>
 <p>{{{purpose}}}</p>
 
-<!-- =====================================================
-     SCOPE
-===================================================== -->
 <h2>Scope</h2>
 <p>{{{scope}}}</p>
 
-<!-- =====================================================
-     RESPONSIBILITY
-===================================================== -->
 <h2>Responsibility</h2>
 <ul style="margin-top:6pt;">
   {{{responsibility}}}
 </ul>
 
-<!-- =====================================================
-     PROCEDURE
-===================================================== -->
 <h2>Procedure</h2>
 <ol style="margin-top:6pt;">
   {{{procedure}}}
 </ol>
 
-<!-- =====================================================
-     SAFETY PRECAUTIONS
-===================================================== -->
 <h2>Safety Precautions</h2>
 <ul style="margin-top:6pt;">
   {{{precautions}}}
 </ul>
 
-<!-- =====================================================
-     APPLICABILITY (OPTIONAL)
-===================================================== -->
 {{#if sectionApplicability}}
 <h2>Applicability</h2>
 <p>{{{applicability}}}</p>
 {{/if}}
 
-<!-- =====================================================
-     ABBREVIATIONS (OPTIONAL)
-===================================================== -->
 {{#if sectionAbbreviations}}
 <h2>Abbreviations</h2>
 <p>{{{abbreviations}}}</p>
 {{/if}}
 
-<!-- =====================================================
-     REFERENCES (OPTIONAL)
-===================================================== -->
 {{#if sectionReferences}}
 <h2>References</h2>
 <p>{{{references}}}</p>
 {{/if}}
 
-<!-- =====================================================
-     ANNEXURES (OPTIONAL)
-===================================================== -->
 {{#if sectionAnnexures}}
 <h2>Annexures</h2>
 <p>{{{annexures}}}</p>
 {{/if}}
 
 <!-- =====================================================
-     CHANGE HISTORY (ONLY IF DATA EXISTS)
+     CHANGE HISTORY
 ===================================================== -->
 {{#if changeHistoryRows}}
 <h2>Change History</h2>
 
-<table style="width:100%; border-collapse:collapse; margin-top:8pt; page-break-inside:avoid;">
-  <colgroup>
-    <col style="width:15%;">
-    <col style="width:20%;">
-    <col style="width:65%;">
-  </colgroup>
+<div class="change-history-table">
+  <table style="width:100%; border-collapse:collapse; margin-top:8pt;">
+    <colgroup>
+      <col style="width:15%;">
+      <col style="width:20%;">
+      <col style="width:65%;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Revision</th>
+        <th>Date</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{{changeHistoryRows}}}
+    </tbody>
+  </table>
+</div>
 
-  <thead>
-    <tr>
-      <th style="padding:5pt;">Revision</th>
-      <th style="padding:5pt;">Date</th>
-      <th style="padding:5pt;">Description</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    {{{changeHistoryRows}}}
-  </tbody>
-</table>
+<div class="change-history-text">
+  {{{changeHistoryRows}}}
+</div>
 {{/if}}
 
 <!-- =====================================================
-     APPROVALS (NO AUTO NUMBERING)
+     APPROVALS (KEEP TABLE – WORD FRIENDLY)
 ===================================================== -->
 <h2 class="no-counter" style="margin-top:22pt;">Approvals</h2>
 
-<table style="width:100%; border-collapse:collapse; margin-top:12pt; page-break-inside:avoid;">
+<table style="width:100%; border-collapse:collapse; margin-top:12pt;">
   <colgroup>
     <col style="width:33.33%;">
     <col style="width:33.33%;">
     <col style="width:33.33%;">
   </colgroup>
-
   <tr>
-    <td style="padding:8pt; vertical-align:top;">
+    <td style="padding:8pt;">
       <strong>Prepared By</strong><br><br>
       <strong>Name:</strong> {{preparedBy}}<br>
       <strong>Designation:</strong> {{preparedDesig}}<br>
       <strong>Date:</strong> {{preparedDate}}
     </td>
-
-    <td style="padding:8pt; vertical-align:top;">
+    <td style="padding:8pt;">
       <strong>Checked By</strong><br><br>
       <strong>Name:</strong> {{checkedBy}}<br>
       <strong>Designation:</strong> {{checkedDesig}}<br>
       <strong>Date:</strong> {{checkedDate}}
     </td>
-
-    <td style="padding:8pt; vertical-align:top;">
+    <td style="padding:8pt;">
       <strong>Approved By</strong><br><br>
       <strong>Name:</strong> {{approvedBy}}<br>
       <strong>Designation:</strong> {{approvedDesig}}<br>

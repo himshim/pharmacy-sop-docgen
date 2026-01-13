@@ -298,95 +298,158 @@ window.initSOPApp = function () {
       }
     },
 
-    // ────── 3. WORD EXPORT (FIX #2: Inject numbers) ──────
-    async exportDOCX(filename) {
-      if (!this.hasContent()) {
-        alert("❌ No content to export. Please generate a document first.");
-        return;
+// ────── 3. WORD EXPORT (PATCHED – DUAL LAYOUT SAFE) ──────
+async exportDOCX(filename) {
+  if (!this.hasContent()) {
+    alert("❌ No content to export. Please generate a document first.");
+    return;
+  }
+
+  if (typeof htmlDocx === "undefined") {
+    UtilsModule.error("❌ html-docx-js library not found");
+    return this.showLibraryMissingError("html-docx-js");
+  }
+
+  if (typeof saveAs === "undefined") {
+    UtilsModule.error("❌ FileSaver.js library not found");
+    return this.showLibraryMissingError("FileSaver");
+  }
+
+  try {
+    UtilsModule.log("📝 Generating DOCX...");
+
+    const sourceElement = this.getPreviewElement();
+    const clonedElement = sourceElement.cloneNode(true);
+
+    /* =====================================================
+       FIX #2 (UNCHANGED): Inject numbers into h2 headings
+       ===================================================== */
+    const headings = clonedElement.querySelectorAll("h2");
+    headings.forEach((heading, index) => {
+      const text = heading.textContent.trim();
+      if (!/^\d+\./.test(text)) {
+        heading.textContent = `${index + 1}. ${text}`;
       }
+    });
 
-      if (typeof htmlDocx === "undefined") {
-        UtilsModule.error("❌ html-docx-js library not found");
-        return this.showLibraryMissingError("html-docx-js");
-      }
+    let htmlContent = clonedElement.innerHTML;
 
-      if (typeof saveAs === "undefined") {
-        UtilsModule.error("❌ FileSaver.js library not found");
-        return this.showLibraryMissingError("FileSaver");
-      }
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = htmlContent;
 
-      try {
-        UtilsModule.log("📝 Generating DOCX...");
-        
-        const sourceElement = this.getPreviewElement();
-        const clonedElement = sourceElement.cloneNode(true);
+    /* Remove UI-only elements (UNCHANGED) */
+    tempDiv
+      .querySelectorAll(
+        ".toolbar-buttons, .action-bar, .no-print, .ui-controls, .page-break-indicator"
+      )
+      .forEach((el) => el.remove());
 
-        // FIX #2: Inject actual numbers into h2 headings
-        const headings = clonedElement.querySelectorAll('h2');
-        headings.forEach((heading, index) => {
-          const text = heading.textContent.trim();
-          // Only add number if not already present
-          if (!/^\d+\./.test(text)) {
-            heading.textContent = (index + 1) + '. ' + text;
-          }
-        });
+    /* =====================================================
+       DOCX PATCH: WRAP CONTENT FOR DUAL LAYOUT
+       ===================================================== */
+    const docxWrapper = document.createElement("div");
+    docxWrapper.className = "docx-export";
 
-        let htmlContent = clonedElement.innerHTML;
+    while (tempDiv.firstChild) {
+      docxWrapper.appendChild(tempDiv.firstChild);
+    }
+    tempDiv.appendChild(docxWrapper);
 
-        const tempDiv = document.createElement("div");
-        tempDiv.innerHTML = htmlContent;
-        tempDiv
-          .querySelectorAll(
-            ".toolbar-buttons, .action-bar, .no-print, .ui-controls, .page-break-indicator"
-          )
-          .forEach((el) => {
-            el.remove();
-          });
-
-        const wordDoc = `<!DOCTYPE html>
+    /* =====================================================
+       FINAL WORD HTML (PATCHED STYLE ONLY)
+       ===================================================== */
+    const wordDoc = `<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <style>
-        * { margin: 0; padding: 0; border-collapse: collapse; }
-        body { font-family: ${this.CONFIG.WORD_FONT_FAMILY}; font-size: ${this.CONFIG.WORD_FONT_SIZE}; line-height: 1.6; color: #333; }
-        h1, h2, h3, h4, h5, h6 { margin-top: 12pt; margin-bottom: 6pt; font-weight: bold; }
-        h1 { font-size: 16pt; }
-        h2 { font-size: 14pt; }
-        h3 { font-size: 13pt; }
-        h4 { font-size: 12pt; }
-        p { margin-bottom: 6pt; text-align: justify; }
-        table { width: 100%; border-collapse: collapse; margin: 12pt 0; }
-        table, td, th { border: 1px solid #000; }
-        th, td { padding: 6pt; text-align: left; }
-        th { background-color: #f0f0f0; font-weight: bold; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        ul, ol { margin-left: 20pt; margin-bottom: 6pt; }
-        li { margin-bottom: 4pt; }
-        strong { font-weight: bold; }
-        em { font-style: italic; }
-    </style>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; }
+
+  body {
+    font-family: ${this.CONFIG.WORD_FONT_FAMILY};
+    font-size: ${this.CONFIG.WORD_FONT_SIZE};
+    line-height: 1.5;
+    color: #333;
+  }
+
+  h1, h2, h3, h4 {
+    margin-top: 12pt;
+    margin-bottom: 6pt;
+    font-weight: bold;
+  }
+
+  h1 { font-size: 16pt; }
+  h2 { font-size: 14pt; }
+  h3 { font-size: 13pt; }
+
+  p {
+    margin-bottom: 6pt;
+    text-align: justify;
+  }
+
+  ul, ol {
+    margin-left: 20pt;
+    margin-bottom: 6pt;
+  }
+
+  li {
+    margin-bottom: 4pt;
+  }
+
+  strong { font-weight: bold; }
+
+  /* ================= DOCX DUAL LAYOUT ================= */
+
+  /* Hide problematic tables */
+  .docx-export .doc-control-table,
+  .docx-export .change-history-table {
+    display: none;
+  }
+
+  /* Show Word-friendly text blocks */
+  .docx-export .doc-control-text,
+  .docx-export .change-history-text {
+    display: block;
+  }
+
+  /* Keep signature table only */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10pt 0;
+  }
+
+  table, td, th {
+    border: 1px solid #000;
+  }
+
+  th, td {
+    padding: 4pt;
+    text-align: left;
+    vertical-align: top;
+  }
+</style>
 </head>
 <body>
-    ${tempDiv.innerHTML}
+  ${tempDiv.innerHTML}
 </body>
 </html>`;
 
-        const blob = htmlDocx.asBlob(wordDoc, {
-          orientation: "portrait",
-          margins: { top: 720, right: 720, bottom: 720, left: 720 },
-        });
+    const blob = htmlDocx.asBlob(wordDoc, {
+      orientation: "portrait",
+      margins: { top: 720, right: 720, bottom: 720, left: 720 },
+    });
 
-        saveAs(blob, filename || "SOP_Document.docx");
-        UtilsModule.log("✅ DOCX exported successfully");
-        alert("✅ Word document saved successfully!");
-      } catch (error) {
-        UtilsModule.error("❌ DOCX export failed:", error);
-        alert(
-          `❌ Word export failed: ${error.message}\n\nTry using PDF export instead.`
-        );
-      }
-    },
+    saveAs(blob, filename || "SOP_Document.docx");
+    UtilsModule.log("✅ DOCX exported successfully");
+    alert("✅ Word document saved successfully!");
+  } catch (error) {
+    UtilsModule.error("❌ DOCX export failed:", error);
+    alert(
+      `❌ Word export failed: ${error.message}\n\nTry using PDF export instead.`
+    );
+  }
+},
 
     showLibraryMissingError(libName) {
       const message = `❌ Missing Library: ${libName}
