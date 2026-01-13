@@ -17,98 +17,98 @@
 <!-- =====================================================
      DOCUMENT CONTROL INFORMATION
 ===================================================== -->
-<table style="width:100%; border-collapse:collapse; margin-bottom:14pt; page-break-inside:avoid;">
+<table style="width:100%; border-collapse:collapse; margin-bottom:12pt; page-break-inside:avoid;">
   <colgroup>
     <col style="width:30%;">
     <col style="width:70%;">
   </colgroup>
 
-  <tr>
-    <td style="padding:6pt;"><strong>Institute</strong></td>
-    <td style="padding:6pt;">{{institute}}</td>
+  <tr style="height:auto;">
+    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Institute</strong></td>
+    <td style="padding:3pt 5pt; line-height:1.2;">{{institute}}</td>
   </tr>
 
-  <tr>
-    <td style="padding:6pt;"><strong>Department</strong></td>
-    <td style="padding:6pt;">{{department}}</td>
+  <tr style="height:auto;">
+    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Department</strong></td>
+    <td style="padding:3pt 5pt; line-height:1.2;">{{department}}</td>
   </tr>
 
   {{#if sectionSopNumber}}
-  <tr>
-    <td style="padding:6pt;"><strong>SOP Number</strong></td>
-    <td style="padding:6pt;">{{sopNumber}}</td>
+  <tr style="height:auto;">
+    <td style="padding:3pt 5pt; line-height:1.2;"><strong>SOP Number</strong></td>
+    <td style="padding:3pt 5pt; line-height:1.2;">{{sopNumber}}</td>
   </tr>
   {{/if}}
 
-  <tr>
-    <td style="padding:6pt;"><strong>Revision Number</strong></td>
-    <td style="padding:6pt;">{{revisionNo}}</td>
+  <tr style="height:auto;">
+    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Revision Number</strong></td>
+    <td style="padding:3pt 5pt; line-height:1.2;">{{revisionNo}}</td>
   </tr>
 
   {{#if sectionEffectiveDate}}
-  <tr>
-    <td style="padding:6pt;"><strong>Effective Date</strong></td>
-    <td style="padding:6pt;">{{effectiveDate}}</td>
+  <tr style="height:auto;">
+    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Effective Date</strong></td>
+    <td style="padding:3pt 5pt; line-height:1.2;">{{effectiveDate}}</td>
   </tr>
   {{/if}}
 
   {{#if sectionRevisionDate}}
-  <tr>
-    <td style="padding:6pt;"><strong>Revision Date</strong></td>
-    <td style="padding:6pt;">{{revisionDate}}</td>
+  <tr style="height:auto;">
+    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Revision Date</strong></td>
+    <td style="padding:3pt 5pt; line-height:1.2;">{{revisionDate}}</td>
   </tr>
   {{/if}}
 
   {{#if nextReviewDate}}
-  <tr>
-    <td style="padding:6pt;"><strong>Next Review Date</strong></td>
-    <td style="padding:6pt;">{{nextReviewDate}}</td>
+  <tr style="height:auto;">
+    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Next Review Date</strong></td>
+    <td style="padding:3pt 5pt; line-height:1.2;">{{nextReviewDate}}</td>
   </tr>
   {{/if}}
 
   {{#if sectionCopyType}}
-  <tr>
-    <td style="padding:6pt;"><strong>Copy Type</strong></td>
-    <td style="padding:6pt;">{{copyType}}</td>
+  <tr style="height:auto;">
+    <td style="padding:3pt 5pt; line-height:1.2;"><strong>Copy Type</strong></td>
+    <td style="padding:3pt 5pt; line-height:1.2;">{{copyType}}</td>
   </tr>
   {{/if}}
 </table>
 
-<hr style="margin:16pt 0;">
+<hr style="margin:14pt 0;">
 
 <!-- =====================================================
      PURPOSE
 ===================================================== -->
-<h2 style="margin-top:18pt;">Purpose</h2>
-{{{purpose}}}
+<h2>Purpose</h2>
+<p>{{{purpose}}}</p>
 
 <!-- =====================================================
      SCOPE
 ===================================================== -->
-<h2 style="margin-top:18pt;">Scope</h2>
-{{{scope}}}
+<h2>Scope</h2>
+<p>{{{scope}}}</p>
 
 <!-- =====================================================
      RESPONSIBILITY
 ===================================================== -->
-<h2 style="margin-top:18pt;">Responsibility</h2>
-<ul>
+<h2>Responsibility</h2>
+<ul style="margin-top:6pt;">
   {{{responsibility}}}
 </ul>
 
 <!-- =====================================================
      PROCEDURE
 ===================================================== -->
-<h2 style="margin-top:18pt;">Procedure</h2>
-<ol>
+<h2>Procedure</h2>
+<ol style="margin-top:6pt;">
   {{{procedure}}}
 </ol>
 
 <!-- =====================================================
      SAFETY PRECAUTIONS
 ===================================================== -->
-<h2 style="margin-top:18pt;">Safety Precautions</h2>
-<ul>
+<h2>Safety Precautions</h2>
+<ul style="margin-top:6pt;">
   {{{precautions}}}
 </ul>
 
@@ -116,39 +116,39 @@
      APPLICABILITY (OPTIONAL)
 ===================================================== -->
 {{#if sectionApplicability}}
-<h2 style="margin-top:18pt;">Applicability</h2>
-{{{applicability}}}
+<h2>Applicability</h2>
+<p>{{{applicability}}}</p>
 {{/if}}
 
 <!-- =====================================================
      ABBREVIATIONS (OPTIONAL)
 ===================================================== -->
 {{#if sectionAbbreviations}}
-<h2 style="margin-top:18pt;">Abbreviations</h2>
-{{{abbreviations}}}
+<h2>Abbreviations</h2>
+<p>{{{abbreviations}}}</p>
 {{/if}}
 
 <!-- =====================================================
      REFERENCES (OPTIONAL)
 ===================================================== -->
 {{#if sectionReferences}}
-<h2 style="margin-top:18pt;">References</h2>
-{{{references}}}
+<h2>References</h2>
+<p>{{{references}}}</p>
 {{/if}}
 
 <!-- =====================================================
      ANNEXURES (OPTIONAL)
 ===================================================== -->
 {{#if sectionAnnexures}}
-<h2 style="margin-top:18pt;">Annexures</h2>
-{{{annexures}}}
+<h2>Annexures</h2>
+<p>{{{annexures}}}</p>
 {{/if}}
 
 <!-- =====================================================
      CHANGE HISTORY (ONLY IF DATA EXISTS)
 ===================================================== -->
 {{#if changeHistoryRows}}
-<h2 style="margin-top:18pt;">Change History</h2>
+<h2>Change History</h2>
 
 <table style="width:100%; border-collapse:collapse; margin-top:8pt; page-break-inside:avoid;">
   <colgroup>
@@ -159,9 +159,9 @@
 
   <thead>
     <tr>
-      <th style="padding:6pt;">Revision</th>
-      <th style="padding:6pt;">Date</th>
-      <th style="padding:6pt;">Description</th>
+      <th style="padding:5pt;">Revision</th>
+      <th style="padding:5pt;">Date</th>
+      <th style="padding:5pt;">Description</th>
     </tr>
   </thead>
 
@@ -174,7 +174,7 @@
 <!-- =====================================================
      APPROVALS (NO AUTO NUMBERING)
 ===================================================== -->
-<h2 class="no-counter" style="margin-top:24pt;">Approvals</h2>
+<h2 class="no-counter" style="margin-top:22pt;">Approvals</h2>
 
 <table style="width:100%; border-collapse:collapse; margin-top:12pt; page-break-inside:avoid;">
   <colgroup>

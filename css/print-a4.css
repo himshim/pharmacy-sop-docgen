@@ -246,3 +246,27 @@ body.printing-mode #preview-wrapper {
         color: #000 !important; /* Black numbers for print */
     }
 }
+/* =====================================================
+   SOP CONTENT LIST NORMALIZATION (SAFE)
+   ===================================================== */
+
+/* Ensure procedure steps are numbered in preview & print */
+#preview ol {
+    list-style-type: decimal !important;
+    margin-top: 6pt;
+    margin-bottom: 8pt;
+    margin-left: 25pt;
+    padding-left: 0;
+}
+
+/* List item spacing (professional, compact) */
+#preview ol li,
+#preview ul li {
+    margin-bottom: 6pt;
+}
+
+/* Reduce excessive gap after headings before lists */
+#preview h2 + ul,
+#preview h2 + ol {
+    margin-top: 6pt !important;
+}
