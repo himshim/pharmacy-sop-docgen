@@ -1,142 +1,139 @@
-<!-- 
-  SOP CLASSIC TEMPLATE (A4) - OPTIMIZED
-  Auto-numbering + Smart Formatting
--->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Auto-numbering for toggleable sections */
+        body { counter-reset: section; }
+        h2:not(.no-counter) { counter-increment: section; }
+        h2:not(.no-counter)::before { content: counter(section) ". "; }
 
-<!-- HEADER -->
-<div style="text-align: center; margin-bottom: 20px;">
-    <h1 style="border:none; margin-bottom: 5px;">{{institute}}</h1>
-    <div style="font-size: 14pt; font-weight: bold;">Department of {{department}}</div>
-</div>
+        table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+        table, th, td { border: 1px solid #666; }
+        th, td { padding: 8px; text-align: left; }
+        th { background-color: #e0e0e0; font-weight: bold; }
+        h1 { text-align: center; font-size: 20px; margin: 10px 0; }
+        h2 { font-size: 16px; margin: 15px 0 8px 0; }
+        p, ul, ol { margin: 8px 0; line-height: 1.6; }
+        .header-table td { padding: 6px; }
+        .signature-table td { text-align: center; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <h1>{{title}}</h1>
 
-<!-- TITLE BLOCK -->
-<table cellspacing="0">
-    <tr>
-        <th width="30%">Title</th>
-        <td width="70%"><b>{{title}}</b></td>
-    </tr>
-    {{#if sectionSopNumber}}
-    <tr>
-        <th>SOP Number</th>
-        <td>{{sopNumber}}</td>
-    </tr>
+    <!-- Document Control Header -->
+    {{#if sectionDocControl}}
+    <table class="header-table">
+        <tr>
+            <td><b>Institute:</b> {{institute}}</td>
+            <td><b>Department:</b> {{department}}</td>
+        </tr>
+        <tr>
+            {{#if sectionSopNumber}}<td><b>SOP Number:</b> {{sopNumber}}</td>{{/if}}
+            <td><b>Revision No:</b> {{revisionNo}}</td>
+        </tr>
+        <tr>
+            {{#if sectionEffectiveDate}}<td><b>Effective Date:</b> {{effectiveDate}}</td>{{/if}}
+            {{#if sectionRevisionDate}}<td><b>Revision Date:</b> {{revisionDate}}</td>{{/if}}
+        </tr>
+        <tr>
+            <td><b>Next Review Date:</b> {{nextReviewDate}}</td>
+            {{#if sectionCopyType}}<td><b>Copy Type:</b> {{copyType}}</td>{{/if}}
+        </tr>
+    </table>
     {{/if}}
-    {{#if sectionEffectiveDate}}
-    <tr>
-        <th>Effective Date</th>
-        <td>{{effectiveDate}}</td>
-    </tr>
+
+    <!-- Purpose -->
+    <h2>Purpose</h2>
+    {{{purpose}}}
+
+    <!-- Scope -->
+    <h2>Scope</h2>
+    {{{scope}}}
+
+    <!-- Applicability (Toggleable) -->
+    {{#if sectionApplicability}}
+    <h2>Applicability</h2>
+    {{{applicability}}}
     {{/if}}
-    {{#if sectionRevisionDate}}
-    <tr>
-        <th>Revision Date</th>
-        <td>{{revisionDate}}</td>
-    </tr>
+
+    <!-- Responsibility -->
+    <h2>Responsibility</h2>
+    {{{responsibility}}}
+
+    <!-- Abbreviations (Toggleable) -->
+    {{#if sectionAbbreviations}}
+    <h2>Definitions & Abbreviations</h2>
+    {{{abbreviations}}}
     {{/if}}
-    <tr>
-        <th>Revision No.</th>
-        <td>{{revisionNo}}</td>
-    </tr>
-    {{#if sectionCopyType}}
-    <tr>
-        <th>Copy Type</th>
-        <td>{{copyType}}</td>
-    </tr>
+
+    <!-- Precautions -->
+    <h2>Precautions & Safety</h2>
+    {{{precautions}}}
+
+    <!-- Procedure -->
+    <h2>Procedure</h2>
+    {{{procedure}}}
+
+    <!-- References (Toggleable) -->
+    {{#if sectionReferences}}
+    <h2>References</h2>
+    {{{references}}}
     {{/if}}
-</table>
 
+    <!-- Annexures (Toggleable) -->
+    {{#if sectionAnnexures}}
+    <h2>Annexures</h2>
+    {{{annexures}}}
+    {{/if}}
 
-<!-- MAIN CONTENT -->
-{{#if sectionDocControl}}
-    <!-- Metadata included in table above -->
-{{/if}}
-
-<h2>PURPOSE</h2>
-{{purpose}}
-
-<h2>SCOPE</h2>
-{{scope}}
-
-<h2>RESPONSIBILITY</h2>
-<ul>
-    {{responsibility}}
-</ul>
-
-<h2>PROCEDURE</h2>
-<ol>
-    {{procedure}}
-</ol>
-
-<h2>PRECAUTIONS</h2>
-<ul>
-    {{precautions}}
-</ul>
-
-{{#if sectionApplicability}}
-    <h2>APPLICABILITY</h2>
-    {{applicability}}
-{{/if}}
-
-{{#if sectionAbbreviations}}
-    <h2>ABBREVIATIONS</h2>
-    {{abbreviations}}
-{{/if}}
-
-{{#if sectionReferences}}
-    <h2>REFERENCES</h2>
-    {{references}}
-{{/if}}
-
-{{#if sectionAnnexures}}
-    <h2>ANNEXURES</h2>
-    {{annexures}}
-{{/if}}
-
-{{#if sectionChangeHistory}}
-    <h2>CHANGE HISTORY</h2>
-    <table cellspacing="0">
+    <!-- Change History (Toggleable) -->
+    {{#if sectionChangeHistory}}
+    <h2>Change History</h2>
+    <table>
         <thead>
             <tr>
-                <th width="15%">Rev No.</th>
-                <th width="20%">Date</th>
-                <th width="65%">Description of Changes</th>
+                <th>Revision No.</th>
+                <th>Date</th>
+                <th>Description of Changes</th>
+                <th>Approved By</th>
             </tr>
         </thead>
         <tbody>
-            {{changeHistoryRows}}
+            {{{changeHistoryRows}}}
         </tbody>
     </table>
-{{/if}}
+    {{/if}}
 
-<!-- FORCE PAGE BREAK BEFORE SIGNATURES -->
-<div class="page-break-before page-break-indicator"></div>
-
-<h2>APPROVAL</h2>
-<table cellspacing="0">
-    <thead>
+    <!-- Approval Signatures -->
+    <h2 class="no-counter">Approval Signatures</h2>
+    <table class="signature-table">
         <tr>
-            <th width="33%">Prepared By</th>
-            <th width="33%">Checked By</th>
-            <th width="33%">Approved By</th>
+            <th>Prepared By</th>
+            <th>Checked By</th>
+            <th>Approved By</th>
         </tr>
-    </thead>
-    <tbody>
-        <tr style="height: 100px;">
-            <td style="vertical-align: bottom;">
-                <div><b>Name:</b> {{preparedBy}}</div>
-                <div><b>Desig:</b> {{preparedDesig}}</div>
-                <div><b>Date:</b> {{preparedDate}}</div>
+        <tr>
+            <td>
+                <p><b>Name:</b> {{preparedBy}}</p>
+                <p><b>Designation:</b> {{preparedDesig}}</p>
+                <p><b>Date:</b> {{preparedDate}}</p>
+                <p><b>Signature:</b> _______________</p>
             </td>
-            <td style="vertical-align: bottom;">
-                <div><b>Name:</b> {{checkedBy}}</div>
-                <div><b>Desig:</b> {{checkedDesig}}</div>
-                <div><b>Date:</b> {{checkedDate}}</div>
+            <td>
+                <p><b>Name:</b> {{checkedBy}}</p>
+                <p><b>Designation:</b> {{checkedDesig}}</p>
+                <p><b>Date:</b> {{checkedDate}}</p>
+                <p><b>Signature:</b> _______________</p>
             </td>
-            <td style="vertical-align: bottom;">
-                <div><b>Name:</b> {{approvedBy}}</div>
-                <div><b>Desig:</b> {{approvedDesig}}</div>
-                <div><b>Date:</b> {{approvedDate}}</div>
+            <td>
+                <p><b>Name:</b> {{approvedBy}}</p>
+                <p><b>Designation:</b> {{approvedDesig}}</p>
+                <p><b>Date:</b> {{approvedDate}}</p>
+                <p><b>Signature:</b> _______________</p>
             </td>
         </tr>
-    </tbody>
-</table>
+    </table>
+</body>
+</html>

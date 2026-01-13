@@ -1,207 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>SOP Document - PCI Compliant</title>
+    <style>
+        /* Auto-numbering for toggleable sections */
+        body { counter-reset: section; font-family: 'Calibri', Arial, sans-serif; }
+        h2:not(.no-counter) { counter-increment: section; }
+        h2:not(.no-counter)::before { content: counter(section) ". "; }
+
+        .pci-badge { 
+            background: #0066cc; 
+            color: white; 
+            padding: 10px 18px; 
+            border-radius: 5px; 
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+        table, th, td { border: 1px solid #0066cc; }
+        th, td { padding: 10px; text-align: left; }
+        th { background-color: #0066cc; color: white; font-weight: bold; }
+        .header-row { background-color: #cce5ff; font-weight: bold; }
+        .value-cell { background-color: #f5f5f5; }
+        h1 { 
+            text-align: center; 
+            font-size: 22px; 
+            margin: 15px 0; 
+            color: #0066cc;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        h2 { font-size: 16px; margin: 15px 0 8px 0; color: #0066cc; }
+        p, ul, ol { margin: 8px 0; line-height: 1.7; }
+        .signature-box {
+            border: 2px solid #0066cc;
+            padding: 15px;
+            margin: 10px 5px;
+            background: #f9f9f9;
+            min-height: 90px;
+        }
+        .signature-row { display: flex; justify-content: space-between; }
+        .signature-col { flex: 1; }
+        .pci-warning {
+            background: #fff9e6;
+            border: 2px solid #ffcc00;
+            border-radius: 5px;
+            padding: 12px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .pci-compliance {
+            background: #e6f7ff;
+            border-left: 5px solid #0066cc;
+            padding: 12px;
+            margin: 15px 0;
+        }
+    </style>
 </head>
 <body>
-    <!-- Document Header -->
-    <header class="doc-header">
-        <div class="institute-name">{{institute}}</div>
-        <div class="department-name">Department of {{department}}</div>
-        <div class="doc-type">Standard Operating Procedure</div>
-        <p style="font-size: 10pt; margin-top: 8pt;">
-            (As per Pharmacy Council of India - Education Regulations)
-        </p>
-    </header>
+    <div class="pci-badge">PCI Compliant - Pharmacy Education Standard</div>
 
-    <!-- Document Information Table -->
-    <table class="info-table">
+    <h1>{{title}}</h1>
+
+    <div class="pci-warning">
+        ⚠️ REGULATORY COMPLIANCE: This SOP must be followed as per Pharmacy Council of India (PCI) guidelines for pharmacy education institutions.
+    </div>
+
+    <!-- Document Control Information -->
+    {{#if sectionDocControl}}
+    <table>
+        <tr class="header-row">
+            <td colspan="2" style="text-align: center;">DOCUMENT CONTROL INFORMATION</td>
+        </tr>
+        <tr>
+            <td style="width: 35%;"><b>Pharmacy Institute:</b></td>
+            <td class="value-cell">{{institute}}</td>
+        </tr>
+        <tr>
+            <td><b>Department:</b></td>
+            <td class="value-cell">{{department}}</td>
+        </tr>
+        {{#if sectionSopNumber}}
+        <tr>
+            <td><b>SOP Number:</b></td>
+            <td class="value-cell">{{sopNumber}}</td>
+        </tr>
+        {{/if}}
+        <tr>
+            <td><b>Revision Number:</b></td>
+            <td class="value-cell">{{revisionNo}}</td>
+        </tr>
+        {{#if sectionEffectiveDate}}
+        <tr>
+            <td><b>Effective Date:</b></td>
+            <td class="value-cell">{{effectiveDate}}</td>
+        </tr>
+        {{/if}}
+        {{#if sectionRevisionDate}}
+        <tr>
+            <td><b>Revision Date:</b></td>
+            <td class="value-cell">{{revisionDate}}</td>
+        </tr>
+        {{/if}}
+        <tr>
+            <td><b>Next Review Date:</b></td>
+            <td class="value-cell">{{nextReviewDate}}</td>
+        </tr>
+        {{#if sectionCopyType}}
+        <tr>
+            <td><b>Copy Type:</b></td>
+            <td class="value-cell">{{copyType}}</td>
+        </tr>
+        {{/if}}
+    </table>
+    {{/if}}
+
+    <div class="pci-compliance">
+        <b>PCI Compliance Status:</b> This Standard Operating Procedure is prepared in accordance with PCI Education Regulations and must be maintained for inspection and accreditation purposes.
+    </div>
+
+    <!-- Purpose -->
+    <h2>Purpose</h2>
+    {{{purpose}}}
+
+    <!-- Scope -->
+    <h2>Scope</h2>
+    {{{scope}}}
+
+    <!-- Applicability (Toggleable) -->
+    {{#if sectionApplicability}}
+    <h2>Applicability</h2>
+    {{{applicability}}}
+    <div class="pci-compliance">
+        <i>Note: This SOP applies to all pharmacy program students (D.Pharm/B.Pharm/M.Pharm/Pharm.D) and faculty members as per PCI curriculum requirements.</i>
+    </div>
+    {{/if}}
+
+    <!-- Responsibility -->
+    <h2>Responsibility</h2>
+    {{{responsibility}}}
+
+    <!-- Abbreviations (Toggleable) -->
+    {{#if sectionAbbreviations}}
+    <h2>Definitions & Abbreviations</h2>
+    {{{abbreviations}}}
+    {{/if}}
+
+    <!-- Precautions & Safety -->
+    <h2>Precautions & Safety Measures</h2>
+    {{{precautions}}}
+    <div class="pci-warning">
+        ⚠️ SAFETY MANDATE: All safety precautions must be strictly followed as per PCI safety guidelines for pharmaceutical laboratories and educational institutions.
+    </div>
+
+    <!-- Procedure -->
+    <h2>Procedure</h2>
+    {{{procedure}}}
+
+    <!-- References (Toggleable) -->
+    {{#if sectionReferences}}
+    <h2>References & Regulatory Guidelines</h2>
+    {{{references}}}
+    <div class="pci-compliance">
+        <b>Additional PCI References:</b>
+        <ul>
+            <li>PCI Education Regulations (Latest Amendment)</li>
+            <li>Pharmacy Act, 1948</li>
+            <li>PCI Approval Standards for Pharmacy Institutions</li>
+        </ul>
+    </div>
+    {{/if}}
+
+    <!-- Annexures (Toggleable) -->
+    {{#if sectionAnnexures}}
+    <h2>Annexures & Supporting Documents</h2>
+    {{{annexures}}}
+    {{/if}}
+
+    <!-- Change History (Toggleable) -->
+    {{#if sectionChangeHistory}}
+    <h2>Change History & Version Control</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Revision No.</th>
+                <th>Date</th>
+                <th>Description of Changes</th>
+                <th>Approved By</th>
+            </tr>
+        </thead>
         <tbody>
-            <tr>
-                <td class="label-cell">Institution Name</td>
-                <td class="value-cell">{{institute}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Department</td>
-                <td class="value-cell">{{department}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">SOP Title</td>
-                <td class="value-cell">{{title}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">SOP Number</td>
-                <td class="value-cell">{{sopNumber}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Effective Date</td>
-                <td class="value-cell">{{effectiveDate}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Last Revision Date</td>
-                <td class="value-cell">{{revisionDate}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Next Review Date</td>
-                <td class="value-cell">{{nextReviewDate}}</td>
-            </tr>
+            {{{changeHistoryRows}}}
         </tbody>
     </table>
+    <p><i>PCI Compliance Note: All changes to SOPs must be documented and approved by competent authority before implementation.</i></p>
+    {{/if}}
 
-    <!-- Purpose Section -->
-    <div class="section avoid-break">
-        <h2 class="section-title">1. Purpose</h2>
-        <div class="section-content">
-            <p>{{purpose}}</p>
+    <!-- Approval & Authorization -->
+    <h2 class="no-counter">Approval & Authorization</h2>
+    <div class="signature-row">
+        <div class="signature-col">
+            <div class="signature-box">
+                <p><b>Prepared By:</b></p>
+                <p>Name: {{preparedBy}}</p>
+                <p>Designation: {{preparedDesig}}</p>
+                <p>Date: {{preparedDate}}</p>
+                <p>Signature: _______________</p>
+            </div>
+        </div>
+        <div class="signature-col">
+            <div class="signature-box">
+                <p><b>Checked/Reviewed By:</b></p>
+                <p>Name: {{checkedBy}}</p>
+                <p>Designation: {{checkedDesig}}</p>
+                <p>Date: {{checkedDate}}</p>
+                <p>Signature: _______________</p>
+            </div>
+        </div>
+        <div class="signature-col">
+            <div class="signature-box">
+                <p><b>Approved By:</b></p>
+                <p>Name: {{approvedBy}}</p>
+                <p>Designation: {{approvedDesig}}</p>
+                <p>Date: {{approvedDate}}</p>
+                <p>Signature: _______________</p>
+            </div>
         </div>
     </div>
 
-    <!-- Scope Section -->
-    <div class="section avoid-break">
-        <h2 class="section-title">2. Scope</h2>
-        <div class="section-content">
-            <p>{{scope}}</p>
-        </div>
+    <div class="pci-compliance" style="margin-top: 20px;">
+        <b>PCI Declaration:</b> This document is maintained as part of the institutional quality management system and is available for inspection by PCI authorities during approval/renewal visits.
     </div>
 
-    <!-- Responsibility Section -->
-    <div class="section avoid-break">
-        <h2 class="section-title">3. Responsibility</h2>
-        <div class="section-content">
-            <p>{{responsibility}}</p>
-        </div>
-    </div>
-
-    <!-- Procedure Section -->
-    <div class="section">
-        <h2 class="section-title">4. Procedure</h2>
-        <div class="section-content">
-            <ol class="procedure-list">
-                {{procedure}}
-            </ol>
-        </div>
-    </div>
-
-    <!-- Precautions Section -->
-    <div class="section avoid-break">
-        <h2 class="section-title">5. Precautions & Safety Measures</h2>
-        <div class="section-content">
-            <p>{{precautions}}</p>
-        </div>
-    </div>
-
-    <!-- Regulatory Compliance (PCI) -->
-    <div class="section avoid-break">
-        <h2 class="section-title">6. Regulatory Compliance</h2>
-        <div class="section-content">
-            <p>This SOP is implemented in accordance with:</p>
-            <ul>
-                <li>Pharmacy Council of India (PCI) Education Regulations</li>
-                <li>Applicable statutory and regulatory requirements</li>
-                <li>Good Laboratory Practices (GLP) guidelines</li>
-                <li>Institutional quality standards for pharmacy education</li>
-            </ul>
-            <p>All activities under this SOP shall comply with PCI norms for laboratory practices in pharmacy education.</p>
-        </div>
-    </div>
-
-    <!-- Applicability (if enabled) -->
-    <div class="section avoid-break" id="section-applicability">
-        <h2 class="section-title">7. Applicability</h2>
-        <div class="section-content">
-            <p>{{applicability}}</p>
-        </div>
-    </div>
-
-    <!-- Abbreviations (if enabled) -->
-    <div class="section avoid-break" id="section-abbreviations">
-        <h2 class="section-title">8. Abbreviations</h2>
-        <div class="section-content">
-            <p>{{abbreviations}}</p>
-        </div>
-    </div>
-
-    <!-- References (if enabled) -->
-    <div class="section avoid-break" id="section-references">
-        <h2 class="section-title">9. References</h2>
-        <div class="section-content">
-            <p>{{references}}</p>
-        </div>
-    </div>
-
-    <!-- Annexures (if enabled) -->
-    <div class="section avoid-break" id="section-annexures">
-        <h2 class="section-title">10. Annexures</h2>
-        <div class="section-content">
-            <p>{{annexures}}</p>
-        </div>
-    </div>
-
-    <!-- Training & Competency (PCI Requirement) -->
-    <div class="section avoid-break">
-        <h2 class="section-title">11. Training & Competency</h2>
-        <div class="section-content">
-            <p>All personnel involved in the implementation of this SOP shall be:</p>
-            <ul>
-                <li>Appropriately trained and qualified</li>
-                <li>Familiar with the instrument/process covered in this SOP</li>
-                <li>Aware of safety protocols and emergency procedures</li>
-                <li>Supervised by qualified faculty members as per PCI guidelines</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Signature Block -->
-    <div class="signature-block">
-        <h3>Document Preparation, Review & Approval</h3>
-        <table class="signature-table">
-            <thead>
-                <tr>
-                    <th style="width: 33%;">Prepared By</th>
-                    <th style="width: 33%;">Checked/Reviewed By</th>
-                    <th style="width: 33%;">Approved By</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <strong>Name:</strong> {{preparedBy}}<br>
-                        <strong>Designation:</strong> {{preparedDesig}}<br>
-                        <div class="signature-line"></div>
-                        <strong>Signature:</strong> _______________<br>
-                        <strong>Date:</strong> {{preparedDate}}
-                    </td>
-                    <td>
-                        <strong>Name:</strong> {{checkedBy}}<br>
-                        <strong>Designation:</strong> {{checkedDesig}}<br>
-                        <div class="signature-line"></div>
-                        <strong>Signature:</strong> _______________<br>
-                        <strong>Date:</strong> {{checkedDate}}
-                    </td>
-                    <td>
-                        <strong>Name:</strong> {{approvedBy}}<br>
-                        <strong>Designation:</strong> {{approvedDesig}}<br>
-                        <div class="signature-line"></div>
-                        <strong>Signature:</strong> _______________<br>
-                        <strong>Date:</strong> {{approvedDate}}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- PCI Compliance Footer -->
-    <div class="end-marker">
-        — END OF SOP —<br>
-        <span style="font-size: 9pt; font-weight: normal; margin-top: 6pt; display: block;">
-            This document is maintained as per PCI requirements for pharmacy education institutions.
-        </span>
-    </div>
-
-    <!-- Confidentiality Notice -->
-    <div class="confidential-marker">
-        This document is the property of {{institute}} and shall not be reproduced or distributed without authorization.
+    <div class="pci-warning" style="margin-top: 15px;">
+        <b>Training Mandate:</b> All personnel must be trained on this SOP before performing the described procedures. Training records must be maintained as per PCI requirements.
     </div>
 </body>
 </html>

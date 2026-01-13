@@ -1,184 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>SOP Document - NAAC Compliant</title>
+    <style>
+        /* Auto-numbering for toggleable sections */
+        body { counter-reset: section; font-family: 'Calibri', Arial, sans-serif; }
+        h2:not(.no-counter) { counter-increment: section; }
+        h2:not(.no-counter)::before { content: counter(section) ". "; }
+
+        .badge { 
+            background: #003366; 
+            color: white; 
+            padding: 8px 15px; 
+            border-radius: 4px; 
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+        table, th, td { border: 1px solid #003366; }
+        th, td { padding: 10px; text-align: left; }
+        th { background-color: #003366; color: white; font-weight: bold; }
+        .header-row { background-color: #e6f2ff; font-weight: bold; }
+        .value-cell { background-color: #f9f9f9; }
+        h1 { 
+            text-align: center; 
+            font-size: 22px; 
+            margin: 15px 0; 
+            color: #003366;
+            border-bottom: 3px solid #003366;
+            padding-bottom: 10px;
+        }
+        h2 { font-size: 16px; margin: 15px 0 8px 0; color: #003366; }
+        p, ul, ol { margin: 8px 0; line-height: 1.7; }
+        .signature-box {
+            border: 1px solid #003366;
+            padding: 15px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            min-height: 80px;
+        }
+        .signature-row { display: flex; justify-content: space-between; }
+        .signature-col { flex: 1; padding: 10px; }
+        .naac-note {
+            background: #e6f2ff;
+            border-left: 4px solid #003366;
+            padding: 12px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
-    <!-- Document Header -->
-    <header class="doc-header">
-        <div class="institute-name">{{institute}}</div>
-        <div class="department-name">Department of {{department}}</div>
-        <div class="doc-type">Standard Operating Procedure</div>
-        <p style="font-size: 10pt; margin-top: 8pt;">
-            (As per NAAC Guidelines for Quality Assurance in Higher Education)
-        </p>
-    </header>
+    <div class="badge">NAAC Accreditation Compliant</div>
 
-    <!-- Document Information Table -->
-    <table class="info-table">
+    <h1>{{title}}</h1>
+
+    <!-- Document Control Information -->
+    {{#if sectionDocControl}}
+    <table>
+        <tr class="header-row">
+            <td colspan="2" style="text-align: center;">DOCUMENT CONTROL INFORMATION</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;"><b>Institute Name:</b></td>
+            <td class="value-cell">{{institute}}</td>
+        </tr>
+        <tr>
+            <td><b>Department:</b></td>
+            <td class="value-cell">{{department}}</td>
+        </tr>
+        {{#if sectionSopNumber}}
+        <tr>
+            <td><b>SOP Number:</b></td>
+            <td class="value-cell">{{sopNumber}}</td>
+        </tr>
+        {{/if}}
+        <tr>
+            <td><b>Revision Number:</b></td>
+            <td class="value-cell">{{revisionNo}}</td>
+        </tr>
+        {{#if sectionEffectiveDate}}
+        <tr>
+            <td><b>Effective Date:</b></td>
+            <td class="value-cell">{{effectiveDate}}</td>
+        </tr>
+        {{/if}}
+        {{#if sectionRevisionDate}}
+        <tr>
+            <td><b>Revision Date:</b></td>
+            <td class="value-cell">{{revisionDate}}</td>
+        </tr>
+        {{/if}}
+        <tr>
+            <td><b>Next Review Date:</b></td>
+            <td class="value-cell">{{nextReviewDate}}</td>
+        </tr>
+        {{#if sectionCopyType}}
+        <tr>
+            <td><b>Copy Type:</b></td>
+            <td class="value-cell">{{copyType}}</td>
+        </tr>
+        {{/if}}
+    </table>
+    {{/if}}
+
+    <div class="naac-note">
+        <b>NAAC Compliance Note:</b> This SOP is maintained as per NAAC guidelines for Quality Assurance and institutional excellence.
+    </div>
+
+    <!-- Purpose -->
+    <h2>Purpose</h2>
+    {{{purpose}}}
+
+    <!-- Scope -->
+    <h2>Scope</h2>
+    {{{scope}}}
+
+    <!-- Applicability (Toggleable) -->
+    {{#if sectionApplicability}}
+    <h2>Applicability</h2>
+    {{{applicability}}}
+    {{/if}}
+
+    <!-- Responsibility -->
+    <h2>Responsibility</h2>
+    {{{responsibility}}}
+
+    <!-- Abbreviations (Toggleable) -->
+    {{#if sectionAbbreviations}}
+    <h2>Definitions & Abbreviations</h2>
+    {{{abbreviations}}}
+    {{/if}}
+
+    <!-- Precautions & Safety -->
+    <h2>Precautions & Safety Measures</h2>
+    {{{precautions}}}
+
+    <!-- Procedure -->
+    <h2>Procedure</h2>
+    {{{procedure}}}
+
+    <!-- References (Toggleable) -->
+    {{#if sectionReferences}}
+    <h2>References</h2>
+    {{{references}}}
+    {{/if}}
+
+    <!-- Annexures (Toggleable) -->
+    {{#if sectionAnnexures}}
+    <h2>Annexures & Attachments</h2>
+    {{{annexures}}}
+    {{/if}}
+
+    <!-- Change History (Toggleable) -->
+    {{#if sectionChangeHistory}}
+    <h2>Change History & Version Control</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Revision No.</th>
+                <th>Date</th>
+                <th>Description of Changes</th>
+                <th>Approved By</th>
+            </tr>
+        </thead>
         <tbody>
-            <tr>
-                <td class="label-cell">SOP Title</td>
-                <td class="value-cell">{{title}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">SOP Number</td>
-                <td class="value-cell">{{sopNumber}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Revision Number</td>
-                <td class="value-cell">{{revisionNo}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Effective Date</td>
-                <td class="value-cell">{{effectiveDate}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Revision Date</td>
-                <td class="value-cell">{{revisionDate}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Next Review Date</td>
-                <td class="value-cell">{{nextReviewDate}}</td>
-            </tr>
-            <tr>
-                <td class="label-cell">Document Type</td>
-                <td class="value-cell"><strong>{{copyType}} COPY</strong></td>
-            </tr>
+            {{{changeHistoryRows}}}
         </tbody>
     </table>
+    <p><i>Note: All revisions are documented and approved as per NAAC quality assurance requirements.</i></p>
+    {{/if}}
 
-    <!-- Purpose Section -->
-    <div class="section avoid-break">
-        <h2 class="section-title">1. Purpose</h2>
-        <div class="section-content">
-            <p>{{purpose}}</p>
+    <!-- Approval & Authorization -->
+    <h2 class="no-counter">Approval & Authorization</h2>
+    <div class="signature-row">
+        <div class="signature-col">
+            <div class="signature-box">
+                <p><b>Prepared By:</b></p>
+                <p>Name: {{preparedBy}}</p>
+                <p>Designation: {{preparedDesig}}</p>
+                <p>Date: {{preparedDate}}</p>
+                <p>Signature: _______________</p>
+            </div>
+        </div>
+        <div class="signature-col">
+            <div class="signature-box">
+                <p><b>Verified By:</b></p>
+                <p>Name: {{checkedBy}}</p>
+                <p>Designation: {{checkedDesig}}</p>
+                <p>Date: {{checkedDate}}</p>
+                <p>Signature: _______________</p>
+            </div>
+        </div>
+        <div class="signature-col">
+            <div class="signature-box">
+                <p><b>Approved By:</b></p>
+                <p>Name: {{approvedBy}}</p>
+                <p>Designation: {{approvedDesig}}</p>
+                <p>Date: {{approvedDate}}</p>
+                <p>Signature: _______________</p>
+            </div>
         </div>
     </div>
 
-    <!-- Scope Section -->
-    <div class="section avoid-break">
-        <h2 class="section-title">2. Scope</h2>
-        <div class="section-content">
-            <p>{{scope}}</p>
-        </div>
-    </div>
-
-    <!-- Responsibility Section -->
-    <div class="section avoid-break">
-        <h2 class="section-title">3. Responsibility</h2>
-        <div class="section-content">
-            <p>{{responsibility}}</p>
-        </div>
-    </div>
-
-    <!-- Procedure Section -->
-    <div class="section">
-        <h2 class="section-title">4. Procedure</h2>
-        <div class="section-content">
-            <ol class="procedure-list">
-                {{procedure}}
-            </ol>
-        </div>
-    </div>
-
-    <!-- Precautions Section -->
-    <div class="section avoid-break">
-        <h2 class="section-title">5. Safety Precautions</h2>
-        <div class="section-content">
-            <p>{{precautions}}</p>
-        </div>
-    </div>
-
-    <!-- Documentation & Records (NAAC Compliance) -->
-    <div class="section avoid-break">
-        <h2 class="section-title">6. Documentation & Record Keeping</h2>
-        <div class="section-content">
-            <p>All records generated during the implementation of this SOP shall be maintained, controlled, and retained in accordance with the institution's documented procedures and NAAC accreditation requirements. Records shall be:</p>
-            <ul>
-                <li>Properly documented and dated</li>
-                <li>Maintained for the duration specified by institutional policy</li>
-                <li>Available for inspection during NAAC assessment</li>
-                <li>Retained as evidence of quality assurance practices</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Applicability (if enabled) -->
-    <div class="section avoid-break" id="section-applicability">
-        <h2 class="section-title">7. Applicability</h2>
-        <div class="section-content">
-            <p>{{applicability}}</p>
-        </div>
-    </div>
-
-    <!-- Abbreviations (if enabled) -->
-    <div class="section avoid-break" id="section-abbreviations">
-        <h2 class="section-title">8. Abbreviations</h2>
-        <div class="section-content">
-            <p>{{abbreviations}}</p>
-        </div>
-    </div>
-
-    <!-- References (if enabled) -->
-    <div class="section avoid-break" id="section-references">
-        <h2 class="section-title">9. References</h2>
-        <div class="section-content">
-            <p>{{references}}</p>
-        </div>
-    </div>
-
-    <!-- Annexures (if enabled) -->
-    <div class="section avoid-break" id="section-annexures">
-        <h2 class="section-title">10. Annexures</h2>
-        <div class="section-content">
-            <p>{{annexures}}</p>
-        </div>
-    </div>
-
-    <!-- Signature Block -->
-    <div class="signature-block">
-        <h3>Document Verification & Approval</h3>
-        <table class="signature-table">
-            <thead>
-                <tr>
-                    <th>Prepared By</th>
-                    <th>Verified By</th>
-                    <th>Approved By</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <strong>Name:</strong> {{preparedBy}}<br>
-                        <strong>Designation:</strong> {{preparedDesig}}<br>
-                        <div class="signature-line"></div>
-                        <strong>Date:</strong> {{preparedDate}}
-                    </td>
-                    <td>
-                        <strong>Name:</strong> {{checkedBy}}<br>
-                        <strong>Designation:</strong> {{checkedDesig}}<br>
-                        <div class="signature-line"></div>
-                        <strong>Date:</strong> {{checkedDate}}
-                    </td>
-                    <td>
-                        <strong>Name:</strong> {{approvedBy}}<br>
-                        <strong>Designation:</strong> {{approvedDesig}}<br>
-                        <div class="signature-line"></div>
-                        <strong>Date:</strong> {{approvedDate}}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- NAAC Compliance Footer -->
-    <div class="end-marker">
-        — END OF DOCUMENT —<br>
-        <span style="font-size: 9pt; font-weight: normal;">
-            This SOP is part of the institution's Quality Assurance Framework as per NAAC guidelines.
-        </span>
+    <div class="naac-note" style="margin-top: 20px;">
+        <b>Quality Assurance:</b> This document is part of the institution's quality assurance framework and is subject to periodic review as per NAAC assessment criteria.
     </div>
 </body>
 </html>
