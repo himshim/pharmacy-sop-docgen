@@ -566,6 +566,9 @@ textarea {
 
 /* ============ PRINT STYLES FOR MOBILE ============ */
 @media print {
+    /* ✅ Mobile print is now handled by print-a4.css with body.mobile-ui */
+    /* This section intentionally left minimal to avoid conflicts */
+    
     body {
         visibility: hidden !important;
     }
@@ -581,49 +584,14 @@ textarea {
         width: 210mm !important;
         min-height: 297mm !important;
         margin: 0 !important;
-        padding: 20mm !important;
+        padding: 0 !important; /* ✅ CHANGED: Let print-a4.css handle padding */
         background: white !important;
         box-shadow: none !important;
         border-radius: 0 !important;
     }
 
-    /* ═══════════════════════════════════════════════════════════ */
-    /* FIX: Remove ALL top spacing - MOBILE SPECIFIC              */
-    /* ═══════════════════════════════════════════════════════════ */
-    
-    /* Target ALL possible first elements */
-    #preview > *:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-    
-    /* Nested first children */
-    #preview > *:first-child > *:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-    
-    /* Specific element types that might be first */
-    #preview table:first-child,
-    #preview div:first-child,
-    #preview header:first-child,
-    #preview section:first-child,
-    #preview h1:first-child,
-    #preview h2:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-    
-    /* CRITICAL: Override print-a4.css table margin for first table */
-    #preview > table:first-child,
-    #preview > *:first-child table:first-of-type {
-        margin-top: 0 !important;
-    }
-    
-    /* ═══════════════════════════════════════════════════════════ */
-
     @page {
         size: A4;
-        margin: 0;
+        margin: 20mm; /* ✅ CHANGED: Use proper margins */
     }
 }
