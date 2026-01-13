@@ -186,12 +186,57 @@ window.initSOPApp = function () {
   // 5. EXPORT MODULE (Print, PDF & DOCX) - UNIVERSAL v2.0
   // ════════════════════════════════════════════════════════════════
   const ExportModule = {
-    CONFIG: {
+        CONFIG: {
       PRINT_MARGIN_MM: 10,
       PDF_SCALE: 2,
       PDF_FORMAT: "a4",
       WORD_FONT_FAMILY: "Calibri, Arial, sans-serif",
       WORD_FONT_SIZE: "12pt",
+    },
+
+    // ═══════════════════════════════════════════════════════════════
+    // FIX #3: Inject CSS counter values as real text for DOCX export
+    // This makes dynamic numbering (1. PURPOSE, 2. SCOPE) work in Word
+    // ═══════════════════════════════════════════════════════════════
+    injectCountersForDOCX(element) {
+      const clone = element.cloneNode(true);
+      
+      // Get all h2 elements with computed styles
+      const headings = clone.querySelectorAll('h2');
+      
+      headings.forEach((heading, index) => {
+        // Get the computed ::before content
+        const computedStyle = window.getComputedStyle(heading, '::before');
+        const beforeContent = computedStyle.getPropertyValue('content');
+        
+        // Check if there's actual counter content (not "none" or empty)
+        if (beforeContent && beforeContent !== 'none' && beforeContent !== '""') {
+          // Remove quotes from content value
+          let counterText = beforeContent.replace(/^["']|["']$/g, '');
+          
+          // If CSS counters are being used, fall back to manual counting
+          if (counterText.includes('counter')) {
+            counterText = (index + 1) + '. ';
+          }
+          
+          // Get current heading text
+          const currentText = heading.textContent.trim();
+          
+          // Check if number is already present (avoid double-numbering)
+          if (!/^\d+\./.test(currentText)) {
+            // Prepend the counter text
+            heading.textContent = counterText + currentText;
+          }
+        } else {
+          // Fallback: If we can't get ::before content, use manual numbering
+          const currentText = heading.textContent.trim();
+          if (!/^\d+\./.test(currentText)) {
+            heading.textContent = (index + 1) + '. ' + currentText;
+          }
+        }
+      });
+      
+      return clone;
     },
 
     getPreviewElement() {
@@ -250,18 +295,24 @@ window.initSOPApp = function () {
         return this.showLibraryMissingError("html2pdf");
       }
 
-      try {
-        UtilsModule.log("📄 Generating PDF...");
-        const element = this.getPreviewElement();
-        const clone = element.cloneNode(true);
+          try {
+      UtilsModule.log("📝 Generating DOCX...");
+      const element = this.getPreviewElement();
+      
+      // ← FIX #3: Inject counter values before export
+      const elementWithNumbers = this.injectCountersForDOCX(element);
+      let htmlContent = elementWithNumbers.innerHTML;
 
-        clone
-          .querySelectorAll(
-            ".toolbar-buttons, .action-bar, .no-print, .ui-controls"
-          )
-          .forEach((el) => {
-            el.remove();
-          });
+      const temp = document.createElement("div");
+      temp.innerHTML = htmlContent;
+      temp
+        .querySelectorAll(
+          ".toolbar-buttons, .action-bar, .no-print, .ui-controls, .page-break-indicator"
+        )
+        .forEach((el) => {
+          el.remove();
+        });
+
 
         const options = {
           margin: this.CONFIG.PRINT_MARGIN_MM,

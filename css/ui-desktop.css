@@ -458,22 +458,38 @@ button:hover::before {
 }
 
 #preview-wrapper {
-    flex: 1;
-    overflow-y: auto;
-    padding: 32px;
-    display: flex;
-    justify-content: center;
-    background: #ffffff;
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  background: #f8f8f8;  /* ← FIX: Light gray instead of white to avoid filter effect */
 }
 
 #preview {
-    width: 210mm;
-    background: white;
-    padding: 20mm;
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    animation: fadeIn 0.6s ease;
+  width: 210mm;
+  background: white;
+  padding: 20mm;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  animation: fadeIn 0.6s ease;
 }
+
+/* ← FIX: Add explicit print styles to remove any overlay */
+@media print {
+  #preview-wrapper {
+    background: white !important;
+    padding: 0 !important;
+  }
+  
+  #preview {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    filter: none !important;  /* ← FIX: Remove any filters */
+    opacity: 1 !important;    /* ← FIX: Ensure full opacity */
+  }
+}
+
 
 @keyframes fadeIn {
     from {
