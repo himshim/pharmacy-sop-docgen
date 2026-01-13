@@ -425,8 +425,173 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <!-- SOP Engine -->
-    <script src="../js/sop-engine.js"></script>
+   <!-- SOP Engine -->
+<script src="../js/sop-engine.js"></script>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- EXPORT FUNCTIONALITY FIX - Universal WYSIWYG Export for All Templates  -->
+<!-- Handles: Classic, PCI, NAAC, ISO templates                              -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<script>
+(function() {
+  'use strict';
+  
+  // ═══════════════════════════════════════════════════════════════════════
+  // HELPER: Extract Document Title (Works with ALL 4 templates)
+  // ═══════════════════════════════════════════════════════════════════════
+  function getDocumentTitle() {
+    const preview = document.getElementById('preview');
+    if (!preview) return 'SOP_Document';
+    
+    let title = '';
+    
+    // Strategy 1: Look for value-cell class (PCI/NAAC/ISO templates)
+    const valueCell = preview.querySelector('.value-cell');
+    if (valueCell && valueCell.textContent.trim()) {
+      title = valueCell.textContent.trim();
+    }
+    
+    // Strategy 2: Look for title in table (Classic template)
+    if (!title) {
+      const tableTitle = preview.querySelector('table td b');
+      if (tableTitle) {
+        title = tableTitle.textContent.trim();
+      }
+    }
+    
+    // Strategy 3: Look for any bold text in first table cell
+    if (!title) {
+      const firstBold = preview.querySelector('b, strong');
+      if (firstBold) {
+        title = firstBold.textContent.trim();
+      }
+    }
+    
+    // Strategy 4: Look for h1
+    if (!title) {
+      const h1 = preview.querySelector('h1');
+      if (h1) {
+        title = h1.textContent.trim();
+      }
+    }
+    
+    // Fallback
+    if (!title) {
+      title = 'SOP_Document';
+    }
+    
+    // Clean title for filename (remove special chars, limit length)
+    return title
+      .replace(/[^a-zA-Z0-9\s-]/g, '')
+      .replace(/\s+/g, '_')
+      .substring(0, 100) || 'SOP_Document';
+  }
+  
+  // ═══════════════════════════════════════════════════════════════════════
+  // INITIALIZATION
+  // ═══════════════════════════════════════════════════════════════════════
+  window.addEventListener('load', function() {
+    
+    // Wait for sop-engine.js initialization
+    setTimeout(function() {
+      
+      console.log('🔧 Initializing Universal Export Handlers...');
+      
+      // Verify ExportModule exists
+      if (typeof window.ExportModule === 'undefined') {
+        console.error('❌ ExportModule not found! Check if sop-engine.js loaded.');
+        return;
+      }
+      
+      const preview = document.getElementById('preview');
+      if (!preview) {
+        console.warn('⚠️ #preview element not found');
+      }
+      
+      // ─────────────────────────────────────────────────────────────────
+      // 1. FIX PRINT BUTTON
+      // Replace native window.print() with ExportModule.print()
+      // (adds printing-mode class for better CSS control)
+      // ─────────────────────────────────────────────────────────────────
+      const printButtons = document.querySelectorAll('button[onclick*="window.print"]');
+      printButtons.forEach(function(btn) {
+        btn.removeAttribute('onclick');
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          console.log('🖨️ Print via ExportModule (adds printing-mode class)');
+          window.ExportModule.print();
+        });
+        console.log('✓ Print button → ExportModule.print()');
+      });
+      
+      // ─────────────────────────────────────────────────────────────────
+      // 2. FIX PDF BUTTON  
+      // Connect to ExportModule.exportPDF() with smart filename
+      // ─────────────────────────────────────────────────────────────────
+      const pdfBtn = document.getElementById('print-btn');
+      if (pdfBtn) {
+        pdfBtn.addEventListener('click', function() {
+          const title = getDocumentTitle();
+          const filename = title + '.pdf';
+          console.log('📄 PDF Export: ' + filename);
+          window.ExportModule.exportPDF(filename);
+        });
+        console.log('✓ PDF button → ExportModule.exportPDF()');
+      } else {
+        console.warn('⚠️ PDF button (id="print-btn") not found in HTML');
+      }
+      
+      // ─────────────────────────────────────────────────────────────────
+      // 3. ENSURE WORD BUTTON EXISTS
+      // Create if missing, attach event handler
+      // ─────────────────────────────────────────────────────────────────
+      function ensureWordButton() {
+        let docxBtn = document.getElementById('docx-btn');
+        
+        if (!docxBtn) {
+          // Create button if UIModule didn't
+          const toolbar = document.querySelector('.toolbar-buttons');
+          if (toolbar) {
+            docxBtn = document.createElement('button');
+            docxBtn.id = 'docx-btn';
+            docxBtn.className = pdfBtn ? pdfBtn.className : 'btn-primary';
+            docxBtn.innerHTML = '📝 Export to Word';
+            docxBtn.title = 'Export as editable Word document (.docx)';
+            toolbar.appendChild(docxBtn);
+            console.log('✓ Word button created');
+          }
+        }
+        
+        if (docxBtn && !docxBtn.hasAttribute('data-handler-attached')) {
+          docxBtn.addEventListener('click', function() {
+            const title = getDocumentTitle();
+            const filename = title + '.docx';
+            console.log('📝 Word Export: ' + filename);
+            window.ExportModule.exportDOCX(filename);
+          });
+          docxBtn.setAttribute('data-handler-attached', 'true');
+          console.log('✓ Word button → ExportModule.exportDOCX()');
+        }
+      }
+      
+      // Try immediately
+      ensureWordButton();
+      
+      // Try again after 1 second (in case UI loads slowly)
+      setTimeout(ensureWordButton, 1000);
+      
+      // ─────────────────────────────────────────────────────────────────
+      // 4. VERIFICATION
+      // ─────────────────────────────────────────────────────────────────
+      console.log('✅ Universal Export initialized!');
+      console.log('   → Works with: Classic, PCI, NAAC, ISO templates');
+      console.log('   → WYSIWYG: What you see is what you export');
+      
+    }, 500); // Wait for sop-engine.js initialization
+  });
+})();
+</script>
+
 
     <!-- Collapsible Sections Handler -->
     <script>
