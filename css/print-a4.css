@@ -1,10 +1,7 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- * MS WORD A4 WYSIWYG PRINT STYLES - v3.0 NON-CONFLICTING
- * 
- * This file provides SHARED print styles only (typography, tables, etc.)
- * Individual UI files (ui-mobile.css, ui-desktop.css) handle their own
- * #preview padding and @page margins to avoid cascade conflicts.
+ * MS WORD A4 WYSIWYG PRINT STYLES - v3.1 FINAL FIX
+ * Fixed: Mobile top margin + Desktop multi-page margins
  * ═══════════════════════════════════════════════════════════════════
  */
 
@@ -90,12 +87,15 @@ table {
 
 
 /* ════════════════════════════════════════════════════════════════
-   4. PRINT MODE - SHARED STYLES ONLY
-
-   NOTE: #preview padding and @page margins are handled by individual
-   UI CSS files (ui-mobile.css, ui-desktop.css) to avoid conflicts
+   4. PRINT MODE - SHARED STYLES
    ════════════════════════════════════════════════════════════════ */
 @media print {
+    /* Page Setup - No margins (individual CSS files handle padding) */
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
     /* RESET EVERYTHING */
     :root, html, body {
         width: 100% !important;
@@ -141,12 +141,12 @@ table {
         background: transparent !important;
     }
 
-    /* PAGE CONTENT - MINIMAL RESET ONLY */
+    /* PAGE CONTENT - Let individual CSS handle padding */
     #preview {
         width: 100% !important;
         max-width: none !important;
         margin: 0 !important;
-        /* ⚠️ padding: NOT SET - Let individual CSS handle this */
+        /* padding: handled by ui-mobile.css and ui-desktop.css */
         position: static !important;
         display: block !important;
         visibility: visible !important;
@@ -155,6 +155,20 @@ table {
         box-shadow: none !important;
         border: none !important;
         box-sizing: border-box !important;
+    }
+
+    /* ✅ CRITICAL FIX: Remove top margin/padding from first elements */
+    #preview > *:first-child,
+    #preview > *:first-child > *:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* ✅ CRITICAL FIX: Remove top margin from early tables */
+    #preview > table:first-child,
+    #preview > table:nth-child(2),
+    #preview > div:first-child + table {
+        margin-top: 0 !important;
     }
 
     /* Prevent content overflow */
@@ -238,7 +252,7 @@ body.printing-mode #preview-wrapper {
     #preview table {
         border-collapse: collapse;
         width: 100%;
-        margin: 12pt 0; /* Consistent spacing */
+        margin: 12pt 0; /* Consistent spacing between tables */
     }
 }
 
