@@ -208,52 +208,6 @@ window.initSOPApp = function () {
       return el && el.innerHTML && el.innerHTML.trim().length > 0;
     },
 
-    // ═══════════════════════════════════════════════════════════════
-    // FIX #2: Inject numbering for DOCX (reads from LIVE DOM)
-    // ═══════════════════════════════════════════════════════════════
-    injectNumbersForDOCX(element) {
-      // Step 1: Read counter values from LIVE element (still in DOM)
-      const liveHeadings = element.querySelectorAll("h2");
-      const counterValues = [];
-
-      liveHeadings.forEach((heading, index) => {
-        try {
-          // Try to get computed ::before content
-          const beforeStyle = window.getComputedStyle(heading, "::before");
-          const content = beforeStyle.getPropertyValue("content");
-
-          // Check if content exists and is not "none"
-          if (content && content !== "none" && content !== '""') {
-            // Clean the content value
-            let counterText = content.replace(/^["']|["']$/g, "");
-            counterValues.push(counterText);
-          } else {
-            // Fallback to manual numbering
-            counterValues.push(index + 1 + ". ");
-          }
-        } catch (e) {
-          // If anything fails, use manual numbering
-          counterValues.push(index + 1 + ". ");
-        }
-      });
-
-      // Step 2: Now clone and inject the numbers
-      const clonedElement = element.cloneNode(true);
-      const clonedHeadings = clonedElement.querySelectorAll("h2");
-
-      clonedHeadings.forEach((heading, index) => {
-        const currentText = heading.textContent.trim();
-
-        // Only add number if not already present
-        if (!/^\d+\./.test(currentText)) {
-          const numberPrefix = counterValues[index] || index + 1 + ". ";
-          heading.textContent = numberPrefix + currentText;
-        }
-      });
-
-      return clonedElement;
-    },
-
     // ────── 1. PRINT ──────
     print() {
       if (!this.hasContent()) {
@@ -284,7 +238,7 @@ window.initSOPApp = function () {
       }
     },
 
-    // ────── 2. PDF EXPORT ──────
+    // ────── 2. PDF EXPORT (FIX #3: Clone variable renamed) ──────
     async exportPDF(filename) {
       if (!this.hasContent()) {
         alert("❌ No content to export. Please generate a document first.");
@@ -298,12 +252,10 @@ window.initSOPApp = function () {
 
       try {
         UtilsModule.log("📄 Generating PDF...");
-
-        // FIX #3: Clear variable naming to avoid conflicts
+        
         const sourceElement = this.getPreviewElement();
         const clonedElement = sourceElement.cloneNode(true);
 
-        // Remove UI elements from clone
         clonedElement
           .querySelectorAll(
             ".toolbar-buttons, .action-bar, .no-print, .ui-controls"
@@ -346,7 +298,7 @@ window.initSOPApp = function () {
       }
     },
 
-    // ────── 3. WORD EXPORT ──────
+    // ────── 3. WORD EXPORT (FIX #2: Inject numbers) ──────
     async exportDOCX(filename) {
       if (!this.hasContent()) {
         alert("❌ No content to export. Please generate a document first.");
@@ -365,11 +317,21 @@ window.initSOPApp = function () {
 
       try {
         UtilsModule.log("📝 Generating DOCX...");
-
-        // FIX #2: Get element with injected numbers
+        
         const sourceElement = this.getPreviewElement();
-        const elementWithNumbers = this.injectNumbersForDOCX(sourceElement);
-        let htmlContent = elementWithNumbers.innerHTML;
+        const clonedElement = sourceElement.cloneNode(true);
+
+        // FIX #2: Inject actual numbers into h2 headings
+        const headings = clonedElement.querySelectorAll('h2');
+        headings.forEach((heading, index) => {
+          const text = heading.textContent.trim();
+          // Only add number if not already present
+          if (!/^\d+\./.test(text)) {
+            heading.textContent = (index + 1) + '. ' + text;
+          }
+        });
+
+        let htmlContent = clonedElement.innerHTML;
 
         const tempDiv = document.createElement("div");
         tempDiv.innerHTML = htmlContent;

@@ -587,34 +587,15 @@ textarea {
         border-radius: 0 !important;
     }
 
-    /* ═══════════════════════════════════════════════════════════ */
-    /* FIX #1: Remove ALL margin/padding from first elements       */
-    /* ═══════════════════════════════════════════════════════════ */
+    /* FIX: Remove ALL top spacing */
     #preview > *:first-child,
-    #preview > *:first-child > *:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-    
+    #preview > *:first-child > *:first-child,
     #preview table:first-child,
     #preview div:first-child,
-    #preview header:first-child,
-    #preview section:first-child,
-    #preview h1:first-child,
-    #preview h2:first-child {
+    #preview header:first-child {
         margin-top: 0 !important;
         padding-top: 0 !important;
     }
-    
-    /* Also target nested first children (for PCI/NAAC templates) */
-    #preview .doc-header,
-    #preview header,
-    #preview > div:first-child > header:first-child,
-    #preview > div:first-child > table:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-    /* ═══════════════════════════════════════════════════════════ */
 
     @page {
         size: A4;
