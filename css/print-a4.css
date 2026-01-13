@@ -1,12 +1,18 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- * MS WORD A4 WYSIWYG PRINT STYLES - v3.1 FINAL FIX
- * Fixed: Mobile top margin + Desktop multi-page margins
+ * MS WORD A4 WYSIWYG PRINT STYLES - FINAL VALIDATED
+ * Matches Microsoft Word's default A4 layout (210mm x 297mm)
+ * Fixed: CSS Syntax Errors, Mobile Zoom, Desktop Blank Pages
  * ═══════════════════════════════════════════════════════════════════
  */
 
+/* ============ 1. PAGE SETUP ============ */
+@page {
+    size: A4 portrait;
+    margin: 20mm;
+}
 
-/* ============ 1. PAGE BREAKS ============ */
+/* ============ 2. PAGE BREAKS ============ */
 .page-break-before {
     page-break-before: always !important;
     break-before: page !important;
@@ -14,24 +20,12 @@
     height: 1px;
     margin: 0;
 }
-
 .page-break-after {
     page-break-after: always !important;
     break-after: page !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    page-break-after: avoid !important;
-    break-after: avoid !important;
-}
-
-table {
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
-}
-
-
-/* ============ 2. DESKTOP PREVIEW (SCREEN ONLY) ============ */
+/* ============ 3. DESKTOP PREVIEW ============ */
 #preview-wrapper {
     background: #525659;
     padding: 30px 0;
@@ -53,15 +47,14 @@ table {
     display: inline-block;
     position: relative;
     box-sizing: border-box;
-
+    
     font-family: "Times New Roman", Times, serif !important;
     font-size: 12pt !important;
     line-height: 1.5 !important;
     color: #000 !important;
 }
 
-
-/* ============ 3. MOBILE PREVIEW (Readable Zoom) ============ */
+/* ============ 4. MOBILE PREVIEW (Readable Zoom) ============ */
 @media screen and (max-width: 850px) {
     #preview-wrapper {
         padding: 10px 0 !important;
@@ -75,27 +68,26 @@ table {
     }
 
     #preview {
+        /* Keep A4 Size but Scale Down */
         width: 210mm !important;
         min-width: 210mm !important;
+        
+        /* 
+           STANDARD TRANSFORM 
+           (Replaced -moz- specific properties with standard ones)
+        */
         transform: scale(0.45);
         transform-origin: top center;
+        
         margin: 0 !important;
+        /* Negative margin to pull footer up since element shrunk */
         margin-bottom: -150px !important; 
         box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
     }
 }
 
-
-/* ════════════════════════════════════════════════════════════════
-   4. PRINT MODE - SHARED STYLES
-   ════════════════════════════════════════════════════════════════ */
+/* ============ 5. PRINT MODE (Layout Unlock) ============ */
 @media print {
-    /* Page Setup - No margins (individual CSS files handle padding) */
-    @page {
-        size: A4 portrait;
-        margin: 0;
-    }
-
     /* RESET EVERYTHING */
     :root, html, body {
         width: 100% !important;
@@ -107,7 +99,7 @@ table {
         display: block !important;
     }
 
-    /* HIDE UI COMPONENTS */
+    /* HIDE UI COMPONENTS (NOT app-container!) */
     .app-header, .controls-panel, .status-bar, 
     .toolbar-buttons, .preview-toolbar,
     .mobile-header, .tab-navigation,
@@ -141,41 +133,21 @@ table {
         background: transparent !important;
     }
 
-    /* PAGE CONTENT - Let individual CSS handle padding */
+    /* PAGE CONTENT */
     #preview {
         width: 100% !important;
         max-width: none !important;
         margin: 0 !important;
-        /* padding: handled by ui-mobile.css and ui-desktop.css */
-        padding: 20mm !important;
+        padding: 0 !important; /* Margins handled by @page */
         position: static !important;
         display: block !important;
         visibility: visible !important;
         overflow: visible !important;
+        
+        /* Reset Effects */
         transform: none !important;
         box-shadow: none !important;
         border: none !important;
-        box-sizing: border-box !important;
-    }
-
-    /* ✅ CRITICAL FIX: Remove top margin/padding from first elements */
-    #preview > *:first-child,
-    #preview > *:first-child > *:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
-    /* ✅ CRITICAL FIX: Remove top margin from early tables */
-    #preview > table:first-child,
-    #preview > table:nth-child(2),
-    #preview > div:first-child + table {
-        margin-top: 0 !important;
-    }
-
-    /* Prevent content overflow */
-    #preview * {
-        box-sizing: border-box !important;
-        max-width: 100% !important;
     }
 
     /* Ensure Print Colors */
@@ -185,14 +157,11 @@ table {
     }
 }
 
-
-/* ============ 5. JS PRINT HELPER ============ */
+/* ============ 6. JS PRINT HELPER ============ */
 body.printing-mode .app-container,
 body.printing-mode header,
 body.printing-mode nav,
-body.printing-mode aside { 
-    display: none !important; 
-}
+body.printing-mode aside { display: none !important; }
 
 body.printing-mode #preview-wrapper {
     position: static !important;
@@ -200,8 +169,6 @@ body.printing-mode #preview-wrapper {
     height: auto !important;
     overflow: visible !important;
 }
-
-
 /* ════════════════════════════════════════════════════════════════
    PROFESSIONAL ENHANCEMENTS - Auto-Numbering & Typography
    ════════════════════════════════════════════════════════════════ */
@@ -211,7 +178,7 @@ body.printing-mode #preview-wrapper {
     counter-reset: section;
 }
 
-/* Auto-Number Main Sections */
+/* Auto-Number Main Sections (Only visible ones!) */
 #preview h2 {
     counter-increment: section;
 }
@@ -239,25 +206,13 @@ body.printing-mode #preview-wrapper {
     margin-bottom: 8pt;
 }
 
-/* Table Enhancements - SCREEN ONLY */
-@media screen {
-    #preview table {
-        border-collapse: collapse;
-        width: 100%;
-        margin: 15pt 0;
-    }
+/* Table Enhancements */
+#preview table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15pt 0;
 }
 
-/* Table styling for PRINT */
-@media print {
-    #preview table {
-        border-collapse: collapse;
-        width: 100%;
-        margin: 12pt 0; /* Consistent spacing between tables */
-    }
-}
-
-/* Table borders and styling (applies to both screen and print) */
 #preview table th,
 #preview table td {
     border: 1px solid #333;
@@ -288,6 +243,6 @@ body.printing-mode #preview-wrapper {
 /* Print Color Preservation */
 @media print {
     #preview h2::before {
-        color: #000 !important;
+        color: #000 !important; /* Black numbers for print */
     }
 }

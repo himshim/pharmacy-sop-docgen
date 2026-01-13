@@ -573,39 +573,22 @@ textarea {
     #preview, #preview * {
         visibility: visible !important;
     }
-    
-    /* Remove padding/margins from mobile wrappers */
-    .card {
-        padding: 0 !important;
-        margin: 0 !important;
-        background: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    .card-title {
-        display: none !important;
-    }
-    
-    #preview-wrapper {
-        margin: 0 !important;
-        padding: 0 !important;
-        background: transparent !important;
-    }
 
     #preview {
-        position: static !important;  /* ← Changed: Use static instead of absolute */
-        width: 100% !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 210mm !important;
+        min-height: 297mm !important;
         margin: 0 !important;
-        padding: 20mm !important;  /* ← Back to padding (works on all pages!) */
+        padding: 20mm !important;
         background: white !important;
         box-shadow: none !important;
         border-radius: 0 !important;
-        box-sizing: border-box !important;
     }
 
     @page {
         size: A4;
-        margin: 0;  /* ← Keep at 0, let padding handle it */
+        margin: 0;
     }
 }
