@@ -3,209 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        /* Auto-numbering for toggleable sections */
-        body { counter-reset: section; font-family: 'Calibri', Arial, sans-serif; }
-        h2:not(.no-counter) { counter-increment: section; }
-        h2:not(.no-counter)::before { content: counter(section) ". "; }
-
-        .badge { 
-            background: #003366; 
-            color: white; 
-            padding: 8px 15px; 
-            border-radius: 4px; 
-            font-weight: bold;
-            display: inline-block;
-            margin: 10px 0;
+        /* Auto-numbering with blue color matching institutional theme */
+        body { 
+            counter-reset: section; 
+            font-family: 'Calibri', 'Arial', sans-serif; 
+            line-height: 1.5;
+            color: #333333;
         }
+        h2:not(.no-counter) { counter-increment: section; }
+        h2:not(.no-counter)::before { 
+            content: counter(section) ". "; 
+            color: #003366;
+            font-weight: bold;
+        }
+
         table { width: 100%; border-collapse: collapse; margin: 12px 0; }
-        table, th, td { border: 1px solid #003366; }
-        th, td { padding: 10px; text-align: left; }
-        th { background-color: #003366; color: white; font-weight: bold; }
-        .header-row { background-color: #e6f2ff; font-weight: bold; }
-        .value-cell { background-color: #f9f9f9; }
+        table, th, td { border: 1px solid #999999; }
+        th, td { padding: 10px; text-align: left; font-size: 11pt; }
+        th { background-color: #e6f0ff; color: #003366; font-weight: bold; }
+        .header-row { background-color: #f2f2f2; font-weight: bold; color: #505050; }
+        .value-cell { background-color: #ffffff; }
+
         h1 { 
             text-align: center; 
-            font-size: 22px; 
-            margin: 15px 0; 
+            font-size: 18pt; 
+            margin: 20px 0 15px 0; 
             color: #003366;
             border-bottom: 3px solid #003366;
             padding-bottom: 10px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
         }
-        h2 { font-size: 16px; margin: 15px 0 8px 0; color: #003366; }
-        p, ul, ol { margin: 8px 0; line-height: 1.7; }
-        .signature-box {
-            border: 1px solid #003366;
-            padding: 15px;
-            margin: 10px 0;
-            background: #f9f9f9;
-            min-height: 80px;
+        h2 { 
+            font-size: 13pt; 
+            margin: 15px 0 10px 0; 
+            color: #003366; 
+            font-weight: bold;
+            page-break-after: avoid;
         }
-        .signature-row { display: flex; justify-content: space-between; }
-        .signature-col { flex: 1; padding: 10px; }
-        .naac-note {
-            background: #e6f2ff;
-            border-left: 4px solid #003366;
-            padding: 12px;
+        h3 { 
+            font-size: 11pt;
+            margin: 12px 0 8px 0;
+            color: #0052a3;
+            font-weight: bold;
+        }
+        p, ul, ol { 
+            margin: 8px 0; 
+            font-size: 11pt;
+            text-align: justify;
+        }
+        li { margin: 5px 0; }
+
+        .doc-control-table {
+            width: 100%;
             margin: 15px 0;
-            font-style: italic;
+            border-collapse: collapse;
+        }
+        .doc-control-table td {
+            border: 1px solid #999999;
+            padding: 8px;
+            font-size: 10pt;
+        }
+        .doc-control-label {
+            background-color: #e6f0ff;
+            font-weight: bold;
+            color: #003366;
+            width: 25%;
+        }
+
+        .signature-section {
+            margin-top: 20px;
+            page-break-inside: avoid;
+        }
+        .signature-table {
+            width: 100%;
+            margin: 15px 0;
+            border-collapse: collapse;
+        }
+        .signature-table td {
+            border: 1px solid #999999;
+            padding: 12px;
+            text-align: center;
+            font-size: 10pt;
+            vertical-align: bottom;
+            height: 80px;
+        }
+        .signature-label {
+            border-top: 2px solid #003366;
+            padding-top: 5px;
+            font-weight: normal;
+            color: #003366;
+        }
+
+        .change-history {
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+        .change-history table {
+            width: 100%;
+        }
+
+        @media print {
+            body { font-size: 11pt; }
+            h1 { page-break-after: avoid; }
+            h2 { page-break-after: avoid; }
+            .signature-section { page-break-before: avoid; }
         }
     </style>
 </head>
 <body>
-    <div class="badge">NAAC Accreditation Compliant</div>
 
-    <h1>{{title}}</h1>
+<h1>Standard Operating Procedure</h1>
 
-    <!-- Document Control Information -->
-    {{#if sectionDocControl}}
-    <table>
-        <tr class="header-row">
-            <td colspan="2" style="text-align: center;">DOCUMENT CONTROL INFORMATION</td>
-        </tr>
-        <tr>
-            <td style="width: 30%;"><b>Institute Name:</b></td>
-            <td class="value-cell">{{institute}}</td>
-        </tr>
-        <tr>
-            <td><b>Department:</b></td>
-            <td class="value-cell">{{department}}</td>
-        </tr>
-        {{#if sectionSopNumber}}
-        <tr>
-            <td><b>SOP Number:</b></td>
-            <td class="value-cell">{{sopNumber}}</td>
-        </tr>
-        {{/if}}
-        <tr>
-            <td><b>Revision Number:</b></td>
-            <td class="value-cell">{{revisionNo}}</td>
-        </tr>
-        {{#if sectionEffectiveDate}}
-        <tr>
-            <td><b>Effective Date:</b></td>
-            <td class="value-cell">{{effectiveDate}}</td>
-        </tr>
-        {{/if}}
-        {{#if sectionRevisionDate}}
-        <tr>
-            <td><b>Revision Date:</b></td>
-            <td class="value-cell">{{revisionDate}}</td>
-        </tr>
-        {{/if}}
-        <tr>
-            <td><b>Next Review Date:</b></td>
-            <td class="value-cell">{{nextReviewDate}}</td>
-        </tr>
-        {{#if sectionCopyType}}
-        <tr>
-            <td><b>Copy Type:</b></td>
-            <td class="value-cell">{{copyType}}</td>
-        </tr>
-        {{/if}}
-    </table>
-    {{/if}}
+<table class="doc-control-table">
+    <tr>
+        <td class="doc-control-label">Institute</td>
+        <td>{{institute}}</td>
+        <td class="doc-control-label">Department</td>
+        <td>{{department}}</td>
+    </tr>
+    <tr>
+        <td class="doc-control-label">Title</td>
+        <td colspan="3">{{title}}</td>
+    </tr>
+    {{#if sectionSopNumber}}<tr>
+        <td class="doc-control-label">SOP Number</td>
+        <td>{{sopNumber}}</td>
+        <td class="doc-control-label">Revision No.</td>
+        <td>{{revisionNo}}</td>
+    </tr>{{/if}}
+    {{#if sectionEffectiveDate}}<tr>
+        <td class="doc-control-label">Effective Date</td>
+        <td>{{effectiveDate}}</td>
+        <td class="doc-control-label">Revision Date</td>
+        <td>{{revisionDate}}</td>
+    </tr>{{/if}}
+    {{#if sectionRevisionDate}}<tr>
+        <td class="doc-control-label">Next Review Date</td>
+        <td colspan="3">{{nextReviewDate}}</td>
+    </tr>{{/if}}
+    {{#if sectionCopyType}}<tr>
+        <td class="doc-control-label">Copy Type</td>
+        <td colspan="3">{{copyType}}</td>
+    </tr>{{/if}}
+</table>
 
-    <div class="naac-note">
-        <b>NAAC Compliance Note:</b> This SOP is maintained as per NAAC guidelines for Quality Assurance and institutional excellence.
-    </div>
+{{#if sectionDocControl}}
+<h2>Document Control</h2>
+<p>This document is the property of {{institute}}, {{department}} department. Unauthorized reproduction or distribution is prohibited. This SOP establishes the procedure for institutional quality management and operational excellence.</p>
+{{/if}}
 
-    <!-- Purpose -->
-    <h2>Purpose</h2>
-    {{{purpose}}}
+{{#if sectionPurpose}}
+<h2>Purpose</h2>
+<p>{{{purpose}}}</p>
+{{/if}}
 
-    <!-- Scope -->
-    <h2>Scope</h2>
-    {{{scope}}}
+{{#if sectionScope}}
+<h2>Scope</h2>
+<p>{{{scope}}}</p>
+{{/if}}
 
-    <!-- Applicability (Toggleable) -->
-    {{#if sectionApplicability}}
-    <h2>Applicability</h2>
-    {{{applicability}}}
-    {{/if}}
+{{#if sectionResponsibility}}
+<h2>Responsibility</h2>
+<p>{{{responsibility}}}</p>
+{{/if}}
 
-    <!-- Responsibility -->
-    <h2>Responsibility</h2>
-    {{{responsibility}}}
+{{#if sectionProcedure}}
+<h2>Procedure</h2>
+<p>{{{procedure}}}</p>
+{{/if}}
 
-    <!-- Abbreviations (Toggleable) -->
-    {{#if sectionAbbreviations}}
-    <h2>Definitions & Abbreviations</h2>
-    {{{abbreviations}}}
-    {{/if}}
+{{#if sectionPrecautions}}
+<h2>Safety Precautions</h2>
+<p>{{{precautions}}}</p>
+{{/if}}
 
-    <!-- Precautions & Safety -->
-    <h2>Precautions & Safety Measures</h2>
-    {{{precautions}}}
+{{#if sectionApplicability}}
+<h2>Applicability</h2>
+<p>{{{applicability}}}</p>
+{{/if}}
 
-    <!-- Procedure -->
-    <h2>Procedure</h2>
-    {{{procedure}}}
+{{#if sectionAbbreviations}}
+<h2>Abbreviations</h2>
+<p>{{{abbreviations}}}</p>
+{{/if}}
 
-    <!-- References (Toggleable) -->
-    {{#if sectionReferences}}
-    <h2>References</h2>
-    {{{references}}}
-    {{/if}}
+{{#if sectionReferences}}
+<h2>References</h2>
+<p>{{{references}}}</p>
+{{/if}}
 
-    <!-- Annexures (Toggleable) -->
-    {{#if sectionAnnexures}}
-    <h2>Annexures & Attachments</h2>
-    {{{annexures}}}
-    {{/if}}
+{{#if sectionAnnexures}}
+<h2>Annexures</h2>
+<p>{{{annexures}}}</p>
+{{/if}}
 
-    <!-- Change History (Toggleable) -->
-    {{#if sectionChangeHistory}}
-    <h2>Change History & Version Control</h2>
+{{#if sectionChangeHistory}}
+<h2>Change History</h2>
+<div class="change-history">
     <table>
         <thead>
             <tr>
-                <th>Revision No.</th>
-                <th>Date</th>
-                <th>Description of Changes</th>
-                <th>Approved By</th>
+                <th style="width: 12%;">Revision No.</th>
+                <th style="width: 15%;">Date</th>
+                <th style="width: 48%;">Changes Made</th>
+                <th style="width: 25%;">Verified By</th>
             </tr>
         </thead>
         <tbody>
             {{{changeHistoryRows}}}
         </tbody>
     </table>
-    <p><i>Note: All revisions are documented and approved as per NAAC quality assurance requirements.</i></p>
-    {{/if}}
+</div>
+{{/if}}
 
-    <!-- Approval & Authorization -->
-    <h2 class="no-counter">Approval & Authorization</h2>
-    <div class="signature-row">
-        <div class="signature-col">
-            <div class="signature-box">
-                <p><b>Prepared By:</b></p>
-                <p>Name: {{preparedBy}}</p>
-                <p>Designation: {{preparedDesig}}</p>
-                <p>Date: {{preparedDate}}</p>
-                <p>Signature: _______________</p>
-            </div>
-        </div>
-        <div class="signature-col">
-            <div class="signature-box">
-                <p><b>Verified By:</b></p>
-                <p>Name: {{checkedBy}}</p>
-                <p>Designation: {{checkedDesig}}</p>
-                <p>Date: {{checkedDate}}</p>
-                <p>Signature: _______________</p>
-            </div>
-        </div>
-        <div class="signature-col">
-            <div class="signature-box">
-                <p><b>Approved By:</b></p>
-                <p>Name: {{approvedBy}}</p>
-                <p>Designation: {{approvedDesig}}</p>
-                <p>Date: {{approvedDate}}</p>
-                <p>Signature: _______________</p>
-            </div>
-        </div>
-    </div>
+<div class="signature-section">
+    <h2>Approvals</h2>
+    <table class="signature-table">
+        <tr>
+            <td>
+                <div style="min-height: 60px;"></div>
+                <div class="signature-label">{{approvalName1}}</div>
+                <div style="font-size: 9pt; color: #666666;">{{approvalTitle1}}</div>
+            </td>
+            <td>
+                <div style="min-height: 60px;"></div>
+                <div class="signature-label">{{approvalName2}}</div>
+                <div style="font-size: 9pt; color: #666666;">{{approvalTitle2}}</div>
+            </td>
+            <td>
+                <div style="min-height: 60px;"></div>
+                <div class="signature-label">{{approvalName3}}</div>
+                <div style="font-size: 9pt; color: #666666;">{{approvalTitle3}}</div>
+            </td>
+        </tr>
+    </table>
+</div>
 
-    <div class="naac-note" style="margin-top: 20px;">
-        <b>Quality Assurance:</b> This document is part of the institution's quality assurance framework and is subject to periodic review as per NAAC assessment criteria.
-    </div>
 </body>
 </html>
