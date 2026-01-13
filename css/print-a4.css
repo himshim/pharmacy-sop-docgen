@@ -185,7 +185,7 @@ body.printing-mode #preview-wrapper {
 
 #preview h2::before {
     content: counter(section) ". ";
-    color: #667eea;
+    color: #000;
     font-weight: bold;
 }
 

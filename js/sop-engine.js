@@ -238,65 +238,92 @@ window.initSOPApp = function () {
       }
     },
 
-    // ────── 2. PDF EXPORT (FIX #3: Clone variable renamed) ──────
-    async exportPDF(filename) {
-      if (!this.hasContent()) {
-        alert("❌ No content to export. Please generate a document first.");
-        return;
-      }
+    // ────── 2. PDF EXPORT (DESKTOP BUG FIXED) ──────
+async exportPDF(filename) {
+  if (!this.hasContent()) {
+    alert("❌ No content to export. Please generate a document first.");
+    return;
+  }
 
-      if (typeof html2pdf === "undefined") {
-        UtilsModule.error("❌ html2pdf library not found");
-        return this.showLibraryMissingError("html2pdf");
-      }
+  if (typeof html2pdf === "undefined") {
+    UtilsModule.error("❌ html2pdf library not found");
+    return this.showLibraryMissingError("html2pdf");
+  }
 
-      try {
-        UtilsModule.log("📄 Generating PDF...");
-        
-        const sourceElement = this.getPreviewElement();
-        const clonedElement = sourceElement.cloneNode(true);
+  try {
+    UtilsModule.log("📄 Generating PDF...");
 
-        clonedElement
-          .querySelectorAll(
-            ".toolbar-buttons, .action-bar, .no-print, .ui-controls"
-          )
-          .forEach((el) => {
-            el.remove();
-          });
+    const sourceElement = this.getPreviewElement();
+    const clonedElement = sourceElement.cloneNode(true);
 
-        const options = {
-          margin: this.CONFIG.PRINT_MARGIN_MM,
-          filename: filename || "SOP_Document.pdf",
-          image: {
-            type: "jpeg",
-            quality: 0.98,
-          },
-          html2canvas: {
-            scale: this.CONFIG.PDF_SCALE,
-            useCORS: true,
-            letterRendering: true,
-            allowTaint: true,
-          },
-          jsPDF: {
-            unit: "mm",
-            format: this.CONFIG.PDF_FORMAT,
-            orientation: "portrait",
-            compress: true,
-          },
-          pagebreak: {
-            mode: ["avoid-all", "css", "legacy"],
-            after: ".page-break",
-          },
-        };
+    /* =====================================================
+       FIX #1: REMOVE PREVIEW-ONLY VISUAL EFFECTS
+       (box-shadow, gray background, overlays)
+       ===================================================== */
+    clonedElement.style.boxShadow = "none";
+    clonedElement.style.background = "#ffffff";
 
-        await html2pdf().set(options).from(clonedElement).save();
-        UtilsModule.log("✅ PDF exported successfully");
-        alert("✅ PDF saved successfully!");
-      } catch (error) {
-        UtilsModule.error("❌ PDF export failed:", error);
-        alert(`❌ PDF export failed: ${error.message}`);
-      }
-    },
+    // If preview is wrapped, neutralize wrapper too
+    const wrapper = clonedElement.closest("#preview-wrapper");
+    if (wrapper) {
+      wrapper.style.background = "#ffffff";
+      wrapper.style.boxShadow = "none";
+    }
+
+    /* Remove UI-only elements */
+    clonedElement
+      .querySelectorAll(
+        ".toolbar-buttons, .action-bar, .no-print, .ui-controls"
+      )
+      .forEach((el) => el.remove());
+
+    /* =====================================================
+       FIX #2 + #3: PDF OPTIONS (TOP MARGIN & OVERLAY FIX)
+       ===================================================== */
+    const options = {
+      /* FIX #2: Explicit margins (top = 0 prevents white band) */
+      margin: [0, 10, 10, 10], // top, right, bottom, left (mm)
+
+      filename: filename || "SOP_Document.pdf",
+
+      image: {
+        type: "jpeg",
+        quality: 0.98,
+      },
+
+      html2canvas: {
+        scale: this.CONFIG.PDF_SCALE,
+
+        /* FIX #3: Force white background (no transparency) */
+        backgroundColor: "#ffffff",
+
+        useCORS: true,
+        letterRendering: true,
+        allowTaint: true,
+      },
+
+      jsPDF: {
+        unit: "mm",
+        format: this.CONFIG.PDF_FORMAT,
+        orientation: "portrait",
+        compress: true,
+      },
+
+      pagebreak: {
+        mode: ["avoid-all", "css", "legacy"],
+        after: ".page-break",
+      },
+    };
+
+    await html2pdf().set(options).from(clonedElement).save();
+
+    UtilsModule.log("✅ PDF exported successfully");
+    alert("✅ PDF saved successfully!");
+  } catch (error) {
+    UtilsModule.error("❌ PDF export failed:", error);
+    alert(`❌ PDF export failed: ${error.message}`);
+  }
+},
 
 // ────── 3. WORD EXPORT (PATCHED – DUAL LAYOUT SAFE) ──────
 async exportDOCX(filename) {
