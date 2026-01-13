@@ -1,9 +1,11 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- * MS WORD A4 WYSIWYG PRINT STYLES - FINAL v2.1 BULLETPROOF
- * Mobile Top Margin: NUCLEAR FIX
+ * MS WORD A4 WYSIWYG PRINT STYLES - FINAL v2.2 SMART UI ISOLATION
+ * Mobile Top Margin: Fixed with body.mobile-ui targeting
+ * Desktop Margin: Fixed with body.desktop-ui targeting
  * ═══════════════════════════════════════════════════════════════════
  */
+
 
 
 /* ============ 1. PAGE SETUP - ALL PAGES ============ */
@@ -23,6 +25,7 @@
 @page :right {
     margin: 20mm;
 }
+
 
 
 /* ============ 2. PAGE BREAKS ============ */
@@ -48,6 +51,7 @@ table {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
 }
+
 
 
 /* ============ 3. DESKTOP PREVIEW ============ */
@@ -80,6 +84,7 @@ table {
 }
 
 
+
 /* ============ 4. MOBILE PREVIEW (Readable Zoom) ============ */
 @media screen and (max-width: 850px) {
     #preview-wrapper {
@@ -103,6 +108,7 @@ table {
         box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
     }
 }
+
 
 
 /* ============ 5. PRINT MODE (Layout Unlock) ============ */
@@ -168,53 +174,6 @@ table {
         box-sizing: border-box !important;
     }
 
-    /* ═══════════════════════════════════════════════════════════════
-       NUCLEAR FIX: Mobile Top Margin Removal (Maximum Specificity)
-       ═══════════════════════════════════════════════════════════════ */
-
-    /* Target EVERYTHING that could be first */
-    #preview > *:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
-    /* Nested first children */
-    #preview > *:first-child > *:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
-    /* Deeper nesting */
-    #preview > div:first-child > *:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
-    /* All possible first tables */
-    #preview table:first-child,
-    #preview > table:first-child,
-    #preview > *:first-child table:first-of-type,
-    #preview > div:first-child table:first-child {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
-    /* Override global table margins for ALL tables in print */
-    #preview table {
-        margin-top: 12pt !important;
-        margin-bottom: 12pt !important;
-    }
-
-    /* But FORCE first table to have NO top margin */
-    #preview > table:first-child,
-    #preview > table:first-of-type,
-    #preview > *:first-child > table:first-child,
-    #preview > *:first-child > table:first-of-type {
-        margin-top: 0 !important;
-    }
-
-    /* ═══════════════════════════════════════════════════════════════ */
-
     /* Prevent content overflow */
     #preview * {
         box-sizing: border-box !important;
@@ -227,6 +186,64 @@ table {
         print-color-adjust: exact !important;
     }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   5A. MOBILE-ONLY PRINT FIX (Remove top margin)
+   ═══════════════════════════════════════════════════════════════ */
+@media print {
+    /* ✅ MOBILE ONLY: Target EVERYTHING that could be first */
+    body.mobile-ui #preview > *:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Nested first children */
+    body.mobile-ui #preview > *:first-child > *:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Deeper nesting */
+    body.mobile-ui #preview > div:first-child > *:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* All possible first tables */
+    body.mobile-ui #preview table:first-child,
+    body.mobile-ui #preview > table:first-child,
+    body.mobile-ui #preview > *:first-child table:first-of-type,
+    body.mobile-ui #preview > div:first-child table:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Override global table margins for ALL tables in mobile print */
+    body.mobile-ui #preview table {
+        margin-top: 12pt !important;
+        margin-bottom: 12pt !important;
+    }
+
+    /* But FORCE first table to have NO top margin */
+    body.mobile-ui #preview > table:first-child,
+    body.mobile-ui #preview > table:first-of-type,
+    body.mobile-ui #preview > *:first-child > table:first-child,
+    body.mobile-ui #preview > *:first-child > table:first-of-type {
+        margin-top: 0 !important;
+    }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   5B. DESKTOP-ONLY PRINT (Natural @page margins)
+   ═══════════════════════════════════════════════════════════════ */
+@media print {
+    /* ✅ DESKTOP: Uses @page margins naturally */
+    /* No special first-child rules needed */
+    /* Tables keep their normal margins for proper spacing */
+}
+
 
 
 /* ============ 6. JS PRINT HELPER ============ */
@@ -243,6 +260,7 @@ body.printing-mode #preview-wrapper {
     height: auto !important;
     overflow: visible !important;
 }
+
 
 
 /* ════════════════════════════════════════════════════════════════
