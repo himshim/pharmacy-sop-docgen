@@ -1,0 +1,488 @@
+<!-- 
+═══════════════════════════════════════════════════════════════════════
+  PHARMA QA MASTER SOP TEMPLATE - v4.0 PROFESSIONAL
+
+  Designed by: Quality Assurance Expert
+  Standards: WHO GMP, ICH Guidelines, ISO 17025, cGMP
+  Features: 
+    - Full dynamic field support with toggles
+    - DOCX-friendly clean markup
+    - Equipment/Testing/Validation ready
+    - Professional formatting
+    - Easy to edit after export
+
+  Use this as the MODEL for all other SOP templates
+═══════════════════════════════════════════════════════════════════════
+-->
+
+<!-- ═══════════════════ HEADER SECTION ═══════════════════ -->
+<div style="text-align: center; margin-bottom: 20px;">
+    <h1 style="border:none; margin-bottom: 5px; font-size: 16pt;">{{institute}}</h1>
+    <div style="font-size: 14pt; font-weight: bold; margin-bottom: 3px;">Department of {{department}}</div>
+    {{#if sectionLocation}}
+    <div style="font-size: 11pt; font-weight: normal; color: #555;">Location: {{location}}</div>
+    {{/if}}
+</div>
+
+<!-- ═══════════════════ TITLE & METADATA BLOCK ═══════════════════ -->
+<table cellspacing="0" style="margin-bottom: 15pt;">
+    <thead>
+        <tr style="background-color: #f0f0f0;">
+            <th colspan="2" style="text-align: center; font-size: 13pt; padding: 10pt;">STANDARD OPERATING PROCEDURE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th width="30%">Title</th>
+            <td width="70%"><b>{{title}}</b></td>
+        </tr>
+        {{#if sectionSopNumber}}
+        <tr>
+            <th>SOP Number</th>
+            <td>{{sopNumber}}</td>
+        </tr>
+        {{/if}}
+        {{#if sectionCategory}}
+        <tr>
+            <th>Category</th>
+            <td>{{category}}</td>
+        </tr>
+        {{/if}}
+        {{#if sectionDepartment}}
+        <tr>
+            <th>Applicable Department(s)</th>
+            <td>{{applicableDepartments}}</td>
+        </tr>
+        {{/if}}
+        {{#if sectionEffectiveDate}}
+        <tr>
+            <th>Effective Date</th>
+            <td>{{effectiveDate}}</td>
+        </tr>
+        {{/if}}
+        {{#if sectionRevisionDate}}
+        <tr>
+            <th>Revision Date</th>
+            <td>{{revisionDate}}</td>
+        </tr>
+        {{/if}}
+        <tr>
+            <th>Revision Number</th>
+            <td>{{revisionNo}}</td>
+        </tr>
+        {{#if sectionReviewDate}}
+        <tr>
+            <th>Next Review Date</th>
+            <td>{{reviewDate}}</td>
+        </tr>
+        {{/if}}
+        {{#if sectionCopyType}}
+        <tr>
+            <th>Copy Type</th>
+            <td>{{copyType}}</td>
+        </tr>
+        {{/if}}
+        {{#if sectionSupersedes}}
+        <tr>
+            <th>Supersedes</th>
+            <td>{{supersedes}}</td>
+        </tr>
+        {{/if}}
+    </tbody>
+</table>
+
+<!-- ═══════════════════ 1. PURPOSE ═══════════════════ -->
+<h2>PURPOSE</h2>
+<p>{{purpose}}</p>
+
+<!-- ═══════════════════ 2. SCOPE ═══════════════════ -->
+<h2>SCOPE</h2>
+<p>{{scope}}</p>
+
+{{#if sectionApplicability}}
+<h2>APPLICABILITY</h2>
+<p>{{applicability}}</p>
+{{/if}}
+
+<!-- ═══════════════════ 3. RESPONSIBILITY ═══════════════════ -->
+<h2>RESPONSIBILITY</h2>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="30%">Designation</th>
+            <th width="70%">Responsibilities</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{responsibilityRows}}
+    </tbody>
+</table>
+
+{{#if sectionDefinitions}}
+<!-- ═══════════════════ 4. DEFINITIONS & ABBREVIATIONS ═══════════════════ -->
+<h2>DEFINITIONS & ABBREVIATIONS</h2>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="25%">Term/Abbreviation</th>
+            <th width="75%">Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{definitionsRows}}
+    </tbody>
+</table>
+{{/if}}
+
+{{#if sectionMaterials}}
+<!-- ═══════════════════ 5. MATERIALS & EQUIPMENT ═══════════════════ -->
+<h2>MATERIALS & EQUIPMENT</h2>
+
+{{#if sectionEquipment}}
+<h3>Equipment Required</h3>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="10%">S.No.</th>
+            <th width="35%">Equipment Name</th>
+            <th width="25%">ID/Code</th>
+            <th width="30%">Specification</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{equipmentRows}}
+    </tbody>
+</table>
+{{/if}}
+
+{{#if sectionReagents}}
+<h3>Reagents & Chemicals</h3>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="10%">S.No.</th>
+            <th width="40%">Name</th>
+            <th width="25%">Grade/Specification</th>
+            <th width="25%">Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{reagentsRows}}
+    </tbody>
+</table>
+{{/if}}
+
+{{#if sectionGlassware}}
+<h3>Glassware & Consumables</h3>
+<ul>
+    {{glasswareList}}
+</ul>
+{{/if}}
+{{/if}}
+
+{{#if sectionSafety}}
+<!-- ═══════════════════ 6. SAFETY & PRECAUTIONS ═══════════════════ -->
+<h2>SAFETY & PRECAUTIONS</h2>
+
+{{#if sectionPPE}}
+<h3>Personal Protective Equipment (PPE)</h3>
+<ul>
+    {{ppeList}}
+</ul>
+{{/if}}
+
+<h3>General Precautions</h3>
+<ul>
+    {{precautions}}
+</ul>
+
+{{#if sectionHazards}}
+<h3>Hazard Identification</h3>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="30%">Hazard Type</th>
+            <th width="40%">Description</th>
+            <th width="30%">Control Measure</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{hazardsRows}}
+    </tbody>
+</table>
+{{/if}}
+{{/if}}
+
+<!-- ═══════════════════ 7. PROCEDURE ═══════════════════ -->
+<h2>PROCEDURE</h2>
+
+{{#if sectionPreparation}}
+<h3>Preparation</h3>
+<ol>
+    {{preparationSteps}}
+</ol>
+{{/if}}
+
+<h3>{{#if sectionPreparation}}Operational {{/if}}Steps</h3>
+<ol>
+    {{procedure}}
+</ol>
+
+{{#if sectionCalculations}}
+<h3>Calculations & Formulas</h3>
+{{calculations}}
+{{/if}}
+
+{{#if sectionPostOperation}}
+<h3>Post-Operation Activities</h3>
+<ol>
+    {{postOperationSteps}}
+</ol>
+{{/if}}
+
+{{#if sectionDataRecording}}
+<!-- ═══════════════════ 8. DATA RECORDING & DOCUMENTATION ═══════════════════ -->
+<h2>DATA RECORDING & DOCUMENTATION</h2>
+<p>{{dataRecording}}</p>
+
+{{#if sectionRecords}}
+<h3>Records to be Maintained</h3>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="40%">Record Name</th>
+            <th width="30%">Format/Code</th>
+            <th width="30%">Retention Period</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{recordsRows}}
+    </tbody>
+</table>
+{{/if}}
+{{/if}}
+
+{{#if sectionAcceptanceCriteria}}
+<!-- ═══════════════════ 9. ACCEPTANCE CRITERIA ═══════════════════ -->
+<h2>ACCEPTANCE CRITERIA</h2>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="40%">Parameter</th>
+            <th width="30%">Specification</th>
+            <th width="30%">Action if Out-of-Spec</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{acceptanceCriteriaRows}}
+    </tbody>
+</table>
+{{/if}}
+
+{{#if sectionTroubleshooting}}
+<!-- ═══════════════════ 10. TROUBLESHOOTING ═══════════════════ -->
+<h2>TROUBLESHOOTING</h2>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="35%">Problem</th>
+            <th width="35%">Possible Cause</th>
+            <th width="30%">Corrective Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{troubleshootingRows}}
+    </tbody>
+</table>
+{{/if}}
+
+{{#if sectionMaintenance}}
+<!-- ═══════════════════ 11. MAINTENANCE & CALIBRATION ═══════════════════ -->
+<h2>MAINTENANCE & CALIBRATION</h2>
+
+<h3>Maintenance Schedule</h3>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="30%">Activity</th>
+            <th width="25%">Frequency</th>
+            <th width="25%">Responsible Person</th>
+            <th width="20%">Reference SOP</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{maintenanceRows}}
+    </tbody>
+</table>
+
+{{#if sectionCalibration}}
+<h3>Calibration Requirements</h3>
+<p>{{calibrationInfo}}</p>
+{{/if}}
+{{/if}}
+
+{{#if sectionQualityControl}}
+<!-- ═══════════════════ 12. QUALITY CONTROL CHECKS ═══════════════════ -->
+<h2>QUALITY CONTROL CHECKS</h2>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="40%">QC Check</th>
+            <th width="30%">Frequency</th>
+            <th width="30%">Acceptance Limit</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{qcChecksRows}}
+    </tbody>
+</table>
+{{/if}}
+
+{{#if sectionDeviations}}
+<!-- ═══════════════════ 13. DEVIATION HANDLING ═══════════════════ -->
+<h2>DEVIATION HANDLING</h2>
+<p>{{deviationHandling}}</p>
+{{/if}}
+
+{{#if sectionTraining}}
+<!-- ═══════════════════ 14. TRAINING REQUIREMENTS ═══════════════════ -->
+<h2>TRAINING REQUIREMENTS</h2>
+<p>{{trainingRequirements}}</p>
+
+{{#if sectionTrainingRecords}}
+<h3>Training Records</h3>
+<p>All personnel performing this procedure must be trained and qualified. Training records shall be maintained as per SOP on Training Management.</p>
+{{/if}}
+{{/if}}
+
+{{#if sectionEnvironmental}}
+<!-- ═══════════════════ 15. ENVIRONMENTAL CONDITIONS ═══════════════════ -->
+<h2>ENVIRONMENTAL CONDITIONS</h2>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="40%">Parameter</th>
+            <th width="30%">Required Range</th>
+            <th width="30%">Monitoring Frequency</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{environmentalRows}}
+    </tbody>
+</table>
+{{/if}}
+
+{{#if sectionWasteDisposal}}
+<!-- ═══════════════════ 16. WASTE DISPOSAL ═══════════════════ -->
+<h2>WASTE DISPOSAL</h2>
+<p>{{wasteDisposal}}</p>
+{{/if}}
+
+{{#if sectionReferences}}
+<!-- ═══════════════════ 17. REFERENCES ═══════════════════ -->
+<h2>REFERENCES</h2>
+<ol>
+    {{references}}
+</ol>
+{{/if}}
+
+{{#if sectionAnnexures}}
+<!-- ═══════════════════ 18. ANNEXURES ═══════════════════ -->
+<h2>ANNEXURES</h2>
+<ol>
+    {{annexures}}
+</ol>
+{{/if}}
+
+{{#if sectionChangeHistory}}
+<!-- ═══════════════════ 19. CHANGE HISTORY ═══════════════════ -->
+<div class="page-break-before"></div>
+<h2>CHANGE HISTORY</h2>
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="10%">Rev. No.</th>
+            <th width="15%">Date</th>
+            <th width="20%">Section(s) Changed</th>
+            <th width="40%">Description of Changes</th>
+            <th width="15%">Changed By</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{changeHistoryRows}}
+    </tbody>
+</table>
+{{/if}}
+
+<!-- ═══════════════════ 20. APPROVAL SIGNATURES ═══════════════════ -->
+<div class="page-break-before"></div>
+<h2>APPROVAL SIGNATURES</h2>
+
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th width="25%">Prepared By</th>
+            <th width="25%">Reviewed By</th>
+            <th width="25%">Approved By (QA)</th>
+            <th width="25%">Approved By (Management)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="height: 120px;">
+            <td style="vertical-align: bottom; padding: 10pt;">
+                <div><b>Name:</b> {{preparedBy}}</div>
+                <div><b>Designation:</b> {{preparedDesig}}</div>
+                <div><b>Department:</b> {{preparedDept}}</div>
+                <div><b>Date:</b> {{preparedDate}}</div>
+                <div style="margin-top: 20pt; border-top: 1px solid #000; padding-top: 5pt; text-align: center;">Signature</div>
+            </td>
+            <td style="vertical-align: bottom; padding: 10pt;">
+                <div><b>Name:</b> {{reviewedBy}}</div>
+                <div><b>Designation:</b> {{reviewedDesig}}</div>
+                <div><b>Department:</b> {{reviewedDept}}</div>
+                <div><b>Date:</b> {{reviewedDate}}</div>
+                <div style="margin-top: 20pt; border-top: 1px solid #000; padding-top: 5pt; text-align: center;">Signature</div>
+            </td>
+            <td style="vertical-align: bottom; padding: 10pt;">
+                <div><b>Name:</b> {{approvedByQA}}</div>
+                <div><b>Designation:</b> {{approvedDesigQA}}</div>
+                <div><b>Department:</b> QA</div>
+                <div><b>Date:</b> {{approvedDateQA}}</div>
+                <div style="margin-top: 20pt; border-top: 1px solid #000; padding-top: 5pt; text-align: center;">Signature</div>
+            </td>
+            <td style="vertical-align: bottom; padding: 10pt;">
+                <div><b>Name:</b> {{approvedByMgmt}}</div>
+                <div><b>Designation:</b> {{approvedDesigMgmt}}</div>
+                <div><b>Department:</b> Management</div>
+                <div><b>Date:</b> {{approvedDateMgmt}}</div>
+                <div style="margin-top: 20pt; border-top: 1px solid #000; padding-top: 5pt; text-align: center;">Signature</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- ═══════════════════ DISTRIBUTION LIST ═══════════════════ -->
+{{#if sectionDistribution}}
+<div style="margin-top: 20pt;">
+    <h3>Distribution List</h3>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th width="10%">Copy No.</th>
+                <th width="30%">Department</th>
+                <th width="30%">Location</th>
+                <th width="30%">Controlled/Uncontrolled</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{distributionRows}}
+        </tbody>
+    </table>
+</div>
+{{/if}}
+
+<!-- ═══════════════════ END OF SOP ═══════════════════ -->
+<div style="text-align: center; margin-top: 30pt; padding-top: 10pt; border-top: 2px solid #000; font-size: 10pt; color: #666;">
+    <b>END OF DOCUMENT</b><br/>
+    This is a controlled document. Any printed copy is uncontrolled and for reference only.
+</div>
