@@ -573,6 +573,25 @@ textarea {
     #preview, #preview * {
         visibility: visible !important;
     }
+    
+    /* ✅ FIX: Remove padding/margins from mobile wrappers (don't hide them!) */
+    .card {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .card-title {
+        display: none !important;  /* ← Only hide the title, not the card */
+    }
+    
+    #preview-wrapper {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+    }
 
     #preview {
         position: absolute !important;
@@ -585,25 +604,6 @@ textarea {
         background: white !important;
         box-shadow: none !important;
         border-radius: 0 !important;
-    }
-    
-    /* ✅ FIX: Hide mobile UI wrappers that create extra spacing */
-    .card,
-    .card-title,
-    #tab-preview {
-        display: none !important;
-        visibility: hidden !important;
-    }
-    
-    /* ✅ FIX: Make preview-wrapper behave like desktop */
-    #preview-wrapper {
-        position: absolute !important;
-        left: 0 !important;
-        top: 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        background: transparent !important;
-        visibility: visible !important;
     }
 
     @page {
