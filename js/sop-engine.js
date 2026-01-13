@@ -238,7 +238,7 @@ window.initSOPApp = function () {
       }
     },
 
-    // ────── 2. PDF EXPORT (FINAL STABLE VERSION) ──────
+    // ────── 2. PDF EXPORT (DESKTOP BUG FIXED – FINAL) ──────
 async exportPDF(filename) {
   if (!this.hasContent()) {
     alert("❌ No content to export. Please generate a document first.");
@@ -253,24 +253,26 @@ async exportPDF(filename) {
   try {
     UtilsModule.log("📄 Generating PDF...");
 
-    const preview = this.getPreviewElement();
+    const sourceElement = this.getPreviewElement();
+    const clonedElement = sourceElement.cloneNode(true);
 
-    /* =====================================================
-       TEMPORARILY NEUTRALIZE PREVIEW-ONLY STYLES
-       ===================================================== */
-    const originalStyles = {
-      boxShadow: preview.style.boxShadow,
-      background: preview.style.background,
-      transform: preview.style.transform,
-    };
+    /* FIX #1: REMOVE PREVIEW-ONLY VISUAL EFFECTS */
+    clonedElement.style.boxShadow = "none";
+    clonedElement.style.background = "#ffffff";
 
-    preview.style.boxShadow = "none";
-    preview.style.background = "#ffffff";
-    preview.style.transform = "none";
+    const wrapper = clonedElement.closest("#preview-wrapper");
+    if (wrapper) {
+      wrapper.style.background = "#ffffff";
+      wrapper.style.boxShadow = "none";
+    }
 
-    /* =====================================================
-       PDF OPTIONS (PROVEN STABLE)
-       ===================================================== */
+    /* Remove UI-only elements */
+    clonedElement
+      .querySelectorAll(
+        ".toolbar-buttons, .action-bar, .no-print, .ui-controls"
+      )
+      .forEach((el) => el.remove());
+
     const options = {
       margin: [0, 10, 10, 10],
 
@@ -282,16 +284,18 @@ async exportPDF(filename) {
       },
 
       html2canvas: {
-        scale: 2,
+        scale: this.CONFIG.PDF_SCALE,
         backgroundColor: "#ffffff",
         useCORS: true,
         allowTaint: true,
+
+        // 🔴 CRITICAL FIX
         letterRendering: false,
       },
 
       jsPDF: {
         unit: "mm",
-        format: "a4",
+        format: this.CONFIG.PDF_FORMAT,
         orientation: "portrait",
         compress: true,
       },
@@ -302,14 +306,7 @@ async exportPDF(filename) {
       },
     };
 
-    await html2pdf().set(options).from(preview).save();
-
-    /* =====================================================
-       RESTORE PREVIEW STYLES
-       ===================================================== */
-    preview.style.boxShadow = originalStyles.boxShadow;
-    preview.style.background = originalStyles.background;
-    preview.style.transform = originalStyles.transform;
+    await html2pdf().set(options).from(clonedElement).save();
 
     UtilsModule.log("✅ PDF exported successfully");
     alert("✅ PDF saved successfully!");
@@ -317,8 +314,8 @@ async exportPDF(filename) {
     UtilsModule.error("❌ PDF export failed:", error);
     alert(`❌ PDF export failed: ${error.message}`);
   }
-}
-,
+},
+
 
 // ────── 3. WORD EXPORT (PATCHED – DUAL LAYOUT SAFE) ──────
 async exportDOCX(filename) {
