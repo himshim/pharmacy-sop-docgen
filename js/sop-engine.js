@@ -238,7 +238,7 @@ window.initSOPApp = function () {
       }
     },
 
-    // ────── 2. PDF EXPORT (DESKTOP BUG FIXED – FINAL) ──────
+    // ────── 2. PDF EXPORT (DESKTOP BUG FIXED – FINAL, SAFE) ──────
 async exportPDF(filename) {
   if (!this.hasContent()) {
     alert("❌ No content to export. Please generate a document first.");
@@ -257,14 +257,13 @@ async exportPDF(filename) {
     const clonedElement = sourceElement.cloneNode(true);
 
     /* =====================================================
-       FIX #1: REMOVE PREVIEW-ONLY VISUAL EFFECTS
+       CLEAN PREVIEW-ONLY VISUALS
        ===================================================== */
     clonedElement.style.boxShadow = "none";
     clonedElement.style.background = "#ffffff";
     clonedElement.style.margin = "0";
     clonedElement.style.padding = "0";
 
-    /* Remove UI-only elements */
     clonedElement
       .querySelectorAll(
         ".toolbar-buttons, .action-bar, .no-print, .ui-controls"
@@ -272,26 +271,26 @@ async exportPDF(filename) {
       .forEach((el) => el.remove());
 
     /* =====================================================
-       FIX #4: FORCE ZERO-ORIGIN CAPTURE CONTAINER
-       (kills faint white overlay)
+       ZERO-ORIGIN CAPTURE ROOT (MUST BE IN DOM)
        ===================================================== */
     const captureRoot = document.createElement("div");
-    captureRoot.style.position = "absolute";
+    captureRoot.style.position = "fixed";
     captureRoot.style.top = "0";
     captureRoot.style.left = "0";
     captureRoot.style.width = "210mm";
     captureRoot.style.background = "#ffffff";
     captureRoot.style.margin = "0";
     captureRoot.style.padding = "0";
+    captureRoot.style.zIndex = "-1"; // invisible but renderable
 
     captureRoot.appendChild(clonedElement);
+    document.body.appendChild(captureRoot); // 🔴 REQUIRED
 
     /* =====================================================
-       FIX #2 + #3 + #5: PDF OPTIONS
+       PDF OPTIONS (STABLE)
        ===================================================== */
     const options = {
-      /* Explicit margins (top = 0 is critical) */
-      margin: [0, 10, 10, 10], // top, right, bottom, left (mm)
+      margin: [0, 10, 10, 10],
 
       filename: filename || "SOP_Document.pdf",
 
@@ -305,8 +304,6 @@ async exportPDF(filename) {
         backgroundColor: "#ffffff",
         useCORS: true,
         allowTaint: true,
-
-        /* FIX #5: MUST be false */
         letterRendering: false,
       },
 
@@ -324,6 +321,11 @@ async exportPDF(filename) {
     };
 
     await html2pdf().set(options).from(captureRoot).save();
+
+    /* =====================================================
+       CLEANUP (CRITICAL)
+       ===================================================== */
+    document.body.removeChild(captureRoot);
 
     UtilsModule.log("✅ PDF exported successfully");
     alert("✅ PDF saved successfully!");
