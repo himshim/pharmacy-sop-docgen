@@ -574,7 +574,7 @@ textarea {
         visibility: visible !important;
     }
     
-    /* ✅ FIX: Remove padding/margins from mobile wrappers (don't hide them!) */
+    /* Remove padding/margins from mobile wrappers */
     .card {
         padding: 0 !important;
         margin: 0 !important;
@@ -584,7 +584,7 @@ textarea {
     }
     
     .card-title {
-        display: none !important;  /* ← Only hide the title, not the card */
+        display: none !important;
     }
     
     #preview-wrapper {
@@ -594,20 +594,18 @@ textarea {
     }
 
     #preview {
-        position: absolute !important;
-        left: 0 !important;
-        top: 0 !important;
-        width: 210mm !important;
-        min-height: 297mm !important;
+        position: static !important;  /* ← Changed: Use static instead of absolute */
+        width: 100% !important;
         margin: 0 !important;
-        padding: 0 !important;
+        padding: 20mm !important;  /* ← Back to padding (works on all pages!) */
         background: white !important;
         box-shadow: none !important;
         border-radius: 0 !important;
+        box-sizing: border-box !important;
     }
 
     @page {
         size: A4;
-        margin: 20mm;
+        margin: 0;  /* ← Keep at 0, let padding handle it */
     }
 }
