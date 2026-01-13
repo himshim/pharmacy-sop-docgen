@@ -587,15 +587,40 @@ textarea {
         border-radius: 0 !important;
     }
 
-    /* FIX: Remove ALL top spacing */
-    #preview > *:first-child,
-    #preview > *:first-child > *:first-child,
-    #preview table:first-child,
-    #preview div:first-child,
-    #preview header:first-child {
+    /* ═══════════════════════════════════════════════════════════ */
+    /* FIX: Remove ALL top spacing - MOBILE SPECIFIC              */
+    /* ═══════════════════════════════════════════════════════════ */
+    
+    /* Target ALL possible first elements */
+    #preview > *:first-child {
         margin-top: 0 !important;
         padding-top: 0 !important;
     }
+    
+    /* Nested first children */
+    #preview > *:first-child > *:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* Specific element types that might be first */
+    #preview table:first-child,
+    #preview div:first-child,
+    #preview header:first-child,
+    #preview section:first-child,
+    #preview h1:first-child,
+    #preview h2:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* CRITICAL: Override print-a4.css table margin for first table */
+    #preview > table:first-child,
+    #preview > *:first-child table:first-of-type {
+        margin-top: 0 !important;
+    }
+    
+    /* ═══════════════════════════════════════════════════════════ */
 
     @page {
         size: A4;
