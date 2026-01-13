@@ -238,7 +238,7 @@ window.initSOPApp = function () {
       }
     },
 
-    // ────── 2. PDF EXPORT (DESKTOP BUG FIXED) ──────
+    // ────── 2. PDF EXPORT (DESKTOP BUG FIXED – FINAL) ──────
 async exportPDF(filename) {
   if (!this.hasContent()) {
     alert("❌ No content to export. Please generate a document first.");
@@ -258,17 +258,11 @@ async exportPDF(filename) {
 
     /* =====================================================
        FIX #1: REMOVE PREVIEW-ONLY VISUAL EFFECTS
-       (box-shadow, gray background, overlays)
        ===================================================== */
     clonedElement.style.boxShadow = "none";
     clonedElement.style.background = "#ffffff";
-
-    // If preview is wrapped, neutralize wrapper too
-    const wrapper = clonedElement.closest("#preview-wrapper");
-    if (wrapper) {
-      wrapper.style.background = "#ffffff";
-      wrapper.style.boxShadow = "none";
-    }
+    clonedElement.style.margin = "0";
+    clonedElement.style.padding = "0";
 
     /* Remove UI-only elements */
     clonedElement
@@ -278,10 +272,25 @@ async exportPDF(filename) {
       .forEach((el) => el.remove());
 
     /* =====================================================
-       FIX #2 + #3: PDF OPTIONS (TOP MARGIN & OVERLAY FIX)
+       FIX #4: FORCE ZERO-ORIGIN CAPTURE CONTAINER
+       (kills faint white overlay)
+       ===================================================== */
+    const captureRoot = document.createElement("div");
+    captureRoot.style.position = "absolute";
+    captureRoot.style.top = "0";
+    captureRoot.style.left = "0";
+    captureRoot.style.width = "210mm";
+    captureRoot.style.background = "#ffffff";
+    captureRoot.style.margin = "0";
+    captureRoot.style.padding = "0";
+
+    captureRoot.appendChild(clonedElement);
+
+    /* =====================================================
+       FIX #2 + #3 + #5: PDF OPTIONS
        ===================================================== */
     const options = {
-      /* FIX #2: Explicit margins (top = 0 prevents white band) */
+      /* Explicit margins (top = 0 is critical) */
       margin: [0, 10, 10, 10], // top, right, bottom, left (mm)
 
       filename: filename || "SOP_Document.pdf",
@@ -293,13 +302,12 @@ async exportPDF(filename) {
 
       html2canvas: {
         scale: this.CONFIG.PDF_SCALE,
-
-        /* FIX #3: Force white background (no transparency) */
         backgroundColor: "#ffffff",
-
         useCORS: true,
-        letterRendering: true,
         allowTaint: true,
+
+        /* FIX #5: MUST be false */
+        letterRendering: false,
       },
 
       jsPDF: {
@@ -315,7 +323,7 @@ async exportPDF(filename) {
       },
     };
 
-    await html2pdf().set(options).from(clonedElement).save();
+    await html2pdf().set(options).from(captureRoot).save();
 
     UtilsModule.log("✅ PDF exported successfully");
     alert("✅ PDF saved successfully!");
