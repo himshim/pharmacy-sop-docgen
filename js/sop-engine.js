@@ -942,6 +942,7 @@ To use this feature, add these scripts to your index.html <head>:
         const viewData = { ...this.state.sopData };
 
         viewData.procedure = TemplateModule.formatProcedure(viewData.procedure);
+        viewData.precautions = TemplateModule.formatProcedure(viewData.precautions);
         viewData.changeHistoryRows = TemplateModule.formatHistory(
           viewData.changeHistory
         );
