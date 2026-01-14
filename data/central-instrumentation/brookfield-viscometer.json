@@ -23,6 +23,15 @@
       "Power OFF the instrument and store the spindle properly to prevent damage.",
       "Calculate average viscosity and document all readings in the analytical record."
     ],
-    "precautions": "Select the appropriate spindle and speed combination to obtain readings within 10-100% of the full scale range for accurate results. Avoid introducing air bubbles while immersing the spindle. Ensure sample homogeneity before measurement. Maintain constant temperature throughout the measurement as viscosity is temperature-dependent. Do not exceed the maximum viscosity limit of the selected spindle. Clean spindles gently to avoid bending or damage. Use samples free from particulate matter that could interfere with rotation. Wear appropriate PPE when handling samples."
+    "precautions": [
+      "Select the appropriate spindle and speed combination to obtain readings within 10-100% of the full scale range for accurate results.",
+      "Avoid introducing air bubbles while immersing the spindle.",
+      "Ensure sample homogeneity before measurement.",
+      "Maintain constant temperature throughout the measurement as viscosity is temperature-dependent.",
+      "Do not exceed the maximum viscosity limit of the selected spindle.",
+      "Clean spindles gently to avoid bending or damage.",
+      "Use samples free from particulate matter that could interfere with rotation.",
+      "Wear appropriate PPE when handling samples."
+    ]
   }
 }

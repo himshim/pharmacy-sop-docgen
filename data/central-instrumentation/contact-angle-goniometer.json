@@ -26,6 +26,15 @@
       "Save all images and data files with proper identification for documentation.",
       "Power OFF the system and cover the instrument to protect from dust."
     ],
-    "precautions": "Handle samples carefully to avoid contaminating the surface before measurement. Use ultra-pure or freshly prepared liquids for accurate measurements. Ensure ambient conditions (temperature and humidity) are controlled and recorded. Avoid vibrations during droplet deposition and image capture. Clean the dispensing needle regularly to ensure consistent droplet size. Use appropriate droplet volume suitable for the sample surface. Perform measurements promptly as contact angles may change with time. Store and handle hydrophilic and hydrophobic samples appropriately to maintain surface properties."
+    "precautions": [
+      "Ensure the sample surface is flat and free from defects for accurate measurements.",
+      "Avoid vibrations and air currents during droplet deposition and image capture.",
+      "Use appropriate PPE when handling chemicals and solvents for droplet preparation.",
+      "Dispose of used liquids and cleaning solvents according to safety guidelines.",
+      "Regularly calibrate the instrument to maintain measurement accuracy.",
+      "Handle the dispensing needle carefully to avoid damage or contamination.",
+      "Maintain consistent droplet volume for comparative measurements.",
+      "Allow sufficient time between measurements for the droplet to stabilize if needed."
+    ]
   }
 }

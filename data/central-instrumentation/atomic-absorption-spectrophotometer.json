@@ -23,6 +23,15 @@
       "Extinguish the flame following proper sequence and power OFF the instrument.",
       "Document all readings, calculations, and observations in the analytical record."
     ],
-    "precautions": "Ensure proper ventilation to avoid accumulation of combustion gases. Never leave the flame unattended during operation. Use only analytical grade reagents and ultrapure water for solution preparation. Check for any blockage in nebulizer and burner slots before operation. Wear safety goggles, lab coat, and gloves during analysis. Handle compressed gas cylinders with care and ensure they are properly secured. Perform regular maintenance of burner head and nebulizer. Dispose of waste solutions containing heavy metals as per hazardous waste management guidelines."
+    "precautions": [
+    "Ensure proper ventilation to avoid accumulation of combustion gases.",
+    "Never leave the flame unattended during operation.",
+    "Use only analytical grade reagents and ultrapure water for solution preparation.",
+    "Check for any blockage in nebulizer and burner slots before operation.",
+    "Wear safety goggles, lab coat, and gloves during analysis.",
+    "Handle compressed gas cylinders with care and ensure they are properly secured.",
+    "Perform regular maintenance of burner head and nebulizer.",
+    "Dispose of waste solutions containing heavy metals as per hazardous waste management guidelines."
+    ]
   }
 }

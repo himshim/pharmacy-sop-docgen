@@ -3,16 +3,40 @@
     "title": "Operation of GC MS"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the GC MS.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Gas Chromatography-Mass Spectrometry (GC-MS) for identification, structural elucidation, and quantitative analysis of volatile pharmaceutical compounds.",
+    "scope": "Applicable to GC-MS analysis activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the vacuum system is functioning and the roughing pump oil level is adequate.",
+      "Check carrier gas (helium) supply and ensure adequate pressure and purity.",
+      "Power ON the mass spectrometer and allow the vacuum system to reach operating pressure.",
+      "Power ON the GC system and data acquisition software after vacuum stabilization.",
+      "Perform tuning and calibration of the mass spectrometer using calibration standard.",
+      "Verify that tuning report shows acceptable sensitivity and mass accuracy.",
+      "Set carrier gas flow rate, injector temperature, and column oven program.",
+      "Set MS parameters including scan range, ionization mode, and source temperature.",
+      "Allow the entire system to stabilize for at least 30 minutes.",
+      "Run a blank injection to check for background contamination and baseline stability.",
+      "Prepare sample and standard solutions in appropriate GC-compatible solvents.",
+      "Inject standard solutions and verify chromatographic separation and mass spectral quality.",
+      "Acquire full scan or selected ion monitoring (SIM) data as per analytical requirements.",
+      "Inject sample solutions and monitor both chromatogram and mass spectra.",
+      "Perform library search for compound identification using spectral databases.",
+      "Verify retention times and mass spectral patterns against reference standards.",
+      "After analysis, allow the column to cool and perform system cleaning if needed.",
+      "Power OFF the GC system first, then initiate mass spectrometer shutdown sequence.",
+      "Wait for the system to vent before powering off completely.",
+      "Save all data files with proper identification and document in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always ensure proper vacuum levels before operating the MS detector.",
+      "Never turn off the vacuum pump while the MS is hot to prevent contamination.",
+      "Use high purity carrier gas (helium, 99.999%) for optimal MS performance.",
+      "Ensure samples are clean and free from non-volatile residues that can contaminate the ion source.",
+      "Do not inject water or highly polar solvents that may damage the MS system.",
+      "Monitor filament current and replace filaments when sensitivity decreases.",
+      "Clean the ion source regularly to maintain sensitivity and mass accuracy.",
+      "Use appropriate PPE when handling samples and solvents.",
+      "Perform regular maintenance including pump oil changes and leak checks."
+    ]
   }
 }

@@ -3,16 +3,39 @@
     "title": "Operation of Differential Scanning Calorimeter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Differential Scanning Calorimeter.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Differential Scanning Calorimeter (DSC) for thermal analysis of pharmaceutical materials including melting point, glass transition temperature, and crystallinity determination.",
+    "scope": "Applicable to thermal analysis activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is installed in a vibration-free area with stable ambient temperature.",
+      "Check that the cooling system (chiller or liquid nitrogen supply) is functioning properly.",
+      "Power ON the DSC instrument and initialize the control software.",
+      "Allow the instrument to stabilize and perform baseline conditioning as per protocol.",
+      "Calibrate the temperature and heat flow using certified reference standards (e.g., indium).",
+      "Verify calibration results are within acceptable limits before sample analysis.",
+      "Clean the sample and reference pans thoroughly and ensure they are dry.",
+      "Accurately weigh 2-10 mg of sample using an analytical balance and record the weight.",
+      "Place the sample in the DSC pan and crimp or seal the lid appropriately.",
+      "Prepare an empty reference pan in the same manner for use as reference.",
+      "Load the sample pan and reference pan into their respective positions in the DSC cell.",
+      "Close the furnace lid and ensure proper sealing for controlled atmosphere if required.",
+      "Set the thermal program including start temperature, end temperature, heating rate, and purge gas flow.",
+      "Start the analysis and monitor the initial phase for any abnormalities.",
+      "Allow the analysis to complete and observe the thermogram for characteristic thermal events.",
+      "After completion, allow the cell to cool down to safe temperature before opening.",
+      "Remove the pans carefully using tweezers and dispose of samples appropriately.",
+      "Save the thermogram data with proper identification and perform data analysis.",
+      "Clean the sample cell and document all parameters in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Handle pans carefully to avoid contamination or damage.",
+      "Use appropriate sample size to prevent overflow or spillage during heating.",
+      "Ensure proper crimping or sealing of pans to prevent sample leakage.",
+      "Use inert purge gas (nitrogen or argon) to prevent oxidation during analysis.",
+      "Do not exceed the maximum temperature limit of the instrument.",
+      "Allow sufficient cooling time before opening the furnace to avoid thermal burns.",
+      "Clean spills immediately to prevent contamination of subsequent samples.",
+      "Wear heat-resistant gloves when handling hot components.",
+      "Perform regular calibration to maintain accuracy of measurements."
+    ]
   }
 }

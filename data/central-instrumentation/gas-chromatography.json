@@ -3,16 +3,39 @@
     "title": "Operation of Gas Chromatography"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Gas Chromatography.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Gas Chromatography (GC) for separation and quantitative analysis of volatile and semi-volatile pharmaceutical compounds.",
+    "scope": "Applicable to gas chromatography analysis activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that carrier gas cylinders have adequate pressure and all gas lines are leak-free.",
+      "Check that the detector gases (hydrogen, air for FID) have sufficient supply if applicable.",
+      "Power ON the GC system including injector, column oven, detector, and data system.",
+      "Set the carrier gas flow rate according to the analytical method specifications.",
+      "Set the injector, column oven, and detector temperatures as per the method.",
+      "Allow the system to stabilize at set temperatures for at least 20-30 minutes.",
+      "Verify baseline stability on the detector before starting analysis.",
+      "Check column conditioning and perform conditioning run if the column is new or idle.",
+      "Prepare sample and standard solutions in appropriate volatile solvents.",
+      "Load sample vials in the autosampler or prepare for manual injection.",
+      "Inject a blank solvent to verify system cleanliness and baseline stability.",
+      "Inject standard solutions to establish calibration and verify system suitability.",
+      "Set the temperature program including initial temperature, ramp rate, and final temperature.",
+      "Inject sample solutions and monitor the chromatogram during the run.",
+      "Ensure proper peak separation, retention times, and peak shapes.",
+      "After analysis, allow the column to cool down to initial temperature.",
+      "Clean the injection port liner if necessary and replace septa regularly.",
+      "Power OFF the detector and then the column oven following proper shutdown sequence.",
+      "Document all chromatographic parameters, retention times, and peak areas in the record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always check for gas leaks using leak detection solution before operation.",
+      "Never allow carrier gas flow to stop while the column is at high temperature.",
+      "Ensure samples are free from particulates and non-volatile residues.",
+      "Use appropriate septum quality and replace regularly to prevent leaks.",
+      "Do not exceed the maximum temperature limit of the column.",
+      "Use flame arrestors on hydrogen lines for safety.",
+      "Ensure proper ventilation when using volatile solvents and samples.",
+      "Wear appropriate PPE including lab coat, gloves, and safety goggles.",
+      "Perform regular maintenance of septa, liners, and detector components."
+    ]
   }
 }

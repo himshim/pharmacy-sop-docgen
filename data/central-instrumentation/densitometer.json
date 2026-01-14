@@ -25,6 +25,16 @@
       "Perform an air check to ensure the cell is completely dry before storage.",
       "Document all readings, temperature, and calculations in the analytical record."
     ],
-    "precautions": "Always perform calibration before use to ensure accuracy of measurements. Maintain constant temperature during measurements as density is highly temperature-dependent. Ensure samples are free from suspended particles and air bubbles. Use filtered or degassed samples when necessary. Clean the measurement cell thoroughly between different samples to avoid cross-contamination. Use appropriate solvents that are compatible with the cell material. Handle samples containing volatile or hazardous materials in a fume hood. Do not use samples with viscosity exceeding the instrument specifications. Verify cell integrity periodically for cracks or damage."
+    "precautions": [
+      "Always perform calibration before use to ensure accuracy of measurements.",
+      "Maintain constant temperature during measurements as density is highly temperature-dependent.",
+      "Ensure samples are free from suspended particles and air bubbles.",
+      "Use filtered or degassed samples when necessary.",
+      "Clean the measurement cell thoroughly between different samples to avoid cross-contamination.",
+      "Use appropriate solvents that are compatible with the cell material.",
+      "Handle samples containing volatile or hazardous materials in a fume hood.",
+      "Do not use samples with viscosity exceeding the instrument specifications.",
+      "Verify cell integrity periodically for cracks or damage."
+    ]
   }
 }

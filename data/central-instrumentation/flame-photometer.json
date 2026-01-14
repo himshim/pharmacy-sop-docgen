@@ -3,16 +3,38 @@
     "title": "Operation of Flame Photometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Flame Photometer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Flame Photometer for quantitative determination of alkali and alkaline earth metals (sodium, potassium, lithium, calcium) in pharmaceutical samples.",
+    "scope": "Applicable to flame photometry analysis activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure adequate ventilation and that the gas supply (LPG or propane) has sufficient pressure.",
+      "Check that the air compressor is functioning and providing adequate pressure.",
+      "Power ON the flame photometer and allow it to warm up for at least 10-15 minutes.",
+      "Install the appropriate optical filter for the element to be analyzed.",
+      "Adjust the gas and air flow rates to obtain a stable and clear flame.",
+      "Ignite the flame using the ignition system and visually inspect flame characteristics.",
+      "Aspirate distilled water and adjust the instrument to zero reading.",
+      "Prepare a series of standard solutions of known concentrations for the target element.",
+      "Aspirate the standard solutions in ascending order and record the readings.",
+      "Plot a calibration curve of concentration versus instrument reading.",
+      "Verify the linearity of the calibration curve and correlation coefficient.",
+      "Prepare sample solutions ensuring appropriate dilution if concentrations are high.",
+      "Aspirate sample solutions and record the emission readings.",
+      "Between samples, aspirate distilled water to rinse the system and prevent carryover.",
+      "Calculate the concentration of analyte in samples using the calibration curve.",
+      "After analysis, aspirate distilled water for several minutes to clean the system.",
+      "Extinguish the flame by turning off the gas supply first, then the air supply.",
+      "Power OFF the instrument and document all readings and calculations."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure proper ventilation to avoid accumulation of combustion products.",
+      "Never leave the flame unattended during operation.",
+      "Check for gas leaks regularly and ensure all connections are tight.",
+      "Use analytical grade reagents and fresh standard solutions for accurate results.",
+      "Ensure samples are free from suspended particles by filtering or centrifuging.",
+      "Maintain consistent aspiration rate throughout the analysis.",
+      "Avoid cross-contamination by thorough rinsing between samples.",
+      "Wear safety goggles and lab coat during operation.",
+      "Store gas cylinders in a well-ventilated area away from ignition sources."
+    ]
   }
 }

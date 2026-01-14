@@ -23,6 +23,15 @@
       "Remove sample vials from the tray and power OFF the auto sampler.",
       "Document the sequence details and any observations in the instrument logbook."
     ],
-    "precautions": "Always use compatible vials, caps, and septa recommended for the auto sampler model. Ensure samples are filtered or centrifuged to prevent particulate matter from blocking the needle. Do not overfill vials to avoid sample carryover. Use appropriate wash solvents to minimize carryover between injections. Check needle and syringe for wear or damage regularly. Maintain ambient temperature control to prevent sample degradation or evaporation. Clean the sample tray and needle seat regularly to prevent contamination. Store samples appropriately if analysis is delayed."
+    "precautions": [
+      "Ensure proper alignment of the sample tray to avoid mis-injection.",
+      "Use appropriate solvents for needle wash to prevent cross-contamination.",
+      "Avoid overfilling vials to prevent spillage during injection.",
+      "Regularly inspect and maintain the syringe and needle for wear and tear.",
+      "Follow manufacturer guidelines for maintenance and troubleshooting.",
+      "Wear appropriate PPE when handling samples and solvents.",
+      "Ensure the auto sampler is compatible with the HPLC system in use.",
+      "Perform routine calibration checks to ensure injection accuracy."
+    ]
   }
 }

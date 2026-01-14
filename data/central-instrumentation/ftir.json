@@ -3,17 +3,39 @@
     "title": "Operation of FTIR Spectrophotometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the FTIR Spectrophotometer for functional group analysis.",
-    "scope": "Applicable to analysis carried out in the Central Instrumentation Facility.",
+    "purpose": "To describe the standard operating procedure for the operation of Fourier Transform Infrared (FTIR) Spectrophotometer for identification and structural characterization of pharmaceutical compounds and materials.",
+    "scope": "Applicable to infrared spectroscopy activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the FTIR instrument is clean and free from dust.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample using suitable method (e.g., KBr pellet or ATR).",
-      "Place the background sample and record background spectrum.",
-      "Place the test sample in the sample holder.",
-      "Record the FTIR spectrum.",
-      "Save and interpret the spectrum as required."
+      "Ensure the instrument is placed in a dry, air-conditioned environment to prevent moisture interference.",
+      "Verify that the desiccant in the instrument is fresh and the purge gas supply is adequate.",
+      "Power ON the FTIR spectrometer and initialize the control software.",
+      "Allow the instrument to stabilize and purge for at least 15-30 minutes.",
+      "Run a background spectrum without sample to establish baseline conditions.",
+      "Verify that the background spectrum shows expected features and no anomalies.",
+      "Prepare the sample according to the analysis technique (ATR, KBr pellet, or transmission).",
+      "For ATR method, clean the crystal surface with appropriate solvent and dry thoroughly.",
+      "Place the sample in contact with the ATR crystal and apply uniform pressure using the clamp.",
+      "For KBr pellet method, mix dry sample with KBr powder and press into a transparent pellet.",
+      "Load the prepared sample or pellet into the sample holder and position correctly.",
+      "Set the scanning parameters including resolution, number of scans, and spectral range.",
+      "Acquire the sample spectrum and observe in real-time for quality assessment.",
+      "Ensure adequate signal-to-noise ratio and peak resolution in the spectrum.",
+      "Save the spectrum with proper identification including sample name and date.",
+      "Perform spectral interpretation and compare with reference libraries if needed.",
+      "Clean the ATR crystal or remove the KBr pellet and clean the sample holder.",
+      "Run a cleaning verification scan to ensure no sample residue remains.",
+      "Document all spectral data and observations in the analytical record."
     ],
-    "precautions": "Handle IR windows and crystals carefully. Avoid moisture contamination."
+    "precautions": [
+      "Keep samples dry as moisture can interfere with IR measurements.",
+      "Handle the ATR crystal carefully to avoid scratches or damage.",
+      "Do not apply excessive pressure on the ATR crystal to prevent cracking.",
+      "Use only IR-transparent materials for sample preparation (e.g., KBr, NaCl).",
+      "Avoid touching optical surfaces with bare hands.",
+      "Clean the ATR crystal with appropriate solvents compatible with the crystal material.",
+      "Ensure samples are free from water for accurate IR analysis.",
+      "Use appropriate PPE when handling samples and solvents.",
+      "Perform regular purging to maintain dry conditions inside the instrument."
+    ]
   }
 }
