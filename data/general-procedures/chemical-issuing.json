@@ -13,6 +13,10 @@
       "Instruct the user on safe handling of the chemical.",
       "Update chemical inventory after issuing."
     ],
-    "precautions": "Do not issue chemicals without authorization. Avoid spillage during transfer."
+    "precautions": [
+      "Wear appropriate personal protective equipment (PPE) when handling chemicals.",
+      "Ensure proper labeling of issued chemicals.",
+      "Follow all safety guidelines for chemical handling and storage."
+    ]
   }
 }

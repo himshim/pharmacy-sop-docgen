@@ -12,6 +12,10 @@
       "Allow equipment to dry completely.",
       "Store equipment in designated location."
     ],
-    "precautions": "Do not use abrasive materials. Follow manufacturer cleaning recommendations."
+    "precautions": [
+      "Wear appropriate personal protective equipment (PPE) when cleaning equipment.",
+      "Ensure equipment is completely powered off before cleaning.",
+      "Avoid using excessive water on electrical components."
+    ]
   }
 }

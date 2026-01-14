@@ -12,6 +12,12 @@
       "Report any malfunction to laboratory in-charge.",
       "Maintain records of maintenance activities."
     ],
-    "precautions": "Do not attempt repairs without authorization."
+    "precautions": [
+      "Wear appropriate personal protective equipment (PPE) when performing maintenance.",
+      "Ensure equipment is powered off before maintenance.",
+      "Use only recommended cleaning agents and tools.",
+      "Follow manufacturer guidelines for maintenance procedures.",
+      "Keep maintenance area clean and organized."
+    ]
   }
 }

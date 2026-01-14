@@ -12,6 +12,12 @@
       "Hand over waste for final disposal as per institutional guidelines.",
       "Clean disposal area regularly."
     ],
-    "precautions": "Do not mix incompatible wastes."
+    "precautions": [
+      "Wear appropriate personal protective equipment (PPE) when handling waste.",
+      "Ensure waste containers are not overfilled.",
+      "Follow institutional guidelines for hazardous waste disposal.",
+      "Avoid direct contact with waste materials.",
+      "Do not mix incompatible wastes."
+    ]
   }
 }

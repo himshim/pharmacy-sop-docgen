@@ -12,6 +12,12 @@
       "Turn OFF main power supply.",
       "Cover the equipment properly."
     ],
-    "precautions": "Do not switch OFF equipment abruptly unless in emergency."
+    "precautions": [
+      "Wear appropriate personal protective equipment (PPE) when shutting down equipment.",
+      "Ensure no hazardous materials are left in or around the equipment before shutdown.",
+      "Follow manufacturer guidelines for shutdown procedures.",
+      "Allow equipment to cool down if it has been in use for extended periods.",
+      "Do not switch OFF equipment abruptly unless in emergency."
+    ]
   }
 }

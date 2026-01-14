@@ -12,6 +12,12 @@
       "Remove laboratory coat before leaving.",
       "Wash hands thoroughly before exit."
     ],
-    "precautions": "Ensure no equipment is left running unattended."
+    "precautions": [
+      "Wear appropriate personal protective equipment (PPE) when exiting the laboratory.",
+      "Ensure all chemicals and materials are properly stored before exit.",
+      "Follow all laboratory safety protocols during exit.",
+      "Report any spills or accidents to the laboratory supervisor before leaving.",
+      "Ensure no equipment is left running unattended."
+    ]
   }
 }

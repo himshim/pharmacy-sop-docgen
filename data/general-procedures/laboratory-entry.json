@@ -12,6 +12,12 @@
       "Carry only required materials into the laboratory.",
       "Enter the laboratory in an orderly manner."
     ],
-    "precautions": "Do not bring food or drinks into the laboratory."
+    "precautions": [
+      "Ensure you are familiar with emergency exits and safety equipment locations.",
+      "Do not enter the laboratory if you are feeling unwell.",
+      "Follow all laboratory safety protocols upon entry.",
+      "Report any unsafe conditions to the laboratory supervisor immediately.",
+      "Do not bring food or drinks into the laboratory."
+    ]
   }
 }

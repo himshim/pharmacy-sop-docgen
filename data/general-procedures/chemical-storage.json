@@ -13,6 +13,10 @@
       "Ensure containers are tightly closed after use.",
       "Maintain an updated inventory of stored chemicals."
     ],
-    "precautions": "Do not store incompatible chemicals together. Handle chemical containers carefully."
+    "precautions": [
+      "Wear appropriate personal protective equipment (PPE) when handling chemicals.",
+      "Ensure proper ventilation in storage areas.",
+      "Regularly inspect chemical containers for leaks or damage."
+    ]
   }
 }

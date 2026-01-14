@@ -13,6 +13,17 @@
       "Add material carefully and record weight.",
       "After weighing, clean the balance."
     ],
-    "precautions": "Avoid air drafts and vibration during weighing."
+    "precautions": [
+      "Wear appropriate personal protective equipment (PPE) when handling materials.",
+      "Avoid overloading the balance beyond its capacity.",
+      "Handle materials with care to prevent spills.",
+      "Ensure the balance is on a stable surface.",
+      "Keep the weighing area free from drafts and vibrations.",
+      "Use clean and dry containers for weighing.",
+      "Do not touch the weighing pan directly with hands.",
+      "Calibrate the balance regularly as per manufacturer instructions.",
+      "Record weights immediately to avoid errors.",
+      "Avoid air drafts and vibration during weighing."
+    ]
   }
 }

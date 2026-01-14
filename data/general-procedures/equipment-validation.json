@@ -12,6 +12,10 @@
       "Label equipment with validation status.",
       "Review validation records periodically."
     ],
-    "precautions": "Validation should be performed by trained personnel only."
+    "precautions": [
+      "Wear appropriate personal protective equipment (PPE) when handling equipment.",
+      "Ensure equipment is clean and in good working condition before validation.",
+      "Follow manufacturer guidelines for validation procedures."
+    ]
   }
 }
