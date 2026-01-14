@@ -3,17 +3,16 @@
     "title": "Operation of Compound Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for observing crude drugs and plant tissues using a compound microscope.",
-    "scope": "Applicable to microscopic studies in the Pharmacognosy laboratory.",
+    "purpose": "To describe the procedure for operating the Compound Microscope.",
+    "scope": "Applicable to activities carried out in the Pharmacognosy.",
     "procedure": [
-      "Ensure the microscope is clean and properly placed.",
-      "Switch ON the light source.",
-      "Place the prepared slide on the stage.",
-      "Adjust the objective lens to low power.",
-      "Focus the specimen using coarse and fine adjustment knobs.",
-      "Observe the specimen and note characteristics.",
-      "After use, switch OFF the microscope and cover it properly."
+      "Ensure the instrument is clean and in working condition.",
+      "Switch ON the instrument and allow it to stabilize.",
+      "Prepare the sample as per standard laboratory practice.",
+      "Perform the analysis using appropriate settings.",
+      "Record observations and save results.",
+      "Switch OFF the instrument after completion."
     ],
-    "precautions": "Handle slides carefully. Do not touch lenses with bare fingers."
+    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
   }
 }

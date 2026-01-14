@@ -1,10 +1,297 @@
 {
   "department": "Pharmaceutics",
   "instruments": [
-    { "key": "uv", "name": "UV Spectrophotometer" },
-    { "key": "hplc", "name": "HPLC System" },
-    { "key": "dissolution", "name": "Dissolution Test Apparatus" },
-    { "key": "friability", "name": "Friability Test Apparatus" },
-    { "key": "tablet-press", "name": "Tablet Compression Machine" }
+    {
+      "key": "angle-of-repose-apparatus",
+      "name": "Angle of Repose Apparatus"
+    },
+    {
+      "key": "ball-mill",
+      "name": "Ball Mill"
+    },
+    {
+      "key": "blister-packing-machine",
+      "name": "Blister Packing Machine"
+    },
+    {
+      "key": "bottle-filling-machine",
+      "name": "Bottle Filling Machine"
+    },
+    {
+      "key": "bulk-density-apparatus",
+      "name": "Bulk Density Apparatus"
+    },
+    {
+      "key": "capsule-filling-machine",
+      "name": "Capsule Filling Machine"
+    },
+    {
+      "key": "capsule-polishing-machine",
+      "name": "Capsule Polishing Machine"
+    },
+    {
+      "key": "coating-pan-spray-system",
+      "name": "Coating Pan Spray System"
+    },
+    {
+      "key": "colloid-mill",
+      "name": "Colloid Mill"
+    },
+    {
+      "key": "controlled-temperature-chamber",
+      "name": "Controlled Temperature Chamber"
+    },
+    {
+      "key": "conventional-coating-pan",
+      "name": "Conventional Coating Pan"
+    },
+    {
+      "key": "cream-mixer",
+      "name": "Cream Mixer"
+    },
+    {
+      "key": "cutter-mill",
+      "name": "Cutter Mill"
+    },
+    {
+      "key": "deep-freezer",
+      "name": "Deep Freezer"
+    },
+    {
+      "key": "digital-tablet-hardness-tester",
+      "name": "Digital Tablet Hardness Tester"
+    },
+    {
+      "key": "disintegration-test-apparatus",
+      "name": "Disintegration Test Apparatus"
+    },
+    {
+      "key": "dissolution-test-apparatus",
+      "name": "Dissolution Test Apparatus"
+    },
+    {
+      "key": "double-cone-blender",
+      "name": "Double Cone Blender"
+    },
+    {
+      "key": "dust-extraction-unit",
+      "name": "Dust Extraction Unit"
+    },
+    {
+      "key": "extruder-spheronizer",
+      "name": "Extruder Spheronizer"
+    },
+    {
+      "key": "fluid-bed-dryer",
+      "name": "Fluid Bed Dryer"
+    },
+    {
+      "key": "fluidized-bed-coater",
+      "name": "Fluidized Bed Coater"
+    },
+    {
+      "key": "freeze-dryer",
+      "name": "Freeze Dryer"
+    },
+    {
+      "key": "fume-hood",
+      "name": "Fume Hood"
+    },
+    {
+      "key": "granulator",
+      "name": "Granulator"
+    },
+    {
+      "key": "hammer-mill",
+      "name": "Hammer Mill"
+    },
+    {
+      "key": "high-shear-mixer",
+      "name": "High Shear Mixer"
+    },
+    {
+      "key": "high-speed-homogenizer",
+      "name": "High Speed Homogenizer"
+    },
+    {
+      "key": "homogenizer",
+      "name": "Homogenizer"
+    },
+    {
+      "key": "hot-air-oven",
+      "name": "Hot Air Oven"
+    },
+    {
+      "key": "humidity-chamber",
+      "name": "Humidity Chamber"
+    },
+    {
+      "key": "infrared-dryer",
+      "name": "Infrared Dryer"
+    },
+    {
+      "key": "labeling-machine",
+      "name": "Labeling Machine"
+    },
+    {
+      "key": "liquid-filling-machine",
+      "name": "Liquid Filling Machine"
+    },
+    {
+      "key": "liquid-manufacturing-vessel",
+      "name": "Liquid Manufacturing Vessel"
+    },
+    {
+      "key": "manual-capsule-filling-machine",
+      "name": "Manual Capsule Filling Machine"
+    },
+    {
+      "key": "mass-mixer",
+      "name": "Mass Mixer"
+    },
+    {
+      "key": "material-handling-trolley",
+      "name": "Material Handling Trolley"
+    },
+    {
+      "key": "mechanical-sieve-shaker",
+      "name": "Mechanical Sieve Shaker"
+    },
+    {
+      "key": "multi-mill",
+      "name": "Multi Mill"
+    },
+    {
+      "key": "octagonal-blender",
+      "name": "Octagonal Blender"
+    },
+    {
+      "key": "ointment-mill",
+      "name": "Ointment Mill"
+    },
+    {
+      "key": "ointment-mixer",
+      "name": "Ointment Mixer"
+    },
+    {
+      "key": "pelletizer",
+      "name": "Pelletizer"
+    },
+    {
+      "key": "perforated-coating-pan",
+      "name": "Perforated Coating Pan"
+    },
+    {
+      "key": "planetary-mixer",
+      "name": "Planetary Mixer"
+    },
+    {
+      "key": "powder-flow-tester",
+      "name": "Powder Flow Tester"
+    },
+    {
+      "key": "rapid-mixer-granulator",
+      "name": "Rapid Mixer Granulator"
+    },
+    {
+      "key": "refrigerator",
+      "name": "Refrigerator"
+    },
+    {
+      "key": "ribbon-blender",
+      "name": "Ribbon Blender"
+    },
+    {
+      "key": "roller-mill",
+      "name": "Roller Mill"
+    },
+    {
+      "key": "rotary-tablet-press",
+      "name": "Rotary Tablet Press"
+    },
+    {
+      "key": "semi-automatic-capsule-filling-machine",
+      "name": "Semi Automatic Capsule Filling Machine"
+    },
+    {
+      "key": "sieve-shaker",
+      "name": "Sieve Shaker"
+    },
+    {
+      "key": "single-punch-tablet-press",
+      "name": "Single Punch Tablet Press"
+    },
+    {
+      "key": "spill-control-kit",
+      "name": "Spill Control Kit"
+    },
+    {
+      "key": "spray-dryer",
+      "name": "Spray Dryer"
+    },
+    {
+      "key": "stability-chamber",
+      "name": "Stability Chamber"
+    },
+    {
+      "key": "stainless-steel-mixing-tank",
+      "name": "Stainless Steel Mixing Tank"
+    },
+    {
+      "key": "strip-packing-machine",
+      "name": "Strip Packing Machine"
+    },
+    {
+      "key": "suppository-mould",
+      "name": "Suppository Mould"
+    },
+    {
+      "key": "tablet-coating-pan",
+      "name": "Tablet Coating Pan"
+    },
+    {
+      "key": "tablet-compression-machine",
+      "name": "Tablet Compression Machine"
+    },
+    {
+      "key": "tablet-friability-tester",
+      "name": "Tablet Friability Tester"
+    },
+    {
+      "key": "tablet-hardness-tester",
+      "name": "Tablet Hardness Tester"
+    },
+    {
+      "key": "tablet-punch-and-die-set",
+      "name": "Tablet Punch and Die Set"
+    },
+    {
+      "key": "tapped-density-apparatus",
+      "name": "Tapped Density Apparatus"
+    },
+    {
+      "key": "tray-dryer",
+      "name": "Tray Dryer"
+    },
+    {
+      "key": "triple-roller-mill",
+      "name": "Triple Roller Mill"
+    },
+    {
+      "key": "tube-filling-machine",
+      "name": "Tube Filling Machine"
+    },
+    {
+      "key": "v-blender",
+      "name": "V Blender"
+    },
+    {
+      "key": "vacuum-dryer",
+      "name": "Vacuum Dryer"
+    },
+    {
+      "key": "vibratory-sieve-shaker",
+      "name": "Vibratory Sieve Shaker"
+    }
   ]
 }

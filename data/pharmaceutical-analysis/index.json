@@ -1,10 +1,249 @@
 {
   "department": "Pharmaceutical Analysis",
   "instruments": [
-    { "key": "uv-visible", "name": "UV–Visible Spectrophotometer" },
-    { "key": "hptlc", "name": "HPTLC System" },
-    { "key": "gc", "name": "Gas Chromatography System" },
-    { "key": "ph-meter", "name": "pH Meter" },
-    { "key": "conductivity", "name": "Conductivity Meter" }
+    {
+      "key": "analytical-balance",
+      "name": "Analytical Balance"
+    },
+    {
+      "key": "automatic-titrator",
+      "name": "Automatic Titrator"
+    },
+    {
+      "key": "bench-top-centrifuge",
+      "name": "Bench Top Centrifuge"
+    },
+    {
+      "key": "burette-stand",
+      "name": "Burette Stand"
+    },
+    {
+      "key": "colorimeter",
+      "name": "Colorimeter"
+    },
+    {
+      "key": "conductivity-bridge",
+      "name": "Conductivity Bridge"
+    },
+    {
+      "key": "conductivity-meter",
+      "name": "Conductivity Meter"
+    },
+    {
+      "key": "deep-freezer",
+      "name": "Deep Freezer"
+    },
+    {
+      "key": "desiccator",
+      "name": "Desiccator"
+    },
+    {
+      "key": "digital-balance",
+      "name": "Digital Balance"
+    },
+    {
+      "key": "digital-burette",
+      "name": "Digital Burette"
+    },
+    {
+      "key": "digital-conductivity-meter",
+      "name": "Digital Conductivity Meter"
+    },
+    {
+      "key": "digital-hygrometer",
+      "name": "Digital Hygrometer"
+    },
+    {
+      "key": "digital-ph-meter",
+      "name": "Digital pH Meter"
+    },
+    {
+      "key": "digital-potentiometer",
+      "name": "Digital Potentiometer"
+    },
+    {
+      "key": "digital-thermometer",
+      "name": "Digital Thermometer"
+    },
+    {
+      "key": "digital-timer",
+      "name": "Digital Timer"
+    },
+    {
+      "key": "flame-photometer",
+      "name": "Flame Photometer"
+    },
+    {
+      "key": "glassware-dryer",
+      "name": "Glassware Dryer"
+    },
+    {
+      "key": "heating-mantle",
+      "name": "Heating Mantle"
+    },
+    {
+      "key": "hot-air-oven",
+      "name": "Hot Air Oven"
+    },
+    {
+      "key": "hot-plate",
+      "name": "Hot Plate"
+    },
+    {
+      "key": "hot-plate-dryer",
+      "name": "Hot Plate Dryer"
+    },
+    {
+      "key": "humidity-chamber",
+      "name": "Humidity Chamber"
+    },
+    {
+      "key": "hygrometer",
+      "name": "Hygrometer"
+    },
+    {
+      "key": "ion-selective-electrode-meter",
+      "name": "Ion Selective Electrode Meter"
+    },
+    {
+      "key": "karl-fischer-apparatus-coulometric",
+      "name": "Karl Fischer Apparatus (Coulometric)"
+    },
+    {
+      "key": "karl-fischer-apparatus-manual",
+      "name": "Karl Fischer Apparatus (Manual)"
+    },
+    {
+      "key": "karl-fischer-apparatus-volumetric",
+      "name": "Karl Fischer Apparatus (Volumetric)"
+    },
+    {
+      "key": "laboratory-centrifuge",
+      "name": "Laboratory Centrifuge"
+    },
+    {
+      "key": "laboratory-refrigerator",
+      "name": "Laboratory Refrigerator"
+    },
+    {
+      "key": "laboratory-sink-with-eye-wash",
+      "name": "Laboratory Sink with Eye Wash"
+    },
+    {
+      "key": "laboratory-thermometer",
+      "name": "Laboratory Thermometer"
+    },
+    {
+      "key": "magnetic-stirrer",
+      "name": "Magnetic Stirrer"
+    },
+    {
+      "key": "magnetic-stirrer-with-hot-plate",
+      "name": "Magnetic Stirrer with Hot Plate"
+    },
+    {
+      "key": "manual-titration-assembly",
+      "name": "Manual Titration Assembly"
+    },
+    {
+      "key": "mechanical-stirrer",
+      "name": "Mechanical Stirrer"
+    },
+    {
+      "key": "membrane-filtration-assembly",
+      "name": "Membrane Filtration Assembly"
+    },
+    {
+      "key": "muffle-furnace",
+      "name": "Muffle Furnace"
+    },
+    {
+      "key": "nephelometer",
+      "name": "Nephelometer"
+    },
+    {
+      "key": "orbital-shaker",
+      "name": "Orbital Shaker"
+    },
+    {
+      "key": "orp-meter",
+      "name": "ORP Meter"
+    },
+    {
+      "key": "ph-meter",
+      "name": "pH Meter"
+    },
+    {
+      "key": "polarimeter",
+      "name": "Polarimeter"
+    },
+    {
+      "key": "potentiometer",
+      "name": "Potentiometer"
+    },
+    {
+      "key": "precision-balance",
+      "name": "Precision Balance"
+    },
+    {
+      "key": "refractometer",
+      "name": "Refractometer"
+    },
+    {
+      "key": "refrigerated-centrifuge",
+      "name": "Refrigerated Centrifuge"
+    },
+    {
+      "key": "rotary-shaker",
+      "name": "Rotary Shaker"
+    },
+    {
+      "key": "sand-bath",
+      "name": "Sand Bath"
+    },
+    {
+      "key": "serological-water-bath",
+      "name": "Serological Water Bath"
+    },
+    {
+      "key": "stability-chamber",
+      "name": "Stability Chamber"
+    },
+    {
+      "key": "stop-watch",
+      "name": "Stop Watch"
+    },
+    {
+      "key": "turbidimeter",
+      "name": "Turbidimeter"
+    },
+    {
+      "key": "ultrasonic-bath",
+      "name": "Ultrasonic Bath"
+    },
+    {
+      "key": "ultrasonic-cleaner",
+      "name": "Ultrasonic Cleaner"
+    },
+    {
+      "key": "ultrasonic-glassware-cleaner",
+      "name": "Ultrasonic Glassware Cleaner"
+    },
+    {
+      "key": "vacuum-desiccator",
+      "name": "Vacuum Desiccator"
+    },
+    {
+      "key": "vacuum-filtration-unit",
+      "name": "Vacuum Filtration Unit"
+    },
+    {
+      "key": "vacuum-oven",
+      "name": "Vacuum Oven"
+    },
+    {
+      "key": "water-bath",
+      "name": "Water Bath"
+    }
   ]
 }

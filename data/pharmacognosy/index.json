@@ -1,9 +1,289 @@
 {
   "department": "Pharmacognosy",
   "instruments": [
-    { "key": "compound-microscope", "name": "Compound Microscope" },
-    { "key": "sieve-shaker", "name": "Sieve Shaker" },
-    { "key": "soxhlet", "name": "Soxhlet Extraction Apparatus" },
-    { "key": "clevenger", "name": "Clevenger Apparatus" }
+    {
+      "key": "analytical-balance",
+      "name": "Analytical Balance"
+    },
+    {
+      "key": "angle-of-repose-apparatus",
+      "name": "Angle of Repose Apparatus"
+    },
+    {
+      "key": "ball-mill",
+      "name": "Ball Mill"
+    },
+    {
+      "key": "binocular-microscope",
+      "name": "Binocular Microscope"
+    },
+    {
+      "key": "bulk-density-apparatus",
+      "name": "Bulk Density Apparatus"
+    },
+    {
+      "key": "camera-lucida",
+      "name": "Camera Lucida"
+    },
+    {
+      "key": "chemical-storage-cabinet",
+      "name": "Chemical Storage Cabinet"
+    },
+    {
+      "key": "compound-microscope",
+      "name": "Compound Microscope"
+    },
+    {
+      "key": "continuous-extraction-apparatus",
+      "name": "Continuous Extraction Apparatus"
+    },
+    {
+      "key": "controlled-humidity-cabinet",
+      "name": "Controlled Humidity Cabinet"
+    },
+    {
+      "key": "crude-drug-storage-cabinet",
+      "name": "Crude Drug Storage Cabinet"
+    },
+    {
+      "key": "cutter-mill",
+      "name": "Cutter Mill"
+    },
+    {
+      "key": "deep-freezer",
+      "name": "Deep Freezer"
+    },
+    {
+      "key": "desiccator",
+      "name": "Desiccator"
+    },
+    {
+      "key": "digital-balance",
+      "name": "Digital Balance"
+    },
+    {
+      "key": "digital-hygrometer",
+      "name": "Digital Hygrometer"
+    },
+    {
+      "key": "digital-thermometer",
+      "name": "Digital Thermometer"
+    },
+    {
+      "key": "digital-timer",
+      "name": "Digital Timer"
+    },
+    {
+      "key": "dissecting-microscope",
+      "name": "Dissecting Microscope"
+    },
+    {
+      "key": "emergency-eye-wash-station",
+      "name": "Emergency Eye Wash Station"
+    },
+    {
+      "key": "fire-extinguisher",
+      "name": "Fire Extinguisher"
+    },
+    {
+      "key": "fume-hood",
+      "name": "Fume Hood"
+    },
+    {
+      "key": "glassware-dryer",
+      "name": "Glassware Dryer"
+    },
+    {
+      "key": "glassware-washer",
+      "name": "Glassware Washer"
+    },
+    {
+      "key": "hammer-mill",
+      "name": "Hammer Mill"
+    },
+    {
+      "key": "heating-mantle",
+      "name": "Heating Mantle"
+    },
+    {
+      "key": "herbarium-cabinet",
+      "name": "Herbarium Cabinet"
+    },
+    {
+      "key": "herbarium-press",
+      "name": "Herbarium Press"
+    },
+    {
+      "key": "hot-air-oven",
+      "name": "Hot Air Oven"
+    },
+    {
+      "key": "hot-plate-dryer",
+      "name": "Hot Plate Dryer"
+    },
+    {
+      "key": "hygrometer",
+      "name": "Hygrometer"
+    },
+    {
+      "key": "infrared-moisture-balance",
+      "name": "Infrared Moisture Balance"
+    },
+    {
+      "key": "laboratory-sink-with-eye-wash",
+      "name": "Laboratory Sink with Eye Wash"
+    },
+    {
+      "key": "laboratory-thermometer",
+      "name": "Laboratory Thermometer"
+    },
+    {
+      "key": "magnetic-stirrer",
+      "name": "Magnetic Stirrer"
+    },
+    {
+      "key": "magnetic-stirrer-with-hot-plate",
+      "name": "Magnetic Stirrer with Hot Plate"
+    },
+    {
+      "key": "mechanical-grinder",
+      "name": "Mechanical Grinder"
+    },
+    {
+      "key": "mechanical-shaker",
+      "name": "Mechanical Shaker"
+    },
+    {
+      "key": "mechanical-sieve-shaker",
+      "name": "Mechanical Sieve Shaker"
+    },
+    {
+      "key": "microscope-with-camera-attachment",
+      "name": "Microscope with Camera Attachment"
+    },
+    {
+      "key": "moisture-analyzer",
+      "name": "Moisture Analyzer"
+    },
+    {
+      "key": "moisture-balance",
+      "name": "Moisture Balance"
+    },
+    {
+      "key": "mortar-and-pestle",
+      "name": "Mortar and Pestle"
+    },
+    {
+      "key": "plant-collection-kit",
+      "name": "Plant Collection Kit"
+    },
+    {
+      "key": "polarizing-microscope",
+      "name": "Polarizing Microscope"
+    },
+    {
+      "key": "precision-balance",
+      "name": "Precision Balance"
+    },
+    {
+      "key": "projection-microscope",
+      "name": "Projection Microscope"
+    },
+    {
+      "key": "pulverizer",
+      "name": "Pulverizer"
+    },
+    {
+      "key": "reflux-condenser-assembly",
+      "name": "Reflux Condenser Assembly"
+    },
+    {
+      "key": "refrigerator",
+      "name": "Refrigerator"
+    },
+    {
+      "key": "rotary-vacuum-evaporator",
+      "name": "Rotary Vacuum Evaporator"
+    },
+    {
+      "key": "safety-shower",
+      "name": "Safety Shower"
+    },
+    {
+      "key": "sample-storage-cabinet",
+      "name": "Sample Storage Cabinet"
+    },
+    {
+      "key": "serological-water-bath",
+      "name": "Serological Water Bath"
+    },
+    {
+      "key": "shaker",
+      "name": "Shaker"
+    },
+    {
+      "key": "slide-projector",
+      "name": "Slide Projector"
+    },
+    {
+      "key": "soxhlet-extraction-apparatus",
+      "name": "Soxhlet Extraction Apparatus"
+    },
+    {
+      "key": "specimen-drying-rack",
+      "name": "Specimen Drying Rack"
+    },
+    {
+      "key": "spill-control-kit",
+      "name": "Spill Control Kit"
+    },
+    {
+      "key": "stereo-microscope",
+      "name": "Stereo Microscope"
+    },
+    {
+      "key": "stop-watch",
+      "name": "Stop Watch"
+    },
+    {
+      "key": "tapped-density-apparatus",
+      "name": "Tapped Density Apparatus"
+    },
+    {
+      "key": "tray-dryer",
+      "name": "Tray Dryer"
+    },
+    {
+      "key": "trinocular-microscope",
+      "name": "Trinocular Microscope"
+    },
+    {
+      "key": "ultrasonic-bath",
+      "name": "Ultrasonic Bath"
+    },
+    {
+      "key": "ultrasonic-cleaner",
+      "name": "Ultrasonic Cleaner"
+    },
+    {
+      "key": "vacuum-desiccator",
+      "name": "Vacuum Desiccator"
+    },
+    {
+      "key": "vacuum-oven",
+      "name": "Vacuum Oven"
+    },
+    {
+      "key": "vacuum-pump",
+      "name": "Vacuum Pump"
+    },
+    {
+      "key": "vibratory-sieve-shaker",
+      "name": "Vibratory Sieve Shaker"
+    },
+    {
+      "key": "water-bath",
+      "name": "Water Bath"
+    }
   ]
 }

@@ -3,17 +3,16 @@
     "title": "Operation of Actophotometer"
   },
   "sections": {
-    "purpose": "To measure spontaneous motor activity using an Actophotometer.",
-    "scope": "Applicable to screening of central nervous system activity in Pharmacology laboratory.",
+    "purpose": "To describe the procedure for operating the Actophotometer.",
+    "scope": "Applicable to activities carried out in the Pharmacology.",
     "procedure": [
-      "Ensure the actophotometer chamber is clean.",
-      "Switch ON the instrument and allow stabilization.",
-      "Place the animal inside the chamber.",
-      "Set the observation time.",
-      "Start the instrument and record activity counts.",
-      "After completion, remove the animal safely.",
-      "Switch OFF the instrument."
+      "Ensure the instrument is clean and in working condition.",
+      "Switch ON the instrument and allow it to stabilize.",
+      "Prepare the sample as per standard laboratory practice.",
+      "Perform the analysis using appropriate settings.",
+      "Record observations and save results.",
+      "Switch OFF the instrument after completion."
     ],
-    "precautions": "Clean the chamber after each use. Handle animals ethically."
+    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
   }
 }

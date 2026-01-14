@@ -1,9 +1,277 @@
 {
   "department": "Pharmaceutical Chemistry",
   "instruments": [
-    { "key": "melting-point", "name": "Melting Point Apparatus" },
-    { "key": "reflux-setup", "name": "Reflux Condenser Setup" },
-    { "key": "distillation-unit", "name": "Distillation Unit" },
-    { "key": "rotavapor", "name": "Rotary Vacuum Evaporator" }
+    {
+      "key": "acid-resistant-fume-hood",
+      "name": "Acid Resistant Fume Hood"
+    },
+    {
+      "key": "acid-resistant-waste-container",
+      "name": "Acid Resistant Waste Container"
+    },
+    {
+      "key": "analytical-balance",
+      "name": "Analytical Balance"
+    },
+    {
+      "key": "automatic-melting-point-apparatus",
+      "name": "Automatic Melting Point Apparatus"
+    },
+    {
+      "key": "buchner-funnel-assembly",
+      "name": "Buchner Funnel Assembly"
+    },
+    {
+      "key": "centrifuge",
+      "name": "Centrifuge"
+    },
+    {
+      "key": "chemical-fume-hood",
+      "name": "Chemical Fume Hood"
+    },
+    {
+      "key": "chemical-storage-cabinet",
+      "name": "Chemical Storage Cabinet"
+    },
+    {
+      "key": "chemical-waste-container",
+      "name": "Chemical Waste Container"
+    },
+    {
+      "key": "colorimeter",
+      "name": "Colorimeter"
+    },
+    {
+      "key": "conductivity-meter",
+      "name": "Conductivity Meter"
+    },
+    {
+      "key": "deep-freezer",
+      "name": "Deep Freezer"
+    },
+    {
+      "key": "desiccator",
+      "name": "Desiccator"
+    },
+    {
+      "key": "digital-balance",
+      "name": "Digital Balance"
+    },
+    {
+      "key": "digital-hygrometer",
+      "name": "Digital Hygrometer"
+    },
+    {
+      "key": "digital-ph-meter",
+      "name": "Digital pH Meter"
+    },
+    {
+      "key": "digital-thermometer",
+      "name": "Digital Thermometer"
+    },
+    {
+      "key": "digital-timer",
+      "name": "Digital Timer"
+    },
+    {
+      "key": "distillation-assembly",
+      "name": "Distillation Assembly"
+    },
+    {
+      "key": "dropping-funnel",
+      "name": "Dropping Funnel"
+    },
+    {
+      "key": "emergency-eye-wash-station",
+      "name": "Emergency Eye Wash Station"
+    },
+    {
+      "key": "flame-photometer",
+      "name": "Flame Photometer"
+    },
+    {
+      "key": "flammable-storage-cabinet",
+      "name": "Flammable Storage Cabinet"
+    },
+    {
+      "key": "fractional-distillation-unit",
+      "name": "Fractional Distillation Unit"
+    },
+    {
+      "key": "fume-hood",
+      "name": "Fume Hood"
+    },
+    {
+      "key": "glassware-dryer",
+      "name": "Glassware Dryer"
+    },
+    {
+      "key": "glassware-washer",
+      "name": "Glassware Washer"
+    },
+    {
+      "key": "heating-mantle",
+      "name": "Heating Mantle"
+    },
+    {
+      "key": "hot-air-oven",
+      "name": "Hot Air Oven"
+    },
+    {
+      "key": "hot-plate",
+      "name": "Hot Plate"
+    },
+    {
+      "key": "hot-plate-dryer",
+      "name": "Hot Plate Dryer"
+    },
+    {
+      "key": "hot-plate-with-magnetic-stirrer",
+      "name": "Hot Plate with Magnetic Stirrer"
+    },
+    {
+      "key": "hygrometer",
+      "name": "Hygrometer"
+    },
+    {
+      "key": "laboratory-refrigerator",
+      "name": "Laboratory Refrigerator"
+    },
+    {
+      "key": "laboratory-sink-with-eye-wash",
+      "name": "Laboratory Sink with Eye Wash"
+    },
+    {
+      "key": "laboratory-thermometer",
+      "name": "Laboratory Thermometer"
+    },
+    {
+      "key": "magnetic-stirrer",
+      "name": "Magnetic Stirrer"
+    },
+    {
+      "key": "mechanical-stirrer",
+      "name": "Mechanical Stirrer"
+    },
+    {
+      "key": "melting-point-apparatus",
+      "name": "Melting Point Apparatus"
+    },
+    {
+      "key": "membrane-filtration-assembly",
+      "name": "Membrane Filtration Assembly"
+    },
+    {
+      "key": "muffle-furnace",
+      "name": "Muffle Furnace"
+    },
+    {
+      "key": "oil-bath",
+      "name": "Oil Bath"
+    },
+    {
+      "key": "orbital-shaker",
+      "name": "Orbital Shaker"
+    },
+    {
+      "key": "overhead-stirrer",
+      "name": "Overhead Stirrer"
+    },
+    {
+      "key": "ph-meter",
+      "name": "pH Meter"
+    },
+    {
+      "key": "polarimeter",
+      "name": "Polarimeter"
+    },
+    {
+      "key": "precision-balance",
+      "name": "Precision Balance"
+    },
+    {
+      "key": "reflux-condenser-assembly",
+      "name": "Reflux Condenser Assembly"
+    },
+    {
+      "key": "refractometer",
+      "name": "Refractometer"
+    },
+    {
+      "key": "refrigerated-centrifuge",
+      "name": "Refrigerated Centrifuge"
+    },
+    {
+      "key": "rotary-shaker",
+      "name": "Rotary Shaker"
+    },
+    {
+      "key": "rotary-vacuum-evaporator",
+      "name": "Rotary Vacuum Evaporator"
+    },
+    {
+      "key": "safety-shower",
+      "name": "Safety Shower"
+    },
+    {
+      "key": "sand-bath",
+      "name": "Sand Bath"
+    },
+    {
+      "key": "separating-funnel",
+      "name": "Separating Funnel"
+    },
+    {
+      "key": "serological-water-bath",
+      "name": "Serological Water Bath"
+    },
+    {
+      "key": "simple-distillation-unit",
+      "name": "Simple Distillation Unit"
+    },
+    {
+      "key": "spill-control-kit",
+      "name": "Spill Control Kit"
+    },
+    {
+      "key": "stop-watch",
+      "name": "Stop Watch"
+    },
+    {
+      "key": "ultrasonic-bath",
+      "name": "Ultrasonic Bath"
+    },
+    {
+      "key": "ultrasonic-cleaner",
+      "name": "Ultrasonic Cleaner"
+    },
+    {
+      "key": "ultrasonic-glassware-cleaner",
+      "name": "Ultrasonic Glassware Cleaner"
+    },
+    {
+      "key": "vacuum-desiccator",
+      "name": "Vacuum Desiccator"
+    },
+    {
+      "key": "vacuum-filtration-unit",
+      "name": "Vacuum Filtration Unit"
+    },
+    {
+      "key": "vacuum-oven",
+      "name": "Vacuum Oven"
+    },
+    {
+      "key": "vacuum-pump",
+      "name": "Vacuum Pump"
+    },
+    {
+      "key": "water-bath",
+      "name": "Water Bath"
+    },
+    {
+      "key": "weighing-balance",
+      "name": "Weighing Balance"
+    }
   ]
 }

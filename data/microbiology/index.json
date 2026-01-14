@@ -1,9 +1,337 @@
 {
   "department": "Microbiology",
   "instruments": [
-    { "key": "autoclave", "name": "Autoclave" },
-    { "key": "laminar-air-flow", "name": "Laminar Air Flow Bench" },
-    { "key": "bacterial-incubator", "name": "Bacterial Incubator" },
-    { "key": "colony-counter", "name": "Colony Counter" }
+    {
+      "key": "alcohol-burner",
+      "name": "Alcohol Burner"
+    },
+    {
+      "key": "anaerobic-gas-pack-system",
+      "name": "Anaerobic Gas Pack System"
+    },
+    {
+      "key": "anaerobic-incubator",
+      "name": "Anaerobic Incubator"
+    },
+    {
+      "key": "anaerobic-jar",
+      "name": "Anaerobic Jar"
+    },
+    {
+      "key": "analytical-balance",
+      "name": "Analytical Balance"
+    },
+    {
+      "key": "autoclave",
+      "name": "Autoclave"
+    },
+    {
+      "key": "bacteriological-incubator",
+      "name": "Bacteriological Incubator"
+    },
+    {
+      "key": "bench-top-centrifuge",
+      "name": "Bench Top Centrifuge"
+    },
+    {
+      "key": "binocular-microscope",
+      "name": "Binocular Microscope"
+    },
+    {
+      "key": "biosafety-cabinet-class-i",
+      "name": "Biosafety Cabinet Class I"
+    },
+    {
+      "key": "biosafety-cabinet-class-ii",
+      "name": "Biosafety Cabinet Class II"
+    },
+    {
+      "key": "bunsen-burner",
+      "name": "Bunsen Burner"
+    },
+    {
+      "key": "co2-incubator",
+      "name": "CO2 Incubator"
+    },
+    {
+      "key": "cold-incubator",
+      "name": "Cold Incubator"
+    },
+    {
+      "key": "cold-storage-cabinet",
+      "name": "Cold Storage Cabinet"
+    },
+    {
+      "key": "colony-counter",
+      "name": "Colony Counter"
+    },
+    {
+      "key": "compound-microscope",
+      "name": "Compound Microscope"
+    },
+    {
+      "key": "conductivity-meter",
+      "name": "Conductivity Meter"
+    },
+    {
+      "key": "cryogenic-storage-system",
+      "name": "Cryogenic Storage System"
+    },
+    {
+      "key": "dark-field-microscope",
+      "name": "Dark Field Microscope"
+    },
+    {
+      "key": "deep-freezer",
+      "name": "Deep Freezer"
+    },
+    {
+      "key": "deionized-water-system",
+      "name": "Deionized Water System"
+    },
+    {
+      "key": "digital-balance",
+      "name": "Digital Balance"
+    },
+    {
+      "key": "digital-colony-counter",
+      "name": "Digital Colony Counter"
+    },
+    {
+      "key": "digital-microscope",
+      "name": "Digital Microscope"
+    },
+    {
+      "key": "digital-ph-meter",
+      "name": "Digital pH Meter"
+    },
+    {
+      "key": "disposable-spreaders",
+      "name": "Disposable Spreaders"
+    },
+    {
+      "key": "distillation-unit",
+      "name": "Distillation Unit"
+    },
+    {
+      "key": "double-distillation-unit",
+      "name": "Double Distillation Unit"
+    },
+    {
+      "key": "elisa-reader",
+      "name": "ELISA Reader"
+    },
+    {
+      "key": "elisa-washer",
+      "name": "ELISA Washer"
+    },
+    {
+      "key": "fluorescence-microscope",
+      "name": "Fluorescence Microscope"
+    },
+    {
+      "key": "gel-documentation-system",
+      "name": "Gel Documentation System"
+    },
+    {
+      "key": "gel-electrophoresis-unit",
+      "name": "Gel Electrophoresis Unit"
+    },
+    {
+      "key": "glass-spreaders",
+      "name": "Glass Spreaders"
+    },
+    {
+      "key": "gradient-pcr-system",
+      "name": "Gradient PCR System"
+    },
+    {
+      "key": "horizontal-autoclave",
+      "name": "Horizontal Autoclave"
+    },
+    {
+      "key": "horizontal-gel-electrophoresis-unit",
+      "name": "Horizontal Gel Electrophoresis Unit"
+    },
+    {
+      "key": "horizontal-laminar-air-flow",
+      "name": "Horizontal Laminar Air Flow"
+    },
+    {
+      "key": "hot-air-oven",
+      "name": "Hot Air Oven"
+    },
+    {
+      "key": "hot-plate",
+      "name": "Hot Plate"
+    },
+    {
+      "key": "humidity-controlled-incubator",
+      "name": "Humidity Controlled Incubator"
+    },
+    {
+      "key": "incubator-with-shaker",
+      "name": "Incubator with Shaker"
+    },
+    {
+      "key": "inoculating-needle",
+      "name": "Inoculating Needle"
+    },
+    {
+      "key": "l-shaped-spreader",
+      "name": "L-Shaped Spreader"
+    },
+    {
+      "key": "laboratory-refrigerator",
+      "name": "Laboratory Refrigerator"
+    },
+    {
+      "key": "laminar-air-flow-cabinet",
+      "name": "Laminar Air Flow Cabinet"
+    },
+    {
+      "key": "magnetic-stirrer",
+      "name": "Magnetic Stirrer"
+    },
+    {
+      "key": "magnetic-stirrer-with-hot-plate",
+      "name": "Magnetic Stirrer with Hot Plate"
+    },
+    {
+      "key": "manual-colony-counter",
+      "name": "Manual Colony Counter"
+    },
+    {
+      "key": "mcintosh-and-fildes-anaerobic-jar",
+      "name": "McIntosh and Fildes Anaerobic Jar"
+    },
+    {
+      "key": "media-preparation-unit",
+      "name": "Media Preparation Unit"
+    },
+    {
+      "key": "media-sterilizer",
+      "name": "Media Sterilizer"
+    },
+    {
+      "key": "membrane-filtration-assembly",
+      "name": "Membrane Filtration Assembly"
+    },
+    {
+      "key": "micro-centrifuge",
+      "name": "Micro Centrifuge"
+    },
+    {
+      "key": "microplate-shaker",
+      "name": "Microplate Shaker"
+    },
+    {
+      "key": "microscope-with-camera-attachment",
+      "name": "Microscope with Camera Attachment"
+    },
+    {
+      "key": "orbital-shaker",
+      "name": "Orbital Shaker"
+    },
+    {
+      "key": "orbital-shaker-incubator",
+      "name": "Orbital Shaker Incubator"
+    },
+    {
+      "key": "pcr-thermal-cycler",
+      "name": "PCR Thermal Cycler"
+    },
+    {
+      "key": "ph-meter",
+      "name": "pH Meter"
+    },
+    {
+      "key": "phase-contrast-microscope",
+      "name": "Phase Contrast Microscope"
+    },
+    {
+      "key": "pinoculating-loop",
+      "name": "PInoculating Loop"
+    },
+    {
+      "key": "precision-balance",
+      "name": "Precision Balance"
+    },
+    {
+      "key": "refrigerated-centrifuge",
+      "name": "Refrigerated Centrifuge"
+    },
+    {
+      "key": "refrigerator",
+      "name": "Refrigerator"
+    },
+    {
+      "key": "rotary-shaker",
+      "name": "Rotary Shaker"
+    },
+    {
+      "key": "serological-water-bath",
+      "name": "Serological Water Bath"
+    },
+    {
+      "key": "slide-dryer",
+      "name": "Slide Dryer"
+    },
+    {
+      "key": "slide-warmer",
+      "name": "Slide Warmer"
+    },
+    {
+      "key": "spirit-lamp",
+      "name": "Spirit Lamp"
+    },
+    {
+      "key": "trinocular-microscope",
+      "name": "Trinocular Microscope"
+    },
+    {
+      "key": "ultra-low-temperature-freezer",
+      "name": "Ultra Low Temperature Freezer"
+    },
+    {
+      "key": "uv-sterilization-chamber",
+      "name": "UV Sterilization Chamber"
+    },
+    {
+      "key": "uv-transilluminator",
+      "name": "UV Transilluminator"
+    },
+    {
+      "key": "vacuum-filtration-unit",
+      "name": "Vacuum Filtration Unit"
+    },
+    {
+      "key": "vertical-autoclave",
+      "name": "Vertical Autoclave"
+    },
+    {
+      "key": "vertical-gel-electrophoresis-unit",
+      "name": "Vertical Gel Electrophoresis Unit"
+    },
+    {
+      "key": "vertical-laminar-air-flow",
+      "name": "Vertical Laminar Air Flow"
+    },
+    {
+      "key": "vortex-mixer",
+      "name": "Vortex Mixer"
+    },
+    {
+      "key": "water-bath",
+      "name": "Water Bath"
+    },
+    {
+      "key": "water-purification-system",
+      "name": "Water Purification System"
+    },
+    {
+      "key": "weighing-balance",
+      "name": "Weighing Balance"
+    }
   ]
 }

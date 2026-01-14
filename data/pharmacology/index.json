@@ -1,9 +1,229 @@
 {
   "department": "Pharmacology",
   "instruments": [
-    { "key": "rota-rod", "name": "Rota Rod Apparatus" },
-    { "key": "actophotometer", "name": "Actophotometer" },
-    { "key": "plethysmometer", "name": "Plethysmometer" },
-    { "key": "analgesiometer", "name": "Analgesiometer" }
+    {
+      "key": "activity-cage",
+      "name": "Activity Cage"
+    },
+    {
+      "key": "actophotometer",
+      "name": "Actophotometer"
+    },
+    {
+      "key": "aerator-assembly",
+      "name": "Aerator Assembly"
+    },
+    {
+      "key": "analgesiometer",
+      "name": "Analgesiometer"
+    },
+    {
+      "key": "animal-cage",
+      "name": "Animal Cage"
+    },
+    {
+      "key": "animal-dosing-syringe",
+      "name": "Animal Dosing Syringe"
+    },
+    {
+      "key": "animal-handling-table",
+      "name": "Animal Handling Table"
+    },
+    {
+      "key": "animal-house-facility",
+      "name": "Animal House Facility"
+    },
+    {
+      "key": "blood-pressure-recording-apparatus",
+      "name": "Blood Pressure Recording Apparatus"
+    },
+    {
+      "key": "conditioned-avoidance-response-apparatus",
+      "name": "Conditioned Avoidance Response Apparatus"
+    },
+    {
+      "key": "controlled-temperature-cabinet",
+      "name": "Controlled Temperature Cabinet"
+    },
+    {
+      "key": "data-acquisition-system",
+      "name": "Data Acquisition System"
+    },
+    {
+      "key": "deep-freezer",
+      "name": "Deep Freezer"
+    },
+    {
+      "key": "digital-actophotometer",
+      "name": "Digital Actophotometer"
+    },
+    {
+      "key": "digital-kymograph",
+      "name": "Digital Kymograph"
+    },
+    {
+      "key": "digital-photoactometer",
+      "name": "Digital Photoactometer"
+    },
+    {
+      "key": "digital-plethysmometer",
+      "name": "Digital Plethysmometer"
+    },
+    {
+      "key": "digital-rota-rod-apparatus",
+      "name": "Digital Rota Rod Apparatus"
+    },
+    {
+      "key": "digital-thermometer",
+      "name": "Digital Thermometer"
+    },
+    {
+      "key": "digital-timer",
+      "name": "Digital Timer"
+    },
+    {
+      "key": "disinfectant-sprayer",
+      "name": "Disinfectant Sprayer"
+    },
+    {
+      "key": "drug-storage-cabinet",
+      "name": "Drug Storage Cabinet"
+    },
+    {
+      "key": "electrocardiograph",
+      "name": "Electrocardiograph"
+    },
+    {
+      "key": "elevated-plus-maze",
+      "name": "Elevated Plus Maze"
+    },
+    {
+      "key": "force-transducer",
+      "name": "Force Transducer"
+    },
+    {
+      "key": "grip-strength-meter",
+      "name": "Grip Strength Meter"
+    },
+    {
+      "key": "hot-plate-analgesiometer",
+      "name": "Hot Plate Analgesiometer"
+    },
+    {
+      "key": "infusion-pump",
+      "name": "Infusion Pump"
+    },
+    {
+      "key": "invasive-blood-pressure-apparatus",
+      "name": "Invasive Blood Pressure Apparatus"
+    },
+    {
+      "key": "isolated-organ-bath",
+      "name": "Isolated Organ Bath"
+    },
+    {
+      "key": "laboratory-thermometer",
+      "name": "Laboratory Thermometer"
+    },
+    {
+      "key": "maze-apparatus",
+      "name": "Maze Apparatus"
+    },
+    {
+      "key": "metabolic-cage",
+      "name": "Metabolic Cage"
+    },
+    {
+      "key": "micro-syringe-pump",
+      "name": "Micro Syringe Pump"
+    },
+    {
+      "key": "multiple-organ-bath-assembly",
+      "name": "Multiple Organ Bath Assembly"
+    },
+    {
+      "key": "non-invasive-blood-pressure-apparatus",
+      "name": "Non Invasive Blood Pressure Apparatus"
+    },
+    {
+      "key": "open-field-apparatus",
+      "name": "Open Field Apparatus"
+    },
+    {
+      "key": "oral-gavage-needle",
+      "name": "Oral Gavage Needle"
+    },
+    {
+      "key": "personal-protective-equipment-cabinet",
+      "name": "Personal Protective Equipment Cabinet"
+    },
+    {
+      "key": "photoactometer",
+      "name": "Photoactometer"
+    },
+    {
+      "key": "plethysmometer",
+      "name": "Plethysmometer"
+    },
+    {
+      "key": "pole-climbing-apparatus",
+      "name": "Pole Climbing Apparatus"
+    },
+    {
+      "key": "polypropylene-animal-cage",
+      "name": "Polypropylene Animal Cage"
+    },
+    {
+      "key": "refrigerator",
+      "name": "Refrigerator"
+    },
+    {
+      "key": "rota-rod-apparatus",
+      "name": "Rota Rod Apparatus"
+    },
+    {
+      "key": "rotarod-for-motor-coordination",
+      "name": "Rotarod for Motor Coordination"
+    },
+    {
+      "key": "sharps-disposal-container",
+      "name": "Sharps Disposal Container"
+    },
+    {
+      "key": "shuttle-box",
+      "name": "Shuttle Box"
+    },
+    {
+      "key": "spirometer",
+      "name": "Spirometer"
+    },
+    {
+      "key": "stop-watch",
+      "name": "Stop Watch"
+    },
+    {
+      "key": "student-kymograph",
+      "name": "Student Kymograph"
+    },
+    {
+      "key": "student-organ-bath",
+      "name": "Student Organ Bath"
+    },
+    {
+      "key": "tail-flick-analgesiometer",
+      "name": "Tail Flick Analgesiometer"
+    },
+    {
+      "key": "tissue-holder-assembly",
+      "name": "Tissue Holder Assembly"
+    },
+    {
+      "key": "waste-disposal-container",
+      "name": "Waste Disposal Container"
+    },
+    {
+      "key": "y-maze-apparatus",
+      "name": "Y Maze Apparatus"
+    }
   ]
 }

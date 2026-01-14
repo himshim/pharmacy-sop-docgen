@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Operation of Slide Warmer"
+  },
+  "sections": {
+    "purpose": "To describe the procedure for operating the Slide Warmer.",
+    "scope": "Applicable to activities carried out in the Microbiology.",
+    "procedure": [
+      "Ensure the instrument is clean and in working condition.",
+      "Switch ON the instrument and allow it to stabilize.",
+      "Prepare the sample as per standard laboratory practice.",
+      "Perform the analysis using appropriate settings.",
+      "Record observations and save results.",
+      "Switch OFF the instrument after completion."
+    ],
+    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+  }
+}

@@ -1,8 +1,109 @@
 {
-  "department": "Central Instrumentation Facility",
+  "department": "Central Instrumentation",
   "instruments": [
-    { "key": "ftir", "name": "FTIR Spectrophotometer" },
-    { "key": "dsctga", "name": "DSC / TGA Analyzer" },
-    { "key": "particle-size", "name": "Particle Size Analyzer" }
+    {
+      "key": "atomic-absorption-spectrophotometer",
+      "name": "Atomic Absorption Spectrophotometer"
+    },
+    {
+      "key": "auto-sampler-for-hplc",
+      "name": "Auto Sampler for HPLC"
+    },
+    {
+      "key": "brookfield-viscometer",
+      "name": "Brookfield Viscometer"
+    },
+    {
+      "key": "contact-angle-goniometer",
+      "name": "Contact Angle Goniometer"
+    },
+    {
+      "key": "densitometer",
+      "name": "Densitometer"
+    },
+    {
+      "key": "differential-scanning-calorimeter",
+      "name": "Differential Scanning Calorimeter"
+    },
+    {
+      "key": "flame-photometer",
+      "name": "Flame Photometer"
+    },
+    {
+      "key": "ftir-spectrophotometer",
+      "name": "FTIR Spectrophotometer"
+    },
+    {
+      "key": "gas-chromatography",
+      "name": "Gas Chromatography"
+    },
+    {
+      "key": "gc-ms",
+      "name": "GC MS"
+    },
+    {
+      "key": "high-performance-liquid-chromatography",
+      "name": "High Performance Liquid Chromatography"
+    },
+    {
+      "key": "inductively-coupled-plasma-spectrometer",
+      "name": "Inductively Coupled Plasma Spectrometer"
+    },
+    {
+      "key": "karl-fischer-titrator",
+      "name": "Karl Fischer Titrator"
+    },
+    {
+      "key": "lc-ms",
+      "name": "LC MS"
+    },
+    {
+      "key": "microplate-reader",
+      "name": "Microplate Reader"
+    },
+    {
+      "key": "particle-size-analyzer",
+      "name": "Particle Size Analyzer"
+    },
+    {
+      "key": "polarimeter",
+      "name": "Polarimeter"
+    },
+    {
+      "key": "raman-spectrophotometer",
+      "name": "Raman Spectrophotometer"
+    },
+    {
+      "key": "refractometer",
+      "name": "Refractometer"
+    },
+    {
+      "key": "surface-area-analyzer",
+      "name": "Surface Area Analyzer"
+    },
+    {
+      "key": "texture-analyzer",
+      "name": "Texture Analyzer"
+    },
+    {
+      "key": "thermogravimetric-analyzer",
+      "name": "Thermogravimetric Analyzer"
+    },
+    {
+      "key": "uv-fluorescence-spectrophotometer",
+      "name": "UV Fluorescence Spectrophotometer"
+    },
+    {
+      "key": "uv-visible-spectrophotometer",
+      "name": "UV Visible Spectrophotometer"
+    },
+    {
+      "key": "x-ray-diffraction-system",
+      "name": "X Ray Diffraction System"
+    },
+    {
+      "key": "zeta-potential-analyzer",
+      "name": "Zeta Potential Analyzer"
+    }
   ]
 }
