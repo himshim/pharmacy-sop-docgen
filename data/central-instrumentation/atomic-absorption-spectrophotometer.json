@@ -3,16 +3,26 @@
     "title": "Operation of Atomic Absorption Spectrophotometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Atomic Absorption Spectrophotometer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Atomic Absorption Spectrophotometer (AAS) for quantitative determination of metal elements in pharmaceutical samples.",
+    "scope": "Applicable to atomic absorption spectroscopy activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure adequate ventilation and exhaust system is functioning properly in the analysis area.",
+      "Check that the gas cylinders (fuel and oxidant) have sufficient pressure and all connections are secure.",
+      "Power ON the instrument and initialize the control software on the computer system.",
+      "Allow the instrument to warm up and the lamp to stabilize for at least 15-20 minutes.",
+      "Install the appropriate hollow cathode lamp for the target element to be analyzed.",
+      "Align the lamp and optimize the lamp current as per manufacturer specifications.",
+      "Set the wavelength, slit width, and flame conditions according to the analytical method.",
+      "Ignite the flame and adjust fuel-to-oxidant ratio for optimal flame characteristics.",
+      "Prepare blank, standard solutions, and sample solutions using appropriate diluents.",
+      "Aspirate blank solution and adjust to zero absorbance reading.",
+      "Aspirate standard solutions in ascending order and verify linearity of calibration curve.",
+      "Aspirate sample solutions and record absorbance values with appropriate replicates.",
+      "Calculate concentration of analyte using the calibration curve or standard addition method.",
+      "After analysis, aspirate distilled water to rinse the nebulizer and burner system.",
+      "Extinguish the flame following proper sequence and power OFF the instrument.",
+      "Document all readings, calculations, and observations in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": "Ensure proper ventilation to avoid accumulation of combustion gases. Never leave the flame unattended during operation. Use only analytical grade reagents and ultrapure water for solution preparation. Check for any blockage in nebulizer and burner slots before operation. Wear safety goggles, lab coat, and gloves during analysis. Handle compressed gas cylinders with care and ensure they are properly secured. Perform regular maintenance of burner head and nebulizer. Dispose of waste solutions containing heavy metals as per hazardous waste management guidelines."
   }
 }

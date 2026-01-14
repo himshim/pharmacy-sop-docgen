@@ -3,16 +3,28 @@
     "title": "Operation of Densitometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Densitometer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Densitometer for accurate determination of density and specific gravity of liquids and solutions.",
+    "scope": "Applicable to density and specific gravity measurement activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is placed on a stable surface away from direct sunlight and vibrations.",
+      "Power ON the densitometer and allow it to stabilize at the operating temperature.",
+      "Verify that the measurement cell is clean, dry, and free from any residues.",
+      "Calibrate the instrument using air and water or reference standards at the specified temperature.",
+      "Confirm that calibration results are within acceptable limits before proceeding.",
+      "Prepare the sample ensuring it is homogeneous and free from air bubbles.",
+      "If required, adjust the sample temperature to the specified value using a thermostat.",
+      "Rinse the measurement cell with a small portion of the sample to condition it.",
+      "Introduce the sample into the measurement cell using a syringe or pipette carefully.",
+      "Ensure complete filling of the cell with no trapped air bubbles in the measurement zone.",
+      "Allow the sample to equilibrate thermally within the cell until temperature is stable.",
+      "Initiate the measurement and wait for the reading to stabilize on the display.",
+      "Record the density value, temperature, and any other relevant parameters.",
+      "Perform duplicate or triplicate measurements to verify reproducibility.",
+      "After measurements, thoroughly clean the cell with appropriate solvents.",
+      "Rinse with distilled water and dry with filtered air or allow to air dry.",
+      "Perform an air check to ensure the cell is completely dry before storage.",
+      "Document all readings, temperature, and calculations in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": "Always perform calibration before use to ensure accuracy of measurements. Maintain constant temperature during measurements as density is highly temperature-dependent. Ensure samples are free from suspended particles and air bubbles. Use filtered or degassed samples when necessary. Clean the measurement cell thoroughly between different samples to avoid cross-contamination. Use appropriate solvents that are compatible with the cell material. Handle samples containing volatile or hazardous materials in a fume hood. Do not use samples with viscosity exceeding the instrument specifications. Verify cell integrity periodically for cracks or damage."
   }
 }

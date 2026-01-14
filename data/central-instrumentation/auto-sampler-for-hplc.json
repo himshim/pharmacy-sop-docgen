@@ -3,16 +3,26 @@
     "title": "Operation of Auto Sampler for HPLC"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Auto Sampler for HPLC.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Auto Sampler for HPLC system to ensure automated and reproducible sample injection for chromatographic analysis.",
+    "scope": "Applicable to automated sample injection activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the auto sampler is properly connected to the HPLC system and communication is established.",
+      "Check that the sample tray or carousel is clean and properly positioned in the auto sampler.",
+      "Ensure the injection syringe and needle are clean and free from blockages.",
+      "Power ON the auto sampler module and initialize through the control software.",
+      "Perform syringe priming and needle wash to remove air bubbles and contaminants.",
+      "Set injection parameters including injection volume, wash cycles, and needle depth.",
+      "Load sample vials and standard vials in designated positions on the sample tray.",
+      "Ensure all vials are properly capped with septa and caps to prevent evaporation.",
+      "Create or load the sample sequence with vial positions and injection order in the software.",
+      "Run a test injection with blank or standard to verify proper injection and carryover check.",
+      "Start the automated sequence and monitor the initial injections for any errors.",
+      "Allow the auto sampler to complete the sequence with periodic monitoring.",
+      "After completion, review the injection log for any failed or incomplete injections.",
+      "Perform post-run cleaning by running wash cycles with appropriate solvents.",
+      "Remove sample vials from the tray and power OFF the auto sampler.",
+      "Document the sequence details and any observations in the instrument logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": "Always use compatible vials, caps, and septa recommended for the auto sampler model. Ensure samples are filtered or centrifuged to prevent particulate matter from blocking the needle. Do not overfill vials to avoid sample carryover. Use appropriate wash solvents to minimize carryover between injections. Check needle and syringe for wear or damage regularly. Maintain ambient temperature control to prevent sample degradation or evaporation. Clean the sample tray and needle seat regularly to prevent contamination. Store samples appropriately if analysis is delayed."
   }
 }

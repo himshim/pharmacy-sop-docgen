@@ -3,16 +3,26 @@
     "title": "Operation of Brookfield Viscometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Brookfield Viscometer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Brookfield Viscometer for measuring the viscosity of liquids, semi-solids, and pharmaceutical formulations.",
+    "scope": "Applicable to viscosity measurement activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is placed on a stable, level surface free from vibrations.",
+      "Verify that the instrument is properly leveled using the bubble level indicator.",
+      "Power ON the viscometer and allow it to complete self-diagnostic tests.",
+      "Select and attach the appropriate spindle based on the expected viscosity range of the sample.",
+      "Set the rotational speed (RPM) according to the analytical method or sample characteristics.",
+      "Prepare sufficient quantity of sample and transfer to an appropriate container.",
+      "If required, use a temperature-controlled water bath to maintain sample at specified temperature.",
+      "Immerse the spindle into the sample to the marked immersion line on the spindle shaft.",
+      "Ensure no air bubbles are trapped on the spindle surface that could affect readings.",
+      "Start the rotation and allow sufficient time for the reading to stabilize.",
+      "Record the viscosity reading when the display shows a stable value.",
+      "Perform replicate measurements as per the analytical procedure requirements.",
+      "After measurements, stop the rotation and carefully remove the spindle from the sample.",
+      "Clean the spindle immediately with appropriate solvent and wipe with soft tissue.",
+      "Power OFF the instrument and store the spindle properly to prevent damage.",
+      "Calculate average viscosity and document all readings in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": "Select the appropriate spindle and speed combination to obtain readings within 10-100% of the full scale range for accurate results. Avoid introducing air bubbles while immersing the spindle. Ensure sample homogeneity before measurement. Maintain constant temperature throughout the measurement as viscosity is temperature-dependent. Do not exceed the maximum viscosity limit of the selected spindle. Clean spindles gently to avoid bending or damage. Use samples free from particulate matter that could interfere with rotation. Wear appropriate PPE when handling samples."
   }
 }

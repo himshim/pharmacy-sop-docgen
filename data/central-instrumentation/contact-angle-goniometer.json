@@ -3,16 +3,29 @@
     "title": "Operation of Contact Angle Goniometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Contact Angle Goniometer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Contact Angle Goniometer for measuring the contact angle and surface wettability properties of pharmaceutical materials and coatings.",
+    "scope": "Applicable to contact angle and surface energy measurement activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is placed on an anti-vibration table in a dust-free environment.",
+      "Power ON the instrument including the light source, camera, and computer system.",
+      "Launch the contact angle analysis software and initialize camera settings.",
+      "Calibrate the system using a standard calibration target if required.",
+      "Clean the sample stage thoroughly and ensure it is level and properly aligned.",
+      "Prepare the test sample ensuring the surface is clean, dry, and free from contamination.",
+      "Mount the sample securely on the stage using appropriate fixtures or adhesive.",
+      "Position the sample surface in focus under the camera with proper illumination.",
+      "Load the test liquid (water, buffer, or specific solvent) into the dispensing syringe.",
+      "Adjust the needle position above the sample surface at the desired height.",
+      "Dispense a controlled droplet of known volume onto the sample surface.",
+      "Capture the droplet image immediately after deposition for static contact angle measurement.",
+      "Use the software to identify the droplet profile and baseline for angle calculation.",
+      "Measure contact angles on both sides of the droplet and record the values.",
+      "Repeat measurements at different locations on the sample surface for reproducibility.",
+      "If performing dynamic measurements, capture images at specified time intervals.",
+      "Clean the sample stage and needle after measurements to prevent cross-contamination.",
+      "Save all images and data files with proper identification for documentation.",
+      "Power OFF the system and cover the instrument to protect from dust."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": "Handle samples carefully to avoid contaminating the surface before measurement. Use ultra-pure or freshly prepared liquids for accurate measurements. Ensure ambient conditions (temperature and humidity) are controlled and recorded. Avoid vibrations during droplet deposition and image capture. Clean the dispensing needle regularly to ensure consistent droplet size. Use appropriate droplet volume suitable for the sample surface. Perform measurements promptly as contact angles may change with time. Store and handle hydrophilic and hydrophobic samples appropriately to maintain surface properties."
   }
 }
