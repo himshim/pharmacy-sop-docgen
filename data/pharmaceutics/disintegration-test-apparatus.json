@@ -3,16 +3,43 @@
     "title": "Operation of Disintegration Test Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Disintegration Test Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Disintegration Test Apparatus for determination of disintegration time of tablets and capsules as per pharmacopeial standards.",
+    "scope": "Applicable to disintegration testing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the disintegration apparatus is placed on a stable, level surface.",
+      "Verify that the basket-rack assembly and tubes are clean and undamaged.",
+      "Check that the heating element and temperature controller are functioning.",
+      "Fill the disintegration vessel with appropriate disintegration medium (water, buffer, etc.).",
+      "Fill medium to the specified level (typically 800-1000 mL).",
+      "Set the temperature controller to 37 ± 0.5°C for standard testing.",
+      "Allow the medium to reach and stabilize at the set temperature.",
+      "Verify temperature using a calibrated thermometer.",
+      "Take six tablets or capsules from the batch for testing.",
+      "If specified, place a disc in each tube to prevent capsule floating.",
+      "Place one tablet or capsule in each of the six tubes of the basket.",
+      "Lower the basket-rack assembly into the disintegration medium.",
+      "Ensure tablets or capsules are fully immersed in the medium.",
+      "Start the timer and vertical reciprocating motion simultaneously.",
+      "Set the stroke frequency to 29-32 cycles per minute.",
+      "Observe the tablets or capsules during disintegration process.",
+      "Note the time when all units have completely disintegrated.",
+      "Complete disintegration means no residue remains on the screen or only soft mass remains.",
+      "If any unit fails to disintegrate, repeat test with additional 6 units.",
+      "Record disintegration time and compliance status.",
+      "Remove basket assembly and clean thoroughly after testing.",
+      "Document all observations, disintegration times, and results in the QC record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain temperature at 37 ± 0.5°C throughout the test.",
+      "Use appropriate disintegration medium as specified in monograph.",
+      "Ensure proper stroke frequency for valid results.",
+      "Do not disturb or manually break tablets during testing.",
+      "Use discs appropriately for capsules to prevent floating.",
+      "Check tubes for cracks or damage before use.",
+      "Clean apparatus thoroughly between different products.",
+      "Verify calibration of temperature controller regularly.",
+      "Follow pharmacopeial specifications for testing conditions.",
+      "Dispose of tested units and medium as per laboratory protocols."
+    ]
   }
 }

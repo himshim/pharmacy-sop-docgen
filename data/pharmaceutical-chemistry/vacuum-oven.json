@@ -3,16 +3,24 @@
     "title": "Operation of Vacuum Oven"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vacuum Oven.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for drying heat-sensitive or oxygen-sensitive materials under vacuum.",
+    "scope": "Applicable to sample drying in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the sample on a tray and slide it into the oven chamber.",
+      "Close the door and tighten the latches to ensure an airtight seal.",
+      "Connect the vacuum pump and turn it ON.",
+      "Slowly open the vacuum valve and monitor the pressure gauge.",
+      "Once the vacuum is established, set the required temperature on the controller.",
+      "After drying is complete, turn OFF the heater and allow the chamber to cool.",
+      "Slowly bleed air or nitrogen into the chamber through the vent valve.",
+      "Open the door and remove the sample."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never exceed the maximum temperature rating of the oven.",
+      "Ensure the door gasket is clean and free from debris to maintain a seal.",
+      "Bleed the vacuum very slowly to avoid sample dispersion.",
+      "Do not dry materials that may release explosive or highly corrosive vapors.",
+      "Regularly check the vacuum pump oil level and performance."
+    ]
   }
 }

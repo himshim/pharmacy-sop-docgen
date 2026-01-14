@@ -3,16 +3,24 @@
     "title": "Operation of Spill Control Kit"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Spill Control Kit.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide materials for the safe containment and cleanup of chemical spills.",
+    "scope": "Applicable to emergency response in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Assess the spill and don the necessary PPE (gloves, goggles, apron).",
+      "Confine the spill using absorbent socks or booms from the kit.",
+      "Apply absorbent pads or neutralizers (for acids/bases) onto the spill.",
+      "Wait for the liquid to be fully absorbed or neutralized.",
+      "Collect the contaminated materials using the scoops and brushes provided.",
+      "Place the waste in the designated hazardous waste bags and seal them.",
+      "Decontaminate the spill area with soap and water.",
+      "Replenish the kit components immediately after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not attempt to clean up a large or highly toxic spill without professional assistance.",
+      "Ensure the area is well-ventilated during the cleanup.",
+      "Identify the spilled chemical before choosing a neutralizer.",
+      "Dispose of all cleanup materials as hazardous chemical waste.",
+      "Keep the spill kit in an easily accessible and clearly marked location."
+    ]
   }
 }

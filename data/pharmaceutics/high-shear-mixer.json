@@ -3,16 +3,44 @@
     "title": "Operation of High Shear Mixer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the High Shear Mixer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of High Shear Mixer for intensive mixing, kneading, and wet granulation of pharmaceutical powders using high-speed impeller and chopper action.",
+    "scope": "Applicable to high shear mixing and granulation activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the high shear mixer is installed on a stable foundation.",
+      "Verify all electrical connections, interlocks, and safety systems are functional.",
+      "Check that the mixing bowl, impeller, chopper, and lid are clean and properly assembled.",
+      "Weigh all ingredients accurately according to the batch formula.",
+      "Load powder ingredients into the mixing bowl.",
+      "Close and secure the bowl lid with proper safety interlocks engaged.",
+      "Set impeller speed to low (50-200 rpm) for initial dry mixing.",
+      "Start the impeller and allow dry powders to mix uniformly.",
+      "Continue dry mixing for specified time (typically 2-5 minutes).",
+      "Prepare granulating fluid or binder solution of appropriate concentration.",
+      "Connect spray nozzle or prepare for manual addition of binder.",
+      "Set chopper speed to desired level (typically 1000-3000 rpm).",
+      "Start the chopper while maintaining impeller rotation.",
+      "Begin spraying or adding granulating fluid at controlled rate.",
+      "Monitor power consumption and wet mass appearance during granulation.",
+      "Adjust impeller speed if necessary (typically increase to 200-400 rpm).",
+      "Continue granulation until desired endpoint is achieved.",
+      "Monitor endpoint using visual observation, power consumption, or temperature.",
+      "Stop chopper and impeller once granulation is complete.",
+      "Discharge wet granules immediately through the discharge valve.",
+      "Clean all product contact parts thoroughly with appropriate cleaning agents.",
+      "Inspect equipment for residue or product buildup.",
+      "Document all mixing parameters, fluid volume, and observations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed maximum bowl capacity to ensure proper mixing.",
+      "Add granulating fluid at controlled rate to avoid over-wetting.",
+      "Monitor granulation endpoint carefully to achieve optimal granule properties.",
+      "Avoid over-processing which generates excessive heat and fine particles.",
+      "Never open the lid while impeller or chopper is in motion.",
+      "Ensure safety interlocks are functioning before operation.",
+      "Discharge wet mass promptly to prevent drying in the bowl.",
+      "Clean equipment immediately after use to prevent material hardening.",
+      "Wear appropriate PPE including gloves, safety goggles, and protective clothing.",
+      "Follow lockout/tagout procedures during cleaning and maintenance."
+    ]
   }
 }

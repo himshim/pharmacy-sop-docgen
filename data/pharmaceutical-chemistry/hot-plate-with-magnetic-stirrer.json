@@ -3,16 +3,24 @@
     "title": "Operation of Hot Plate with Magnetic Stirrer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Hot Plate with Magnetic Stirrer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide simultaneous heating and stirring of liquid mixtures.",
+    "scope": "Applicable to synthesis and dissolution in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the beaker or flask on the center of the hot plate.",
+      "Add a clean magnetic stir bar (flea) into the container.",
+      "Power ON the unit and adjust the stirring speed to create a gentle vortex.",
+      "Adjust the temperature dial to the desired heating level.",
+      "Monitor the process and adjust parameters as the viscosity changes.",
+      "Turn OFF both heating and stirring dials after the task.",
+      "Remove the stir bar using a magnetic retriever (wand).",
+      "Clean the plate and stir bar thoroughly after they have cooled."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the stir bar size is appropriate for the volume and container.",
+      "Do not exceed the stirring speed that causes the bar to 'jump' or decouple.",
+      "Keep the unit away from strong external magnetic fields.",
+      "Always check the glass container for cracks before heating.",
+      "Wear PPE to protect against splashes from the rotating liquid."
+    ]
   }
 }

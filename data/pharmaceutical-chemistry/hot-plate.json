@@ -3,16 +3,24 @@
     "title": "Operation of Hot Plate"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Hot Plate.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide a flat heating surface for beakers, flasks, and containers.",
+    "scope": "Applicable to general heating in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the hot plate surface is clean and free from chemical residues.",
+      "Place the container on the center of the heating surface.",
+      "Plug the unit into a grounded outlet and turn ON the power switch.",
+      "Adjust the temperature dial to the required setting.",
+      "Monitor the temperature of the liquid using a thermometer.",
+      "Turn OFF the heat and unplug the unit when the task is complete.",
+      "Wait for the surface to cool completely before cleaning.",
+      "Mark the hot plate with a 'HOT' sign until it is safe to touch."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use a hot plate near flammable liquids or vapors.",
+      "Avoid placing plastic containers or low-boiling solvents directly on the surface.",
+      "Ensure the electrical cord does not touch the hot heating surface.",
+      "Never leave a hot plate unattended while it is heating.",
+      "Check for signs of corrosion or cracked ceramic tops regularly."
+    ]
   }
 }

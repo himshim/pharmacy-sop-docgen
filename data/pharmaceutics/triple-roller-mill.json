@@ -3,16 +3,25 @@
     "title": "Operation of Triple Roller Mill"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Triple Roller Mill.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Triple Roller Mill for grinding and dispersing semi-solids.",
+    "scope": "Applicable to ointment manufacturing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the rollers are clean and correctly positioned.",
+      "Adjust the gap between the rollers to the required setting.",
+      "Start the motor and verify the rotation of the rollers.",
+      "Feed the pre-mixed semi-solid material into the feed rollers.",
+      "Monitor the dispersion and collect the milled product from the discharge blade.",
+      "Adjust the scraper blade pressure for efficient collection.",
+      "Pass the material multiple times if higher fineness is required.",
+      "Stop the mill and clean the rollers and blade immediately after use.",
+      "Document the mill settings and batch yield."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never attempt to clean the rollers while they are in motion.",
+      "Maintain safe distance from the nip points of the rollers.",
+      "Ensure the scraper blade is not damaged to prevent scraping errors.",
+      "Clean rollers thoroughly to prevent material hardening on surfaces.",
+      "Use appropriate tools for feeding material into the mill."
+    ]
   }
 }

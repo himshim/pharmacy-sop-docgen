@@ -1,18 +1,24 @@
 {
   "meta": {
-    "title": "Operation of L-Shaped Spreader"
+    "title": "Use of L-Shaped Spreader"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the L-Shaped Spreader.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To evenly distribute inoculum over the agar surface using an L-shaped device.",
+    "scope": "Applicable to spread plate techniques in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Sterilize the L-shaped spreader by dipping in alcohol and flaming, or by autoclaving.",
+      "Allow it to cool before use.",
+      "Dispense the inoculum onto the center of the agar plate.",
+      "Gently move the spreader across the surface in a circular or back-and-forth motion.",
+      "Avoid applying excessive pressure.",
+      "After use, place the spreader back into disinfectant or discard if disposable."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the spreader is completely cooled before contacting agar.",
+      "Do not reuse disposable spreaders.",
+      "Avoid flaming plastic spreaders.",
+      "Prevent contact with non-sterile surfaces during use.",
+      "Handle hot metal spreaders with care to prevent burns."
+    ]
   }
 }

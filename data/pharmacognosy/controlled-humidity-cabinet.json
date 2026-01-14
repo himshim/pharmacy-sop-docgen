@@ -3,16 +3,22 @@
     "title": "Operation of Controlled Humidity Cabinet"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Controlled Humidity Cabinet.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To store crude drugs and herbal samples at defined temperature and humidity conditions.",
+    "scope": "Applicable to stability studies and storage of hygroscopic plant materials in Pharmacognosy.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set the desired temperature and relative humidity on the control panel according to the study protocol.",
+      "Allow the cabinet to reach and stabilize at set conditions.",
+      "Place labeled samples on the shelves without blocking air circulation vents.",
+      "Monitor and record temperature and humidity readings at defined intervals.",
+      "Open the door only when necessary and for the shortest time possible.",
+      "At the end of the study, remove samples, download any logged data, and clean the interior."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the cabinet beyond rated capacity.",
+      "Use only distilled or deionized water in humidity reservoirs to prevent scaling.",
+      "Check door seals regularly for proper closure.",
+      "Calibrate sensors for temperature and humidity at scheduled intervals.",
+      "Connect critical cabinets to backup power if available."
+    ]
   }
 }

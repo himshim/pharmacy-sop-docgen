@@ -3,16 +3,26 @@
     "title": "Operation of Strip Packing Machine"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Strip Packing Machine.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Strip Packing Machine for packaging tablets/capsules between two layers of foil.",
+    "scope": "Applicable to packaging activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check cleanliness of sealing rollers, feeding tracks, and cutters.",
+      "Load foil rolls and thread them through the sealing rollers.",
+      "Set the sealing temperature and start the heating elements.",
+      "Once temperature is reached, perform a test run with empty foil.",
+      "Load products into the hopper and start the feeding mechanism.",
+      "Verify sealing quality, pocket formation, and cut accuracy.",
+      "Check batch coding and printing clarity.",
+      "Collect finished strips and perform leak tests.",
+      "Stop the machine and clean all contact parts after use.",
+      "Document machine settings and yield in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not touch heated sealing rollers during operation.",
+      "Maintain consistent temperature to ensure seal integrity.",
+      "Monitor foil alignment to prevent wastage and poor sealing.",
+      "Ensure products are dry and free from dust before packing.",
+      "Follow proper line clearance procedures."
+    ]
   }
 }

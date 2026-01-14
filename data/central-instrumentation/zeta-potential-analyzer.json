@@ -3,16 +3,43 @@
     "title": "Operation of Zeta Potential Analyzer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Zeta Potential Analyzer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Zeta Potential Analyzer for measurement of zeta potential and electrophoretic mobility of pharmaceutical suspensions, emulsions, and nanoparticles to assess colloidal stability.",
+    "scope": "Applicable to zeta potential measurement activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is placed on a stable surface in a temperature-controlled environment.",
+      "Power ON the zeta potential analyzer and initialize the control software.",
+      "Allow the laser and electronics to warm up and stabilize for at least 15 minutes.",
+      "Select the appropriate measurement cell (disposable or reusable) based on sample type.",
+      "If using reusable cells, clean the electrodes thoroughly and verify they are not corroded.",
+      "Prepare the sample dispersion ensuring appropriate particle concentration.",
+      "Adjust the pH or add electrolyte if required for the study.",
+      "For best results, use dilute samples with low ionic strength unless studying specific conditions.",
+      "Fill the measurement cell with sample ensuring no air bubbles are trapped.",
+      "Insert the cell into the measurement chamber with proper orientation.",
+      "Allow the sample to equilibrate thermally for a few minutes.",
+      "Set measurement parameters including number of runs, voltage, and delay time.",
+      "Start the measurement and allow the instrument to apply electric field across the electrodes.",
+      "Monitor the electrophoretic mobility measurement in real-time.",
+      "The instrument will automatically calculate zeta potential from mobility data.",
+      "Record the zeta potential value along with distribution and quality indicators.",
+      "Perform replicate measurements (typically 3-5) to ensure reproducibility.",
+      "Review the quality parameters to ensure data validity.",
+      "After measurements, clean the cell thoroughly with distilled water.",
+      "For reusable cells, clean electrodes with appropriate cleaning solution and dry.",
+      "Save all data files with proper identification and document sample preparation details.",
+      "Generate reports including zeta potential distribution plots and statistical parameters."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use appropriate sample concentration to avoid multiple scattering effects.",
+      "Ensure samples are free from large particles or aggregates that can settle.",
+      "Use filtered or degassed water for sample preparation.",
+      "Avoid air bubbles in the measurement cell as they interfere with measurements.",
+      "Clean electrodes thoroughly between samples to prevent contamination.",
+      "Check electrode condition regularly and replace if corroded or damaged.",
+      "Use appropriate ionic strength for accurate zeta potential determination.",
+      "Maintain constant temperature during measurements as zeta potential is temperature-dependent.",
+      "Wear appropriate PPE when handling samples and cleaning solutions.",
+      "Perform regular calibration using zeta potential standards."
+    ]
   }
 }

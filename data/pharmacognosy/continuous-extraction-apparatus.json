@@ -3,16 +3,23 @@
     "title": "Operation of Continuous Extraction Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Continuous Extraction Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To continuously extract active constituents from plant material using suitable solvents.",
+    "scope": "Applicable to large-scale extraction in Pharmacognosy and phytochemistry work.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Weigh and load the coarsely powdered plant material into the thimble or extraction chamber.",
+      "Assemble the continuous extraction apparatus (e.g., Soxhlet-type) with round-bottom flask, condenser, and heating mantle.",
+      "Add the required volume of extraction solvent to the flask and check all joints for tightness.",
+      "Start heating to initiate solvent boiling and siphoning cycles through the plant material.",
+      "Allow the extraction to continue for the specified number of cycles or time.",
+      "After completion, cool the system, disconnect, and concentrate the extract as required.",
+      "Clean and dry glassware and joints thoroughly after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use appropriate boiling stones or anti-bumping granules in the flask.",
+      "Ensure proper water circulation in the condenser.",
+      "Do not heat flammable solvents near open flames; use mantle or water bath.",
+      "Secure glass joints with clips to prevent disconnection during operation.",
+      "Handle hot glassware and solvents with heat-resistant gloves."
+    ]
   }
 }

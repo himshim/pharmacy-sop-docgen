@@ -1,18 +1,26 @@
 {
   "meta": {
-    "title": "Operation of Glass Spreaders"
+    "title": "Use and Sterilization of Glass Spreaders"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Glass Spreaders.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To spread microbial inoculum evenly over agar surfaces using reusable glass spreaders.",
+    "scope": "Applicable to plate count and isolation techniques in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Dip the glass spreader in 70% ethanol.",
+      "Flame the spreader briefly to burn off the alcohol and achieve sterilization.",
+      "Allow the spreader to cool near the flame without touching any surface.",
+      "Dispense the inoculum onto the agar plate.",
+      "Gently spread the inoculum over the surface using the cooled spreader.",
+      "Return the spreader to the ethanol container after use.",
+      "Autoclave spreaders periodically for thorough sterilization.",
+      "Inspect glass spreaders for cracks and discard damaged ones."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use excessive flaming that may cause glass breakage.",
+      "Ensure the spreader is adequately cooled before touching the agar.",
+      "Avoid flaming near flammable materials.",
+      "Handle hot spreaders with care to prevent burns.",
+      "Dispose of ethanol safely and keep containers closed when not in use."
+    ]
   }
 }

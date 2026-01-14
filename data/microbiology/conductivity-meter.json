@@ -3,16 +3,24 @@
     "title": "Operation of Conductivity Meter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Conductivity Meter.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To measure the electrolytic conductivity of water and media solutions.",
+    "scope": "Applicable to water quality checks and media prep in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Power ON the meter and check the probe connection.",
+      "Calibrate the meter with a standard solution of known conductivity.",
+      "Rinse the probe with distilled water and dry gently.",
+      "Immerse the probe in the sample solution.",
+      "Wait for the stability indicator and record the reading.",
+      "Rinse the probe thoroughly after each measurement.",
+      "Store the probe in the storage solution recommended by the manufacturer.",
+      "Document the measurement results and calibration data."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure there are no air bubbles trapped in the probe sensing area.",
+      "Do not use the probe in solutions that may damage the platinum coating.",
+      "Perform calibration daily or before each set of measurements.",
+      "Handle the probe with care to avoid mechanical shock.",
+      "Rinse between different samples to prevent carryover contamination."
+    ]
   }
 }

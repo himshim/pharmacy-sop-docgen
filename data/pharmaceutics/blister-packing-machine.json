@@ -3,16 +3,43 @@
     "title": "Operation of Blister Packing Machine"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Blister Packing Machine.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Blister Packing Machine for packaging tablets and capsules in blister packs using thermoforming or cold forming techniques.",
+    "scope": "Applicable to blister packaging activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the machine is installed in a clean area with adequate lighting and ventilation.",
+      "Verify that all electrical connections and compressed air supply are properly connected.",
+      "Check that forming film, lidding foil, and printing materials are available.",
+      "Power ON the blister packing machine and initialize the control panel.",
+      "Load the forming film roll onto the unwinding station and thread through the machine path.",
+      "Load the lidding foil roll onto the sealing station according to machine specifications.",
+      "Set machine parameters including forming depth, sealing temperature, and sealing time.",
+      "Adjust the feeding mechanism according to the size and shape of tablets or capsules.",
+      "Set the machine speed based on production requirements.",
+      "Perform trial runs without product to check forming quality and alignment.",
+      "Adjust heating elements and forming dies to achieve proper pocket formation.",
+      "Load tablets or capsules into the hopper or feeding trays.",
+      "Start the automatic feeding and ensure products are properly oriented.",
+      "Monitor the forming, filling, sealing, and cutting operations continuously.",
+      "Check the first few blister strips for proper sealing, product placement, and print quality.",
+      "Verify that batch coding and expiry date printing are clear and correct.",
+      "Adjust parameters if defects like incomplete sealing or product damage are observed.",
+      "Collect the finished blister strips and perform in-process quality checks.",
+      "Periodically inspect for seal integrity, pocket formation, and print clarity.",
+      "After completion, switch OFF the machine and clean all product contact parts.",
+      "Remove any remaining film and foil materials and store properly.",
+      "Document all machine settings, batch details, and quality observations in the production record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure proper training before operating the blister packing machine.",
+      "Never place hands near moving parts or heated sealing areas during operation.",
+      "Maintain proper temperature control to avoid material degradation or incomplete sealing.",
+      "Check for proper alignment of film and foil to prevent wastage.",
+      "Ensure products are within specified size and shape tolerances.",
+      "Monitor seal integrity regularly to prevent product exposure.",
+      "Keep the work area clean to prevent contamination of packed products.",
+      "Wear appropriate PPE including safety shoes and protective clothing.",
+      "Follow lockout/tagout procedures during maintenance.",
+      "Dispose of rejected strips and waste material as per protocols."
+    ]
   }
 }

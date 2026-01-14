@@ -3,16 +3,26 @@
     "title": "Operation of Single Punch Tablet Press"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Single Punch Tablet Press.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Single Punch Tablet Press for small-scale tablet production.",
+    "scope": "Applicable to tablet manufacturing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure punches and die are clean and free from scratches.",
+      "Install the lower punch, die, and upper punch securely.",
+      "Adjust the lower punch position to set the tablet weight.",
+      "Adjust the upper punch travel to set the tablet hardness/thickness.",
+      "Fill the hopper with granules and rotate the fly-wheel manually for test.",
+      "Verify tablet quality and weight manually before starting power.",
+      "Power ON the machine and collect compressed tablets.",
+      "Perform weight and hardness checks periodically.",
+      "Stop the machine and clean all components after use.",
+      "Document settings and batch results in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always perform initial test rotations manually.",
+      "Do not place fingers near the die cavity during operation.",
+      "Ensure granules have proper flow and lubrication.",
+      "Stop the machine immediately if jamming occurs.",
+      "Clean and grease the machine parts after each use."
+    ]
   }
 }

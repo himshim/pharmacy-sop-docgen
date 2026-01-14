@@ -3,16 +3,24 @@
     "title": "Operation of Laboratory Refrigerator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Laboratory Refrigerator.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To store temperature-sensitive reagents and samples at 2°C to 8°C.",
+    "scope": "Applicable to storage activities in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify the temperature setting on the digital thermostat.",
+      "Place reagents in labeled, sealed containers on the shelves.",
+      "Organize items to allow for uniform cold air distribution.",
+      "Monitor and record the temperature on the daily log sheet.",
+      "Check for expired reagents and dispose of them monthly.",
+      "Clean the interior surfaces with a mild disinfectant periodically.",
+      "Ensure the door is kept closed and the seal is functional.",
+      "Document any deviations from the set temperature range."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not store food or drinks in the laboratory refrigerator.",
+      "Minimize the duration of door openings.",
+      "Do not store flammable solvents in a non-explosion-proof unit.",
+      "Ensure all liquid containers have secondary containment.",
+      "Maintain a clear inventory of all stored items."
+    ]
   }
 }

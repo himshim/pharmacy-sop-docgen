@@ -3,16 +3,23 @@
     "title": "Operation of Hot Air Oven"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Hot Air Oven.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To dry and sterilize glassware and metal instruments using dry heat.",
+    "scope": "Applicable to sterilization and drying activities in the Microbiology laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the oven chamber is clean and free of combustible material.",
+      "Arrange glassware on shelves to allow free air circulation.",
+      "Close the door and set the desired temperature and time (e.g., 160–180°C for 2 hours).",
+      "Allow the unit to reach the set temperature before starting the timing.",
+      "After the cycle, switch OFF the oven and allow it to cool gradually.",
+      "Open the door cautiously and remove items using heat-resistant gloves.",
+      "Record the cycle details in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not place plastic, rubber or flammable items in the oven.",
+      "Avoid opening the door during the sterilization cycle.",
+      "Verify temperature calibration periodically.",
+      "Ensure adequate clearance around the oven for ventilation.",
+      "Do not overload shelves beyond their rated capacity."
+    ]
   }
 }

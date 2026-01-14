@@ -3,16 +3,40 @@
     "title": "Operation of Raman Spectrophotometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Raman Spectrophotometer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Raman Spectrophotometer for molecular fingerprinting, structural characterization, and identification of pharmaceutical materials using Raman spectroscopy.",
+    "scope": "Applicable to Raman spectroscopy activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is placed in a vibration-free, temperature-controlled environment.",
+      "Power ON the Raman spectrometer and allow the laser and detector to stabilize.",
+      "Initialize the control software and verify system status indicators.",
+      "Perform wavelength calibration using standard reference materials (e.g., silicon, naphthalene).",
+      "Verify that calibration results meet acceptable criteria for accuracy.",
+      "Select appropriate laser wavelength and power based on sample characteristics.",
+      "Choose the objective lens appropriate for the sample type and required spot size.",
+      "Prepare the sample ensuring it is clean and properly positioned on the stage.",
+      "For solid samples, place directly on the stage or in appropriate sample holder.",
+      "For liquid samples, use cuvettes or sealed vials appropriate for Raman analysis.",
+      "Focus the laser on the sample surface using the microscope viewing system.",
+      "Adjust laser power to avoid sample heating or degradation (start with low power).",
+      "Set acquisition parameters including integration time, number of accumulations, and spectral range.",
+      "Acquire a test spectrum and check for adequate signal-to-noise ratio.",
+      "Optimize parameters if necessary to improve spectral quality.",
+      "Acquire final spectrum with optimized parameters.",
+      "Save the spectrum with proper identification including sample name and acquisition parameters.",
+      "Perform spectral analysis including peak identification and library matching if needed.",
+      "Clean the sample stage and objective lens carefully after measurements.",
+      "Document all spectral data, laser settings, and observations in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid looking directly at the laser beam as it can cause eye damage.",
+      "Use appropriate laser safety measures including interlocks and warning signs.",
+      "Start with low laser power to prevent sample burning or fluorescence.",
+      "Be aware of fluorescence interference which can obscure Raman signals.",
+      "Use appropriate sample holders to avoid background interference.",
+      "Handle the objective lens with care and clean only with lens tissue.",
+      "Ensure samples are dry if moisture is incompatible with the measurement.",
+      "Avoid highly absorbing or photosensitive samples at high laser power.",
+      "Wear appropriate PPE and follow laser safety protocols."
+    ]
   }
 }

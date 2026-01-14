@@ -3,16 +3,23 @@
     "title": "Operation of Ultrasonic Glassware Cleaner"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Ultrasonic Glassware Cleaner.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To clean intricate glassware by removing stubborn residues using ultrasound.",
+    "scope": "Applicable to glassware maintenance in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the cleaner with distilled water and a mild detergent.",
+      "Arrange the glassware in the basket to avoid contact between items.",
+      "Lower the basket into the bath and set the cleaning time.",
+      "Run the ultrasonic cleaner and check for residue removal.",
+      "Rinse the glassware thoroughly with fresh distilled water.",
+      "Drain the tank and dry it with a soft tissue.",
+      "Store cleaned glassware in a dust-free cabinet."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Check for cracks in glassware to prevent breakage during vibration.",
+      "Do not use for volumetric glassware at high temperatures.",
+      "Ensure the water level is always at the operating line.",
+      "Avoid using aggressive chemicals that could corrode the basin.",
+      "Use a lid to reduce noise and prevent aerosols."
+    ]
   }
 }

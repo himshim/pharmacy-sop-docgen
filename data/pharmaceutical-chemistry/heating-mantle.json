@@ -3,16 +3,24 @@
     "title": "Operation of Heating Mantle"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Heating Mantle.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide safe and uniform heating for round-bottom flasks.",
+    "scope": "Applicable to synthesis and distillation in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Select a heating mantle that matches the size of the flask being used.",
+      "Inspect the fabric and heating element for any chemical spills or tears.",
+      "Place the flask inside the mantle and secure it with a clamp.",
+      "Connect the mantle to a variable voltage transformer (Variac) or controller.",
+      "Gradually increase the voltage to reach the desired temperature.",
+      "Monitor the temperature using a thermometer placed inside the flask.",
+      "Turn OFF the controller and allow the mantle to cool before removing the flask.",
+      "Clean any spills on the mantle surface only after it has cooled completely."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never plug a heating mantle directly into a wall outlet without a controller.",
+      "Do not use the mantle if the fabric is wet with water or solvents.",
+      "Ensure the flask is in direct contact with the mantle surface for efficient heating.",
+      "Avoid heating the mantle above its rated temperature.",
+      "Always use a stir bar or boiling chips to prevent bumping."
+    ]
   }
 }

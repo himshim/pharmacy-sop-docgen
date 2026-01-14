@@ -3,16 +3,28 @@
     "title": "Operation of Chemical Fume Hood"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Chemical Fume Hood.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the operation of Chemical Fume Hood for safe handling of chemicals and reaction setups.",
+    "scope": "Applicable to laboratory activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify the hood certification and check that the exhaust fan is running.",
+      "Clear the work area of any unnecessary equipment or chemical bottles.",
+      "Set the sash to the indicated safe working height (typically 12-18 inches).",
+      "Ensure that the air flow monitor shows a green light or adequate velocity.",
+      "Setup the chemical apparatus at least 6 inches behind the sash line.",
+      "Do not block the rear exhaust slots with large equipment; use blocks to elevate them if needed.",
+      "Keep the sash as low as possible during hazardous operations.",
+      "In case of a spill, neutralize it immediately and inform the lab supervisor.",
+      "Allow the hood to run for 5-10 minutes after completing work to purge residual vapors.",
+      "Wipe down the interior surfaces with an appropriate cleaning solution.",
+      "Lower the sash completely when leaving the laboratory.",
+      "Record the usage and any issues found in the equipment logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never put your head inside the fume hood during operation.",
+      "Do not use the hood as a long-term storage cabinet for chemicals.",
+      "Avoid excessive cross-drafts from doors or vents near the hood.",
+      "Ensure electrical equipment used inside the hood is properly grounded.",
+      "Wear full PPE including eye protection, gloves, and lab coat."
+    ]
   }
 }

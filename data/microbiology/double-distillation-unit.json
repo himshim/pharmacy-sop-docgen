@@ -3,16 +3,24 @@
     "title": "Operation of Double Distillation Unit"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Double Distillation Unit.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To produce high-purity double-distilled water for sensitive microbiological applications.",
+    "scope": "Applicable to high-purity water generation in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the primary distilled water reservoir is filled.",
+      "Switch ON the double distillation unit.",
+      "Allow the system to reach steady-state operation.",
+      "Collect the double-distilled water from the outlet in a sterile, closed container.",
+      "Monitor conductivity periodically to confirm purity.",
+      "Shut down the unit according to manufacturer guidelines after use.",
+      "Clean and descale both boiler chambers at recommended intervals.",
+      "Record production volume and quality test results."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid touching hot surfaces and steam lines.",
+      "Ensure the unit has proper ventilation to dissipate heat.",
+      "Do not bypass any safety interlocks.",
+      "Use only approved replacement parts for maintenance.",
+      "Protect electrical components from water splashes."
+    ]
   }
 }

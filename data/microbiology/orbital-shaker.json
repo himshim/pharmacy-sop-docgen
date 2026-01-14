@@ -3,16 +3,21 @@
     "title": "Operation of Orbital Shaker"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Orbital Shaker.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide orbital shaking for mixing culture flasks or bottles.",
+    "scope": "Applicable to culture mixing and extraction in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place flasks or bottles evenly on the shaker platform.",
+      "Set the required speed and shaking duration.",
+      "Start the shaker and check for smooth operation.",
+      "At the end of the run, stop the shaker before removing containers.",
+      "Clean the platform after any spills."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the platform or run at unstable speeds.",
+      "Ensure containers are capped securely.",
+      "Keep the shaker away from bench edges.",
+      "Report any unusual noise or vibration.",
+      "Disconnect from power before cleaning internal parts."
+    ]
   }
 }

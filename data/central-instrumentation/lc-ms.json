@@ -3,16 +3,40 @@
     "title": "Operation of LC MS"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the LC MS.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Liquid Chromatography-Mass Spectrometry (LC-MS) for identification, structural analysis, and quantitative determination of pharmaceutical compounds.",
+    "scope": "Applicable to LC-MS analysis activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that nitrogen gas supply for nebulization and desolvation has adequate pressure.",
+      "Check that the vacuum system is operational and achieving proper vacuum levels.",
+      "Ensure mobile phase solvents are LC-MS grade and properly filtered and degassed.",
+      "Power ON the mass spectrometer and allow the vacuum system to stabilize.",
+      "Power ON the LC system including pump, autosampler, and column oven.",
+      "Initialize the data acquisition software and verify system communication.",
+      "Perform mass spectrometer tuning and calibration using calibration solution.",
+      "Verify that tuning parameters meet sensitivity and mass accuracy specifications.",
+      "Set LC parameters including flow rate, gradient program, and column temperature.",
+      "Set MS parameters including ionization mode (ESI/APCI), scan mode, and mass range.",
+      "Prime the LC system and equilibrate the column with starting mobile phase composition.",
+      "Run a blank injection to check for background interference and contamination.",
+      "Inject standard solutions to establish retention times and optimize MS parameters.",
+      "Verify system suitability including chromatographic resolution and MS sensitivity.",
+      "Inject sample solutions and acquire data in full scan or selected reaction monitoring (SRM) mode.",
+      "Monitor chromatogram and mass spectra during acquisition for quality assessment.",
+      "After analysis, flush the system with appropriate wash solvents to clean the flow path.",
+      "Return the LC system to storage conditions and initiate MS shutdown sequence.",
+      "Allow the mass spectrometer to vent properly before complete power off.",
+      "Process data for peak integration and compound identification, then save all files with proper labeling."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use only LC-MS compatible buffers and additives (volatile buffers like ammonium formate or acetate).",
+      "Avoid using non-volatile buffers (phosphate, sulfate) that can contaminate the ion source.",
+      "Ensure proper vacuum levels before operating the mass spectrometer.",
+      "Never introduce air into the MS system while it is under vacuum.",
+      "Filter all samples to prevent particulates from reaching the ion source.",
+      "Monitor ion source cleanliness and perform regular cleaning to maintain sensitivity.",
+      "Use appropriate ESI needle voltage and avoid electrical discharge.",
+      "Wear appropriate PPE including lab coat, gloves, and safety goggles.",
+      "Follow proper shutdown procedure to prevent damage to the MS detector."
+    ]
   }
 }

@@ -3,16 +3,23 @@
     "title": "Operation of Rotary Shaker"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Rotary Shaker.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To provide gentle to vigorous rotational mixing for extraction and solubility studies.",
+    "scope": "Applicable to laboratory mixing in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the sample flasks securely in the holders on the platform.",
+      "Ensure the load is balanced to prevent motor strain.",
+      "Set the rotation speed and duration on the control panel.",
+      "Switch ON the unit and monitor the initial motion.",
+      "Once the cycle is complete, turn OFF and remove the flasks.",
+      "Clean the platform and clips after each use.",
+      "Document the shaking speed and duration used."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the platform beyond its weight limits.",
+      "Ensure all containers are tightly capped to avoid spills.",
+      "Check that the clips are holding the flasks firmly.",
+      "Avoid high-speed operation for large or top-heavy containers.",
+      "Report any unusual motor noise to the maintenance team."
+    ]
   }
 }

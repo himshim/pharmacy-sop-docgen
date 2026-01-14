@@ -3,16 +3,24 @@
     "title": "Operation of Vacuum Pump"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vacuum Pump.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for providing reduced pressure for laboratory applications.",
+    "scope": "Applicable to all vacuum-dependent activities in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check the oil level in the sight glass (for oil-sealed pumps).",
+      "Ensure the exhaust is vented to a fume hood or has a proper filter.",
+      "Connect the pump to the application using reinforced vacuum tubing.",
+      "Switch ON the pump and allow it to reach its operating vacuum level.",
+      "When finished, isolate the pump from the system using a valve.",
+      "Bleed air into the pump intake before switching it OFF.",
+      "Record the usage hours in the equipment logbook.",
+      "Change the pump oil at regular intervals as per the maintenance schedule."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never run the pump with the intake open to the atmosphere for long periods.",
+      "Use a cold trap to prevent solvent vapors from entering the pump and degrading the oil.",
+      "Do not touch the pump housing during operation as it may become hot.",
+      "Inspect tubing for kinks, cracks, or collapses regularly.",
+      "Follow lockout/tagout procedures during oil changes or maintenance."
+    ]
   }
 }

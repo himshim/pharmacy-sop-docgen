@@ -3,16 +3,27 @@
     "title": "Operation of Acid Resistant Waste Container"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Acid Resistant Waste Container.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the safe collection and temporary storage of acidic chemical waste.",
+    "scope": "Applicable to waste management activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the waste container is made of appropriate acid-resistant material (e.g., HDPE or PTFE).",
+      "Verify that the container is clearly labeled as 'ACIDIC WASTE' with hazardous symbols.",
+      "Place the container in a secondary containment tray to capture potential leaks.",
+      "Before adding waste, check the compatibility of the waste with the container material.",
+      "Pour acidic waste slowly into the container using a funnel to avoid splashing.",
+      "Do not mix incompatible acids or organic solvents in the same container.",
+      "Keep the container tightly closed when not in use.",
+      "Monitor the fill level and ensure the container is not filled beyond 80% capacity.",
+      "Securely tighten the cap before transporting the container for final disposal.",
+      "Record the type and volume of acid added to the waste log for each use.",
+      "Inspect the container periodically for any signs of leakage, swelling, or degradation."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never mix acidic waste with cyanide or sulfide containing wastes as it may generate toxic gases.",
+      "Always wear appropriate PPE including acid-resistant gloves and safety goggles.",
+      "Do not overfill the container to allow for expansion.",
+      "Keep waste containers away from heat sources and incompatible chemicals.",
+      "Ensure the secondary containment is clean and dry."
+    ]
   }
 }

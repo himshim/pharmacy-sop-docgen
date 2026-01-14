@@ -3,16 +3,22 @@
     "title": "Operation of Fume Hood"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Fume Hood.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To safely contain and ventilate hazardous vapors, dusts, and aerosols generated during extraction and chemical handling.",
+    "scope": "Applicable to volatile solvent extractions and toxic plant material processing in Pharmacognosy.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Turn ON the fume hood sash to the appropriate working height (usually sash sash sash at elbow level).",
+      "Verify airflow indicator is green and airflow is adequate.",
+      "Place equipment and chemicals at least 6 inches inside the hood.",
+      "Work with arms inside the hood and minimize rapid movements.",
+      "After work, clean surfaces and allow hood to run for 5 minutes before closing sash.",
+      "Report any airflow alarms or unusual odors immediately."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not block hood vents or airflow.",
+      "Never work with back to the interior.",
+      "Use secondary containment for volatile liquids.",
+      "Wear appropriate PPE even in the fume hood.",
+      "Have the hood certified annually."
+    ]
   }
 }

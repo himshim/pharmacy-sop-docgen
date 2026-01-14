@@ -3,16 +3,22 @@
     "title": "Operation of Analgesiometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Analgesiometer.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To measure pain threshold and analgesic effects using thermal stimulus.",
+    "scope": "Applicable to analgesic drug screening.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set the hot plate temperature to 55°C ± 1°C.",
+      "Place the animal on the heated plate and start the timer.",
+      "Observe and record the reaction time (paw lick, jump, or vocalization).",
+      "Remove the animal immediately after response.",
+      "Calculate the mean reaction time for control and treated groups.",
+      "Clean the plate surface between animals."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed safe exposure times to prevent tissue damage.",
+      "Use a cutoff time (e.g., 10 seconds) to avoid burns.",
+      "Handle animals humanely and minimize stress.",
+      "Test only trained observers for consistency.",
+      "Calibrate temperature daily."
+    ]
   }
 }

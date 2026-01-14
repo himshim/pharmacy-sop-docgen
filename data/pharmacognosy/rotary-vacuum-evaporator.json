@@ -3,16 +3,20 @@
     "title": "Operation of Rotary Vacuum Evaporator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Rotary Vacuum Evaporator.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To concentrate plant extracts under vacuum.",
+    "scope": "Applicable to extract concentration.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill flask less than half.",
+      "Rotate and apply vacuum.",
+      "Heat water bath.",
+      "Evaporate and collect.",
+      "Clean flask."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Foaming prevention.",
+      "Vacuum release slowly.",
+      "Fume hood.",
+      "Cold trap."
+    ]
   }
 }

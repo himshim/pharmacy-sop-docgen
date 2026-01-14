@@ -3,16 +3,24 @@
     "title": "Operation of Cold Incubator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Cold Incubator.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide low-temperature incubation (below ambient) for the growth of psychrophilic organisms.",
+    "scope": "Applicable to environmental microbiology studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify the unit is clean and the shelves are properly positioned.",
+      "Power ON and set the required low temperature (e.g., 10°C or 15°C).",
+      "Allow the incubator to reach the set temperature and stabilize.",
+      "Place the samples in the chamber.",
+      "Monitor and record the temperature daily.",
+      "Check for ice buildup on the cooling coils and defrost if necessary.",
+      "Clean the interior surfaces periodically with an appropriate disinfectant.",
+      "Document any temperature fluctuations in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the chamber, as it prevents proper air circulation.",
+      "Ensure the door seal is tight to prevent moisture condensation.",
+      "Do not store items that could release corrosive vapors.",
+      "Report any unusual noises from the compressor unit.",
+      "Ensure the drainage system for defrosting is clear."
+    ]
   }
 }

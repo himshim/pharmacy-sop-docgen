@@ -3,16 +3,22 @@
     "title": "Operation of Elevated Plus Maze"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Elevated Plus Maze.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To evaluate anxiety-related behavior in rodents.",
+    "scope": "Applicable to psychopharmacology and anxiolytic drug screening.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the animal at the center of the maze facing an open arm.",
+      "Start the timer and observe behavior for a fixed period (e.g., 5 minutes).",
+      "Record time spent and entries into open and closed arms.",
+      "Remove the animal and return it to its home cage.",
+      "Clean the maze with 70% alcohol between animals.",
+      "Analyze data to calculate anxiety indices."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Test animals in a quiet, low-light room.",
+      "Avoid repeated testing of the same animal unless protocol allows.",
+      "Handle animals gently before and after testing.",
+      "Ensure maze is stable and at safe height.",
+      "Do not use animals with motor impairments."
+    ]
   }
 }

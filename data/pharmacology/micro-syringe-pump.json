@@ -3,16 +3,23 @@
     "title": "Operation of Micro Syringe Pump"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Micro Syringe Pump.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To deliver very small volumes of drugs at precise low flow rates.",
+    "scope": "Applicable to micro-infusion studies in pharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Mount a calibrated microsyringe into the pump holder.",
+      "Set the desired infusion rate and total volume.",
+      "Prime the system to remove air bubbles.",
+      "Connect the syringe outlet to the micro-catheter or experimental setup.",
+      "Start the pump and monitor operation.",
+      "Stop infusion at the programmed end point or manually if needed.",
+      "Remove and dispose of the syringe and tubing appropriately."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Verify syringe size setting to avoid dosing errors.",
+      "Avoid air entry into the system.",
+      "Use only compatible solvents and drugs with the syringe material.",
+      "Regularly check for mechanical wear or drift in delivery rate.",
+      "Calibrate periodically using gravimetric methods."
+    ]
   }
 }

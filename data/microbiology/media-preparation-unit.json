@@ -3,16 +3,23 @@
     "title": "Operation of Media Preparation Unit"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Media Preparation Unit.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To prepare and dispense culture media under controlled heating, mixing, and sterilization.",
+    "scope": "Applicable to bulk media preparation in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Add calculated quantities of dehydrated media and purified water to the vessel.",
+      "Start the agitator for uniform mixing.",
+      "Set the heating temperature and time as per media instructions.",
+      "Allow the mixture to reach boiling and ensure complete dissolution.",
+      "Apply sterilization cycle if the unit is equipped with in-situ sterilization.",
+      "Dispense the sterile media into containers or plates using the dispensing system.",
+      "Clean and rinse the vessel and lines thoroughly after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Verify all gaskets and valves are properly seated to avoid leaks.",
+      "Use heat-resistant gloves when touching hot surfaces.",
+      "Ensure proper venting of steam.",
+      "Do not overfill the vessel beyond rated capacity.",
+      "Follow cleaning-in-place (CIP) procedures where applicable."
+    ]
   }
 }

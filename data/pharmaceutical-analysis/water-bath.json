@@ -3,16 +3,23 @@
     "title": "Operation of Water Bath"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Water Bath.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To provide a constant temperature for heating laboratory samples.",
+    "scope": "Applicable to general heating in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the bath with distilled water to the operating level.",
+      "Power ON and set the required temperature.",
+      "Allow the water to reach the set temperature.",
+      "Place the containers in the bath and close the lid.",
+      "Check the water level periodically and top up if necessary.",
+      "Turn OFF the power and unplug the unit after use.",
+      "Drain and clean the bath weekly."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never run the heater without water.",
+      "Use distilled water to avoid scale build-up.",
+      "Wait for the water to cool before draining.",
+      "Ensure the power cord is kept dry.",
+      "Do not use for temperatures above 95°C."
+    ]
   }
 }

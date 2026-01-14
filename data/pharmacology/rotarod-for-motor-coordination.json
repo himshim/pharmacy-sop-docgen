@@ -1,18 +1,23 @@
 {
   "meta": {
-    "title": "Operation of Rotarod for Motor Coordination"
+    "title": "Use of Rotarod for Motor Coordination"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Rotarod for Motor Coordination.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To evaluate drug-induced changes in motor coordination and muscle relaxation.",
+    "scope": "Applicable to screening of sedative, myorelaxant, and neuroactive drugs.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Adjust the rotarod speed or acceleration profile according to the study design.",
+      "Place multiple animals on separate lanes of the rotating rod if available.",
+      "Start rotation and measure retention time until each animal falls.",
+      "Record individual fall times and calculate group means.",
+      "Perform baseline and post-treatment assessments at defined time points."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure lane dividers are intact to prevent animals from clustering.",
+      "Clean fecal or urine contamination promptly to maintain grip.",
+      "Avoid repeated testing causing exhaustion.",
+      "Use the same operator when possible to reduce variability.",
+      "Check mechanical parts regularly for smooth operation."
+    ]
   }
 }

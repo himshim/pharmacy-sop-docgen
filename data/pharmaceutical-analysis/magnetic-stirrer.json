@@ -3,16 +3,23 @@
     "title": "Operation of Magnetic Stirrer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Magnetic Stirrer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To provide efficient mixing of liquid solutions using a rotating magnetic field.",
+    "scope": "Applicable to analytical tasks in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the beaker on the stirrer platform.",
+      "Add a clean magnetic stir bar into the beaker.",
+      "Turn ON the power and slowly increase the stirring speed.",
+      "Adjust for a smooth vortex without excessive splashing.",
+      "Once mixing is complete, reduce the speed to zero and turn OFF.",
+      "Retrieve the stir bar using a magnetic wand.",
+      "Clean the platform and the stir bar after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use for highly viscous liquids.",
+      "Ensure the stir bar is compatible with the solution chemicals.",
+      "Avoid very high speeds that cause the bar to decouple.",
+      "Protect the unit from chemical spills.",
+      "Do not leave the stirrer running unattended at high speeds."
+    ]
   }
 }

@@ -3,16 +3,23 @@
     "title": "Operation of Vacuum Filtration Unit"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vacuum Filtration Unit.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To perform rapid filtration of pharmaceutical solutions under vacuum.",
+    "scope": "Applicable to sample purification in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Assemble the filtration unit on the collection flask.",
+      "Place the filter membrane on the support using tweezers.",
+      "Attach the funnel and connect to the vacuum source.",
+      "Switch ON the vacuum pump and pour the liquid into the funnel.",
+      "After filtration, release the vacuum first, then turn OFF the pump.",
+      "Retrieve the filtrate or the filter as needed.",
+      "Clean the unit thoroughly after each use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the membrane is compatible with the solvent.",
+      "Use only thick-walled vacuum flasks.",
+      "Check for leaks in the vacuum tubing regularly.",
+      "Avoid overflow into the vacuum line.",
+      "Handle the assembly carefully to avoid breakage."
+    ]
   }
 }

@@ -3,16 +3,23 @@
     "title": "Operation of Vertical Laminar Air Flow"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vertical Laminar Air Flow.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide vertical unidirectional HEPA-filtered air for aseptic manipulations.",
+    "scope": "Applicable to microbiological and cell culture work requiring a clean environment.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the blower and light; allow at least 15–20 minutes for air flushing.",
+      "Disinfect the work surface and interior with 70% ethanol.",
+      "Arrange materials to avoid blocking rear and side air vents.",
+      "Perform aseptic operations within the central work area.",
+      "On completion, disinfect all materials before removal.",
+      "Wipe the work surface again and let the blower run for an additional 10 minutes.",
+      "Switch OFF the unit and close the front sash if provided."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid open flames inside the cabinet.",
+      "Do not store non-sterile or unnecessary items inside.",
+      "Minimize rapid movements that disturb airflow.",
+      "Schedule periodic HEPA filter integrity testing.",
+      "Use PPE including gloves, lab coat, and eye protection as required."
+    ]
   }
 }

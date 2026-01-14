@@ -3,16 +3,24 @@
     "title": "Operation of Flammable Storage Cabinet"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Flammable Storage Cabinet.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To ensure safe storage of flammable liquids and prevent fire hazards.",
+    "scope": "Applicable to chemical storage in the Pharmaceutical Chemistry department.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the cabinet is FM approved or UL listed for flammable storage.",
+      "Organize containers such that labels are clearly visible from the front.",
+      "Keep the total volume of liquids within the cabinet's rated capacity.",
+      "Ensure all container caps are tightly closed before placing them inside.",
+      "Place liquid containers in secondary containment trays to catch spills.",
+      "Maintain the grounding wire connection if the cabinet is grounded.",
+      "Inspect for leaks or damaged containers on a weekly basis.",
+      "Keep the cabinet doors closed and latched when not in use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not store oxidizers or corrosive acids inside the flammable cabinet.",
+      "Avoid placing the cabinet near exit doors or heat sources.",
+      "Ensure the ventilation bungs are either sealed or vented to the outside.",
+      "Never store paper, cardboard, or other combustibles inside the cabinet.",
+      "Use non-sparking tools when working inside or near the cabinet."
+    ]
   }
 }

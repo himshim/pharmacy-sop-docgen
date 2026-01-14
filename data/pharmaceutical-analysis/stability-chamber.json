@@ -3,16 +3,24 @@
     "title": "Operation of Stability Chamber"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Stability Chamber.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To provide controlled environmental conditions for drug stability studies.",
+    "scope": "Applicable to stability testing in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set the required temperature and humidity on the controller.",
+      "Allow the chamber to reach set points and stabilize.",
+      "Load samples in specified containers ensuring space for airflow.",
+      "Record the temperature and humidity daily from the display.",
+      "Conduct periodic inspections for water levels and sensor function.",
+      "Retrieve samples at scheduled time points for analysis.",
+      "Document any deviations or alarm conditions immediately.",
+      "Perform annual calibration of all sensors."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the chamber, as it inhibits air circulation.",
+      "Minimize door opening time to prevent fluctuations.",
+      "Use only purified water for the humidification system.",
+      "Ensure a backup power supply for critical long-term studies.",
+      "Check and clean the interior shelves periodically."
+    ]
   }
 }

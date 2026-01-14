@@ -3,16 +3,24 @@
     "title": "Operation of Humidity Controlled Incubator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Humidity Controlled Incubator.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To incubate cultures at controlled temperature and relative humidity.",
+    "scope": "Applicable to fungal and special microbial culture conditions in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the humidity tray with distilled water.",
+      "Set the desired temperature and relative humidity on the controller.",
+      "Allow the incubator to stabilize at set conditions.",
+      "Load inoculated plates or culture vessels on the shelves.",
+      "Close the door properly and minimize door openings.",
+      "Check and record temperature and humidity at least once daily.",
+      "Refill the water tray and clean it periodically to prevent fungal growth.",
+      "After use, remove cultures and disinfect interior surfaces."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use only distilled or deionized water to avoid scale formation.",
+      "Do not overload shelves as this restricts airflow.",
+      "Immediately report large deviations from set conditions.",
+      "Clean spills promptly to prevent contamination.",
+      "Ensure proper calibration of temperature and humidity sensors."
+    ]
   }
 }

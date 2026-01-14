@@ -3,16 +3,27 @@
     "title": "Operation of Bench Top Centrifuge"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Bench Top Centrifuge.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for the separation of components in small volume samples using a bench-top centrifuge.",
+    "scope": "Applicable to separation activities in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the centrifuge is placed on a flat, stable bench surface.",
+      "Inspect the rotor and tube holders for cleanliness and integrity.",
+      "Fill centrifuge tubes with equal volumes of sample to maintain balance.",
+      "Place tubes in a symmetrical arrangement within the rotor buckets.",
+      "Close the lid securely and verify that the safety latch is engaged.",
+      "Set the required speed (RPM) and time on the digital controller.",
+      "Start the centrifuge and wait for it to reach the set speed.",
+      "Stop the unit immediately if excessive noise or vibration occurs.",
+      "Allow the rotor to come to a complete stop before opening the lid.",
+      "Carefully remove the tubes and proceed with analysis.",
+      "Wipe the interior of the centrifuge after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always balance the tubes by weight before starting the centrifuge.",
+      "Do not attempt to open the lid or slow the rotor manually.",
+      "Use only tubes that are rated for the maximum speed of the centrifuge.",
+      "Ensure the rotor is properly seated on the drive shaft.",
+      "Wear appropriate PPE to guard against potential splashes from tube failure."
+    ]
   }
 }

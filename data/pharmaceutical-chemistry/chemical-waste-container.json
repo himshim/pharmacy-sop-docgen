@@ -3,16 +3,26 @@
     "title": "Operation of Chemical Waste Container"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Chemical Waste Container.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the collection and storage of general chemical waste.",
+    "scope": "Applicable to waste disposal activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Select a waste container that is compatible with the chemical waste being generated.",
+      "Ensure the container is properly labeled as 'HAZARDOUS WASTE' with a list of constituents.",
+      "Keep the waste container in a designated satellite accumulation area (SAA).",
+      "Add waste to the container using a funnel and close the cap immediately after each addition.",
+      "Do not mix incompatible wastes (e.g., organics and oxidizers) in the same container.",
+      "Monitor the container level; do not fill past 80-90% to prevent leaks or pressure build-up.",
+      "Wipe any drips or spills on the outside of the container after use.",
+      "Keep the container cap securely tightened when not actively adding waste.",
+      "Arrange for disposal through the institutional waste management system once the container is full.",
+      "Record all additions to the waste log including date, chemical names, and approximate volumes."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always verify chemical compatibility before adding to a waste container.",
+      "Ensure the labeling is permanent and legible.",
+      "Store waste containers in a secondary containment tray.",
+      "Never leave a waste container open or unattended.",
+      "Wear appropriate PPE when handling and transferring waste."
+    ]
   }
 }

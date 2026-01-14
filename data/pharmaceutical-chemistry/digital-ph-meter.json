@@ -3,16 +3,26 @@
     "title": "Operation of Digital pH Meter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital pH Meter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the measurement of pH using a digital pH meter.",
+    "scope": "Applicable to analytical activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the pH meter and allow it to warm up for 10-15 minutes.",
+      "Rinse the pH electrode with distilled water and blot dry with a soft tissue.",
+      "Perform a two or three-point calibration using standard buffer solutions (e.g., pH 4.0, 7.0, and 10.0).",
+      "Ensure the temperature compensation is either automatic or set to the solution temperature.",
+      "Immerse the electrode into the sample solution and stir gently.",
+      "Wait for the 'STABLE' indicator to appear on the display.",
+      "Record the pH value and temperature of the solution.",
+      "Rinse the electrode thoroughly with distilled water after each measurement.",
+      "Store the electrode in the recommended storage solution (usually 3M KCl).",
+      "Document the calibration and measurement results in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never let the pH electrode dry out; always keep it in storage solution.",
+      "Handle the glass bulb of the electrode with extreme care.",
+      "Calibrate the instrument at the beginning of each day or shift.",
+      "Avoid cross-contamination by rinsing the electrode between samples.",
+      "Do not use the electrode in solutions containing strong acids/bases for prolonged periods."
+    ]
   }
 }

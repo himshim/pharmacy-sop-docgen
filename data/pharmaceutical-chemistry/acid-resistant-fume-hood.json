@@ -3,16 +3,29 @@
     "title": "Operation of Acid Resistant Fume Hood"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Acid Resistant Fume Hood.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the operation of Acid Resistant Fume Hood for safe handling of corrosive acids and hazardous chemical reactions.",
+    "scope": "Applicable to chemical synthesis activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the fume hood exhaust fan is operational and the certification is current.",
+      "Inspect the acid-resistant interior lining for any signs of damage or corrosion.",
+      "Turn ON the exhaust system and allow it to run for at least 5 minutes before starting work.",
+      "Verify face velocity using the built-in monitor (typically 80-120 fpm).",
+      "Position the sash at the correct working height (usually indicated by an arrow).",
+      "Place acid containers and reaction assemblies at least 6 inches inside the hood.",
+      "Avoid blocking the rear baffles to ensure efficient air flow.",
+      "Perform all acid transfers and reactions with the sash at the lowest practical height.",
+      "In case of minor acid spills, neutralize immediately using appropriate neutralizing agents.",
+      "After completion of work, allow the hood to run for 10 minutes to clear residual vapors.",
+      "Clean the work surface thoroughly with water and wipe dry.",
+      "Lower the sash completely when the hood is not in use.",
+      "Document hood usage and any maintenance needs in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always work with the sash at the lowest possible position for maximum protection.",
+      "Do not store large quantities of acids inside the fume hood.",
+      "Avoid rapid movements in front of the hood that could disrupt the air curtain.",
+      "Ensure all acid containers are properly capped when not in use.",
+      "Wear appropriate acid-resistant PPE including apron, gloves, and face shield."
+    ]
   }
 }

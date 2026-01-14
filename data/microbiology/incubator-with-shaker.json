@@ -3,16 +3,24 @@
     "title": "Operation of Incubator with Shaker"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Incubator with Shaker.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide controlled temperature with orbital shaking for liquid culture growth.",
+    "scope": "Applicable to broth culture incubation in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set the required temperature and shaking speed on the control panel.",
+      "Allow the incubator chamber to reach the set temperature.",
+      "Place culture flasks on the shaker platform and secure with clamps.",
+      "Close the door firmly and start the shaker function.",
+      "Monitor the unit for abnormal noise or vibration.",
+      "At the end of incubation, stop the shaker and open the door.",
+      "Remove flasks carefully to avoid spills.",
+      "Clean any spills inside the chamber with disinfectant."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Balance the load evenly on the platform to prevent strain on the motor.",
+      "Use flasks with baffles and suitable closure to permit aeration.",
+      "Do not exceed the maximum RPM recommended by the manufacturer.",
+      "Ensure the door is fully closed during operation.",
+      "Avoid abrupt changes in speed to prevent flask breakage."
+    ]
   }
 }

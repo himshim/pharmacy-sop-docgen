@@ -3,16 +3,23 @@
     "title": "Operation of Hot Plate"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Hot Plate.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To heat liquids or media in flasks and beakers.",
+    "scope": "Applicable to general heating tasks in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the hot plate on a stable, heat-resistant bench.",
+      "Ensure the surface is clean and dry.",
+      "Place the vessel centrally on the plate.",
+      "Switch ON and set a low to moderate temperature initially.",
+      "Monitor the solution temperature with a thermometer if needed.",
+      "After use, switch OFF and allow the plate to cool fully before cleaning.",
+      "Wipe the surface with a damp cloth once cooled."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use the hot plate near flammable solvents.",
+      "Avoid touching the surface while hot; label as 'HOT' after switching OFF.",
+      "Do not heat sealed containers.",
+      "Keep power cord away from the heating area.",
+      "Use only heat-resistant glassware."
+    ]
   }
 }

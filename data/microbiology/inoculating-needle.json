@@ -1,18 +1,25 @@
 {
   "meta": {
-    "title": "Operation of Inoculating Needle"
+    "title": "Use of Inoculating Needle"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Inoculating Needle.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To transfer microbial cultures, particularly for stab and streak inoculations.",
+    "scope": "Applicable to routine microbiological culture techniques.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Hold the inoculating needle in the dominant hand like a pen.",
+      "Sterilize the needle by heating in a Bunsen or alcohol burner flame until red hot.",
+      "Allow the needle to cool near the flame without touching any surface.",
+      "Pick a small amount of culture from the source medium.",
+      "Inoculate the target medium using the required technique (stab, streak, etc.).",
+      "Re-flame the needle after inoculation.",
+      "Place the sterile needle in a suitable stand when not in use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure complete cooling before touching culture to avoid killing microorganisms.",
+      "Do not wave the hot needle in the air, which can create aerosols.",
+      "Avoid excessive force that may gouge agar surfaces.",
+      "Handle with care to prevent needle-stick injuries.",
+      "Store needles in a dry, clean container when not in use."
+    ]
   }
 }

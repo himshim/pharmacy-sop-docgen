@@ -3,16 +3,25 @@
     "title": "Operation of Separating Funnel"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Separating Funnel.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To separate two immiscible liquid phases during liquid-liquid extraction.",
+    "scope": "Applicable to extraction and purification in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check the stopcock for leaks and ensure it is properly greased or fitted with a PTFE plug.",
+      "Pour the liquid mixture into the funnel using a glass funnel.",
+      "Insert the stopper and shake the funnel gently, venting frequently by opening the stopcock.",
+      "Place the funnel in a ring stand and allow the layers to separate clearly.",
+      "Remove the stopper to prevent a vacuum from forming during drainage.",
+      "Open the stopcock and slowly drain the lower layer into a beaker.",
+      "Close the stopcock just as the interface reaches the opening.",
+      "Pour the upper layer out through the top of the funnel to avoid contamination.",
+      "Clean the funnel thoroughly with appropriate solvents after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always vent the funnel away from yourself and others to release pressure.",
+      "Ensure the stopper is held securely with a finger during shaking.",
+      "Do not fill the funnel more than 3/4 full.",
+      "Handle the funnel with care as the neck and stem are easily broken.",
+      "Dispose of unwanted layers in the correct chemical waste container."
+    ]
   }
 }

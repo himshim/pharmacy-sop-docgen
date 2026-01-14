@@ -3,16 +3,42 @@
     "title": "Operation of Digital Tablet Hardness Tester"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Tablet Hardness Tester.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Digital Tablet Hardness Tester for measurement of crushing strength or hardness of pharmaceutical tablets.",
+    "scope": "Applicable to tablet hardness testing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the hardness tester is placed on a stable, level surface.",
+      "Verify that the instrument is clean and free from tablet debris.",
+      "Power ON the digital hardness tester and allow it to initialize.",
+      "Perform instrument zeroing or calibration as per manufacturer instructions.",
+      "If calibration is required, use certified calibration standards.",
+      "Set the unit of measurement (kg, N, or kP) as per requirement.",
+      "Select appropriate jaw size or attachment based on tablet shape and size.",
+      "Take at least 10 tablets randomly from the batch for testing.",
+      "Remove any loose dust from tablet surface using soft brush or air.",
+      "Place the first tablet between the jaws ensuring proper positioning.",
+      "For round tablets, position radially between the jaws.",
+      "For capsule-shaped tablets, position lengthwise.",
+      "Press the test button or handle to initiate crushing.",
+      "The jaws will close gradually until the tablet breaks.",
+      "Record the hardness value displayed on the digital screen.",
+      "Remove tablet fragments from the jaws carefully.",
+      "Repeat the test for remaining tablets in the sample set.",
+      "Calculate average hardness and standard deviation.",
+      "Verify that hardness values are within specified limits.",
+      "Clean the jaws and instrument after testing to remove tablet debris.",
+      "Document all hardness readings and calculations in the quality control record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Handle tablets carefully to avoid chipping or damage before testing.",
+      "Ensure proper tablet positioning for accurate and reproducible results.",
+      "Do not test tablets that are chipped, broken, or defective.",
+      "Clean jaws between different batches to prevent cross-contamination.",
+      "Perform regular calibration to ensure accuracy of measurements.",
+      "Do not apply excessive force manually if using semi-automatic testers.",
+      "Protect the instrument from dust and moisture.",
+      "Replace worn or damaged jaws promptly.",
+      "Perform testing at controlled room temperature and humidity.",
+      "Dispose of tested tablets as per sampling and testing procedures."
+    ]
   }
 }

@@ -3,16 +3,24 @@
     "title": "Operation of ORP Meter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the ORP Meter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To measure the Oxidation-Reduction Potential (ORP) of solutions.",
+    "scope": "Applicable to electrochemical analysis in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Connect the ORP electrode to the meter and power ON.",
+      "Verify the meter accuracy using a standard Zobell's or Quinhydrone solution.",
+      "Rinse the electrode with distilled water and blot dry.",
+      "Immerse the electrode in the sample and stir gently.",
+      "Wait for the potential (mV) reading to stabilize.",
+      "Record the value and the sample temperature.",
+      "Rinse the electrode thoroughly after each use.",
+      "Store the electrode in the recommended storage solution."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not touch or wipe the platinum sensing surface.",
+      "Ensure the electrode is fully immersed in the sample.",
+      "Regularly check the reference electrode filling solution level.",
+      "Handle the electrode with care to avoid damage to the glass body.",
+      "Calibrate or verify the instrument before each daily use."
+    ]
   }
 }

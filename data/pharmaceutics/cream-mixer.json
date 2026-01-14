@@ -3,16 +3,42 @@
     "title": "Operation of Cream Mixer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Cream Mixer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Cream Mixer for homogeneous mixing of pharmaceutical creams, ointments, and semi-solid topical preparations.",
+    "scope": "Applicable to cream and ointment preparation activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the cream mixer is installed on a stable surface in a clean area.",
+      "Verify that the mixing vessel, blades, and lid are clean and sanitized.",
+      "Check that all electrical connections are secure and grounded.",
+      "Weigh all ingredients accurately as per the formulation.",
+      "Add the base ingredients (oils, waxes, emulsifiers) into the mixing vessel.",
+      "If required, heat the vessel using water bath or heating jacket to melt ingredients.",
+      "Power ON the cream mixer and set to low speed initially.",
+      "Allow the base ingredients to melt and mix uniformly.",
+      "Add aqueous phase slowly if preparing emulsion-based cream.",
+      "Gradually increase mixing speed to achieve proper emulsification.",
+      "Scrape down the sides of the vessel periodically to ensure uniform mixing.",
+      "Add active pharmaceutical ingredients at appropriate temperature.",
+      "Continue mixing until a smooth, homogeneous cream is formed.",
+      "Check for lumps, graininess, or phase separation.",
+      "Adjust mixing speed and time based on cream consistency.",
+      "Allow the cream to cool if heated, while continuing gentle mixing.",
+      "Once desired consistency is achieved, stop the mixer.",
+      "Transfer the cream to appropriate containers for filling or storage.",
+      "Clean the mixing vessel, blades, and accessories immediately after use.",
+      "Perform cleaning validation if required for product changeover.",
+      "Document mixing parameters, batch details, and quality observations in the record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed maximum vessel capacity to prevent spillage.",
+      "Maintain proper temperature control to prevent ingredient degradation.",
+      "Avoid excessive mixing speed that can incorporate air bubbles.",
+      "Ensure proper emulsification to prevent phase separation.",
+      "Add ingredients in correct order as per formulation requirements.",
+      "Check mixer blades for proper alignment and no damage.",
+      "Wear appropriate PPE including gloves and lab coat.",
+      "Handle heated materials with caution to prevent burns.",
+      "Clean thoroughly between different products to prevent contamination.",
+      "Inspect final product for uniformity and absence of grittiness."
+    ]
   }
 }

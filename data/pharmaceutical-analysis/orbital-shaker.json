@@ -3,16 +3,23 @@
     "title": "Operation of Orbital Shaker"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Orbital Shaker.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To provide a circular shaking motion for mixing samples and facilitating extractions.",
+    "scope": "Applicable to sample preparation in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Secure the containers or flasks in the platform clamps.",
+      "Ensure the load is balanced across the shaker platform.",
+      "Power ON the unit and set the required RPM and time.",
+      "Gradually increase the speed and monitor the shaking action.",
+      "Once the timer ends, allow the platform to stop before removing samples.",
+      "Clean the platform surface of any drips or residues.",
+      "Switch OFF the power when the task is complete."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed the maximum weight capacity of the platform.",
+      "Ensure all clamps are tightened properly to prevent breakage.",
+      "Check for unusual noise or vibration during high-speed runs.",
+      "Avoid placing the shaker near the edge of the bench.",
+      "Ensure the power cord is clear of moving parts."
+    ]
   }
 }

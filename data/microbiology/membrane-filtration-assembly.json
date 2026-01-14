@@ -3,16 +3,24 @@
     "title": "Operation of Membrane Filtration Assembly"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Membrane Filtration Assembly.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To filter liquids through membrane filters for sterility testing and microbial enumeration.",
+    "scope": "Applicable to microbiological quality control tests.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Assemble the filtration unit and connect to a vacuum source.",
+      "Place a sterile membrane filter onto the filter support using sterile forceps.",
+      "Secure the funnel and pour the sample into it.",
+      "Apply vacuum to draw the liquid through the membrane.",
+      "Rinse the funnel with sterile diluent if required.",
+      "Using sterile forceps, transfer the membrane onto the surface of an agar plate.",
+      "Incubate the plate as per test requirements.",
+      "Disassemble and disinfect the filtration unit after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid touching the membrane surface with fingers.",
+      "Ensure all parts in contact with sample are sterile.",
+      "Check for leaks in the vacuum system before starting.",
+      "Use appropriate membrane pore size for the microorganisms of interest.",
+      "Dispose of membranes and waste as per biohazard SOPs."
+    ]
   }
 }

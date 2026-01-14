@@ -3,16 +3,24 @@
     "title": "Operation of Cold Storage Cabinet"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Cold Storage Cabinet.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To store large quantities of prepared media and bulk reagents at 2°C to 8°C.",
+    "scope": "Applicable to storage management in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the cabinet is powered and maintaining the correct temperature.",
+      "Organize materials into sections (e.g., Prepared Media, Reagents, Standards).",
+      "Ensure all items are clearly labeled with names and dates.",
+      "Monitor the internal temperature daily using a calibrated thermometer.",
+      "Clean the interior shelves with a disinfectant once a month.",
+      "Review the inventory regularly and dispose of expired materials.",
+      "Ensure the door is kept closed and the magnetic seal is functional.",
+      "Record the daily temperature readings in the cabinet log."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not store food, beverages, or volatile chemicals in the cabinet.",
+      "Minimize the duration of door openings.",
+      "Ensure proper airflow around stored items.",
+      "Follow a 'First-In, First-Out' (FIFO) system for all stored media.",
+      "Regularly check for signs of moisture or frost buildup."
+    ]
   }
 }

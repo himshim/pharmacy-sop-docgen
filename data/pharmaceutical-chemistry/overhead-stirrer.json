@@ -3,16 +3,24 @@
     "title": "Operation of Overhead Stirrer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Overhead Stirrer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To mix large volumes or high-viscosity liquids using a top-mounted motor.",
+    "scope": "Applicable to synthesis and formulation in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Mount the stirrer motor to a stable support stand.",
+      "Attach the stirring paddle or impeller to the chuck and tighten.",
+      "Insert the paddle into the liquid and ensure it is centered.",
+      "Switch ON the motor and slowly increase the rotation speed.",
+      "Adjust the height of the impeller if necessary for optimal mixing.",
+      "Once mixing is complete, turn OFF the motor and wait for it to stop.",
+      "Raise the motor assembly and remove the paddle for cleaning.",
+      "Wipe the motor housing to remove any chemical dust or splashes."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the chuck is securely tightened to prevent the paddle from falling.",
+      "Do not wear loose clothing or jewelry that could get caught in the rotating shaft.",
+      "Use a safety shield if mixing hazardous or reactive materials.",
+      "Monitor for motor overheating during prolonged use with viscous liquids.",
+      "Ensure the vessel is properly secured to prevent movement during stirring."
+    ]
   }
 }

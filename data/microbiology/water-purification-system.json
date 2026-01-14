@@ -3,16 +3,22 @@
     "title": "Operation of Water Purification System"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Water Purification System.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To produce purified water (e.g., RO, DI, or ultrapure) for culture media and reagents.",
+    "scope": "Applicable to laboratory water supply in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check feed water supply and pre-filters.",
+      "Switch ON the purification system and allow initial flushing as per SOP.",
+      "Monitor water quality parameters (resistivity, TOC, conductivity) on the display.",
+      "Collect purified water in clean, dedicated containers.",
+      "Perform periodic sanitization and cartridge replacement as indicated.",
+      "Record maintenance and quality checks in the system log."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not bypass any built-in safety or monitoring features.",
+      "Replace filters and cartridges only with approved components.",
+      "Prevent stagnation in storage tanks by regular use or recirculation.",
+      "Protect the system from freezing temperatures.",
+      "Follow manufacturer instructions for chemical sanitization."
+    ]
   }
 }

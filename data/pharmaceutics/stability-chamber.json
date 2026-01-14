@@ -3,16 +3,26 @@
     "title": "Operation of Stability Chamber"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Stability Chamber.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Stability Chamber for long-term and accelerated stability studies.",
+    "scope": "Applicable to stability testing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the chamber is connected to a stable power and water supply.",
+      "Set the required temperature and humidity (e.g., 40°C/75% RH).",
+      "Allow the chamber to reach and stabilize at set conditions.",
+      "Load samples in specified containers and arrange for air circulation.",
+      "Record temperature and humidity daily from the display or data logger.",
+      "Conduct periodic inspections for water levels and sensor functionality.",
+      "Retrieve samples at scheduled intervals for analysis.",
+      "Document any deviations from set storage conditions.",
+      "Perform regular calibration of sensors and maintenance of the humidifier.",
+      "Maintain a detailed log of sample entry and retrieval."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the chamber to ensure uniform condition distribution.",
+      "Keep door openings to a minimum duration.",
+      "Use only distilled or deionized water for humidity generation.",
+      "Report alarm conditions immediately to the department head.",
+      "Ensure backup monitoring systems are functional."
+    ]
   }
 }

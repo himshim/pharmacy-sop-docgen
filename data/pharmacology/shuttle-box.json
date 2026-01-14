@@ -3,16 +3,22 @@
     "title": "Operation of Shuttle Box"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Shuttle Box.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To study active and passive avoidance behavior in animals.",
+    "scope": "Applicable to learning, memory, and psychopharmacology experiments.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the animal in one compartment of the shuttle box.",
+      "Present the conditioned stimulus followed by an unconditioned stimulus (e.g., mild shock).",
+      "Allow the animal to cross to the opposite compartment to avoid or escape the shock.",
+      "Record latency to cross and number of avoidance and escape responses.",
+      "Repeat trials according to the experimental schedule.",
+      "Clean the compartments after each animal."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use humane shock intensities and durations.",
+      "Standardize trial timing and inter-trial intervals.",
+      "Monitor animals for signs of distress.",
+      "Ensure doors and sensors function reliably.",
+      "Follow ethical guidelines for behavioral conditioning."
+    ]
   }
 }

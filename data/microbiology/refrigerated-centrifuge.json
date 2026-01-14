@@ -3,16 +3,24 @@
     "title": "Operation of Refrigerated Centrifuge"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Refrigerated Centrifuge.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To centrifuge temperature-sensitive samples at controlled low temperatures.",
+    "scope": "Applicable to processing of microbial and molecular biology samples.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the centrifuge and set the desired temperature for pre-cooling.",
+      "Balance the sample tubes by weight and place them symmetrically in the rotor.",
+      "Secure the rotor lid and close the main centrifuge lid.",
+      "Set the required speed (RPM/RCF) and time.",
+      "Start the run and monitor for abnormal noise or vibration.",
+      "After completion, wait until the rotor stops completely before opening the lid.",
+      "Remove the samples promptly and wipe any condensation in the chamber.",
+      "Leave the lid slightly open after use to prevent condensation and odor."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate with unbalanced tubes.",
+      "Do not exceed the maximum rated speed for the rotor.",
+      "Check tubes and caps for cracks before use.",
+      "Clean spilled samples immediately with appropriate disinfectant.",
+      "Perform periodic maintenance and rotor inspection as per SOP."
+    ]
   }
 }

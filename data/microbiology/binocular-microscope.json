@@ -3,16 +3,26 @@
     "title": "Operation of Binocular Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Binocular Microscope.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To observe microorganisms and stained slides with two eyepieces for better depth and comfort.",
+    "scope": "Applicable to microscopic examination in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the microscope on a flat surface and plug into a power source.",
+      "Switch ON the light source and adjust the intensity.",
+      "Place the slide on the stage and secure with the specimen holder.",
+      "Start with the lowest power objective (4x or 10x).",
+      "Adjust the interpupillary distance and diopter settings for your eyes.",
+      "Use the coarse and fine adjustment knobs to focus the image.",
+      "Rotate the nosepiece to higher power objectives as needed.",
+      "Apply immersion oil only for the 100x objective.",
+      "Lower the stage and remove the slide after use.",
+      "Clean the lenses with lens paper and switch OFF the light."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never use the coarse focus with the high-power or oil immersion objectives.",
+      "Always wipe oil off the 100x lens immediately after use.",
+      "Do not touch the glass part of the lenses with your fingers.",
+      "Carry the microscope with both hands (one on the arm, one on the base).",
+      "Store the microscope with a dust cover."
+    ]
   }
 }

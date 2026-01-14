@@ -1,18 +1,25 @@
 {
   "meta": {
-    "title": "Operation of Oral Gavage Needle"
+    "title": "Use of Oral Gavage Needle"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Oral Gavage Needle.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To administer precise volumes of liquid formulations directly into the stomach of animals.",
+    "scope": "Applicable to oral dosing in pharmacology studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Select appropriate gavage needle size based on species and body weight.",
+      "Attach the needle securely to the dosing syringe.",
+      "Measure and load the required dose volume.",
+      "Restrain the animal and gently introduce the gavage needle along the esophagus.",
+      "Deliver the dose slowly while monitoring for signs of distress.",
+      "Withdraw the needle carefully and observe the animal post dosing.",
+      "Clean and sterilize reusable gavage needles after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid forceful insertion to prevent esophageal or gastric perforation.",
+      "Use appropriate restraint methods to minimize risk.",
+      "Do not dose animals that show respiratory distress or severe illness.",
+      "Inspect needles regularly for bends or rough edges.",
+      "Train staff thoroughly in gavage technique before independent use."
+    ]
   }
 }

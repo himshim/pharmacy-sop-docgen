@@ -3,16 +3,24 @@
     "title": "Operation of Polarimeter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Polarimeter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To determine the optical rotation of chiral pharmaceutical substances.",
+    "scope": "Applicable to identity and purity testing in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the sodium lamp and allow 20 minutes to reach full intensity.",
+      "Fill the sample tube with solvent and zero the instrument.",
+      "Prepare the sample solution at the specified concentration.",
+      "Fill the tube with sample solution, ensuring no air bubbles are trapped.",
+      "Place the tube in the compartment and determine the angle of rotation.",
+      "Calculate the specific optical rotation based on concentration and path length.",
+      "Clean the polarimeter tube thoroughly after use.",
+      "Record the rotation angle, temperature, and wavelength used."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "The presence of air bubbles will cause significant measurement errors.",
+      "Ensure the polarimeter tube windows are clean and free from scratches.",
+      "Handle the sample tube carefully as it is a precision glass instrument.",
+      "Always perform the blank (solvent) reading before the sample.",
+      "Store the sodium lamp properly to maximize its lifespan."
+    ]
   }
 }

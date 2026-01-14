@@ -3,16 +3,42 @@
     "title": "Operation of Dust Extraction Unit"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Dust Extraction Unit.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Dust Extraction Unit for removal of airborne dust particles during pharmaceutical manufacturing operations to maintain clean and safe working environment.",
+    "scope": "Applicable to dust extraction activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the dust extraction unit is properly installed near the dust-generating equipment.",
+      "Verify that all ductwork connections are secure and properly sealed.",
+      "Check that the collection bags or filters are clean and properly installed.",
+      "Inspect the exhaust ducting for any blockages or damage.",
+      "Verify that the electrical connections are secure and properly grounded.",
+      "Ensure all access panels and inspection doors are closed and secured.",
+      "Power ON the dust extraction unit before starting the production equipment.",
+      "Check the airflow by observing pressure gauge or indicator.",
+      "Adjust dampers or airflow controls if required to achieve proper suction.",
+      "Verify that dust is being effectively captured at the source.",
+      "Monitor the pressure differential across filters during operation.",
+      "Check collection bags or containers periodically for dust accumulation.",
+      "If pressure drop increases significantly, clean or replace filters.",
+      "Ensure continuous operation during all dust-generating activities.",
+      "After production completion, continue running for few minutes to clear residual dust.",
+      "Power OFF the dust extraction unit after ensuring all dust is cleared.",
+      "Open access panels and inspect filters and collection containers.",
+      "Empty collection containers and dispose of collected dust as per waste protocols.",
+      "Clean or replace filters as per maintenance schedule.",
+      "Check for any leaks or damage in the ductwork and seals.",
+      "Document operation hours, filter changes, and maintenance activities in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always start dust extraction before beginning dust-generating operations.",
+      "Never operate dust-generating equipment without active dust extraction.",
+      "Monitor filter condition regularly to maintain extraction efficiency.",
+      "Replace filters when pressure drop exceeds specified limits.",
+      "Ensure proper disposal of collected dust as per safety guidelines.",
+      "Check for combustible dust hazards and use appropriate explosion-proof units if needed.",
+      "Maintain proper grounding to prevent static electricity buildup.",
+      "Inspect and clean ductwork periodically to prevent blockages.",
+      "Wear appropriate PPE including mask and gloves during filter changes.",
+      "Follow lockout/tagout procedures during maintenance activities."
+    ]
   }
 }

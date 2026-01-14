@@ -1,18 +1,24 @@
 {
   "meta": {
-    "title": "Operation of Deep Freezer"
+    "title": "Operation of Deep Freezer (Pharmacognosy)"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Deep Freezer.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To store plant extracts, reference standards, and temperature-sensitive samples at sub-zero temperatures.",
+    "scope": "Applicable to medium- and long-term preservation of pharmacognostic materials.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set the freezer temperature to the required level (e.g., -20°C or -40°C) and allow stabilization.",
+      "Place samples in sealed, labeled containers or vials with clear identification and date.",
+      "Organize samples in racks or boxes to minimize door-open time during retrieval.",
+      "Monitor and log internal temperature at least once daily.",
+      "Defrost the freezer periodically if excessive ice buildup occurs.",
+      "Clean the interior during defrost cycles with suitable disinfectant and dry thoroughly."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid frequent, prolonged door openings.",
+      "Do not overload shelves beyond manufacturer recommendations.",
+      "Use insulated gloves when handling frozen samples.",
+      "Connect the freezer to backup power if storing critical materials.",
+      "Check door gasket condition regularly to ensure a proper seal."
+    ]
   }
 }

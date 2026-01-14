@@ -3,16 +3,22 @@
     "title": "Operation of Drug Storage Cabinet"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Drug Storage Cabinet.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To securely store pharmacological agents under controlled conditions.",
+    "scope": "Applicable to storage of teaching and research drugs in pharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Organize drugs by class, potency, and storage requirements.",
+      "Label all containers clearly with name, strength, and expiry date.",
+      "Maintain a stock register for issue and receipt.",
+      "Keep the cabinet locked when not in use.",
+      "Inspect stock regularly and separate expired or damaged items.",
+      "Clean shelves periodically with appropriate disinfectant."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Segregate controlled substances in a locked compartment.",
+      "Avoid storing incompatible chemicals together.",
+      "Ensure adequate ventilation if volatile solvents are stored.",
+      "Follow temperature and light protection requirements on labels.",
+      "Dispose of expired drugs according to biohazard and regulatory guidelines."
+    ]
   }
 }

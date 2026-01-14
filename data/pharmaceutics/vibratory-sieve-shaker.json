@@ -3,16 +3,26 @@
     "title": "Operation of Vibratory Sieve Shaker"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vibratory Sieve Shaker.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Vibratory Sieve Shaker for precise particle size analysis.",
+    "scope": "Applicable to powder analysis activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Select the required sieve stack and clean each sieve thoroughly.",
+      "Place the sieves on the vibratory platform in descending order of mesh size.",
+      "Weigh the sample and pour it onto the top sieve.",
+      "Secure the stack with the clamping system.",
+      "Set the vibration intensity (amplitude) and the timer.",
+      "Start the shaker and allow it to run for the designated time.",
+      "Once complete, remove the sieves and weigh the fractions retained.",
+      "Analyze the data to determine the particle size distribution.",
+      "Clean the sieves using an ultrasonic cleaner or soft brush.",
+      "Document all results and sieve mesh details."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed the maximum load capacity for each sieve.",
+      "Ensure the clamping pressure is uniform to avoid uneven vibration.",
+      "Monitor for unusual noise that may indicate loose parts.",
+      "Avoid using sharp objects to clean the sieve mesh.",
+      "Maintain the equipment in a dry environment to prevent corrosion."
+    ]
   }
 }

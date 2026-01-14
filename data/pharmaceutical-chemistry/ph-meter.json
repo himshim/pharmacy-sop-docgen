@@ -3,16 +3,23 @@
     "title": "Operation of pH Meter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the pH Meter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To measure the acidity or alkalinity of aqueous solutions accurately.",
+    "scope": "Applicable to analytical tasks in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Turn ON the pH meter and allow it to warm up for 10 minutes.",
+      "Rinse the electrode with distilled water and blot dry gently.",
+      "Perform a two-point calibration using standard buffer solutions (e.g., pH 4 and 7).",
+      "Immerse the electrode in the sample solution and stir gently.",
+      "Wait for the stability icon or beep before recording the pH value.",
+      "Rinse the electrode thoroughly after use and store in 3M KCl solution.",
+      "Document the calibration and sample readings in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not touch the glass bulb of the electrode with your fingers.",
+      "Ensure the electrode never dries out during storage.",
+      "Clean the electrode with an appropriate solution if it becomes sluggish.",
+      "Always use fresh buffer solutions for calibration.",
+      "Allow solutions to reach room temperature for more accurate readings."
+    ]
   }
 }

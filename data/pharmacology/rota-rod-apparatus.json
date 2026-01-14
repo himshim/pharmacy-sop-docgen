@@ -3,16 +3,22 @@
     "title": "Operation of Rota Rod Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Rota Rod Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To assess motor coordination and balance in rodents using a rotating rod.",
+    "scope": "Applicable to neuropharmacology and toxicity studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set the rotation speed and acceleration mode as per protocol.",
+      "Place the animal on the rod facing opposite to the direction of rotation.",
+      "Start the rotation and timer simultaneously.",
+      "Record the time until the animal falls from the rod.",
+      "Repeat for the required number of trials and calculate the mean fall latency.",
+      "Clean the rod surface between animals."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Train animals prior to baseline measurements if required.",
+      "Prevent injury by providing a cushioned landing surface.",
+      "Use consistent rod diameter and texture across experiments.",
+      "Do not exceed speeds that cause immediate falls in all animals.",
+      "Monitor animals for signs of fatigue or distress."
+    ]
   }
 }

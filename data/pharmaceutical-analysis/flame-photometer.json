@@ -3,16 +3,26 @@
     "title": "Operation of Flame Photometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Flame Photometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for the analysis of alkali metals using flame emission spectroscopy.",
+    "scope": "Applicable to analytical chemistry tasks in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the instrument and allow it to warm up for 15 minutes.",
+      "Connect the gas supply and air compressor.",
+      "Ignite the flame and adjust for a stable blue cone.",
+      "Aspirate distilled water to zero the instrument.",
+      "Aspirate standard solutions to calibrate for the element (e.g., Na, K, Li).",
+      "Aspirate the sample solution and record the intensity reading.",
+      "Construct a calibration curve to determine the sample concentration.",
+      "Aspirate distilled water for 5 minutes after use to clean the nebulizer.",
+      "Turn OFF the gas and air supply and switch OFF the instrument.",
+      "Document all observations and results in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure proper ventilation in the laboratory during operation.",
+      "Check for gas leaks before igniting the flame.",
+      "Do not aspirate highly concentrated or corrosive samples.",
+      "Regularly clean the nebulizer and burner head.",
+      "Wear appropriate PPE including safety glasses."
+    ]
   }
 }

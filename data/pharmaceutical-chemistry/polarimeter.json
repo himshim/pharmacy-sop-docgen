@@ -3,16 +3,24 @@
     "title": "Operation of Polarimeter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Polarimeter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To measure the angle of rotation of polarized light through optically active substances.",
+    "scope": "Applicable to identity and purity testing in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the light source (sodium lamp) and allow it to stabilize for 20 minutes.",
+      "Fill the polarimeter tube with the solvent (blank) ensuring no air bubbles are trapped.",
+      "Place the tube in the sample compartment and zero the instrument.",
+      "Replace the blank with the sample solution prepared at a specific concentration.",
+      "Rotate the analyzer until the two halves of the field are equally dark (manual) or read the digital display.",
+      "Record the observed rotation (α) and the temperature.",
+      "Calculate the specific optical rotation using the standard formula.",
+      "Clean the polarimeter tube thoroughly after use with distilled water and solvent."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the polarimeter tube windows are clean and free from scratches.",
+      "Strictly avoid air bubbles in the light path as they distort readings.",
+      "Perform measurements at the temperature specified in the pharmacopoeia (usually 25°C).",
+      "Handle the sample tube carefully to avoid breaking the glass ends.",
+      "Calibrate the instrument regularly using a quartz control plate."
+    ]
   }
 }

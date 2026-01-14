@@ -3,16 +3,24 @@
     "title": "Operation of Horizontal Gel Electrophoresis Unit"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Horizontal Gel Electrophoresis Unit.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To separate DNA or RNA fragments in a horizontal agarose gel format.",
+    "scope": "Applicable to nucleic acid analysis in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Prepare agarose gel in buffer and pour into the casting tray with combs.",
+      "After solidification, place the gel tray into the tank and add running buffer until the gel is submerged.",
+      "Load DNA samples and ladder into wells using micropipettes.",
+      "Place the lid on the tank and connect to the power supply.",
+      "Run the gel at the recommended voltage until adequate separation is achieved.",
+      "Turn OFF the power before removing the lid and gel.",
+      "Stain or image the gel using appropriate methods.",
+      "Discard used buffer and gels according to safety protocols."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always ensure correct electrode orientation; DNA migrates towards the anode.",
+      "Do not touch the buffer when the power is ON.",
+      "Handle ethidium bromide and other DNA stains with care.",
+      "Avoid overheating by not exceeding recommended voltage.",
+      "Check the tank for cracks or leaks before use."
+    ]
   }
 }

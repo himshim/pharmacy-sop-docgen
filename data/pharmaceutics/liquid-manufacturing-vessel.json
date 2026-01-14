@@ -3,16 +3,44 @@
     "title": "Operation of Liquid Manufacturing Vessel"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Liquid Manufacturing Vessel.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Liquid Manufacturing Vessel for preparation, mixing, and storage of liquid pharmaceutical formulations including solutions, syrups, and suspensions.",
+    "scope": "Applicable to liquid manufacturing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the manufacturing vessel is clean and sanitized as per cleaning procedures.",
+      "Verify that all valves, ports, and connections are secure and leak-free.",
+      "Check that the mixer or agitator is properly installed and functional.",
+      "If equipped with heating or cooling jacket, verify utility connections.",
+      "Close all drain valves and sampling ports.",
+      "Measure and add purified water or solvent to the vessel.",
+      "Power ON the agitator and start mixing at low speed.",
+      "If heating is required, start the heating system and set temperature.",
+      "Monitor temperature using the temperature probe.",
+      "Add active ingredients in specified sequence while maintaining agitation.",
+      "Dissolve each ingredient completely before adding the next one.",
+      "Adjust pH if required using acid or alkali while monitoring with pH meter.",
+      "Add excipients including preservatives, sweeteners, and flavoring agents.",
+      "Continue mixing until uniform solution or suspension is achieved.",
+      "If cooling is required, circulate cooling water through the jacket.",
+      "Cool the product to desired temperature while maintaining agitation.",
+      "Take samples for quality control testing.",
+      "Verify appearance, pH, specific gravity, and other parameters.",
+      "Make volume up to final volume with purified water if required.",
+      "Mix thoroughly for final homogenization.",
+      "Transfer finished product through discharge valve for filling.",
+      "Clean the vessel, agitator, and all components immediately after discharge.",
+      "Document all manufacturing parameters, additions, and observations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Verify cleanliness of vessel before starting production.",
+      "Add ingredients in correct sequence to prevent incompatibilities.",
+      "Maintain proper temperature control for heat-sensitive ingredients.",
+      "Ensure complete dissolution before proceeding to next step.",
+      "Monitor pH regularly during preparation.",
+      "Use calibrated equipment for volume and temperature measurements.",
+      "Prevent contamination by maintaining closed system.",
+      "Sample using aseptic technique for sterile products.",
+      "Clean vessel promptly to prevent material hardening.",
+      "Follow cleaning validation protocols for product changeover."
+    ]
   }
 }

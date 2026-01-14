@@ -3,16 +3,24 @@
     "title": "Operation of Vertical Autoclave"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vertical Autoclave.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To sterilize media, instruments, and waste using vertical steam autoclaving.",
+    "scope": "Applicable to routine sterilization in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check water level in the autoclave boiler and fill with treated water if required.",
+      "Load items into the autoclave basket ensuring space for steam circulation.",
+      "Close and lock the lid according to manufacturer instructions.",
+      "Set the sterilization temperature, pressure, and time (e.g., 121°C, 15 psi, 15–30 minutes).",
+      "Start the cycle and monitor pressure and temperature gauges.",
+      "At the end of the cycle, allow pressure to return to zero before opening the lid.",
+      "Open the lid cautiously to vent steam and allow items to cool before removal.",
+      "Record cycle details and any observations in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never attempt to open the lid under pressure.",
+      "Wear heat-resistant gloves and face protection when unloading.",
+      "Do not overload the chamber.",
+      "Ensure regular maintenance and validation with biological indicators.",
+      "Check safety valves and gaskets periodically for proper function."
+    ]
   }
 }

@@ -3,16 +3,22 @@
     "title": "Operation of Pole Climbing Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Pole Climbing Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To evaluate conditioned avoidance response and learning using a pole-climbing paradigm.",
+    "scope": "Applicable to screening of antipsychotic and nootropic agents.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the animal in the chamber at the base of the pole.",
+      "Present the conditioned stimulus (e.g., buzzer) followed by an unconditioned stimulus (mild foot shock).",
+      "Allow the animal to climb the pole to avoid or escape the shock.",
+      "Record latency to climb and number of avoidance responses over repeated trials.",
+      "Continue training sessions as per protocol and perform test sessions without shock if required.",
+      "Clean the apparatus after each session."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use humane shock intensities within ethical limits.",
+      "Monitor animals for undue stress or fatigue.",
+      "Ensure the pole provides adequate grip and is securely fixed.",
+      "Standardize inter-trial intervals.",
+      "Check electrical components and insulation regularly."
+    ]
   }
 }

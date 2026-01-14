@@ -3,16 +3,25 @@
     "title": "Operation of Powder Flow Tester"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Powder Flow Tester.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Powder Flow Tester for assessing flow characteristics of pharmaceutical powders.",
+    "scope": "Applicable to powder characterization activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is calibrated and placed on a level surface.",
+      "Select the appropriate test cell or hopper based on sample type.",
+      "Weigh and load the powder sample into the testing unit.",
+      "Set test parameters: consolidation stress, shear rate, or flow time.",
+      "Initiate the test through the control software or interface.",
+      "Record flow parameters like Carr’s index, Hausner ratio, or flow rate.",
+      "Repeat the test for multiple replicates to ensure reproducibility.",
+      "Clean the sample cell and hopper thoroughly after each test.",
+      "Document results and powder flow classification in the record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Handle powders carefully to avoid pre-compaction before testing.",
+      "Ensure the sample is representative of the entire batch.",
+      "Maintain consistent environmental conditions (temp/humidity).",
+      "Clean the equipment between samples to prevent cross-contamination.",
+      "Follow manufacturer instructions for specific shear cell assembly."
+    ]
   }
 }

@@ -3,16 +3,43 @@
     "title": "Operation of UV Fluorescence Spectrophotometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the UV Fluorescence Spectrophotometer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of UV Fluorescence Spectrophotometer for qualitative and quantitative analysis of fluorescent pharmaceutical compounds by measuring emission spectra after UV excitation.",
+    "scope": "Applicable to fluorescence spectroscopy activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is placed in a dark or low-light environment to minimize interference.",
+      "Power ON the spectrofluorometer and allow the lamp to warm up for at least 15-30 minutes.",
+      "Initialize the control software and verify system status.",
+      "Perform wavelength calibration using standard reference materials (e.g., Raman peak of water).",
+      "Set the excitation wavelength based on the absorption maximum of the sample.",
+      "Set the emission wavelength range to capture the fluorescence spectrum.",
+      "Adjust slit widths for both excitation and emission monochromators for desired resolution.",
+      "Set the PMT voltage or gain to appropriate level for expected fluorescence intensity.",
+      "Prepare blank solution using the same solvent as samples.",
+      "Use quartz cuvettes as they have minimal fluorescence and UV transparency.",
+      "Fill the cuvette with blank solution ensuring no air bubbles are present.",
+      "Place the cuvette in the sample holder with proper orientation.",
+      "Acquire blank spectrum and save for background correction.",
+      "Prepare sample and standard solutions in appropriate concentrations.",
+      "Rinse the cuvette with sample solution before filling.",
+      "Fill the cuvette with sample solution and place in the holder.",
+      "Acquire the fluorescence spectrum and monitor signal intensity.",
+      "If signal is too weak or saturated, adjust PMT voltage or sample concentration.",
+      "Perform replicate measurements to ensure reproducibility.",
+      "Save all spectra with proper identification and perform background correction if needed.",
+      "Clean cuvettes thoroughly with appropriate solvents after use.",
+      "Document all parameters including excitation/emission wavelengths, slit widths, and concentrations."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always use quartz cuvettes for UV-fluorescence measurements.",
+      "Ensure samples are free from particulates that can scatter light.",
+      "Avoid photobleaching by minimizing exposure time to excitation light.",
+      "Use appropriate sample concentration to avoid inner filter effects and self-quenching.",
+      "Handle cuvettes by frosted sides only to avoid fingerprints on optical surfaces.",
+      "Ensure solvents used are non-fluorescent or have minimal fluorescence.",
+      "Protect samples from ambient light if they are photosensitive.",
+      "Avoid oxygen quenching by degassing samples if necessary.",
+      "Wear appropriate PPE when handling samples and solvents.",
+      "Perform regular lamp checks and replace when intensity decreases significantly."
+    ]
   }
 }

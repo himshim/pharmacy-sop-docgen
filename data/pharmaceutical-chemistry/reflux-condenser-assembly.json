@@ -3,16 +3,24 @@
     "title": "Operation of Reflux Condenser Assembly"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Reflux Condenser Assembly.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide continuous heating of reaction mixtures without loss of solvent.",
+    "scope": "Applicable to synthesis in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Assemble the round-bottom flask, condenser, and heating mantle.",
+      "Apply a thin layer of grease to the ground-glass joints.",
+      "Connect the water inlet (bottom) and outlet (top) to the condenser.",
+      "Turn ON the cooling water and ensure a steady flow.",
+      "Add reaction mixture and boiling chips to the flask.",
+      "Turn ON the heat and monitor the reflux rate (1-2 drops per second).",
+      "After the reaction is complete, turn OFF the heat and allow the flask to cool.",
+      "Turn OFF the cooling water and dismantle the assembly for cleaning."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never heat a closed system; ensure the top of the condenser is open or fitted with a drying tube.",
+      "Ensure the water flow is consistent to prevent solvent vapors from escaping.",
+      "Secure all joints with Keck clips to prevent accidental disconnection.",
+      "Handle hot glassware with appropriate heat-resistant gloves.",
+      "Check for leaks in the water tubing before starting the reaction."
+    ]
   }
 }

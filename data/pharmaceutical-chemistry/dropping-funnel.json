@@ -3,16 +3,26 @@
     "title": "Operation of Dropping Funnel"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Dropping Funnel.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the controlled addition of liquid reagents into a reaction mixture using a dropping funnel.",
+    "scope": "Applicable to synthetic activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Inspect the dropping funnel for any cracks or chips and ensure the stopcock is clean.",
+      "Apply a small amount of grease to the stopcock if it is made of ground glass.",
+      "Close the stopcock and mount the funnel onto the reaction flask using a ground-glass joint.",
+      "Secure the funnel with a clamp to a laboratory stand.",
+      "Pour the liquid reagent carefully into the funnel using a small glass funnel.",
+      "Place a stopper on the top of the dropping funnel (ensure it is a pressure-equalizing type if the system is closed).",
+      "Adjust the stopcock to achieve the desired drop rate into the reaction mixture.",
+      "Monitor the addition process and the reaction temperature throughout.",
+      "Once the addition is complete, close the stopcock and remove the funnel.",
+      "Clean the funnel thoroughly with appropriate solvents immediately after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the dropping funnel is properly vented to prevent pressure buildup.",
+      "Do not fill the funnel to more than 80% of its capacity.",
+      "Check that the stopcock is not leaking before adding hazardous reagents.",
+      "Handle the funnel carefully as it is fragile and can easily tip over if not clamped properly.",
+      "Wear appropriate PPE including safety glasses and gloves."
+    ]
   }
 }

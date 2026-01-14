@@ -3,16 +3,25 @@
     "title": "Operation of Conductivity Meter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Conductivity Meter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the measurement of electrolytic conductivity of solutions.",
+    "scope": "Applicable to analytical activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Connect the conductivity probe to the meter and power ON the instrument.",
+      "Calibrate the meter using a standard conductivity solution (e.g., 0.01M KCl).",
+      "Rinse the conductivity probe with distilled water and blot dry with a soft tissue.",
+      "Immerse the probe into the sample solution ensuring the sensor is fully covered.",
+      "Stir the solution gently to ensure homogeneity and wait for the reading to stabilize.",
+      "Record the conductivity value and the temperature displayed on the meter.",
+      "Rinse the probe thoroughly with distilled water after each measurement.",
+      "Store the conductivity probe in the recommended storage solution or dry as per manufacturer instructions.",
+      "Switch OFF the meter after completing the measurements."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid touching the electrode surface with fingers.",
+      "Ensure there are no air bubbles trapped inside the electrode sensing area.",
+      "Perform calibration regularly to ensure measurement accuracy.",
+      "Rinse the probe between different samples to prevent cross-contamination.",
+      "Do not use the probe in solutions that may damage the sensor (e.g., strong solvents)."
+    ]
   }
 }

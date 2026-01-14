@@ -3,16 +3,26 @@
     "title": "Operation of Colorimeter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Colorimeter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the measurement of absorbance and concentration of colored solutions using a colorimeter.",
+    "scope": "Applicable to analytical activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the colorimeter and allow it to warm up for at least 15 minutes.",
+      "Select the appropriate filter or wavelength corresponding to the maximum absorbance of the sample.",
+      "Fill a clean cuvette with the blank solution (solvent) up to the mark.",
+      "Wipe the outer surface of the cuvette with a lint-free tissue.",
+      "Insert the blank cuvette into the sample holder and adjust the instrument to zero absorbance or 100% transmittance.",
+      "Replace the blank with a cuvette containing the standard or sample solution.",
+      "Record the absorbance or transmittance reading displayed on the screen.",
+      "Repeat the measurement for all standards to construct a calibration curve if necessary.",
+      "Note the readings for unknown samples and calculate the concentration using the calibration curve.",
+      "Clean the cuvettes thoroughly after use and switch OFF the instrument."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always handle cuvettes by the frosted sides to avoid fingerprints on the optical path.",
+      "Ensure there are no air bubbles in the solution inside the cuvette.",
+      "Use matched cuvettes for blank and sample measurements for better accuracy.",
+      "Do not use cuvettes with scratches on the optical surface.",
+      "Maintain a consistent orientation of the cuvette in the sample holder."
+    ]
   }
 }

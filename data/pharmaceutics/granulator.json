@@ -3,16 +3,43 @@
     "title": "Operation of Granulator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Granulator.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Granulator for wet granulation of pharmaceutical powders to improve flow properties, compressibility, and content uniformity.",
+    "scope": "Applicable to granulation activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the granulator is installed on a stable foundation in a clean area.",
+      "Verify that all electrical connections and interlocks are functioning properly.",
+      "Check that the mixing bowl, impeller blades, and chopper are clean and dry.",
+      "Power ON the granulator and perform empty run to check operation.",
+      "Weigh all powder ingredients accurately as per batch formula.",
+      "Load powder blend into the granulator bowl.",
+      "Set the impeller rotation speed to low initially.",
+      "Start the impeller to mix dry powders uniformly.",
+      "Mix dry powders for specified time to achieve uniform blend.",
+      "Prepare binder solution of appropriate concentration and volume.",
+      "Start the chopper at low to medium speed.",
+      "Begin adding binder solution slowly through spray or pour method.",
+      "Control the rate of binder addition to achieve proper wet massing.",
+      "Monitor the wet mass formation and endpoint visually.",
+      "Adjust impeller and chopper speeds as needed during granulation.",
+      "Continue mixing until uniform wet mass with desired consistency is achieved.",
+      "Check wet mass consistency by squeeze test or visual observation.",
+      "Stop the impeller and chopper once endpoint is reached.",
+      "Discharge wet mass immediately for drying or further processing.",
+      "Clean the granulator bowl, impeller, chopper, and lid thoroughly.",
+      "Inspect equipment for any product buildup or residue.",
+      "Document granulation parameters, binder volume, and observations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the granulator beyond rated capacity.",
+      "Add binder solution gradually to avoid over-wetting.",
+      "Monitor wet mass consistency carefully to achieve optimal granule properties.",
+      "Avoid over-granulation which produces hard, dense granules.",
+      "Clean equipment promptly to prevent material hardening.",
+      "Ensure proper ventilation if using volatile solvents.",
+      "Wear appropriate PPE including gloves, mask, and protective clothing.",
+      "Follow lockout/tagout procedures during cleaning and maintenance.",
+      "Discharge wet mass promptly to prevent drying in the bowl.",
+      "Validate granulation endpoint for consistent product quality."
+    ]
   }
 }

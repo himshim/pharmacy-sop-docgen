@@ -3,16 +3,24 @@
     "title": "Operation of Digital Balance"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Balance.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To perform general-purpose weighing of chemicals and media components with moderate precision.",
+    "scope": "Applicable to routine weighing tasks in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the balance on a stable, vibration-free surface.",
+      "Switch ON the instrument and allow it to initialize.",
+      "Check and adjust the level using the leveling feet and spirit bubble.",
+      "Place a clean weighing container on the pan and press 'TARE'.",
+      "Add the material to be weighed until the desired mass is obtained.",
+      "Record the reading once it stabilizes.",
+      "Remove the container and wipe any spills from the pan.",
+      "Switch OFF the balance after use if required by SOP."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed the maximum capacity of the balance.",
+      "Avoid drafts, direct sunlight, and heat sources near the balance.",
+      "Never place chemicals directly onto the weighing pan.",
+      "Calibrate the balance periodically using certified weights.",
+      "Keep the balance clean and covered when not in use."
+    ]
   }
 }

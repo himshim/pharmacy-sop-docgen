@@ -3,16 +3,22 @@
     "title": "Operation of Cutter Mill"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Cutter Mill.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To cut and reduce the size of fibrous or hard plant materials into smaller particles.",
+    "scope": "Applicable to size reduction of roots, barks, and stems prior to grinding in Pharmacognosy.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Inspect the mill chamber, knives, and screen for cleanliness and integrity.",
+      "Set the desired screen size according to the required particle size.",
+      "Feed the dried plant material gradually into the hopper while the cutter is running.",
+      "Collect the cut material from the outlet container.",
+      "Switch OFF the mill and allow the blades to come to a complete stop before opening the chamber.",
+      "Brush out any remaining material and clean the chamber, knives, and screen."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not insert hands or tools into the hopper while the mill is operating.",
+      "Ensure material is adequately dried to prevent clogging.",
+      "Wear hearing protection if noise levels are high.",
+      "Check knives regularly for sharpness and damage and replace when needed.",
+      "Securely fasten all covers and safety interlocks before starting the mill."
+    ]
   }
 }

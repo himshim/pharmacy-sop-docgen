@@ -3,16 +3,44 @@
     "title": "Operation of UV Visible Spectrophotometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the UV Visible Spectrophotometer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of UV-Visible Spectrophotometer for qualitative identification and quantitative determination of pharmaceutical compounds based on their absorbance characteristics in ultraviolet and visible regions.",
+    "scope": "Applicable to UV-Visible spectroscopy activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is placed on a stable surface away from direct sunlight.",
+      "Power ON the UV-Visible spectrophotometer and allow the lamp to warm up for at least 30 minutes.",
+      "Initialize the control software and verify that the instrument passes self-diagnostics.",
+      "Perform wavelength calibration using standard filters or holmium oxide solution.",
+      "Perform baseline correction by running a blank scan with empty cuvette holder or air.",
+      "Select the measurement mode (single wavelength, scan, or kinetics) as per requirement.",
+      "Set the wavelength or wavelength range for analysis.",
+      "Prepare blank solution using the same solvent as used for sample preparation.",
+      "Select appropriate cuvettes (quartz for UV range, glass for visible range) with matched path length.",
+      "Rinse cuvettes with the solvent and then with blank solution.",
+      "Fill the cuvette with blank solution ensuring no air bubbles are present.",
+      "Place the blank cuvette in the reference position and acquire blank spectrum.",
+      "Set the instrument to zero absorbance or 100% transmittance with blank.",
+      "Prepare sample and standard solutions in appropriate concentrations.",
+      "Rinse the sample cuvette with a small portion of sample solution.",
+      "Fill the cuvette with sample solution and wipe the outer surfaces clean.",
+      "Place the sample cuvette in the sample holder and close the lid.",
+      "Acquire the spectrum or absorbance reading at specified wavelength.",
+      "Record the absorbance values and wavelength information.",
+      "For quantitative analysis, prepare calibration curve using standard solutions.",
+      "Calculate concentration of unknown samples using the calibration curve or Beer's law.",
+      "After measurements, clean cuvettes thoroughly with appropriate solvents and dry.",
+      "Document all spectral data, wavelengths, and calculations in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use quartz cuvettes for UV measurements (below 340 nm) as glass absorbs UV light.",
+      "Ensure cuvettes are clean, dry, and free from scratches or fingerprints.",
+      "Handle cuvettes by frosted sides or top edges only.",
+      "Prepare samples in appropriate concentration range to maintain absorbance between 0.2-0.8 for accuracy.",
+      "Use freshly prepared solutions and avoid photosensitive samples exposed to light.",
+      "Ensure blank and sample solutions are at the same temperature.",
+      "Remove air bubbles from cuvettes as they interfere with measurements.",
+      "Clean spills immediately to prevent damage to the sample compartment.",
+      "Perform regular wavelength calibration to maintain accuracy.",
+      "Wear appropriate PPE when handling samples and solvents."
+    ]
   }
 }

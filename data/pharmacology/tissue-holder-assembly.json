@@ -1,18 +1,23 @@
 {
   "meta": {
-    "title": "Operation of Tissue Holder Assembly"
+    "title": "Use of Tissue Holder Assembly"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Tissue Holder Assembly.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To securely hold isolated tissues or organs in position within an organ bath or recording setup.",
+    "scope": "Applicable to isolated tissue experiments in Pharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Select appropriate hooks, clips, or frames according to tissue type.",
+      "Attach one end of the tissue to the fixed hook and the other to the transducer or lever.",
+      "Adjust the position to ensure the tissue is submerged without stretching beyond physiological limits.",
+      "Tighten screws or clamps gently to secure the assembly.",
+      "Inspect alignment periodically during the experiment and adjust if necessary."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid crushing or tearing tissue during mounting.",
+      "Use corrosion-resistant materials compatible with solutions.",
+      "Handle sharp hooks and needles carefully.",
+      "Clean and disinfect components between experiments.",
+      "Store small parts in labeled containers to prevent loss."
+    ]
   }
 }

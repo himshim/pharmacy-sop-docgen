@@ -3,16 +3,25 @@
     "title": "Operation of Bunsen Burner"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Bunsen Burner.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide a high-temperature gas flame for sterilization and heating.",
+    "scope": "Applicable to aseptic techniques in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check the gas hose for cracks and ensure it is securely connected.",
+      "Close the air collar at the base of the burner.",
+      "Turn ON the gas supply and ignite the burner using a striker.",
+      "Adjust the air collar to achieve a non-luminous, steady blue flame.",
+      "The hottest part of the flame is the tip of the inner blue cone.",
+      "Sterilize loops or needles by heating them to redness in the flame.",
+      "Turn OFF the gas supply immediately after use.",
+      "Disconnect the hose if the burner will not be used for a long time.",
+      "Clean the burner head periodically to prevent clogging."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure no flammable solvents (like ethanol) are near the open flame.",
+      "Never leave a lit Bunsen burner unattended.",
+      "Tie back long hair and avoid loose-fitting sleeves.",
+      "Be aware that the burner tube can remain hot long after the flame is out.",
+      "Always check for gas odors before igniting."
+    ]
   }
 }

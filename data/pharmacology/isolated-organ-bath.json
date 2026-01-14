@@ -3,16 +3,23 @@
     "title": "Operation of Isolated Organ Bath"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Isolated Organ Bath.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To study drug effects on isolated tissues in vitro.",
+    "scope": "Applicable to smooth muscle and tissue pharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the organ bath with appropriate physiological solution and maintain at 37°C.",
+      "Bubble the solution with a gas mixture (e.g., carbogen).",
+      "Mount the isolated tissue between the hook and force transducer.",
+      "Apply initial resting tension and allow equilibration with regular washing.",
+      "Administer drugs in cumulative or non-cumulative manner as per protocol.",
+      "Record tissue responses and wash between doses.",
+      "At the end, discard tissue and clean the bath thoroughly."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid tissue damage during mounting.",
+      "Maintain constant temperature and pH of the bath.",
+      "Use fresh physiological solution.",
+      "Prevent air bubbles from contacting the tissue.",
+      "Handle sharps and biological waste as per SOP."
+    ]
   }
 }

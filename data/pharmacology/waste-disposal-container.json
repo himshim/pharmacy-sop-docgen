@@ -1,18 +1,23 @@
 {
   "meta": {
-    "title": "Operation of Waste Disposal Container"
+    "title": "Use of Waste Disposal Container"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Waste Disposal Container.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To collect non-sharp biomedical and laboratory waste safely before final disposal.",
+    "scope": "Applicable to Pharmacology laboratories and animal facilities.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Line the container with appropriate color-coded biomedical waste bags.",
+      "Discard compatible waste materials such as soiled gauze, disposable PPE, and animal bedding.",
+      "Do not overfill; close and seal bags when they reach the recommended fill level.",
+      "Label bags with department and date before transfer to central waste collection.",
+      "Clean and disinfect reusable containers regularly."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not dispose of sharps in these containers.",
+      "Segregate waste strictly according to biomedical waste categories.",
+      "Wear PPE when handling waste bags.",
+      "Avoid manual compaction of waste.",
+      "Follow institutional and legal biomedical waste regulations."
+    ]
   }
 }

@@ -3,16 +3,28 @@
     "title": "Operation of Buchner Funnel Assembly"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Buchner Funnel Assembly.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for vacuum filtration using a Buchner funnel assembly.",
+    "scope": "Applicable to filtration activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Assemble the Buchner funnel onto the vacuum flask using a rubber adapter/gasket.",
+      "Connect the side arm of the vacuum flask to a vacuum pump using thick-walled tubing.",
+      "Place a filter paper of correct size in the funnel so it lies flat and covers all holes.",
+      "Moisten the filter paper with a small amount of the solvent being used.",
+      "Turn ON the vacuum pump and check for a proper seal between the funnel and flask.",
+      "Pour the slurry or solution to be filtered slowly into the center of the funnel.",
+      "Allow the liquid to be pulled through the filter into the flask.",
+      "Rinse the solids in the funnel with a small amount of cold solvent if required.",
+      "Once the filtration is complete, disconnect the vacuum hose before turning off the pump.",
+      "Carefully remove the funnel and collect the filtered solid (cake) from the filter paper.",
+      "Discard the filtrate or transfer it to another container as per requirements.",
+      "Clean the funnel and flask thoroughly with appropriate solvents."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the vacuum flask is made of thick-walled glass to withstand pressure.",
+      "Do not use filter paper that is larger than the funnel diameter.",
+      "Ensure the vacuum is released before shutting off the pump to prevent back-flow.",
+      "Inspect the glassware for cracks or chips before applying vacuum.",
+      "Wear appropriate PPE including safety goggles and lab coat."
+    ]
   }
 }

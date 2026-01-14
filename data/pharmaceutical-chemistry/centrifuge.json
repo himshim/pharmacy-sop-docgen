@@ -3,16 +3,28 @@
     "title": "Operation of Centrifuge"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Centrifuge.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the separation of components based on density using a laboratory centrifuge.",
+    "scope": "Applicable to separation activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the centrifuge is placed on a stable, level surface.",
+      "Open the centrifuge lid and inspect the rotor and buckets for cleanliness.",
+      "Fill the centrifuge tubes with equal volumes of the sample solution.",
+      "Place the tubes in opposite buckets to ensure a balanced load.",
+      "If using an odd number of samples, use a balance tube filled with water of equal weight.",
+      "Close the lid securely and ensure the interlock is engaged.",
+      "Set the required speed (RPM or RCF) and time on the control panel.",
+      "Start the centrifuge and wait for it to reach the set speed.",
+      "Monitor for any unusual noise or vibration; stop immediately if detected.",
+      "Wait for the rotor to come to a complete stop before opening the lid.",
+      "Carefully remove the tubes and proceed with the separation of the supernatant.",
+      "Clean any spills inside the centrifuge immediately and document the run."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the centrifuge with an unbalanced load.",
+      "Do not attempt to open the lid or touch the rotor while it is spinning.",
+      "Ensure the tubes are compatible with the rotor speed and chemicals used.",
+      "Regularly inspect the rotor and buckets for signs of fatigue or corrosion.",
+      "Use appropriate biohazard or chemical safety protocols when handling hazardous samples."
+    ]
   }
 }

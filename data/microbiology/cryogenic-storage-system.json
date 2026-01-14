@@ -3,16 +3,25 @@
     "title": "Operation of Cryogenic Storage System"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Cryogenic Storage System.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To preserve microbial cultures and cell lines at ultra-low temperatures using liquid nitrogen.",
+    "scope": "Applicable to long-term preservation in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check the liquid nitrogen level in the Dewar flask regularly.",
+      "Ensure all cryovials are labeled with moisture-resistant markers.",
+      "Don necessary PPE including cryogenic gloves and a face shield.",
+      "Use specialized tongs to retrieve or deposit samples in the racks.",
+      "Ensure the lid is replaced securely to minimize nitrogen evaporation.",
+      "Refill the liquid nitrogen as per the established schedule.",
+      "Keep a detailed logbook of sample locations and quantities.",
+      "Monitor the room for oxygen levels (use an O2 sensor).",
+      "Ensure the storage area is well-ventilated."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid direct skin contact with liquid nitrogen to prevent severe frostbite.",
+      "Never store the system in a confined space due to the risk of asphyxiation.",
+      "Handle cryovials carefully as they may explode upon warming.",
+      "Do not overfill the Dewar.",
+      "Regularly inspect the Dewar for loss of vacuum (e.g., frost on the outer shell)."
+    ]
   }
 }

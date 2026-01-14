@@ -3,16 +3,24 @@
     "title": "Operation of Manual Titration Assembly"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Manual Titration Assembly.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To perform manual volumetric analysis using a burette and indicator.",
+    "scope": "Applicable to quantitative analysis in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Rinse the burette with a small amount of the titrant solution.",
+      "Fill the burette and ensure there are no air bubbles in the tip.",
+      "Set the meniscus to the zero mark and record the initial reading.",
+      "Place the sample flask containing an indicator under the burette.",
+      "Add the titrant slowly while swirling the flask continuously.",
+      "Titrate until a permanent color change (endpoint) is observed.",
+      "Record the final burette reading.",
+      "Empty and clean the burette and flask thoroughly."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Read the burette at eye level for accuracy.",
+      "Ensure the stopcock is well-greased and leak-free.",
+      "Do not add titrant too rapidly near the endpoint.",
+      "Use a white tile under the flask for better color visualization.",
+      "Check for proper illumination during the process."
+    ]
   }
 }

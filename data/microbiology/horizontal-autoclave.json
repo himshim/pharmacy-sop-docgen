@@ -3,16 +3,26 @@
     "title": "Operation of Horizontal Autoclave"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Horizontal Autoclave.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To sterilize large loads of media, instruments, and waste using horizontal steam autoclaving.",
+    "scope": "Applicable to centralized sterilization in the Microbiology facility.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check the boiler water level and fill if necessary with treated water.",
+      "Load items onto the autoclave trolley, ensuring steam circulation gaps.",
+      "Roll the trolley into the chamber and close the door securely.",
+      "Select the sterilization program (e.g., 121°C for 30 minutes) on the controller.",
+      "Start the cycle and monitor pressure, temperature, and time.",
+      "Allow the cycle to complete, including drying phase if applicable.",
+      "Confirm that pressure has returned to zero before opening the door.",
+      "Open the door cautiously to vent steam and allow cooling.",
+      "Unload materials using heat-resistant gloves and carts.",
+      "Log the cycle parameters and any deviations."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not attempt to bypass safety interlocks.",
+      "Ensure regular maintenance and validation with biological indicators.",
+      "Do not overload the chamber; follow manufacturer loading patterns.",
+      "Beware of hot condensate on the chamber floor.",
+      "Train only authorized personnel to operate the autoclave."
+    ]
   }
 }

@@ -3,16 +3,21 @@
     "title": "Operation of Rotary Shaker"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Rotary Shaker.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide rotary motion for mixing culture tubes and flasks.",
+    "scope": "Applicable to mixing and incubation support in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place culture containers evenly on the shaker platform.",
+      "Set the desired shaking speed and time on the control panel.",
+      "Start the shaker and confirm smooth rotation.",
+      "At the end of the cycle, stop the shaker before removing containers.",
+      "Clean the platform after use, especially if spills occurred."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure containers are tightly closed to prevent leakage.",
+      "Do not exceed the maximum load capacity.",
+      "Do not operate the shaker on an unstable or sloping bench.",
+      "Inspect clamps and platform for wear or damage.",
+      "Disconnect from power before maintenance."
+    ]
   }
 }

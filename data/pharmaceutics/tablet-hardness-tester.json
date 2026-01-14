@@ -3,16 +3,25 @@
     "title": "Operation of Tablet Hardness Tester"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Tablet Hardness Tester.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Tablet Hardness Tester for measuring crushing strength.",
+    "scope": "Applicable to tablet testing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify the cleanliness of the testing platform and jaws.",
+      "Place the tablet between the jaws of the hardness tester.",
+      "Align the tablet correctly based on its shape (radial or longitudinal).",
+      "Apply force gradually until the tablet breaks.",
+      "Read the hardness value from the scale or digital display.",
+      "Discard the tablet fragments and clean the platform.",
+      "Repeat the procedure for at least 10 tablets per batch.",
+      "Calculate the average hardness and check against specifications.",
+      "Document all individual readings and the mean value."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid applying force too rapidly to ensure accurate readings.",
+      "Always zero the instrument before starting a new set of tests.",
+      "Clean the jaws regularly to remove accumulated dust.",
+      "Handle the tablets with care to avoid pre-test damage.",
+      "Perform regular calibration with standard weights."
+    ]
   }
 }

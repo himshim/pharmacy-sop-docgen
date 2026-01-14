@@ -3,16 +3,27 @@
     "title": "Operation of Automatic Titrator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Automatic Titrator.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for performing automated titrations with precise endpoint detection.",
+    "scope": "Applicable to quantitative analysis in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is calibrated and the electrode is properly connected.",
+      "Rinse the burette and tubing with the titrant to be used.",
+      "Fill the titrant reservoir and ensure there are no air bubbles in the lines.",
+      "Select the appropriate titration method on the control panel (e.g., acid-base, redox).",
+      "Prepare the sample in a titration beaker and add a magnetic stir bar.",
+      "Lower the electrode and titration tip into the sample solution.",
+      "Start the titration; the instrument will automatically add titrant and monitor the potential/pH.",
+      "Wait for the instrument to detect the endpoint and display the results.",
+      "Record the titrant volume and the calculated concentration.",
+      "Rinse the electrode and titration tip thoroughly with distilled water after each use.",
+      "Empty and rinse the burette system if a different titrant is required."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Handle electrodes with care to prevent breakage or surface damage.",
+      "Ensure the magnetic stirrer does not hit the electrode.",
+      "Check for leaks in the tubing and connections regularly.",
+      "Perform periodic calibration of the burette volume.",
+      "Store electrodes in the appropriate storage solution when not in use."
+    ]
   }
 }

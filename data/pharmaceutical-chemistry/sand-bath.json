@@ -3,16 +3,23 @@
     "title": "Operation of Sand Bath"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Sand Bath.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide high-temperature, uniform heating for reaction vessels using sand as a medium.",
+    "scope": "Applicable to chemical synthesis in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill a metal or heavy glass container with clean, dry sand.",
+      "Place the container on a hot plate or heating mantle.",
+      "Embed the reaction flask into the sand, ensuring it is well-supported.",
+      "Place a thermometer in the sand near the flask to monitor temperature.",
+      "Switch ON the heat and gradually reach the desired temperature.",
+      "After use, turn OFF the heat and allow the sand to cool completely.",
+      "Carefully remove the flask and wipe off any adhering sand particles."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the sand is completely dry to prevent steam pockets and splattering.",
+      "Do not touch the hot sand with bare hands; use tools or gloves.",
+      "Avoid overloading the hot plate with a heavy sand bath.",
+      "Use a lid if the reaction involves volatile components to maintain heat.",
+      "Regularly replace the sand if it becomes contaminated with chemical spills."
+    ]
   }
 }

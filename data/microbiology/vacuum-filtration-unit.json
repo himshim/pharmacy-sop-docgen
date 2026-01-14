@@ -3,16 +3,23 @@
     "title": "Operation of Vacuum Filtration Unit"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vacuum Filtration Unit.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To rapidly filter liquids using vacuum assistance for sterilization or clarification.",
+    "scope": "Applicable to microbiological sample preparation and sterility tests.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Assemble the filtration unit and connect it to a vacuum source.",
+      "Place the appropriate membrane or filter paper on the support.",
+      "Secure the funnel and pour the sample into it.",
+      "Apply vacuum to initiate filtration.",
+      "After filtration, release the vacuum before disassembling.",
+      "Collect the filtrate or membrane for further processing.",
+      "Clean and disinfect all components after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure all glassware used under vacuum is free from cracks.",
+      "Avoid overfilling the funnel.",
+      "Prevent backflow of liquid into the vacuum line.",
+      "Use membranes compatible with the sample and solvent.",
+      "Dispose of used filters as biohazard waste if contaminated."
+    ]
   }
 }

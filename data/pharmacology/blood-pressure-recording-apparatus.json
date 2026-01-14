@@ -3,16 +3,24 @@
     "title": "Operation of Blood Pressure Recording Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Blood Pressure Recording Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To measure and record systemic arterial blood pressure in experimental animals.",
+    "scope": "Applicable to cardiovascular pharmacology studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Calibrate the pressure transducer and chart recorder.",
+      "Anesthetize the animal and cannulate the carotid or femoral artery.",
+      "Connect the cannula to saline-filled tubing and the pressure transducer.",
+      "Zero the transducer at arterial level.",
+      "Record baseline blood pressure waveform.",
+      "Administer test compound and record changes.",
+      "Euthanize the animal humanely at the end of the experiment.",
+      "Clean and sterilize all reusable components."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use aseptic technique for cannulation.",
+      "Monitor animal vital signs continuously.",
+      "Flush lines regularly to prevent clotting.",
+      "Handle glass components carefully.",
+      "Dispose of biological waste appropriately."
+    ]
   }
 }

@@ -3,16 +3,26 @@
     "title": "Operation of Bench Top Centrifuge"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Bench Top Centrifuge.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To separate particles and microorganisms from liquid suspensions.",
+    "scope": "Applicable to sample processing in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the centrifuge on a level, stable laboratory bench.",
+      "Inspect the rotor for any visible damage or debris.",
+      "Fill tubes equally and balance them by weight before loading.",
+      "Insert tubes symmetrically into the rotor holders.",
+      "Close the lid securely and set the speed and time.",
+      "Start the run and stay nearby until it reaches operating speed.",
+      "If abnormal vibration occurs, stop the unit immediately.",
+      "Wait for the rotor to stop completely before opening the lid.",
+      "Remove tubes and wipe the interior with a disinfectant.",
+      "Document the centrifuge run in the equipment logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the centrifuge with an unbalanced rotor.",
+      "Ensure all tubes are tightly capped to prevent aerosol formation.",
+      "Do not attempt to stop the rotor with your hands.",
+      "Use only tubes rated for the maximum speed setting.",
+      "Clean any spills immediately to prevent corrosion."
+    ]
   }
 }

@@ -3,16 +3,17 @@
     "title": "Operation of Trinocular Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Trinocular Microscope.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To photograph microscopical features.",
+    "scope": "Applicable to documentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Focus image.",
+      "Attach camera.",
+      "Capture.",
+      "Save."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Clean optics.",
+      "Backup images."
+    ]
   }
 }

@@ -1,18 +1,25 @@
 {
   "meta": {
-    "title": "Operation of Refrigerator"
+    "title": "Operation of Refrigerator (Pharmacology Laboratory)"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Refrigerator.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To store temperature-sensitive drugs, reagents, and biological samples at 2–8°C.",
+    "scope": "Applicable to cold storage requirements in Pharmacology and animal facilities.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the temperature display is within the 2–8°C range.",
+      "Arrange items to allow free air circulation and avoid blocking vents.",
+      "Label all stored materials with name, concentration, date of receipt/preparation, and expiry.",
+      "Record temperature at least once daily in the logbook.",
+      "Clean shelves and interior surfaces regularly with approved disinfectant.",
+      "Defrost the unit if ice buildup affects efficiency.",
+      "Remove expired or unused items promptly according to disposal SOPs."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not store food, drink, or non-laboratory items.",
+      "Minimize door openings to maintain temperature stability.",
+      "Avoid storing flammable solvents unless the refrigerator is explosion-proof.",
+      "Ensure connection to a stable or backup power supply for critical items.",
+      "Check the door gasket periodically for damage and proper sealing."
+    ]
   }
 }

@@ -3,16 +3,24 @@
     "title": "Operation of Potentiometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Potentiometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To measure the EMF of electrochemical cells during potentiometric titrations.",
+    "scope": "Applicable to quantitative analysis in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
+      "Connect the indicator and reference electrodes to the potentiometer.",
       "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Immerse the electrodes into the titration vessel containing the sample.",
+      "Add the titrant in small increments while stirring continuously.",
+      "Record the potential (mV) after each addition once stabilized.",
+      "Determine the equivalence point from the potential vs volume curve.",
+      "Rinse and store electrodes in appropriate solutions after use.",
+      "Clean the titration setup and document the findings."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain consistent stirring throughout the titration.",
+      "Ensure the electrodes do not touch the magnetic stir bar.",
+      "Regularly check the electrode connections for noise or drift.",
+      "Use a high-impedance input for sensitive potential measurements.",
+      "Clean electrodes between different samples to prevent carryover."
+    ]
   }
 }

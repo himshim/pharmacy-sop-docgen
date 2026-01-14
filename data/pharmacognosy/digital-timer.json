@@ -1,18 +1,23 @@
 {
   "meta": {
-    "title": "Operation of Digital Timer"
+    "title": "Use of Digital Timer (Pharmacognosy)"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Timer.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To accurately measure time intervals for extraction, drying, and other timed procedures.",
+    "scope": "Applicable to all timed operations in Pharmacognosy practicals and research.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set the desired countdown or count-up time using the appropriate buttons.",
+      "Start the timer at the beginning of the operation.",
+      "Monitor the display and respond promptly to the alarm at the end of the period.",
+      "Record the exact duration in the experimental notebook if needed.",
+      "Reset the timer before the next use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Confirm the timer mode (count-up or countdown) before starting.",
+      "Ensure the alarm volume is audible in the working area.",
+      "Replace batteries as soon as low battery indicators appear.",
+      "Protect the device from spills and high humidity.",
+      "Use multiple timers for complex multi-step procedures when required."
+    ]
   }
 }

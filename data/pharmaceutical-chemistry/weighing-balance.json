@@ -3,16 +3,23 @@
     "title": "Operation of Weighing Balance"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Weighing Balance.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for general weighing of reagents and chemicals.",
+    "scope": "Applicable to all weighing tasks in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check that the balance is level and the pan is clean.",
+      "Power ON the balance and allow it to initialize.",
+      "Place the weighing boat or paper on the pan and press 'TARE'.",
+      "Carefully add the substance to be weighed.",
+      "Record the weight once the reading has stabilized.",
+      "Remove the material and clean the balance pan with a soft brush.",
+      "Switch OFF the balance at the end of the working day."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not place chemicals directly onto the weighing pan.",
+      "Ensure the balance is used within its specified range.",
+      "Avoid weighing near sources of heat, moisture, or strong air currents.",
+      "Handle the balance with care; do not drop objects on the pan.",
+      "Calibrate the balance regularly as per the institutional schedule."
+    ]
   }
 }

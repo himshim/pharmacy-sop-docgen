@@ -3,16 +3,22 @@
     "title": "Operation of Serological Water Bath"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Serological Water Bath.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To incubate samples at a constant temperature in a water medium.",
+    "scope": "Applicable to microbiological assays and reagent warming.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the bath with distilled water up to the marked level.",
+      "Set the desired temperature on the controller and switch ON the heater.",
+      "Allow the temperature to stabilize before placing samples.",
+      "Place tubes or flasks in racks to prevent tipping.",
+      "Cover the bath with a lid to reduce evaporation.",
+      "After use, switch OFF the heater, allow water to cool, then drain and clean the bath."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the bath without water.",
+      "Use distilled water to reduce scale formation.",
+      "Avoid splashing water onto electrical components.",
+      "Do not exceed the recommended maximum temperature.",
+      "Disinfect the water regularly to prevent microbial growth."
+    ]
   }
 }

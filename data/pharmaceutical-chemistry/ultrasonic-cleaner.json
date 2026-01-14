@@ -3,16 +3,25 @@
     "title": "Operation of Ultrasonic Cleaner"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Ultrasonic Cleaner.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the thorough cleaning of laboratory components using high-frequency sound waves.",
+    "scope": "Applicable to cleaning activities in the Pharmaceutical Chemistry Laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the tank with an appropriate cleaning solution up to the operating level.",
+      "Ensure the solution is degassed by running the unit for 5-10 minutes before use.",
+      "Place the items to be cleaned in the stainless steel basket.",
+      "Lower the basket into the tank so that the items are completely submerged.",
+      "Set the desired temperature and cleaning time on the control panel.",
+      "Press 'START' to begin the ultrasonic cycle.",
+      "After the cycle is complete, remove the basket and rinse items with distilled water.",
+      "Turn OFF the power and drain the tank periodically as per usage.",
+      "Wipe the interior of the tank with a soft, dry cloth."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the unit without sufficient liquid in the tank.",
+      "Do not place items directly on the bottom of the tank; always use the basket.",
+      "Avoid placing hands in the tank during operation.",
+      "Use only water-based cleaning agents or those specified by the manufacturer.",
+      "Disconnect the power supply before draining or cleaning the tank."
+    ]
   }
 }

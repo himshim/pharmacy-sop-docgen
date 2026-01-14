@@ -3,16 +3,24 @@
     "title": "Operation of Ultrasonic Bath"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Ultrasonic Bath.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide high-frequency sound waves for cleaning glassware or degassing solvents.",
+    "scope": "Applicable to sample preparation and cleaning in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the bath with water and a suitable cleaning agent up to the operating level.",
+      "Switch ON the power and set the timer and temperature if required.",
+      "Place the glassware or solvent bottles in the wire basket.",
+      "Lower the basket into the bath ensuring the items are submerged.",
+      "Press 'START' to begin the ultrasonication cycle.",
+      "Once complete, remove the items and rinse them with distilled water.",
+      "Turn OFF the bath and drain the water periodically.",
+      "Wipe the interior of the bath with a soft cloth."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the bath without water, as this will damage the transducers.",
+      "Do not place items directly on the bottom of the bath; always use a basket.",
+      "Avoid placing your hands in the bath while it is operating.",
+      "Degas the bath water for 5-10 minutes before first use for maximum efficiency.",
+      "Use appropriate detergents that are compatible with the material being cleaned."
+    ]
   }
 }

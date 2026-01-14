@@ -3,16 +3,25 @@
     "title": "Operation of Anaerobic Jar"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Anaerobic Jar.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To hold culture plates in a sealed environment for anaerobic or microaerophilic growth.",
+    "scope": "Applicable to bench-top anaerobic cultivation in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Inspect the jar and lid for any cracks or damage.",
+      "Place the inoculated agar plates in the jar carrier.",
+      "Add an anaerobic gas-generating system and an indicator strip.",
+      "Align the lid and tighten the screw clamp or latch securely.",
+      "Verify the seal by checking for resistance or using a vacuum gauge if equipped.",
+      "Place the jar in the incubator.",
+      "Monitor the color change of the indicator strip.",
+      "Upon completion, release pressure (if applicable) and open the lid slowly.",
+      "Clean and dry the jar after each use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not over-tighten the lid screws as it may damage the gasket.",
+      "Ensure the O-ring is seated correctly and free from debris.",
+      "Do not use the jar if the indicator fails to change color.",
+      "Handle the heavy lid with care to avoid injury or breakage.",
+      "Store the jar with the lid slightly open when not in use."
+    ]
   }
 }

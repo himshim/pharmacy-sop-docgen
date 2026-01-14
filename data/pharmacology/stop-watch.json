@@ -1,18 +1,23 @@
 {
   "meta": {
-    "title": "Operation of Stop Watch"
+    "title": "Use of Stop Watch"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Stop Watch.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To manually record time intervals in behavioral and physiological experiments.",
+    "scope": "Applicable to general timing needs in Pharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check that the stop watch is reset to zero.",
+      "Start timing at the defined event (e.g., stimulus onset or animal placement).",
+      "Stop timing at the response event (e.g., withdrawal, crossing, fall).",
+      "Record the measured time immediately in the data sheet.",
+      "Reset the stop watch before the next trial."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use a functioning, calibrated device to avoid drift.",
+      "Minimize reaction-time bias by training observers.",
+      "For very short latencies, consider automated timing systems.",
+      "Protect the device from moisture and mechanical shock.",
+      "Replace batteries as needed."
+    ]
   }
 }

@@ -3,16 +3,25 @@
     "title": "Operation of Bacteriological Incubator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Bacteriological Incubator.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide a stable, controlled temperature for the growth of bacterial cultures.",
+    "scope": "Applicable to routine bacterial cultivation in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the interior is clean and free from contamination.",
+      "Switch ON the power and set the required temperature (e.g., 37°C).",
+      "Allow the temperature to stabilize for at least 1 hour.",
+      "Place the inoculated plates or tubes on the shelves.",
+      "Ensure the door is closed and latched properly.",
+      "Monitor and record the internal temperature twice daily.",
+      "Check for any signs of contamination or overgrowth periodically.",
+      "Clean the interior with 70% ethanol weekly.",
+      "Turn OFF the heater if the incubator is not in use for extended periods."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not block the air vents inside the chamber.",
+      "Avoid frequent and prolonged opening of the door.",
+      "Use secondary containers for liquid cultures to catch spills.",
+      "Notify a supervisor if the temperature deviates from the set point.",
+      "Calibration of the thermostat should be performed annually."
+    ]
   }
 }

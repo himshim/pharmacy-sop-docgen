@@ -3,16 +3,20 @@
     "title": "Operation of Glassware Washer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Glassware Washer.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To clean and dry glassware contaminated with plant extracts and solvents.",
+    "scope": "Applicable to routine glassware cleaning in Pharmacognosy.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Load glassware securely in racks designed for the washer.",
+      "Add appropriate detergent for pharmaceutical glassware.",
+      "Select cycle (pre-wash, wash, rinse, dry) and start.",
+      "Remove and inspect glassware after cycle.",
+      "Store in clean, dust-free cabinets."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Follow detergent manufacturer's dilution instructions.",
+      "Use only pharmaceutical-grade detergents.",
+      "Do not overload racks.",
+      "Inspect for breakage after each cycle."
+    ]
   }
 }

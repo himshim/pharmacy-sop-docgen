@@ -1,18 +1,20 @@
 {
   "meta": {
-    "title": "Operation of Safety Shower"
+    "title": "Use of Safety Shower"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Safety Shower.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To provide emergency deluge for major chemical exposure.",
+    "scope": "Applicable to emergency response.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Pull chain.",
+      "Remove contaminated clothing.",
+      "Shower 15 minutes.",
+      "Seek medical help."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Test monthly.",
+      "Keep area clear.",
+      "Drain properly."
+    ]
   }
 }

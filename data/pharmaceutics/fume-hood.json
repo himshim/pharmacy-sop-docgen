@@ -3,16 +3,43 @@
     "title": "Operation of Fume Hood"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Fume Hood.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Fume Hood for safe handling of volatile chemicals, hazardous substances, and pharmaceutical materials with proper containment and exhaust.",
+    "scope": "Applicable to fume hood operations carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the fume hood is certified and the certification is current.",
+      "Check the air flow indicator or velocity meter to ensure proper functioning.",
+      "Inspect the sash for smooth operation and proper sealing.",
+      "Turn ON the fume hood exhaust system before starting any work.",
+      "Allow the hood to run for at least 5 minutes before use.",
+      "Verify adequate face velocity (typically 80-120 feet per minute).",
+      "Position the sash at the recommended working height (usually marked on hood).",
+      "Place all equipment and materials at least 6 inches inside the hood.",
+      "Arrange materials to avoid blocking air flow vents.",
+      "Minimize movements in and out of the hood to maintain air curtain.",
+      "Perform work as far back in the hood as practical.",
+      "Keep sash at lowest practical position while working.",
+      "Do not use fume hood as storage space for chemicals or equipment.",
+      "Monitor visual indicators or alarms during operation.",
+      "Complete all work with hazardous materials before turning off hood.",
+      "Clean up spills immediately using appropriate procedures.",
+      "Remove all materials and equipment after completing work.",
+      "Clean work surfaces with appropriate cleaning agents.",
+      "Lower the sash completely when not in use.",
+      "Do not turn off the fume hood if it is on a continuous exhaust system.",
+      "Report any malfunction or reduced air flow immediately.",
+      "Document usage, chemicals handled, and any incidents in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never work with hazardous materials outside the fume hood.",
+      "Do not block air vents or baffles inside the hood.",
+      "Keep sash in proper position to maintain containment.",
+      "Do not use fume hood for highly toxic or explosive materials without specific approval.",
+      "Avoid rapid movements that disrupt air flow.",
+      "Do not store chemicals or conduct work in non-functional hoods.",
+      "Verify proper exhaust before handling volatile or toxic substances.",
+      "Wear appropriate PPE including lab coat, gloves, and safety goggles.",
+      "Ensure proper waste disposal of chemicals used in the hood.",
+      "Report immediately if face velocity is below acceptable range."
+    ]
   }
 }

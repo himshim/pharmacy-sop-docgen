@@ -3,16 +3,26 @@
     "title": "Operation of Muffle Furnace"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Muffle Furnace.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide high-temperature heating for ashing, combustion, and ignition of pharmaceutical samples.",
+    "scope": "Applicable to analytical chemistry procedures in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the furnace interior is clean and free from residues.",
+      "Place the sample in a suitable silica or porcelain crucible.",
+      "Set the desired temperature and ramp rate on the digital controller.",
+      "Slowly open the heavy furnace door and place the crucible inside.",
+      "Close the door and start the heating cycle.",
+      "Monitor the temperature display to ensure it follows the set profile.",
+      "Once the heating time is complete, turn OFF the heating element.",
+      "Allow the furnace to cool to a safe temperature (typically <200°C) before opening.",
+      "Use long-handled tongs to remove the crucible.",
+      "Record the final weight or observations after cooling the crucible in a desiccator."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always wear heat-resistant gloves and eye protection when opening the door.",
+      "Do not place flammable or explosive materials in the furnace.",
+      "Ensure the furnace is placed on a non-combustible surface with proper ventilation.",
+      "Avoid thermal shock by not opening the door at very high temperatures.",
+      "Regularly inspect the heating elements and thermocouple for damage."
+    ]
   }
 }

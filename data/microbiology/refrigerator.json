@@ -3,16 +3,23 @@
     "title": "Operation of Refrigerator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Refrigerator.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To store reagents, kits, and samples at refrigerated temperatures (typically 2–8°C).",
+    "scope": "Applicable to general cold storage needs in the Microbiology laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the internal temperature is within the acceptable range.",
+      "Arrange items to allow airflow and avoid blocking vents.",
+      "Label all stored materials clearly with identity and date.",
+      "Record the temperature in the logbook at defined intervals.",
+      "Clean shelves and interior walls with a mild disinfectant periodically.",
+      "Defrost the unit if ice buildup interferes with operation.",
+      "Remove expired or unneeded items regularly following disposal SOPs."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not store food or beverages.",
+      "Minimize door openings to maintain temperature stability.",
+      "Do not store flammable solvents unless the unit is explosion-proof.",
+      "Ensure that the power supply is stable or backed up for critical items.",
+      "Check and maintain door seals in good condition."
+    ]
   }
 }

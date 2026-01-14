@@ -3,16 +3,23 @@
     "title": "Operation of Precision Balance"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Precision Balance.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide accurate weighing of materials with a readability of 0.001g to 0.01g.",
+    "scope": "Applicable to general laboratory weighing in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check the level of the balance and adjust the feet if necessary.",
+      "Power ON the balance and wait for the zero display to stabilize.",
+      "Place a weighing boat on the pan and press the 'TARE' button.",
+      "Add the sample gradually until the required weight is reached.",
+      "Record the weight once the stability indicator appears.",
+      "Remove the sample and clean the weighing pan with a soft brush.",
+      "Turn OFF the balance or leave in standby as per laboratory protocol."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid placing the balance near air vents or vibrating equipment.",
+      "Do not exceed the maximum weighing capacity listed on the instrument.",
+      "Use weighing paper or boats; never place chemicals directly on the pan.",
+      "Close the draft shield (if present) to prevent air currents from affecting the reading.",
+      "Perform a calibration check weekly using standard weights."
+    ]
   }
 }

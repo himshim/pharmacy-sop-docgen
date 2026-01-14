@@ -3,16 +3,21 @@
     "title": "Operation of Open Field Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Open Field Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To assess locomotor activity, exploration, and anxiety in a novel environment.",
+    "scope": "Applicable to behavioral and psychopharmacological studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the animal gently in the center or a corner of the open field.",
+      "Start the timer and observe for a fixed duration (e.g., 5–10 minutes).",
+      "Record parameters such as crossings, rearing, grooming, and time in center vs periphery.",
+      "Remove the animal and return it to the home cage.",
+      "Clean the apparatus with 70% alcohol between subjects."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain consistent illumination levels.",
+      "Avoid external noise and disturbances.",
+      "Do not test animals immediately after stressful procedures.",
+      "Use non-reflective, non-slippery floor material.",
+      "Handle animals gently before and after testing."
+    ]
   }
 }

@@ -3,16 +3,43 @@
     "title": "Operation of Thermogravimetric Analyzer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Thermogravimetric Analyzer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Thermogravimetric Analyzer (TGA) for determination of weight changes in pharmaceutical materials as a function of temperature or time, useful for moisture content, decomposition, and thermal stability studies.",
+    "scope": "Applicable to thermogravimetric analysis activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is installed in a stable environment with adequate ventilation.",
+      "Check that the purge gas supply (nitrogen or argon) has sufficient pressure.",
+      "Power ON the TGA instrument and initialize the control software.",
+      "Allow the furnace and balance to stabilize at ambient temperature.",
+      "Perform temperature calibration using certified metal standards (e.g., Curie point standards).",
+      "Perform weight calibration using certified calibration weights.",
+      "Verify that calibration results are within acceptable tolerance limits.",
+      "Clean the sample pan and ensure it is dry and free from residues.",
+      "Tare the balance with an empty sample pan in place.",
+      "Accurately weigh 5-20 mg of sample using an analytical balance.",
+      "Transfer the sample carefully into the TGA sample pan.",
+      "Place the sample pan on the balance hook or platform carefully.",
+      "Close the furnace and ensure proper sealing.",
+      "Set the purge gas flow rate according to the method requirements.",
+      "Program the heating profile including start temperature, end temperature, and heating rate.",
+      "Set additional parameters such as isothermal holds if required.",
+      "Start the analysis and monitor initial weight stability.",
+      "Allow the TGA run to complete following the programmed temperature profile.",
+      "Observe the weight loss curve (TG) and derivative weight loss curve (DTG) in real-time.",
+      "After completion, allow the furnace to cool to a safe temperature before opening.",
+      "Remove the sample pan using tweezers and dispose of the sample appropriately.",
+      "Save the TGA data file with proper identification and perform data analysis.",
+      "Document all parameters including sample weight, heating rate, and atmosphere in the record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use appropriate sample size to ensure representative results without overflow.",
+      "Ensure samples are evenly distributed in the pan for uniform heating.",
+      "Use inert purge gas (nitrogen or argon) to prevent oxidation unless studying oxidative decomposition.",
+      "Do not exceed the maximum temperature rating of the furnace or pans.",
+      "Allow adequate cooling time before opening the furnace to avoid burns.",
+      "Clean any spills in the furnace immediately to prevent contamination.",
+      "Use appropriate pans compatible with the sample and temperature range (platinum, alumina, ceramic).",
+      "Wear heat-resistant gloves when handling hot components.",
+      "Perform regular calibration and maintenance of the balance and furnace."
+    ]
   }
 }

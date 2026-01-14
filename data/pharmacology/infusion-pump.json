@@ -3,16 +3,23 @@
     "title": "Operation of Infusion Pump"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Infusion Pump.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To deliver fluids or drugs at controlled flow rates intravenously or intra-arterially.",
+    "scope": "Applicable to continuous drug administration studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Load the syringe or infusion set into the pump according to manufacturer instructions.",
+      "Prime the line to remove air bubbles.",
+      "Set the desired flow rate and total volume.",
+      "Connect the line to the animal's cannula.",
+      "Start the infusion and monitor for occlusion alarms.",
+      "At the end, stop the pump and disconnect the line.",
+      "Dispose of used tubing as biomedical waste."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure all connections are secure to prevent leakage.",
+      "Avoid air bubbles to prevent embolism.",
+      "Verify pump calibration periodically.",
+      "Use appropriate syringes and sets compatible with the pump.",
+      "Monitor animals closely during infusion."
+    ]
   }
 }

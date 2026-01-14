@@ -3,16 +3,24 @@
     "title": "Operation of Desiccator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Desiccator.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for the use of a desiccator to maintain a moisture-free environment.",
+    "scope": "Applicable to sample preservation in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check that the desiccant (silica gel) is dry (indicated by blue color).",
+      "Apply a thin layer of vacuum grease to the ground-glass flange.",
+      "Place the sample (usually in an open crucible or boat) on the perforated plate.",
+      "Slide the lid onto the base to create an airtight seal.",
+      "Allow the sample to reach equilibrium in the dry environment.",
+      "When removing a sample, slide the lid off carefully to avoid disturbing the contents.",
+      "Regenerate the silica gel in an oven if it turns pink.",
+      "Keep the desiccator in a cool, dry place."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not place very hot items directly into the desiccator; allow them to cool slightly first.",
+      "Handle the heavy glass lid with care to avoid dropping or cracking.",
+      "Ensure the flange is kept clean and properly greased.",
+      "Do not lift the desiccator by the lid; always hold the base.",
+      "Keep the desiccator closed at all times when not loading/unloading."
+    ]
   }
 }

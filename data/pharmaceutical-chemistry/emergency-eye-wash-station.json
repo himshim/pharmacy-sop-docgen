@@ -3,16 +3,24 @@
     "title": "Operation of Emergency Eye Wash Station"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Emergency Eye Wash Station.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide immediate decontamination of eyes in case of exposure to hazardous chemicals or foreign bodies.",
+    "scope": "Applicable to emergency safety procedures in the Pharmaceutical Chemistry Laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Locate the eye wash station immediately after a chemical splash.",
+      "Push the activation handle or press the foot pedal to start the water flow.",
+      "Hold eyelids open with fingers to ensure effective flushing of the ocular surface.",
+      "Lower eyes into the water stream and rotate the eyeballs to flush all areas.",
+      "Continue flushing for at least 15 minutes without interruption.",
+      "Seek medical attention immediately after the flushing process is complete.",
+      "Ensure the station is tested weekly to verify proper water flow and pressure.",
+      "Document weekly inspections in the laboratory safety logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use high-pressure water streams directly on the eyes.",
+      "Ensure the water is tepid (16-38°C) to prevent thermal shock.",
+      "Remove contact lenses immediately if possible during the flushing process.",
+      "Keep the eye wash station clear of any obstructions at all times.",
+      "Always wear appropriate eye protection to prevent accidents."
+    ]
   }
 }

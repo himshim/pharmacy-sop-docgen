@@ -1,18 +1,25 @@
 {
   "meta": {
-    "title": "Operation of PInoculating Loop"
+    "title": "Use of Inoculating Loop"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the PInoculating Loop.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To transfer and streak microbial cultures on solid and liquid media.",
+    "scope": "Applicable to routine inoculation procedures in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Hold the inoculating loop like a pen in the dominant hand.",
+      "Sterilize the loop by placing it in the hottest part of a flame until red hot.",
+      "Allow the loop to cool near the flame without touching any surface.",
+      "Touch the cooled loop to the culture to pick up a small inoculum.",
+      "Streak or inoculate the target medium as per the required pattern.",
+      "Re-sterilize the loop after completing the transfer.",
+      "Store the sterile loop in a suitable stand when not in use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure adequate cooling to avoid killing microorganisms and splattering.",
+      "Avoid creating aerosols while flaming.",
+      "Take care to prevent accidental burns.",
+      "Do not place hot loops on the bench.",
+      "Inspect loops regularly and discard if bent or damaged."
+    ]
   }
 }

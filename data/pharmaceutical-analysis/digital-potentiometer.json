@@ -3,16 +3,25 @@
     "title": "Operation of Digital Potentiometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Potentiometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for measuring potential differences in electrochemical cells.",
+    "scope": "Applicable to potentiometric titrations in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the potentiometer and allow it to stabilize.",
+      "Connect the reference and indicator electrodes to the input terminals.",
+      "Calibrate the instrument against a standard potential if applicable.",
+      "Immerse the electrodes into the sample solution and stir gently.",
+      "Record the potential (mV) once the digital display is stable.",
+      "Perform titration and record the potential change after each addition.",
+      "Rinse the electrodes thoroughly with distilled water after use.",
+      "Store the electrodes in the appropriate storage solution.",
+      "Switch OFF the instrument and clean the surrounding area."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Handle the electrodes with care to avoid damage.",
+      "Ensure proper electrode connections to avoid noise in the reading.",
+      "Regularly check the reference electrode's internal liquid level.",
+      "Avoid cross-contamination by rinsing electrodes between samples.",
+      "Check the instrument calibration periodically."
+    ]
   }
 }

@@ -3,16 +3,24 @@
     "title": "Operation of Turbidimeter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Turbidimeter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To measure the turbidity of liquids by assessing light scattering.",
+    "scope": "Applicable to clarity testing in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Power ON the instrument and allow it to warm up for 15 minutes.",
+      "Calibrate the instrument using standard Formazin solutions.",
+      "Fill a clean, scratch-free cuvette with the sample liquid.",
+      "Wipe the exterior of the cuvette and insert it into the cell holder.",
+      "Record the turbidity reading in NTU from the display.",
+      "Repeat measurements for consistency and average the results.",
+      "Empty and clean the cuvette thoroughly after use.",
+      "Switch OFF the instrument at the end of the day."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid creating air bubbles in the sample as they scatter light.",
+      "Use only matched and high-quality cuvettes for measurement.",
+      "Handle cuvettes only by the top to avoid fingerprints.",
+      "Ensure the cuvette is correctly oriented in the cell holder.",
+      "Store standards in a cool, dark place to maintain stability."
+    ]
   }
 }

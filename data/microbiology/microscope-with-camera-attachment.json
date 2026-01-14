@@ -3,16 +3,23 @@
     "title": "Operation of Microscope with Camera Attachment"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Microscope with Camera Attachment.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To capture digital images and videos of microscopic fields for documentation and teaching.",
+    "scope": "Applicable to imaging applications in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Turn ON the microscope light source and adjust illumination.",
+      "Switch ON the camera and open the imaging software on the computer.",
+      "Focus the specimen through the eyepieces first.",
+      "Adjust camera focus, exposure, and white balance via software.",
+      "Capture images or videos and save using appropriate file naming conventions.",
+      "After imaging, switch OFF the camera and microscope.",
+      "Cover the microscope and store properly."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid abrupt cable pulling or bending.",
+      "Do not expose the camera sensor to intense direct light when not imaging.",
+      "Use only recommended cleaning agents for optics.",
+      "Protect electronic components from liquid spills.",
+      "Back up image data regularly."
+    ]
   }
 }

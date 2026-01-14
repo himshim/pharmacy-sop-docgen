@@ -3,16 +3,26 @@
     "title": "Operation of Spray Dryer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Spray Dryer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Spray Dryer for producing dry powders from liquid feeds.",
+    "scope": "Applicable to powder manufacturing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check cleanliness of drying chamber, cyclone, and nozzles.",
+      "Set inlet air temperature and start the blower.",
+      "Once inlet temp is stable, start feeding deionized water to stabilize outlet temp.",
+      "Switch from water to the product feed once conditions are steady.",
+      "Adjust feed rate and atomization air pressure for desired particle size.",
+      "Collect the dried powder from the collection vessel periodically.",
+      "Monitor inlet and outlet temperatures throughout the run.",
+      "After completion, flush the system with water before shutdown.",
+      "Allow the unit to cool before dismantling for cleaning.",
+      "Document all temperature, pressure, and yield data in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the nozzle is not clogged before starting the feed.",
+      "Maintain stable outlet temperature to ensure uniform product moisture.",
+      "Monitor for powder accumulation on chamber walls.",
+      "Handle dried powders in a controlled environment.",
+      "Use appropriate PPE for handling fine airborne particles."
+    ]
   }
 }

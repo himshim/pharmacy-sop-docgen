@@ -3,16 +3,26 @@
     "title": "Operation of Semi Automatic Capsule Filling Machine"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Semi Automatic Capsule Filling Machine.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Semi-Automatic Capsule Filling Machine.",
+    "scope": "Applicable to capsule filling activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify cleanliness and assembly of loading, filling, and closing stations.",
+      "Load empty capsules into the hopper and verify proper orientation.",
+      "Separate capsules into caps and bodies using vacuum station.",
+      "Position the body tray under the powder filling station.",
+      "Set the powder filling time or speed to achieve target weight.",
+      "Perform weight checks and adjust fill settings if necessary.",
+      "Join the caps and bodies at the closing station.",
+      "Eject the finished capsules and inspect for integrity.",
+      "Clean all stations and product contact parts after the run.",
+      "Document fill weights and yield in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain proper vacuum levels for consistent capsule separation.",
+      "Check fill weights frequently to ensure dose uniformity.",
+      "Avoid powder buildup in the closing station to prevent breakage.",
+      "Ensure capsules are within shelf-life and not brittle.",
+      "Follow validated cleaning procedures between different products."
+    ]
   }
 }

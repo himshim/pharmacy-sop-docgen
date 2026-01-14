@@ -3,16 +3,22 @@
     "title": "Operation of Actophotometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Actophotometer.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To quantify locomotor activity by counting infrared beam interruptions in a test chamber.",
+    "scope": "Applicable to screening drugs for CNS stimulant or depressant effects.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Turn ON the actophotometer and allow it to stabilize.",
+      "Place the test animal in the chamber and close the lid.",
+      "Set the test duration and start the device.",
+      "After the test, record the digital count of beam breaks.",
+      "Remove the animal and disinfect the chamber interior.",
+      "Repeat for control and test groups maintaining the same conditions."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Calibrate the instrument before use.",
+      "Ensure animals are of the same strain, age, and weight.",
+      "Test in a quiet, low-light environment.",
+      "Clean the chamber between animals to avoid olfactory cues.",
+      "Verify all IR beams are functioning properly."
+    ]
   }
 }

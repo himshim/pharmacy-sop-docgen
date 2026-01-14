@@ -3,16 +3,23 @@
     "title": "Operation of Precision Balance"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Precision Balance.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To accurately weigh chemical substances and pharmaceutical samples.",
+    "scope": "Applicable to laboratory weighing in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the balance is level and the weighing pan is clean.",
+      "Power ON the unit and wait for the stabilization signal.",
+      "Place a weighing boat on the pan and press the 'TARE' button.",
+      "Add the material slowly until the required weight is achieved.",
+      "Record the weight reading once the stability indicator is displayed.",
+      "Remove the sample and clean the pan with a soft brush.",
+      "Switch OFF the balance at the end of the shift."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid placing the balance near air vents or heat sources.",
+      "Do not exceed the maximum load capacity of the balance.",
+      "Use tweezers or spatulas to add samples; never use hands.",
+      "Verify the balance calibration daily using standard weights.",
+      "Keep the draft shield closed during the weighing process."
+    ]
   }
 }

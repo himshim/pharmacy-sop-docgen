@@ -3,16 +3,25 @@
     "title": "Operation of Burette Stand"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Burette Stand.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the procedure for the safe and stable mounting of burettes for manual titration.",
+    "scope": "Applicable to laboratory titration setups in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the burette stand on a level laboratory bench.",
+      "Ensure the base of the stand is clean and the rod is securely screwed in.",
+      "Attach the burette clamp (single or double) at the required height.",
+      "Carefully insert the burette into the clamp and tighten the screws/springs.",
+      "Verify that the burette is perfectly vertical using the rod as a guide.",
+      "Place the titration flask or beaker directly under the burette tip.",
+      "Adjust the height of the burette so the tip is slightly inside the neck of the flask.",
+      "After the titration, carefully remove the burette for cleaning.",
+      "Wipe the stand base if any chemical spills occur during use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not over-tighten the burette clamp as it may crack the glass.",
+      "Ensure the stand base is heavy enough to prevent tipping when the burette is full.",
+      "Keep the stand rod free from corrosion to ensure smooth clamp adjustment.",
+      "Handle the burette carefully to avoid hitting the stand rod.",
+      "Clean any acid or base spills on the base promptly to prevent etching."
+    ]
   }
 }

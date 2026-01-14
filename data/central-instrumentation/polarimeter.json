@@ -3,16 +3,40 @@
     "title": "Operation of Polarimeter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Polarimeter.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Polarimeter for measurement of optical rotation and specific rotation of optically active pharmaceutical substances.",
+    "scope": "Applicable to optical rotation measurement activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is placed on a stable surface away from vibrations and temperature fluctuations.",
+      "Power ON the polarimeter and allow the light source to stabilize for at least 15 minutes.",
+      "Select the appropriate wavelength (typically sodium D-line at 589 nm) for measurement.",
+      "Clean the polarimeter tube thoroughly with distilled water and dry completely.",
+      "Verify the tube length and record it as it is required for specific rotation calculation.",
+      "Fill the tube with solvent (blank) and ensure no air bubbles are present.",
+      "Place the tube in the polarimeter chamber and ensure proper alignment.",
+      "Perform blank measurement with solvent and zero the instrument if necessary.",
+      "Record the blank reading for reference and verification.",
+      "Remove the tube, empty it, and rinse with a small portion of sample solution.",
+      "Fill the tube completely with the sample solution avoiding air bubbles.",
+      "Wipe the outer surface of the tube to remove any solution or fingerprints.",
+      "Place the tube back into the chamber ensuring it is properly seated.",
+      "Allow the temperature to equilibrate if temperature control is used.",
+      "Take the optical rotation reading and record the value with sign (+ or -).",
+      "Perform multiple readings (at least 3-5) and calculate the average.",
+      "Verify that the readings are consistent and within acceptable range.",
+      "Calculate specific rotation using the formula with concentration and path length.",
+      "Clean the polarimeter tube immediately after use with appropriate solvent.",
+      "Document all readings, temperature, concentration, and calculations in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the sample solution is clear and free from suspended particles.",
+      "Avoid air bubbles in the tube as they affect the optical path.",
+      "Maintain constant temperature during measurement as optical rotation is temperature-dependent.",
+      "Use accurate concentration and path length values for specific rotation calculation.",
+      "Handle the polarimeter tube carefully to avoid breakage.",
+      "Clean the tube thoroughly between different samples to prevent contamination.",
+      "Verify the instrument zero reading periodically with solvent.",
+      "Use freshly prepared solutions as some compounds may undergo degradation.",
+      "Wear appropriate PPE when handling samples and solvents."
+    ]
   }
 }

@@ -3,16 +3,25 @@
     "title": "Operation of Digital Burette"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Burette.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for high-precision manual titrations using a digital burette.",
+    "scope": "Applicable to quantitative analysis in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Mount the digital burette securely on the titrant bottle.",
+      "Prime the burette by dispensing titrant back into the bottle until air bubbles are removed.",
+      "Zero the digital display.",
+      "Prepare the sample in a titration flask and place it under the burette tip.",
+      "Turn the handwheels to dispense titrant slowly while stirring the sample.",
+      "Slow down the addition as the expected endpoint approaches.",
+      "Note the final volume from the digital display at the endpoint.",
+      "Empty the burette and rinse with distilled water if it will not be used for some time.",
+      "Store the burette as per manufacturer instructions."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid using titrants that are incompatible with the burette materials (e.g., strong HF).",
+      "Ensure there are no air bubbles in the dispensing cylinder or tip.",
+      "Do not turn the handwheels beyond the stop points.",
+      "Clean the burette tip regularly to prevent clogging.",
+      "Calibrate the volume periodically according to the SOP."
+    ]
   }
 }

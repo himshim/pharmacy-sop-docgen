@@ -3,16 +3,23 @@
     "title": "Operation of Slide Dryer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Slide Dryer.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To dry stained or fixed slides uniformly at controlled temperature.",
+    "scope": "Applicable to smear preparation and staining workflows in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the slide dryer and set the desired drying temperature.",
+      "Allow the unit to preheat to the set temperature.",
+      "Place freshly prepared or stained slides on the dryer tray.",
+      "Arrange slides so that they do not overlap.",
+      "Dry for the required time as per staining protocol.",
+      "Remove slides carefully once dry and switch OFF the unit.",
+      "Clean the tray surface periodically."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed recommended temperatures to avoid damaging samples.",
+      "Handle hot slides with forceps to prevent burns.",
+      "Keep flammable mounting media away from hot surfaces.",
+      "Ensure the dryer is on a stable, heat-resistant surface.",
+      "Disconnect from power before cleaning."
+    ]
   }
 }

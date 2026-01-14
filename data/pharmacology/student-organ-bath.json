@@ -3,16 +3,22 @@
     "title": "Operation of Student Organ Bath"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Student Organ Bath.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To demonstrate basic principles of drug action on isolated tissues for teaching purposes.",
+    "scope": "Applicable to undergraduate experimental Pharmacology exercises.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the student organ bath with physiological solution and maintain at appropriate temperature.",
+      "Mount the selected tissue preparation using hooks and levers.",
+      "Apply initial tension and allow tissue to equilibrate with periodic washing.",
+      "Add drugs in graded concentrations and observe contractions.",
+      "Record responses using a suitable recording system.",
+      "Discard tissue and clean the bath thoroughly after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Handle tissues gently to avoid damage.",
+      "Maintain correct gas mixture and temperature.",
+      "Avoid cross-contamination between different drug solutions.",
+      "Train students in safe handling of biological materials.",
+      "Dispose of biological waste according to biosafety guidelines."
+    ]
   }
 }

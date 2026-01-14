@@ -1,18 +1,24 @@
 {
   "meta": {
-    "title": "Operation of Emergency Eye Wash Station"
+    "title": "Use of Emergency Eye Wash Station"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Emergency Eye Wash Station.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To provide immediate irrigation of eyes in case of exposure to chemicals, plant allergens, or dust.",
+    "scope": "Applicable to all personnel working in the Pharmacognosy laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Familiarize all users with the location and operation of the eye wash station.",
+      "In case of eye exposure, activate the eye wash by pushing the handle or foot pedal.",
+      "Hold eyelids open with fingers and position eyes in the water stream.",
+      "Flush continuously for at least 15 minutes, rolling the eyes to ensure thorough rinsing.",
+      "Seek medical attention immediately after rinsing.",
+      "Report the incident and document it as per institutional policy."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the eye wash station is unobstructed and accessible at all times.",
+      "Test the station weekly to verify proper flow and cleanliness.",
+      "Do not use the eye wash for purposes other than emergency flushing.",
+      "Maintain protective caps on nozzles to prevent contamination.",
+      "Follow manufacturer and safety guidelines for maintenance and inspection."
+    ]
   }
 }

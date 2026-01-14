@@ -3,16 +3,23 @@
     "title": "Operation of Hot Plate Analgesiometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Hot Plate Analgesiometer.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To measure pain response latency using a heated surface.",
+    "scope": "Applicable to central analgesic drug evaluation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set the hot plate temperature to the specified value (usually 55°C).",
+      "Allow the plate to reach and stabilize at the set temperature.",
+      "Place the animal on the hot plate and start the timer.",
+      "Observe for pain responses such as paw licking or jumping.",
+      "Stop the timer at the first response and immediately remove the animal.",
+      "Record reaction time and apply cutoff time to prevent injury.",
+      "Clean the plate surface after each test."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use strict cutoff times to avoid burns.",
+      "Do not test animals with existing paw injuries.",
+      "Calibrate temperature regularly.",
+      "Do not leave animals unattended on the plate.",
+      "Follow ethical guidelines for pain studies."
+    ]
   }
 }

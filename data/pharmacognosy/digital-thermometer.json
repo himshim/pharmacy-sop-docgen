@@ -1,18 +1,23 @@
 {
   "meta": {
-    "title": "Operation of Digital Thermometer"
+    "title": "Operation of Digital Thermometer (Pharmacognosy)"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Thermometer.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To monitor temperature of ovens, drying chambers, stability cabinets, and extraction baths.",
+    "scope": "Applicable to routine temperature checks in Pharmacognosy laboratory operations.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the thermometer and check the display for proper function.",
+      "Select appropriate probe and measurement range.",
+      "Place or immerse the probe in the area or medium to be measured, ensuring good contact.",
+      "Wait for the reading to stabilize and record the temperature.",
+      "Remove the probe and clean/dry it if necessary before storage."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not expose the probe beyond its specified temperature limits.",
+      "Avoid kinking or sharply bending the probe cable.",
+      "Disinfect probes used in biological materials.",
+      "Calibrate regularly against a reference thermometer.",
+      "Store the instrument in a dry place when not in use."
+    ]
   }
 }

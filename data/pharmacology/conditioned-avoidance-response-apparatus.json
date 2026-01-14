@@ -3,16 +3,22 @@
     "title": "Operation of Conditioned Avoidance Response Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Conditioned Avoidance Response Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To assess learning and memory using conditioned avoidance paradigm.",
+    "scope": "Applicable to psychopharmacology and nootropic drug screening.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Acclimatize the animal to the shuttle box for 5 minutes.",
+      "Condition the animal with 50 trials (conditioned stimulus followed by unconditioned stimulus).",
+      "Test avoidance learning the next day with 20–30 trials.",
+      "Record avoidance latency and response accuracy.",
+      "Calculate percent avoidance and trials to criterion.",
+      "Clean the apparatus thoroughly between animals."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use consistent stimulus intensities and timing.",
+      "Minimize handling stress between sessions.",
+      "Ensure electric shock is humane (max 0.5 mA).",
+      "Monitor for signs of excessive fear or aggression.",
+      "Verify all sensors and shock delivery systems function properly."
+    ]
   }
 }

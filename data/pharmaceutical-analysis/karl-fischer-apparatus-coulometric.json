@@ -3,16 +3,25 @@
     "title": "Operation of Karl Fischer Apparatus (Coulometric)"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Karl Fischer Apparatus (Coulometric).",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To determine trace amounts of water in samples using coulometric titration.",
+    "scope": "Applicable to moisture analysis in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the titration cell is clean and filled with fresh KF reagent.",
+      "Power ON the instrument and allow the background moisture to be titrated (pre-titration).",
+      "Wait until the drift stabilizes at a low value (typically <10 µg/min).",
+      "Accurately weigh the sample and inject it into the titration cell.",
+      "Enter the sample weight into the instrument controller.",
+      "Start the titration and wait for the endpoint detection.",
+      "Record the water content result (ppm or percentage) from the display.",
+      "Perform replicates to ensure consistency.",
+      "Clean the generator electrode and titration cell periodically."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Minimize exposure of reagents to atmospheric moisture.",
+      "Ensure the septum is in good condition to prevent leaks.",
+      "Handle toxic KF reagents with gloves inside a fume hood.",
+      "Do not use coulometric KF for samples with high water content (>1%).",
+      "Replace the molecular sieve in the drying tubes regularly."
+    ]
   }
 }

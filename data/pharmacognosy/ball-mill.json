@@ -3,16 +3,23 @@
     "title": "Operation of Ball Mill"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Ball Mill.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To reduce particle size of crude drugs and dried plant materials by impact and attrition.",
+    "scope": "Applicable to coarse and fine grinding in Pharmacognosy sample preparation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Inspect the mill, grinding jar, and balls for cleanliness and integrity.",
+      "Weigh and load the required quantity of dried material and grinding media into the jar.",
+      "Securely close the jar lid and mount it on the mill.",
+      "Set the rotation speed and grinding time as per the protocol.",
+      "Start the mill and monitor for abnormal noise or vibration.",
+      "After completion, stop the mill, allow the jar to come to rest, and open carefully.",
+      "Collect the ground material, sieve if required, and clean the jar and balls."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed recommended fill volume for the jar.",
+      "Ensure lid is tightly closed to prevent leakage of fine powder.",
+      "Use appropriate PPE (mask, goggles) when handling powders.",
+      "Do not open the jar or touch moving parts while the mill is running.",
+      "Avoid milling heat-sensitive materials for prolonged periods without cooling intervals."
+    ]
   }
 }

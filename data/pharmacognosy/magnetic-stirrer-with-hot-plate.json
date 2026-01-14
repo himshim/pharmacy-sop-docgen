@@ -3,16 +3,20 @@
     "title": "Operation of Magnetic Stirrer with Hot Plate"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Magnetic Stirrer with Hot Plate.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To heat and stir simultaneously during extraction.",
+    "scope": "Applicable to reflux and digestion.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place flask on plate.",
+      "Add stir bar.",
+      "Set temperature and speed.",
+      "Monitor closely.",
+      "Cool before removal."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use heat-resistant glassware.",
+      "Avoid flammable vapors.",
+      "Use fume hood.",
+      "Do not exceed temperature limits."
+    ]
   }
 }

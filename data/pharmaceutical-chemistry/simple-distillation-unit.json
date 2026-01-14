@@ -3,16 +3,24 @@
     "title": "Operation of Simple Distillation Unit"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Simple Distillation Unit.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To separate a volatile liquid from non-volatile impurities or other liquids with significant boiling point differences.",
+    "scope": "Applicable to solvent purification in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Assemble the distillation flask, distillation head, condenser, and receiver.",
+      "Secure all joints and ensure the thermometer bulb is correctly positioned.",
+      "Connect the cooling water to the condenser (inlet at the bottom).",
+      "Add the sample and boiling chips to the distillation flask.",
+      "Turn ON the heating mantle and slowly increase the temperature.",
+      "Collect the distillate in the receiver at the constant boiling point.",
+      "Stop heating before the flask becomes completely dry.",
+      "Allow the unit to cool before dismantling and cleaning."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the system is vented to the atmosphere; never heat a closed system.",
+      "Monitor the thermometer closely to identify the pure fraction.",
+      "Check for leaks in the joints where vapors might escape.",
+      "Handle hot glassware with heat-resistant gloves.",
+      "Discard the initial distillate (forerun) if it contains impurities."
+    ]
   }
 }

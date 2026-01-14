@@ -3,16 +3,24 @@
     "title": "Operation of Digital Thermometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Thermometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for temperature measurement using a digital thermometer.",
+    "scope": "Applicable to laboratory activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Power ON the digital thermometer and check the display.",
+      "Clean the probe with distilled water or a suitable disinfectant (e.g., alcohol swab).",
+      "Insert the probe into the medium (liquid, gas, or solid) to be measured.",
+      "Ensure the probe is immersed to the correct depth for an accurate reading.",
+      "Wait for the digital reading to stabilize (usually signaled by a beep or stability icon).",
+      "Note the temperature reading in the logbook or batch record.",
+      "Remove the probe and clean it thoroughly before storing.",
+      "Switch OFF the thermometer to conserve battery power."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed the temperature range specified for the probe.",
+      "Avoid bending or pulling the probe cable excessively.",
+      "Protect the digital display unit from moisture and extreme heat.",
+      "Regularly check the accuracy against a calibrated reference thermometer.",
+      "Replace batteries when the display becomes dim or shows an error."
+    ]
   }
 }

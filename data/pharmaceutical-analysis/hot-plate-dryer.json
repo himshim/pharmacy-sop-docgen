@@ -3,16 +3,23 @@
     "title": "Operation of Hot Plate Dryer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Hot Plate Dryer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To facilitate the rapid drying of solids or evaporation of solvents.",
+    "scope": "Applicable to sample preparation in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the sample in a flat-bottomed dish or beaker.",
+      "Set the hot plate to a low temperature to avoid charring.",
+      "Place the container on the hot plate and stir periodically with a glass rod.",
+      "Continue until the sample is completely dry.",
+      "Remove the container using tongs and allow it to cool in a desiccator.",
+      "Turn OFF the hot plate and clean any residues.",
+      "Record the drying conditions in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Perform the process in a fume hood if vapors are released.",
+      "Do not leave the drying process unattended.",
+      "Avoid overheating which may cause sample decomposition.",
+      "Use appropriate safety gear to prevent thermal burns.",
+      "Ensure the vessel is heat-resistant (Borosilicate glass)."
+    ]
   }
 }

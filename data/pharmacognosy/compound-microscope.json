@@ -3,16 +3,22 @@
     "title": "Operation of Compound Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Compound Microscope.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To examine thin sections and powdered crude drugs at various magnifications.",
+    "scope": "Applicable to detailed microscopical analysis in Pharmacognosy practicals and research.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set up the microscope on a firm bench and connect to the power supply.",
+      "Switch ON the illumination and center the condenser for even lighting.",
+      "Place the prepared slide on the stage and secure it with clips.",
+      "Using the low-power objective, bring the specimen into focus with the coarse knob, then refine with the fine knob.",
+      "Change to higher-power objectives as needed and adjust the diaphragm for contrast.",
+      "After observation, rotate the nosepiece to low power, lower the stage, remove the slide, and turn OFF the light."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never use coarse focus under oil immersion objective.",
+      "Clean oil from immersion objective immediately after use.",
+      "Avoid scratching slides or objectives by lowering them carefully.",
+      "Protect the microscope from dust and moisture with a cover.",
+      "Schedule regular servicing and alignment."
+    ]
   }
 }

@@ -3,16 +3,24 @@
     "title": "Operation of Laboratory Refrigerator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Laboratory Refrigerator.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide controlled cold storage for temperature-sensitive chemicals and reagents.",
+    "scope": "Applicable to reagent storage in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the refrigerator is set to a temperature between 2°C and 8°C.",
+      "Store chemicals in clearly labeled, tightly sealed containers.",
+      "Organize items such that older reagents are used first (FIFO).",
+      "Avoid blocking the internal air vents with boxes or bottles.",
+      "Monitor and record the temperature on a daily log sheet.",
+      "Clean the interior surfaces monthly with a mild disinfectant.",
+      "Check for expired reagents and dispose of them appropriately.",
+      "Ensure the door seal is tight and in good condition."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never store food or beverages in a laboratory refrigerator.",
+      "Do not store flammables in a standard household-style refrigerator.",
+      "Minimize the duration the door is kept open to maintain stability.",
+      "Ensure there is a secondary containment for hazardous liquid chemicals.",
+      "Report any temperature excursions immediately for risk assessment."
+    ]
   }
 }

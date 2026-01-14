@@ -3,16 +3,24 @@
     "title": "Operation of Ion Selective Electrode Meter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Ion Selective Electrode Meter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To determine the concentration of specific ions in aqueous solutions.",
+    "scope": "Applicable to potentiometric analysis in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Connect the specific Ion Selective Electrode (ISE) and reference electrode.",
+      "Prepare standard calibration solutions of the target ion.",
+      "Calibrate the meter across the expected concentration range.",
+      "Rinse the electrodes with deionized water and blot dry.",
+      "Immerse the electrodes in the sample solution and stir gently.",
+      "Wait for the reading to stabilize and record the concentration.",
+      "Rinse electrodes thoroughly between different samples.",
+      "Store the ISE in the recommended storage solution when not in use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure proper Ionic Strength Adjustor (ISA) is added to all samples and standards.",
+      "Handle the sensitive electrode membrane with extreme care.",
+      "Avoid cross-contamination by thorough rinsing.",
+      "Keep the reference electrode filled with the correct electrolyte.",
+      "Calibrate the instrument daily before use."
+    ]
   }
 }

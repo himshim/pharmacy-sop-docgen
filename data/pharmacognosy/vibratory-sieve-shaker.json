@@ -3,16 +3,18 @@
     "title": "Operation of Vibratory Sieve Shaker"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vibratory Sieve Shaker.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To size-separate powders.",
+    "scope": "Applicable to particle size analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Stack sieves.",
+      "Add sample.",
+      "Set time and amplitude.",
+      "Weigh fractions."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Clean sieves.",
+      "Balance load.",
+      "Mask."
+    ]
   }
 }

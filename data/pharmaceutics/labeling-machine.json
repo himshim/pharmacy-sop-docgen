@@ -3,16 +3,43 @@
     "title": "Operation of Labeling Machine"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Labeling Machine.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Labeling Machine for automated application of labels on pharmaceutical product containers including bottles, vials, and cartons.",
+    "scope": "Applicable to labeling activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the labeling machine is installed on a stable surface in a clean area.",
+      "Verify that all electrical and pneumatic connections are secure.",
+      "Check that label roll holder, applicator, and sensors are clean and functional.",
+      "Load the label roll onto the label holder spindle.",
+      "Thread the label web through guides, sensors, and applicator mechanism.",
+      "Adjust label guides and sensors according to label dimensions.",
+      "Set machine parameters including label length, speed, and dispensing position.",
+      "Perform test run with few containers to verify label placement accuracy.",
+      "Adjust label position, angle, or pressure if misalignment occurs.",
+      "Load containers onto the infeed conveyor or feeding table.",
+      "Ensure containers are clean, dry, and properly oriented.",
+      "Start the machine at slow speed initially.",
+      "Verify that labels are applied accurately on container surface.",
+      "Check for wrinkles, air bubbles, or incomplete adhesion.",
+      "Increase machine speed to production rate once accuracy is confirmed.",
+      "Monitor labeling process continuously for consistent quality.",
+      "Check label placement periodically during production run.",
+      "Verify label content, batch number, and expiry date printing if integrated.",
+      "Collect labeled containers and inspect for quality.",
+      "After completion, stop the machine and remove remaining label roll.",
+      "Clean label applicator and sensors to remove adhesive residue.",
+      "Document labeling parameters, batch details, and observations in the production record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure labels are stored properly to prevent adhesive degradation.",
+      "Check label alignment before starting production to prevent wastage.",
+      "Use containers with clean, dry surfaces for proper label adhesion.",
+      "Monitor label web tension to prevent tearing or misfeeding.",
+      "Clean sensors regularly to ensure proper detection.",
+      "Verify label content and artwork before loading.",
+      "Maintain proper machine speed to ensure quality application.",
+      "Segregate and destroy labels with incorrect information.",
+      "Wear appropriate PPE during operation.",
+      "Follow line clearance procedures during product changeover."
+    ]
   }
 }

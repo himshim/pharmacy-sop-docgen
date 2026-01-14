@@ -3,16 +3,22 @@
     "title": "Operation of Student Kymograph"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Student Kymograph.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To provide mechanical recording of tissue or muscle contractions for teaching demonstrations.",
+    "scope": "Applicable to undergraduate Pharmacology practicals.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fix a kymograph drum with smoked or paper-coated surface.",
+      "Attach the writing lever from the tissue to the drum.",
+      "Set the drum speed according to the experiment.",
+      "Start the drum rotation and apply stimuli or drugs to the tissue.",
+      "Allow the lever to inscribe contractions on the drum surface.",
+      "At the end, stop the drum and remove the recording for evaluation."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure proper lubrication of mechanical parts.",
+      "Avoid excessive loading on the writing lever.",
+      "Use care when handling smoked paper and fixatives.",
+      "Keep electrical components away from water.",
+      "Supervise students during setup and operation."
+    ]
   }
 }

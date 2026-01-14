@@ -3,16 +3,23 @@
     "title": "Operation of Spirit Lamp"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Spirit Lamp.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide a small flame for sterilization and heating in aseptic work.",
+    "scope": "Applicable as an alternative to Bunsen burner in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the lamp with suitable spirit (e.g., ethanol) to the recommended level.",
+      "Insert and adjust the wick so that only a small portion is exposed.",
+      "Place the lamp on a stable, non-flammable surface.",
+      "Light the wick using a match or igniter.",
+      "Use the flame for sterilizing inoculating loops or needles as needed.",
+      "Extinguish the flame by placing the cap securely over the wick.",
+      "Allow the lamp to cool before refilling or moving it."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overfill the lamp.",
+      "Keep fuel containers away from the open flame.",
+      "Never leave a lit lamp unattended.",
+      "Ensure adequate ventilation.",
+      "Check for cracks or leaks in the lamp body before use."
+    ]
   }
 }

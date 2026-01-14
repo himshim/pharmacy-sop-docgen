@@ -3,16 +3,24 @@
     "title": "Operation of Digital pH Meter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital pH Meter.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To determine the pH of media, buffers, and water samples accurately.",
+    "scope": "Applicable to pH measurement tasks in the Microbiology laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the pH meter and allow it to stabilize for 10-15 minutes.",
+      "Rinse the pH electrode with distilled water and blot dry with tissue.",
+      "Calibrate the meter using at least two standard buffer solutions (e.g., pH 4.0 and 7.0).",
+      "Immerse the electrode in the sample solution and stir gently.",
+      "Wait until the reading stabilizes and record the pH and temperature.",
+      "Rinse the electrode thoroughly between different samples.",
+      "After use, store the electrode in the recommended storage solution.",
+      "Document calibration data and sample readings in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never store the pH electrode in distilled water.",
+      "Avoid touching the glass bulb of the electrode.",
+      "Use fresh buffer solutions for accurate calibration.",
+      "Do not use the electrode in viscous or strongly oxidizing solutions without checking compatibility.",
+      "Replace the electrode if response time becomes excessively slow."
+    ]
   }
 }

@@ -3,16 +3,22 @@
     "title": "Operation of Non Invasive Blood Pressure Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Non Invasive Blood Pressure Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To measure arterial blood pressure in conscious animals using tail-cuff or similar methods.",
+    "scope": "Applicable to chronic cardiovascular studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Acclimatize animals to the restrainer and warm environment.",
+      "Place the cuff around the tail or limb as per device design.",
+      "Start the measurement cycle and allow automatic inflation/deflation.",
+      "Record systolic (and diastolic/mean if available) pressures.",
+      "Repeat measurements and calculate average values.",
+      "Clean cuffs and restrainers after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overtighten the cuff.",
+      "Avoid using in very stressed or cold animals (affects tail blood flow).",
+      "Check device calibration regularly.",
+      "Monitor animals to prevent escape or injury.",
+      "Use appropriate restrainers suited to species and size."
+    ]
   }
 }

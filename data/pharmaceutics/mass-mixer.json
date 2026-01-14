@@ -3,16 +3,42 @@
     "title": "Operation of Mass Mixer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Mass Mixer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Mass Mixer for thorough mixing of pharmaceutical powders and wet mass preparation for various dosage forms.",
+    "scope": "Applicable to mass mixing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the mass mixer is installed on a stable surface in a clean area.",
+      "Verify that the mixing bowl, blades, and lid are clean and properly assembled.",
+      "Check electrical connections and safety interlocks.",
+      "Weigh all ingredients accurately as per formulation.",
+      "Load powder ingredients into the mixing bowl.",
+      "Do not exceed maximum bowl capacity.",
+      "Close the bowl lid securely.",
+      "Set mixer speed to low initially for dry mixing.",
+      "Start the mixer and allow powders to blend uniformly.",
+      "Mix dry ingredients for specified time.",
+      "If preparing wet mass, prepare binder or granulating fluid.",
+      "Add liquid gradually while mixer is running.",
+      "Increase mixer speed if necessary for proper wet massing.",
+      "Monitor wet mass formation and consistency.",
+      "Continue mixing until uniform wet mass is achieved.",
+      "Check wet mass consistency by visual examination or squeeze test.",
+      "Stop the mixer once endpoint is reached.",
+      "Discharge wet mass through appropriate outlet.",
+      "Clean the mixing bowl, blades, and all components immediately.",
+      "Inspect for residue or product buildup.",
+      "Document mixing time, liquid addition, and observations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the mixer beyond rated capacity.",
+      "Add liquids gradually to prevent over-wetting.",
+      "Monitor mixing endpoint to achieve desired consistency.",
+      "Discharge wet mass promptly to prevent drying.",
+      "Clean equipment immediately after use.",
+      "Ensure safety interlocks are functioning.",
+      "Wear appropriate PPE including gloves and protective clothing.",
+      "Follow lockout/tagout procedures during maintenance.",
+      "Validate mixing parameters for consistent quality.",
+      "Prevent cross-contamination through thorough cleaning."
+    ]
   }
 }

@@ -3,16 +3,23 @@
     "title": "Operation of Laboratory Thermometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Laboratory Thermometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To measure the temperature of liquids and ambient air.",
+    "scope": "Applicable to general laboratory testing in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Inspect the thermometer for cracks or breaks in the liquid column.",
+      "Immerse the bulb into the center of the liquid/medium.",
+      "Wait for the reading to stabilize before recording.",
+      "Read the temperature at eye level to avoid parallax error.",
+      "Clean the thermometer with distilled water after each use.",
+      "Dry with a soft tissue and store in its protective sleeve.",
+      "Verify accuracy against a reference thermometer annually."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use the thermometer as a stirring rod.",
+      "Avoid sudden temperature shocks which can break the glass.",
+      "Dispose of broken thermometers as hazardous waste.",
+      "Store vertically or at an angle to prevent separation of the liquid.",
+      "Use alcohol thermometers in place of mercury where possible."
+    ]
   }
 }

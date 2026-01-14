@@ -3,16 +3,43 @@
     "title": "Operation of Colloid Mill"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Colloid Mill.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Colloid Mill for fine dispersion, emulsification, and homogenization of pharmaceutical suspensions, emulsions, and semi-solid preparations.",
+    "scope": "Applicable to milling and homogenization activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the colloid mill is installed on a stable foundation with proper alignment.",
+      "Verify that all electrical connections and cooling water supply are connected.",
+      "Check that the rotor and stator are properly installed with appropriate gap setting.",
+      "Verify that the feeding hopper, milling chamber, and discharge outlet are clean.",
+      "Power ON the colloid mill and allow it to run empty briefly to check operation.",
+      "Set the rotor-stator gap according to desired particle size (smaller gap = finer particles).",
+      "Prepare the coarse suspension or pre-mix to be processed.",
+      "If required, pre-mix ingredients using a low-shear mixer before colloid milling.",
+      "Pour the material into the feeding hopper at a controlled rate.",
+      "Start the feed pump or allow gravity feeding as per equipment design.",
+      "Monitor the feed rate to maintain consistent flow without overloading.",
+      "Observe the discharge for uniform particle size and consistency.",
+      "If recirculation is needed, collect the discharge and pass through mill again.",
+      "Monitor the motor load and temperature during operation.",
+      "Adjust feed rate or gap setting if product consistency is not satisfactory.",
+      "Continue processing until desired particle size and uniformity is achieved.",
+      "For emulsions, verify phase stability and droplet size of the product.",
+      "After completion, stop the feed and allow the mill to run until empty.",
+      "Flush the mill with solvent or water to remove residual product.",
+      "Dismantle the rotor and stator for thorough cleaning.",
+      "Clean all product contact parts and reassemble for next use.",
+      "Document milling parameters, gap settings, and product characteristics in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the mill without proper lubrication and cooling.",
+      "Ensure proper rotor-stator gap to prevent metal-to-metal contact.",
+      "Do not process materials containing hard particles that can damage surfaces.",
+      "Monitor temperature continuously to prevent product degradation.",
+      "Use appropriate feed rate to avoid overloading the motor.",
+      "Wear hearing protection as colloid mills generate significant noise.",
+      "Never insert hands or objects into the mill during operation.",
+      "Ensure proper grounding and electrical safety.",
+      "Wear appropriate PPE including safety goggles, gloves, and apron.",
+      "Follow lockout/tagout procedures during cleaning and maintenance."
+    ]
   }
 }

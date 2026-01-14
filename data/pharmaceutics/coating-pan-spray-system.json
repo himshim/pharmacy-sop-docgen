@@ -3,16 +3,44 @@
     "title": "Operation of Coating Pan Spray System"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Coating Pan Spray System.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Coating Pan Spray System for application of film coating, sugar coating, or enteric coating on tablets using automated spray technology.",
+    "scope": "Applicable to tablet coating activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the coating pan is installed in a clean area with proper ventilation.",
+      "Verify that all utilities including electricity, compressed air, and water are connected.",
+      "Check that coating solution, tablets, and drying air supply are ready.",
+      "Power ON the coating pan and spray system control panel.",
+      "Set the pan rotation speed according to tablet size and batch quantity.",
+      "Set inlet air temperature, air flow rate, and exhaust parameters.",
+      "Load tablets into the coating pan (fill 50-70% of pan volume for optimal coating).",
+      "Start pan rotation at low speed and allow tablets to cascade smoothly.",
+      "Turn ON the inlet air supply and adjust temperature to drying conditions.",
+      "Prepare coating solution ensuring proper mixing and uniform consistency.",
+      "Fill the spray gun reservoir or connect peristaltic pump to coating solution container.",
+      "Position spray guns at appropriate angle and distance from tablet bed.",
+      "Start spraying coating solution at low rate initially.",
+      "Adjust spray rate, atomization pressure, and pattern for uniform coating.",
+      "Monitor tablet bed temperature continuously (maintain within specified range).",
+      "Observe coating uniformity and adjust parameters if orange peel or tackiness occurs.",
+      "Continue coating process until desired coating thickness or weight gain is achieved.",
+      "After spraying completion, continue pan rotation with hot air for drying.",
+      "Gradually reduce drying temperature and air flow during final drying phase.",
+      "Stop the pan rotation and unload coated tablets carefully.",
+      "Inspect tablets for coating uniformity, smoothness, and absence of defects.",
+      "Clean the coating pan, spray guns, and nozzles immediately after use.",
+      "Document all coating parameters, weight gain, and quality observations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain proper tablet bed temperature to prevent over-drying or sticking.",
+      "Ensure coating solution is properly mixed and free from lumps.",
+      "Adjust spray rate according to drying capacity to prevent tablet sticking.",
+      "Clean spray nozzles regularly to prevent clogging.",
+      "Monitor weight gain periodically to achieve target coating thickness.",
+      "Avoid over-wetting which can cause tablet agglomeration.",
+      "Ensure proper pan loading (not too full or too empty) for uniform coating.",
+      "Wear appropriate PPE including gloves, mask, and protective clothing.",
+      "Handle coating solvents in well-ventilated areas.",
+      "Follow cleaning validation protocols for product changeover."
+    ]
   }
 }

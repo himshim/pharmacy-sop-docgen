@@ -3,16 +3,44 @@
     "title": "Operation of Extruder Spheronizer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Extruder Spheronizer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Extruder-Spheronizer for production of spherical pellets by extrusion and spheronization of pharmaceutical wet mass for controlled release formulations.",
+    "scope": "Applicable to pelletization activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure both extruder and spheronizer are installed on stable foundations.",
+      "Verify that all electrical and utility connections are secure.",
+      "Check that extrusion screens and spheronizer plate are clean and properly installed.",
+      "Select appropriate screen size based on desired pellet diameter.",
+      "Install the selected screen in the extruder die assembly.",
+      "Prepare wet mass by mixing powder with appropriate binder solution.",
+      "Ensure wet mass has optimal moisture content and consistency for extrusion.",
+      "Power ON the extruder and set rotation speed as per product requirements.",
+      "Feed wet mass into the extruder hopper at a controlled rate.",
+      "Monitor extrudate formation and ensure uniform cylindrical ropes.",
+      "Adjust feed rate or moisture content if extrusion is irregular.",
+      "Collect extrudates directly or transfer to spheronizer immediately.",
+      "Power ON the spheronizer and set rotation speed (typically 500-2000 rpm).",
+      "Load extrudates into the spheronizer bowl.",
+      "Allow spheronization process to continue for specified duration (typically 2-10 minutes).",
+      "Monitor pellet rounding and adjust speed or time if needed.",
+      "Stop the spheronizer once spherical pellets are formed.",
+      "Discharge pellets from spheronizer into collection trays.",
+      "Spread pellets in thin layers for drying.",
+      "Dry pellets using appropriate drying equipment (fluid bed dryer or tray dryer).",
+      "Screen dried pellets to obtain desired size fraction.",
+      "Clean extruder screen, spheronizer plate, and all equipment parts thoroughly.",
+      "Document all processing parameters and pellet characteristics in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain optimal wet mass consistency for successful extrusion.",
+      "Use appropriate screen size to achieve target pellet size.",
+      "Avoid over-wetting or under-wetting which affects pellet quality.",
+      "Monitor spheronization time carefully to prevent over-processing.",
+      "Clean extruder screen promptly to prevent clogging.",
+      "Ensure proper friction plate condition in spheronizer.",
+      "Do not overload spheronizer bowl beyond recommended capacity.",
+      "Dry pellets properly to prevent agglomeration during storage.",
+      "Wear appropriate PPE including gloves, mask, and protective clothing.",
+      "Follow lockout/tagout procedures during cleaning and maintenance."
+    ]
   }
 }

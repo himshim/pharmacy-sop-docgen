@@ -3,16 +3,23 @@
     "title": "Operation of Animal Cage"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Animal Cage.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To house experimental animals under controlled environmental conditions.",
+    "scope": "Applicable to animal husbandry in pharmacology research.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Clean and disinfect the cage thoroughly before introducing animals.",
+      "Provide appropriate bedding, food, and water.",
+      "Maintain temperature, humidity, and light cycle as per regulatory standards.",
+      "Change bedding and food daily.",
+      "Observe animals at least twice daily for health status.",
+      "Remove sick animals immediately for veterinary care.",
+      "Record daily observations in the animal log."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Follow institutional animal care guidelines.",
+      "Wear appropriate PPE when handling animals.",
+      "Avoid mixing animals of different groups or sexes unless required.",
+      "Ensure adequate space per animal as per regulations.",
+      "Report any equipment malfunctions immediately."
+    ]
   }
 }

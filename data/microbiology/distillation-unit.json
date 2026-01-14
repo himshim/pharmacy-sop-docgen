@@ -3,16 +3,24 @@
     "title": "Operation of Distillation Unit"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Distillation Unit.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To produce distilled water for microbiological media and reagent preparation.",
+    "scope": "Applicable to water purification activities in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the boiler reservoir with potable or pre-filtered water.",
+      "Check all electrical and water connections.",
+      "Switch ON the unit and allow it to reach boiling.",
+      "Collect the distilled water in a clean, sterile container.",
+      "Monitor the flow rate and check for leaks in the tubing.",
+      "Turn OFF the unit when the required volume is collected or the reservoir is low.",
+      "Drain and clean the boiler periodically to remove scale.",
+      "Label the collected distilled water with date and source."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not operate the unit without sufficient water in the boiler.",
+      "Beware of hot surfaces and steam near the outlet.",
+      "Use heat-resistant gloves when performing maintenance.",
+      "Ensure proper earthing of the electrical system.",
+      "Descale the unit as per schedule to maintain efficiency."
+    ]
   }
 }

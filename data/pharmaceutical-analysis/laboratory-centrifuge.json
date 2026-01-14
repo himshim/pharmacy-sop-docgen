@@ -3,16 +3,25 @@
     "title": "Operation of Laboratory Centrifuge"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Laboratory Centrifuge.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To separate particles from liquids using centrifugal force.",
+    "scope": "Applicable to sample preparation in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Inspect the rotor and tube holders for any damage.",
+      "Fill centrifuge tubes with sample and ensure they are balanced by weight.",
+      "Place the tubes symmetrically in the rotor buckets.",
+      "Close the lid and set the speed (RPM) and time.",
+      "Start the centrifuge and wait for it to reach the operating speed.",
+      "Listen for any unusual noise and stop immediately if found.",
+      "Allow the rotor to stop completely before opening the lid.",
+      "Remove the tubes and clean the interior chamber.",
+      "Document the run parameters in the equipment log."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the centrifuge with an unbalanced load.",
+      "Ensure the tubes are properly capped to prevent aerosols.",
+      "Do not exceed the maximum rated speed of the rotor.",
+      "Ensure the lid is locked before starting.",
+      "Follow appropriate safety protocols for hazardous samples."
+    ]
   }
 }

@@ -3,16 +3,23 @@
     "title": "Operation of Serological Water Bath"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Serological Water Bath.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To provide precise temperature control for incubation and heating of samples.",
+    "scope": "Applicable to analytical assays in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the bath with distilled water up to the required level.",
+      "Set the desired temperature on the thermostat and power ON.",
+      "Wait for the water to reach and stabilize at the set temperature.",
+      "Place samples in the racks and submerge them in the water.",
+      "Maintain the lid closed to ensure temperature uniformity.",
+      "Remove samples after the required time and turn OFF the power.",
+      "Drain and clean the bath regularly to prevent scaling."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the heating element without water.",
+      "Do not use the water bath for temperatures above 95°C.",
+      "Use distilled water to avoid mineral deposits.",
+      "Avoid splashing water on the control panel.",
+      "Wait for the water to cool before draining."
+    ]
   }
 }

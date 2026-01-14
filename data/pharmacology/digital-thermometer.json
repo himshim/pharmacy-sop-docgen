@@ -3,16 +3,23 @@
     "title": "Operation of Digital Thermometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Thermometer.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To measure and monitor temperature accurately in experimental and storage settings.",
+    "scope": "Applicable to temperature recording in pharmacology laboratories.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the digital thermometer and verify the display is functioning.",
+      "Select the appropriate measurement mode (air, surface, or probe) if applicable.",
+      "Place the sensor or probe at the desired location.",
+      "Allow sufficient time for the reading to stabilize.",
+      "Record the temperature and location in the log sheet.",
+      "Switch OFF the thermometer after use to conserve battery.",
+      "Store the instrument and probes in a clean, dry place."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not expose the thermometer to excessive heat or moisture.",
+      "Handle probes carefully to avoid cable damage.",
+      "Calibrate periodically against a reference thermometer.",
+      "Replace batteries when low-battery indicator appears.",
+      "Disinfect probes after contact with biological materials."
+    ]
   }
 }

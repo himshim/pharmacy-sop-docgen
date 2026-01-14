@@ -3,16 +3,43 @@
     "title": "Operation of Bottle Filling Machine"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Bottle Filling Machine.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Bottle Filling Machine for accurate and automated filling of liquid pharmaceutical products into bottles.",
+    "scope": "Applicable to liquid filling activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the machine is installed in a clean area meeting GMP requirements.",
+      "Verify that all utilities including electricity, compressed air, and water are connected.",
+      "Check that the product to be filled is prepared, filtered, and at proper temperature.",
+      "Power ON the bottle filling machine and initialize the control system.",
+      "Select the appropriate filling nozzles based on bottle neck size and fill volume.",
+      "Set the fill volume and adjust the volumetric or gravimetric controls accordingly.",
+      "Install the correct bottle size parts including guides, stars, and grippers.",
+      "Adjust the bottle conveyor height and speed settings.",
+      "Fill the product tank or reservoir with the prepared liquid formulation.",
+      "Prime the filling lines by running product through nozzles to remove air.",
+      "Place empty bottles on the infeed conveyor and start the machine at low speed.",
+      "Verify that bottles are properly positioned under filling nozzles.",
+      "Check the fill volume of initial bottles using graduated cylinder or balance.",
+      "Adjust fill time or volume settings if deviation from target volume is observed.",
+      "Once accuracy is confirmed, increase machine speed to production rate.",
+      "Monitor the filling operation continuously for consistent volume and no spillage.",
+      "Check that no-bottle-no-fill sensor is functioning to prevent product wastage.",
+      "Periodically verify fill volume during production run.",
+      "After completion, drain remaining product from tank and lines.",
+      "Perform cleaning-in-place (CIP) or manual cleaning as per SOPs.",
+      "Sanitize all product contact surfaces before the next production run.",
+      "Document fill volumes, machine settings, and deviations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure bottles are clean and free from particulate matter before filling.",
+      "Maintain aseptic conditions if filling sterile or preservative-free products.",
+      "Prevent cross-contamination by thorough cleaning between different products.",
+      "Check for leaks in filling lines and nozzles before starting.",
+      "Ensure proper bottle placement to avoid spills and wastage.",
+      "Monitor fill accuracy regularly to ensure dose uniformity.",
+      "Use appropriate product-contact materials compatible with the formulation.",
+      "Wear appropriate PPE including gloves, gown, and hair cover.",
+      "Follow cleaning validation protocols for product changeover.",
+      "Ensure proper disposal of spillage and rejected bottles."
+    ]
   }
 }

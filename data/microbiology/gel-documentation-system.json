@@ -3,16 +3,24 @@
     "title": "Operation of Gel Documentation System"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Gel Documentation System.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To capture images of electrophoresis gels for documentation and analysis.",
+    "scope": "Applicable to molecular microbiology and DNA/RNA analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the transilluminator and camera system.",
+      "Place the stained gel on the transilluminator surface.",
+      "Close the darkroom hood or door to prevent light interference.",
+      "Adjust focus, zoom, and exposure using the control software.",
+      "Capture the image and save with an appropriate file name.",
+      "Turn OFF the UV light when not actively imaging.",
+      "Clean the transilluminator surface after removing the gel.",
+      "Shut down the system according to the manufacturer's instructions."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Wear UV-protective face shield or goggles when working with UV light.",
+      "Avoid scratching the transilluminator glass with gel trays.",
+      "Handle ethidium bromide or other DNA stains as hazardous chemicals.",
+      "Do not place wet gels directly on the camera lens or sensitive surfaces.",
+      "Back up image files regularly to secure data."
+    ]
   }
 }

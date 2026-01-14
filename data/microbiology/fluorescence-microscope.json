@@ -3,16 +3,24 @@
     "title": "Operation of Fluorescence Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Fluorescence Microscope.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To visualize fluorescently labeled microorganisms or cellular structures.",
+    "scope": "Applicable to advanced imaging in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the mercury/xenon lamp or LED light source and allow it to stabilize.",
+      "Select the appropriate filter cube for the fluorophore used.",
+      "Place the stained slide on the stage and focus using transmitted light first.",
+      "Switch to fluorescence mode and fine-tune focus.",
+      "Adjust exposure time and brightness to optimize signal while minimizing photobleaching.",
+      "Capture images if a camera is attached.",
+      "After use, turn OFF the fluorescence light source first, then the microscope.",
+      "Cover the microscope to prevent dust accumulation."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid direct eye exposure to intense fluorescence light sources.",
+      "Limit exposure time of samples to prevent photobleaching.",
+      "Handle filter cubes carefully to avoid damage.",
+      "Allow the mercury lamp to cool before switching it ON again if turned OFF.",
+      "Dispose of mercury lamps according to hazardous waste regulations."
+    ]
   }
 }

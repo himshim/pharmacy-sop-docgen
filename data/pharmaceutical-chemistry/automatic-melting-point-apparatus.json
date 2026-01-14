@@ -3,16 +3,28 @@
     "title": "Operation of Automatic Melting Point Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Automatic Melting Point Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the determination of melting point of chemical substances using an automatic apparatus.",
+    "scope": "Applicable to characterization activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the apparatus is clean and the heating block is free from residues.",
+      "Power ON the instrument and allow it to perform self-diagnostic tests.",
+      "Prepare the sample by grinding to a fine powder and filling into a capillary tube.",
+      "Pack the powder to a height of 2-3 mm at the bottom of the capillary.",
+      "Select the appropriate heating program (start temp, ramp rate, and stop temp).",
+      "Insert the capillary tube into the designated slot in the heating block.",
+      "Start the measurement; the instrument will automatically detect and record the melting range.",
+      "Observe the sample through the viewing lens if manual verification is required.",
+      "Note the melting point or range displayed on the digital screen after completion.",
+      "Wait for the heating block to cool down to a safe temperature before removing the capillary.",
+      "Discard the used capillary tube and clean the sample area.",
+      "Document the results and the specific heating parameters used in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the sample is dry and finely powdered for accurate results.",
+      "Avoid air gaps in the capillary tube by proper tapping/packing.",
+      "Do not use a high ramp rate (typically <1°C/min) near the expected melting point.",
+      "Wear safety glasses when working near the heating block.",
+      "Handle hot components with caution to avoid thermal burns."
+    ]
   }
 }

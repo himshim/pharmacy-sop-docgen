@@ -3,16 +3,26 @@
     "title": "Operation of Flame Photometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Flame Photometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the quantitative analysis of alkali and alkaline earth metals.",
+    "scope": "Applicable to analytical activities carried out in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the instrument and allow it to warm up for 15 minutes.",
+      "Connect the gas supply and air compressor, then ignite the flame.",
+      "Adjust the air and gas pressure to obtain a stable blue flame.",
+      "Aspirate distilled water to clean the nebulizer and zero the instrument.",
+      "Aspirate standard solutions of known concentrations (e.g., Na, K, Ca) to calibrate.",
+      "Set the filter corresponding to the element being analyzed.",
+      "Aspirate the sample solution and record the emission intensity displayed.",
+      "Construct a calibration curve and determine the sample concentration.",
+      "Aspirate distilled water for 5 minutes after use to flush the system.",
+      "Turn OFF the gas supply first, followed by the air compressor and instrument."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the gas cylinders are stored safely and checked for leaks.",
+      "Avoid using high concentrations of samples that could clog the nebulizer.",
+      "Always work in a well-ventilated area due to the open flame.",
+      "Handle standard solutions carefully to avoid contamination.",
+      "Clean the nebulizer capillary regularly with a fine cleaning wire."
+    ]
   }
 }

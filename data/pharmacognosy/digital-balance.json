@@ -1,18 +1,24 @@
 {
   "meta": {
-    "title": "Operation of Digital Balance"
+    "title": "Operation of Digital Balance (Pharmacognosy)"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Balance.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To perform routine weighing of samples and reagents with moderate precision.",
+    "scope": "Applicable to general-purpose weighing in the Pharmacognosy laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the balance on a level surface and verify the level indicator if present.",
+      "Switch ON the balance and allow it to stabilize.",
+      "Ensure the pan is clean, then place a weighing paper or container and press TARE.",
+      "Add the required quantity of material until the desired weight is achieved.",
+      "Record the reading once it is stable.",
+      "Remove the load and clean any spilled material from the pan."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload beyond the balance capacity.",
+      "Keep the balance away from strong drafts and vibrations.",
+      "Never weigh corrosive materials directly on the pan.",
+      "Calibrate the balance at defined intervals.",
+      "Turn OFF or place in standby mode as per lab policy when not in use."
+    ]
   }
 }

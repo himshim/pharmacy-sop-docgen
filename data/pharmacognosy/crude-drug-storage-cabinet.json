@@ -1,18 +1,24 @@
 {
   "meta": {
-    "title": "Operation of Crude Drug Storage Cabinet"
+    "title": "Use of Crude Drug Storage Cabinet"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Crude Drug Storage Cabinet.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To store authenticated crude drug samples in a protected, organized manner.",
+    "scope": "Applicable to maintenance of pharmacognostic specimen collections and working samples.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Label each shelf or compartment with the crude drug name and code number.",
+      "Store crude drugs in clean, dry, airtight containers or packets with proper labeling.",
+      "Arrange materials alphabetically or by family for easy retrieval.",
+      "Inspect stored samples periodically for signs of insect infestation, mold, or deterioration.",
+      "Record incoming and outgoing samples in a logbook or inventory system.",
+      "Clean the cabinet surfaces and corners regularly to prevent dust and pests."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid exposure of crude drugs to direct sunlight and excessive humidity.",
+      "Do not store insecticides or chemicals in the same cabinet as crude drugs.",
+      "Use insect repellents or desiccants where necessary, ensuring they do not contact the samples.",
+      "Handle fragile specimens such as flowers and leaves with care.",
+      "Maintain restricted access if rare or reference specimens are stored."
+    ]
   }
 }

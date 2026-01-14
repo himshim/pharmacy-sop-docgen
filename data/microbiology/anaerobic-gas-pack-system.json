@@ -3,16 +3,25 @@
     "title": "Operation of Anaerobic Gas Pack System"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Anaerobic Gas Pack System.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To create an oxygen-free environment for the cultivation of anaerobic microorganisms.",
+    "scope": "Applicable to anaerobic culture techniques in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the inoculated culture plates into an anaerobic jar.",
+      "Open the anaerobic gas generator envelope according to the manufacturer's instructions.",
+      "Place the envelope into the jar along with a redox indicator strip (e.g., Resazurin or Methylene Blue).",
+      "Immediately seal the lid of the jar tightly.",
+      "Observe the indicator strip; a change in color indicates that anaerobic conditions are being established.",
+      "Incubate the jar at the required temperature.",
+      "After incubation, carefully open the jar in a ventilated area.",
+      "Check the indicator again to ensure anaerobic conditions were maintained throughout.",
+      "Discard the used gas pack according to hazardous waste protocols."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use expired gas packs or indicators.",
+      "Ensure the jar gasket is clean and properly lubricated for an airtight seal.",
+      "Be cautious of heat generation by the chemical reaction in some gas pack types.",
+      "Avoid breathing in the gas mixture when opening the jar.",
+      "Perform a leak test on the jar periodically."
+    ]
   }
 }

@@ -3,16 +3,23 @@
     "title": "Operation of Vacuum Oven"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vacuum Oven.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To dry samples under vacuum and controlled temperature.",
+    "scope": "Applicable to moisture removal in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the sample on the tray inside the oven.",
+      "Close and latch the door to ensure an airtight seal.",
+      "Switch ON the vacuum pump and open the vacuum valve.",
+      "Once the vacuum is reached, set the heating temperature.",
+      "Monitor the process and turn OFF the heat when finished.",
+      "Slowly bleed air into the chamber before opening the door.",
+      "Remove the sample and clean the chamber interior."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Bleed the vacuum very slowly to avoid sample flying around.",
+      "Do not dry materials that release corrosive or explosive vapors.",
+      "Check the door gasket for proper sealing.",
+      "Monitor the temperature to prevent overheating of sensitive samples.",
+      "Ensure the vacuum pump is properly maintained."
+    ]
   }
 }

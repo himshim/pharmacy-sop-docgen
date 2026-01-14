@@ -3,17 +3,25 @@
     "title": "Operation of Colony Counter"
   },
   "sections": {
-    "purpose": "To describe the procedure for counting microbial colonies using a colony counter.",
-    "scope": "Applicable to enumeration of microbial colonies in the Microbiology laboratory.",
+    "purpose": "To accurately count microbial colonies on agar plates.",
+    "scope": "Applicable to quantitative microbiology and quality control.",
     "procedure": [
-      "Switch ON the colony counter.",
-      "Place the culture plate on the counting platform.",
-      "Adjust illumination for clear visibility of colonies.",
-      "Mark and count colonies using the counting probe.",
-      "Record the total colony count.",
-      "Remove the culture plate after counting.",
-      "Switch OFF the instrument after use."
+      "Switch ON the colony counter light source.",
+      "Place the Petri dish on the glass platform.",
+      "Adjust the magnifying glass to a comfortable viewing position.",
+      "Use the electronic pen or probe to touch each colony.",
+      "Ensure the digital counter increments with each touch.",
+      "Observe the marked colonies to avoid double counting or misses.",
+      "Record the final count displayed on the digital screen.",
+      "Reset the counter to zero for the next plate.",
+      "Clean the platform with a soft, dry cloth after use."
     ],
-    "precautions": "Handle culture plates carefully. Avoid contamination during counting."
+    "precautions": [
+      "Do not apply excessive pressure with the counting pen.",
+      "Ensure the light source is adequate and not flickering.",
+      "Handle the magnifying glass carefully to avoid scratches.",
+      "Keep the platform clear of ink marks or scratches.",
+      "Check the sensitivity of the pressure sensor regularly."
+    ]
   }
 }

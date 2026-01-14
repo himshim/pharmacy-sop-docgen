@@ -1,18 +1,24 @@
 {
   "meta": {
-    "title": "Operation of Polypropylene Animal Cage"
+    "title": "Use and Maintenance of Polypropylene Animal Cage"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Polypropylene Animal Cage.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To provide durable, easy-to-clean housing for small laboratory animals.",
+    "scope": "Applicable to routine housing of rodents in the Pharmacology animal facility.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Inspect cages for cracks or damage before use.",
+      "Line the cage with appropriate bedding material.",
+      "Provide food pellets and water bottles as per animal requirements.",
+      "House animals according to species, sex, and group allocation.",
+      "Clean and disinfect cages on a scheduled basis or when soiled.",
+      "Rinse thoroughly and dry cages before re-use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not stack cages in a way that hinders ventilation.",
+      "Avoid using harsh chemicals that may degrade polypropylene.",
+      "Prevent overcrowding beyond recommended animal numbers.",
+      "Ensure secure fitting of cage lids and water bottles.",
+      "Follow CPCSEA or institutional animal ethics guidelines for housing."
+    ]
   }
 }

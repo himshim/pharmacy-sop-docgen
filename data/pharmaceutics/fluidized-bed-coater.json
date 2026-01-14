@@ -3,16 +3,45 @@
     "title": "Operation of Fluidized Bed Coater"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Fluidized Bed Coater.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Fluidized Bed Coater for coating tablets, granules, or pellets with functional coatings using bottom spray, top spray, or tangential spray technology.",
+    "scope": "Applicable to fluidized bed coating activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the equipment is installed in a clean area with proper environmental controls.",
+      "Verify all utilities including electricity, compressed air, and ventilation are connected.",
+      "Check that the product bowl, Wurster column (if applicable), and filters are clean.",
+      "Install appropriate spray nozzles based on coating type and configuration.",
+      "Power ON the fluidized bed coater and initialize control system.",
+      "Set process parameters including inlet air temperature, air volume, and spray rate.",
+      "Load tablets, granules, or pellets into the product bowl.",
+      "Start the blower to establish fluidization of the product.",
+      "Adjust air flow to achieve proper fluidization pattern without product loss.",
+      "Allow the product bed to reach set temperature before starting spray.",
+      "Prepare coating solution ensuring proper mixing and uniform consistency.",
+      "Connect peristaltic pump to coating solution container.",
+      "Set atomization air pressure and spray rate parameters.",
+      "Start spraying coating solution at low rate initially.",
+      "Monitor product temperature and adjust inlet temperature to maintain balance.",
+      "Observe coating uniformity and adjust spray pattern if needed.",
+      "Continue coating process until desired weight gain is achieved.",
+      "Take samples periodically to check coating thickness and uniformity.",
+      "After coating completion, stop spraying but continue drying with heated air.",
+      "Perform final drying phase to remove residual moisture from coating.",
+      "Cool the product gradually before unloading.",
+      "Discharge coated product into appropriate containers.",
+      "Clean spray nozzles, product bowl, and filters thoroughly.",
+      "Document all coating parameters, weight gain, and quality observations in the record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain proper product temperature to prevent sticking or agglomeration.",
+      "Balance spray rate with drying capacity to avoid over-wetting.",
+      "Ensure proper fluidization throughout the coating process.",
+      "Clean spray nozzles regularly to prevent clogging.",
+      "Monitor pressure drop across filters and clean when necessary.",
+      "Avoid product loss through exhaust by proper air flow adjustment.",
+      "Use appropriate atomization pressure for desired droplet size.",
+      "Wear appropriate PPE including gloves, mask, and protective clothing.",
+      "Handle coating solvents in well-ventilated areas.",
+      "Follow cleaning validation protocols for product changeover."
+    ]
   }
 }

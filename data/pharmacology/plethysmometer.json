@@ -3,16 +3,21 @@
     "title": "Operation of Plethysmometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Plethysmometer.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To measure changes in paw or limb volume for evaluation of edema and anti-inflammatory activity.",
+    "scope": "Applicable to acute and chronic inflammation models in Pharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the measuring chamber with the designated fluid (e.g., mercury or saline) to the mark.",
+      "Zero the reading on the plethysmometer scale or digital display.",
+      "Gently immerse the animal paw up to the anatomical landmark without excessive pressure.",
+      "Record baseline paw volume and subsequent readings after inducing edema and treatment.",
+      "Clean and disinfect the measuring chamber after each animal."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid trapping air bubbles in the measuring fluid.",
+      "Ensure consistent depth of paw immersion across measurements.",
+      "Handle mercury with appropriate hazardous material precautions if used.",
+      "Do not restrain the animal excessively to avoid stress.",
+      "Calibrate the instrument regularly for accuracy."
+    ]
   }
 }

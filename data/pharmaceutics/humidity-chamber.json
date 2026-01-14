@@ -3,16 +3,43 @@
     "title": "Operation of Humidity Chamber"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Humidity Chamber.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Humidity Chamber for stability testing and storage of pharmaceutical products under controlled temperature and humidity conditions.",
+    "scope": "Applicable to humidity-controlled storage activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the humidity chamber is installed in a suitable location with power supply.",
+      "Verify that water reservoir for humidity generation is filled with purified water.",
+      "Check that drain lines are properly connected and functional.",
+      "Power ON the humidity chamber using the main switch.",
+      "Set the desired temperature and relative humidity using the controller.",
+      "Allow the chamber to reach set conditions and stabilize.",
+      "Monitor both temperature and humidity displays for stability.",
+      "Verify conditions using calibrated temperature and humidity probes if required.",
+      "Open the door and arrange products ensuring proper air circulation.",
+      "Do not overload or block air circulation vents inside chamber.",
+      "Close the door securely ensuring proper sealing.",
+      "Monitor temperature and humidity continuously through display or data logger.",
+      "Record readings at specified intervals as per stability protocol.",
+      "Verify that conditions remain within specified tolerances.",
+      "Refill water reservoir periodically to maintain humidity generation.",
+      "Set alarms for out-of-specification temperature or humidity if available.",
+      "For long-term stability studies, maintain automated monitoring.",
+      "Minimize door opening frequency to maintain stable conditions.",
+      "Clean the chamber interior periodically with appropriate cleaning agents.",
+      "Check and clean humidity sensors regularly to ensure accuracy.",
+      "Perform preventive maintenance and calibration as per schedule.",
+      "Document all temperature, humidity data, and deviations in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use only purified or distilled water in the humidity generation system.",
+      "Do not overload the chamber as it affects air circulation.",
+      "Minimize door opening time to prevent condition fluctuations.",
+      "Ensure door gaskets are in good condition for proper sealing.",
+      "Monitor water level regularly and refill as needed.",
+      "Clean humidity sensors periodically to maintain accuracy.",
+      "Investigate and document any temperature or humidity excursions.",
+      "Ensure backup power supply for critical stability studies.",
+      "Verify alarm functionality regularly.",
+      "Perform regular calibration of temperature and humidity sensors."
+    ]
   }
 }

@@ -3,16 +3,21 @@
     "title": "Operation of Vortex Mixer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vortex Mixer.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To rapidly mix small volumes of liquids in tubes by creating a vortex.",
+    "scope": "Applicable to resuspension and mixing tasks in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the vortex mixer on a stable, level surface.",
+      "Select the desired speed setting.",
+      "Hold the tube securely and press the bottom against the rubber cup or platform.",
+      "Allow mixing for the required time until contents are homogeneous.",
+      "Remove the tube and place the mixer in standby or OFF position after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure tube caps are tightly closed to prevent leakage and aerosols.",
+      "Do not vortex open containers.",
+      "Avoid applying excessive force that might break the tube.",
+      "Clean any spills on the platform immediately.",
+      "Disconnect from power before cleaning or servicing."
+    ]
   }
 }

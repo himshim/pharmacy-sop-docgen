@@ -3,16 +3,23 @@
     "title": "Operation of Magnetic Stirrer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Magnetic Stirrer.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To mix liquid media or reagents using a magnetic stir bar.",
+    "scope": "Applicable to solution preparation in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the stirrer on a level surface.",
+      "Add a clean magnetic stir bar to the container with liquid.",
+      "Place the container centrally on the stirrer platform.",
+      "Switch ON and gradually increase the stirring speed.",
+      "Adjust to obtain a stable vortex without splashing.",
+      "After mixing, reduce speed to zero and switch OFF.",
+      "Retrieve the stir bar using a magnetic retriever."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not operate at excessively high speeds causing decoupling.",
+      "Keep liquids away from electrical controls.",
+      "Ensure the stir bar is compatible with chemicals used.",
+      "Do not use for very viscous solutions.",
+      "Clean the platform after spills."
+    ]
   }
 }

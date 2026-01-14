@@ -3,16 +3,26 @@
     "title": "Operation of Vacuum Dryer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vacuum Dryer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Vacuum Dryer for drying heat-sensitive materials.",
+    "scope": "Applicable to drying activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Clean the dryer chamber and trays and ensure the door seal is intact.",
+      "Load the wet material on trays and place them inside the chamber.",
+      "Close the door and tighten the clamps securely.",
+      "Switch ON the heating system and set the target temperature.",
+      "Start the vacuum pump and monitor the pressure gauge.",
+      "Maintain the required vacuum level throughout the drying process.",
+      "Periodically check the material through the sight glass if available.",
+      "Once dried, turn OFF the heater and break the vacuum slowly.",
+      "Allow the chamber to reach atmospheric pressure before opening.",
+      "Unload the material and clean the chamber and trays."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Check vacuum pump oil levels and filters regularly.",
+      "Break the vacuum gradually to prevent powder dispersion.",
+      "Monitor for any leaks in the door gasket or valves.",
+      "Wear appropriate PPE when handling hot or dried materials.",
+      "Ensure the condenser is working to collect solvent vapors if necessary."
+    ]
   }
 }

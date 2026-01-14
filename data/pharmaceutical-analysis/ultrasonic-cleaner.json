@@ -3,16 +3,23 @@
     "title": "Operation of Ultrasonic Cleaner"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Ultrasonic Cleaner.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To perform thorough cleaning of laboratory components using ultrasonication.",
+    "scope": "Applicable to glassware and tool cleaning in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Add cleaning solution to the tank and degas the liquid.",
+      "Place contaminated items in the cleaning basket.",
+      "Set the desired time and temperature parameters.",
+      "Press 'START' and ensure the items are effectively cleaned.",
+      "Remove and rinse the items with deionized water.",
+      "Empty the tank and wipe dry with a soft cloth.",
+      "Document the cleaning cycle if required by the maintenance log."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the basket.",
+      "Ensure the cleaning solution is compatible with the items.",
+      "Do not use flammable solvents in the ultrasonic cleaner.",
+      "Verify the liquid level before starting every cycle.",
+      "Wear gloves when handling items from the cleaning solution."
+    ]
   }
 }

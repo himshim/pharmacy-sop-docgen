@@ -3,16 +3,23 @@
     "title": "Operation of Multiple Organ Bath Assembly"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Multiple Organ Bath Assembly.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To simultaneously study multiple isolated tissues under identical or varying conditions.",
+    "scope": "Applicable to comparative pharmacological studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill each bath with physiological solution and maintain at controlled temperature.",
+      "Aerate each bath appropriately.",
+      "Mount tissues in each bath with corresponding transducers.",
+      "Apply resting tension and allow equilibration with periodic washing.",
+      "Administer drugs according to experimental design in selected baths.",
+      "Record responses from all channels.",
+      "At the end, discard tissues and clean all baths and tubing."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure no cross-contamination between baths.",
+      "Check uniformity of temperature and aeration across baths.",
+      "Label each bath clearly.",
+      "Avoid overloading the support frame.",
+      "Inspect electrical connections and heaters regularly."
+    ]
   }
 }

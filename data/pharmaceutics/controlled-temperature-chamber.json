@@ -3,16 +3,43 @@
     "title": "Operation of Controlled Temperature Chamber"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Controlled Temperature Chamber.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Controlled Temperature Chamber for storage and testing of pharmaceutical products at specific temperature conditions.",
+    "scope": "Applicable to temperature-controlled storage activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the chamber is installed in a location with adequate ventilation and power supply.",
+      "Verify that the chamber is connected to a stable power source with surge protection.",
+      "Check that the temperature controller and sensors are functioning properly.",
+      "Power ON the controlled temperature chamber using the main switch.",
+      "Set the desired temperature using the digital controller or touchscreen interface.",
+      "Allow the chamber to reach the set temperature and stabilize (may take 1-2 hours).",
+      "Verify that the temperature display matches the set point.",
+      "Check the calibration certificate and ensure the chamber is within calibration period.",
+      "Place temperature mapping probes if conducting validation or mapping studies.",
+      "Organize products or samples to allow proper air circulation inside the chamber.",
+      "Load samples or products ensuring they do not block air vents or sensors.",
+      "Close the chamber door securely to maintain temperature stability.",
+      "Monitor temperature continuously through the display or data logger.",
+      "Record temperature readings at specified intervals as per protocol.",
+      "Verify that temperature remains within acceptable range throughout storage period.",
+      "Set temperature alarms for out-of-specification conditions if available.",
+      "For long-term storage, maintain a temperature log chart or automated monitoring.",
+      "Periodically inspect door seals and gaskets for proper sealing.",
+      "After sample removal, close door promptly to minimize temperature fluctuation.",
+      "Clean the chamber interior periodically with appropriate cleaning agents.",
+      "Perform regular calibration and preventive maintenance as per schedule.",
+      "Document all temperature data, deviations, and corrective actions in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the chamber as it restricts air circulation.",
+      "Avoid frequent door opening which causes temperature fluctuations.",
+      "Ensure door is properly closed after each access.",
+      "Do not place hot items directly in the chamber.",
+      "Monitor temperature continuously for critical samples.",
+      "Investigate and document any temperature excursions immediately.",
+      "Keep the chamber exterior clean and free from obstructions.",
+      "Ensure backup power supply for critical storage applications.",
+      "Verify alarm functionality regularly.",
+      "Perform regular calibration to ensure accuracy of temperature readings."
+    ]
   }
 }

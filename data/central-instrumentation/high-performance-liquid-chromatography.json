@@ -3,16 +3,33 @@
     "title": "Operation of High Performance Liquid Chromatography"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the High Performance Liquid Chromatography.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation and maintenance of High Performance Liquid Chromatography (HPLC) for qualitative and quantitative analysis of pharmaceutical compounds.",
+    "scope": "Applicable to liquid chromatography activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that all mobile phase bottles contain sufficient volume of filtered and degassed solvents.",
+      "Check that the waste container is empty and all tubing connections are secure and leak-free.",
+      "Power ON the HPLC system including pump, detector, column oven, and data acquisition system.",
+      "Allow the system to stabilize and reach the desired temperature for at least 15-30 minutes.",
+      "Prime the pump with mobile phase to remove air bubbles from the system.",
+      "Set the flow rate, column temperature, detection wavelength, and other parameters as per analytical method.",
+      "Install the appropriate analytical column and equilibrate with mobile phase until baseline stabilizes.",
+      "Prepare sample and standard solutions according to the validated analytical method.",
+      "Inject blank solution to verify system suitability and baseline stability.",
+      "Inject standard solutions followed by sample solutions using autosampler or manual injection.",
+      "Monitor the chromatogram during analysis and ensure proper peak shape and retention times.",
+      "After analysis completion, flush the column with appropriate solvent to remove residual sample components.",
+      "Record and save all chromatographic data with proper identification and documentation.",
+      "Return flow rate to storage conditions and power OFF the system following proper shutdown sequence.",
+      "Clean the injection port and document instrument usage in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always use HPLC grade solvents that are properly filtered and degassed.",
+      "Never allow the pump to run dry as it may damage the system.",
+      "Ensure samples are filtered before injection to prevent column blockage.",
+      "Do not exceed the maximum pressure limit of the column.",
+      "Wear appropriate personal protective equipment including lab coat, gloves, and safety goggles.",
+      "Dispose of chemical waste as per institutional guidelines.",
+      "Perform regular maintenance and calibration as per manufacturer recommendations."
+    ]
   }
 }

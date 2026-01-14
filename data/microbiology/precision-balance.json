@@ -3,16 +3,23 @@
     "title": "Operation of Precision Balance"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Precision Balance.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To weigh media components and reagents with precision to the nearest milligram or centigram.",
+    "scope": "Applicable to routine weighing tasks in the Microbiology laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the balance is level and the weighing pan is clean.",
+      "Power ON the instrument and wait for the display to stabilize at zero.",
+      "Place a weighing container on the pan and press the 'TARE' key.",
+      "Add the substance slowly until the desired mass is reached.",
+      "Record the stable reading displayed.",
+      "Remove the container and gently brush off any spilled material.",
+      "Switch OFF or leave on standby as per laboratory procedure."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed the maximum weighing capacity.",
+      "Protect the balance from drafts and vibrations.",
+      "Avoid direct contact of chemicals with the pan.",
+      "Perform routine calibration checks using standard weights.",
+      "Keep the balance covered when not in use."
+    ]
   }
 }

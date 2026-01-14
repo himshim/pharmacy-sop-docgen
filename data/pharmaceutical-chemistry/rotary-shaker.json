@@ -3,16 +3,23 @@
     "title": "Operation of Rotary Shaker"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Rotary Shaker.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide gentle to vigorous mixing of samples in a rotational motion.",
+    "scope": "Applicable to extractions and microbial cultures in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Secure the samples in the clamps or racks on the rotating platform.",
+      "Balance the load evenly across the platform.",
+      "Set the rotation speed and duration on the control panel.",
+      "Switch ON the shaker and monitor the initial motion.",
+      "Adjust the speed if the mixing is too gentle or causing splashes.",
+      "Turn OFF the power and wait for the platform to stop before unloading.",
+      "Clean the platform of any chemical residue."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the shaker beyond its weight specifications.",
+      "Ensure all containers are tightly capped to prevent leakage.",
+      "Check for loose clamps periodically during the run.",
+      "Avoid high-speed operation for top-heavy containers.",
+      "Keep the motor area free from dust and debris."
+    ]
   }
 }

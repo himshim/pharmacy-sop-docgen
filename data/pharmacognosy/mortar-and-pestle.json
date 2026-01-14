@@ -1,18 +1,19 @@
 {
   "meta": {
-    "title": "Operation of Mortar and Pestle"
+    "title": "Use of Mortar and Pestle"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Mortar and Pestle.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To manually grind small quantities of crude drugs.",
+    "scope": "Applicable to routine grinding.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place material in mortar.",
+      "Grind with pestle.",
+      "Sieve if needed."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Clean thoroughly.",
+      "Avoid contamination.",
+      "Use appropriate size."
+    ]
   }
 }

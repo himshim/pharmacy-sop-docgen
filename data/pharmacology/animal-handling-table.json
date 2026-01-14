@@ -3,16 +3,23 @@
     "title": "Operation of Animal Handling Table"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Animal Handling Table.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To provide a stable, comfortable surface for animal restraint during procedures.",
+    "scope": "Applicable to routine animal manipulations in pharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the table in a well-lit, quiet area.",
+      "Cover the table surface with clean absorbent paper or cloth.",
+      "Gently place the animal on the table.",
+      "Use appropriate restraint techniques specific to the species.",
+      "Perform the required procedure efficiently.",
+      "Release the animal and observe for normal behavior.",
+      "Dispose of used coverings as biohazardous waste if contaminated."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always handle animals calmly to minimize stress.",
+      "Use species-specific restraint methods.",
+      "Have two people for larger animals.",
+      "Clean and disinfect the table between uses.",
+      "Avoid sharp edges or slippery surfaces."
+    ]
   }
 }

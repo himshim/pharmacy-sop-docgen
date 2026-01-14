@@ -3,16 +3,41 @@
     "title": "Operation of Manual Capsule Filling Machine"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Manual Capsule Filling Machine.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Manual Capsule Filling Machine for small-scale filling of powder formulations into hard gelatin capsules.",
+    "scope": "Applicable to manual capsule filling activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the capsule filling machine is placed on a clean, stable work surface.",
+      "Verify that all parts including plates, pins, and tamping tools are clean and dry.",
+      "Select appropriate capsule size for the formulation.",
+      "Check empty capsules for defects and discard any damaged ones.",
+      "Place empty capsules into the loading tray with proper orientation.",
+      "Insert loaded tray into the machine base.",
+      "Lower the separation plate to separate capsule caps from bodies.",
+      "Remove the tray with capsule caps and set aside.",
+      "Spread powder formulation evenly over the tray with capsule bodies.",
+      "Use tamping tool to compact powder into capsule bodies.",
+      "Scrape excess powder and repeat tamping if needed to achieve target fill weight.",
+      "Remove excess powder from tray surface.",
+      "Place the tray with capsule caps over the filled bodies.",
+      "Press down gently to join caps and bodies.",
+      "Lift the joining plate to eject filled capsules.",
+      "Collect filled capsules and inspect for proper closure.",
+      "Weigh sample capsules to verify fill weight uniformity.",
+      "Segregate any defective or improperly filled capsules.",
+      "Clean all parts of the machine thoroughly after use.",
+      "Document fill weights, capsule size, and observations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Handle empty capsules carefully to prevent breakage.",
+      "Use powder with good flow properties for uniform filling.",
+      "Control humidity to prevent capsule brittleness or softness.",
+      "Tamp powder uniformly to avoid weight variation.",
+      "Check fill weight regularly to ensure uniformity.",
+      "Inspect capsules for proper closure after filling.",
+      "Clean equipment thoroughly between different products.",
+      "Wear appropriate PPE including gloves and mask.",
+      "Work in controlled humidity environment.",
+      "Store filled capsules properly to maintain quality."
+    ]
   }
 }

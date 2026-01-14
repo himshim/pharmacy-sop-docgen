@@ -3,16 +3,24 @@
     "title": "Operation of Digital Balance"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Balance.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for general laboratory weighing.",
+    "scope": "Applicable to all weighing tasks in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the balance on a level, stable surface.",
+      "Turn ON the balance and wait for the zero reading to stabilize.",
+      "Level the balance using the leveling feet and spirit level.",
+      "Place the weighing boat or paper on the pan and press 'TARE'.",
+      "Add the sample until the target weight is reached.",
+      "Record the weight once the stability icon appears.",
+      "Clean the pan and the surrounding area with a soft brush after use.",
+      "Switch OFF the balance at the end of the day."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not place chemicals directly on the weighing pan.",
+      "Ensure the balance is protected from drafts and vibrations.",
+      "Do not exceed the maximum capacity of the balance.",
+      "Calibrate the balance periodically with standard weights.",
+      "Avoid placing the balance near sources of heat or humidity."
+    ]
   }
 }

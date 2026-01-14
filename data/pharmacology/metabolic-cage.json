@@ -3,16 +3,21 @@
     "title": "Operation of Metabolic Cage"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Metabolic Cage.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To collect urine, feces, and sometimes expired air separately for metabolic studies.",
+    "scope": "Applicable to pharmacokinetic and toxicological evaluations.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Assemble the cage ensuring separation of urine and feces collection funnels.",
+      "Place the animal in the cage with free access to food and water unless restricted.",
+      "Collect excreta at specified time intervals.",
+      "Measure volume/weight and store samples appropriately.",
+      "Clean and disinfect the cage thoroughly after each use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid overcrowding; one animal per cage.",
+      "Monitor animals frequently for signs of distress.",
+      "Ensure proper alignment of collection funnels to avoid cross-contamination.",
+      "Secure cages to prevent tipping.",
+      "Handle biological samples with PPE."
+    ]
   }
 }

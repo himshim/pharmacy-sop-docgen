@@ -3,16 +3,24 @@
     "title": "Operation of Digital Colony Counter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Colony Counter.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To count microbial colonies on Petri dishes with electronic tallying.",
+    "scope": "Applicable to microbial enumeration in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the digital colony counter and adjust the illumination.",
+      "Place the agar plate centrally on the counting surface.",
+      "Focus the magnifier or digital display for clear visualization of colonies.",
+      "Use the stylus or touch pen to mark each colony, ensuring the counter registers each touch.",
+      "Verify the count by scanning the entire plate systematically.",
+      "Record the final colony count displayed.",
+      "Reset the counter to zero before proceeding to the next plate.",
+      "Clean the surface and stylus with disinfectant regularly."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid excessive pressure on the plate to prevent cracking.",
+      "Ensure the plate backside is free from condensation or markings that may interfere with counting.",
+      "Check counter sensitivity periodically.",
+      "Do not expose the device to spills or corrosive chemicals.",
+      "Use appropriate eye protection if viewing under strong illumination for prolonged periods."
+    ]
   }
 }

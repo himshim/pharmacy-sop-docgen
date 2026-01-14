@@ -3,16 +3,22 @@
     "title": "Operation of Photoactometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Photoactometer.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To assess locomotor activity of animals using photoelectric beam interruptions.",
+    "scope": "Applicable to CNS stimulant and depressant screening in Pharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the photoactometer and allow a brief warm-up period.",
+      "Check that all photoelectric cells and indicators are functioning.",
+      "Place the test animal in the observation arena and close the lid.",
+      "Set the observation period using an external or built-in timer.",
+      "Start the test and record the activity counts at the end of the session.",
+      "Remove the animal and clean the arena with disinfectant between tests."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain uniform lighting conditions around the apparatus.",
+      "Avoid placing reflective objects near the sensors.",
+      "Ensure the arena floor is non-slippery.",
+      "Handle animals gently to avoid stress-induced variability.",
+      "Calibrate sensor sensitivity periodically."
+    ]
   }
 }

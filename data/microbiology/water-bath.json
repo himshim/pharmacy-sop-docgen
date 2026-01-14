@@ -3,16 +3,22 @@
     "title": "Operation of Water Bath"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Water Bath.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To maintain samples at a constant temperature using heated water.",
+    "scope": "Applicable to incubation and reagent thawing in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the bath with distilled water to the indicated level.",
+      "Set the desired temperature and switch ON the heater.",
+      "Allow the water to reach and stabilize at set temperature.",
+      "Place samples in racks or holders within the bath.",
+      "After use, switch OFF, allow water to cool, then drain and clean the bath.",
+      "Record any critical temperature-dependent runs in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not operate the heater without sufficient water.",
+      "Avoid splashing water on control electronics.",
+      "Use distilled water to minimize scaling.",
+      "Periodically disinfect the bath to prevent microbial growth.",
+      "Ensure the bath is placed on a stable, level surface."
+    ]
   }
 }

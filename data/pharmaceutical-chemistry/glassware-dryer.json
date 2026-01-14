@@ -3,16 +3,24 @@
     "title": "Operation of Glassware Dryer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Glassware Dryer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide rapid and thorough drying of laboratory glassware after washing.",
+    "scope": "Applicable to glassware maintenance in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure glassware is thoroughly rinsed with distilled water before drying.",
+      "Place glassware onto the dryer pegs or inside the drying chamber.",
+      "Arrange items so that air can circulate freely inside and around them.",
+      "Switch ON the power and set the desired temperature (typically 60-80°C).",
+      "Start the timer if the unit is equipped with one.",
+      "Once dried, turn OFF the heater and allow glassware to cool slightly.",
+      "Remove glassware using heat-resistant gloves if necessary.",
+      "Wipe down the interior of the dryer weekly to remove dust."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not place plastic items or volumetric glassware (like pipettes) at high temperatures.",
+      "Ensure glassware is not dripping excessively before loading.",
+      "Do not overload the dryer as it reduces efficiency.",
+      "Check the electrical cord for any damage before use.",
+      "Avoid placing flammable solvents near the dryer unit."
+    ]
   }
 }

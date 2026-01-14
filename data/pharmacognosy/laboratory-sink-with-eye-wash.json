@@ -1,18 +1,20 @@
 {
   "meta": {
-    "title": "Operation of Laboratory Sink with Eye Wash"
+    "title": "Use of Laboratory Sink with Eye Wash"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Laboratory Sink with Eye Wash.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To provide rinsing water for chemical exposure and routine glassware washing.",
+    "scope": "Applicable to all wet operations in Pharmacognosy.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Test eye wash weekly.",
+      "Use for rinsing eyes 15 minutes if exposed.",
+      "Wash glassware with detergent, rinse thoroughly.",
+      "Drain properly."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Keep area clear.",
+      "Use cold water for eyes.",
+      "Seek medical help after eye wash."
+    ]
   }
 }

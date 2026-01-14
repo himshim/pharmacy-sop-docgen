@@ -3,16 +3,23 @@
     "title": "Operation of Invasive Blood Pressure Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Invasive Blood Pressure Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To measure arterial blood pressure directly via vascular cannulation.",
+    "scope": "Applicable to detailed cardiovascular pharmacology experiments.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Cannulate the selected artery under anesthesia.",
+      "Connect the cannula to a fluid-filled pressure line and transducer.",
+      "Zero the transducer at heart level.",
+      "Start recording baseline blood pressure.",
+      "Administer test drugs and record changes in systolic, diastolic, and mean pressure.",
+      "Flush the line periodically to prevent clot formation.",
+      "Euthanize the animal humanely and clean equipment."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain strict aseptic technique.",
+      "Avoid introduction of air bubbles into the arterial line.",
+      "Monitor anesthesia depth continuously.",
+      "Use anticoagulant in flush solution if required.",
+      "Dispose of sharps and biological waste safely."
+    ]
   }
 }

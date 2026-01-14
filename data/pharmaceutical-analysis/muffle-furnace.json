@@ -3,16 +3,25 @@
     "title": "Operation of Muffle Furnace"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Muffle Furnace.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To perform high-temperature heating for ashing and ignition tests.",
+    "scope": "Applicable to analytical chemistry in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the furnace is placed on a heat-resistant surface.",
+      "Power ON and set the required temperature on the controller.",
+      "Place the sample in a silica or porcelain crucible.",
+      "Slowly open the door and place the crucible inside.",
+      "Close the door and allow the heating cycle to complete.",
+      "Once finished, turn OFF the heater and allow it to cool to <200°C.",
+      "Use long tongs to remove the crucible.",
+      "Record the final weight after cooling in a desiccator.",
+      "Document the temperature and ashing time."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always wear heat-resistant gloves and a face shield.",
+      "Do not open the door at very high temperatures.",
+      "Ensure proper exhaust for any fumes generated during ignition.",
+      "Avoid placing flammable materials near the furnace.",
+      "Inspect the interior for residues and clean regularly."
+    ]
   }
 }

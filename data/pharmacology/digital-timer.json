@@ -3,16 +3,22 @@
     "title": "Operation of Digital Timer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Timer.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To measure and control time intervals accurately during experiments.",
+    "scope": "Applicable to timed pharmacological procedures.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set the desired countdown or count-up time using the control buttons.",
+      "Start the timer at the beginning of the procedure.",
+      "Monitor the display periodically.",
+      "Respond to the alarm or signal at the end of the timing period.",
+      "Reset the timer before the next use.",
+      "Record critical time points in the experimental sheet."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Verify that the timer is set to the correct mode.",
+      "Ensure audible alarms are functioning.",
+      "Avoid exposing the device to liquids.",
+      "Replace batteries as needed.",
+      "Use multiple synchronized timers for complex protocols."
+    ]
   }
 }

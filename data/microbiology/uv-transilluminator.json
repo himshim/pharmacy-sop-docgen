@@ -3,16 +3,23 @@
     "title": "Operation of UV Transilluminator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the UV Transilluminator.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To visualize nucleic acids stained with fluorescent dyes in electrophoresis gels.",
+    "scope": "Applicable to molecular microbiology applications.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the stained gel onto the transilluminator surface.",
+      "Lower the protective UV shield or close the darkroom hood.",
+      "Switch ON the UV light at the required wavelength.",
+      "View or image the bands using appropriate protective equipment.",
+      "After visualization, switch OFF the UV light.",
+      "Remove the gel carefully and dispose of according to chemical/biological waste SOPs.",
+      "Clean the glass surface with a suitable cleaner."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always wear UV-blocking face shield or goggles and gloves.",
+      "Avoid prolonged UV exposure to minimize DNA damage and personal risk.",
+      "Do not place sharp or abrasive objects on the glass surface.",
+      "Handle staining dyes (e.g., ethidium bromide) as hazardous chemicals.",
+      "Disconnect power before any servicing."
+    ]
   }
 }

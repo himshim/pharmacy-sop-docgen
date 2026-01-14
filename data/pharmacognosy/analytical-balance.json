@@ -3,16 +3,23 @@
     "title": "Operation of Analytical Balance"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Analytical Balance.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To weigh small quantities of samples with high precision for pharmacognosy experiments.",
+    "scope": "Applicable to accurate weighing of plant extracts, standards, and reagents in the Pharmacognosy laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the analytical balance on a stable, vibration-free surface inside a low-draft area.",
+      "Switch ON the balance and allow it to warm up and self-calibrate if applicable.",
+      "Ensure the weighing chamber and pan are clean and free from dust or spilled material.",
+      "Close all glass doors, press the TARE key to zero the display, and place a clean weighing container on the pan.",
+      "Close the doors again, press TARE to re-zero, then carefully add sample until the desired mass is reached.",
+      "Record the stable reading and transfer the weighed material to the working container using a spatula.",
+      "After use, remove the container, gently clean any spills, and close the balance doors."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed the maximum capacity of the balance.",
+      "Avoid drafts, air conditioning vents, and direct sunlight near the balance.",
+      "Do not touch the weighing pan directly with hands or contaminated tools.",
+      "Use anti-static measures for very light powders if necessary.",
+      "Schedule periodic calibration and verification with certified weights."
+    ]
   }
 }

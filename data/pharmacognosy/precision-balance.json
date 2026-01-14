@@ -3,16 +3,16 @@
     "title": "Operation of Precision Balance"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Precision Balance.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To weigh samples with higher precision.",
+    "scope": "Applicable to analytical weighing.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Tare with container.",
+      "Add sample.",
+      "Record stable reading."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Draft shield closed.",
+      "Calibrate regularly."
+    ]
   }
 }

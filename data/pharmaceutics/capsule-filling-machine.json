@@ -3,16 +3,43 @@
     "title": "Operation of Capsule Filling Machine"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Capsule Filling Machine.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Capsule Filling Machine for automated filling of powder or granule formulations into hard gelatin capsules.",
+    "scope": "Applicable to capsule filling activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the machine is installed in a clean area meeting GMP standards.",
+      "Verify that compressed air supply is connected and at proper pressure.",
+      "Check that empty capsules, filling material, and closing mechanism are ready.",
+      "Power ON the capsule filling machine and initialize the control panel.",
+      "Select the appropriate capsule size (00, 0, 1, 2, 3, 4) and install corresponding tooling.",
+      "Install the dosing disc, tamping pins, and closing segments for the selected capsule size.",
+      "Set machine parameters including dosing depth, tamping pressure, and machine speed.",
+      "Load empty capsules into the hopper with proper orientation.",
+      "Verify that capsules are being properly oriented and fed to separation unit.",
+      "Load the powder or granule formulation into the product hopper.",
+      "Perform trial filling with a small batch to verify fill weight and capsule integrity.",
+      "Weigh initial filled capsules and calculate average fill weight.",
+      "Adjust dosing depth or tamping pressure to achieve target fill weight.",
+      "Once weight is consistent, start production at appropriate speed.",
+      "Monitor the filling process continuously for capsule jams or defects.",
+      "Periodically collect samples and verify fill weight uniformity.",
+      "Check for capsule defects including cracking, splitting, or incomplete closure.",
+      "Collect filled capsules in appropriate containers for further processing.",
+      "After completion, stop the machine and remove remaining materials.",
+      "Clean all product contact parts thoroughly to prevent cross-contamination.",
+      "Perform line clearance before processing next product.",
+      "Document machine settings, fill weights, and deviations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use capsules from the same batch to ensure uniform quality.",
+      "Ensure powder flow properties are suitable for automatic filling.",
+      "Maintain controlled humidity to prevent capsule brittleness or softness.",
+      "Do not exceed machine capacity to avoid jams and defects.",
+      "Monitor fill weight regularly to ensure dose uniformity.",
+      "Check capsule shells for defects before loading.",
+      "Clean machine thoroughly between different products to prevent cross-contamination.",
+      "Wear appropriate PPE including gloves, mask, and hair cover.",
+      "Follow lockout/tagout procedures during maintenance.",
+      "Handle filled capsules carefully to prevent damage."
+    ]
   }
 }

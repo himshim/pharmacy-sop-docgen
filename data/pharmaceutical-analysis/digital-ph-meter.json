@@ -3,16 +3,24 @@
     "title": "Operation of Digital pH Meter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital pH Meter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for the measurement of pH with digital precision.",
+    "scope": "Applicable to analytical testing in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the pH meter and allow it to warm up for 15 minutes.",
+      "Rinse the pH electrode with distilled water and blot dry.",
+      "Perform a two-point calibration using pH 4.0 and 7.0 (or 10.0) buffers.",
+      "Immerse the electrode in the sample solution and stir gently.",
+      "Record the pH value once the display shows a stable reading.",
+      "Rinse the electrode thoroughly after each use.",
+      "Store the electrode in 3M KCl or the recommended storage solution.",
+      "Document the calibration and results in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never let the pH electrode dry out.",
+      "Avoid touching the glass bulb with bare fingers.",
+      "Calibrate the instrument at the beginning of each day.",
+      "Use fresh buffer solutions for calibration.",
+      "Rinse the electrode between different samples to prevent contamination."
+    ]
   }
 }

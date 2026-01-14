@@ -3,16 +3,42 @@
     "title": "Operation of Infrared Dryer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Infrared Dryer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Infrared Dryer for rapid drying of pharmaceutical coatings, films, and moisture-containing materials using infrared radiation.",
+    "scope": "Applicable to infrared drying activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the infrared dryer is installed in a well-ventilated area.",
+      "Verify that all electrical connections are secure and properly grounded.",
+      "Check that the infrared lamps or heating elements are clean and functional.",
+      "Inspect reflectors for cleanliness and proper alignment.",
+      "Prepare the material or coated substrate for drying.",
+      "Position the material on conveyor or fixed platform at appropriate distance from IR source.",
+      "Adjust the distance between IR source and material based on drying requirements.",
+      "Power ON the infrared dryer and allow lamps to warm up if applicable.",
+      "Set the temperature or power intensity as per product requirements.",
+      "Set the drying time or conveyor speed for continuous dryers.",
+      "Start the drying process and monitor temperature of the material surface.",
+      "Use non-contact infrared thermometer to measure surface temperature if needed.",
+      "Adjust IR intensity or distance if temperature is too high or too low.",
+      "Ensure uniform exposure by proper material positioning.",
+      "Monitor drying progress visually or by touch test.",
+      "Continue drying until desired moisture level is achieved.",
+      "For continuous dryers, collect dried material at the discharge end.",
+      "Power OFF the IR lamps after completing the drying process.",
+      "Allow lamps to cool before performing any maintenance or cleaning.",
+      "Clean reflectors and lamp surfaces periodically to maintain efficiency.",
+      "Document drying parameters, temperature, and observations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not look directly at IR lamps during operation to protect eyes.",
+      "Maintain proper distance between IR source and material to prevent scorching.",
+      "Monitor material temperature continuously to prevent overheating.",
+      "Ensure adequate ventilation to remove moisture-laden air.",
+      "Do not dry flammable or heat-sensitive materials without validation.",
+      "Allow IR lamps to cool completely before handling or maintenance.",
+      "Use heat-resistant gloves when handling hot materials.",
+      "Keep flammable materials away from the drying area.",
+      "Inspect lamps regularly and replace if damaged or inefficient.",
+      "Wear appropriate PPE including safety goggles and heat-resistant clothing."
+    ]
   }
 }

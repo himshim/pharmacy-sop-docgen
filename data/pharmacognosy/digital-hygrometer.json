@@ -3,16 +3,21 @@
     "title": "Operation of Digital Hygrometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Hygrometer.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To measure and monitor relative humidity in Pharmacognosy laboratories and storage areas.",
+    "scope": "Applicable to environmental monitoring for crude drug storage and stability rooms.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the digital hygrometer and allow a few minutes for sensor stabilization.",
+      "Place or mount the instrument at representative locations away from direct airflow or sunlight.",
+      "Observe and record relative humidity (and temperature, if available) at scheduled times.",
+      "Compare readings with acceptable limits for the specific room or cabinet.",
+      "Replace or recalibrate sensors as per manufacturer recommendations."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not expose the sensor to liquid water or corrosive vapors.",
+      "Avoid placing the hygrometer directly above heaters or near windows.",
+      "Check battery status regularly and replace when low.",
+      "Verify accuracy periodically against a calibrated reference.",
+      "Handle the device gently to avoid sensor damage."
+    ]
   }
 }

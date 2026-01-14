@@ -3,16 +3,23 @@
     "title": "Operation of Angle of Repose Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Angle of Repose Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To determine the angle of repose of powdered crude drugs and extracts as a measure of flow properties.",
+    "scope": "Applicable to pre-formulation and powder flow characterization in Pharmacognosy.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the apparatus on a level bench and ensure the funnel outlet is closed.",
+      "Fill the funnel with a known quantity of dry, sieved powder.",
+      "Position a graph paper or base plate below the funnel at a fixed height.",
+      "Open the outlet to allow powder to flow freely and form a conical heap.",
+      "Measure the height (h) of the heap and the radius (r) of the base.",
+      "Calculate the angle of repose using the formula: tan(θ) = h / r.",
+      "Record the results with powder identification and conditions."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure powder is dry and free-flowing before testing.",
+      "Avoid vibration or air currents during measurement.",
+      "Use consistent funnel height for all determinations.",
+      "Clean the apparatus thoroughly between different powders.",
+      "Wear a mask when working with fine or allergenic plant powders."
+    ]
   }
 }

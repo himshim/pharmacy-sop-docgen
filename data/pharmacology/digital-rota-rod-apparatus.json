@@ -3,16 +3,21 @@
     "title": "Operation of Digital Rota Rod Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Rota Rod Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To assess motor coordination and muscle strength.",
+    "scope": "Applicable to neuropharmacology screening.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set rod speed and cutoff time.",
+      "Place animal gently on rotating rod.",
+      "Start timer and record fall time.",
+      "Repeat trials with consistent conditions.",
+      "Calculate mean retention time."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Train animals to avoid learning effects.",
+      "Prevent injury from falls.",
+      "Clean rod between animals.",
+      "Consistent rod diameter and surface.",
+      "Monitor animal welfare."
+    ]
   }
 }

@@ -3,16 +3,17 @@
     "title": "Operation of Tapped Density Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Tapped Density Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To determine tapped density.",
+    "scope": "Applicable to powder characterization.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill cylinder.",
+      "Tap 1250 times.",
+      "Measure volume.",
+      "Calculate."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Consistent tapping.",
+      "Clean."
+    ]
   }
 }

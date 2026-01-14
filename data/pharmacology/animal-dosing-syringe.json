@@ -3,16 +3,23 @@
     "title": "Operation of Animal Dosing Syringe"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Animal Dosing Syringe.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To accurately administer oral doses to experimental animals.",
+    "scope": "Applicable to oral drug administration studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Select the syringe size appropriate for the animal and dose volume.",
+      "Draw up the exact dose volume into the syringe.",
+      "Restrain the animal gently and insert the gavage needle into the esophagus.",
+      "Slowly administer the dose while monitoring swallowing.",
+      "Remove the syringe and observe the animal for any adverse reactions.",
+      "Record the dose administered, time, and route.",
+      "Clean and sterilize the syringe for reuse."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the needle length is appropriate for the animal size.",
+      "Avoid forcing the needle to prevent esophageal trauma.",
+      "Use positive pressure technique to prevent aspiration.",
+      "Monitor for signs of respiratory distress.",
+      "Train personnel thoroughly before use."
+    ]
   }
 }

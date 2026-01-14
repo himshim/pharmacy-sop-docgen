@@ -3,16 +3,23 @@
     "title": "Operation of Refractometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Refractometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To measure the refractive index of liquids for identification and purity checks.",
+    "scope": "Applicable to analytical testing in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Clean the prism surface with alcohol and a soft tissue.",
+      "Place a few drops of the sample on the prism and close the cover.",
+      "Adjust the light and view through the eyepiece to find the boundary line.",
+      "Align the crosshairs with the boundary and read the refractive index.",
+      "Record the temperature at which the measurement was taken.",
+      "Clean the prism immediately after use with distilled water and dry.",
+      "Calibrate the instrument regularly using distilled water."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "The prism surface is delicate; do not use abrasive cleaning tools.",
+      "Ensure the liquid covers the entire prism surface without bubbles.",
+      "Always check the temperature, as RI is temperature-dependent.",
+      "Do not use the refractometer for corrosive or etching liquids.",
+      "Store the instrument in a dust-free environment."
+    ]
   }
 }

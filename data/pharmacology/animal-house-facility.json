@@ -3,16 +3,23 @@
     "title": "Operation of Animal House Facility"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Animal House Facility.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To maintain experimental animals according to ethical and regulatory standards.",
+    "scope": "Applicable to the entire animal housing and care system.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Maintain temperature 22±2°C, humidity 50-70%, 12h light/dark cycle.",
+      "Provide autoclaved feed and chlorinated water ad libitum.",
+      "Change bedding weekly or more frequently if soiled.",
+      "Conduct daily health observations by trained personnel.",
+      "Maintain detailed records of animal receipt, health, and disposal.",
+      "Perform quarterly fumigation and pest control.",
+      "Ensure annual CPCSEA compliance inspection."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Restrict access to authorized personnel only.",
+      "Follow strict quarantine procedures for new arrivals.",
+      "Use HEPA-filtered air in barrier facilities.",
+      "Implement waste autoclaving and incineration.",
+      "Maintain backup power for critical systems."
+    ]
   }
 }

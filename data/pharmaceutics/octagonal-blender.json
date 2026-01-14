@@ -3,16 +3,29 @@
     "title": "Operation of Octagonal Blender"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Octagonal Blender.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Octagonal Blender for gentle and efficient blending of pharmaceutical powders and granules.",
+    "scope": "Applicable to powder blending activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the blender is installed on a stable foundation with proper leveling.",
+      "Verify that the blending vessel is clean, dry, and free from previous material.",
+      "Check safety guards, interlocks, and emergency stop functionality.",
+      "Weigh all ingredients accurately as per batch formula.",
+      "Open the charging port and load ingredients (fill to 50-60% capacity).",
+      "Close the charging port securely and engage safety interlocks.",
+      "Set blending speed (typically 5-15 rpm) and blending time.",
+      "Start the blender and monitor rotation for smooth operation.",
+      "After completion, stop the motor and allow the vessel to come to rest.",
+      "Position for discharge, open the valve, and collect blended material.",
+      "Take samples for uniformity testing as per sampling plan.",
+      "Clean the blender interior thoroughly after use.",
+      "Document all blending parameters and observations in the BMR."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed recommended load capacity for effective blending.",
+      "Ensure all ports are tightly sealed before starting rotation.",
+      "Never bypass safety interlocks or open guards during operation.",
+      "Verify blend uniformity through validated sampling techniques.",
+      "Clean thoroughly between different products to prevent cross-contamination."
+    ]
   }
 }

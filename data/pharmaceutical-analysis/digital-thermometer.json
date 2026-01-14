@@ -3,16 +3,24 @@
     "title": "Operation of Digital Thermometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Thermometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for measuring the temperature of liquids and environments.",
+    "scope": "Applicable to laboratory measurements in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Power ON the digital thermometer and check the display.",
+      "Clean the probe with distilled water or an alcohol swab before use.",
+      "Immerse the probe into the material to be measured.",
+      "Wait for the reading to stabilize and record the temperature.",
+      "Clean the probe thoroughly after each measurement.",
+      "Switch OFF the thermometer after use to conserve battery.",
+      "Verify the accuracy of the thermometer against a calibrated reference annually.",
+      "Store the thermometer in its protective case."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed the temperature range specified for the thermometer.",
+      "Avoid bending or stressing the probe cable.",
+      "Do not expose the digital unit to extreme moisture or heat.",
+      "Replace batteries promptly to avoid erroneous readings.",
+      "Clean the probe immediately after measuring corrosive liquids."
+    ]
   }
 }

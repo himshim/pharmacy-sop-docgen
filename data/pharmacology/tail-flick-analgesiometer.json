@@ -3,16 +3,22 @@
     "title": "Operation of Tail Flick Analgesiometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Tail Flick Analgesiometer.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To measure spinal reflex latency to a thermal stimulus applied to the tail.",
+    "scope": "Applicable to evaluation of analgesic drugs acting at spinal level.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the instrument and set the intensity of the heat source.",
+      "Place the animal so that the distal part of the tail is positioned over the heat source.",
+      "Start the timer simultaneously with heat application.",
+      "Stop the timer when the animal flicks its tail and record the latency.",
+      "Apply a cutoff time to prevent tissue injury.",
+      "Allow adequate recovery time between repeated measurements."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use the lowest effective heat intensity.",
+      "Do not exceed predetermined cutoff times.",
+      "Do not test animals with tail injuries or skin lesions.",
+      "Calibrate the heat source output regularly.",
+      "Follow ethical guidelines for pain studies."
+    ]
   }
 }

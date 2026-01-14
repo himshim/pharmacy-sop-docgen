@@ -3,16 +3,26 @@
     "title": "Operation of Ribbon Blender"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Ribbon Blender.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Ribbon Blender for dry mixing of powders and granules.",
+    "scope": "Applicable to blending activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the blender trough and ribbon blades are clean.",
+      "Check safety guards and ensure the lid is properly seated.",
+      "Load ingredients into the trough (up to 40-70% of total volume).",
+      "Close the lid and start the motor.",
+      "Allow blending for the validated time duration.",
+      "Monitor for uniform mixing and absence of dead spots.",
+      "Position for discharge and open the bottom valve.",
+      "Collect the blended powder in appropriate containers.",
+      "Clean the trough and blades thoroughly after each batch.",
+      "Document mixing time and observations in the production record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed recommended fill levels for effective blending.",
+      "Ensure the blender is stopped before opening the charging lid.",
+      "Clean thoroughly to prevent cross-contamination between batches.",
+      "Check ribbon blades for any signs of wear or damage.",
+      "Wear appropriate dust masks and PPE during loading/unloading."
+    ]
   }
 }

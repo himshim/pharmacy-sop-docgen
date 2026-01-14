@@ -3,16 +3,24 @@
     "title": "Operation of Oil Bath"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Oil Bath.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide uniform heating for reaction flasks at temperatures above 100°C.",
+    "scope": "Applicable to chemical synthesis in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check the oil level in the bath (typically silicone oil or paraffin oil).",
+      "Ensure the exterior of the reaction flask is dry before immersion.",
+      "Secure the flask using a clamp and lower it into the oil.",
+      "Place a thermometer in the oil to monitor its temperature.",
+      "Turn ON the heating element and adjust the temperature setting.",
+      "Use a stir bar in the bath if the unit has a built-in stirrer for uniformity.",
+      "After use, turn OFF the heat and allow the oil to cool before removing the flask.",
+      "Wipe the oil off the flask carefully using a dry tissue or cloth."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not allow water to enter the hot oil, as it may cause splattering.",
+      "Never exceed the flash point of the oil being used.",
+      "Avoid moving the bath while the oil is hot.",
+      "Ensure the electrical cord is kept away from the hot oil surface.",
+      "Use a splash guard if the reaction involves volatile or reactive reagents."
+    ]
   }
 }

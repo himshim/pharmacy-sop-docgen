@@ -3,16 +3,41 @@
     "title": "Operation of Bulk Density Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Bulk Density Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Bulk Density Apparatus for determination of bulk density and tapped density of pharmaceutical powders and granules.",
+    "scope": "Applicable to bulk and tapped density measurement activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the apparatus is placed on a stable, level surface.",
+      "Verify that the graduated measuring cylinder is clean and dry.",
+      "Record the volume capacity and divisions of the measuring cylinder.",
+      "Weigh the empty graduated cylinder and record the weight.",
+      "Select an appropriate quantity of powder or granules (typically sufficient to fill cylinder to 50-100 mL).",
+      "Weigh the powder sample accurately on an analytical balance and record the weight.",
+      "Carefully transfer the powder into the graduated cylinder through a funnel if needed.",
+      "Avoid compacting the powder during transfer to maintain natural bulk.",
+      "Note the initial volume occupied by the powder (V₀) as the bulk volume.",
+      "Calculate the bulk density using: Bulk Density = Mass / V₀.",
+      "For tapped density, secure the cylinder in the tapping apparatus holder.",
+      "Set the tapping height and frequency as per USP or other pharmacopeial standards (typically 3 mm drop, 250 taps).",
+      "Start the tapping cycle and allow the apparatus to perform the set number of taps.",
+      "Record the volume after the first set of taps (typically after 500 taps).",
+      "Continue tapping in increments (250 taps) until the volume change is less than 2 mL.",
+      "Record the final tapped volume (Vf).",
+      "Calculate tapped density using: Tapped Density = Mass / Vf.",
+      "Calculate Hausner ratio: Hausner Ratio = Tapped Density / Bulk Density.",
+      "Calculate Carr's Index: Carr's Index = [(Vf - V₀) / Vf] × 100.",
+      "Clean the cylinder and apparatus thoroughly after use.",
+      "Document all measurements, calculations, and observations in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use sufficient powder quantity to minimize measurement errors.",
+      "Avoid pre-compacting or vibrating the powder during transfer.",
+      "Ensure the cylinder is properly secured in the tapping apparatus.",
+      "Use consistent tapping parameters for reproducible results.",
+      "Perform measurements at controlled temperature and humidity.",
+      "Handle hygroscopic powders quickly to minimize moisture absorption.",
+      "Clean equipment thoroughly between different samples.",
+      "Perform triplicate measurements for statistical validity.",
+      "Wear appropriate PPE including mask and gloves when handling powders."
+    ]
   }
 }

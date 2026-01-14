@@ -3,16 +3,23 @@
     "title": "Operation of UV Sterilization Chamber"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the UV Sterilization Chamber.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To disinfect instruments, small items, or surfaces using ultraviolet (UV) radiation.",
+    "scope": "Applicable to supplemental decontamination in the Microbiology laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Open the chamber and place items on the shelf in a single layer.",
+      "Close the door securely.",
+      "Set the exposure time on the timer according to SOP.",
+      "Switch ON the UV lamp using the control panel.",
+      "After the cycle, allow a brief cool-down period before opening the door.",
+      "Remove items and store or use as required.",
+      "Switch OFF the chamber when not in use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never look directly at UV lamps or expose skin to UV radiation.",
+      "Ensure the door interlock is functioning properly.",
+      "Do not overload the chamber.",
+      "Clean UV lamps and reflective surfaces periodically to maintain effectiveness.",
+      "Replace UV lamps at the end of their rated service life."
+    ]
   }
 }

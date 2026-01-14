@@ -3,16 +3,25 @@
     "title": "Operation of Compound Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Compound Microscope.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To visualize small microorganisms using multiple lenses for magnification.",
+    "scope": "Applicable to routine slide examination in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the microscope on a stable bench and connect to power.",
+      "Adjust the light intensity and open the condenser diaphragm.",
+      "Mount the slide and center the specimen under the 10x objective.",
+      "Use coarse focus to find the image and fine focus to sharpen it.",
+      "Switch to 40x for more detail, using only the fine adjustment.",
+      "For 100x, add a drop of immersion oil and slowly raise the stage until the lens touches the oil.",
+      "Wipe the oil off the lens and slide immediately after use.",
+      "Turn the light to the lowest setting before switching OFF.",
+      "Store in a clean, dry place with the dust cover."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never use the coarse adjustment knob with 40x or 100x objectives.",
+      "Do not allow the objective lens to touch the slide.",
+      "Always use lens paper and approved cleaning fluid for lenses.",
+      "Avoid exposing the microscope to direct sunlight or humidity.",
+      "Carry the instrument properly to prevent mechanical damage."
+    ]
   }
 }

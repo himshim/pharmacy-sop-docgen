@@ -3,16 +3,26 @@
     "title": "Operation of Deep Freezer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Deep Freezer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the storage of chemicals and samples in a deep freezer.",
+    "scope": "Applicable to storage activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the freezer is connected to a stabilized power supply.",
+      "Set the thermostat to the required temperature (typically -20°C to -80°C).",
+      "Allow the freezer to stabilize at the set temperature before loading samples.",
+      "Organize samples in labeled racks or boxes for easy retrieval.",
+      "Ensure all sample containers are tightly sealed and properly labeled.",
+      "Keep a detailed log of the samples stored, including the date and position.",
+      "Monitor and record the temperature daily from the digital display.",
+      "Inspect the door gasket for ice build-up and defrost manually if necessary.",
+      "Clean the interior periodically with an appropriate disinfectant/cleaner.",
+      "Document any temperature excursions and corrective actions taken."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Minimize the duration and frequency of door openings to maintain temperature.",
+      "Do not store food or beverages in the laboratory freezer.",
+      "Ensure there is a backup power supply for critical samples.",
+      "Wear insulated gloves when handling samples from the deep freezer.",
+      "Report any persistent temperature deviations to the lab manager immediately."
+    ]
   }
 }

@@ -3,16 +3,27 @@
     "title": "Operation of Chemical Storage Cabinet"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Chemical Storage Cabinet.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the safe storage and organization of chemicals in a dedicated storage cabinet.",
+    "scope": "Applicable to inventory and safety activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the cabinet is made of material compatible with the chemicals stored (e.g., metal for flammables, plastic for corrosives).",
+      "Group chemicals according to their compatibility and hazard classification (e.g., acids, bases, oxidizers).",
+      "Verify that all containers are tightly closed and clearly labeled with chemical name and hazard warnings.",
+      "Place larger and heavier containers on the bottom shelves.",
+      "Ensure that liquid chemicals are stored in secondary containment trays.",
+      "Maintain a current inventory list on the exterior of the cabinet.",
+      "Keep the cabinet doors closed and locked when not in use.",
+      "Check for any leaking containers or signs of crystallization/degradation regularly.",
+      "Ensure the ventilation ports of the cabinet (if any) are not blocked.",
+      "In case of a spill inside the cabinet, clean it immediately using the spill kit.",
+      "Document the removal and return of chemicals in the inventory log."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never store incompatible chemicals (e.g., acids and bases) in the same cabinet section.",
+      "Avoid overcrowding the shelves to prevent accidental breakage.",
+      "Do not store flammables in a standard cabinet; use a certified flammable storage cabinet.",
+      "Keep highly toxic or regulated substances in a separate, locked compartment.",
+      "Wear appropriate PPE when retrieving or storing chemicals."
+    ]
   }
 }

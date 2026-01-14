@@ -3,16 +3,26 @@
     "title": "Operation of Stainless Steel Mixing Tank"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Stainless Steel Mixing Tank.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Stainless Steel Mixing Tank for liquid preparation.",
+    "scope": "Applicable to liquid manufacturing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the tank is clean and valves are properly closed.",
+      "Fill the tank with the required volume of solvent/water.",
+      "Start the agitator and set the desired speed.",
+      "Add ingredients as per the manufacturing instructions.",
+      "Maintain mixing until a homogeneous solution is achieved.",
+      "Check pH and other parameters as required.",
+      "Discharge the liquid through the bottom outlet for further processing.",
+      "Clean the tank and stirrer immediately after use.",
+      "Sanitize with appropriate agents if required.",
+      "Document batch details and mixing parameters in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed the maximum working volume of the tank.",
+      "Ensure the agitator is stopped before opening the manhole/lid.",
+      "Check for leaks at valves and gaskets before starting.",
+      "Follow validated cleaning SOPs for product changeover.",
+      "Use appropriate PPE during ingredient charging."
+    ]
   }
 }

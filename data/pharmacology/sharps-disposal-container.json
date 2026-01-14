@@ -1,18 +1,23 @@
 {
   "meta": {
-    "title": "Operation of Sharps Disposal Container"
+    "title": "Use of Sharps Disposal Container"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Sharps Disposal Container.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To safely collect and dispose of used needles, blades, and other sharp biomedical waste.",
+    "scope": "Applicable to all areas handling sharps in Pharmacology and animal facilities.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place puncture-resistant sharps containers at points of use.",
+      "Immediately discard used needles, syringes, scalpels, and glass shards without recapping.",
+      "Do not fill the container beyond the marked fill line (usually two-thirds full).",
+      "Seal the container securely when full.",
+      "Label with biohazard symbol and send for treatment and disposal as per institutional SOP."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never attempt to reopen or reuse sharps containers.",
+      "Do not push sharps down with hands.",
+      "Place containers out of reach of unauthorized persons and animals.",
+      "Use only certified, puncture-proof containers.",
+      "Follow local biomedical waste management regulations."
+    ]
   }
 }

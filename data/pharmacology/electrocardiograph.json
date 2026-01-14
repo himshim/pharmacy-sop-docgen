@@ -3,16 +3,24 @@
     "title": "Operation of Electrocardiograph"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Electrocardiograph.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To record electrical activity of the heart in experimental animals.",
+    "scope": "Applicable to cardiovascular pharmacology studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Connect the ECG leads to the appropriate limb or chest positions.",
+      "Ensure good electrode contact using conductive gel or clips.",
+      "Select the desired lead configuration and paper speed or screen settings.",
+      "Start recording before administering any test drug.",
+      "Observe and record baseline ECG.",
+      "Administer the drug and continuously monitor ECG changes.",
+      "Save or print ECG tracings for analysis.",
+      "Disconnect electrodes and clean the animal and equipment."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid electrical interference by proper grounding.",
+      "Check cables and electrodes for damage.",
+      "Use appropriate sedation or anesthesia to minimize movement artifacts.",
+      "Do not allow liquids to enter the instrument.",
+      "Follow animal ethics and welfare guidelines."
+    ]
   }
 }

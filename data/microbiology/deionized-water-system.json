@@ -3,16 +3,24 @@
     "title": "Operation of Deionized Water System"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Deionized Water System.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To produce deionized water for media preparation, reagent dilution, and equipment cleaning.",
+    "scope": "Applicable to water purification activities in the Microbiology laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check the inlet water supply and ensure valves are open.",
+      "Switch ON the deionization unit as per manufacturer instructions.",
+      "Allow water to run for a few minutes to flush the system.",
+      "Collect deionized water in clean, labeled glass or plastic containers.",
+      "Measure and periodically record the conductivity or resistivity of the output water.",
+      "Replace resin cartridges or filters when water quality deteriorates beyond set limits.",
+      "Sanitize the storage tank at defined intervals.",
+      "Turn OFF the system if it will not be used for an extended period."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not touch the inner surfaces of collection containers.",
+      "Ensure regular monitoring to prevent microbial growth in the storage tank.",
+      "Use only approved cartridges and filters.",
+      "Protect the system from freezing temperatures.",
+      "Follow lockout/tagout procedures during maintenance."
+    ]
   }
 }

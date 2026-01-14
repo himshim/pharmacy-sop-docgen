@@ -3,16 +3,44 @@
     "title": "Operation of Mechanical Sieve Shaker"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Mechanical Sieve Shaker.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Mechanical Sieve Shaker for particle size analysis and classification of pharmaceutical powders and granules using standard sieves.",
+    "scope": "Applicable to sieve analysis activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the sieve shaker is placed on a stable, level surface.",
+      "Verify that the clamp mechanism and mounting platform are functional.",
+      "Select appropriate sieves based on particle size range to be analyzed.",
+      "Clean and dry all sieves thoroughly before use.",
+      "Arrange sieves in descending order of mesh size (largest opening on top).",
+      "Place collection pan at the bottom and lid on top of the sieve stack.",
+      "Weigh the sample accurately (typically 25-100 g depending on material).",
+      "Place the sample on the top sieve.",
+      "Secure the sieve stack on the shaker mounting platform.",
+      "Tighten the clamp to hold sieves firmly.",
+      "Set the shaking time (typically 5-20 minutes).",
+      "Set amplitude and frequency if adjustable.",
+      "Start the mechanical shaker.",
+      "Allow sieving to continue for the set duration without interruption.",
+      "After completion, stop the shaker and allow it to come to rest.",
+      "Carefully remove the sieve stack from the shaker.",
+      "Disassemble the sieve stack starting from top.",
+      "Collect and weigh material retained on each sieve.",
+      "Weigh material collected in the bottom pan.",
+      "Calculate percent retained on each sieve and cumulative percent.",
+      "Clean all sieves thoroughly using brush and compressed air.",
+      "Inspect sieves for damage or mesh deformation.",
+      "Document all weight data, calculations, and observations in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use appropriate sample size to prevent sieve overloading.",
+      "Do not force material through sieves manually.",
+      "Handle sieves carefully to avoid mesh damage.",
+      "Ensure sieves are properly stacked and clamped.",
+      "Use consistent sieving time for reproducible results.",
+      "Clean sieves thoroughly between different samples.",
+      "Inspect sieve integrity regularly and replace if damaged.",
+      "Use calibrated sieves with valid certification.",
+      "Wear appropriate PPE including mask and gloves.",
+      "Perform analysis in controlled environment to minimize moisture effects."
+    ]
   }
 }

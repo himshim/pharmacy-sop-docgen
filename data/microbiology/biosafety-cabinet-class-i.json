@@ -3,16 +3,26 @@
     "title": "Operation of Biosafety Cabinet Class I"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Biosafety Cabinet Class I.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide personnel and environmental protection when handling low to moderate-risk microorganisms.",
+    "scope": "Applicable to safe laboratory practices in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the cabinet blower and fluorescent light.",
+      "Allow the air to purge for at least 15 minutes before use.",
+      "Check the pressure gauge to ensure airflow is within limits.",
+      "Disinfect the work surface with 70% ethanol.",
+      "Arrange necessary materials at least 6 inches from the front opening.",
+      "Perform work at the center of the work surface.",
+      "Avoid rapid arm movements to maintain airflow patterns.",
+      "After work, disinfect all items before removing them.",
+      "Wipe down the interior walls and surface with disinfectant.",
+      "Allow the blower to run for 5 minutes before switching OFF."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use Bunsen burners inside the cabinet as they disrupt airflow.",
+      "Do not block the front air intake or rear exhaust grilles.",
+      "Wear appropriate PPE including lab coat and gloves.",
+      "This cabinet does not provide product protection (samples may be contaminated).",
+      "Annual certification by a qualified technician is mandatory."
+    ]
   }
 }

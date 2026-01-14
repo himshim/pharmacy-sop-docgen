@@ -3,16 +3,28 @@
     "title": "Operation of Ointment Mill"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Ointment Mill.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Ointment Mill for particle size reduction and homogenization of ointments and semi-solid preparations.",
+    "scope": "Applicable to semi-solid manufacturing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the mill rollers/plates are clean and properly aligned.",
+      "Check utility connections and cooling water supply if applicable.",
+      "Set the gap between rollers as per desired fineness.",
+      "Power ON the mill and check for smooth rotation.",
+      "Feed the pre-mixed ointment base into the hopper.",
+      "Monitor the consistency of the milled product at the discharge.",
+      "Recirculate the product if additional homogenization is required.",
+      "Monitor roller temperature to prevent product melting or degradation.",
+      "After completion, stop the feed and allow the mill to run until empty.",
+      "Dismantle product contact parts for thorough cleaning.",
+      "Sanitize components and reassemble for next use.",
+      "Document milling parameters and product characteristics in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain proper gap settings to avoid metal-to-metal contact.",
+      "Monitor product temperature continuously for heat-sensitive bases.",
+      "Do not process materials containing abrasive particles that can damage rollers.",
+      "Ensure proper cooling water flow during extended operations.",
+      "Wear appropriate PPE including gloves and apron."
+    ]
   }
 }

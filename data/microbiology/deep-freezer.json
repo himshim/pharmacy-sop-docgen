@@ -3,16 +3,24 @@
     "title": "Operation of Deep Freezer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Deep Freezer.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To store biological samples, media, and reagents at sub-zero temperatures for extended periods.",
+    "scope": "Applicable to long-term storage activities in the Microbiology laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the freezer temperature is set to the required value (e.g., -20°C or -80°C).",
+      "Arrange samples in labeled boxes or racks to ensure easy identification.",
+      "Place newly added samples away from the door to minimize temperature fluctuations.",
+      "Monitor and record the internal temperature at least once daily.",
+      "Defrost the freezer periodically if excessive ice buildup is observed.",
+      "Clean the interior with a suitable disinfectant during defrost cycles.",
+      "Ensure the door gasket is intact and seals properly.",
+      "Maintain an updated inventory log of stored items."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the freezer as it may compromise cooling efficiency.",
+      "Avoid prolonged door opening to prevent temperature rise.",
+      "Wear insulated gloves when handling samples inside the freezer.",
+      "Do not store explosive, volatile, or flammable chemicals unless the freezer is rated for such use.",
+      "Ensure the freezer is connected to a backup power system if storing critical samples."
+    ]
   }
 }

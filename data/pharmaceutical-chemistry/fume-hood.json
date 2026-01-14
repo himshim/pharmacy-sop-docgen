@@ -3,16 +3,24 @@
     "title": "Operation of Fume Hood"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Fume Hood.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To protect laboratory personnel from inhaling hazardous chemical vapors.",
+    "scope": "Applicable to general laboratory operations in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify the exhaust fan is running by checking the airflow monitor.",
+      "Keep the sash at or below the 'Safe Working Level' mark.",
+      "Position all equipment at least 6 inches from the front edge of the hood.",
+      "Avoid blocking the rear baffles to ensure uniform airflow.",
+      "Perform chemical reactions and transfers slowly to minimize turbulence.",
+      "Clean the work surface immediately after a spill using appropriate agents.",
+      "Lower the sash completely when the hood is not in use.",
+      "Document any airflow alarms or equipment malfunctions in the log."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use the fume hood for long-term storage of chemical waste.",
+      "Keep the lab door closed to prevent cross-drafts near the hood.",
+      "Wear full PPE, including safety goggles and gloves, while working.",
+      "Do not place your head or upper body inside the hood during operation.",
+      "Inspect the sash cable and light functionality monthly."
+    ]
   }
 }

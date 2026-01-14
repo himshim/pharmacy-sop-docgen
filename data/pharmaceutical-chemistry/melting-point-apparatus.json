@@ -3,16 +3,25 @@
     "title": "Operation of Melting Point Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Melting Point Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To determine the melting point of a solid substance using a manual heating block and thermometer.",
+    "scope": "Applicable to identity testing in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill a capillary tube with a finely ground sample to a height of 2-3 mm.",
+      "Insert the capillary into the heating block slot.",
+      "Place a calibrated thermometer into the thermometer well.",
+      "Switch ON the apparatus and set a rapid heating rate until 10-15°C below the expected MP.",
+      "Reduce the heating rate to 1-2°C per minute near the melting point.",
+      "Observe the sample through the magnifying lens and note the temperature when melting begins.",
+      "Note the temperature when the entire sample has liquefied.",
+      "Record the melting range (T1 - T2) in the logbook.",
+      "Turn OFF the apparatus and allow it to cool."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not re-use a capillary tube for a second determination.",
+      "Ensure the sample is dry, as moisture can depress the melting point.",
+      "Pack the sample tightly at the bottom of the capillary to avoid air gaps.",
+      "Handle the hot block with caution to prevent burns.",
+      "Perform a calibration check with a known standard periodically."
+    ]
   }
 }

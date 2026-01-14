@@ -3,16 +3,23 @@
     "title": "Operation of Laboratory Sink with Eye Wash"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Laboratory Sink with Eye Wash.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To facilitate glassware cleaning and provide emergency eye decontamination.",
+    "scope": "Applicable to general maintenance and safety in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Use the faucet for cleaning glassware with non-hazardous residues.",
+      "Keep the sink basin free from clutter and solid waste.",
+      "In an emergency, activate the eye wash by pushing the lever.",
+      "Rinse eyes for at least 15 minutes as per safety protocols.",
+      "Flush the eye wash station weekly to ensure water quality.",
+      "Clean the sink strainer regularly to prevent clogging.",
+      "Keep the surrounding floor dry to prevent slips and falls."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not pour hazardous chemical waste down the sink.",
+      "Ensure the eye wash heads are protected by dust covers.",
+      "Maintain clear access to the emergency eye wash at all times.",
+      "Wear gloves when cleaning the sink with detergents.",
+      "Report any plumbing leaks or low water pressure."
+    ]
   }
 }

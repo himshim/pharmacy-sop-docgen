@@ -3,16 +3,28 @@
     "title": "Operation of Suppository Mould"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Suppository Mould.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Suppository Mould for preparation of suppositories by pour molding technique.",
+    "scope": "Applicable to semi-solid manufacturing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the mould cavities are clean, dry, and free from debris.",
+      "Ensure the mould halves are properly aligned and tightly secured.",
+      "Prepare the suppository base and medicament mixture as per the formulation.",
+      "Melt the base and incorporate active ingredients at specified temperature.",
+      "Apply a thin layer of suitable lubricant to the mould cavities if required.",
+      "Pour the molten mass into the cavities until they are slightly overfilled.",
+      "Allow the mould to cool at room temperature followed by refrigeration.",
+      "Once solidified, scrape off the excess mass from the top of the mould.",
+      "Open the mould carefully and remove the finished suppositories.",
+      "Inspect for uniform appearance, weight, and absence of air bubbles.",
+      "Clean the mould thoroughly with warm water or appropriate solvent after use.",
+      "Store the mould in a dry place to prevent corrosion or damage."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overheat the suppository base as it may affect solidification.",
+      "Ensure uniform mixing of medicament in the molten base.",
+      "Avoid using excessive lubricant which can affect the appearance.",
+      "Allow sufficient cooling time before attempting to open the mould.",
+      "Handle the mould surfaces carefully to avoid scratches."
+    ]
   }
 }

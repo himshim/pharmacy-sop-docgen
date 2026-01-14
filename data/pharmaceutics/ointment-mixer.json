@@ -3,16 +3,27 @@
     "title": "Operation of Ointment Mixer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Ointment Mixer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Ointment Mixer for preparation of homogeneous semi-solid formulations.",
+    "scope": "Applicable to ointment manufacturing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify cleanliness of mixing vessel, stirrer, and lid.",
+      "Check heating/cooling jacket connections and utility supply.",
+      "Load base ingredients into the vessel and start heating if required.",
+      "Power ON the stirrer and set to appropriate speed.",
+      "Add active ingredients once the base is melted or at specified temperature.",
+      "Continue mixing until a uniform semi-solid mass is formed.",
+      "Observe for lumps or un-dispersed material and adjust mixing speed.",
+      "Cool the mixture gradually while maintaining slow agitation to prevent separation.",
+      "Discharge the finished ointment through the bottom valve.",
+      "Clean the vessel and stirrer immediately after use.",
+      "Document all manufacturing steps and parameters in the BMR."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure ingredients are added in the correct sequence as per SOP.",
+      "Avoid air incorporation by adjusting stirrer speed and depth.",
+      "Monitor temperature carefully to prevent ingredient degradation.",
+      "Clean thoroughly to avoid cross-contamination between batches.",
+      "Use appropriate PPE for handling hot materials."
+    ]
   }
 }

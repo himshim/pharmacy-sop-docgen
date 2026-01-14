@@ -3,16 +3,25 @@
     "title": "Operation of Gradient PCR System"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Gradient PCR System.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To amplify DNA using Polymerase Chain Reaction (PCR) with a gradient of annealing temperatures.",
+    "scope": "Applicable to molecular diagnostics and research in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the PCR thermal cycler and open the control software.",
+      "Program the PCR cycling conditions, including denaturation, annealing, and extension steps.",
+      "Set the gradient range for annealing temperature across the block.",
+      "Prepare PCR reaction tubes or plates with master mix and template DNA on ice.",
+      "Place the tubes in the thermal block, aligning them with the gradient positions.",
+      "Close the heated lid and start the run.",
+      "After completion, remove the tubes and store products at appropriate temperatures.",
+      "Save or export the run log for documentation.",
+      "Shut down the instrument as per manufacturer guidelines."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid repeated freeze-thaw cycles of template DNA and reagents.",
+      "Ensure tight sealing of tubes to prevent evaporation and contamination.",
+      "Use aerosol-resistant tips during reaction setup.",
+      "Do not open reaction tubes in the pre-PCR setup area.",
+      "Regularly calibrate the block temperature and heated lid."
+    ]
   }
 }

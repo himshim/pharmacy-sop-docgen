@@ -3,16 +3,23 @@
     "title": "Operation of Fire Extinguisher"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Fire Extinguisher.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To extinguish small fires in the Pharmacognosy laboratory involving flammable solvents, electrical equipment, or plant materials.",
+    "scope": "Applicable to emergency fire response in the Pharmacognosy department.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Identify the fire type (A: ordinary combustibles, B: flammable liquids, C: electrical, D: metals).",
+      "Select the appropriate extinguisher for the fire class.",
+      "Pull the safety pin, aiming the nozzle at the base of the fire.",
+      "Squeeze the handle to discharge while sweeping side to side.",
+      "Back away while continuing to apply the agent until the fire is extinguished.",
+      "Evacuate if the fire cannot be controlled and call emergency services.",
+      "Report the incident and have the extinguisher refilled by authorized personnel."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never use water on electrical or flammable liquid fires.",
+      "Know the location of all extinguishers and emergency exits.",
+      "Evacuate first if the fire is large or spreading.",
+      "Do not re-enter the area until declared safe by authorities.",
+      "Inspect monthly and after each use."
+    ]
   }
 }

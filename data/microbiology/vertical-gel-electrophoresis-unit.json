@@ -3,16 +3,25 @@
     "title": "Operation of Vertical Gel Electrophoresis Unit"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vertical Gel Electrophoresis Unit.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To separate proteins or nucleic acids in vertical slab gels.",
+    "scope": "Applicable to SDS-PAGE and related techniques in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Assemble the glass plates and spacers to cast the polyacrylamide gel.",
+      "Pour resolving and stacking gels as per protocol and insert combs.",
+      "After polymerization, remove the comb and mount the gel assembly in the tank.",
+      "Fill the inner and outer chambers with running buffer.",
+      "Load samples and molecular weight markers into wells.",
+      "Connect the tank to the power supply and set appropriate voltage.",
+      "Run the gel until the dye front reaches the desired position.",
+      "Turn OFF the power, disassemble the gel, and proceed with staining or blotting.",
+      "Dispose of buffers and gels according to safety procedures."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure correct assembly to prevent leakage.",
+      "Handle acrylamide solutions with care as they are neurotoxic.",
+      "Do not touch the buffer or gel while power is ON.",
+      "Avoid excessive voltage that may overheat and distort bands.",
+      "Use appropriate PPE when handling stains and destaining solutions."
+    ]
   }
 }

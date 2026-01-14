@@ -3,16 +3,27 @@
     "title": "Operation of Tablet Friability Tester"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Tablet Friability Tester.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Tablet Friability Tester to evaluate the physical strength of tablets.",
+    "scope": "Applicable to quality control activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the friability drum is clean and properly attached to the shaft.",
+      "Select 10 or 20 tablets (or weight equivalent to 6.5g) for testing.",
+      "De-dust the tablets and weigh them accurately on an analytical balance (W1).",
+      "Place the tablets inside the friability drum.",
+      "Set the rotation speed to 25 rpm and timer to 4 minutes (100 rotations).",
+      "Start the tester and monitor the tumbling action.",
+      "After 100 rotations, remove the tablets from the drum.",
+      "De-dust the tablets again and weigh them accurately (W2).",
+      "Calculate the percentage friability: (W1 - W2) / W1 * 100.",
+      "Check for any broken or cracked tablets after the test.",
+      "Document the results and verify against pharmacopeial limits (typically <1%)."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure tablets are thoroughly de-dusted before both weighings.",
+      "Do not test tablets that are already broken or chipped.",
+      "Clean the drum interior between different batches.",
+      "Ensure the drum is securely locked before starting the motor.",
+      "Record any unusual observations like capping or lamination."
+    ]
   }
 }

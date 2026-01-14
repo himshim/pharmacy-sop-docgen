@@ -3,16 +3,43 @@
     "title": "Operation of Homogenizer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Homogenizer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Homogenizer for uniform mixing and particle size reduction of pharmaceutical emulsions, suspensions, and dispersions using high-pressure homogenization.",
+    "scope": "Applicable to homogenization activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the homogenizer is installed on a stable foundation with proper leveling.",
+      "Verify that all piping connections, inlet, and outlet valves are secure.",
+      "Check that homogenizing valve and impact ring are clean and properly assembled.",
+      "Verify cooling water supply is connected and flowing if applicable.",
+      "Power ON the homogenizer and check for proper operation.",
+      "Set the homogenization pressure according to product requirements.",
+      "Prepare product or coarse emulsion for homogenization.",
+      "Prime the homogenizer by running water or solvent through the system.",
+      "Drain priming liquid completely before introducing product.",
+      "Start feeding product into the homogenizer inlet at controlled rate.",
+      "Adjust feed rate to maintain desired pressure and flow.",
+      "Monitor homogenization pressure continuously during operation.",
+      "Collect homogenized product at the outlet in appropriate containers.",
+      "Pass product through multiple cycles if required for finer particle size.",
+      "Monitor product temperature and use cooling if necessary.",
+      "Check particle size or droplet size periodically during processing.",
+      "After completion, flush the system with water or appropriate solvent.",
+      "Continue flushing until all product residue is removed.",
+      "Disassemble homogenizing valve for thorough cleaning and inspection.",
+      "Inspect valve seat and impact ring for wear and replace if necessary.",
+      "Reassemble and sanitize the system if required for next batch.",
+      "Document homogenization pressure, cycles, and product characteristics in the record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed maximum operating pressure of the homogenizer.",
+      "Ensure proper priming to avoid running the pump dry.",
+      "Monitor product temperature to prevent heat-induced degradation.",
+      "Use cooling system for prolonged operation or high-pressure processing.",
+      "Avoid processing materials with large particles that can damage valve.",
+      "Check valve components regularly for wear and replace when needed.",
+      "Ensure proper feed rate to maintain stable pressure.",
+      "Wear appropriate PPE including safety goggles and gloves.",
+      "Follow lockout/tagout procedures during maintenance.",
+      "Clean and sanitize thoroughly between different products."
+    ]
   }
 }

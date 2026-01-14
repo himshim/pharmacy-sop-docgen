@@ -3,16 +3,42 @@
     "title": "Operation of Ball Mill"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Ball Mill.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Ball Mill for size reduction and grinding of pharmaceutical materials into fine powder using grinding media.",
+    "scope": "Applicable to milling and grinding activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the ball mill is placed on a stable foundation and properly leveled.",
+      "Check that all safety guards and covers are properly secured.",
+      "Verify that the mill jar or cylinder is clean, dry, and free from previous material.",
+      "Select appropriate grinding media (balls) based on material hardness and desired fineness.",
+      "Load the grinding balls into the mill jar (typically 30-50% of jar volume).",
+      "Weigh the material to be milled and ensure it is pre-dried if necessary.",
+      "Add the material to the mill jar (typically 20-30% of jar volume for optimal grinding).",
+      "Secure the mill jar lid tightly and ensure proper sealing to prevent leakage.",
+      "Mount the mill jar on the roller assembly or in the mill housing securely.",
+      "Close all safety guards and ensure they are locked before operation.",
+      "Set the rotation speed according to the material type and desired particle size.",
+      "Set the milling time based on the hardness of material and required fineness.",
+      "Start the ball mill and observe initial operation for any unusual noise or vibration.",
+      "Allow milling to continue for the programmed duration without interruption.",
+      "Monitor temperature periodically if heat-sensitive materials are being processed.",
+      "After completion, stop the mill and wait for complete cessation of rotation.",
+      "Open safety guards and carefully remove the mill jar.",
+      "Open the jar lid and separate the milled powder from grinding balls using a sieve.",
+      "Collect the milled powder and verify particle size if required.",
+      "Clean the mill jar, grinding balls, and mill components thoroughly.",
+      "Document milling parameters including time, speed, and material details in the record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the mill without proper safety guards in place.",
+      "Do not overload the mill jar beyond recommended capacity.",
+      "Ensure proper ball-to-material ratio for efficient grinding.",
+      "Avoid milling heat-sensitive materials for extended periods without cooling.",
+      "Wear hearing protection as ball mills can generate significant noise.",
+      "Do not open the mill or remove the jar while it is in motion.",
+      "Check grinding media periodically for wear and replace if necessary.",
+      "Ensure proper ventilation if milling materials that generate dust.",
+      "Wear appropriate PPE including safety goggles, dust mask, and gloves.",
+      "Follow electrical safety guidelines and ensure proper grounding."
+    ]
   }
 }

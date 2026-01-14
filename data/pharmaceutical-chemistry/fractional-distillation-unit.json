@@ -3,16 +3,25 @@
     "title": "Operation of Fractional Distillation Unit"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Fractional Distillation Unit.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To separate a mixture of miscible liquids with close boiling points using a fractionating column.",
+    "scope": "Applicable to purification processes in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Assemble the distillation flask, fractionating column, and condenser.",
+      "Ensure all joints are secured with clips and lightly greased.",
+      "Fill the flask with the mixture (max 2/3 full) and add boiling chips.",
+      "Start the cooling water flow through the condenser jacket.",
+      "Gradually increase the heat to maintain a steady reflux in the column.",
+      "Monitor the thermometer at the top of the column for constant temperature plateaus.",
+      "Collect the different fractions in separate receiving flasks.",
+      "Stop heating when the desired fractions have been collected.",
+      "Allow the unit to cool to room temperature before dismantling."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the fractionating column is insulated to maintain the temperature gradient.",
+      "Never heat a completely closed system; ensure a vent is present.",
+      "Monitor the heating rate to avoid flooding the column.",
+      "Handle hot glassware with appropriate protective equipment.",
+      "Discard the forerun and residue as per chemical waste SOPs."
+    ]
   }
 }

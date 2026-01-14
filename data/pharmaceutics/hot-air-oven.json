@@ -3,16 +3,43 @@
     "title": "Operation of Hot Air Oven"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Hot Air Oven.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Hot Air Oven for drying pharmaceutical materials, glassware sterilization, and heat treatment applications using dry heat.",
+    "scope": "Applicable to drying and heating activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the hot air oven is placed on a stable surface with adequate clearance.",
+      "Verify that the oven is properly ventilated and away from flammable materials.",
+      "Check that shelves and trays are clean and properly positioned.",
+      "Inspect door seal and ensure proper closing mechanism.",
+      "Power ON the hot air oven using the main switch.",
+      "Set the desired temperature using the temperature controller.",
+      "Set the drying time using the timer if equipped.",
+      "Allow the oven to reach set temperature before loading materials.",
+      "Verify temperature using calibrated thermometer if required.",
+      "Arrange materials on trays ensuring proper air circulation.",
+      "Do not overload shelves or block air circulation vents.",
+      "Open the door and quickly load materials to minimize heat loss.",
+      "Close the door securely ensuring proper sealing.",
+      "Monitor temperature throughout the drying process.",
+      "Record temperature at regular intervals as per protocol.",
+      "After drying time completion, turn OFF the heating element.",
+      "Allow materials to cool inside the oven before opening door.",
+      "For heat-sensitive materials, open door slightly for gradual cooling.",
+      "Once materials reach safe handling temperature, remove them carefully.",
+      "Use heat-resistant gloves or tongs when handling hot items.",
+      "Clean the oven interior periodically to remove spills or residues.",
+      "Document temperature, time, and observations in the equipment logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not place flammable or explosive materials in the oven.",
+      "Avoid overloading which restricts air circulation and uniform heating.",
+      "Never open the door suddenly when oven is at high temperature.",
+      "Use appropriate heat-resistant containers and trays.",
+      "Monitor temperature continuously for heat-sensitive materials.",
+      "Do not place wet materials directly without proper drip trays.",
+      "Ensure proper ventilation if drying materials that release vapors.",
+      "Wear heat-resistant gloves when handling hot materials.",
+      "Allow adequate cooling time before removing materials.",
+      "Perform regular calibration to ensure temperature accuracy."
+    ]
   }
 }

@@ -3,16 +3,42 @@
     "title": "Operation of Hammer Mill"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Hammer Mill.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Hammer Mill for size reduction of pharmaceutical materials using high-speed rotating hammers to produce uniform particle size.",
+    "scope": "Applicable to milling and size reduction activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the hammer mill is installed on a stable foundation with vibration dampening.",
+      "Verify that all safety guards and interlocks are properly installed.",
+      "Check that hammers and screen are clean and properly secured.",
+      "Select appropriate screen size based on desired particle size output.",
+      "Install the selected screen securely in the mill housing.",
+      "Inspect hammers for wear, damage, or imbalance and replace if necessary.",
+      "Power ON the hammer mill and allow it to reach full speed before feeding.",
+      "Listen for any unusual noise or vibration indicating improper assembly.",
+      "Start feeding material through the hopper at a controlled rate.",
+      "Monitor motor load and adjust feed rate to prevent overloading.",
+      "Observe discharge rate and particle size of milled material.",
+      "Collect milled material in appropriate containers.",
+      "Monitor motor temperature and take breaks if excessive heating occurs.",
+      "After milling completion, stop the feed and allow mill to run until empty.",
+      "Power OFF the mill and wait for complete cessation of rotation.",
+      "Remove screen and hammers for inspection and cleaning.",
+      "Clean all product contact parts using vacuum, brush, or compressed air.",
+      "Check screen for damage or enlargement of openings.",
+      "Inspect hammers for wear and replace if significantly worn.",
+      "Reassemble the mill for next operation.",
+      "Document milling parameters, screen size, and material details in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the mill without proper safety guards in place.",
+      "Do not insert hands or objects into the mill during operation.",
+      "Avoid overloading which can damage hammers or motor.",
+      "Wear hearing protection as hammer mills generate very high noise levels.",
+      "Ensure proper grounding to prevent static electricity buildup.",
+      "Use appropriate dust extraction system to control airborne dust.",
+      "Check for foreign materials in feed that could damage hammers.",
+      "Replace worn hammers promptly to maintain milling efficiency.",
+      "Wear appropriate PPE including safety goggles, ear plugs, and dust mask.",
+      "Follow lockout/tagout procedures during cleaning and maintenance."
+    ]
   }
 }

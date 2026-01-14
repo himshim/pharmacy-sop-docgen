@@ -3,16 +3,23 @@
     "title": "Operation of Binocular Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Binocular Microscope.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To examine morphological and histological features of crude drugs using binocular observation.",
+    "scope": "Applicable to microscopic identification and evaluation in Pharmacognosy.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the microscope on a stable table and connect to power.",
+      "Switch ON the light source and adjust brightness.",
+      "Place the prepared slide on the stage and secure with stage clips.",
+      "Start with the lowest magnification objective and use coarse focus, then refine with fine focus.",
+      "Center the area of interest and switch to higher magnification if needed.",
+      "Adjust interpupillary distance and diopter settings for comfortable binocular viewing.",
+      "After observation, lower the stage, remove the slide, switch OFF the light, and cover the microscope."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use coarse focus at high magnification to avoid damaging slides or objectives.",
+      "Clean lenses only with approved lens tissue and cleaning solution.",
+      "Avoid touching optical surfaces with fingers.",
+      "Keep the microscope covered when not in use to prevent dust deposition.",
+      "Have the instrument serviced and aligned periodically."
+    ]
   }
 }

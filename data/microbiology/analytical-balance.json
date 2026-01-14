@@ -3,16 +3,25 @@
     "title": "Operation of Analytical Balance"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Analytical Balance.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide high-precision weighing of media components and chemical reagents.",
+    "scope": "Applicable to all quantitative tasks in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check the level of the balance and adjust if necessary.",
+      "Power ON and allow 30 minutes for stabilization.",
+      "Zero the balance and place a weighing boat on the pan.",
+      "Tare the balance to ignore the boat's weight.",
+      "Carefully add the sample and wait for the stability indicator.",
+      "Record the weight and remove the sample.",
+      "Clean the balance pan and surrounding area with a soft brush.",
+      "Keep the draft shield closed when not loading samples.",
+      "Switch OFF or leave in standby as per protocol."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not touch the weighing pan with bare hands.",
+      "Protect the balance from drafts, vibrations, and heat.",
+      "Always use weighing boats or paper; never weigh directly on the pan.",
+      "Perform daily calibration checks with standard weights.",
+      "Do not exceed the maximum capacity."
+    ]
   }
 }

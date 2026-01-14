@@ -3,16 +3,43 @@
     "title": "Operation of Double Cone Blender"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Double Cone Blender.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Double Cone Blender for homogeneous mixing of pharmaceutical powders, granules, and dry blends with gentle tumbling action.",
+    "scope": "Applicable to powder blending activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the blender is installed on a stable foundation with proper alignment.",
+      "Verify that the blending vessel is clean, dry, and free from previous material.",
+      "Check that all safety guards and interlocks are functioning properly.",
+      "Inspect the charging and discharging ports for cleanliness.",
+      "Weigh all ingredients accurately as per batch formula.",
+      "Open the charging port of the double cone blender.",
+      "Load ingredients into the blender through the charging port.",
+      "Fill the blender to 50-60% of total capacity for optimal blending.",
+      "Add ingredients in appropriate sequence if order matters for blend uniformity.",
+      "Close the charging port securely and ensure proper sealing.",
+      "Set the blending speed (typically 10-20 rpm for double cone blenders).",
+      "Set the blending time based on validation data (typically 15-30 minutes).",
+      "Start the blender and allow it to rotate for the specified duration.",
+      "Monitor the blending operation for any unusual noise or vibration.",
+      "After blending completion, stop the motor and allow vessel to stop rotating.",
+      "Position the blender for discharge by rotating to appropriate angle.",
+      "Open the discharge valve or port slowly.",
+      "Collect blended material into appropriate containers or transfer for further processing.",
+      "Take samples for blend uniformity testing as per sampling plan.",
+      "Clean the blender interior thoroughly using vacuum or brushes.",
+      "Close all ports and leave the blender ready for next operation.",
+      "Document blending time, speed, and observations in the batch manufacturing record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the blender beyond 60% capacity for effective blending.",
+      "Ensure proper sequence of ingredient addition to prevent segregation.",
+      "Avoid over-blending which may cause segregation of powder blends.",
+      "Check blend uniformity through proper sampling and analysis.",
+      "Ensure charging and discharge ports are properly sealed during operation.",
+      "Clean thoroughly between different products to prevent cross-contamination.",
+      "Inspect vessel interior for dead spots or material buildup.",
+      "Wear appropriate PPE including mask, gloves, and protective clothing.",
+      "Follow lockout/tagout procedures during cleaning and maintenance.",
+      "Perform line clearance verification before loading new batch."
+    ]
   }
 }

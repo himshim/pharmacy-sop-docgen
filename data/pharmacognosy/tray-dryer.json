@@ -3,16 +3,16 @@
     "title": "Operation of Tray Dryer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Tray Dryer.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To dry bulk plant material.",
+    "scope": "Applicable to drying.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Load trays.",
+      "Set temperature.",
+      "Dry to constant weight."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Air circulation.",
+      "Uniform loading."
+    ]
   }
 }

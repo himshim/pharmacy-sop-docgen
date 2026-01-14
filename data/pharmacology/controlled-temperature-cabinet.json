@@ -3,16 +3,23 @@
     "title": "Operation of Controlled Temperature Cabinet"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Controlled Temperature Cabinet.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To store drugs, reagents, and biological materials at precise temperature control.",
+    "scope": "Applicable to temperature-sensitive material storage in pharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set the cabinet to the required temperature range.",
+      "Allow stabilization and verify with independent thermometer.",
+      "Organize materials with proper labeling and inventory.",
+      "Monitor and log temperature daily.",
+      "Clean interior surfaces monthly with approved disinfectants.",
+      "Perform annual calibration and validation.",
+      "Remove expired materials promptly."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload to ensure air circulation.",
+      "Minimize door openings.",
+      "Use data loggers for continuous monitoring.",
+      "Ensure backup power supply.",
+      "Restrict access to authorized personnel."
+    ]
   }
 }

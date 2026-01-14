@@ -3,16 +3,21 @@
     "title": "Operation of Hammer Mill"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Hammer Mill.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To rapidly reduce particle size of hard plant materials by high-speed impact.",
+    "scope": "Applicable to size reduction of seeds, roots, and barks in Pharmacognosy.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Install appropriate screen size for desired particle size.",
+      "Feed dried material gradually into the hopper.",
+      "Collect powder from discharge chute.",
+      "Clean chamber and hammers after use.",
+      "Sieve powder if further size classification is needed."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Wear PPE (mask, goggles, ear protection).",
+      "Do not open hopper while running.",
+      "Check hammers for wear regularly.",
+      "Avoid metal contamination.",
+      "Ground the mill to prevent static sparks."
+    ]
   }
 }

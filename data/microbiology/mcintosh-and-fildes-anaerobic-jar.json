@@ -3,16 +3,23 @@
     "title": "Operation of McIntosh and Fildes Anaerobic Jar"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the McIntosh and Fildes Anaerobic Jar.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To generate and maintain anaerobic conditions using evacuation and gas replacement.",
+    "scope": "Applicable to strict anaerobe culture in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Load inoculated plates into the jar and secure the lid.",
+      "Connect the jar to a vacuum pump and evacuate air to the recommended pressure.",
+      "Introduce hydrogen and CO2 gas mixture through the inlet valve.",
+      "Place a catalyst (e.g., palladium pellets) and indicator strip inside the jar.",
+      "Seal the valves and incubate at the required temperature.",
+      "After incubation, release pressure slowly and open the lid.",
+      "Verify that the indicator confirms anaerobic conditions were maintained."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure all valves and seals are in good condition before use.",
+      "Avoid rapid decompression to prevent disturbance of plates.",
+      "Handle gas cylinders according to safety regulations.",
+      "Regenerate or replace catalyst as required.",
+      "Check for leaks periodically using approved methods."
+    ]
   }
 }

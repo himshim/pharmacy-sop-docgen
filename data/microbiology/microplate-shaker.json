@@ -3,16 +3,21 @@
     "title": "Operation of Microplate Shaker"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Microplate Shaker.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To gently or vigorously shake microplates for ELISA, cell culture, or mixing.",
+    "scope": "Applicable to microplate-based assays in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the microplate on the shaker platform and secure if clamps are provided.",
+      "Set the required speed and shaking time.",
+      "Start the shaker and observe to ensure plates do not move out of position.",
+      "At the end of the cycle, stop the shaker before removing plates.",
+      "Wipe the platform with disinfectant after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed the maximum load or speed of the shaker.",
+      "Ensure plate lids or seals are properly in place to prevent spillage.",
+      "Place the shaker on a stable, level surface.",
+      "Avoid splashes that could contaminate the platform or surroundings.",
+      "Disconnect from power before performing maintenance."
+    ]
   }
 }

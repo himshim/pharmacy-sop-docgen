@@ -3,16 +3,27 @@
     "title": "Operation of Planetary Mixer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Planetary Mixer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Planetary Mixer for intensive mixing and granulation of pharmaceutical powders.",
+    "scope": "Applicable to mixing and granulation activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify cleanliness of mixing bowl and beater/whisk.",
+      "Secure the bowl in the mixer base and lock safety guards.",
+      "Load ingredients as per the manufacturing formula.",
+      "Power ON the mixer and select the appropriate speed setting.",
+      "Start mixing and monitor for uniform dispersion.",
+      "Add granulating fluid slowly if preparing a wet mass.",
+      "Scrape the bowl sides periodically for thorough mixing.",
+      "Continue until the desired consistency or endpoint is achieved.",
+      "Discharge the mixed mass for further processing.",
+      "Clean the bowl and mixing attachments thoroughly after use.",
+      "Document mixing parameters and observations in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed the bowl capacity for effective mixing.",
+      "Never place hands or tools in the bowl during operation.",
+      "Ensure the bowl is properly locked before starting the motor.",
+      "Add liquids gradually to avoid over-wetting the mass.",
+      "Wear appropriate PPE for dust control."
+    ]
   }
 }

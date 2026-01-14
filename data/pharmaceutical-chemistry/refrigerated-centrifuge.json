@@ -3,16 +3,24 @@
     "title": "Operation of Refrigerated Centrifuge"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Refrigerated Centrifuge.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To separate samples at high speeds while maintaining a specific low temperature.",
+    "scope": "Applicable to separation of heat-sensitive materials in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the centrifuge and set the desired temperature to allow pre-cooling.",
+      "Load samples into tubes, ensuring they are balanced by weight (within 0.1g).",
+      "Place tubes in the rotor in a symmetrical arrangement.",
+      "Secure the rotor lid and close the main centrifuge cover.",
+      "Set the speed (RPM/RCF) and time on the control panel.",
+      "Start the run and monitor for any vibration or error codes.",
+      "Once the rotor stops completely, remove the samples immediately.",
+      "Wipe any condensation from the chamber before closing the lid for storage."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the centrifuge with an unbalanced rotor.",
+      "Ensure the rotor is properly seated and the lid is tightened.",
+      "Do not exceed the maximum rated speed for the specific rotor being used.",
+      "Clean any spills in the chamber immediately to prevent corrosion.",
+      "Check the condition of the O-rings and seals regularly."
+    ]
   }
 }

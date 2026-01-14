@@ -3,16 +3,25 @@
     "title": "Operation of Alcohol Burner"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Alcohol Burner.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide a localized flame for heat-sterilizing small tools like inoculating loops.",
+    "scope": "Applicable to aseptic techniques in the Microbiology laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check the fuel level (typically 70-95% ethanol) and the condition of the wick.",
+      "Ensure the burner is placed on a stable, heat-resistant surface away from flammable items.",
+      "Trim the wick if it is charred to ensure a steady flame.",
+      "Light the wick using a safety lighter or match.",
+      "Adjust the wick height if necessary to achieve the desired flame size.",
+      "Hold the tool (e.g., loop) in the hottest part of the flame until it glows red.",
+      "Extinguish the flame by placing the cap or snuffer over the wick.",
+      "Allow the burner to cool before refilling or storing.",
+      "Clean any spilled alcohol immediately with a dry cloth."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never leave a lit burner unattended.",
+      "Do not refill the burner while it is lit or still hot.",
+      "Keep the fuel container capped and away from the open flame.",
+      "Ensure the room is well-ventilated to prevent vapor buildup.",
+      "Always have a fire extinguisher or sand bucket nearby."
+    ]
   }
 }

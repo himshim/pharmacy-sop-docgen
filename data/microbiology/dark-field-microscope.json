@@ -3,16 +3,25 @@
     "title": "Operation of Dark Field Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Dark Field Microscope.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To visualize live, unstained microorganisms by reflecting light off the specimen against a dark background.",
+    "scope": "Applicable to specialized microscopic analysis in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set up the microscope on a stable surface and power ON.",
+      "Install the dark-field condenser and center it properly.",
+      "Place the slide on the stage and ensure it is clean.",
+      "Focus the specimen using a low-power objective first.",
+      "Adjust the condenser height to achieve a completely dark field with a bright specimen.",
+      "Switch to higher power objectives if necessary.",
+      "After observation, remove the slide and clean the lenses.",
+      "Turn OFF the light and store the instrument properly.",
+      "Replace the dark-field condenser with a bright-field one if needed for other work."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "The specimen and slide must be extremely clean; dust scatter light.",
+      "Avoid using very thick slides or specimens.",
+      "The light source must be very bright for effective dark-field visualization.",
+      "Handle the specialized condenser with care.",
+      "Do not use coarse focus with high-power objectives."
+    ]
   }
 }

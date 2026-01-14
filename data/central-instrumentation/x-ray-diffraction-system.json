@@ -3,16 +3,44 @@
     "title": "Operation of X Ray Diffraction System"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the X Ray Diffraction System.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of X-Ray Diffraction (XRD) System for characterization of crystalline pharmaceutical materials, polymorphism studies, and phase identification.",
+    "scope": "Applicable to X-ray diffraction analysis activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the XRD system is installed in a temperature-controlled, low-humidity environment.",
+      "Verify that the cooling water supply for the X-ray tube is functioning properly.",
+      "Check that all safety interlocks and radiation shielding are in place.",
+      "Power ON the X-ray diffraction system and initialize the control software.",
+      "Allow the X-ray tube to warm up gradually following manufacturer protocol.",
+      "Set the X-ray tube voltage and current to the desired operating conditions.",
+      "Verify that the goniometer is properly aligned and the detector is functional.",
+      "Prepare the sample by grinding to fine powder if necessary for powder XRD.",
+      "Load the sample into the sample holder ensuring uniform packing and flat surface.",
+      "Use back-loading or side-loading technique to minimize preferred orientation effects.",
+      "Mount the sample holder on the goniometer stage securely.",
+      "Align the sample surface with the goniometer reference height using Z-adjustment.",
+      "Set scan parameters including start angle, end angle, step size, and scan speed.",
+      "Close the safety door and ensure all radiation safety interlocks are engaged.",
+      "Start the XRD scan and monitor the initial data acquisition.",
+      "Allow the scan to complete, which may take from 30 minutes to several hours.",
+      "After completion, the system will return to the start position automatically.",
+      "Open the safety door and carefully remove the sample holder.",
+      "Save the diffraction pattern data with proper identification.",
+      "Perform phase identification using database matching or Rietveld refinement.",
+      "Clean the sample holder and prepare for next analysis.",
+      "Power OFF the X-ray tube following proper shutdown sequence.",
+      "Document all acquisition parameters, sample details, and results in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "X-ray radiation is hazardous - never bypass safety interlocks or open the chamber during operation.",
+      "Ensure all personnel are trained in radiation safety and wear dosimetry badges.",
+      "Verify cooling water flow before operating the X-ray tube.",
+      "Never increase voltage or current too rapidly to prevent tube damage.",
+      "Ensure samples are dry and free from volatile components.",
+      "Avoid preferred orientation by proper sample preparation techniques.",
+      "Use appropriate sample holders compatible with the measurement geometry.",
+      "Keep the instrument area clean and free from dust.",
+      "Perform regular maintenance of the X-ray tube and detector.",
+      "Follow institutional radiation safety protocols strictly."
+    ]
   }
 }

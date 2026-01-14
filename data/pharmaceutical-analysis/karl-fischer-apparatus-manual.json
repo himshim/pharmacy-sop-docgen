@@ -3,16 +3,24 @@
     "title": "Operation of Karl Fischer Apparatus (Manual)"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Karl Fischer Apparatus (Manual).",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To determine moisture content using manual volumetric KF titration.",
+    "scope": "Applicable to moisture analysis in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Clean the titration flask and add a sufficient amount of dry methanol.",
+      "Neutralize the methanol by adding KF reagent until the endpoint is reached.",
+      "Standardize the KF reagent using a known amount of water or standard.",
+      "Accurately weigh the sample and transfer it to the titration flask.",
+      "Titrate the sample with KF reagent until the permanent endpoint (color change or dead-stop).",
+      "Calculate the water content based on the volume of titrant used and its factor.",
+      "Empty and clean the flask after completion.",
+      "Store the KF reagent in an amber bottle away from light and moisture."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Keep the system tightly sealed to exclude atmospheric moisture.",
+      "Perform standardization daily as the KF factor changes over time.",
+      "Use a syringe or weighing boat to transfer samples quickly.",
+      "Ensure thorough stirring throughout the titration.",
+      "Wear PPE to handle hazardous methanol and iodine-based reagents."
+    ]
   }
 }

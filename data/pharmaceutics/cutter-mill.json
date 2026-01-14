@@ -3,16 +3,42 @@
     "title": "Operation of Cutter Mill"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Cutter Mill.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Cutter Mill for size reduction of pharmaceutical materials using cutting and shearing action to produce uniform particle size.",
+    "scope": "Applicable to milling and size reduction activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the cutter mill is installed on a stable foundation with proper safety guards.",
+      "Verify that all electrical connections and interlocks are functioning properly.",
+      "Check that the cutting blades and screen are clean and properly installed.",
+      "Select appropriate screen size based on desired particle size output.",
+      "Inspect cutting blades for sharpness and replace if worn or damaged.",
+      "Power ON the cutter mill and allow it to run empty briefly.",
+      "Listen for any unusual noise or vibration indicating improper assembly.",
+      "Prepare the material to be milled ensuring it is dry and free from foreign matter.",
+      "Start feeding material through the hopper at a controlled rate.",
+      "Monitor the feed rate to prevent overloading the mill.",
+      "Observe the motor load and adjust feed rate if necessary.",
+      "Collect milled material in appropriate containers at the discharge.",
+      "Check particle size of milled material periodically.",
+      "If required, pass material through mill again for finer size reduction.",
+      "Monitor temperature of milled material if heat-sensitive ingredients are processed.",
+      "After completion, stop the feed and allow mill to run until empty.",
+      "Power OFF the mill and wait for complete cessation of rotation.",
+      "Remove screen and blades for cleaning and inspection.",
+      "Clean all product contact parts thoroughly with brush or vacuum.",
+      "Reassemble the mill after cleaning for next operation.",
+      "Document milling parameters, screen size, and material details in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the mill without proper safety guards in place.",
+      "Do not insert hands or objects into the mill during operation.",
+      "Avoid overloading which can damage blades or motor.",
+      "Replace worn or damaged blades immediately for consistent milling.",
+      "Use appropriate screen size to prevent clogging or over-milling.",
+      "Monitor motor temperature to prevent overheating.",
+      "Wear hearing protection as cutter mills generate significant noise.",
+      "Wear appropriate PPE including safety goggles, dust mask, and gloves.",
+      "Ensure proper dust extraction to maintain clean environment.",
+      "Follow lockout/tagout procedures during cleaning and maintenance."
+    ]
   }
 }

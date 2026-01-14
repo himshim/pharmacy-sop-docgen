@@ -3,16 +3,23 @@
     "title": "Operation of Hygrometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Hygrometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To measure the relative humidity and ambient temperature in the laboratory.",
+    "scope": "Applicable to environmental monitoring in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the hygrometer in a location representative of the room environment.",
+      "Ensure the sensor is not obstructed by equipment or furniture.",
+      "Allow the device to stabilize for at least 30 minutes before taking a reading.",
+      "Read the relative humidity (%) and temperature (°C) from the display.",
+      "Record the values in the daily environmental logbook.",
+      "Compare the readings with the specified limits for the laboratory.",
+      "Report any deviations from the humidity range (typically 40-60%) to the supervisor."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not place the hygrometer near humidifiers or air conditioners.",
+      "Avoid exposing the sensor to chemical fumes or extreme dust.",
+      "Verify the accuracy of the hygrometer annually with a certified reference.",
+      "Replace batteries as soon as the display becomes faint.",
+      "Handle the device with care to prevent mechanical shock."
+    ]
   }
 }

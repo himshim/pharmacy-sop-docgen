@@ -3,16 +3,22 @@
     "title": "Operation of Weighing Balance"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Weighing Balance.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To perform routine weighing of reagents and materials with general accuracy.",
+    "scope": "Applicable to non-critical weighing tasks in the Microbiology laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the balance on a stable, level bench.",
+      "Switch ON and ensure the display reads zero.",
+      "Place a weighing paper or boat on the pan and tare the balance.",
+      "Add material gradually to reach required weight.",
+      "Record the reading and remove the load.",
+      "Clean any spills and switch OFF the balance if not in continuous use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not weigh corrosive chemicals directly on the pan.",
+      "Avoid overloading the balance.",
+      "Keep the balance away from drafts and vibrations.",
+      "Perform periodic accuracy checks with reference weights.",
+      "Do not move the balance frequently once leveled."
+    ]
   }
 }

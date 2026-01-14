@@ -3,16 +3,27 @@
     "title": "Operation of Tablet Coating Pan"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Tablet Coating Pan.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Tablet Coating Pan for applying protective or functional coatings to tablets.",
+    "scope": "Applicable to tablet processing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the coating pan is clean and free from previous batch residues.",
+      "Load the core tablets into the pan and start the rotation.",
+      "Set the inlet air temperature and airflow as per the coating protocol.",
+      "Prepare the coating suspension ensuring a homogeneous mixture.",
+      "Install the spray gun and adjust the atomization pressure.",
+      "Apply the coating suspension in a controlled manner while monitoring the bed temperature.",
+      "Ensure continuous drying of tablets during the spray cycle.",
+      "Continue until the desired weight gain or color intensity is achieved.",
+      "Perform final drying and cooling of tablets before unloading.",
+      "Clean the pan and spray assembly thoroughly after the process.",
+      "Document all coating parameters and final yield."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain consistent pan speed to ensure uniform coating.",
+      "Avoid over-wetting the tablets to prevent sticking or twinning.",
+      "Regularly check for nozzle blockage during the spray process.",
+      "Ensure proper exhaust ventilation to remove solvent vapors.",
+      "Wear appropriate PPE including gloves and mask."
+    ]
   }
 }

@@ -3,16 +3,26 @@
     "title": "Operation of Tube Filling Machine"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Tube Filling Machine.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Tube Filling Machine for packaging ointments and creams.",
+    "scope": "Applicable to packaging activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify cleanliness of the hopper, filling nozzles, and tube holders.",
+      "Load empty tubes into the magazine or holders with proper orientation.",
+      "Fill the hopper with the semi-solid product.",
+      "Set the fill volume and sealing temperature parameters.",
+      "Perform a trial run to check fill weight and seal quality.",
+      "Adjust the 'no-tube-no-fill' sensor and batch printing unit.",
+      "Start the automatic filling, sealing, and coding process.",
+      "Monitor the tubes for leakage and aesthetic seal quality.",
+      "Collect the filled tubes and perform in-process quality checks.",
+      "Clean the machine thoroughly after the production run."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Monitor the sealing temperature closely to avoid burnt seals or leaks.",
+      "Ensure consistent product level in the hopper for fill weight accuracy.",
+      "Keep fingers away from moving parts and sealing jaws.",
+      "Check for proper coding/batch details on every tube.",
+      "Follow established cleaning validation protocols."
+    ]
   }
 }

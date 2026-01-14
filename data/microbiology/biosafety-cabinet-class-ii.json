@@ -3,16 +3,26 @@
     "title": "Operation of Biosafety Cabinet Class II"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Biosafety Cabinet Class II.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide personnel, product, and environmental protection during the handling of biohazardous materials.",
+    "scope": "Applicable to aseptic work and pathogen handling in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Turn ON the blower and light; wait 15-20 minutes for air stabilization.",
+      "Verify that the alarm is functional and airflow is normal.",
+      "Surface-disinfect the work area and all items being moved into the cabinet.",
+      "Position materials to separate 'clean' and 'contaminated' zones.",
+      "Keep movements slow and minimize the number of items in the workspace.",
+      "Ensure the sash is at the correct operating height.",
+      "Discard waste into a biohazard bag kept inside the cabinet.",
+      "Clean and disinfect all surfaces after finishing the tasks.",
+      "Run the blower for 10 minutes post-work before switching OFF.",
+      "Record the usage and UV lamp status in the log."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never use the UV light while personnel are in the room.",
+      "Do not use open flames; use electric incinerators if sterilization is needed.",
+      "Keep the front grille clear of all objects.",
+      "Wear double gloves if working with high-risk agents.",
+      "Report any airflow failure alarms immediately."
+    ]
   }
 }

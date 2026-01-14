@@ -3,16 +3,24 @@
     "title": "Operation of pH Meter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the pH Meter.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To measure the pH of culture media, reagents, and water accurately.",
+    "scope": "Applicable to routine pH measurements in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Turn ON the pH meter and allow it to warm up for 10–15 minutes.",
+      "Rinse the electrode with distilled water and gently blot dry.",
+      "Calibrate the instrument using at least two standard buffer solutions.",
+      "Immerse the electrode in the sample solution and stir gently.",
+      "Wait for the reading to stabilize and record the pH.",
+      "Rinse the electrode between different samples.",
+      "After use, store the electrode in appropriate storage solution.",
+      "Document calibration and measurement details in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not touch or wipe the glass bulb aggressively.",
+      "Never allow the electrode to dry out.",
+      "Use fresh buffers for calibration.",
+      "Avoid measuring very hot samples; allow them to cool to room temperature.",
+      "Replace the electrode when response time or slope becomes unacceptable."
+    ]
   }
 }

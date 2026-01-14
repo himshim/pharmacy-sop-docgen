@@ -3,16 +3,40 @@
     "title": "Operation of Particle Size Analyzer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Particle Size Analyzer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Particle Size Analyzer for determination of particle size distribution of pharmaceutical powders, suspensions, and emulsions using laser diffraction or dynamic light scattering techniques.",
+    "scope": "Applicable to particle size analysis activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is placed on a stable, vibration-free surface in a temperature-controlled room.",
+      "Power ON the particle size analyzer and initialize the control software.",
+      "Allow the optical system to warm up and stabilize for the recommended time.",
+      "Select the appropriate measurement method (wet or dry dispersion) based on sample type.",
+      "For wet dispersion, fill the dispersion unit with appropriate dispersant liquid.",
+      "For dry dispersion, check that the air pressure is adequate and feeder is clean.",
+      "Perform background measurement with dispersant only to establish baseline.",
+      "Set measurement parameters including refractive index, absorption index, and obscuration range.",
+      "Prepare the sample ensuring it is representative and homogeneous.",
+      "Add sample slowly to the dispersion unit to achieve proper obscuration level.",
+      "If required, add dispersing agent or apply sonication to break agglomerates.",
+      "Allow the sample to circulate and stabilize before starting measurement.",
+      "Start the measurement and acquire multiple scans for reproducibility.",
+      "Review the particle size distribution curve and statistical parameters.",
+      "Record results including D10, D50, D90, span, and mean particle size.",
+      "Perform replicate measurements to verify reproducibility.",
+      "After measurements, drain the dispersion unit and clean thoroughly.",
+      "Rinse with appropriate solvent and then with dispersant to remove residues.",
+      "Perform a blank measurement to verify complete cleaning.",
+      "Document all measurement parameters, sample details, and results in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use appropriate dispersant that does not dissolve or swell the sample particles.",
+      "Ensure proper obscuration levels (typically 10-20%) for accurate measurements.",
+      "Avoid air bubbles in wet dispersion as they interfere with measurements.",
+      "Apply appropriate sonication to disperse agglomerates without breaking primary particles.",
+      "Use correct refractive index values for the sample material.",
+      "Clean the measurement cell thoroughly between different samples.",
+      "Avoid cross-contamination by proper cleaning and verification.",
+      "Handle samples and dispersants with appropriate PPE.",
+      "Perform regular optical alignment and calibration using certified standards."
+    ]
   }
 }

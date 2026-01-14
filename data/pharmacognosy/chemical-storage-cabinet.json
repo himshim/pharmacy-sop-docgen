@@ -3,16 +3,22 @@
     "title": "Operation of Chemical Storage Cabinet"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Chemical Storage Cabinet.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To safely store chemicals, reagents, and solvents used in Pharmacognosy.",
+    "scope": "Applicable to storage of all laboratory chemicals in the Pharmacognosy department.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Segregate chemicals by hazard class (flammable, corrosive, oxidizer, toxic, etc.).",
+      "Arrange containers with clear labels facing outward and maintain an updated inventory list.",
+      "Store volatile and flammable liquids in dedicated flammable cabinets where required.",
+      "Keep the cabinet doors closed and locked when not in use.",
+      "Inspect the cabinet regularly for leaks, damaged containers, or expired chemicals.",
+      "Remove expired or degraded chemicals following the institutional waste disposal SOP."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not store incompatible chemicals together (e.g., acids with bases or oxidizers).",
+      "Avoid storing heavy containers on upper shelves.",
+      "Ensure proper ventilation if storing odorous or volatile substances.",
+      "Never store food or personal items in the chemical cabinet.",
+      "Wear appropriate PPE when handling chemicals inside the cabinet."
+    ]
   }
 }

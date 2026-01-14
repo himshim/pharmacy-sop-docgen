@@ -3,16 +3,26 @@
     "title": "Operation of Tablet Punch and Die Set"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Tablet Punch and Die Set.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the handling, maintenance, and storage of Tablet Punch and Die Sets.",
+    "scope": "Applicable to tablet tooling activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Inspect punches and dies for cleanliness and surface integrity upon receipt.",
+      "Ensure the tooling size and shape match the product specifications.",
+      "Clean the tooling with a soft cloth and appropriate cleaning agent.",
+      "Verify that punches move freely within the die bores.",
+      "Install the set into the tablet press carefully to avoid chipping edges.",
+      "After compression, remove the tooling and clean immediately.",
+      "Inspect for wear, corrosion, or 'black spots' on the punch tips.",
+      "Apply a thin layer of food-grade lubricant for storage.",
+      "Store the sets in designated, moisture-free storage boxes.",
+      "Update the tooling log with usage hours and condition."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never use abrasive materials to clean punch tips.",
+      "Handle punches by the stem, avoiding the tip edges.",
+      "Do not store punches and dies together in a way that allows metal-on-metal contact.",
+      "Check for magnetism and demagnetize if necessary.",
+      "Follow strict numbering and tracking to prevent mixed sets."
+    ]
   }
 }

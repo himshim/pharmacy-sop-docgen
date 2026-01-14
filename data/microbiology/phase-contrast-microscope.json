@@ -3,16 +3,24 @@
     "title": "Operation of Phase Contrast Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Phase Contrast Microscope.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To visualize live, unstained cells and microorganisms using phase contrast optics.",
+    "scope": "Applicable to advanced microscopic examination in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Turn ON the microscope light source and adjust brightness.",
+      "Select a phase contrast objective and corresponding phase annulus on the condenser turret.",
+      "Place the specimen slide on the stage.",
+      "Focus on the specimen using low magnification first.",
+      "Fine-tune the phase ring alignment using the phase telescope or centering screws.",
+      "Switch to higher magnification as needed and adjust focus.",
+      "After observation, lower the stage, remove the slide, and turn OFF the light.",
+      "Cover the microscope to protect it from dust."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use the coarse focus at high magnification.",
+      "Keep the phase rings and condenser components clean.",
+      "Avoid excessive light intensity to prevent specimen heating.",
+      "Use only recommended cleaning materials for optical surfaces.",
+      "Store objectives in a dry environment to prevent fungal growth."
+    ]
   }
 }

@@ -3,16 +3,25 @@
     "title": "Operation of Gel Electrophoresis Unit"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Gel Electrophoresis Unit.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To separate nucleic acids or proteins based on size and charge in an electric field.",
+    "scope": "Applicable to molecular techniques in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Prepare the agarose or polyacrylamide gel and place it in the casting tray.",
+      "Insert the comb to form wells and allow the gel to solidify.",
+      "Place the gel in the electrophoresis tank and cover with running buffer.",
+      "Carefully load samples and molecular weight markers into the wells.",
+      "Place the lid on the tank and connect the electrodes to the power supply (anode/cathode correctly).",
+      "Set the voltage and run time according to the protocol.",
+      "Turn OFF the power supply before opening the tank.",
+      "Remove the gel for staining or imaging.",
+      "Dispose of used buffer and gels as per chemical/biological waste SOPs."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never touch the buffer or gel while the power is ON.",
+      "Verify the correct polarity before starting the run.",
+      "Ensure the tank is free from cracks and leaks.",
+      "Handle staining agents like ethidium bromide with appropriate PPE.",
+      "Do not exceed the recommended voltage to avoid overheating the gel."
+    ]
   }
 }

@@ -3,16 +3,21 @@
     "title": "Operation of Y Maze Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Y Maze Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To assess spatial working memory and exploratory behavior using spontaneous alternation in a Y-shaped maze.",
+    "scope": "Applicable to nootropic and CNS drug evaluation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the animal at the end of one arm and allow free exploration of all three arms for a fixed period (e.g., 5–8 minutes).",
+      "Record the sequence and number of arm entries.",
+      "Calculate percentage alternation as an index of working memory.",
+      "Remove the animal and return it to its home cage.",
+      "Clean the maze with 70% alcohol between animals."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain consistent lighting and noise conditions.",
+      "Do not reuse animals without appropriate washout if drug effects are long-lasting.",
+      "Avoid strong odor cues that may bias arm choice.",
+      "Ensure non-slippery flooring.",
+      "Handle animals gently before and after testing."
+    ]
   }
 }

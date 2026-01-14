@@ -3,16 +3,17 @@
     "title": "Operation of Polarizing Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Polarizing Microscope.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To examine crystals and starch grains.",
+    "scope": "Applicable to microcrystal tests.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Insert polarizers.",
+      "Focus specimen.",
+      "Rotate stage.",
+      "Observe birefringence."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Clean polarizers.",
+      "Avoid rotation under high power."
+    ]
   }
 }

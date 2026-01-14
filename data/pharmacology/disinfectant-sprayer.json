@@ -3,16 +3,23 @@
     "title": "Operation of Disinfectant Sprayer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Disinfectant Sprayer.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To apply disinfectant solutions uniformly on laboratory surfaces and equipment.",
+    "scope": "Applicable to infection control and biosafety in pharmacology labs.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the sprayer reservoir with freshly prepared disinfectant solution.",
+      "Label the sprayer with the disinfectant name and concentration.",
+      "Adjust the nozzle to achieve a fine spray.",
+      "Spray surfaces from an appropriate distance to ensure full coverage.",
+      "Allow the recommended contact time before wiping if required.",
+      "Empty and rinse the sprayer at the end of the day.",
+      "Store in a clean, dry area away from direct sunlight."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Wear appropriate PPE including gloves and mask.",
+      "Do not mix different disinfectants in the sprayer.",
+      "Avoid spraying near open flames or electrical outlets.",
+      "Prepare solutions according to manufacturer dilution instructions.",
+      "Dispose of leftover disinfectant according to institutional SOPs."
+    ]
   }
 }

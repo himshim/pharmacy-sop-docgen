@@ -3,16 +3,23 @@
     "title": "Operation of Aerator Assembly"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Aerator Assembly.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To maintain oxygen supply and circulation in isolated organ baths.",
+    "scope": "Applicable to isolated tissue experiments in pharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Connect the aerator pump to the power source.",
+      "Attach tubing to each organ bath reservoir.",
+      "Adjust the airflow control to produce fine bubbles in the bathing solution.",
+      "Verify uniform aeration across all baths.",
+      "Monitor the solution for pH and temperature stability.",
+      "After experiments, disconnect and clean the tubing and airstones.",
+      "Store the aerator dry and clean."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use sterile tubing and airstones to prevent contamination.",
+      "Avoid excessive bubbling that disrupts tissue.",
+      "Check for leaks or blockages in tubing.",
+      "Do not run the pump dry for extended periods.",
+      "Ensure backup power for critical experiments."
+    ]
   }
 }

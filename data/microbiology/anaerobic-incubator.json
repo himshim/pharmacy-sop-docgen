@@ -3,16 +3,25 @@
     "title": "Operation of Anaerobic Incubator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Anaerobic Incubator.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide a controlled temperature and oxygen-free atmosphere for the growth of anaerobes.",
+    "scope": "Applicable to specialized microbial cultivation in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify the gas supply (typically a mix of N2, CO2, and H2).",
+      "Power ON the incubator and set the required temperature and gas concentration.",
+      "Purge the chamber with the anaerobic gas mixture to remove oxygen.",
+      "Transfer samples into the chamber using the built-in transfer hatch (airlock).",
+      "Monitor the atmospheric indicators (e.g., oxygen sensor or chemical strips) inside.",
+      "Conduct routine checks on the catalyst (if present) to ensure effective oxygen removal.",
+      "Maintain the water level in the humidity tray if required.",
+      "Clean the interior shelves with a mild, non-corrosive disinfectant.",
+      "Record the temperature and atmospheric status daily."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Strictly follow the airlock operation steps to prevent oxygen entry.",
+      "Monitor gas tank pressure and replace tanks before they are empty.",
+      "Ensure the catalyst is regenerated or replaced as per schedule.",
+      "Report any persistent oxygen alerts or temperature deviations.",
+      "Wear clean lab coats and gloves when accessing the chamber."
+    ]
   }
 }

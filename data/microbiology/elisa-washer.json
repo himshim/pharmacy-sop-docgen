@@ -3,16 +3,24 @@
     "title": "Operation of ELISA Washer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the ELISA Washer.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To automatically wash microplate wells during ELISA procedures.",
+    "scope": "Applicable to immunoassay workflows in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the wash buffer reservoir with the appropriate solution.",
+      "Prime the system by running a few wash cycles without a plate.",
+      "Place the microplate on the washer platform and secure it.",
+      "Program the number of wash cycles, volume, and soak time as per assay protocol.",
+      "Start the wash cycle and observe at least the first pass.",
+      "After washing, remove the plate and gently tap it on absorbent paper to remove residual liquid.",
+      "Run a rinse cycle with distilled water at the end of use.",
+      "Empty and clean the waste bottle and tubing."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure that the aspiration needles are correctly aligned to avoid scratching wells.",
+      "Use only recommended wash buffers to prevent precipitation.",
+      "Do not allow wash buffer or waste containers to run dry or overflow.",
+      "Regularly check and clean filters and tubing.",
+      "Disconnect power before performing any internal maintenance."
+    ]
   }
 }

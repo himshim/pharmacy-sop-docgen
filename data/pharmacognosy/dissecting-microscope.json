@@ -3,16 +3,22 @@
     "title": "Operation of Dissecting Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Dissecting Microscope.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To examine and dissect small plant parts and crude drugs under low magnification.",
+    "scope": "Applicable to macroscopic and surface feature examination in Pharmacognosy.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the dissecting microscope on a stable bench in a well-lit area or switch ON built-in illumination.",
+      "Position the specimen on the stage or in a Petri dish.",
+      "Adjust the interpupillary distance and eyepiece focus for comfortable viewing.",
+      "Use coarse focusing knob to bring the specimen into clear view.",
+      "Manipulate the specimen with forceps or needles while observing through the eyepieces.",
+      "After use, remove specimens, clean the stage, and cover the microscope."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid scratching the stage glass with tools.",
+      "Do not touch lenses with fingers; use lens tissue if cleaning is needed.",
+      "Keep liquids away from optical components.",
+      "Store in a dry place to prevent fungal growth on lenses.",
+      "Service the instrument periodically for alignment and lubrication."
+    ]
   }
 }

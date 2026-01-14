@@ -3,16 +3,23 @@
     "title": "Operation of Micro Centrifuge"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Micro Centrifuge.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To spin small-volume microtubes for rapid pelleting of cells or nucleic acids.",
+    "scope": "Applicable to molecular and microbiological sample preparation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the micro centrifuge on a stable, level surface.",
+      "Load microtubes in opposite slots to balance the rotor.",
+      "Close the lid securely.",
+      "Set the required speed (RPM) and time.",
+      "Start the centrifuge and wait for it to reach full speed.",
+      "After completion, wait until the rotor stops before opening the lid.",
+      "Carefully remove tubes to avoid mixing the pellet."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not open the lid while the rotor is spinning.",
+      "Always balance tubes by weight and volume.",
+      "Use tubes rated for the maximum speed.",
+      "Clean any spills immediately with appropriate disinfectant.",
+      "Do not exceed the manufacturer’s recommended RPM."
+    ]
   }
 }

@@ -3,16 +3,26 @@
     "title": "Operation of Refrigerator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Refrigerator.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation and maintenance of Refrigerator for cold storage of pharmaceutical materials.",
+    "scope": "Applicable to storage activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the unit is connected to a stabilized power source.",
+      "Set the thermostat to maintain temperature between 2°C and 8°C.",
+      "Allow the unit to stabilize and verify temperature with a calibrated thermometer.",
+      "Organize materials to allow proper air circulation inside the unit.",
+      "Load samples ensuring they are labeled and stored in correct sections.",
+      "Monitor and record temperature twice daily in the logbook.",
+      "Periodically check door seals for proper insulation.",
+      "Defrost and clean the interior surfaces as per maintenance schedule.",
+      "Document any temperature excursions and corrective actions.",
+      "Perform annual calibration of the temperature sensors."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Minimize door opening frequency to maintain temperature stability.",
+      "Do not store food or beverages in pharmaceutical refrigerators.",
+      "Do not overload shelves as it restricts cold air flow.",
+      "Notify maintenance immediately if temperature exceeds set limits.",
+      "Ensure backup power for critical storage items."
+    ]
   }
 }

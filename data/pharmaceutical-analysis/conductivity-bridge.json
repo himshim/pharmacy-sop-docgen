@@ -3,16 +3,25 @@
     "title": "Operation of Conductivity Bridge"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Conductivity Bridge.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for the measurement of solution conductivity using a bridge circuit.",
+    "scope": "Applicable to electrochemical analysis in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Connect the conductivity cell to the bridge terminals.",
+      "Switch ON the power and allow the instrument to stabilize.",
+      "Select the appropriate range for the expected conductivity.",
+      "Calibrate the bridge using a standard solution of known conductivity.",
+      "Rinse the cell with distilled water and then with the sample solution.",
+      "Immerse the cell in the sample and adjust the bridge balance for a null reading.",
+      "Record the conductivity value from the calibrated scale.",
+      "Rinse the cell thoroughly with distilled water after each use.",
+      "Store the cell in distilled water to keep the electrodes conditioned."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid touching the platinum black coating on the electrode plates.",
+      "Ensure the cell is fully immersed in the solution.",
+      "Perform temperature compensation if the instrument allows.",
+      "Check for air bubbles inside the cell as they affect the reading.",
+      "Handle the glass cell with care to avoid breakage."
+    ]
   }
 }

@@ -3,16 +3,44 @@
     "title": "Operation of Dissolution Test Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Dissolution Test Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Dissolution Test Apparatus for determination of drug release profile from tablets and capsules as per pharmacopeial methods.",
+    "scope": "Applicable to dissolution testing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the dissolution apparatus is placed on a stable, level platform.",
+      "Verify that all vessels, paddles or baskets, and shafts are clean and calibrated.",
+      "Check vessel alignment and ensure they are properly positioned.",
+      "Select appropriate dissolution method (Apparatus 1-Basket or Apparatus 2-Paddle).",
+      "Install appropriate paddles or baskets as per the selected method.",
+      "Fill each vessel with specified volume of dissolution medium (typically 900 mL).",
+      "Set the temperature controller to 37 ± 0.5°C.",
+      "Allow the medium to reach and equilibrate at set temperature (30 minutes minimum).",
+      "Verify temperature in each vessel using calibrated thermometer.",
+      "Set the rotation speed as per method (typically 50-100 rpm).",
+      "Deaerate dissolution medium if specified in the method.",
+      "Place dosage units (tablets or capsules) into each vessel at time zero.",
+      "Start the rotation and timer simultaneously.",
+      "Cover vessels to minimize evaporation if testing for extended periods.",
+      "Withdraw samples at specified time intervals using appropriate sampling device.",
+      "Filter samples immediately through specified filter or use cannula filters.",
+      "Replace withdrawn volume with fresh medium maintained at 37°C if specified.",
+      "Analyze samples using validated analytical method (UV, HPLC, etc.).",
+      "Calculate percent drug dissolved at each time point.",
+      "Plot dissolution profile and evaluate against acceptance criteria.",
+      "After testing, stop rotation and remove dosage units or residues.",
+      "Clean all vessels, paddles, and equipment thoroughly.",
+      "Document all dissolution data, observations, and calculations in the validation record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain temperature at 37 ± 0.5°C throughout the test.",
+      "Ensure proper paddle or basket positioning (25 mm from vessel bottom).",
+      "Avoid introducing air bubbles during dosage unit placement.",
+      "Use appropriate rotation speed as per pharmacopeial method.",
+      "Filter samples promptly to stop dissolution process.",
+      "Handle sinkers properly if required for capsules.",
+      "Verify medium volume and pH as per method requirements.",
+      "Perform mechanical calibration regularly.",
+      "Clean apparatus thoroughly to prevent carryover.",
+      "Follow cGMP and GLP practices during testing."
+    ]
   }
 }

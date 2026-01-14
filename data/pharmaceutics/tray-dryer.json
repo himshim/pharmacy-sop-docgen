@@ -3,16 +3,26 @@
     "title": "Operation of Tray Dryer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Tray Dryer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Tray Dryer for batch drying of materials.",
+    "scope": "Applicable to drying activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the dryer chamber and trays are clean and dry.",
+      "Spread the wet material uniformly on the trays (avoid thick layers).",
+      "Place the trays in the dryer racks and close the door securely.",
+      "Switch ON the main power and set the required temperature.",
+      "Turn ON the air circulation fan and heating elements.",
+      "Monitor the temperature periodically during the drying cycle.",
+      "Turn the material on the trays occasionally for uniform drying if needed.",
+      "Once the material is dry, turn OFF the heater and allow cooling.",
+      "Remove the trays and collect the dried product.",
+      "Clean the chamber and trays thoroughly after each batch."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not block the air circulation vents inside the chamber.",
+      "Maintain temperature within the specified range for heat-sensitive materials.",
+      "Ensure proper exhaust of moisture-laden air.",
+      "Wear heat-resistant gloves when handling hot trays.",
+      "Avoid overloading the dryer beyond its capacity."
+    ]
   }
 }

@@ -3,16 +3,21 @@
     "title": "Operation of Grip Strength Meter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Grip Strength Meter.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To assess neuromuscular function by measuring forelimb or hindlimb grip strength in rodents.",
+    "scope": "Applicable to neuropharmacology and toxicity studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the animal so that it grasps the grid or bar with its paws.",
+      "Gently pull the animal backward by the tail until it releases its grip.",
+      "Record the peak force displayed.",
+      "Repeat for a set number of trials and calculate mean grip strength.",
+      "Clean the grip surface between animals."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not jerk the animal; apply smooth, consistent force.",
+      "Avoid testing if the animal shows limb injuries.",
+      "Ensure the device is properly calibrated.",
+      "Use the same operator to reduce variability.",
+      "Handle animals gently to reduce stress."
+    ]
   }
 }

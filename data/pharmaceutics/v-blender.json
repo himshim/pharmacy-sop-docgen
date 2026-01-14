@@ -3,16 +3,26 @@
     "title": "Operation of V Blender"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the V Blender.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of V-Blender for dry mixing of powders.",
+    "scope": "Applicable to blending activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Inspect the V-shell interior for cleanliness and dryness.",
+      "Check the discharge valve for proper closure and seal.",
+      "Load ingredients through the charging ports (up to 50-60% volume).",
+      "Secure the charging lids and engage safety interlocks.",
+      "Set the blending speed and timer as per the protocol.",
+      "Start the rotation and monitor for smooth operation.",
+      "After the cycle, stop the blender in the vertical discharge position.",
+      "Open the discharge valve and collect the blend.",
+      "Clean the interior thoroughly, focusing on the apex and valve area.",
+      "Document the blending parameters and yield."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the blender beyond its effective mixing capacity.",
+      "Ensure the safety cage or interlock is functional before starting.",
+      "Maintain proper speed to avoid centrifugal segregation.",
+      "Clean between products to prevent cross-contamination.",
+      "Wear appropriate dust protection during loading and unloading."
+    ]
   }
 }

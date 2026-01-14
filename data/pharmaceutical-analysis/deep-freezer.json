@@ -3,16 +3,24 @@
     "title": "Operation of Deep Freezer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Deep Freezer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for the long-term storage of samples and reagents at very low temperatures.",
+    "scope": "Applicable to storage activities in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that the freezer is set to the required temperature (e.g., -20°C or -80°C).",
+      "Ensure samples are stored in compatible, clearly labeled containers.",
+      "Organize the samples in racks to allow for efficient retrieval and airflow.",
+      "Monitor and record the temperature on a daily log sheet.",
+      "Minimize the duration and frequency of door openings.",
+      "Check the door seal for frost build-up and defrost manually if required.",
+      "Clean the interior periodically with an appropriate disinfectant.",
+      "Document any temperature excursions and corrective actions."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never store food or beverages in the laboratory deep freezer.",
+      "Ensure a backup power supply is available for critical samples.",
+      "Wear insulated gloves when handling items inside the freezer.",
+      "Do not overload the freezer, as it affects cooling efficiency.",
+      "Keep a detailed inventory of stored materials."
+    ]
   }
 }

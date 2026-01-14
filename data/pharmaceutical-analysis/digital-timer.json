@@ -3,16 +3,24 @@
     "title": "Operation of Digital Timer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Timer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for the accurate timing of laboratory procedures.",
+    "scope": "Applicable to all timed activities in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Power ON the timer and clear any previous settings.",
+      "Enter the required time duration using the numeric keypad or buttons.",
+      "Press 'START' to begin the countdown.",
+      "When the alarm sounds, press 'STOP' to silence it.",
+      "Reset the timer for the next use.",
+      "Switch OFF the timer if it will not be used for a long period.",
+      "Verify the timer's accuracy periodically.",
+      "Replace batteries when the display becomes faint."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Keep the timer away from chemical spills and extreme heat.",
+      "Do not drop or subject the timer to mechanical shocks.",
+      "Ensure the alarm is audible in the laboratory environment.",
+      "Do not use the timer for critical timing if it shows a low battery signal.",
+      "Clean the casing with a dry cloth only."
+    ]
   }
 }

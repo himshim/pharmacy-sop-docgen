@@ -3,16 +3,37 @@
     "title": "Operation of Karl Fischer Titrator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Karl Fischer Titrator.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Karl Fischer Titrator for accurate determination of water content in pharmaceutical samples using coulometric or volumetric methods.",
+    "scope": "Applicable to moisture determination activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is placed in a dry environment away from moisture sources.",
+      "Check that all reagent bottles contain sufficient Karl Fischer reagent and are properly sealed.",
+      "Verify that the titration cell and electrodes are clean and in good condition.",
+      "Power ON the Karl Fischer titrator and initialize the control software.",
+      "Fill the titration vessel with appropriate solvent (methanol or Karl Fischer solvent).",
+      "Perform conditioning of the cell by running blank titrations until drift is stable.",
+      "Verify that the drift rate is within acceptable limits before sample analysis.",
+      "Accurately weigh the sample using an analytical balance and record the weight.",
+      "Quickly transfer the sample into the titration vessel to minimize atmospheric moisture exposure.",
+      "Start the titration and allow the instrument to detect the endpoint automatically.",
+      "Record the water content result displayed by the instrument in mg or percentage.",
+      "Perform duplicate or triplicate determinations to ensure precision.",
+      "Calculate the average water content and check if results are within specifications.",
+      "After analysis, dispose of the titration solution as per chemical waste guidelines.",
+      "Clean the titration cell and electrodes if necessary for the next analysis.",
+      "Store Karl Fischer reagents in tightly sealed bottles to prevent moisture absorption.",
+      "Document all weighings, titration results, and calculations in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Handle Karl Fischer reagents with care as they are corrosive and toxic.",
+      "Always work in a well-ventilated area or fume hood when handling reagents.",
+      "Minimize sample exposure to atmospheric moisture during weighing and transfer.",
+      "Use dry glassware and syringes to prevent contamination.",
+      "Keep reagent bottles tightly sealed when not in use.",
+      "Regularly check electrode condition and replace if response is poor.",
+      "Avoid introducing samples containing substances that interfere with Karl Fischer reaction.",
+      "Wear appropriate PPE including lab coat, gloves, and safety goggles.",
+      "Dispose of waste reagents as per hazardous chemical waste disposal protocols."
+    ]
   }
 }

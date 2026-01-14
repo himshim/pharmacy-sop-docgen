@@ -3,16 +3,23 @@
     "title": "Operation of Bulk Density Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Bulk Density Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To determine bulk density and tapped density of powdered crude drugs and extracts.",
+    "scope": "Applicable to physical characterization of plant powders in Pharmacognosy.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Weigh an empty graduated cylinder and record its weight.",
+      "Fill the cylinder with a known mass of powder without compacting and note the initial volume (bulk volume).",
+      "Mount the cylinder on the bulk/tapped density apparatus.",
+      "Set the number of taps and tap height as per pharmacopeial guidelines.",
+      "Start the apparatus and allow it to complete the tapping cycle.",
+      "Record the final volume (tapped volume) and calculate bulk and tapped densities.",
+      "Compute Carr's index and Hausner ratio if required."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the cylinder is dry and clean before use.",
+      "Avoid loss of powder during filling and tapping.",
+      "Use the same powder sample for both bulk and tapped measurements.",
+      "Keep the apparatus on a stable surface to avoid additional vibration.",
+      "Wear a mask when handling fine powders."
+    ]
   }
 }

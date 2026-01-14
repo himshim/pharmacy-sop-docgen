@@ -3,16 +3,40 @@
     "title": "Operation of Texture Analyzer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Texture Analyzer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Texture Analyzer for measurement of mechanical and textural properties of pharmaceutical dosage forms including hardness, fracturability, adhesiveness, and elasticity.",
+    "scope": "Applicable to texture analysis activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is placed on a stable, level surface free from vibrations.",
+      "Power ON the texture analyzer and initialize the control software.",
+      "Allow the instrument to perform self-calibration and homing of the probe arm.",
+      "Verify that the load cell is properly installed and appropriate for expected force range.",
+      "Perform calibration using certified calibration weights to verify load cell accuracy.",
+      "Select and attach the appropriate probe or fixture based on the test requirement.",
+      "Set test parameters including test speed, target distance or force, and trigger force.",
+      "Configure data acquisition settings including sampling rate and test duration.",
+      "Prepare the sample and place it on the platform or in the fixture holder.",
+      "Ensure proper sample positioning and alignment under the probe.",
+      "Set the start position of the probe at an appropriate distance from the sample.",
+      "Initiate the test and allow the instrument to perform the programmed compression or penetration.",
+      "Monitor the force-distance or force-time curve during the test on the display.",
+      "After test completion, the probe returns to the start position automatically.",
+      "Remove the tested sample and prepare for the next replicate measurement.",
+      "Perform multiple replicates (typically 5-10) to ensure statistical validity.",
+      "Analyze the data to extract parameters such as hardness, work of penetration, or adhesiveness.",
+      "Export data and generate graphical plots for reporting purposes.",
+      "Clean the probe and platform after testing to remove any sample residue.",
+      "Document all test parameters, sample details, and results in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Select the appropriate load cell capacity to avoid overloading or damage.",
+      "Ensure the probe is securely attached to prevent detachment during testing.",
+      "Do not exceed the maximum load capacity of the load cell.",
+      "Ensure samples are properly positioned to avoid slippage during testing.",
+      "Use appropriate test speed suitable for the sample type.",
+      "Clean probes and fixtures thoroughly between different sample types.",
+      "Perform regular calibration to maintain accuracy of measurements.",
+      "Handle delicate probes carefully to avoid bending or damage.",
+      "Wear appropriate PPE when handling samples and cleaning equipment."
+    ]
   }
 }

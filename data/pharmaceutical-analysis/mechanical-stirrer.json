@@ -3,16 +3,24 @@
     "title": "Operation of Mechanical Stirrer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Mechanical Stirrer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To mix high-viscosity liquids or large volumes using a motor-driven paddle.",
+    "scope": "Applicable to sample preparation in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Secure the motor to a heavy-duty laboratory stand.",
+      "Attach the stirring shaft and impeller, ensuring they are tightened.",
+      "Lower the impeller into the center of the vessel.",
+      "Switch ON the motor and gradually increase the speed.",
+      "Observe the mixing and adjust for optimal flow.",
+      "Turn OFF the motor and raise the impeller before removing the vessel.",
+      "Clean the shaft and impeller with appropriate solvents.",
+      "Lubricate the moving parts of the stand as required."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the stirrer is properly grounded.",
+      "Do not wear loose clothing that could be caught in the shaft.",
+      "Check that all clamps are secure to prevent vibration.",
+      "Always increase speed gradually from zero.",
+      "Use a splash guard for hazardous chemical mixtures."
+    ]
   }
 }

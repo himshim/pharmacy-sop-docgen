@@ -3,16 +3,39 @@
     "title": "Operation of Microplate Reader"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Microplate Reader.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Microplate Reader for absorbance, fluorescence, and luminescence measurements in multi-well plate format for pharmaceutical assays.",
+    "scope": "Applicable to microplate-based assay activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the instrument is placed on a stable surface in a temperature-controlled environment.",
+      "Power ON the microplate reader and initialize the control software on the computer.",
+      "Allow the instrument to warm up and perform self-diagnostic tests.",
+      "Select the appropriate measurement mode (absorbance, fluorescence, or luminescence).",
+      "Set the wavelength or wavelength pair for the specific assay being performed.",
+      "Configure plate format (96-well, 384-well) and wells to be read in the software.",
+      "Prepare reagents, standards, and samples according to the assay protocol.",
+      "Add appropriate volumes to the microplate wells using calibrated pipettes or dispenser.",
+      "Ensure no air bubbles are present in the wells as they interfere with measurements.",
+      "If required, incubate the plate at specified temperature and duration before reading.",
+      "Open the plate drawer and place the microplate in the correct orientation.",
+      "Close the drawer and ensure proper positioning for measurement.",
+      "Start the reading sequence and allow the instrument to scan all designated wells.",
+      "Monitor the data acquisition and check for any error messages or anomalies.",
+      "After completion, review the raw data for outliers or inconsistent readings.",
+      "Export data to spreadsheet software for further analysis and calculations.",
+      "Remove the microplate from the reader and dispose of or store as per protocol.",
+      "Clean any spills on the plate drawer or reader surface immediately.",
+      "Document all assay parameters, plate layout, and results in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always use clear bottom plates for absorbance measurements and appropriate plates for fluorescence.",
+      "Ensure plates are compatible with the reader to prevent damage.",
+      "Remove any seals or covers from plates before reading.",
+      "Avoid fingerprints or scratches on the bottom of the plate.",
+      "Do not overfill wells as spillover can contaminate adjacent wells.",
+      "Check for and remove air bubbles before reading.",
+      "Use appropriate negative and positive controls for assay validation.",
+      "Clean spills immediately to prevent damage to optical components.",
+      "Perform regular wavelength calibration and maintenance as per manufacturer guidelines."
+    ]
   }
 }

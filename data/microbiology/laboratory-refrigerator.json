@@ -3,16 +3,23 @@
     "title": "Operation of Laboratory Refrigerator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Laboratory Refrigerator.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To store media, reagents, and short-term cultures at 2–8°C.",
+    "scope": "Applicable to cold storage activities in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify the temperature set point and actual display.",
+      "Arrange items to allow air circulation and avoid blocking vents.",
+      "Label all stored materials with name, date, and responsible person.",
+      "Record internal temperature daily on the log sheet.",
+      "Clean shelves and interior surfaces regularly with disinfectant.",
+      "Defrost the refrigerator if excessive ice forms.",
+      "Remove expired or unused materials as per disposal SOP."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not store food or drink in the laboratory refrigerator.",
+      "Avoid frequent or prolonged door opening.",
+      "Do not store flammable solvents unless the unit is explosion-proof.",
+      "Ensure door seals are intact to maintain temperature.",
+      "Connect critical refrigerators to backup power if available."
+    ]
   }
 }

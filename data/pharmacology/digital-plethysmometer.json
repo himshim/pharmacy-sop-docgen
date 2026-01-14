@@ -3,16 +3,20 @@
     "title": "Operation of Digital Plethysmometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Plethysmometer.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To measure paw edema volume in anti-inflammatory drug screening.",
+    "scope": "Applicable to inflammation models.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill compartment with mercury or water.",
+      "Calibrate volume measurement.",
+      "Place animal paw in compartment.",
+      "Record initial and post-treatment volumes.",
+      "Calculate % edema reduction."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure paw immersion consistency.",
+      "Clean between measurements.",
+      "Calibrate daily.",
+      "Handle mercury carefully if used."
+    ]
   }
 }

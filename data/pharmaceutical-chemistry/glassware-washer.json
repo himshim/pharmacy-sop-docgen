@@ -3,16 +3,24 @@
     "title": "Operation of Glassware Washer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Glassware Washer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide automated and standardized cleaning of laboratory glassware.",
+    "scope": "Applicable to cleaning procedures in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Remove any solid residues or hazardous chemicals from glassware manually first.",
+      "Load the glassware into the washer racks, ensuring openings face downwards.",
+      "Check the detergent and rinse aid levels in the dispensers.",
+      "Select the appropriate wash cycle based on the level of contamination.",
+      "Start the wash cycle and monitor for any leakages.",
+      "Wait for the completion of the drying cycle before opening the door.",
+      "Unload the glassware and inspect for cleanliness and water spots.",
+      "Clean the washer filter after every 5-10 cycles."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use only laboratory-grade detergents specifically designed for washers.",
+      "Do not load broken or severely chipped glassware.",
+      "Ensure the spray arms can rotate freely after loading the racks.",
+      "Wear gloves when handling glassware that has undergone a caustic wash.",
+      "Maintain the water softening system as per manufacturer instructions."
+    ]
   }
 }

@@ -3,16 +3,25 @@
     "title": "Operation of Colorimeter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Colorimeter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for measuring the absorbance of colored solutions.",
+    "scope": "Applicable to analytical tasks in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the colorimeter and allow it to warm up for 15 minutes.",
+      "Select the appropriate filter or wavelength for the sample being analyzed.",
+      "Fill a clean cuvette with the blank (solvent) and wipe the sides with a lint-free tissue.",
+      "Insert the blank into the sample holder and set the instrument to zero absorbance.",
+      "Replace the blank with the sample solution in a similar cuvette.",
+      "Record the absorbance or transmittance value from the display.",
+      "Repeat the measurement for standards to create a calibration curve.",
+      "Clean the cuvettes and the sample compartment after use.",
+      "Switch OFF the instrument at the end of the day."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always handle cuvettes by the frosted sides to avoid fingerprints.",
+      "Ensure there are no air bubbles in the sample solution.",
+      "Use matched cuvettes for more accurate results.",
+      "Maintain a consistent orientation of the cuvette in the holder.",
+      "Protect the instrument from dust and chemical vapors."
+    ]
   }
 }

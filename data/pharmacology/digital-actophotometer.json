@@ -3,16 +3,20 @@
     "title": "Operation of Digital Actophotometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Actophotometer.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To digitally measure locomotor activity through IR beam interruptions.",
+    "scope": "Applicable to CNS drug screening.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Power ON and perform self-calibration.",
+      "Place animal in test chamber.",
+      "Set test duration and start.",
+      "Record digital count after test.",
+      "Clean chamber between tests."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Calibrate daily.",
+      "Clean IR beams.",
+      "Consistent testing environment.",
+      "Handle animals gently."
+    ]
   }
 }

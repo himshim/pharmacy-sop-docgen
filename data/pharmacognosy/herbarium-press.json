@@ -1,18 +1,23 @@
 {
   "meta": {
-    "title": "Operation of Herbarium Press"
+    "title": "Use of Herbarium Press"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Herbarium Press.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To dry and flatten plant specimens for permanent herbarium storage.",
+    "scope": "Applicable to preparation of herbarium sheets.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Arrange plant parts between blotting paper sheets.",
+      "Place in newspaper or herbarium paper.",
+      "Stack in the press with cardboard separators.",
+      "Tighten wing nuts evenly.",
+      "Leave for 2–4 weeks, changing blotting paper weekly.",
+      "Mount dried specimens on herbarium sheets."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use absorbent blotting paper to prevent mold.",
+      "Avoid excessive pressure causing tissue damage.",
+      "Label specimens before pressing.",
+      "Store press in dry, ventilated area."
+    ]
   }
 }

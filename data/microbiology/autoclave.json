@@ -3,17 +3,26 @@
     "title": "Operation of Autoclave"
   },
   "sections": {
-    "purpose": "To describe the procedure for sterilization of laboratory materials using an autoclave.",
-    "scope": "Applicable to sterilization activities in the Microbiology laboratory.",
+    "purpose": "To sterilize laboratory media, glassware, and waste using pressurized steam.",
+    "scope": "Applicable to sterilization and decontamination in Microbiology.",
     "procedure": [
-      "Ensure the autoclave chamber is clean.",
-      "Add sufficient water to the autoclave as per manufacturer instructions.",
-      "Load materials to be sterilized without overcrowding.",
-      "Close the lid securely and set temperature and pressure.",
-      "Allow the autoclave cycle to complete.",
-      "After pressure returns to zero, open the lid carefully.",
-      "Remove sterilized materials and allow them to cool."
+      "Check the water level in the reservoir and top up with distilled water if needed.",
+      "Load materials into the chamber, ensuring they are not tightly packed.",
+      "Ensure bottle caps are loose to prevent pressure buildup and breakage.",
+      "Close the door and lock the safety handle.",
+      "Set the sterilization cycle (standard: 121°C at 15 psi for 15-20 minutes).",
+      "Start the cycle and monitor the pressure and temperature gauges.",
+      "Once the cycle is complete, wait for the pressure to drop to zero.",
+      "Slowly open the door while wearing heat-resistant gloves.",
+      "Allow items to cool before removal.",
+      "Record the cycle details in the sterilization log."
     ],
-    "precautions": "Do not open the autoclave under pressure. Use heat-resistant gloves while handling sterilized materials."
+    "precautions": [
+      "Never open the autoclave until the pressure is fully released.",
+      "Wear heat-resistant gloves and a face shield when unloading.",
+      "Do not sterilize sealed containers or flammable liquids.",
+      "Ensure the drain valve and safety valve are functional.",
+      "Perform periodic validation using biological indicators (e.g., Geobacillus stearothermophilus)."
+    ]
   }
 }

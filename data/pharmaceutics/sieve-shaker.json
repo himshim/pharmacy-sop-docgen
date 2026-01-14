@@ -3,16 +3,25 @@
     "title": "Operation of Sieve Shaker"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Sieve Shaker.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Sieve Shaker for particle size classification.",
+    "scope": "Applicable to powder analysis activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Select and stack sieves in descending order of mesh size.",
+      "Weigh the powder sample and place it on the top sieve.",
+      "Secure the sieve stack on the shaker and tighten the clamp.",
+      "Set the shaking time and intensity.",
+      "Start the shaker and allow it to run for the set duration.",
+      "Remove the sieves and weigh the powder retained on each.",
+      "Calculate particle size distribution percentage.",
+      "Clean the sieves gently using a brush or compressed air.",
+      "Document results and sieve mesh numbers in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload sieves as it affects separation efficiency.",
+      "Handle sieves carefully to avoid damaging the mesh.",
+      "Ensure the clamp is tight to prevent vibration noise and damage.",
+      "Clean sieves thoroughly to avoid sample cross-contamination.",
+      "Use calibrated sieves for official pharmacopeial testing."
+    ]
   }
 }

@@ -3,16 +3,42 @@
     "title": "Operation of Material Handling Trolley"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Material Handling Trolley.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Material Handling Trolley for safe transportation of materials, equipment, and products within pharmaceutical manufacturing areas.",
+    "scope": "Applicable to material handling activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Inspect the trolley before use for cleanliness and structural integrity.",
+      "Check wheels or casters for smooth operation and proper locking mechanism.",
+      "Clean the trolley surfaces if required before loading materials.",
+      "Ensure the trolley is appropriate for the material being transported.",
+      "Load materials onto the trolley ensuring balanced distribution.",
+      "Do not exceed the maximum load capacity of the trolley.",
+      "Secure materials properly to prevent shifting or falling during transport.",
+      "For multiple items, stack carefully ensuring stability.",
+      "Use appropriate containers or trays for loose materials.",
+      "Verify that pathways are clear before moving the trolley.",
+      "Push the trolley using proper ergonomic technique.",
+      "Avoid sudden movements or sharp turns that may destabilize load.",
+      "Maintain clear visibility while moving the trolley.",
+      "Use designated routes and follow directional arrows in controlled areas.",
+      "Stop at doorways and intersections to check for cross traffic.",
+      "Use ramps or elevators for moving between different floors.",
+      "Upon reaching destination, engage wheel locks before unloading.",
+      "Unload materials carefully to prevent damage.",
+      "After use, clean the trolley and return to designated storage area.",
+      "Park trolley in designated area without blocking pathways.",
+      "Report any damage or malfunction immediately."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not exceed maximum load capacity of the trolley.",
+      "Ensure materials are properly secured before transport.",
+      "Maintain balanced load distribution to prevent tipping.",
+      "Keep pathways clear and watch for obstacles.",
+      "Use caution when moving through doors and tight spaces.",
+      "Engage wheel locks when loading, unloading, or parking.",
+      "Do not leave loaded trolleys unattended in production areas.",
+      "Use appropriate trolley type for specific materials (e.g., stainless steel for pharmaceutical use).",
+      "Follow cleanroom protocols when moving trolleys between areas.",
+      "Wear appropriate PPE including safety shoes."
+    ]
   }
 }

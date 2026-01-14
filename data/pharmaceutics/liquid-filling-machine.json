@@ -3,16 +3,44 @@
     "title": "Operation of Liquid Filling Machine"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Liquid Filling Machine.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Liquid Filling Machine for accurate and hygienic filling of liquid pharmaceutical products into containers.",
+    "scope": "Applicable to liquid filling activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the machine is installed in a clean area meeting GMP requirements.",
+      "Verify all utilities including electricity, compressed air, and water supply are connected.",
+      "Check that filling nozzles, product tank, and piping are clean and sanitized.",
+      "Power ON the liquid filling machine and initialize control system.",
+      "Install appropriate filling nozzles based on container size and fill volume.",
+      "Adjust container handling components including guides and grippers.",
+      "Fill product tank with prepared liquid formulation.",
+      "Prime filling lines by running product through nozzles.",
+      "Purge air from lines and verify smooth product flow.",
+      "Set fill volume using volumetric or time-based controls.",
+      "Adjust conveyor speed and filling cycle parameters.",
+      "Place empty containers on infeed conveyor.",
+      "Perform trial filling and verify fill volume accuracy.",
+      "Adjust filling parameters if volume deviation exceeds limits.",
+      "Start production at appropriate speed once accuracy is confirmed.",
+      "Monitor filling operation for consistent volume and no spillage.",
+      "Check fill volume periodically using graduated cylinder or weighing.",
+      "Verify no-bottle-no-fill safety system functionality.",
+      "Inspect containers for proper fill level and absence of contamination.",
+      "After completion, drain residual product from tank and lines.",
+      "Perform cleaning-in-place or manual cleaning as per procedures.",
+      "Sanitize all product contact surfaces before next use.",
+      "Document fill volumes, parameters, and quality checks in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain aseptic conditions for sterile or preservative-free products.",
+      "Ensure containers are clean and free from particulates.",
+      "Monitor fill accuracy regularly to maintain dose uniformity.",
+      "Check for leaks in filling system before starting.",
+      "Use appropriate product-contact materials compatible with formulation.",
+      "Prevent cross-contamination through thorough cleaning.",
+      "Verify CIP effectiveness regularly.",
+      "Wear appropriate PPE including gloves, gown, and hair cover.",
+      "Follow cleaning validation protocols.",
+      "Properly dispose of spillage and rejected containers."
+    ]
   }
 }

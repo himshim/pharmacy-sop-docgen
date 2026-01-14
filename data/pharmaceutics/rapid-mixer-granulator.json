@@ -3,16 +3,26 @@
     "title": "Operation of Rapid Mixer Granulator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Rapid Mixer Granulator.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Rapid Mixer Granulator (RMG) for high-shear wet granulation.",
+    "scope": "Applicable to granulation activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check cleanliness of mixing bowl, impeller, and chopper.",
+      "Verify safety interlocks and air pressure for seals.",
+      "Load dry powders and perform dry mixing for specified time.",
+      "Add binder solution at a controlled rate while impeller is running.",
+      "Engage the chopper to break down large aggregates.",
+      "Monitor the motor load or 'ampere' reading to determine endpoint.",
+      "Stop the motor once granules with desired consistency are formed.",
+      "Discharge wet granules through the discharge port immediately.",
+      "Clean the bowl, blades, and discharge path thoroughly.",
+      "Document all speeds, times, and binder quantities in the BMR."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never attempt to open the lid while the impeller is rotating.",
+      "Ensure the discharge valve is properly sealed before starting.",
+      "Monitor granulation endpoint closely to prevent over-granulation.",
+      "Clean the chopper and impeller seals regularly to prevent leaks.",
+      "Wear appropriate PPE for high-speed operation environment."
+    ]
   }
 }

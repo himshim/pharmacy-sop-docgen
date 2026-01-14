@@ -3,16 +3,24 @@
     "title": "Operation of ELISA Reader"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the ELISA Reader.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To measure absorbance in microplates for enzyme-linked immunosorbent assays (ELISA).",
+    "scope": "Applicable to serological and immunological testing in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the ELISA reader and allow it to warm up.",
+      "Open the control software and select the appropriate assay protocol.",
+      "Insert the microplate into the carrier tray in the correct orientation.",
+      "Close the tray and start the reading sequence.",
+      "Wait for the instrument to measure absorbance at specified wavelengths.",
+      "Review the raw data and export results for analysis.",
+      "Remove the plate and dispose of it as biohazard waste if applicable.",
+      "Shut down the software and power OFF the instrument."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure there are no bubbles in the wells before reading.",
+      "Avoid spilling reagents on the plate surface or reader tray.",
+      "Regularly clean the optical path and plate holder as per SOP.",
+      "Verify wavelength calibration periodically.",
+      "Handle plates containing infectious material in a biosafety cabinet before and after reading."
+    ]
   }
 }

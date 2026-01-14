@@ -3,16 +3,23 @@
     "title": "Operation of Trinocular Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Trinocular Microscope.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To observe specimens through binocular eyepieces while simultaneously capturing images via a camera port.",
+    "scope": "Applicable to advanced imaging and teaching in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the microscope on a stable bench and connect power.",
+      "Turn ON the light source and adjust brightness.",
+      "Place the slide on the stage and focus using binocular eyepieces.",
+      "Attach a compatible camera to the trinocular port if imaging is required.",
+      "Adjust the light split between eyepieces and camera as needed.",
+      "Capture images using the connected camera system.",
+      "After use, turn OFF the light, remove the slide, and cover the microscope."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use only recommended cameras and adapters.",
+      "Avoid touching optical surfaces with fingers.",
+      "Do not use coarse focus at high magnification.",
+      "Protect the instrument from dust and humidity.",
+      "Disconnect power before any internal servicing."
+    ]
   }
 }

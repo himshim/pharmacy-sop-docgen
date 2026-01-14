@@ -3,16 +3,19 @@
     "title": "Operation of Vacuum Pump"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vacuum Pump.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To provide vacuum for filtration and drying.",
+    "scope": "Applicable to vacuum operations.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check oil level.",
+      "Connect tubing.",
+      "Switch ON.",
+      "Monitor vacuum.",
+      "Switch OFF and bleed."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Oil maintenance.",
+      "Trap liquids.",
+      "Ear protection."
+    ]
   }
 }

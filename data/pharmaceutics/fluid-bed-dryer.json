@@ -3,16 +3,43 @@
     "title": "Operation of Fluid Bed Dryer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Fluid Bed Dryer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Fluid Bed Dryer for efficient drying of pharmaceutical granules, powders, and wet materials using heated fluidized air.",
+    "scope": "Applicable to fluid bed drying activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the fluid bed dryer is installed in a clean area with proper ventilation.",
+      "Verify that all electrical connections, compressed air, and exhaust systems are functioning.",
+      "Check that the product bowl, filter bags, and expansion chamber are clean.",
+      "Inspect inlet and outlet air filters for cleanliness and proper installation.",
+      "Power ON the fluid bed dryer and initialize the control system.",
+      "Set process parameters including inlet air temperature, air flow rate, and drying time.",
+      "Start the blower and establish proper air flow through the system.",
+      "Allow the system to reach set temperature before loading material.",
+      "Load wet granules or material into the product bowl (50-70% capacity).",
+      "Close the bowl lid securely and ensure proper sealing.",
+      "Start the heating system and monitor inlet air temperature.",
+      "Monitor product temperature using temperature probe.",
+      "Observe fluidization pattern to ensure uniform fluidization of material.",
+      "Adjust air flow if fluidization is inadequate or excessive.",
+      "Continue drying until product moisture content reaches target level.",
+      "Take samples periodically and test for moisture content using LOD or other methods.",
+      "Once target moisture is achieved, stop heating but continue air flow for cooling.",
+      "Allow product to cool to room temperature before unloading.",
+      "Open discharge valve and collect dried material in appropriate containers.",
+      "Clean the product bowl, filters, and equipment thoroughly after use.",
+      "Shake or pulse filter bags to remove adhered powder.",
+      "Document all drying parameters, moisture data, and observations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the product bowl as it restricts proper fluidization.",
+      "Monitor inlet air temperature continuously to prevent product degradation.",
+      "Ensure proper fluidization to achieve uniform drying.",
+      "Check filter bags regularly and clean or replace when clogged.",
+      "Avoid over-drying which may cause product degradation.",
+      "Monitor product temperature to prevent overheating of heat-sensitive materials.",
+      "Ensure proper exhaust to remove moisture-laden air.",
+      "Wear appropriate PPE including heat-resistant gloves, mask, and safety shoes.",
+      "Follow lockout/tagout procedures during cleaning and maintenance.",
+      "Clean thoroughly between different products to prevent cross-contamination."
+    ]
   }
 }

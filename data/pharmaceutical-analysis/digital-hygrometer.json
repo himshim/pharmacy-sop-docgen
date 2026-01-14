@@ -3,16 +3,24 @@
     "title": "Operation of Digital Hygrometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Hygrometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for monitoring environmental humidity and temperature.",
+    "scope": "Applicable to environmental control in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the hygrometer in the designated area of the laboratory.",
+      "Ensure the instrument is away from direct sunlight and heat sources.",
+      "Wait for the instrument to equilibrate with the environment (approx. 15 mins).",
+      "Record the relative humidity (%) and temperature (°C) readings in the daily logbook.",
+      "Check the maximum and minimum readings recorded since the last reset.",
+      "Reset the Min/Max memory daily.",
+      "Verify the accuracy of the hygrometer against a reference standard annually.",
+      "Replace the batteries as soon as the display becomes faint."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not expose the sensor to corrosive chemical fumes.",
+      "Avoid touching the sensor element directly.",
+      "Ensure the hygrometer is used within its specified range.",
+      "Keep the instrument clean and free from dust.",
+      "Report any persistent out-of-range humidity levels."
+    ]
   }
 }

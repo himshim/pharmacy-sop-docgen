@@ -3,16 +3,28 @@
     "title": "Operation of Analytical Balance"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Analytical Balance.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the accurate weighing of pharmaceutical ingredients using an analytical balance.",
+    "scope": "Applicable to weighing activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the balance is placed on a stable, vibration-free weighing table.",
+      "Check the spirit level and adjust the leveling feet until the bubble is centered.",
+      "Verify that the balance is clean and the weighing pan is free from debris.",
+      "Power ON the balance and allow it to stabilize for at least 30 minutes.",
+      "Perform internal or external calibration as per the frequency specified in the calibration SOP.",
+      "Open the draft shield and place the weighing boat or paper on the pan.",
+      "Close the draft shield and press the 'TARE' or 'ZERO' button.",
+      "Add the substance to be weighed carefully into the weighing boat.",
+      "Close the draft shield and wait for the stability indicator to appear.",
+      "Record the final weight reading in the logbook or batch record.",
+      "Remove the weighing boat and clean any spilled material from the balance chamber immediately.",
+      "Switch OFF the balance (or put in standby) and close the draft shield after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not weigh hot or cold objects; allow them to reach room temperature first.",
+      "Handle the draft shield gently to avoid disturbing the balance sensors.",
+      "Avoid touching the weighing pan or boat with bare hands (use forceps/gloves).",
+      "Do not exceed the maximum capacity of the balance.",
+      "Maintain a clean environment around the balance to prevent interference."
+    ]
   }
 }

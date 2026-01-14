@@ -3,16 +3,23 @@
     "title": "Operation of Safety Shower"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Safety Shower.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide immediate decontamination of the body in case of chemical splashes or fires.",
+    "scope": "Applicable to emergency safety in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Position the affected person directly under the shower head.",
+      "Pull the activation handle or chain firmly to start the water flow.",
+      "Remove contaminated clothing and shoes while the water is running.",
+      "Remain under the shower for at least 15 minutes to flush all chemicals.",
+      "Seek medical attention immediately after the decontamination process.",
+      "The shower should be tested monthly to ensure proper operation.",
+      "Keep the area under the shower clear of any obstructions at all times."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use the safety shower for non-emergency purposes like cleaning equipment.",
+      "Ensure the floor area has proper drainage to prevent flooding.",
+      "Inform lab personnel and supervisors immediately when the shower is activated.",
+      "Replace any privacy curtains or towels kept in the vicinity after use.",
+      "Maintain clear signage for the location of the shower."
+    ]
   }
 }

@@ -3,16 +3,24 @@
     "title": "Operation of Digital Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Microscope.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To view and capture digital images of microorganisms and microscopic structures.",
+    "scope": "Applicable to teaching, documentation, and analysis in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Connect the digital microscope to a computer or display as per manufacturer instructions.",
+      "Switch ON the microscope and associated imaging software.",
+      "Place the prepared slide on the stage and focus using the live image on screen.",
+      "Adjust brightness, contrast, and magnification digitally or via controls.",
+      "Capture still images or videos as required and save them with proper file names.",
+      "After observation, remove the slide and clean any oil from objectives.",
+      "Shut down the software and power OFF the microscope.",
+      "Cover the instrument to protect it from dust."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid sudden unplugging of USB or power cables while the system is running.",
+      "Use only recommended cleaning agents for lenses and sensors.",
+      "Ensure sufficient ventilation for any built-in light sources.",
+      "Protect the instrument from power surges using a stabilizer or UPS.",
+      "Do not touch the camera sensor directly."
+    ]
   }
 }

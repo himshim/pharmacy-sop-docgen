@@ -3,16 +3,20 @@
     "title": "Operation of Herbarium Cabinet"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Herbarium Cabinet.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To store pressed and dried plant specimens for permanent reference collections.",
+    "scope": "Applicable to maintenance of Pharmacognosy herbarium collections.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place dried, pressed specimens in labeled folders.",
+      "File specimens alphabetically by genus or family.",
+      "Close drawers and ensure tight seal.",
+      "Control temperature (20–25°C) and humidity (<50% RH).",
+      "Inspect periodically for pests."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use naphthalene balls or paradichlorobenzene for pest control.",
+      "Avoid direct sunlight.",
+      "Handle specimens with forceps.",
+      "Maintain access log for rare specimens."
+    ]
   }
 }

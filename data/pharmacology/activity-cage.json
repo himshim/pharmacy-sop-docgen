@@ -3,16 +3,22 @@
     "title": "Operation of Activity Cage"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Activity Cage.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To measure spontaneous locomotor activity of experimental animals as an indicator of CNS effects.",
+    "scope": "Applicable to behavioral pharmacology studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the animal in the activity cage and allow acclimatization for 10-15 minutes.",
+      "Reset the counter and start the timer.",
+      "Observe the animal for the predetermined test period (e.g., 5 or 10 minutes).",
+      "Record the number of beam interruptions or cage crossings.",
+      "Remove the animal and clean the cage with disinfectant.",
+      "Calculate the activity score and document in the experimental record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Handle animals gently to minimize stress.",
+      "Ensure the cage is clean and free from odors before introducing animals.",
+      "Perform tests at the same time each day for consistency.",
+      "Avoid testing sick or injured animals.",
+      "Clean the optical beams if they become dirty."
+    ]
   }
 }

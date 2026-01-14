@@ -1,18 +1,23 @@
 {
   "meta": {
-    "title": "Operation of Manual Colony Counter"
+    "title": "Use of Manual Colony Counter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Manual Colony Counter.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To manually count microbial colonies using a pen and illuminated background.",
+    "scope": "Applicable where digital counters are not available.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the Petri dish on the illuminated background or grid.",
+      "Using a marker or hand tally counter, mark each colony as it is counted.",
+      "Move systematically across the plate to avoid double counting.",
+      "Record the total number of colonies and sample details.",
+      "Clean the surface after counting."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure good lighting and contrast to distinguish colonies.",
+      "Avoid contaminating the plate while handling.",
+      "Discard counted plates as biohazard waste.",
+      "Use eye protection if working for prolonged periods under bright light.",
+      "Do not reuse plates for further incubation after counting."
+    ]
   }
 }

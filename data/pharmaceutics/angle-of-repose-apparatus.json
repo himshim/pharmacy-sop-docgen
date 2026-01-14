@@ -3,16 +3,39 @@
     "title": "Operation of Angle of Repose Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Angle of Repose Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Angle of Repose Apparatus for determination of flow properties of pharmaceutical powders and granules by measuring the angle of repose.",
+    "scope": "Applicable to angle of repose measurement activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the apparatus is placed on a stable, level surface in a clean environment.",
+      "Verify that the funnel, stand, and base plate are clean and dry.",
+      "Assemble the apparatus by fixing the funnel on the stand at appropriate height.",
+      "Place a sheet of graph paper or plain paper on the base plate to facilitate measurement.",
+      "Adjust the funnel height to the standard distance (typically 10 cm) above the base plate.",
+      "Ensure the funnel stem opening is of appropriate diameter as per standard method.",
+      "Weigh an appropriate quantity of powder or granules (typically 50-100 g).",
+      "Close the funnel outlet using a finger or stopper temporarily.",
+      "Pour the powder sample into the funnel carefully.",
+      "Remove the stopper or finger to allow powder to flow freely through the funnel.",
+      "Allow the powder to form a conical heap on the base plate without disturbance.",
+      "Continue until all powder has flowed and a stable cone is formed.",
+      "Measure the height of the cone (h) from the base to apex using a scale or vernier caliper.",
+      "Measure the radius of the cone base (r) at multiple points and calculate average.",
+      "Calculate the angle of repose using the formula: tan θ = h/r or θ = tan⁻¹(h/r).",
+      "Perform triplicate measurements with fresh powder samples for reproducibility.",
+      "Calculate the mean angle of repose and standard deviation.",
+      "Clean the apparatus thoroughly after use to prevent cross-contamination.",
+      "Document all measurements, calculations, and observations in the analytical record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure powder is free-flowing and dry before measurement.",
+      "Avoid vibrations or air currents during cone formation that may affect results.",
+      "Maintain consistent funnel height for all measurements.",
+      "Use sufficient quantity of powder to form a stable and measurable cone.",
+      "Do not disturb the formed cone during measurement.",
+      "Perform measurements in a controlled environment with minimal humidity.",
+      "Clean the funnel between different samples to prevent cross-contamination.",
+      "Handle powders with care and wear appropriate PPE including mask and gloves.",
+      "Record environmental conditions like temperature and humidity as they may affect results."
+    ]
   }
 }

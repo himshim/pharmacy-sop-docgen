@@ -3,16 +3,23 @@
     "title": "Operation of Stop Watch"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Stop Watch.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To measure elapsed time for analytical procedures and reaction monitoring.",
+    "scope": "Applicable to timing tasks in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Press 'RESET' to clear any previous time readings.",
+      "Press 'START' at the beginning of the timed event.",
+      "Press 'STOP' once the event is completed.",
+      "Record the measured time in the logbook or batch record.",
+      "Reset the watch for the next use.",
+      "Turn OFF the watch if it has a power switch to save battery.",
+      "Clean the watch with a dry cloth periodically."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not handle the stop watch with wet or chemical-stained hands.",
+      "Check the battery status regularly to ensure reliability.",
+      "Avoid exposing the watch to extreme heat or magnetic fields.",
+      "Store the stop watch in its protective case when not in use.",
+      "Verify the timing accuracy against a standard clock annually."
+    ]
   }
 }

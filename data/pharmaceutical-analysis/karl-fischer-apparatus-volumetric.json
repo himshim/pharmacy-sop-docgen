@@ -3,16 +3,24 @@
     "title": "Operation of Karl Fischer Apparatus (Volumetric)"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Karl Fischer Apparatus (Volumetric).",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To determine moisture content in samples (>100 ppm) using automated volumetric titration.",
+    "scope": "Applicable to moisture analysis in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the burette and tubing are primed with fresh KF titrant.",
+      "Place solvent in the titration beaker and perform the 'pre-titration' step.",
+      "Determine the titer (mg H2O/mL) using a standard water-in-methanol solution.",
+      "Introduce the weighed sample into the titration vessel.",
+      "Start the automatic titration program.",
+      "Record the final result displayed after the endpoint is achieved.",
+      "Clean the beaker and purge the lines if the instrument will be idle.",
+      "Document all titer values and sample results in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Regularly check the desiccants in the drying tubes.",
+      "Avoid splashing reagent onto the electrodes.",
+      "Ensure the sample is completely dissolved for accurate results.",
+      "Keep the titration beaker tightly capped at all times.",
+      "Handle reagents with care in a well-ventilated area."
+    ]
   }
 }

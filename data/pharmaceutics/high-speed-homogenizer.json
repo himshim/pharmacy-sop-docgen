@@ -3,16 +3,42 @@
     "title": "Operation of High Speed Homogenizer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the High Speed Homogenizer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of High Speed Homogenizer for particle size reduction and uniform dispersion of pharmaceutical emulsions, suspensions, and semi-solid preparations.",
+    "scope": "Applicable to homogenization activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the homogenizer is placed on a stable surface or properly mounted.",
+      "Verify that the rotor-stator assembly is clean and properly installed.",
+      "Check that all electrical connections are secure.",
+      "Select appropriate rotor-stator attachment based on product viscosity and batch size.",
+      "Prepare the product or pre-mix in an appropriate container.",
+      "Immerse the rotor-stator assembly into the product ensuring proper depth.",
+      "Ensure sufficient product depth to cover the rotor-stator completely.",
+      "Power ON the homogenizer at low speed initially.",
+      "Gradually increase speed to the desired level for homogenization.",
+      "Move the homogenizer slowly through the product if necessary for large batches.",
+      "Maintain rotor-stator immersion to avoid air incorporation.",
+      "Monitor product temperature during processing.",
+      "Continue homogenization for the required duration to achieve desired particle size.",
+      "For temperature-sensitive products, use jacketed vessels or ice bath for cooling.",
+      "Reduce speed gradually before stopping the homogenizer.",
+      "Power OFF and remove the rotor-stator from the product.",
+      "Rinse the rotor-stator immediately with appropriate solvent.",
+      "Disassemble rotor-stator assembly for thorough cleaning.",
+      "Inspect for wear or damage and replace if necessary.",
+      "Verify product uniformity and particle size if required.",
+      "Document homogenization speed, time, and observations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate the homogenizer without product immersion as it may cause damage.",
+      "Avoid excessive speed that can cause product heating or degradation.",
+      "Do not introduce air bubbles by keeping rotor-stator fully immersed.",
+      "Monitor temperature continuously for heat-sensitive products.",
+      "Use appropriate container size to ensure proper immersion depth.",
+      "Clean rotor-stator immediately after use to prevent product hardening.",
+      "Inspect rotor-stator regularly for wear and replace when damaged.",
+      "Wear appropriate PPE including safety goggles, gloves, and lab coat.",
+      "Ensure proper grounding to prevent electrical hazards.",
+      "Follow lockout/tagout procedures during maintenance."
+    ]
   }
 }

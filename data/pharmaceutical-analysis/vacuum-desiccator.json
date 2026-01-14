@@ -3,16 +3,23 @@
     "title": "Operation of Vacuum Desiccator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Vacuum Desiccator.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To store samples and chemicals under vacuum in a dry environment.",
+    "scope": "Applicable to sample storage in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the desiccant is active and the flange is greased.",
+      "Place the sample inside and slide the lid to seal.",
+      "Connect the vacuum pump to the stopcock and turn it ON.",
+      "Slowly open the stopcock to evacuate the chamber.",
+      "Close the stopcock and turn OFF the pump.",
+      "To open, slowly bleed air into the chamber through the stopcock.",
+      "Slide the lid off carefully to retrieve the sample."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Inspect the glass for any chips or cracks before applying vacuum.",
+      "Release the vacuum very slowly to prevent disturbing the sample.",
+      "Use a protective screen or safety cage for vacuum work.",
+      "Do not lift the desiccator by the lid knob.",
+      "Keep the stopcock well-greased for a perfect seal."
+    ]
   }
 }

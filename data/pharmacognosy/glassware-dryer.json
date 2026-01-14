@@ -3,16 +3,20 @@
     "title": "Operation of Glassware Dryer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Glassware Dryer.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To dry cleaned glassware used for extraction, distillation, and sample preparation.",
+    "scope": "Applicable to drying of volumetric flasks, pipettes, and extraction apparatus.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Load clean, rinsed glassware upright on the drying racks.",
+      "Close the door and set the temperature to 50–70°C.",
+      "Set drying time or use automatic cycle.",
+      "Allow glassware to cool before removal.",
+      "Inspect for dryness and store in clean cabinets."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload racks.",
+      "Avoid drying plasticware or heat-sensitive glass.",
+      "Ensure good air circulation.",
+      "Clean lint filters regularly."
+    ]
   }
 }

@@ -3,16 +3,23 @@
     "title": "Operation of Orbital Shaker Incubator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Orbital Shaker Incubator.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To incubate and shake cultures simultaneously under controlled conditions.",
+    "scope": "Applicable to aerobic culture growth and expression studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Set the desired temperature and allow chamber to equilibrate.",
+      "Load culture flasks and distribute weight evenly.",
+      "Set shaking speed and time.",
+      "Close the door and start both incubation and shaking.",
+      "Monitor periodically for abnormal noise or temperature deviations.",
+      "Stop the shaker and open the door carefully at the end.",
+      "Remove cultures and clean any spills inside."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure proper balancing of the load.",
+      "Do not exceed recommended flask sizes or fill volumes.",
+      "Keep the door closed during operation to maintain conditions.",
+      "Use appropriate closures to prevent aerosol formation.",
+      "Perform routine maintenance as per manufacturer instructions."
+    ]
   }
 }

@@ -3,16 +3,23 @@
     "title": "Operation of Ultra Low Temperature Freezer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Ultra Low Temperature Freezer.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To store microbial cultures, reagents, and samples at ultra-low temperatures (typically -70°C to -86°C).",
+    "scope": "Applicable to long-term biological sample preservation in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check that the set temperature is within the required ultra-low range.",
+      "Organize samples in labeled cryoboxes and racks for easy retrieval.",
+      "Limit door opening time to reduce temperature fluctuations.",
+      "Monitor and log the internal temperature daily.",
+      "Inspect door gaskets and remove frost buildup as needed.",
+      "Connect the alarm system and backup power where available.",
+      "Schedule periodic maintenance as recommended by the manufacturer."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Wear insulated gloves and face protection when accessing the freezer.",
+      "Do not use sharp tools to remove ice.",
+      "Avoid overloading the freezer.",
+      "Ensure adequate room ventilation to dissipate compressor heat.",
+      "Plan for emergency response in case of freezer failure."
+    ]
   }
 }

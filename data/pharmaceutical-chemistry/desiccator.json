@@ -3,16 +3,25 @@
     "title": "Operation of Desiccator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Desiccator.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for the use of a desiccator to maintain a dry environment for samples.",
+    "scope": "Applicable to sample preservation activities carried out in the Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check that the desiccant (e.g., silica gel) at the bottom is fresh (indicated by blue color).",
+      "If the silica gel has turned pink, regenerate it by heating in an oven or replace it.",
+      "Apply a thin layer of vacuum grease to the ground-glass rim of the desiccator base.",
+      "Place the sample (usually in a weighing boat or crucible) on the ceramic plate inside.",
+      "Slide the lid onto the desiccator base to create an airtight seal; do not lift the lid directly.",
+      "Allow the sample to reach equilibrium in the dry environment.",
+      "When removing a sample, slide the lid off carefully to avoid disturbing the contents.",
+      "Ensure the lid is replaced promptly after each use.",
+      "Periodically clean the interior of the desiccator and renew the grease on the rim."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not place very hot crucibles directly in the desiccator; allow them to cool slightly first.",
+      "Handle the desiccator with both hands, especially when moving it.",
+      "Ensure the desiccant does not touch the sample plate.",
+      "Avoid dropping the lid as it is made of heavy glass and can shatter.",
+      "Use caution when sliding the lid to avoid trapping fingers."
+    ]
   }
 }

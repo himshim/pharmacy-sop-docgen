@@ -3,16 +3,25 @@
     "title": "Operation of CO2 Incubator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the CO2 Incubator.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide a controlled temperature, humidity, and CO2 level for cell and tissue cultures.",
+    "scope": "Applicable to advanced microbial and cell studies in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the CO2 cylinder is connected and has sufficient pressure.",
+      "Power ON and set the required temperature, CO2 concentration (e.g., 5%), and humidity.",
+      "Fill the water pan with sterile distilled water to maintain humidity.",
+      "Allow the incubator to stabilize (typically several hours).",
+      "Load samples onto the shelves, avoiding overcrowding.",
+      "Monitor and record the temperature and CO2 levels daily.",
+      "Check the water level in the pan every 2 days.",
+      "Clean the interior shelves and door gaskets with a mild disinfectant regularly.",
+      "Conduct a decontamination cycle (if equipped) as per the maintenance plan."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not open the door frequently, as CO2 levels drop rapidly.",
+      "Ensure the incubator is placed on a level surface away from vibrations.",
+      "Monitor the CO2 tank pressure and change tanks before they are empty.",
+      "Use only sterile distilled water in the humidity pan to prevent contamination.",
+      "Calibrate the CO2 sensor and thermometer annually."
+    ]
   }
 }

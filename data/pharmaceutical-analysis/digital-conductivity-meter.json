@@ -3,16 +3,24 @@
     "title": "Operation of Digital Conductivity Meter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Conductivity Meter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for measuring the conductivity of liquids with a digital interface.",
+    "scope": "Applicable to analytical tasks in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the meter and allow it to perform self-diagnostics.",
+      "Calibrate the meter with a standard conductivity buffer.",
+      "Rinse the conductivity electrode with distilled water and dry with a tissue.",
+      "Place the electrode in the sample solution and wait for the stability indicator.",
+      "Record the conductivity and temperature value displayed.",
+      "Rinse the electrode thoroughly after each use.",
+      "Store the electrode in the appropriate storage solution.",
+      "Document the calibration and results in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Handle the electrode bulb with care.",
+      "Keep the electrode submerged in the recommended storage liquid when not in use.",
+      "Avoid cross-contamination by rinsing between samples.",
+      "Check for the presence of air bubbles in the electrode sensing area.",
+      "Perform daily calibration before starting measurements."
+    ]
   }
 }

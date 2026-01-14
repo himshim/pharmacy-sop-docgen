@@ -3,16 +3,26 @@
     "title": "Operation of Rotary Vacuum Evaporator"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Rotary Vacuum Evaporator.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To efficiently remove solvents from samples under reduced pressure and controlled heating.",
+    "scope": "Applicable to solvent recovery and concentration in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Fill the water bath and set it to the desired temperature.",
+      "Attach the flask containing the sample to the bump bulb using a clip.",
+      "Turn ON the cooling water for the condenser.",
+      "Start the rotation of the flask at a moderate speed.",
+      "Slowly turn ON the vacuum pump and adjust the vacuum level.",
+      "Lower the rotating flask into the heated water bath.",
+      "Monitor the distillation; once the solvent is removed, raise the flask.",
+      "Release the vacuum first, then stop the rotation and heating.",
+      "Remove the flask and collect the concentrated sample.",
+      "Empty the solvent collection flask and clean the assembly."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always check the glassware for cracks before applying vacuum.",
+      "Ensure the bump bulb is clean to prevent sample contamination.",
+      "Do not fill the evaporating flask more than half full.",
+      "Monitor the bath temperature to prevent thermal degradation of the sample.",
+      "Wear safety goggles to protect against potential glass implosions."
+    ]
   }
 }

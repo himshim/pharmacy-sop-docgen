@@ -3,16 +3,42 @@
     "title": "Operation of Deep Freezer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Deep Freezer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Deep Freezer for storage of temperature-sensitive pharmaceutical products, biologicals, and samples at ultra-low temperatures.",
+    "scope": "Applicable to frozen storage activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the deep freezer is installed on a level surface with adequate ventilation around compressor.",
+      "Verify that the freezer is connected to a dedicated power supply with backup if needed.",
+      "Power ON the deep freezer using the main power switch.",
+      "Set the desired storage temperature (typically -20°C to -80°C) using the controller.",
+      "Allow the freezer to reach set temperature before loading any products (may take several hours).",
+      "Verify temperature stability using calibrated thermometer or temperature probe.",
+      "Check that the temperature display matches the set point.",
+      "Organize products in labeled boxes or racks for easy identification and retrieval.",
+      "Pre-cool products gradually if possible before placing in deep freezer.",
+      "Open the freezer door only when necessary and for minimum duration.",
+      "Load products ensuring proper air circulation and not blocking vents.",
+      "Close the door securely ensuring proper seal.",
+      "Monitor temperature continuously through display or data logging system.",
+      "Record temperature readings at specified intervals as per protocol.",
+      "Set temperature alarms for out-of-specification conditions.",
+      "Maintain inventory log of all products stored with location details.",
+      "Defrost the freezer periodically if manual defrost type (follow manufacturer guidelines).",
+      "Check door gaskets regularly for proper sealing and replace if damaged.",
+      "Clean interior surfaces periodically with appropriate cleaning agents.",
+      "Perform regular preventive maintenance and calibration as per schedule.",
+      "Document all temperature data, deviations, and corrective actions in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Minimize door opening frequency and duration to maintain temperature.",
+      "Never place hot or warm items directly in the freezer.",
+      "Use cryogenic gloves when handling items stored at ultra-low temperatures.",
+      "Ensure proper ventilation around the freezer compressor unit.",
+      "Install temperature monitoring system with alarm for critical storage.",
+      "Have backup power supply or contingency plan for power failures.",
+      "Do not overload the freezer beyond rated capacity.",
+      "Investigate and document any temperature excursions immediately.",
+      "Keep emergency contact numbers accessible for equipment failures.",
+      "Perform regular calibration to ensure temperature accuracy."
+    ]
   }
 }

@@ -3,16 +3,25 @@
     "title": "Operation of Hot Air Oven"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Hot Air Oven.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To provide dry heat for sterilization of glassware and drying of chemical reagents.",
+    "scope": "Applicable to laboratory activities in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check that the oven is clean and the shelves are properly positioned.",
+      "Power ON the unit and set the required temperature on the controller.",
+      "Allow the oven to reach the set temperature and stabilize.",
+      "Place items on the trays, ensuring they do not touch the interior walls.",
+      "Close the door tightly to maintain the temperature.",
+      "Monitor the temperature periodically during the process.",
+      "After the cycle is complete, turn OFF the heater and allow cooling.",
+      "Remove items using heat-resistant gloves.",
+      "Record the temperature and time in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not place flammable or explosive materials in the oven.",
+      "Avoid overloading the shelves to ensure uniform air circulation.",
+      "Do not use the oven for drying heat-sensitive plastics.",
+      "Regularly check the door gasket for proper sealing.",
+      "Perform periodic temperature calibration."
+    ]
   }
 }

@@ -3,16 +3,23 @@
     "title": "Operation of Media Sterilizer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Media Sterilizer.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To sterilize prepared media, glassware, and accessories using programmed steam cycles.",
+    "scope": "Applicable to centralized media sterilization.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Load media bottles or flasks into the sterilizer chamber with space between items.",
+      "Select the appropriate sterilization program and temperature.",
+      "Start the cycle and monitor indicators for temperature and pressure.",
+      "Allow the sterilizer to complete the sterilization and exhaust phases.",
+      "Open the door slightly to release residual steam, then fully after cooling.",
+      "Remove sterilized media carefully and inspect for cracks or volume loss.",
+      "Record cycle parameters in the logbook."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the chamber.",
+      "Ensure caps are loosened to prevent bottle breakage.",
+      "Perform regular biological indicator tests for validation.",
+      "Check door gasket integrity periodically.",
+      "Allow sufficient cooling time before handling hot media."
+    ]
   }
 }

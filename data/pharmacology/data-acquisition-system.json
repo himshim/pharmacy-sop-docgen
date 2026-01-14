@@ -3,16 +3,23 @@
     "title": "Operation of Data Acquisition System"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Data Acquisition System.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To collect, digitize, and analyze physiological data from experimental setups.",
+    "scope": "Applicable to automated recording in cardiovascular and neuropharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Connect transducers and sensors to the acquisition modules.",
+      "Power ON the system and start the acquisition software.",
+      "Calibrate each channel using known standards.",
+      "Start data recording before initiating the experiment.",
+      "Monitor real-time displays and save data at regular intervals.",
+      "After experiment, export data for analysis and archive raw files.",
+      "Disconnect and store sensors properly."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Verify all connections are secure.",
+      "Backup data immediately after acquisition.",
+      "Use shielded cables to minimize electrical interference.",
+      "Ground all equipment properly.",
+      "Follow software update procedures carefully."
+    ]
   }
 }

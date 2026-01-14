@@ -3,16 +3,23 @@
     "title": "Operation of Laminar Air Flow Cabinet"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Laminar Air Flow Cabinet.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide a sterile work area by supplying HEPA-filtered air in a laminar flow pattern.",
+    "scope": "Applicable to general aseptic manipulations in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the blower and light; run for 15–20 minutes before work.",
+      "Wipe the worktop and interior surfaces with 70% ethanol.",
+      "Arrange sterile materials without blocking air grills.",
+      "Carry out aseptic procedures within the central work zone.",
+      "On completion, disinfect all items before removal.",
+      "Clean the work surface again and allow blower to run 10 minutes more.",
+      "Switch OFF the unit and cover if provided."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use open flames inside the cabinet.",
+      "Do not store non-essential materials inside permanently.",
+      "Avoid rapid movements that disturb laminar flow.",
+      "Ensure annual HEPA filter testing and certification.",
+      "Use appropriate PPE including gloves and lab coat."
+    ]
   }
 }

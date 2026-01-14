@@ -3,16 +3,40 @@
     "title": "Operation of Capsule Polishing Machine"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Capsule Polishing Machine.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Capsule Polishing Machine for removal of dust and powder residues from the surface of filled capsules to improve appearance and quality.",
+    "scope": "Applicable to capsule polishing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the machine is placed on a stable surface in a clean environment.",
+      "Verify that the dust extraction system or vacuum connection is functional.",
+      "Check that the polishing drum and brushes are clean and in good condition.",
+      "Power ON the capsule polishing machine and vacuum system.",
+      "Set the polishing time and drum rotation speed as per product requirements.",
+      "Adjust vacuum suction intensity to remove dust without damaging capsules.",
+      "Load filled capsules into the polishing drum (do not overload).",
+      "Close the drum lid securely to prevent capsule escape.",
+      "Start the polishing cycle and allow the machine to run for the set duration.",
+      "Monitor the operation for any unusual noise or vibration.",
+      "After completion, stop the machine and wait for drum to come to complete stop.",
+      "Open the drum lid carefully and collect the polished capsules.",
+      "Inspect capsules for proper cleaning and absence of surface powder.",
+      "Verify that capsules are not damaged during polishing process.",
+      "Check for any broken or cracked capsules and segregate them.",
+      "Collect polished capsules in clean containers for further processing or packaging.",
+      "Empty the dust collection chamber and dispose of collected powder.",
+      "Clean the polishing drum, brushes, and machine surfaces.",
+      "Inspect brushes for wear and replace if necessary.",
+      "Document the polishing parameters and observations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not overload the polishing drum beyond recommended capacity.",
+      "Use appropriate polishing time to avoid excessive friction and capsule damage.",
+      "Ensure proper dust extraction to maintain clean environment.",
+      "Check capsule integrity after polishing to ensure no breakage.",
+      "Maintain moderate rotation speed to prevent capsule damage.",
+      "Clean the machine regularly to prevent powder buildup.",
+      "Replace worn brushes promptly to maintain polishing efficiency.",
+      "Wear appropriate PPE including mask and gloves.",
+      "Ensure proper ventilation in the polishing area."
+    ]
   }
 }

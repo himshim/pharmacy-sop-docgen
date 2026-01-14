@@ -3,16 +3,22 @@
     "title": "Operation of Maze Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Maze Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To assess learning, memory, and exploratory behavior using maze-based tasks.",
+    "scope": "Applicable to cognitive and behavioral pharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Acclimatize animals to the test room.",
+      "Place the animal at the designated start point.",
+      "Allow the animal to explore or find a reward/exit.",
+      "Record latency, errors, and path taken.",
+      "Repeat trials according to experimental design.",
+      "Clean the maze between animals to remove scent cues."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain consistent lighting and noise conditions.",
+      "Avoid using hungry or stressed animals beyond protocol.",
+      "Ensure maze surfaces are non-slippery.",
+      "Do not leave animals unattended in the maze.",
+      "Disinfect regularly to prevent disease transmission."
+    ]
   }
 }

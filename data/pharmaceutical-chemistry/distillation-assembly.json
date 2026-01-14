@@ -3,16 +3,27 @@
     "title": "Operation of Distillation Assembly"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Distillation Assembly.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for simple distillation to purify solvents or separate components.",
+    "scope": "Applicable to synthesis and purification activities in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Assemble the distillation flask, distillation head, condenser, and receiving flask.",
+      "Secure all joints with Keck clips and apply a light coating of vacuum grease to ground-glass joints.",
+      "Connect the water inlet and outlet to the condenser and check for proper flow.",
+      "Place the liquid to be distilled into the flask, adding 2-3 boiling chips/stones.",
+      "Ensure the thermometer is positioned correctly with the bulb at the level of the side arm.",
+      "Place the distillation flask in a heating mantle or oil bath.",
+      "Slowly turn ON the heat and monitor the temperature rise.",
+      "Collect the distillate in the receiving flask once the desired temperature is reached.",
+      "Discard the initial fraction (forerun) if required by the protocol.",
+      "Stop heating before the distillation flask becomes completely dry.",
+      "Allow the assembly to cool down before dismantling and cleaning."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never heat a closed system; ensure the assembly is vented to the atmosphere.",
+      "Check for leaks in the assembly before starting the heat.",
+      "Ensure the cooling water is flowing steadily through the condenser.",
+      "Handle hot glassware with heat-resistant gloves.",
+      "Dispose of the residue in the distillation flask according to chemical waste SOPs."
+    ]
   }
 }

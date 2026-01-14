@@ -3,16 +3,25 @@
     "title": "Operation of Horizontal Laminar Air Flow"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Horizontal Laminar Air Flow.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To provide a unidirectional flow of HEPA-filtered air to protect samples from contamination during aseptic work.",
+    "scope": "Applicable to aseptic dispensing and microbiological work in the laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the main power and blower of the laminar air flow unit.",
+      "Allow the blower to run for at least 15–20 minutes before starting work.",
+      "Wipe the work surface and interior walls with 70% ethanol.",
+      "Place only essential sterile materials inside, arranging them to avoid blocking airflow.",
+      "Perform all manipulations at least 6 inches inside from the front edge.",
+      "Keep arm movements slow and minimize traffic around the cabinet.",
+      "On completion, remove all materials after wiping external surfaces.",
+      "Disinfect the work surface again with 70% ethanol.",
+      "Run the blower for an additional 10 minutes before switching OFF."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not use open flames inside the laminar hood as they disturb airflow and may damage HEPA filters.",
+      "Do not store materials permanently inside the hood.",
+      "Ensure the front intake and rear exhaust grills are unobstructed.",
+      "Replace or certify HEPA filters as per manufacturer guidelines.",
+      "Use appropriate PPE even when working inside the hood."
+    ]
   }
 }

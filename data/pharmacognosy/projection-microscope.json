@@ -3,16 +3,16 @@
     "title": "Operation of Projection Microscope"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Projection Microscope.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To project microscopical characters for demonstration.",
+    "scope": "Applicable to teaching.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Focus specimen.",
+      "Adjust projector.",
+      "Project image."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Clean lenses.",
+      "Dark room."
+    ]
   }
 }

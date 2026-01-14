@@ -3,16 +3,22 @@
     "title": "Operation of Spirometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Spirometer.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To measure lung volumes and respiratory parameters.",
+    "scope": "Applicable to respiratory pharmacology and pulmonary function studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Calibrate the spirometer using a known volume syringe if applicable.",
+      "Attach appropriate mouthpiece or animal connector.",
+      "Instruct human subjects or position animals as per protocol.",
+      "Record tidal volume, vital capacity, or other parameters during breathing maneuvers.",
+      "Save or document spirometric readings for analysis.",
+      "Clean and disinfect reusable parts after each use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use disposable mouthpieces where possible.",
+      "Avoid cross-infection by strict disinfection between subjects.",
+      "Ensure air leaks are minimized for accurate readings.",
+      "Follow safety and ethical rules for human subject testing.",
+      "Do not use on subjects with contraindicated respiratory or cardiac conditions."
+    ]
   }
 }

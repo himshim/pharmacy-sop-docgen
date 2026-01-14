@@ -3,16 +3,25 @@
     "title": "Operation of Roller Mill"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Roller Mill.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Roller Mill for size reduction using compression and shearing action.",
+    "scope": "Applicable to milling activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Check rollers for cleanliness and ensure they are free from residues.",
+      "Adjust the gap between rollers according to required particle size.",
+      "Power ON the mill and check for proper roller rotation.",
+      "Feed the material uniformly into the hopper.",
+      "Monitor the milled output and collect in appropriate containers.",
+      "Adjust feed rate if the mill shows signs of overloading.",
+      "Stop the mill after processing and allow it to cool.",
+      "Clean the rollers and hopper thoroughly after use.",
+      "Document milling settings and product yield in the record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Maintain safe distance from moving rollers during operation.",
+      "Do not feed hard foreign objects that could damage roller surfaces.",
+      "Check roller alignment regularly to ensure uniform milling.",
+      "Clean rollers immediately to prevent material buildup/hardening.",
+      "Wear hearing and eye protection during operation."
+    ]
   }
 }

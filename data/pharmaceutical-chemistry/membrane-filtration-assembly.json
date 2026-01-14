@@ -3,16 +3,24 @@
     "title": "Operation of Membrane Filtration Assembly"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Membrane Filtration Assembly.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To remove particulate matter or microorganisms from liquids using membrane filters.",
+    "scope": "Applicable to sample preparation and sterilization in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the base of the filtration unit on the collection flask and connect the vacuum.",
+      "Using tweezers, place a membrane filter of the required pore size (e.g., 0.22µm or 0.45µm) on the support screen.",
+      "Place the funnel on top and secure it with a clamp or magnetic lock.",
+      "Pour the liquid sample into the funnel.",
+      "Apply vacuum slowly until the filtration is complete.",
+      "Release the vacuum and carefully remove the funnel.",
+      "Transfer the filtrate to a sterile or clean container as required.",
+      "Dispose of the used membrane filter and clean the assembly."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always use tweezers to handle membrane filters to avoid contamination.",
+      "Ensure the membrane filter is compatible with the solvent being filtered.",
+      "Check for any tears or damage to the membrane before use.",
+      "Do not apply excessive vacuum that could rupture the membrane.",
+      "Rinse the assembly with distilled water between different samples."
+    ]
   }
 }

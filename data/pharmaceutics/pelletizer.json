@@ -3,16 +3,26 @@
     "title": "Operation of Pelletizer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Pelletizer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Pelletizer for production of uniform spherical pellets from wet masses.",
+    "scope": "Applicable to pelletization activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the pelletizer plate and chamber are clean and dry.",
+      "Select and install the appropriate friction plate.",
+      "Prepare wet mass with optimal moisture content for pelletization.",
+      "Power ON the pelletizer and set the rotation speed.",
+      "Load extrudates or wet mass into the rotating chamber.",
+      "Monitor the rounding process and time carefully.",
+      "Discharge the formed pellets once they reach desired sphericity.",
+      "Clean the plate and chamber thoroughly to remove residues.",
+      "Dry the pellets using appropriate drying equipment.",
+      "Document pelletization speed, time, and yield in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid over-loading the chamber to maintain pellet quality.",
+      "Control processing time to prevent pellet breakage or over-rounding.",
+      "Ensure wet mass consistency is uniform across batches.",
+      "Clean the friction plate promptly to prevent material buildup.",
+      "Wear appropriate PPE including mask and gloves."
+    ]
   }
 }

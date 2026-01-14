@@ -3,16 +3,44 @@
     "title": "Operation of Multi Mill"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Multi Mill.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Multi Mill for versatile size reduction, granulation, and milling of pharmaceutical materials using interchangeable screens and impellers.",
+    "scope": "Applicable to multi-purpose milling activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the multi mill is installed on a stable foundation with proper leveling.",
+      "Verify that all safety guards and interlocks are in place and functional.",
+      "Check that the milling chamber is clean and free from previous material.",
+      "Select appropriate screen based on desired particle size output.",
+      "Install the selected screen securely in the screen holder.",
+      "Select appropriate impeller type (blade, knife, or pin) based on application.",
+      "Install the impeller on the shaft and secure properly.",
+      "Set the impeller rotation speed according to material and process requirements.",
+      "Close the milling chamber door and engage safety interlocks.",
+      "Power ON the multi mill and verify proper rotation direction.",
+      "Start feeding material through the hopper at controlled rate.",
+      "Monitor motor load and feed rate to prevent overloading.",
+      "Observe discharge and check particle size of milled material.",
+      "Adjust feed rate or speed if necessary.",
+      "Collect milled material in appropriate containers.",
+      "After milling completion, stop the feed and allow mill to run empty.",
+      "Power OFF the mill and wait for complete cessation of rotation.",
+      "Open the milling chamber and remove screen and impeller.",
+      "Clean all product contact parts thoroughly.",
+      "Inspect screen for damage or wear.",
+      "Inspect impeller blades for wear and replace if necessary.",
+      "Reassemble the mill for next operation.",
+      "Document milling parameters, screen size, and observations in the batch record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never operate without proper safety guards in place.",
+      "Do not insert hands into the milling chamber during operation.",
+      "Select appropriate screen-impeller combination for the material.",
+      "Avoid overloading which can damage equipment.",
+      "Monitor motor temperature during extended operation.",
+      "Replace worn screens and impellers promptly.",
+      "Use dust extraction system to control airborne dust.",
+      "Wear appropriate PPE including safety goggles, ear protection, and dust mask.",
+      "Follow lockout/tagout procedures during cleaning and maintenance.",
+      "Clean thoroughly between different products to prevent cross-contamination."
+    ]
   }
 }

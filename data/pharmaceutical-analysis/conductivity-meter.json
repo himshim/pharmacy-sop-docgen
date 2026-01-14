@@ -3,16 +3,24 @@
     "title": "Operation of Conductivity Meter"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Conductivity Meter.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To describe the standard operating procedure for the direct measurement of electrolytic conductivity.",
+    "scope": "Applicable to quantitative analysis in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Power ON the conductivity meter and check the probe connection.",
+      "Calibrate the meter using a standard solution (e.g., 0.01M KCl).",
+      "Rinse the probe with deionized water and blot dry.",
+      "Place the probe into the sample solution and wait for the reading to stabilize.",
+      "Record the conductivity and temperature displayed on the screen.",
+      "Rinse the probe thoroughly after each measurement.",
+      "Store the probe in the recommended storage solution or distilled water.",
+      "Switch OFF the meter after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure the sensor area is free from air bubbles.",
+      "Do not use the probe in solutions that could damage the platinum coating.",
+      "Regularly calibrate the instrument for accurate results.",
+      "Rinse the probe between different samples to avoid carryover.",
+      "Avoid extreme temperatures during measurement."
+    ]
   }
 }

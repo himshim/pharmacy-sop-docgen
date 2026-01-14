@@ -3,16 +3,24 @@
     "title": "Operation of Humidity Chamber"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Humidity Chamber.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To provide controlled humidity and temperature conditions for stability testing.",
+    "scope": "Applicable to storage and stability activities in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the water reservoir is filled with purified water.",
+      "Set the required temperature and humidity (e.g., 25°C / 60% RH).",
+      "Allow the chamber to reach set points and stabilize.",
+      "Place samples in the chamber ensuring proper spacing for air circulation.",
+      "Monitor the display daily and record temperature/humidity values.",
+      "Check water levels periodically and top up as needed.",
+      "Conduct scheduled inspections for any alarm conditions.",
+      "Record all maintenance and calibration activities."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use only distilled or deionized water to prevent scale build-up.",
+      "Minimize the frequency and duration of door openings.",
+      "Do not overload the chamber beyond its capacity.",
+      "Report any deviations from set storage conditions immediately.",
+      "Ensure periodic calibration of sensors."
+    ]
   }
 }

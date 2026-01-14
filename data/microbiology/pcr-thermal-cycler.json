@@ -3,16 +3,25 @@
     "title": "Operation of PCR Thermal Cycler"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the PCR Thermal Cycler.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To amplify DNA using programmed thermal cycling conditions.",
+    "scope": "Applicable to molecular diagnostics and research in the Microbiology laboratory.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the thermal cycler and open the control software or front panel interface.",
+      "Program the denaturation, annealing, and extension temperatures and times as per the PCR protocol.",
+      "Prepare PCR reaction tubes or plates with master mix, primers, template DNA, and nuclease-free water.",
+      "Briefly spin down the tubes to collect contents at the bottom.",
+      "Place the tubes/plate into the thermal block ensuring good contact.",
+      "Close the heated lid and start the PCR run.",
+      "After completion, remove the tubes and store the amplified products at 2–8°C or -20°C as required.",
+      "Save or print the run report for documentation.",
+      "Shut down the instrument as per manufacturer instructions."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Set up PCR reactions in a separate clean area to avoid contamination.",
+      "Use aerosol-resistant filter tips for pipetting.",
+      "Ensure tubes are sealed properly to prevent evaporation.",
+      "Avoid repeated freeze–thaw cycles of DNA and reagents.",
+      "Periodically verify block temperature accuracy and lid pressure."
+    ]
   }
 }

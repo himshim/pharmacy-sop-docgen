@@ -3,16 +3,24 @@
     "title": "Operation of Digital Hygrometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Hygrometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To describe the standard operating procedure for monitoring humidity and temperature using a digital hygrometer.",
+    "scope": "Applicable to environmental monitoring activities in Pharmaceutical Chemistry.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the digital hygrometer in the area where environmental monitoring is required.",
+      "Ensure the batteries are fresh and the display is clear.",
+      "Allow the instrument to equilibrate with the environment for at least 15 minutes.",
+      "Read the current relative humidity (%) and temperature (°C) from the screen.",
+      "Note the maximum and minimum readings if the instrument has a memory function.",
+      "Reset the Min/Max values daily after recording the observations in the logbook.",
+      "Check the calibration status of the hygrometer periodically against a reference standard.",
+      "Clean the casing of the instrument with a dry, soft cloth."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not expose the hygrometer to direct sunlight or moisture.",
+      "Avoid placing the instrument near heat sources or air conditioning vents.",
+      "Do not touch the internal sensor components.",
+      "Replace batteries promptly when the low-battery indicator appears.",
+      "Ensure the instrument is used within its specified operating range."
+    ]
   }
 }

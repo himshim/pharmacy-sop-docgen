@@ -1,18 +1,25 @@
 {
   "meta": {
-    "title": "Operation of Disposable Spreaders"
+    "title": "Use of Disposable Spreaders"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Disposable Spreaders.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To evenly spread microbial inoculum over the surface of agar plates using sterile, single-use spreaders.",
+    "scope": "Applicable to plate count and isolation techniques in Microbiology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Open the sterile pack of disposable spreaders near a flame or inside a biosafety cabinet.",
+      "Pour the measured volume of inoculum onto the center of the agar surface.",
+      "Gently move the spreader in a back-and-forth or circular motion to distribute the inoculum evenly.",
+      "Avoid pressing too hard to prevent gouging the agar.",
+      "Dispose of the used spreader immediately into a biohazard sharps or waste container.",
+      "Close and invert the plates as per SOP and incubate.",
+      "Record the sample ID and dilution on the plate."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not reuse disposable spreaders.",
+      "Ensure spreaders remain sterile until use.",
+      "Avoid touching the working end of the spreader.",
+      "Dispose of used spreaders as infectious waste.",
+      "Do not flame disposable plastic spreaders."
+    ]
   }
 }

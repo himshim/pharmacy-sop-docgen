@@ -3,16 +3,24 @@
     "title": "Operation of Nephelometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Nephelometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Analysis.",
+    "purpose": "To measure the suspended particulate matter by light scattering.",
+    "scope": "Applicable to analysis of turbid solutions in Pharmaceutical Analysis.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch ON the instrument and allow 15 minutes for stabilization.",
+      "Calibrate using standard suspension (e.g., Formazin).",
+      "Rinse the sample cell with deionized water.",
+      "Fill the cell with the sample solution and wipe the exterior.",
+      "Insert the cell and record the NTU (Nephelometric Turbidity Units).",
+      "Perform replicates for better accuracy.",
+      "Empty and clean the cell thoroughly after use.",
+      "Switch OFF the instrument at the end of the day."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid air bubbles in the sample cell as they scatter light.",
+      "Use a scratch-free, matched sample cell.",
+      "Handle the cell by the top only to avoid fingerprints.",
+      "Store the standard solutions in a cool, dark place.",
+      "Maintain the optical window of the instrument clean."
+    ]
   }
 }

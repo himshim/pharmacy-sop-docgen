@@ -3,16 +3,20 @@
     "title": "Operation of Digital Kymograph"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Digital Kymograph.",
-    "scope": "Applicable to activities carried out in the Pharmacology.",
+    "purpose": "To record isolated tissue contractions digitally.",
+    "scope": "Applicable to smooth muscle pharmacology.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Connect tissue bath and transducer.",
+      "Calibrate tension scale.",
+      "Start recording baseline.",
+      "Add drugs and record responses.",
+      "Save digital traces."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Proper transducer calibration.",
+      "Avoid air bubbles in tubing.",
+      "Stable temperature control.",
+      "Humane tissue handling."
+    ]
   }
 }

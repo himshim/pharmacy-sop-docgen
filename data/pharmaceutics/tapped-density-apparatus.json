@@ -3,16 +3,26 @@
     "title": "Operation of Tapped Density Apparatus"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Tapped Density Apparatus.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Tapped Density Apparatus for powder characterization.",
+    "scope": "Applicable to powder analysis activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Weigh an appropriate amount of powder and transfer to a graduated cylinder.",
+      "Record the initial unsettled volume (bulk volume).",
+      "Secure the cylinder onto the tapping platform of the apparatus.",
+      "Set the number of taps as per USP/IP requirements (e.g., 500, 750, 1250).",
+      "Start the apparatus and allow it to complete the tapping cycle.",
+      "Record the volume after each tapping interval.",
+      "Continue until the volume difference between consecutive tests is negligible.",
+      "Note the final tapped volume.",
+      "Calculate bulk density, tapped density, Carr's index, and Hausner ratio.",
+      "Clean the cylinder and apparatus after the test."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Avoid vibrating the cylinder during the initial volume measurement.",
+      "Ensure the cylinder is properly clamped to prevent breakage.",
+      "Maintain constant tapping height as per standard specifications.",
+      "Use dry cylinders to prevent powder sticking.",
+      "Record environmental humidity as it may influence results."
+    ]
   }
 }

@@ -3,16 +3,22 @@
     "title": "Operation of Heating Mantle"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Heating Mantle.",
-    "scope": "Applicable to activities carried out in the Pharmacognosy.",
+    "purpose": "To safely heat round-bottom flasks during extraction and concentration.",
+    "scope": "Applicable to Soxhlet extraction and reflux operations.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place round-bottom flask inside the mantle ensuring good fit.",
+      "Add boiling chips if appropriate.",
+      "Set temperature control and switch ON.",
+      "Monitor heating and adjust as needed.",
+      "Allow cooling before removal.",
+      "Unplug after use."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never heat empty mantles.",
+      "Use heat-resistant gloves for hot flasks.",
+      "Ensure good ventilation.",
+      "Do not exceed rated wattage.",
+      "Inspect cords regularly."
+    ]
   }
 }

@@ -3,16 +3,27 @@
     "title": "Operation of Tablet Compression Machine"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Tablet Compression Machine.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Tablet Compression Machine for production of tablets from granules.",
+    "scope": "Applicable to tablet manufacturing activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Inspect the turret, punches, and dies for cleanliness and damage.",
+      "Install the punches and dies as per the required tablet size.",
+      "Load the granules into the hopper and set initial weight and hardness.",
+      "Rotate the machine manually to check for smooth operation.",
+      "Power ON the machine and perform initial sampling for weight and hardness.",
+      "Adjust parameters until tablets meet specified quality standards.",
+      "Start the continuous compression process at optimal speed.",
+      "Perform in-process quality checks at regular intervals.",
+      "Collect compressed tablets in clean and labeled containers.",
+      "After completion, remove remaining granules and clean all components.",
+      "Document machine settings and total tablet count."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never put hands inside the machine during operation.",
+      "Ensure safety guards are in place and functioning.",
+      "Monitor for punch sticking or picking during the run.",
+      "Verify weight uniformity strictly throughout the process.",
+      "Follow established line clearance protocols."
+    ]
   }
 }

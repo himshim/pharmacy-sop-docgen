@@ -3,16 +3,39 @@
     "title": "Operation of Inductively Coupled Plasma Spectrometer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Inductively Coupled Plasma Spectrometer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To describe the standard operating procedure for the operation of Inductively Coupled Plasma (ICP) Spectrometer for multi-element analysis and trace metal determination in pharmaceutical samples.",
+    "scope": "Applicable to ICP spectroscopy activities carried out in the Central Instrumentation.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Verify that argon gas supply has adequate pressure and all gas lines are properly connected.",
+      "Check that the chiller or cooling system is functioning and at proper temperature.",
+      "Ensure the peristaltic pump tubing is in good condition and properly installed.",
+      "Power ON the ICP spectrometer and initialize the control software.",
+      "Ignite the plasma torch and allow it to stabilize for at least 20-30 minutes.",
+      "Verify plasma stability by observing the flame and checking torch position.",
+      "Perform wavelength calibration and optimization using standard reference solutions.",
+      "Set the analytical wavelengths for the elements to be analyzed.",
+      "Prepare blank solutions, calibration standards, and quality control samples.",
+      "Aspirate blank solution and perform background correction and zeroing.",
+      "Aspirate calibration standard solutions in ascending order of concentration.",
+      "Verify linearity of calibration curves and correlation coefficients for all elements.",
+      "Analyze quality control samples to confirm system performance and accuracy.",
+      "Aspirate sample solutions and record emission intensities for target elements.",
+      "Rinse the system with dilute acid between samples to prevent carryover.",
+      "Calculate concentrations using calibration curves and apply dilution factors if needed.",
+      "After analysis, aspirate dilute acid and then deionized water for thorough cleaning.",
+      "Extinguish the plasma following proper shutdown procedure.",
+      "Power OFF the instrument and document all analytical data in the record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Always ensure adequate argon gas supply before starting the analysis.",
+      "Never look directly at the plasma as it emits intense UV radiation.",
+      "Ensure proper ventilation to exhaust plasma gases safely.",
+      "Use only ICP-grade or ultrapure argon gas for stable plasma operation.",
+      "Prepare samples in dilute acid matrix to prevent clogging and memory effects.",
+      "Check nebulizer and spray chamber for salt deposits regularly.",
+      "Wear appropriate PPE including lab coat, gloves, and UV-protective eyewear.",
+      "Handle acid solutions with care and dispose of waste as per chemical waste protocols.",
+      "Perform regular maintenance of torch, nebulizer, and peristaltic pump tubing."
+    ]
   }
 }

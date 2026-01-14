@@ -3,16 +3,22 @@
     "title": "Operation of Magnetic Stirrer with Hot Plate"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Magnetic Stirrer with Hot Plate.",
-    "scope": "Applicable to activities carried out in the Microbiology.",
+    "purpose": "To simultaneously heat and stir microbiological media or reagents.",
+    "scope": "Applicable to media preparation and reagent dissolution.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place a heat-resistant flask with stir bar on the center of the plate.",
+      "Switch ON the stirring function and set a moderate speed.",
+      "Switch ON the heating function and set the desired temperature.",
+      "Monitor the solution to prevent boiling over.",
+      "After dissolution, turn OFF heat first, then stirring.",
+      "Allow the plate to cool before removing the flask and cleaning the surface."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Use only Borosilicate glassware.",
+      "Do not heat flammable solvents to their flash point.",
+      "Keep the power cord clear of the hot surface.",
+      "Avoid very high speeds that cause splashing.",
+      "Use PPE when handling hot liquids."
+    ]
   }
 }

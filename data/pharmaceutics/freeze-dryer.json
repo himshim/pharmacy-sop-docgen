@@ -3,16 +3,46 @@
     "title": "Operation of Freeze Dryer"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Freeze Dryer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To describe the standard operating procedure for the operation of Freeze Dryer (Lyophilizer) for preservation of heat-sensitive pharmaceutical products and biologicals by sublimation of frozen water under vacuum.",
+    "scope": "Applicable to lyophilization activities carried out in the Pharmaceutics.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Ensure the freeze dryer is installed with proper vacuum system and refrigeration.",
+      "Verify that the vacuum pump oil is at proper level and condenser is clean.",
+      "Check that all door seals and gaskets are in good condition.",
+      "Power ON the freeze dryer and refrigeration system.",
+      "Set condenser temperature (typically -40°C to -80°C) and allow to stabilize.",
+      "Verify that condenser has reached set temperature before starting.",
+      "Prepare product solution and fill into appropriate vials or trays.",
+      "Pre-freeze the product at -40°C to -80°C in a separate freezer if required.",
+      "Load frozen product carefully onto the freeze dryer shelves.",
+      "Close the chamber door and ensure proper sealing.",
+      "Start the vacuum pump and evacuate the chamber to desired vacuum level.",
+      "Monitor vacuum level (typically 50-200 mTorr for primary drying).",
+      "Set shelf temperature program for primary drying phase.",
+      "Gradually increase shelf temperature while maintaining vacuum.",
+      "Monitor product temperature using thermocouples or resistance probes.",
+      "Continue primary drying until ice sublimation is complete (several hours to days).",
+      "Transition to secondary drying phase by increasing shelf temperature further.",
+      "Continue secondary drying to remove bound water (typically 25°C to 40°C).",
+      "Monitor moisture content and end point using pressure rise test or other methods.",
+      "Once drying is complete, cool the product under vacuum.",
+      "Backfill the chamber with dry nitrogen or air to atmospheric pressure.",
+      "Open chamber door and remove dried product immediately for stoppering or packaging.",
+      "Clean the chamber, shelves, and condenser as per cleaning procedures.",
+      "Defrost condenser and drain collected ice water.",
+      "Document all lyophilization parameters, cycle duration, and product characteristics."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure product is completely frozen before starting vacuum to prevent boiling.",
+      "Maintain proper vacuum level throughout the process.",
+      "Do not exceed maximum shelf temperature for heat-sensitive products.",
+      "Monitor condenser temperature to ensure efficient ice trapping.",
+      "Defrost condenser regularly to maintain capacity.",
+      "Check for vacuum leaks before starting the cycle.",
+      "Use dry nitrogen for backfilling to prevent moisture introduction.",
+      "Handle freeze-dried products in controlled humidity environment.",
+      "Wear appropriate PPE and handle cryogenic materials with insulated gloves.",
+      "Follow aseptic techniques for sterile product lyophilization."
+    ]
   }
 }
