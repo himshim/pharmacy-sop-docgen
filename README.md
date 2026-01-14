@@ -1,4 +1,25 @@
-# 🧪 SOP Generator (Pharma)
+<p align="center">
+  <h1 align="center">🧪 SOP Generator (Pharma)</h1>
+  <p align="center">
+    Browser-based SOP generator for pharmacy laboratories & academic documentation
+  </p>
+</p>
+
+<p align="center">
+  <a href="https://github.com/himshim/pharmacy-sop-docgen/stargazers">
+    <img src="https://img.shields.io/github/stars/himshim/pharmacy-sop-docgen?style=flat-square" alt="GitHub stars">
+  </a>
+  <a href="https://github.com/himshim/pharmacy-sop-docgen/network/members">
+    <img src="https://img.shields.io/github/forks/himshim/pharmacy-sop-docgen?style=flat-square" alt="GitHub forks">
+  </a>
+  <a href="https://github.com/himshim/pharmacy-sop-docgen/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/himshim/pharmacy-sop-docgen?style=flat-square" alt="License">
+  </a>
+  <img src="https://img.shields.io/badge/status-prototype-orange?style=flat-square" alt="Project Status">
+  <img src="https://img.shields.io/badge/frontend-vanilla%20JS-blue?style=flat-square" alt="Frontend">
+</p>
+
+<hr>
 
 A lightweight, browser-based **Standard Operating Procedure (SOP) Generator** built for **pharmacy education, laboratory documentation, and academic quality systems**.
 
