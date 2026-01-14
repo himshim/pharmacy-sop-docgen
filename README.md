@@ -95,21 +95,6 @@ This approach enables:
 
 ---
 
-## 🤖 AI-Assisted SOP Creation (Recommended)
-
-You can safely use AI tools (e.g. ChatGPT) to:
-
-1. Create **generic SOP JSON templates**
-2. Reuse them for multiple instruments
-3. Modify only:
-   - Title
-   - Instrument name
-   - Procedure steps (if required)
-
-✅ As long as the **JSON structure is preserved**, the SOP Generator will render documents correctly without any code changes.
-
----
-
 ## ⚠️ Known Limitations
 
 - PDF pagination depends on browser rendering
@@ -121,7 +106,7 @@ You can safely use AI tools (e.g. ChatGPT) to:
 
 ## 🛣️ Planned Improvements
 
-- Additional SOP templates (ISO / NAAC / PCI style)
+- Improving SOP templates (ISO / NAAC / PCI style)
 - Improved PDF page-break handling
 - SOP JSON schema validation
 - Version comparison support
@@ -131,9 +116,28 @@ You can safely use AI tools (e.g. ChatGPT) to:
 
 ## 👨‍🏫 Author
 
-**@himshim26**
+**Himshim**  
+🔗 https://himshim.github.io
 
-If used in academic or institutional contexts, attribution is appreciated.
+---
+
+## 🙏 Credits & Acknowledgements
+
+This project makes use of the following open-source libraries:
+
+- **html2pdf.js**  
+  Used for client-side PDF generation  
+  https://github.com/eKoopmans/html2pdf.js
+
+- **html-docx-js**  
+  Used for exporting SOPs as editable DOCX files  
+  https://github.com/evidenceprime/html-docx-js
+
+- **FileSaver.js**  
+  Used for saving generated files in the browser  
+  https://github.com/eligrey/FileSaver.js
+
+All libraries are used in accordance with their respective licenses.
 
 ---
 
