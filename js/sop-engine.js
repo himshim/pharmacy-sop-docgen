@@ -136,7 +136,7 @@ window.initSOPApp = function () {
         if (value === undefined || value === null) value = "";
 
         if (typeof value === "string") {
-          const isRichText = ["procedure", "changeHistoryRows"].includes(key);
+          const isRichText = ["procedure", "precautions", "changeHistoryRows"].includes(key);
           if (!isRichText && /[<>]/.test(value)) {
             value = UtilsModule.escapeHtml(value);
           }
