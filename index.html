@@ -42,7 +42,7 @@
       <div class="main-layout">
         <!-- TAB 1: CREATE (Edit controls) -->
         <div class="tab-panel active" id="tab-create">
-          <form class="controls-panel" autocomplete="off" onsubmit="return false;">
+          <aside class="controls-panel">
             <!-- Department & SOP Selection -->
             <div class="control-section">
               <h2 class="section-title">
@@ -488,7 +488,7 @@
                 <input type="date" id="approvedDate" />
               </div>
             </div>
-          </form>
+          </aside>
         </div>
 
         <!-- TAB 2: PREVIEW (Visual Render) -->
@@ -543,6 +543,9 @@
     <!-- Tab Switching Logic (Mobile First) -->
     <script>
       function switchTab(index) {
+        // On desktop (≥768px), both panels are always side-by-side — no tab switching needed
+        if (window.innerWidth >= 768) return;
+
         const createTabBtn = document.getElementById("mobile-tab-create");
         const previewTabBtn = document.getElementById("mobile-tab-preview");
         const createPanel = document.getElementById("tab-create");

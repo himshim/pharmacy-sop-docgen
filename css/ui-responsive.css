@@ -537,6 +537,7 @@ body {
 
     /* Outer Wrapper Card */
     .app-container {
+        width: 100%;
         max-width: 1680px;
         margin: 0 auto;
         background: var(--bg-white);
@@ -591,14 +592,24 @@ body {
     .main-layout {
         display: grid;
         grid-template-columns: 420px 1fr;
+        grid-template-rows: 1fr;
         height: calc(100% - 140px); /* Subtract header and footer height */
+        overflow: hidden;
     }
 
     /* Force both panels to display side-by-side */
     .tab-panel {
         display: flex !important;
+        width: auto !important;   /* Override mobile width:100% so grid controls sizing */
+        min-width: 0;             /* Prevent grid blowout */
         padding: 0;
         height: 100%;
+        overflow: hidden;
+    }
+
+    /* Ensure preview tab is always visible on desktop, not tab-toggled */
+    #tab-preview {
+        display: flex !important;
     }
 
     /* Left Edit Sidebar Styling */
