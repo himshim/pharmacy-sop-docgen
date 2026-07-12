@@ -39,18 +39,20 @@
               const attrName = attr.name.toLowerCase();
 
               if (ALLOWED_ATTRS.has(attrName)) {
+                const attrVal = attr.value || "";
+                const cleanVal = attrVal.trim().toLowerCase();
+
                 // Prevent javascript URL scheme
-                if (attrName === "href" && attr.value.trim().toLowerCase().startsWith("javascript:")) {
+                if (attrName === "href" && cleanVal.startsWith("javascript:")) {
                   continue;
                 }
                 // Prevent layout injection clickjacking attacks via style attribute
                 if (attrName === "style") {
-                  const styleVal = attr.value.toLowerCase();
-                  if (styleVal.includes("position") || styleVal.includes("fixed") || styleVal.includes("absolute") || styleVal.includes("z-index")) {
+                  if (cleanVal.includes("position") || cleanVal.includes("fixed") || cleanVal.includes("absolute") || cleanVal.includes("z-index")) {
                     continue;
                   }
                 }
-                el.setAttribute(attr.name, attr.value);
+                el.setAttribute(attr.name, attrVal);
               }
             }
 
