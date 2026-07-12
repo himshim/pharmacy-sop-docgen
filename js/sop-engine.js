@@ -424,6 +424,10 @@ window.initSOPApp = function () {
               }));
             } else if (child.nodeType === Node.ELEMENT_NODE) {
               const tag = child.tagName.toLowerCase();
+              if (tag === "br") {
+                runs.push(new TextRun({ text: "", break: 1 }));
+                return;
+              }
               const isBold = tag === "b" || tag === "strong";
               const isItalic = tag === "i" || tag === "em";
               runs.push(new TextRun({
@@ -444,6 +448,8 @@ window.initSOPApp = function () {
             bold: isHeader 
           })];
         };
+
+        let olCounter = 0;
 
         const parseNode = (node) => {
           if (node.nodeType === Node.TEXT_NODE) {
@@ -489,6 +495,7 @@ window.initSOPApp = function () {
               spacing: { after: 120 }
             }));
           } else if (tag === "ol" || tag === "ul") {
+            if (tag === "ol") olCounter++;
             node.querySelectorAll("li").forEach((li, idx) => {
               const paragraphOpts = {
                 children: parseTextRunsForDocx(li),
@@ -497,7 +504,8 @@ window.initSOPApp = function () {
               if (tag === "ul") {
                 paragraphOpts.bullet = { level: 0 };
               } else if (tag === "ol") {
-                paragraphOpts.numbering = { reference: "decimal-numbering", level: 0 };
+                // Use distinct numbering instances to let each list restart at 1
+                paragraphOpts.numbering = { reference: `decimal-numbering-${olCounter}`, level: 0 };
               }
               children.push(new Paragraph(paragraphOpts));
             });
@@ -518,14 +526,16 @@ window.initSOPApp = function () {
               tr.querySelectorAll("th, td").forEach((cell) => {
                 const isHeader = cell.tagName.toLowerCase() === "th";
                 const colSpan = parseInt(cell.getAttribute("colspan") || 1);
-                const cellWidthPercentage = (100 / totalCols) * colSpan;
+                
+                // Calculate DXA width: Standard full table body width is 9000 DXA (twentieths of a point)
+                const cellWidthDxa = Math.round((9000 / totalCols) * colSpan);
                 
                 const cellOpts = {
                   children: [new Paragraph({
                     children: parseTextRunsForDocx(cell, isHeader),
                     spacing: { before: 80, after: 80 }
                   })],
-                  width: { size: cellWidthPercentage, type: WidthType.PERCENTAGE }
+                  width: { size: cellWidthDxa, type: WidthType.DXA }
                 };
                 if (colSpan > 1) cellOpts.columnSpan = colSpan;
                 if (isHeader) cellOpts.shading = { fill: "1E293B" };
@@ -538,7 +548,7 @@ window.initSOPApp = function () {
             if (rows.length > 0) {
               children.push(new Table({
                 rows: rows,
-                width: { size: 100, type: WidthType.PERCENTAGE },
+                width: { size: 9000, type: WidthType.DXA },
                 borders: {
                   top: { style: BorderStyle.SINGLE, size: 4, color: "CBD5E0" },
                   bottom: { style: BorderStyle.SINGLE, size: 4, color: "CBD5E0" },
@@ -557,26 +567,30 @@ window.initSOPApp = function () {
 
         previewElement.childNodes.forEach(node => parseNode(node));
 
-        const doc = new Document({
-          numbering: {
-            config: [
+        // Create 10 distinct numbering reference instances so different lists start at 1
+        const numberingConfig = [];
+        for (let k = 1; k <= 10; k++) {
+          numberingConfig.push({
+            reference: `decimal-numbering-${k}`,
+            levels: [
               {
-                reference: "decimal-numbering",
-                levels: [
-                  {
-                    level: 0,
-                    format: "decimal",
-                    text: "%1.",
-                    alignment: "left",
-                    style: {
-                      paragraph: {
-                        indent: { left: 720, hanging: 360 }
-                      }
-                    }
+                level: 0,
+                format: "decimal",
+                text: "%1.",
+                alignment: "left",
+                style: {
+                  paragraph: {
+                    indent: { left: 720, hanging: 360 }
                   }
-                ]
+                }
               }
             ]
+          });
+        }
+
+        const doc = new Document({
+          numbering: {
+            config: numberingConfig
           },
           sections: [{
             properties: {},

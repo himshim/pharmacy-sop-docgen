@@ -675,6 +675,11 @@ body {
     pointer-events: none;
 }
 
+#preview [contenteditable="true"]:empty:not(:focus)::before {
+    content: "" !important;
+    display: none !important;
+}
+
 /* Inline lists support */
 #preview li[contenteditable="true"] {
     padding: 4px 6px;

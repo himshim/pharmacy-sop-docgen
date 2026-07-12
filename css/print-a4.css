@@ -329,4 +329,14 @@ body.printing-mode #preview {
   .doc-control-text {
     display: none;
   }
+
+  [contenteditable="true"]:empty::before {
+    content: "" !important;
+    display: none !important;
+  }
+}
+
+body.printing-mode [contenteditable="true"]:empty::before {
+  content: "" !important;
+  display: none !important;
 }
