@@ -173,7 +173,8 @@ body.printing-mode .bottom-action-bar,
 body.printing-mode header,
 body.printing-mode nav,
 body.printing-mode footer,
-body.printing-mode aside {
+body.printing-mode aside,
+body.printing-mode .controls-panel {
     display: none !important;
 }
 

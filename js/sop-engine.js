@@ -870,6 +870,12 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
         );
 
         this.bindEvents();
+        window.addEventListener("beforeunload", (e) => {
+          if (this.state && this.state.sopData) {
+            e.preventDefault();
+            e.returnValue = "";
+          }
+        });
         window.addEventListener("resize", () => {
           if (window.innerWidth < 1024) {
             this.refreshPreview();

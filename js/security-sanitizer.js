@@ -43,6 +43,13 @@
                 if (attrName === "href" && attr.value.trim().toLowerCase().startsWith("javascript:")) {
                   continue;
                 }
+                // Prevent layout injection clickjacking attacks via style attribute
+                if (attrName === "style") {
+                  const styleVal = attr.value.toLowerCase();
+                  if (styleVal.includes("position") || styleVal.includes("fixed") || styleVal.includes("absolute") || styleVal.includes("z-index")) {
+                    continue;
+                  }
+                }
                 el.setAttribute(attr.name, attr.value);
               }
             }

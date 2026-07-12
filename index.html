@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SOPgen by PharmRepo</title>
     
     <!-- Styles -->
@@ -42,7 +42,7 @@
       <div class="main-layout">
         <!-- TAB 1: CREATE (Edit controls) -->
         <div class="tab-panel active" id="tab-create">
-          <aside class="controls-panel">
+          <form class="controls-panel" autocomplete="off" onsubmit="return false;">
             <!-- Department & SOP Selection -->
             <div class="control-section">
               <h2 class="section-title">
@@ -488,7 +488,7 @@
                 <input type="date" id="approvedDate" />
               </div>
             </div>
-          </aside>
+          </form>
         </div>
 
         <!-- TAB 2: PREVIEW (Visual Render) -->
