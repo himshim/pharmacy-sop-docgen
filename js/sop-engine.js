@@ -446,7 +446,22 @@ window.initSOPApp = function () {
         };
 
         const parseNode = (node) => {
+          if (node.nodeType === Node.TEXT_NODE) {
+            const text = node.textContent.trim();
+            if (text.length > 0) {
+              children.push(new Paragraph({
+                children: [new TextRun({ text: text, size: 22, font: "Times New Roman" })],
+                spacing: { after: 120 }
+              }));
+            }
+            return;
+          }
           if (node.nodeType !== Node.ELEMENT_NODE) return;
+          if (node.classList.contains("doc-control-text") || 
+              node.classList.contains("page-break-indicator") ||
+              node.style.display === "none") {
+            return;
+          }
           const tag = node.tagName.toLowerCase();
 
           if (tag === "h1") {
@@ -457,11 +472,12 @@ window.initSOPApp = function () {
             }));
           } else if (tag === "h2") {
             const isBreak = node.classList.contains("page-break-before") || node.previousElementSibling?.classList.contains("page-break-before");
-            children.push(new Paragraph({
+            const paragraphOpts = {
               children: [new TextRun({ text: node.textContent.trim(), bold: true, size: 24, font: "Times New Roman" })],
-              spacing: { before: 200, after: 100 },
-              pageBreakBefore: isBreak ? true : undefined
-            }));
+              spacing: { before: 200, after: 100 }
+            };
+            if (isBreak) paragraphOpts.pageBreakBefore = true;
+            children.push(new Paragraph(paragraphOpts));
           } else if (tag === "h3") {
             children.push(new Paragraph({
               children: [new TextRun({ text: node.textContent.trim(), bold: true, size: 22, font: "Times New Roman" })],
@@ -474,29 +490,47 @@ window.initSOPApp = function () {
             }));
           } else if (tag === "ol" || tag === "ul") {
             node.querySelectorAll("li").forEach((li, idx) => {
-              children.push(new Paragraph({
+              const paragraphOpts = {
                 children: parseTextRunsForDocx(li),
-                bullet: tag === "ul" ? { level: 0 } : undefined,
-                numbering: tag === "ol" ? { reference: "decimal", level: 0 } : undefined,
                 spacing: { after: 80 }
-              }));
+              };
+              if (tag === "ul") {
+                paragraphOpts.bullet = { level: 0 };
+              } else if (tag === "ol") {
+                paragraphOpts.numbering = { reference: "decimal-numbering", level: 0 };
+              }
+              children.push(new Paragraph(paragraphOpts));
             });
           } else if (tag === "table") {
+            // Count total columns in the table (by finding the row with max col-span sum)
+            let totalCols = 1;
+            node.querySelectorAll("tr").forEach((tr) => {
+              let rowCols = 0;
+              tr.querySelectorAll("th, td").forEach((cell) => {
+                rowCols += parseInt(cell.getAttribute("colspan") || 1);
+              });
+              if (rowCols > totalCols) totalCols = rowCols;
+            });
+
             const rows = [];
             node.querySelectorAll("tr").forEach((tr) => {
               const cells = [];
               tr.querySelectorAll("th, td").forEach((cell) => {
                 const isHeader = cell.tagName.toLowerCase() === "th";
                 const colSpan = parseInt(cell.getAttribute("colspan") || 1);
+                const cellWidthPercentage = (100 / totalCols) * colSpan;
                 
-                cells.push(new TableCell({
+                const cellOpts = {
                   children: [new Paragraph({
                     children: parseTextRunsForDocx(cell, isHeader),
                     spacing: { before: 80, after: 80 }
                   })],
-                  columnSpan: colSpan > 1 ? colSpan : undefined,
-                  shading: isHeader ? { fill: "1E293B" } : undefined
-                }));
+                  width: { size: cellWidthPercentage, type: WidthType.PERCENTAGE }
+                };
+                if (colSpan > 1) cellOpts.columnSpan = colSpan;
+                if (isHeader) cellOpts.shading = { fill: "1E293B" };
+                
+                cells.push(new TableCell(cellOpts));
               });
               rows.push(new TableRow({ children: cells }));
             });
@@ -524,6 +558,26 @@ window.initSOPApp = function () {
         previewElement.childNodes.forEach(node => parseNode(node));
 
         const doc = new Document({
+          numbering: {
+            config: [
+              {
+                reference: "decimal-numbering",
+                levels: [
+                  {
+                    level: 0,
+                    format: "decimal",
+                    text: "%1.",
+                    alignment: "left",
+                    style: {
+                      paragraph: {
+                        indent: { left: 720, hanging: 360 }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
           sections: [{
             properties: {},
             children: children

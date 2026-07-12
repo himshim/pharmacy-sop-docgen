@@ -111,6 +111,7 @@
     /* Keep main structure visible */
     .app-container,
     .main-layout,
+    #tab-preview,
     .preview-panel {
         display: block !important;
         width: 100% !important;
@@ -172,6 +173,7 @@ body.printing-mode aside {
 
 body.printing-mode .app-container,
 body.printing-mode .main-layout,
+body.printing-mode #tab-preview,
 body.printing-mode .preview-panel {
     display: block !important;
     width: 100% !important;
