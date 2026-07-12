@@ -42,6 +42,11 @@
     margin: 0 auto 40px auto;
     padding: 20mm !important;
     background: white !important;
+    background-image: repeating-linear-gradient(to bottom,
+        transparent, transparent 296.7mm,
+        rgba(99, 102, 241, 0.35) 296.7mm, rgba(99, 102, 241, 0.35) 297mm
+    ) !important;
+    background-size: 100% 297mm !important;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     text-align: left;
     display: inline-block;
@@ -144,6 +149,7 @@
         display: block !important;
         visibility: visible !important;
         overflow: visible !important;
+        background-image: none !important;
         
         /* Reset Effects */
         transform: none !important;
@@ -200,6 +206,7 @@ body.printing-mode #preview {
     margin-bottom: 0 !important;
     box-shadow: none !important;
     border: none !important;
+    background-image: none !important;
 }
 /* ════════════════════════════════════════════════════════════════
    PROFESSIONAL ENHANCEMENTS - Auto-Numbering & Typography
@@ -262,14 +269,20 @@ body.printing-mode #preview {
     background-color: #fafafa;
 }
 
-/* Page Break Control */
-#preview h2 {
-    page-break-after: avoid;
-    page-break-inside: avoid;
+/* Professional Page Break Control */
+#preview h1,
+#preview h2,
+#preview h3 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
 }
 
+#preview p,
+#preview li,
+#preview tr,
 #preview table {
-    page-break-inside: avoid;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
 }
 
 .keep-together {

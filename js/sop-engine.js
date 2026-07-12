@@ -450,6 +450,7 @@ window.initSOPApp = function () {
         };
 
         let olCounter = 0;
+        let h2Counter = 0;
 
         const parseNode = (node) => {
           if (node.nodeType === Node.TEXT_NODE) {
@@ -477,9 +478,11 @@ window.initSOPApp = function () {
               alignment: "center"
             }));
           } else if (tag === "h2") {
+            h2Counter++;
             const isBreak = node.classList.contains("page-break-before") || node.previousElementSibling?.classList.contains("page-break-before");
+            const headingText = `${h2Counter}. ${node.textContent.trim().toUpperCase()}`;
             const paragraphOpts = {
-              children: [new TextRun({ text: node.textContent.trim(), bold: true, size: 24, font: "Times New Roman" })],
+              children: [new TextRun({ text: headingText, bold: true, size: 24, font: "Times New Roman" })],
               spacing: { before: 200, after: 100 }
             };
             if (isBreak) paragraphOpts.pageBreakBefore = true;
@@ -1243,10 +1246,25 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
 
         const rawSections = raw.sections || raw;
 
+        let deptName = "General";
+        const lookupKey = dept || raw.department;
+        if (lookupKey) {
+          const deptObj = DataModule.cache.departments?.find(
+            d => d.key === lookupKey || d.name.toLowerCase() === lookupKey.toLowerCase()
+          );
+          if (deptObj) {
+            deptName = deptObj.name;
+          } else {
+            deptName = lookupKey.split('-')
+              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(' ');
+          }
+        }
+
         this.state.sopData = {
           ...raw,
           title: title,
-          department: dept || raw.department || "General",
+          department: deptName,
           sopNumber: raw.sopNumber || "",
           revisionNo: raw.revisionNo || "",
           effectiveDate: raw.effectiveDate || "",
