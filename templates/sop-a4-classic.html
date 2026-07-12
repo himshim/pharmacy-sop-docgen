@@ -45,7 +45,7 @@
     </tr>
     {{/if}}
 
-    {{#if revisionNo}}
+    {{#if sectionRevisionNo}}
     <tr>
       <td style="padding:4pt 6pt;"><strong>Revision Number</strong></td>
       <td style="padding:4pt 6pt;">{{revisionNo}}</td>
@@ -66,7 +66,7 @@
     </tr>
     {{/if}}
 
-    {{#if nextReviewDate}}
+    {{#if sectionNextReviewDate}}
     <tr>
       <td style="padding:4pt 6pt;"><strong>Next Review Date</strong></td>
       <td style="padding:4pt 6pt;">{{nextReviewDate}}</td>
@@ -93,7 +93,7 @@
   <p><strong>SOP Number:</strong> {{sopNumber}}</p>
   {{/if}}
 
-  {{#if revisionNo}}
+  {{#if sectionRevisionNo}}
   <p><strong>Revision Number:</strong> {{revisionNo}}</p>
   {{/if}}
 
@@ -105,7 +105,7 @@
   <p><strong>Revision Date:</strong> {{revisionDate}}</p>
   {{/if}}
 
-  {{#if nextReviewDate}}
+  {{#if sectionNextReviewDate}}
   <p><strong>Next Review Date:</strong> {{nextReviewDate}}</p>
   {{/if}}
 
@@ -193,7 +193,7 @@
 <!-- =====================================================
      APPROVALS (KEEP TABLE – WORD FRIENDLY)
 ===================================================== -->
-<div class="keep-together approvals-block"></div>
+<div class="keep-together approvals-block">
 <h2 class="no-counter" style="margin-top:22pt;">Approvals</h2>
 
 <table style="width:100%; border-collapse:collapse; margin-top:12pt;">

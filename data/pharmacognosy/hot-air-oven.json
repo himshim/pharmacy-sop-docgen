@@ -1,22 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Hot Air Oven"
+    "title": "Operation of Hot Air Oven in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To dry crude drugs, plant powders, and ash residues at controlled temperatures.",
-    "scope": "Applicable to drying and sterilization by dry heat in Pharmacognosy.",
+    "purpose": "To dry crude drugs, glassware, and plant powders at controlled temperatures using forced hot air circulation to achieve the desired moisture content for standardization and storage.",
+    "scope": "Applicable to Pharmacognosy laboratory for drying crude drug powders (loss on drying determination), sterilizing dry glassware, and preparation of crude drugs for analysis.",
     "procedure": [
-      "Load samples on perforated trays allowing air circulation.",
-      "Set temperature and time (e.g., 105°C for 3 hours for loss on drying).",
-      "Allow preheating before loading.",
-      "Remove samples after cooling in a desiccator.",
-      "Record temperature chart if available."
+      "Switch on the hot air oven and set the thermostat to the required temperature: 100–105°C for most crude drugs (loss on drying); 160–180°C for dry heat glassware sterilization.",
+      "Allow the oven to reach and stabilize at the set temperature for a minimum of 30 minutes before loading (critical for accuracy of LOD determinations).",
+      "Place pre-weighed samples in labelled glass Petri dishes or crucibles — record initial weight precisely.",
+      "For crude drug drying: spread the drug powder in a thin layer (< 5 mm depth) in the Petri dish.",
+      "Load the oven without overcrowding — ensure adequate air space between samples for air circulation.",
+      "Record the loading time and temperature in the logbook.",
+      "Heat for the specified time per the pharmacopeial method (typically 2–4 hours for crude drugs; 1 hour at 160°C for glassware sterilization).",
+      "At the end of the drying period, switch off the oven; open the door slightly (2–3 cm) for 5 minutes before fully opening.",
+      "Using tongs and heat-resistant gloves, transfer samples to a desiccator immediately.",
+      "Allow samples to cool in the desiccator to room temperature (30–45 minutes) before weighing.",
+      "Weigh cooled samples on an analytical balance and record the weight.",
+      "Calculate Loss on Drying (%): LOD = [(Initial weight − Final weight) / Initial weight] × 100.",
+      "If LOD target not achieved, return to oven for further drying and repeat weighing cycle.",
+      "Record all weights, drying times, and LOD values in the laboratory register."
     ],
     "precautions": [
-      "Do not place plastic or volatile materials.",
-      "Avoid opening door during cycle.",
-      "Verify temperature calibration.",
-      "Use heat-resistant gloves."
+      "Do not open the oven at full temperature without partial cooling — sudden temperature change causes glass containers to crack.",
+      "Use only heat-resistant glass (borosilicate) or porcelain containers — ordinary glass may crack at high temperatures.",
+      "Never dry volatile organic solvents or flammable materials in a hot air oven — explosion risk from solvent vapours.",
+      "Wear heat-resistant gloves when handling hot materials from the oven.",
+      "Place samples in a desiccator immediately after removal to prevent moisture re-absorption before weighing.",
+      "Calibrate the oven thermostat against a calibrated thermometer placed inside the chamber.",
+      "Do not block the air circulation vents or fan with samples or aluminium foil.",
+      "Maintain regular calibration records for the thermostat."
     ]
   }
 }

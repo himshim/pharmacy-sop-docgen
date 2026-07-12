@@ -1,22 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Magnetic Stirrer with Hot Plate"
+    "title": "Operation of Magnetic Stirrer with Hot Plate in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To heat and stir simultaneously during extraction.",
-    "scope": "Applicable to reflux and digestion.",
+    "purpose": "To simultaneously heat and stir reaction mixtures, extraction solvents, and dissolving crude drug powders in the Pharmacognosy laboratory for uniform heating and homogeneous mixing.",
+    "scope": "Applicable to Pharmacognosy laboratory for heated extraction, dissolution of crude drug powders, preparation of colour development reagents, and concentration of small-volume extracts.",
     "procedure": [
-      "Place flask on plate.",
-      "Add stir bar.",
-      "Set temperature and speed.",
-      "Monitor closely.",
-      "Cool before removal."
+      "Place the magnetic stirrer hot plate on a stable, heat-resistant bench surface; ensure it is clean.",
+      "Select an appropriate PTFE-coated magnetic stir bar proportional to the vessel volume.",
+      "Add the stir bar to the vessel; place the vessel on the hot plate centre.",
+      "Connect the unit to the power supply.",
+      "Set the stirring speed first (start from zero, increase gradually to desired RPM) before switching on heat.",
+      "Confirm the stir bar is rotating smoothly without jumping before applying heat.",
+      "Set the temperature using the temperature dial or digital controller — for plant extracts, typically 40–80°C.",
+      "Use a separate calibrated thermometer immersed in the solution to verify actual temperature — the hot plate dial shows surface temperature, not solution temperature.",
+      "Monitor both temperature and stirring continuity throughout the operation.",
+      "Add reagents or solvents carefully while the bar is stirring to avoid splashing.",
+      "At the end of the procedure, switch off the heat first; continue stirring to allow the solution to cool evenly.",
+      "Once cooled, switch off the stirring.",
+      "Use a stir bar retriever (magnetic wand) to remove the stir bar.",
+      "Clean the hot plate surface after cooling with a damp cloth.",
+      "Log temperature, stirring speed, material processed, and duration in the register."
     ],
     "precautions": [
-      "Use heat-resistant glassware.",
-      "Avoid flammable vapors.",
-      "Use fume hood.",
-      "Do not exceed temperature limits."
+      "Do not use open vessels of flammable solvents on the hot plate — always use a reflux condenser or work in a fume hood.",
+      "Use a separate thermometer in the solution — hot plate surface temperature and solution temperature differ significantly.",
+      "If the stir bar jumps or 'dances' erratically, reduce speed immediately — erratic rotation can cause vessel spillage.",
+      "Do not heat dry — always ensure liquid is present before applying heat.",
+      "Place a 'HOT SURFACE' warning sign when the hot plate is in use — the surface stays hot long after switch-off.",
+      "Do not heat to above the boiling point of the solvent in an open vessel.",
+      "Keep flammable materials away from the hot plate during and after heating."
     ]
   }
 }

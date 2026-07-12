@@ -1,21 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Vacuum Pump"
+    "title": "Operation of Vacuum Pump in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To provide vacuum for filtration and drying.",
-    "scope": "Applicable to vacuum operations.",
+    "purpose": "To generate reduced pressure (vacuum) for Buchner funnel filtration, vacuum desiccation, rotary evaporation, and vacuum oven drying of plant extracts and crude drug samples in the Pharmacognosy laboratory.",
+    "scope": "Applicable to Pharmacognosy laboratory for all vacuum-requiring operations including rapid filtration of herbal extracts, solvent evaporation, and storage of moisture-sensitive phytochemical isolates.",
     "procedure": [
-      "Check oil level.",
-      "Connect tubing.",
-      "Switch ON.",
-      "Monitor vacuum.",
-      "Switch OFF and bleed."
+      "Check the oil level in the oil reservoir window before starting — oil should be between the minimum and maximum marks; top up with recommended vacuum pump oil if low.",
+      "Inspect the oil for colour and clarity — milky or dark oil indicates contamination; change before use.",
+      "Ensure the inlet filter (if fitted) is clean.",
+      "Connect the vacuum tubing from the vacuum pump inlet to the apparatus requiring vacuum (Buchner funnel, rotary evaporator, vacuum desiccator, etc.) using appropriate Keck clips or vacuum tubing.",
+      "Ensure all connections are tight — vacuum leaks reduce achievable vacuum level.",
+      "Place a cold trap (flask immersed in ice/dry ice-acetone) between the apparatus and the pump inlet when working with organic solvents — this prevents solvent vapours from entering and damaging the pump.",
+      "Switch on the vacuum pump and allow it to reach operating speed (5–10 seconds).",
+      "Monitor the vacuum gauge — operating vacuum should typically reach below 10–15 mbar for a rotary vane pump in good condition.",
+      "Perform the desired operation under vacuum (filtration, evaporation, desiccation).",
+      "When finished, before switching off: first close the stopcock on the apparatus to isolate the vacuum; then open the bleed valve slowly to admit air and release vacuum gradually.",
+      "Switch off the pump only after pressure has equalized — switching off under full vacuum can suck oil backwards into the system.",
+      "Disconnect vacuum tubing and clean the cold trap.",
+      "Record pump run time, vacuum achieved, and any abnormalities in the equipment logbook."
     ],
     "precautions": [
-      "Oil maintenance.",
-      "Trap liquids.",
-      "Ear protection."
+      "Never allow organic solvents to enter the pump directly — always use a cold trap; solvent contamination destroys the pump oil and degrades pump performance.",
+      "Always release vacuum gradually before switching off — abrupt venting can cause bumping in flasks and sample loss.",
+      "Check and change pump oil regularly (typically every 3–6 months of regular use or when oil appears milky).",
+      "Do not use the vacuum pump with corrosive gases (HCl, NH₃, acid vapours) without an acid trap — corrosion destroys the pump internals.",
+      "Ensure adequate ventilation near the pump — exhaust gases from the pump outlet must not accumulate.",
+      "Keep the pump on a stable, vibration-damping mat.",
+      "Do not run the pump with the inlet completely blocked — this causes overheating.",
+      "Inspect flexible vacuum tubing regularly for cracks, kinks, or hardening — replace compromised tubing immediately."
     ]
   }
 }

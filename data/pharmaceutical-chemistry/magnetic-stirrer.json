@@ -1,18 +1,30 @@
 {
   "meta": {
-    "title": "Operation of Magnetic Stirrer"
+    "title": "Operation of Magnetic Stirrer in Pharmaceutical Chemistry Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Magnetic Stirrer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide continuous, controlled, flameless stirring of reaction mixtures, solvent systems, and chemical solutions in organic and pharmaceutical chemistry reactions.",
+    "scope": "Applicable to Pharmaceutical Chemistry laboratory for all operations requiring continuous liquid mixing including dissolution of reactants, titration reactions, and preparation of standard solutions.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Place the magnetic stirrer on a stable, level bench surface away from strong external magnetic fields.",
+      "Choose a PTFE-coated magnetic stir bar (flea) appropriate to the vessel size: small oval flea for 50–100 mL beakers; larger cylindrical flea for 250–1000 mL vessels.",
+      "Drop the stir bar gently into the reaction vessel; place the vessel centrally on the magnetic stirrer plate.",
+      "Connect to power and switch on; slowly increase speed from zero using the speed control knob.",
+      "Confirm the stir bar rotates smoothly in a stable, concentric pattern before proceeding.",
+      "Set the optimal speed: 50–150 RPM for gentle mixing; 200–400 RPM for dissolving solids; 500–700 RPM for vigorous mixing.",
+      "Monitor stirring throughout the reaction — if the bar starts 'dancing' (erratic movement), immediately reduce speed to zero and restart slowly.",
+      "After the reaction, reduce speed to zero before switching off.",
+      "Use a magnetic stir bar retriever wand to remove the stir bar from the vessel.",
+      "Rinse the stir bar with appropriate solvent and distilled water; store separately.",
+      "Wipe the stirrer plate with a damp cloth; ensure no chemical residue remains."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Do not start at high speed — always increase speed gradually to prevent bar dancing.",
+      "Do not use with ferrous metal containers or near large permanent magnets.",
+      "For viscous solutions, use lower speeds — high speed with viscous media generates excessive heat.",
+      "Clean the stirrer plate after each use — corrosive chemicals will damage the surface.",
+      "Record all malfunctions (bar dancing, motor noise) in the equipment log for maintenance.",
+      "Inspect PTFE coating on stir bars regularly — chipped coating can contaminate reaction mixtures."
+    ]
   }
 }

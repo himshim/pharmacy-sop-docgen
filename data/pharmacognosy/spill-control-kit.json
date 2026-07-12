@@ -1,20 +1,37 @@
 {
   "meta": {
-    "title": "Use of Spill Control Kit"
+    "title": "Use of Spill Control Kit in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To safely clean chemical spills.",
-    "scope": "Applicable to lab safety.",
+    "purpose": "To safely contain, neutralize, and clean up chemical or biological spills in the Pharmacognosy laboratory to minimize health hazards, environmental contamination, and damage to laboratory infrastructure.",
+    "scope": "Applicable to Pharmacognosy laboratory for management of spills of organic solvents (methanol, ethanol, petroleum ether), acid/base solutions, and herbal extract concentrates.",
     "procedure": [
-      "Alert others.",
-      "Use absorbents.",
-      "Neutralize.",
-      "Dispose waste."
+      "In case of a spill, immediately alert all persons in the laboratory and evacuate the immediate area if the spill involves volatile or toxic solvents.",
+      "Do not attempt to clean up if you are not trained — wait for a trained spill responder.",
+      "Identify the spilled material using the container label or Safety Data Sheet (SDS) before selecting cleanup materials.",
+      "Put on appropriate PPE before approaching the spill: nitrile gloves, safety goggles, lab coat, and solvent-resistant apron for organic solvents.",
+      "Locate the spill control kit — it should be stored at a clearly marked, accessible location in each laboratory.",
+      "For flammable solvent spills: Eliminate all ignition sources (flames, sparks) immediately; increase ventilation.",
+      "Contain the spill by placing absorbent socks or sand/vermiculite around the perimeter of the spill to prevent spreading.",
+      "Apply absorbent granules (general purpose absorbent) generously over the spill from the outer edge toward the centre.",
+      "Allow absorbents to soak up the liquid completely (typically 5–10 minutes).",
+      "Using a plastic scoop (never metal for flammable materials), collect the used absorbent into a yellow hazardous waste bag.",
+      "Wipe the area with absorbent wipes until clean; for corrosive spills, neutralize before final wipe (use sodium bicarbonate for acid spills; citric acid/boric acid for base spills).",
+      "Place all used materials (gloves, wipes, absorbents) in the hazardous waste bag and seal.",
+      "Label the waste bag with: spill material, date, quantity, and handler's name.",
+      "Hand over the sealed waste bag to the designated chemical waste disposal officer.",
+      "Replenish the spill kit immediately after use — a depleted spill kit is a compliance violation.",
+      "Complete an incident report form within 24 hours of the spill."
     ],
     "precautions": [
-      "PPE.",
-      "Ventilate.",
-      "Follow SOP."
+      "Never use paper towels for solvent spills — they provide no absorbency advantage and are a fire hazard.",
+      "Never use wet mops on organic solvent spills — spreading increases the vapor surface area.",
+      "Eliminate all ignition sources before cleaning flammable solvent spills.",
+      "Do not use metal scoops or tools near flammable liquid spills — risk of static spark.",
+      "For large spills (> 4 litres) or spills of toxic/carcinogenic materials, evacuate and call emergency services.",
+      "Inspect the spill kit monthly — check that all absorbents, PPE, and bags are present and undamaged.",
+      "Know the location of the emergency eyewash station and safety shower before starting any experiment.",
+      "All laboratory staff must be trained in spill response procedures — training records must be maintained."
     ]
   }
 }

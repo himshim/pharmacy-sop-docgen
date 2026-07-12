@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Operation of Sphygmomanometer"
+  },
+  "sections": {
+    "purpose": "To measure arterial blood pressure in human subjects accurately using a manual aneroid or mercury sphygmomanometer as part of clinical pharmacology practicals.",
+    "scope": "Applicable to clinical pharmacology practicals in the Pharmacology department for measuring systolic and diastolic blood pressure.",
+    "procedure": [
+      "Ensure the subject has been seated quietly for at least 5 minutes before measurement.",
+      "Instruct the subject to avoid caffeine, exercise, and smoking for 30 minutes prior to measurement.",
+      "Seat the subject comfortably with back supported, feet flat on the floor, and arm at heart level.",
+      "Select the appropriate cuff size: the bladder should encircle at least 80% of the upper arm.",
+      "Wrap the cuff snugly around the bare upper arm, 2–3 cm above the antecubital fossa.",
+      "Palpate the brachial artery and place the stethoscope diaphragm over it.",
+      "Close the air release valve on the bulb and inflate the cuff to 30 mmHg above the expected systolic pressure (or until radial pulse disappears).",
+      "Slowly deflate the cuff at a rate of 2–3 mmHg per second by gently opening the release valve.",
+      "Note the pressure at which the first Korotkoff sound (faint tapping) is heard — this is the systolic pressure.",
+      "Continue deflating and note the pressure at which sounds disappear completely — this is the diastolic pressure (Korotkoff phase V).",
+      "Fully deflate the cuff and remove it from the arm.",
+      "Record both systolic and diastolic values in mmHg along with the arm used and patient position.",
+      "Repeat measurement after 1–2 minutes and take the average if required.",
+      "Document findings in the practical record with date, time, and subject details."
+    ],
+    "precautions": [
+      "Use a calibrated and validated sphygmomanometer for accurate readings.",
+      "Ensure proper cuff size selection — too small a cuff gives falsely high readings.",
+      "The cuff should not be applied over clothing.",
+      "Do not deflate the cuff too rapidly — maintain 2–3 mmHg/second deflation rate.",
+      "Avoid taking measurements immediately after physical exertion.",
+      "Inspect the equipment for leaks, cracked tubing, or defective valves before use.",
+      "Mercury sphygmomanometers must be handled with care — spillage must be managed per hazardous material protocol.",
+      "Calibrate the device at regular intervals as per manufacturer's instructions."
+    ]
+  }
+}

@@ -224,6 +224,30 @@
     {
       "key": "y-maze-apparatus",
       "name": "Y Maze Apparatus"
+    },
+    {
+      "key": "glucometer",
+      "name": "Glucometer"
+    },
+    {
+      "key": "haemocytometer",
+      "name": "Haemocytometer"
+    },
+    {
+      "key": "pulse-oximeter",
+      "name": "Pulse Oximeter"
+    },
+    {
+      "key": "sahlis-haemoglobinometer",
+      "name": "Sahli's Haemoglobinometer"
+    },
+    {
+      "key": "sphygmomanometer",
+      "name": "Sphygmomanometer"
+    },
+    {
+      "key": "stethoscope",
+      "name": "Stethoscope"
     }
   ]
 }

@@ -1,18 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Precision Balance"
+    "title": "Operation of Precision Balance in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To weigh samples with higher precision.",
-    "scope": "Applicable to analytical weighing.",
+    "purpose": "To accurately weigh crude drugs, plant powders, extract samples, and reagents to the nearest 0.001 g (1 mg) for standardization tests, extraction procedures, and phytochemical analyses.",
+    "scope": "Applicable to Pharmacognosy laboratory for all weighing operations requiring precision of 1 mg or better, including moisture content determination, extractive value calculations, and preparation of standard solutions.",
     "procedure": [
-      "Tare with container.",
-      "Add sample.",
-      "Record stable reading."
+      "Ensure the precision balance is placed on a stable, vibration-free, level surface away from drafts and direct sunlight.",
+      "Check the level indicator bubble — adjust levelling feet until the bubble is centred.",
+      "Switch on the balance and allow it to warm up for at least 15–30 minutes before use (critical for accuracy).",
+      "Perform a span calibration using the internal automatic calibration function (if available) or external calibration weights as per the standard operating schedule.",
+      "Close the draught shield doors before every weighing — air currents cause reading instability.",
+      "Place a clean, dry weighing paper, boat, or container on the pan and press 'Tare' to zero the display.",
+      "Add the material to be weighed using an appropriate spatula — do not pour directly; add small portions at a time.",
+      "Wait until the display stabilizes (no flickering) before recording the weight.",
+      "Record the weight to the full precision displayed (e.g., 2.456 g — record all digits).",
+      "Remove the sample and the weighing vessel; close the draught shield and press 'Tare' to verify zero return.",
+      "For corrosive or hygroscopic materials, weigh quickly and use sealed containers or weighing by difference.",
+      "Clean the pan after each use with a soft brush or lint-free cloth — never use water directly on the pan.",
+      "Record all weighing operations in the laboratory register: date, balance ID, material, and weight.",
+      "Switch off the balance after use; clean the draught shield glass with a dry cloth."
     ],
     "precautions": [
-      "Draft shield closed.",
-      "Calibrate regularly."
+      "Never exceed the maximum capacity of the balance — overloading damages the load cell permanently.",
+      "Always close the draught shield before weighing — even slight air movement causes significant error at milligram precision.",
+      "Do not place hot objects on the pan — thermal gradients cause erroneous readings.",
+      "Calibrate the balance at the beginning of each day or after moving the instrument.",
+      "Handle calibration weights with forceps only — finger contact deposits oils that alter weight.",
+      "Keep chemicals away from the internal mechanism — spilled chemicals corrode the weighing cell.",
+      "Do not press on the pan — use a spatula to add material gently.",
+      "Record the balance ID number in all weighing logs for traceability."
     ]
   }
 }

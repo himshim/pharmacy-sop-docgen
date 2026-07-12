@@ -1,18 +1,32 @@
 {
   "meta": {
-    "title": "Operation of Laboratory Sink with Eye Wash"
+    "title": "Use of Laboratory Sink with Eye Wash in Pharmaceutical Chemistry Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Laboratory Sink with Eye Wash.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To provide immediate emergency ocular and facial decontamination following accidental exposure to chemical reagents, solvents, or corrosive substances in the Pharmaceutical Chemistry laboratory.",
+    "scope": "Applicable to Pharmaceutical Chemistry laboratory as a mandatory emergency first-aid facility for chemical splashes, and for routine glassware and equipment washing.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "In case of chemical splash to the eyes or face: act immediately without hesitation — time to initial flushing is critical.",
+      "Guide the affected person to the eye wash station without delay.",
+      "Activate the eye wash (push handle or pedal) — water should flow from both nozzles simultaneously.",
+      "The affected person should hold eyelids open using fingers, and position eyes directly over the nozzle stream.",
+      "Flush continuously for a minimum of 15 minutes for all chemical exposures.",
+      "For acid exposure: flush for 15 minutes minimum; then proceed to medical evaluation.",
+      "For alkali (base) exposure: flush for 20–30 minutes — alkalis penetrate deeper and require extended flushing.",
+      "For organic solvent splash: flush for 15 minutes; solvent in eyes causes chemical burns and corneal damage.",
+      "Have another person call emergency medical services immediately while flushing continues.",
+      "Do not stop flushing to look for damage — 15 minutes is the minimum regardless of apparent severity.",
+      "After flushing, transport immediately to ophthalmology or emergency medical facility.",
+      "For routine washing: scrub glassware with detergent and bottle brushes; rinse 3× with tap water then 2× with distilled water.",
+      "Log weekly eye wash activation tests (10–15 second flush) in the safety equipment register."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Test the eye wash weekly — inactive eye wash nozzles become colonized with bacteria that cause additional injury.",
+      "Keep the area in front of the eye wash completely unobstructed at all times.",
+      "Never wear contact lenses when handling strong acids, bases, or organic solvents — lenses trap chemicals and increase damage.",
+      "Mark the eye wash location with clearly visible signage.",
+      "All staff must receive eye wash training during laboratory induction.",
+      "Do not use eye wash for draining organic solvents — segregate chemical waste properly."
+    ]
   }
 }

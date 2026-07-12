@@ -1,20 +1,37 @@
 {
   "meta": {
-    "title": "Operation of Vibratory Sieve Shaker"
+    "title": "Operation of Vibratory Sieve Shaker in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To size-separate powders.",
-    "scope": "Applicable to particle size analysis.",
+    "purpose": "To separate crude drug powders and plant materials into defined particle size fractions using mechanical vibration and standard test sieves as per Indian Pharmacopoeia (IP) and WHO sieve analysis requirements.",
+    "scope": "Applicable to Pharmacognosy laboratory for particle size analysis of crude drug powders, determination of powder fineness for standardization, and fractionation prior to extraction.",
     "procedure": [
-      "Stack sieves.",
-      "Add sample.",
-      "Set time and amplitude.",
-      "Weigh fractions."
+      "Select appropriate sieves from the IP/BP sieve series based on the required powder grade (e.g., coarse powder: No. 10/No. 44; fine powder: No. 85/No. 120).",
+      "Clean all sieves with a soft brush — remove any residual powder from previous use.",
+      "Inspect sieve mesh for damage, holes, or blocked apertures — replace damaged sieves.",
+      "Arrange sieves in descending order of aperture size (largest opening at top, smallest at bottom) with a collection pan at the base.",
+      "Stack and lock the sieve assembly securely in the clamps of the vibratory shaker.",
+      "Weigh the drug powder sample accurately (typically 50–100 g) and record the weight.",
+      "Place the powder on the topmost (largest aperture) sieve and cover with the lid.",
+      "Set the vibration amplitude and time: for pharmacopeial sieve analysis — 5 minutes at standard amplitude.",
+      "Switch on the vibratory sieve shaker and allow the full run to complete.",
+      "After completion, switch off and allow vibration to cease fully before opening.",
+      "Carefully remove the sieve stack and weigh the retained material on each sieve and in the collection pan.",
+      "Calculate the weight percentage retained on each sieve: % retained = (Weight on sieve / Total sample weight) × 100.",
+      "Plot the cumulative particle size distribution curve if required.",
+      "Determine powder grade per IP: Coarse (No. 10), Moderately Coarse (No. 22), Moderately Fine (No. 44), Fine (No. 85), Very Fine (No. 120).",
+      "Clean all sieves with a soft brush after use; wash if needed and dry completely before storage.",
+      "Record all sieve numbers, weights, and calculated results in the laboratory register."
     ],
     "precautions": [
-      "Clean sieves.",
-      "Balance load.",
-      "Mask."
+      "Never use metal objects to clean sieve mesh — use only a soft natural-bristle brush.",
+      "Do not overload sieves — excessive material prevents proper sieving and gives inaccurate results.",
+      "Wear a dust mask when handling fine drug powders during loading and unloading.",
+      "Do not use worn or damaged sieves — apertures out of specification invalidate results.",
+      "Ensure the sieve stack is securely fastened before starting — loose sieves cause accidents and sample loss.",
+      "Allow the shaker to stop completely before removing sieves.",
+      "Store sieves in their individual protective containers when not in use — stacking without protection deforms the mesh.",
+      "Calibrate the sieve apertures annually using optical methods or reference wire gauges."
     ]
   }
 }

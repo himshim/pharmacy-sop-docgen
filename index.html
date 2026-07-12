@@ -1,295 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOP Generator - Pharmacy Department</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>SOP Generator - Responsive Editor</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/ui-responsive.css" />
+    <link rel="stylesheet" href="css/print-a4.css" />
 
-    <!-- Existing styles -->
-    <link rel="stylesheet" href="css/ui-desktop.css">
-    <link rel="stylesheet" href="css/print-a4.css">
-</head>
+    <!-- External CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docx@8.2.4/build/index.umd.js"></script>
 
-<body>
-    <div class="container">
-        <header>
-            <h1>📋 SOP Generator</h1>
-            <p>Standard Operating Procedure Document Generator for Pharmacy Department</p>
-        </header>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Header -->
+      <header class="app-header">
+        <div class="header-content">
+          <div class="header-left">
+            <h1><span>📋</span> SOP Document Generator</h1>
+            <p>Create professional, audit-ready Standard Operating Procedures</p>
+          </div>
+          <div class="header-right">
+            <span class="version-badge">Pharma Edition</span>
+            <a href="https://github.com/himshim" target="_blank" class="credit-link">
+              Created by @himshim26
+            </a>
+          </div>
+        </div>
+      </header>
 
-        <div class="content">
-            <div class="card">
-                <h2>Generate SOP Document</h2>
-                <p>
-                    Select a department and SOP to begin creating your standardized
-                    operating procedure document.
-                </p>
+      <!-- Main Columns -->
+      <div class="main-layout">
+        <!-- TAB 1: CREATE (Edit controls) -->
+        <div class="tab-panel active" id="tab-create">
+          <aside class="controls-panel">
+            <!-- Department & SOP Selection -->
+            <div class="control-section">
+              <h2 class="section-title">
+                <span class="section-icon">📁</span> Selection & Style
+              </h2>
+              <div class="form-group">
+                <label for="departmentSelect">Select Department</label>
+                <select id="departmentSelect">
+                  <option value="">Choose department...</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="sopSelect">Select SOP</label>
+                <select id="sopSelect" disabled>
+                  <option value="">Choose SOP...</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="uploadSopJson">Or Upload Custom SOP (.json)</label>
+                <input type="file" id="uploadSopJson" accept=".json" />
+              </div>
+              <div class="form-group">
+                <label for="templateSelect">Template Style</label>
+                <select id="templateSelect">
+                  <option value="sop-a4-classic">Classic Template</option>
+                  <option value="sop-a4-iso">ISO Template</option>
+                  <option value="sop-a4-naac">NAAC Template</option>
+                  <option value="sop-a4-pci">PCI Template</option>
+                  <option value="sop-a4-master-professional">Master Professional (QA)</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-top: 15px; border-top: 1.5px solid var(--border-color); padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                <label for="expertModeToggle" style="margin-bottom: 0; font-weight: 600; color: var(--text-dark);">🔧 Expert Mode (All Fields)</label>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="expertModeToggle" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
 
-                <div class="actions">
-                    <a href="partials/ui-desktop.html" class="btn btn-primary">
-                        🖥️ Desktop Version
-                    </a>
-                    <a href="partials/ui-mobile.html" class="btn btn-secondary">
-                        📱 Mobile Version
-                    </a>
+            <!-- Document Control Information -->
+            <div class="control-section" id="sectionDocControl">
+              <h2 class="section-title">
+                <span class="section-icon">📋</span> Document Info
+              </h2>
+              <div class="form-group">
+                <label for="institute">Institute Name</label>
+                <input type="text" id="institute" placeholder="Enter institute name" />
+              </div>
+              <div class="form-group">
+                <label for="department">Department</label>
+                <input type="text" id="department" placeholder="Enter department" />
+              </div>
+              <div class="form-group">
+                <label for="title">Document Title</label>
+                <input type="text" id="title" placeholder="Enter SOP title" />
+              </div>
+              <div class="form-group">
+                <label for="sopNumber">SOP Number</label>
+                <input type="text" id="sopNumber" placeholder="e.g., SOP-001" />
+              </div>
+              <div class="form-group">
+                <label for="revisionNo">Revision Number</label>
+                <input type="text" id="revisionNo" placeholder="00" />
+              </div>
+              <div class="form-group">
+                <label for="effectiveDate">Effective Date</label>
+                <input type="date" id="effectiveDate" />
+              </div>
+              <div class="form-group">
+                <label for="revisionDate">Revision Date</label>
+                <input type="date" id="revisionDate" />
+              </div>
+              <div class="form-group">
+                <label for="nextReviewDate">Next Review Date</label>
+                <input type="date" id="nextReviewDate" />
+              </div>
+              <div class="form-group">
+                <label for="copyType">Copy Type</label>
+                <select id="copyType">
+                  <option value="CONTROLLED">Controlled</option>
+                  <option value="UNCONTROLLED">Uncontrolled</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Content Area Editor -->
+            <div class="control-section">
+              <h2 class="section-title">
+                <span class="section-icon">📝</span> SOP Content
+              </h2>
+              <div class="form-group">
+                <label for="purpose">Purpose</label>
+                <textarea id="purpose" placeholder="Enter purpose statement..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="scope">Scope</label>
+                <textarea id="scope" placeholder="Enter scope statement..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="responsibility">Responsibility</label>
+                <textarea id="responsibility" placeholder="Enter responsibility details..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="procedure">Procedure (One step per line)</label>
+                <textarea id="procedure" placeholder="Step 1&#10;Step 2&#10;Step 3..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="precautions">Safety Precautions (One per line)</label>
+                <textarea id="precautions" placeholder="Precaution 1&#10;Precaution 2..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="applicability">Applicability</label>
+                <textarea id="applicability" placeholder="Enter applicability..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="abbreviations">Abbreviations</label>
+                <textarea id="abbreviations" placeholder="Abbreviation definitions..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="references">References</label>
+                <textarea id="references" placeholder="Reference documents/standards..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="annexures">Annexures</label>
+                <textarea id="annexures" placeholder="Annexures list..."></textarea>
+              </div>
+                 <!-- Inspection & Compliance Metadata (Optional) -->
+            <div class="control-section" id="sectionInspection">
+              <h2 class="section-title">
+                <span class="section-icon">🛡️</span> Inspection Details
+              </h2>
+              
+              <!-- PCI Section -->
+              <div class="compliance-section group-pci">
+                <h3 style="font-size:14px; margin: 10px 0 6px 0; color: var(--primary-color);">Pharmacy Council (PCI)</h3>
+                <div class="form-group">
+                  <label for="pciCourseCode">PCI Course Code</label>
+                  <input type="text" id="pciCourseCode" placeholder="e.g., BP403T" />
                 </div>
+                <div class="form-group">
+                  <label for="pciExperimentRef">Experiment Ref</label>
+                  <input type="text" id="pciExperimentRef" placeholder="e.g., Experiment 4" />
+                </div>
+                <div class="form-group">
+                  <label for="pciLabCategory">PCI Lab Category</label>
+                  <input type="text" id="pciLabCategory" placeholder="e.g., Pharmaceutics" />
+                </div>
+                <div class="form-group">
+                  <label for="pciDocumentationClause">PCI Documentation Clause</label>
+                  <textarea id="pciDocumentationClause" placeholder="Enter PCI compliance clause..."></textarea>
+                </div>
+              </div>
+
+              <!-- NAAC Section -->
+              <div class="compliance-section group-naac">
+                <h3 style="font-size:14px; margin: 16px 0 6px 0; color: var(--primary-color);">NAAC Accreditation</h3>
+                <div class="form-group">
+                  <label for="naacAssetPage">Stock Register Page No</label>
+                  <input type="text" id="naacAssetPage" placeholder="e.g., Vol II, Page 45" />
+                </div>
+                <div class="form-group">
+                  <label for="naacLedgerId">Equipment Ledger ID</label>
+                  <input type="text" id="naacLedgerId" placeholder="e.g., EQ-PH-098" />
+                </div>
+                <div class="form-group">
+                  <label for="naacLogbookRef">Utilization Logbook ID</label>
+                  <input type="text" id="naacLogbookRef" placeholder="e.g., LOG-MB-22" />
+                </div>
+                <div class="form-group">
+                  <label for="naacAmcRef">AMC / Maintenance Log Ref</label>
+                  <input type="text" id="naacAmcRef" placeholder="e.g., AMC-2026-08" />
+                </div>
+                <div class="form-group">
+                  <label for="naacCalibrationCert">Calibration Certificate No</label>
+                  <input type="text" id="naacCalibrationCert" placeholder="e.g., CAL-9982" />
+                </div>
+                <div class="form-group">
+                  <label for="naacWasteProtocol">Eco-Waste Disposal Protocol</label>
+                  <textarea id="naacWasteProtocol" placeholder="Enter eco-waste procedures..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="naacReviewClause">NAAC Quality Review Clause</label>
+                  <textarea id="naacReviewClause" placeholder="Enter review clause..."></textarea>
+                </div>
+              </div>
+
+              <!-- ISO Section -->
+              <div class="compliance-section group-iso">
+                <h3 style="font-size:14px; margin: 16px 0 6px 0; color: var(--primary-color);">ISO Standards</h3>
+                <div class="form-group">
+                  <label for="isoReferenceStandard">Reference Standards Used</label>
+                  <input type="text" id="isoReferenceStandard" placeholder="e.g., USP Standards / NIST Weights" />
+                </div>
+                <div class="form-group">
+                  <label for="isoToleranceLimit">Acceptable Tolerance Limit</label>
+                  <input type="text" id="isoToleranceLimit" placeholder="e.g., ±0.1 mg" />
+                </div>
+                <div class="form-group">
+                  <label for="isoCapaAction">ISO CAPA Corrective Action</label>
+                  <textarea id="isoCapaAction" placeholder="Enter CAPA triggers..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="isoRecordRetentionClause">ISO Records Retention Clause</label>
+                  <textarea id="isoRecordRetentionClause" placeholder="Enter retention rules..."></textarea>
+                </div>
+              </div>
+
+              <!-- cGMP / Industry Section -->
+              <div class="compliance-section group-gmp">
+                <h3 style="font-size:14px; margin: 16px 0 6px 0; color: var(--primary-color);">cGMP / Industry QA</h3>
+                <div class="form-group">
+                  <label for="gmpSupersedesId">Supersedes Document ID</label>
+                  <input type="text" id="gmpSupersedesId" placeholder="e.g., SOP-QA-022 Rev 03" />
+                </div>
+                <div class="form-group">
+                  <label for="gmpLineClearance">Line Clearance Checklist</label>
+                  <textarea id="gmpLineClearance" placeholder="Enter line clearance checks..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="gmpCleaningProtocol">Cleaning &amp; Sanitation Protocol</label>
+                  <textarea id="gmpCleaningProtocol" placeholder="Enter sanitation steps..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="gmpOosDirective">OOS / Deviation Directive</label>
+                  <textarea id="gmpOosDirective" placeholder="Enter OOS instructions..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="gmpDataIntegrityStamp">ALCOA+ Data Integrity Footnote</label>
+                  <textarea id="gmpDataIntegrityStamp" placeholder="Enter data integrity disclaimer..."></textarea>
+              </div>
             </div>
 
-            <div class="card">
-                <h3>Features</h3>
-                <ul>
-                    <li>✅ Multiple template formats (Classic, ISO, PCI, NAAC)</li>
-                    <li>✅ Pre-loaded SOP content for common laboratory equipment</li>
-                    <li>✅ Real-time preview</li>
-                    <li>✅ Save as PDF with perfect formatting</li>
-                    <li>✅ Print-ready documents</li>
-                    <li>✅ Cross-browser compatible</li>
-                </ul>
+            <!-- Toggles Card -->
+            <div class="control-section">
+              <h2 class="section-title">
+                <span class="section-icon">⚙️</span> Visibility Toggles
+              </h2>
+              <div class="toggle-group">
+                <div class="toggle-item">
+                  <label for="toggleDocControl">Document Control Block</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleDocControl" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item">
+                  <label for="toggleSopNumber">SOP Number Field</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleSopNumber" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item">
+                  <label for="toggleRevisionNo">Revision Number Field</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleRevisionNo" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item">
+                  <label for="toggleEffectiveDate">Effective Date Field</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleEffectiveDate" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item">
+                  <label for="toggleRevisionDate">Revision Date Field</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleRevisionDate" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item">
+                  <label for="toggleNextReviewDate">Next Review Date Field</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleNextReviewDate" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item">
+                  <label for="toggleCopyType">Copy Type Field</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleCopyType" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item">
+                  <label for="toggleApplicability">Applicability Section</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleApplicability" />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item">
+                  <label for="toggleAbbreviations">Abbreviations Section</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleAbbreviations" />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item">
+                  <label for="toggleReferences">References Section</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleReferences" />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item">
+                  <label for="toggleAnnexures">Annexures Section</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleAnnexures" />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item group-pci">
+                  <label for="togglePciDetails">PCI Curriculum Details</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="togglePciDetails" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item group-pci">
+                  <label for="togglePciDocumentation">PCI Documentation Section</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="togglePciDocumentation" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item group-naac">
+                  <label for="toggleNaacDetails">NAAC Asset &amp; Log Details</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleNaacDetails" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item group-naac">
+                  <label for="toggleNaacWaste">NAAC Waste Protocol Section</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleNaacWaste" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item group-naac">
+                  <label for="toggleNaacReview">NAAC Quality Review Section</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleNaacReview" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item group-iso">
+                  <label for="toggleIsoCalibration">ISO Calibration &amp; Standards</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleIsoCalibration" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item group-iso">
+                  <label for="toggleIsoCapa">ISO CAPA Corrective Section</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleIsoCapa" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item group-iso">
+                  <label for="toggleIsoRetention">ISO Records Retention Section</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleIsoRetention" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item group-gmp">
+                  <label for="toggleGmpClearance">GMP Line Clearance Section</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleGmpClearance" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item group-gmp">
+                  <label for="toggleGmpCleaning">GMP Cleaning Protocol Section</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleGmpCleaning" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item group-gmp">
+                  <label for="toggleGmpOos">GMP OOS / Deviation Section</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleGmpOos" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-item group-gmp">
+                  <label for="toggleGmpFootnote">GMP Data Integrity Footnote</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggleGmpFootnote" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+              </div>
             </div>
 
-            <div class="card">
-                <h3>Available Departments</h3>
-                <ul>
-                    <li>🧪 Pharmaceutical Analysis</li>
-                    <li>💊 Pharmaceutics</li>
-                    <li>🔬 Pharmacology</li>
-                    <li>🌿 Pharmacognosy</li>
-                    <li>⚗️ Pharmaceutical Chemistry</li>
-                </ul>
+            <!-- Approvals Signatures -->
+            <div class="control-section">
+              <h2 class="section-title">
+                <span class="section-icon">✍️</span> Approval Signatures
+              </h2>
+              <div class="form-group">
+                <label for="preparedBy">Prepared By (Name)</label>
+                <input type="text" id="preparedBy" placeholder="Enter name" />
+              </div>
+              <div class="form-group">
+                <label for="preparedDesig">Prepared By (Designation)</label>
+                <input type="text" id="preparedDesig" placeholder="Enter designation" />
+              </div>
+              <div class="form-group">
+                <label for="preparedDate">Prepared Date</label>
+                <input type="date" id="preparedDate" />
+              </div>
+              <div class="form-group">
+                <label for="checkedBy">Checked By (Name)</label>
+                <input type="text" id="checkedBy" placeholder="Enter name" />
+              </div>
+              <div class="form-group">
+                <label for="checkedDesig">Checked By (Designation)</label>
+                <input type="text" id="checkedDesig" placeholder="Enter designation" />
+              </div>
+              <div class="form-group">
+                <label for="checkedDate">Checked Date</label>
+                <input type="date" id="checkedDate" />
+              </div>
+              <div class="form-group">
+                <label for="approvedBy">Approved By (Name)</label>
+                <input type="text" id="approvedBy" placeholder="Enter name" />
+              </div>
+              <div class="form-group">
+                <label for="approvedDesig">Approved By (Designation)</label>
+                <input type="text" id="approvedDesig" placeholder="Enter designation" />
+              </div>
+              <div class="form-group">
+                <label for="approvedDate">Approved Date</label>
+                <input type="date" id="approvedDate" />
+              </div>
             </div>
+          </aside>
         </div>
 
-        <!-- =====================================================
-             OTHER PROJECTS SECTION (NEW)
-        ===================================================== -->
-        <section class="other-projects">
-            <h2>Check out my other projects</h2>
-            <p class="section-subtitle">
-                Educational tools developed for pharmacy teaching, learning, and laboratory training.
-            </p>
+        <!-- TAB 2: PREVIEW (Visual Render) -->
+        <div class="tab-panel" id="tab-preview">
+          <!-- Action Bar (Floating Export Toolbar) -->
+          <div class="bottom-action-bar">
+            <button id="zoom-toggle-btn" class="action-btn btn-secondary">🔍 Zoom 100%</button>
+            <button id="browser-print-btn" class="action-btn btn-secondary">🖨️ Print</button>
+            <button id="print-btn" class="action-btn btn-primary">💾 Save PDF</button>
+          </div>
 
-            <div class="projects-grid">
-                <a href="https://pharmagraph-lab.vercel.app/"
-                   target="_blank"
-                   class="project-card">
-                    <div class="project-icon">📊</div>
-                    <h3>Pharmagraph Lab</h3>
-                    <p>
-                        Interactive graph-based simulations to visually understand
-                        pharmaceutical and analytical concepts.
-                    </p>
-                    <span class="project-link">Open project →</span>
-                </a>
-
-                <a href="https://himshim.github.io/virtual-analytical-lab/"
-                   target="_blank"
-                   class="project-card">
-                    <div class="project-icon">🧪</div>
-                    <h3>Virtual Analytical Lab</h3>
-                    <p>
-                        A virtual laboratory environment for analytical pharmacy
-                        experiments and instrument workflows.
-                    </p>
-                    <span class="project-link">Open project →</span>
-                </a>
+          <main class="preview-panel">
+            <div id="preview-wrapper">
+              <div id="preview">
+                <!-- Preview A4 content gets rendered here -->
+              </div>
             </div>
-        </section>
+          </main>
+        </div>
+      </div>
 
-        <footer>
-            <p>
-                Developed for Pharmacy Education |
-                <a href="https://github.com/himshim" target="_blank">@himshim26</a>
-            </p>
-        </footer>
+      <!-- Mobile Bottom Tab Bar -->
+      <nav class="tab-navigation">
+        <button class="tab-btn active" id="mobile-tab-create" onclick="switchTab(0)">
+          ✏️ Edit
+        </button>
+        <button class="tab-btn" id="mobile-tab-preview" onclick="switchTab(1)">
+          👁️ Preview
+        </button>
+      </nav>
+
+      <!-- Footer Status (Desktop only) -->
+      <footer class="status-bar">
+        <div class="status-left">
+          <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span>Ready</span>
+          </div>
+          <span>SOP Generator Pharma Edition</span>
+        </div>
+        <div class="credit-footer">
+          <span>Developed by</span>
+          <a href="https://github.com/himshim" target="_blank">@himshim26</a>
+        </div>
+      </footer>
     </div>
 
-    <!-- =====================================================
-         PAGE STYLES (EXISTING + EXTENDED SAFELY)
-    ===================================================== -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <script src="js/security-sanitizer.js?v=2"></script>
+    <script src="js/template-engine.js?v=2"></script>
+    <script src="js/sop-engine.js?v=2"></script>
+
+    <!-- Tab Switching Logic (Mobile First) -->
+    <script>
+      function switchTab(index) {
+        const createTabBtn = document.getElementById("mobile-tab-create");
+        const previewTabBtn = document.getElementById("mobile-tab-preview");
+        const createPanel = document.getElementById("tab-create");
+        const previewPanel = document.getElementById("tab-preview");
+
+        if (index === 0) {
+          createTabBtn.classList.add("active");
+          previewTabBtn.classList.remove("active");
+          createPanel.classList.add("active");
+          previewPanel.classList.remove("active");
+        } else {
+          createTabBtn.classList.remove("active");
+          previewTabBtn.classList.add("active");
+          createPanel.classList.remove("active");
+          previewPanel.classList.add("active");
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-        }
-
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-
-        .content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-
-        .card h2,
-        .card h3 {
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .card p {
-            margin-bottom: 15px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .card ul {
-            list-style: none;
-        }
-
-        .card ul li {
-            margin-bottom: 8px;
-            color: #444;
-        }
-
-        .actions {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .btn {
-            padding: 12px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: #667eea;
-            color: white;
-        }
-
-        .btn-secondary {
-            background: #eee;
-            color: #333;
-        }
-
-        /* ================= OTHER PROJECTS ================= */
-
-        .other-projects {
-            background: rgba(255,255,255,0.95);
-            border-radius: 16px;
-            padding: 40px 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            text-align: center;
-        }
-
-        .other-projects h2 {
-            font-size: 26px;
-            margin-bottom: 10px;
-            color: #222;
-        }
-
-        .section-subtitle {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            text-align: left;
-            text-decoration: none;
-            color: inherit;
-            border: 1px solid #eee;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .project-icon {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
-
-        .project-card h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .project-card p {
-            font-size: 15px;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .project-link {
-            font-size: 14px;
-            font-weight: 600;
-            color: #667eea;
-        }
-
-        footer {
-            text-align: center;
-            color: white;
-            opacity: 0.9;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2.2em;
-            }
-
-            .actions {
-                flex-direction: column;
-            }
-        }
-    </style>
-</body>
+      }
+    </script>
+  </body>
 </html>

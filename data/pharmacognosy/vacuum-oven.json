@@ -1,20 +1,37 @@
 {
   "meta": {
-    "title": "Operation of Vacuum Oven"
+    "title": "Operation of Vacuum Oven in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To dry heat-sensitive materials.",
-    "scope": "Applicable to drying.",
+    "purpose": "To dry heat-sensitive plant extracts, crude drugs, and phytochemical isolates at low temperatures under reduced pressure, preventing thermal degradation of labile compounds.",
+    "scope": "Applicable to Pharmacognosy laboratory for drying volatile-rich extracts, thermolabile glycosides, alkaloids, and essential oil-containing drugs where conventional oven drying causes decomposition.",
     "procedure": [
-      "Load trays.",
-      "Set temperature and vacuum.",
-      "Dry to constant weight.",
-      "Cool under vacuum."
+      "Inspect the vacuum oven door gasket, vacuum gauge, and connection ports for integrity before use.",
+      "Switch on the vacuum oven and set the required temperature: typically 40–60°C for heat-sensitive extracts.",
+      "Allow the chamber to reach the set temperature before loading samples.",
+      "Spread the extract or powder samples in thin layers on flat SS trays or Petri dishes — do not use plastic containers that may off-gas under vacuum.",
+      "Place trays inside the oven chamber, ensuring they do not obstruct the vacuum inlet port.",
+      "Close the oven door firmly and ensure the latch is secure.",
+      "Connect the vacuum pump outlet pipe to the oven vacuum inlet.",
+      "Switch on the vacuum pump and open the vacuum valve slowly — monitor the vacuum gauge.",
+      "Draw vacuum to the required level: typically 50–100 mbar (0.5–1 bar vacuum) for gentle drying.",
+      "Allow drying to proceed for the specified time (typically 3–6 hours for extracts).",
+      "Monitor temperature and vacuum level periodically; log readings in the logbook.",
+      "At the end of drying: first switch off the vacuum pump; then slowly bleed air back into the chamber using the bleed valve — never open the door while under vacuum.",
+      "Wait until the vacuum gauge reads 0 (atmospheric pressure) before opening the door.",
+      "Remove samples using tongs — surfaces may be warm.",
+      "Weigh the dried samples immediately and calculate yield / loss on drying.",
+      "Switch off the oven; clean the chamber interior with a dry cloth.",
+      "Record temperature, vacuum level, duration, material, and result in the equipment logbook."
     ],
     "precautions": [
-      "No liquids.",
-      "Vacuum integrity.",
-      "Slow cooling."
+      "Never open the vacuum oven door while under vacuum — pressure differential causes violent air inrush and can scatter samples.",
+      "Always bleed air back in slowly through the bleed valve before opening — rapid venting can blow fine powders out of trays.",
+      "Do not use solvent-wet samples in a vacuum oven without first ensuring the solvent is not flammable — vapours under vacuum with an electrical heat element are an explosion risk.",
+      "Regularly check and replace the door gasket — worn gaskets prevent adequate vacuum.",
+      "Do not exceed the rated maximum temperature or vacuum level of the oven.",
+      "Inspect the vacuum pump oil level and condition monthly; replace oil per manufacturer schedule.",
+      "Do not place highly corrosive materials inside — they damage the stainless steel chamber."
     ]
   }
 }

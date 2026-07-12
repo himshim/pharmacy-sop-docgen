@@ -1,19 +1,36 @@
 {
   "meta": {
-    "title": "Operation of Polarizing Microscope"
+    "title": "Operation of Polarizing Microscope in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To examine crystals and starch grains.",
-    "scope": "Applicable to microcrystal tests.",
+    "purpose": "To examine optical anisotropy (birefringence) of plant cell constituents including starch grains, calcium oxalate crystals, cellulose fibres, and lignified cells for identification and authentication of crude drugs.",
+    "scope": "Applicable to Pharmacognosy laboratory for detection of starch grains (showing characteristic Maltese cross), calcium oxalate crystals, lignified elements, and polarization-active phytochemicals in crude drug powders and tissue sections.",
     "procedure": [
-      "Insert polarizers.",
-      "Focus specimen.",
-      "Rotate stage.",
-      "Observe birefringence."
+      "Switch on the polarizing microscope and allow the halogen lamp to warm up for 5 minutes.",
+      "Insert the polarizer (lower filter) below the condenser into its designated slot.",
+      "Confirm the analyzer (upper filter) is retracted or set to the 0° (parallel) position initially.",
+      "Prepare the specimen: mount a thin powder smount in water or glycerine on a glass slide; apply a coverslip.",
+      "Place the slide on the mechanical stage and locate the specimen using bright field (analyzer out) at 10× first.",
+      "Cross the polars: rotate the analyzer to 90° — the background field should become completely dark (extinction).",
+      "Switch to the cross-polarized mode — birefringent structures (starch grains, crystals) will appear brightly coloured or white against the dark background.",
+      "Starch grains: look for characteristic Maltese cross (extinction cross) — confirms starch identity.",
+      "Calcium oxalate crystals: will appear bright white or coloured; identify crystal type (raphides, prisms, druses, styloids) for drug identification.",
+      "Rotate the stage — note the extinction angle and pleochroism for crystal identification.",
+      "Insert the red plate (first-order retardation plate) or gypsum plate if available to assist crystal identification through colour shift.",
+      "Systematically scan the powder mount and note the proportion, type, and size of polarizing structures.",
+      "Record observations with sketches or photomicrography using the camera port.",
+      "Remove the analyzer after observation and return the microscope to bright-field mode.",
+      "Clean the slide and stage after use; cover the microscope.",
+      "Log the drug name, structure observed, polarization behavior, and authentication conclusion in the register."
     ],
     "precautions": [
-      "Clean polarizers.",
-      "Avoid rotation under high power."
+      "Handle the polarizer and analyzer filters with care — contamination or scratching of filter surfaces alters polarization quality.",
+      "Clean optical filters with lens paper only — never use regular tissue.",
+      "Ensure strict 90° crossing of polars for correct cross-polarized microscopy — incomplete crossing gives false birefringence patterns.",
+      "Do not apply too much pressure on the coverslip — stressed glass becomes birefringent, confusing results.",
+      "Use glycerine mountant for starch grain identification — water causes starch swelling and loss of Maltese cross pattern.",
+      "Keep the light intensity moderate — excessive intensity can cause fading of delicate coloured inclusions.",
+      "Store the polarizer and analyzer filters in their protective cases when not in use."
     ]
   }
 }

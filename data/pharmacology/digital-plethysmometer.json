@@ -1,22 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Digital Plethysmometer"
+    "title": "Operation of Digital Plethysmometer in Pharmacology Laboratory"
   },
   "sections": {
-    "purpose": "To measure paw edema volume in anti-inflammatory drug screening.",
-    "scope": "Applicable to inflammation models.",
+    "purpose": "To accurately measure limb (paw) volume in rodents using the water displacement principle for quantification of oedema formation and anti-inflammatory drug efficacy in carrageenan-induced paw oedema models.",
+    "scope": "Applicable to Pharmacology laboratory for paw oedema measurement in rodent models of inflammation including carrageenan-induced oedema, dextran-induced oedema, and arthritis models.",
     "procedure": [
-      "Fill compartment with mercury or water.",
-      "Calibrate volume measurement.",
-      "Place animal paw in compartment.",
-      "Record initial and post-treatment volumes.",
-      "Calculate % edema reduction."
+      "Switch on the digital plethysmometer and allow it to complete initialization.",
+      "Fill the measuring cell with distilled water or saline to the marked level — use the same liquid throughout the experiment.",
+      "Remove air bubbles from the measuring cell by gently tapping the sides.",
+      "Calibrate using the provided calibration cup: immerse fully, and the reading should correspond to the cup volume (e.g., 1.00 mL); adjust if needed.",
+      "Press 'Zero' or 'Tare' with the cell empty (just liquid, no object).",
+      "Mark the animal's right paw at the tibiotarsal junction using a permanent marker — this ensures consistent immersion depth across all measurements.",
+      "Gently lower the marked paw into the measuring cell up to the marked line — hold steadily.",
+      "When the reading on the digital display stabilizes, record the baseline paw volume.",
+      "Administer the phlogistic agent (e.g., carrageenan 0.1 mL of 1% suspension) by sub-plantar injection into the right hind paw.",
+      "Administer the test drug or vehicle by the specified route (oral, i.p.) 30–60 minutes before carrageenan injection.",
+      "Measure paw volume at specified time points after carrageenan injection (typically 1, 2, 3, 4 hours).",
+      "Calculate % oedema: [(Vt − V₀) / V₀] × 100, where Vt = volume at time t, V₀ = baseline volume.",
+      "Calculate % inhibition of oedema: [(Oedema control − Oedema treated) / Oedema control] × 100.",
+      "Record all measurements and calculated values in the data sheet.",
+      "Clean the measuring cell with distilled water and 70% ethanol between animals."
     ],
     "precautions": [
-      "Ensure paw immersion consistency.",
-      "Clean between measurements.",
-      "Calibrate daily.",
-      "Handle mercury carefully if used."
+      "Maintain consistent immersion depth — use a permanent marker on the paw at the tibiotarsal junction for every measurement.",
+      "Ensure no air bubbles in the measuring cell — air bubbles give falsely low volume readings.",
+      "Use the same liquid (distilled water or saline) throughout one experiment — never mix.",
+      "Allow the liquid to reach room temperature equilibrium before the first measurement — temperature affects liquid volume.",
+      "Handle animals gently — struggling displaces water and gives inaccurate readings.",
+      "Calibrate at the start of each experimental session.",
+      "Follow CPCSEA and IAEC guidelines for care and use of laboratory animals."
     ]
   }
 }

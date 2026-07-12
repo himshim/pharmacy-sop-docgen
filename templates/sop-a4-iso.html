@@ -24,7 +24,7 @@
 <tr><td><strong>Document No.</strong></td><td>{{sopNumber}}</td></tr>
 {{/if}}
 
-{{#if revisionNo}}
+{{#if sectionRevisionNo}}
 <tr><td><strong>Revision No.</strong></td><td>{{revisionNo}}</td></tr>
 {{/if}}
 
@@ -35,6 +35,15 @@
 {{#if sectionRevisionDate}}
 <tr><td><strong>Revision Date</strong></td><td>{{revisionDate}}</td></tr>
 {{/if}}
+
+{{#if sectionIsoCalibration}}
+{{#if isoReferenceStandard}}
+<tr><td><strong>Reference Standards</strong></td><td>{{isoReferenceStandard}}</td></tr>
+{{/if}}
+{{#if isoToleranceLimit}}
+<tr><td><strong>Acceptable Tolerance</strong></td><td>{{isoToleranceLimit}}</td></tr>
+{{/if}}
+{{/if}}
 </table>
 </div>
 
@@ -42,7 +51,12 @@
 <p><strong>Institute:</strong> {{institute}}</p>
 <p><strong>Department:</strong> {{department}}</p>
 {{#if sectionSopNumber}}<p><strong>Document No.:</strong> {{sopNumber}}</p>{{/if}}
-{{#if revisionNo}}<p><strong>Revision No.:</strong> {{revisionNo}}</p>{{/if}}
+{{#if sectionRevisionNo}}<p><strong>Revision No.:</strong> {{revisionNo}}</p>{{/if}}
+
+{{#if sectionIsoCalibration}}
+{{#if isoReferenceStandard}}<p><strong>Reference Standards:</strong> {{isoReferenceStandard}}</p>{{/if}}
+{{#if isoToleranceLimit}}<p><strong>Acceptable Tolerance:</strong> {{isoToleranceLimit}}</p>{{/if}}
+{{/if}}
 </div>
 
 <hr>
@@ -66,8 +80,15 @@
   {{{precautions}}}
 </ol>
 
+{{#if sectionIsoCapa}}
+<h2>Corrective &amp; Preventive Action (CAPA)</h2>
+{{{isoCapaAction}}}
+{{/if}}
+
+{{#if sectionIsoRetention}}
 <h2>Records and Documentation</h2>
-<p>All records generated during execution of this procedure shall be maintained as per institutional record-retention practices.</p>
+{{{isoRecordRetentionClause}}}
+{{/if}}
 
 {{#if changeHistoryRows}}
 <h2>Revision History</h2>
@@ -81,7 +102,7 @@
 </table>
 {{/if}}
 
-<div class="keep-together approvals-block"></div>
+<div class="keep-together approvals-block">
 <h2 class="no-counter" style="margin-top:22pt;">Approvals</h2>
 
 <table style="width:100%; border-collapse:collapse; margin-top:12pt;">

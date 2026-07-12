@@ -1,20 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Moisture Analyzer"
+    "title": "Operation of Moisture Analyzer in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To determine moisture content by infrared drying.",
-    "scope": "Applicable to crude drugs.",
+    "purpose": "To rapidly determine the moisture content (loss on drying) of crude drug powders and herbal materials using a halogen or infrared moisture analyzer for pharmacopeial standardization.",
+    "scope": "Applicable to Pharmacognosy laboratory for quality control of crude drugs — moisture content is a mandatory IP/WHO parameter for drug standardization.",
     "procedure": [
-      "Tare pan.",
-      "Add sample.",
-      "Set program.",
-      "Start analysis."
+      "Switch on the moisture analyzer and allow it to warm up for at least 10 minutes.",
+      "Level the instrument using the built-in spirit level and adjusting feet.",
+      "Open the analyzer lid and clean the sample pan with a dry, lint-free cloth.",
+      "Tare the empty pan by pressing the 'Tare' button — display should show 0.00 g.",
+      "Set the drying temperature per pharmacopeial requirement: 100–105°C for most crude drugs; 60°C for volatile-containing drugs (e.g., peppermint, eucalyptus).",
+      "Select the drying mode: Auto-off recommended (stops when weight change < 1 mg per 30 s); time mode for non-standard determinations.",
+      "Grind or sieve the crude drug to 355–710 µm (40–25 mesh) for uniform sample exposure.",
+      "Spread 2–5 g of sample uniformly across the entire pan surface in a thin, even layer — do not pile in the centre.",
+      "Close the lid — the analyzer will begin heating automatically.",
+      "Monitor the real-time moisture percentage on the display.",
+      "At completion, record the final moisture content (%) displayed.",
+      "Open the lid carefully — use tongs as the pan is very hot (100–200°C).",
+      "Allow the pan to cool, then remove sample residue and clean.",
+      "Compare results against IP/BP/WHO limits for the specific drug.",
+      "Record: sample name, sample weight, temperature, time, and final moisture % in the logbook."
     ],
     "precautions": [
-      "Use dry pans.",
-      "Calibrate.",
-      "Avoid volatiles."
+      "The sample pan and shield are extremely hot during and immediately after analysis — use forceps.",
+      "Spread sample uniformly — mounded samples cause uneven drying and false low readings.",
+      "Do not use for strongly corrosive samples — they damage the heater and load cell.",
+      "Calibrate using a reference standard (e.g., calcium gluconate, sodium tartrate) as per manufacturer schedule.",
+      "Allow 5-minute cooling between successive runs for consistent temperature equilibration.",
+      "Store crude drug samples in sealed containers before analysis — moisture uptake from air falsifies pre-weigh values.",
+      "For hygroscopic drugs, work quickly — minimize the time between weighing and closing the lid."
     ]
   }
 }

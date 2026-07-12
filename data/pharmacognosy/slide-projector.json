@@ -1,18 +1,34 @@
 {
   "meta": {
-    "title": "Use of Slide Projector"
+    "title": "Operation of Slide Projector in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To project microscopical slides for teaching.",
-    "scope": "Applicable to practical classes.",
+    "purpose": "To project microscopic images of plant tissue slides, permanent slide sets, and photomicrographs for teaching, demonstration, and identification of crude drugs in Pharmacognosy practicals.",
+    "scope": "Applicable to Pharmacognosy laboratory for projecting prepared glass slides and photographic transparencies during demonstration sessions and practical examinations.",
     "procedure": [
-      "Load slide.",
-      "Focus projector.",
-      "Project image."
+      "Place the slide projector on a stable table at an appropriate distance from the projection screen (typically 2–4 meters for a standard classroom screen).",
+      "Connect the projector to the power supply and switch ON the cooling fan first if a separate switch exists.",
+      "Allow the lamp to warm up for 2–3 minutes before inserting slides.",
+      "Darken the room by closing curtains or switching off lights for maximum image clarity.",
+      "Insert the glass slide or photographic transparency into the slide carrier with the emulsion/image side facing the correct direction (test with a blank slide first).",
+      "Place the slide carrier into the projector gate.",
+      "Switch ON the projection lamp.",
+      "Adjust the focus using the focus ring until the projected image is sharp and clear.",
+      "Adjust the zoom if available to fit the image to the screen.",
+      "For sequential demonstration, advance through slides using the remote control or manual advance button.",
+      "After the session, switch OFF the projection lamp first and allow the cooling fan to run for 3–5 minutes before switching off completely.",
+      "Remove slides and store them carefully in their labelled slide boxes.",
+      "Cover the projector with its dust cover when not in use.",
+      "Log usage (date, operator, slides used) in the equipment log."
     ],
     "precautions": [
-      "Clean lenses.",
-      "Dark room."
+      "Never switch off the projector abruptly during operation — always switch the lamp off first and allow the fan to cool the lamp.",
+      "Do not look directly into the projection lens while the lamp is on — the light is intense and can cause eye injury.",
+      "Handle glass slides with care — cracked slides can shatter when heated by the projection lamp.",
+      "Ensure adequate ventilation around the projector — the lamp generates significant heat.",
+      "Replace projector lamps only when cool and using gloves — skin oils on bulb surface cause premature failure.",
+      "Store glass slides horizontally in their designated boxes to prevent slippage and breakage.",
+      "Do not place fingers on the optical elements (lens, condenser) — use only approved lens cleaning tissues."
     ]
   }
 }

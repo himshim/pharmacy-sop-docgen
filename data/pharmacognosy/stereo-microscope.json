@@ -1,19 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Stereo Microscope"
+    "title": "Operation of Stereo Microscope in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To examine surface features.",
-    "scope": "Applicable to macroscopy.",
+    "purpose": "To examine the external morphological features, surface texture, trichomes, and gross anatomical structures of crude drugs and plant materials under low magnification with three-dimensional depth perception.",
+    "scope": "Applicable to Pharmacognosy laboratory for macroscopic evaluation of plant parts, examination of powdered drugs, detection of adulteration, and study of fracture surfaces of crude drugs.",
     "procedure": [
-      "Place specimen.",
-      "Adjust magnification.",
-      "Focus.",
-      "Examine."
+      "Place the stereo microscope on a clean, stable, vibration-free surface and ensure the power supply is connected.",
+      "Switch on the illumination — select transmitted light (for thin sections, translucent specimens) or reflected/incident light (for opaque surfaces, whole drug material).",
+      "Adjust the light intensity using the rheostat/dimmer to provide even, comfortable illumination without glare.",
+      "Place the specimen directly on the stage or on a glass plate — for powders, spread a small quantity on a black or white card to contrast with the material.",
+      "Select the lowest magnification objective first (typically 7×–10×) to locate the area of interest.",
+      "Adjust the interpupillary distance of the eyepieces to match your eyes — the two circles of view should merge into one.",
+      "Focus the specimen using the coarse focus knob; refine with the fine focus knob.",
+      "Adjust the diopter on each eyepiece individually to correct for differences between your two eyes.",
+      "Move the specimen on the stage to explore different areas of the drug material.",
+      "Increase magnification (up to 40–45×) for detailed examination of surface features, glands, trichomes, and stomata.",
+      "For documentation, attach a camera or smartphone adapter and photograph significant features.",
+      "Record observations: colour, odour (smell separately), texture, fracture, surface features, and any adulterant detected.",
+      "After use, remove the specimen and clean the stage with a soft brush.",
+      "Switch off the illumination and cover the microscope with the dust cover.",
+      "Record usage in the equipment logbook."
     ],
     "precautions": [
-      "Clean lenses.",
-      "Stable table."
+      "Handle the microscope carefully — it is precision optical equipment; never use excessive force on focus knobs.",
+      "Clean the objective lenses and eyepieces only with lens paper or a soft lens cleaning cloth — never with regular tissue.",
+      "Do not use high illumination intensity for prolonged periods — it reduces lamp life and can heat delicate specimens.",
+      "Store the microscope covered to protect from dust when not in use.",
+      "Keep chemicals and liquids away from the stage and optical elements.",
+      "For sticky or oily specimens, use a clean glass plate on the stage and clean after each use.",
+      "Do not disassemble the objectives or eyepieces in the field — send for professional service if required."
     ]
   }
 }

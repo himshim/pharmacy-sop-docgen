@@ -1,20 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Reflux Condenser Assembly"
+    "title": "Use of Reflux Condenser Assembly in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To reflux extraction solvents.",
-    "scope": "Applicable to reflux extraction.",
+    "purpose": "To perform hot continuous extraction of phytochemicals from plant materials under reflux conditions, ensuring complete extraction of thermostable compounds without solvent loss.",
+    "scope": "Applicable to Pharmacognosy laboratory for hot extraction of alkaloids, glycosides, tannins, and other thermostable phytochemicals from crude drugs where simple maceration is insufficient.",
     "procedure": [
-      "Assemble apparatus.",
-      "Add solvent and material.",
-      "Heat and reflux.",
-      "Cool and collect."
+      "Assemble the reflux apparatus: place a round-bottom flask (250 mL or 500 mL) on a heating mantle or water bath; mount a Liebig condenser vertically above the flask using a clamp and retort stand.",
+      "Connect rubber tubing from the laboratory cold water supply to the lower inlet of the condenser jacket; connect outlet from the upper port to the sink drain.",
+      "Check all glass joints are clean and fit firmly — use a light application of Vaseline only if required for completely sealed operation.",
+      "Add the powdered or coarsely powdered drug material into the round-bottom flask.",
+      "Add the extraction solvent (typically 6–10× the weight of drug material): ethanol, methanol, water, or hydroalcoholic mixture as per requirement.",
+      "Turn on the cooling water supply to the condenser — confirm steady flow before heating.",
+      "Begin heating using the heating mantle or water bath — start at low heat and increase gradually.",
+      "As the solvent begins to boil, vapours rise, condense in the Liebig condenser, and drip back into the flask — this is reflux.",
+      "Maintain gentle reflux (solvent dripping back at 1–2 drops per second) for the required time: typically 1–3 hours.",
+      "Monitor the condenser — if vapours escape from the top, increase cooling water flow.",
+      "After the reflux period, allow the flask to cool to 60°C before stopping the cooling water.",
+      "Filter the warm extract through Whatman No. 1 filter paper in a Buchner funnel.",
+      "Collect the filtrate in a clean, labelled beaker; optionally reflux the marc (residue) with fresh solvent for a second extraction.",
+      "Concentrate the extract if required using a rotary vacuum evaporator.",
+      "Record: drug name, part used, solvent system, solvent volume, reflux time, temperature, and extract yield."
     ],
     "precautions": [
-      "Check joints.",
-      "Fume hood.",
-      "Boiling chips."
+      "Always start cooling water BEFORE heating begins — failure to do so allows solvent vapours to escape.",
+      "Never heat a completely sealed apparatus — pressure buildup causes explosion.",
+      "Use boiling chips (anti-bumping granules) to ensure smooth, even boiling and prevent bumping.",
+      "Ensure all glass joints are secure but not over-tightened — thermal expansion can crack tight joints.",
+      "Work in a fume hood for volatile and flammable organic solvents (methanol, ethanol, petroleum ether).",
+      "Do not add organic solvents to an already-hot flask — add solvents at room temperature before heating.",
+      "If a crack is noticed in the round-bottom flask during reflux, immediately reduce heat and discontinue."
     ]
   }
 }

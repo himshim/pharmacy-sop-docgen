@@ -1,20 +1,33 @@
 {
   "meta": {
-    "title": "Operation of Ultrasonic Bath"
+    "title": "Operation of Ultrasonic Bath in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To degas solvents and clean glassware.",
-    "scope": "Applicable to solvent preparation.",
+    "purpose": "To facilitate sonication-assisted extraction of bioactive compounds from plant materials, improve solubility of crude extracts, and degas solvents prior to HPLC or TLC analysis.",
+    "scope": "Applicable to Pharmacognosy laboratory for enhanced extraction of phytochemicals using acoustic cavitation, degassing of mobile phases, and cleaning of botanical extraction equipment.",
     "procedure": [
-      "Fill with water.",
-      "Place items.",
-      "Set time.",
-      "Rinse after."
+      "Fill the ultrasonic bath tank with tap water or distilled water to the minimum fill line — use distilled water for prolonged extraction work.",
+      "Set the operating temperature if required (room temperature to 40°C for most extraction work).",
+      "Switch on and allow the bath to reach temperature equilibration (5–10 minutes).",
+      "For solvent degassing: place the solvent bottle (cap loosened) or flask of solvent directly in the bath and run for 10–15 minutes.",
+      "For sonication-assisted extraction: place the plant material + solvent in a sealed conical flask or tube; submerge this vessel in the water bath — do not add plant material directly to the bath water.",
+      "Set the timer for the required sonication time: typically 20–45 minutes for plant extraction.",
+      "Switch on the transducers — confirm operation by the characteristic hissing sound and surface rippling.",
+      "Do not submerge open vessels containing volatile organic solvents directly — always seal or use indirect method.",
+      "Monitor temperature — prolonged sonication heats the bath; cool with ice if temperature-sensitive extraction.",
+      "After completion, switch off transducers and remove samples.",
+      "Filter extracts immediately using Whatman No. 1 filter paper or Buchner funnel.",
+      "Drain and rinse the bath with clean water after use; clean with dilute detergent weekly.",
+      "Record material, solvent system, sonication time, temperature, and yield in the laboratory logbook."
     ],
     "precautions": [
-      "No fragile glass.",
-      "No liquids.",
-      "Cover when not in use."
+      "Do not operate without water in the tank — dry running permanently damages the transducers.",
+      "Do not place bare hands in the bath during operation — cavitation causes tissue injury.",
+      "Do not use flammable solvents directly in the bath — always seal in a closed vessel and use water as the coupling medium.",
+      "Keep the liquid level above the minimum fill line throughout operation.",
+      "Do not use at maximum temperature for prolonged periods — overheating degrades the transducer bond.",
+      "Inspect the tank for pitting, corrosion, or cracks monthly — replace if degraded.",
+      "Replace tank water regularly — contaminated water reduces acoustic coupling efficiency."
     ]
   }
 }

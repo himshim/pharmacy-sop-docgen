@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Sample Receipt, Identification, and Labelling Procedure"
+  },
+  "sections": {
+    "purpose": "To establish a standardized procedure for receiving, uniquely identifying, labelling, and tracking all samples submitted to the pharmacy laboratory for analysis, ensuring chain of custody, traceability, and prevention of sample mix-up or confusion.",
+    "scope": "Applicable to all pharmacy laboratory departments that receive samples for analysis — including drug substance samples, formulated product samples, crude drug samples, environmental samples, and water quality samples.",
+    "procedure": [
+      "Receive the sample from the submitter along with a completed Sample Submission Form containing: sample name, batch/lot number, quantity, storage conditions, tests required, date of collection/manufacture, and submitter's name and contact.",
+      "Inspect the sample on receipt: verify the physical condition (container integrity, no leakage, no tampering), label information matches the submission form, and quantity is adequate for all specified tests.",
+      "Reject and return any sample that arrives in a damaged container, is inadequately labelled, or has a discrepancy with the submission form — document the reason for rejection.",
+      "Assign a unique Laboratory Sample Number (LSN) to every accepted sample: format — DEPT/YEAR/SEQUENTIAL (e.g., PA/2026/0047).",
+      "Record the sample in the Sample Receipt Register: LSN, date received, sample name, batch number, submitter name, tests requested, quantity received, and storage location assigned.",
+      "Apply a laboratory sample label to every container: LSN, sample name, batch/lot number, date received, storage condition, test(s) required, and assigned analyst.",
+      "Do not remove the original manufacturer/supplier label from the sample container — the laboratory label is applied in addition to, not instead of, the original label.",
+      "Assign the sample to the designated storage location based on its required storage condition: room temperature (15–25°C), refrigerator (2–8°C), or freezer (−20°C); record location in the Sample Receipt Register.",
+      "Assign the sample to the appropriate analyst and note the assignment date in the register.",
+      "The analyst acknowledges receipt of the sample by signing the register.",
+      "Track the sample through all analysis stages: sample login → analysis → reporting → archival/disposal.",
+      "After completion of analysis, retain a portion of the sample (retain sample) in a sealed, labelled container for a minimum of one year or per applicable specification — store in the designated retain sample area.",
+      "Document the final disposal of samples in the register when they are discarded as per the waste disposal SOP.",
+      "Review the Sample Receipt Register monthly for samples that have been pending analysis beyond the specified turnaround time."
+    ],
+    "precautions": [
+      "Never analyse an unlabelled or inadequately identified sample — rejection and re-submission is mandatory.",
+      "Maintain unique laboratory sample numbers — duplicate numbers cause catastrophic sample mix-up and reporting errors.",
+      "Do not share sample containers between different tests unless the original container volume is adequate and sub-sampling is documented.",
+      "Handle all samples with appropriate PPE — assume all samples are potentially hazardous until the hazard class is confirmed.",
+      "Chain of custody must be unbroken — every transfer of a sample (from reception to analyst to storage) must be documented with date, time, and signature.",
+      "For legal, medico-legal, or dispute samples: maintain photographic evidence of sample condition on receipt; seal with tamper-evident tape; two-person verification of receipt.",
+      "Retain sample areas must be locked and access restricted to authorized personnel only."
+    ]
+  }
+}

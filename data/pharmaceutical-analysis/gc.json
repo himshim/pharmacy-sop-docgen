@@ -1,19 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Gas Chromatography System"
+    "title": "Operation of Gas Chromatograph (GC) in Pharmaceutical Analysis Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Gas Chromatography system.",
-    "scope": "Applicable to analysis of volatile compounds in Pharmaceutical Analysis laboratory.",
+    "purpose": "To separate, identify, and quantify volatile components of pharmaceutical preparations including residual solvents, essential oils, and volatile impurities as per pharmacopeial methods (IP, BP, USP).",
+    "scope": "Applicable to Pharmaceutical Analysis laboratory for residual solvent testing (ICH Q3C), essential oil profiling, purity determination of volatile pharmaceutical compounds, and verification of solvent identity.",
     "procedure": [
-      "Switch ON the gas supply and GC system.",
-      "Set oven temperature and detector parameters.",
-      "Allow the system to stabilize.",
-      "Prepare and inject the sample using microsyringe.",
-      "Record the chromatogram.",
-      "Analyze retention times and peak areas.",
-      "After analysis, shut down the system as per guidelines."
+      "Switch on the GC system (injector, column oven, detector) and allow the system to warm up with carrier gas flowing for a minimum of 30 minutes.",
+      "Set carrier gas (helium or nitrogen) flow rate as per the method: typically 1–2 mL/min for capillary columns.",
+      "Set injector temperature (typically 200–250°C for most pharmaceutical applications); set detector temperature 20–30°C above the highest column temperature.",
+      "Set the oven temperature program per the validated method (e.g., isothermal at 40°C, or programmed ramp for multi-component separations).",
+      "Allow the system to reach the set temperatures and stabilize (typically 20–30 minutes).",
+      "Establish a stable baseline on the chromatogram display — a drifting baseline indicates system instability or column bleed.",
+      "Prepare the sample solution as per the validated method: dissolve in the specified solvent (e.g., DMF, water, headspace vial for headspace GC).",
+      "Inject the reference standard solution first: use a clean 10 µL microsyringe; inject 1–2 µL through the septum with a rapid plunger push.",
+      "Verify the standard chromatogram: retention time and peak area should match previous validated runs.",
+      "Inject the sample solution using the same volume and technique.",
+      "Record the chromatogram; note retention times and peak areas for all peaks.",
+      "Calculate results: for residual solvents — compare sample peak area against standard; apply ICH Q3C limits.",
+      "Clean the microsyringe with 5 injections of the injection solvent between standard and sample.",
+      "After analysis, set the oven to standby temperature (30°C); allow to cool before shutting down; turn off carrier gas last.",
+      "Record all parameters, sample IDs, run numbers, and results in the analytical register."
     ],
-    "precautions": "Ensure proper gas flow. Handle syringes carefully to avoid injury."
+    "precautions": [
+      "Always establish stable baseline before injecting samples — an unstable baseline causes integration errors.",
+      "Handle microsyringes with extreme care — the needle is very fine and bends easily; never discard in regular trash.",
+      "Replace the septum regularly — a cored or damaged septum causes air leaks and ghost peaks.",
+      "Purge the column with carrier gas before and after each batch to remove contaminating residues.",
+      "Do not allow the column temperature to exceed the maximum rated temperature — column stationary phase bleeds at high temperatures.",
+      "Verify detector sensitivity daily using a check standard.",
+      "For flammable carrier gases (hydrogen), ensure proper gas leak testing before lighting the detector."
+    ]
   }
 }

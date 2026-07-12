@@ -1,19 +1,34 @@
 {
   "meta": {
-    "title": "Operation of UV–Visible Spectrophotometer"
+    "title": "Operation of UV-Visible Spectrophotometer in Pharmaceutical Analysis Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the UV–Visible Spectrophotometer for quantitative analysis.",
-    "scope": "Applicable to Pharmaceutical Analysis laboratory.",
+    "purpose": "To quantitatively determine the concentration of pharmaceutical compounds by measuring their absorbance of UV or visible radiation, for assay, purity testing, dissolution testing, and stability evaluation as per pharmacopeial methods.",
+    "scope": "Applicable to Pharmaceutical Analysis laboratory for all spectrophotometric analyses including drug assay, identification by UV spectrum, colorimetric methods, and optical density measurements for dissolution profiles.",
     "procedure": [
-      "Switch ON the instrument and allow sufficient warm-up time.",
-      "Select the required wavelength or wavelength range.",
-      "Prepare blank and sample solutions as per experiment.",
-      "Place the blank solution in the cuvette holder and set baseline.",
-      "Replace blank with sample solution.",
-      "Measure absorbance or transmittance.",
-      "Record the readings for further calculations."
+      "Switch on the UV-Vis spectrophotometer and allow a minimum 20–30 minute warm-up for deuterium and tungsten lamp stabilization.",
+      "Set the required wavelength: UV range (200–400 nm) for aromatic compounds; visible range (400–800 nm) for coloured solutions or after colour development.",
+      "Select measurement mode: Absorbance (A) for standard quantitative analysis; Transmittance (%T) if required by method.",
+      "Select the correct cuvette: Quartz cuvettes for UV range (below 340 nm); glass or disposable plastic cuvettes for visible range (above 340 nm).",
+      "Prepare the blank solution (solvent or reagent without analyte) and the standard/sample solutions as per the validated method.",
+      "Rinse the cuvette 2–3 times with the blank solution before filling for the blank reading.",
+      "Fill the cuvette 3/4 full with blank, wipe exterior with lens paper, and insert into the reference beam (or sample compartment for single-beam instruments); press 'Zero/Blank' to set baseline.",
+      "Replace blank with the standard solution, wipe exterior, and measure absorbance. Verify it matches the expected value.",
+      "Measure sample solutions in sequence; wipe exterior of cuvette before each reading.",
+      "Read the absorbance value when the display stabilizes.",
+      "Calculate concentration using Beer-Lambert Law: A = εcl, or use a calibration curve constructed from standard solutions.",
+      "Rinse cuvettes with distilled water after organic solvents; with 1% HNO₃ after metal-containing solutions; then 3× distilled water.",
+      "Scan the full UV spectrum (200–400 nm) for drug identity confirmation and λmax verification.",
+      "Record all wavelengths, absorbance values, dilution factors, and calculated results in the analytical record."
     ],
-    "precautions": "Use clean cuvettes. Avoid fingerprints on optical surfaces. Handle samples carefully."
+    "precautions": [
+      "Allow full 20–30 minute warm-up — readings taken before lamp stabilization are inaccurate and drift continuously.",
+      "Use quartz cuvettes for all measurements below 340 nm — glass absorbs UV and gives erroneously high absorbance.",
+      "Keep absorbance in the linear range (0.1–1.0 AU) for Beer-Lambert law compliance — dilute samples as needed.",
+      "Clean cuvette exterior with lens paper only — fingerprints absorb UV and cause errors.",
+      "Re-blank the instrument after changing wavelengths significantly (> 50 nm shift).",
+      "Do not measure strongly coloured solutions without confirming the appropriate wavelength — measuring at the wrong wavelength gives no signal.",
+      "Calibrate wavelength accuracy regularly using holmium oxide filter or certified wavelength standards."
+    ]
   }
 }

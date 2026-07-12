@@ -1,21 +1,33 @@
 {
   "meta": {
-    "title": "Operation of Magnetic Stirrer"
+    "title": "Operation of Magnetic Stirrer in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To mix extraction solvents and solutions without contamination.",
-    "scope": "Applicable to liquid handling in Pharmacognosy.",
+    "purpose": "To provide controlled, continuous magnetic stirring for dissolving crude drug extracts, preparing reagent solutions, and maintaining homogeneity of liquid mixtures during phytochemical analyses.",
+    "scope": "Applicable to Pharmacognosy laboratory for all operations requiring continuous liquid mixing without mechanical contact, including preparation of extraction solvents, colour development assays, and standard solutions.",
     "procedure": [
-      "Place beaker on plate.",
-      "Add stir bar.",
-      "Set speed.",
-      "Monitor mixing.",
-      "Remove stir bar with retriever."
+      "Place the magnetic stirrer on a stable, level bench surface.",
+      "Select an appropriate PTFE-coated magnetic stir bar (flea) of size proportional to the vessel: small flea for test tubes and small beakers; larger flea for 250–1000 mL flasks.",
+      "Drop the stir bar gently into the vessel containing the liquid to be stirred.",
+      "Place the vessel centrally on the magnetic stirrer plate.",
+      "Connect the stirrer to the power supply and switch on.",
+      "Slowly increase the speed using the speed control knob from zero upward — rapid acceleration can cause the stir bar to spin eccentrically and 'jump'.",
+      "Set the optimal stirring speed: slow (50–100 RPM) for gentle mixing of fragile precipitates; medium (200–400 RPM) for dissolving solids; high (500–700 RPM) for vigorous mixing.",
+      "Observe the vortex formation — a slight vortex is acceptable; a deep vortex introduces air bubbles which interfere with optical measurements.",
+      "Allow stirring for the required duration.",
+      "After use, reduce speed to zero before switching off — abrupt stopping can cause the stir bar to fly off.",
+      "Use a stir bar retriever (magnetic wand) to remove the stir bar from the vessel.",
+      "Rinse the stir bar with distilled water and appropriate solvent, then store.",
+      "Wipe the stirrer plate clean of spills — never immerse the stirrer unit in liquid."
     ],
     "precautions": [
-      "Avoid overheating liquids.",
-      "Keep dry.",
-      "Use PTFE stir bars."
+      "Do not use a magnetic stirrer with strong oxidizing acids (aqua regia, fuming acids) — the PTFE stir bar is resistant but the plate and housing may corrode.",
+      "Do not exceed the rated stirring capacity of the unit — over-speed causes erratic bar movement ('bar dancing').",
+      "If the stir bar 'dances' erratically, reduce speed immediately, remove, and restart from zero.",
+      "Do not use magnetic stirrers with ferrous metallic vessels or near strong permanent magnets.",
+      "For heating combined with stirring (hot plate-stirrer): monitor temperature separately with a calibrated thermometer — the plate temperature reading alone is not the actual solution temperature.",
+      "Ensure the vessel is secure — a wobbling, clamp-free vessel can be dislodged by the stirring action.",
+      "Clean the stirrer plate after each use — spilled chemicals corrode the plate surface."
     ]
   }
 }

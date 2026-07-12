@@ -115,43 +115,30 @@ window.initSOPApp = function () {
   // ════════════════════════════════════════════════════════════════
   const TemplateModule = {
     render(templateStr, data) {
-      if (!templateStr) return "";
-      let html = templateStr;
-
-      // Conditional Blocks: {{#if key}}...{{/if}}
-      html = html.replace(
-        /\{\{#if ([^}]+)\}\}([\s\S]*?)\{\{\/if\}\}/g,
-        (match, key, content) => {
-          const val = data[key];
-          const isTruthy =
-            val &&
-            (Array.isArray(val) ? val.length > 0 : String(val).trim() !== "");
-          return isTruthy ? content : "";
-        }
-      );
-
-      // Variable Replacement: {{key}}
-      Object.keys(data).forEach((key) => {
-        let value = data[key];
-        if (value === undefined || value === null) value = "";
-
-        if (typeof value === "string") {
-          const isRichText = ["procedure", "precautions", "changeHistoryRows"].includes(key);
-          if (!isRichText && /[<>]/.test(value)) {
-            value = UtilsModule.escapeHtml(value);
-          }
-        }
-
-        const regex = new RegExp(`{{${key}}}`, "g");
-        html = html.replace(regex, value);
-      });
-
-      return html.replace(/\{\{[^}]+\}\}/g, "");
+      if (typeof window.renderTemplate === "function") {
+        return window.renderTemplate(templateStr, data);
+      }
+      return templateStr;
     },
 
     formatProcedure(procArray) {
       if (!Array.isArray(procArray)) return "";
-      return procArray.map((step) => `<li>${step}</li>`).join("");
+      return procArray
+        .map(
+          (step, idx) =>
+            `<li contenteditable="true" data-key="procedure" data-index="${idx}" data-placeholder="[Enter step]">${step}</li>`
+        )
+        .join("");
+    },
+
+    formatPrecautions(precArray) {
+      if (!Array.isArray(precArray)) return "";
+      return precArray
+        .map(
+          (step, idx) =>
+            `<li contenteditable="true" data-key="precautions" data-index="${idx}" data-placeholder="[Enter precaution]">${step}</li>`
+        )
+        .join("");
     },
 
     formatHistory(histArray) {
@@ -238,253 +225,325 @@ window.initSOPApp = function () {
       }
     },
 
-   // ────── 2. PDF EXPORT (DESKTOP BUG FIXED – FINAL) ──────
-async exportPDF(filename) {
-  if (!this.hasContent()) {
-    alert("❌ No content to export. Please generate a document first.");
-    return;
-  }
-
-  if (typeof html2pdf === "undefined") {
-    UtilsModule.error("❌ html2pdf library not found");
-    return this.showLibraryMissingError("html2pdf");
-  }
-
-  try {
-    UtilsModule.log("📄 Generating PDF...");
-
-    const previewElement = this.getPreviewElement();
-
-    // ✅ ENTER PDF RENDER MODE
-    document.body.classList.add("pdf-export");
-
-    /* =====================================================
-       STEP 2: CONDITIONAL PAGE BREAK (WORD-LIKE BEHAVIOR)
-       ===================================================== */
-    const approvals = previewElement.querySelector("#approvals-block");
-    if (approvals) {
-      const PAGE_HEIGHT_PX = 1122; // A4 @ ~96 DPI
-      const rect = approvals.getBoundingClientRect();
-      const remaining = PAGE_HEIGHT_PX - rect.top;
-
-      // If heading + table cannot fit → move both
-      if (rect.height > remaining) {
-        const breaker = document.createElement("div");
-        breaker.className = "page-break";
-        approvals.parentNode.insertBefore(breaker, approvals);
+    // ────── 2. PDF EXPORT (DIRECT VECTOR RENDER - pdfmake) ──────
+    async exportPDF(filename) {
+      if (!this.hasContent()) {
+        alert("❌ No content to export. Please generate a document first.");
+        return;
       }
-    }
-    /* ================= END STEP 2 ================= */
 
-    const options = {
-      margin: [0, 10, 10, 10],
-      filename: filename || "SOP_Document.pdf",
-
-      image: { type: "jpeg", quality: 0.98 },
-
-      html2canvas: {
-        scale: this.CONFIG.PDF_SCALE,
-        backgroundColor: "#ffffff",
-        useCORS: true,
-        allowTaint: true,
-        letterRendering: false,
-      },
-
-      jsPDF: {
-        unit: "mm",
-        format: this.CONFIG.PDF_FORMAT,
-        orientation: "portrait",
-        compress: true,
-      },
-
-      pagebreak: {
-        mode: ["avoid-all", "css", "legacy"],
-        after: ".page-break",
-      },
-    };
-
-    await html2pdf().set(options).from(previewElement).save();
-
-    UtilsModule.log("✅ PDF exported successfully");
-    alert("✅ PDF saved successfully!");
-
-  } catch (error) {
-    UtilsModule.error("❌ PDF export failed:", error);
-    alert(`❌ PDF export failed: ${error.message}`);
-  } finally {
-    document.body.classList.remove("pdf-export");
-  }
-},
-
-
-
-// ────── 3. WORD EXPORT (PATCHED – DUAL LAYOUT SAFE) ──────
-async exportDOCX(filename) {
-  if (!this.hasContent()) {
-    alert("❌ No content to export. Please generate a document first.");
-    return;
-  }
-
-  if (typeof htmlDocx === "undefined") {
-    UtilsModule.error("❌ html-docx-js library not found");
-    return this.showLibraryMissingError("html-docx-js");
-  }
-
-  if (typeof saveAs === "undefined") {
-    UtilsModule.error("❌ FileSaver.js library not found");
-    return this.showLibraryMissingError("FileSaver");
-  }
-
-  try {
-    UtilsModule.log("📝 Generating DOCX...");
-
-    const sourceElement = this.getPreviewElement();
-    const clonedElement = sourceElement.cloneNode(true);
-
-    /* =====================================================
-       FIX #2 (UNCHANGED): Inject numbers into h2 headings
-       ===================================================== */
-    const headings = clonedElement.querySelectorAll("h2");
-    headings.forEach((heading, index) => {
-      const text = heading.textContent.trim();
-      if (!/^\d+\./.test(text)) {
-        heading.textContent = `${index + 1}. ${text}`;
+      if (typeof pdfMake === "undefined") {
+        UtilsModule.error("❌ pdfmake library not found");
+        return this.showLibraryMissingError("pdfmake");
       }
-    });
 
-    let htmlContent = clonedElement.innerHTML;
+      try {
+        UtilsModule.log("📄 Generating Vector PDF...");
+        const previewElement = this.getPreviewElement();
 
-    const tempDiv = document.createElement("div");
-    tempDiv.innerHTML = htmlContent;
+        // Helper to parse formatting runs (bold/italic)
+        const parseTextRunsForPdf = (element) => {
+          const runs = [];
+          element.childNodes.forEach((child) => {
+            if (child.nodeType === Node.TEXT_NODE) {
+              runs.push(child.textContent);
+            } else if (child.nodeType === Node.ELEMENT_NODE) {
+              const tag = child.tagName.toLowerCase();
+              const run = { text: child.textContent };
+              if (tag === "b" || tag === "strong") run.bold = true;
+              if (tag === "i" || tag === "em") run.italic = true;
+              runs.push(run);
+            }
+          });
+          return runs.length > 0 ? runs : element.textContent.trim();
+        };
 
-    /* Remove UI-only elements (UNCHANGED) */
-    tempDiv
-     .querySelectorAll(
-      ".toolbar-buttons, .action-bar, .no-print, .ui-controls, .page-break-indicator"
-     )
-     .forEach((el) => el.remove());
+        const compileHtmlToPdfMake = (rootEl) => {
+          const docDefinition = {
+            content: [],
+            styles: {
+              header: { fontSize: 16, bold: true, alignment: 'center', margin: [0, 0, 0, 12] },
+              subheader: { fontSize: 12, bold: true, margin: [0, 12, 0, 4] },
+              heading3: { fontSize: 10, bold: true, margin: [0, 8, 0, 2] },
+              paragraph: { fontSize: 10.5, margin: [0, 0, 0, 6], leading: 1.3, alignment: 'justify' },
+              list: { fontSize: 10.5, margin: [8, 0, 0, 4], leading: 1.25 },
+              tableHeader: { bold: true, fontSize: 10, fillColor: '#1e293b', color: '#ffffff', margin: [4, 4, 4, 4] },
+              tableCell: { fontSize: 9.5, margin: [4, 4, 4, 4] }
+            },
+            defaultStyle: {
+              fontSize: 10.5
+            }
+          };
 
-     /* ✅ DOCX FIX: remove document info table completely */
-    tempDiv
-     .querySelectorAll(".doc-control-table")
-     .forEach(el => el.remove());
+          const parseNode = (node) => {
+            if (node.nodeType === Node.TEXT_NODE) {
+              const text = node.textContent.trim();
+              if (text.length > 0) {
+                docDefinition.content.push({ text: text, style: 'paragraph' });
+              }
+              return;
+            }
+            if (node.nodeType !== Node.ELEMENT_NODE) return;
+            if (node.classList.contains("doc-control-text") || 
+                node.classList.contains("page-break-indicator") ||
+                node.style.display === "none") {
+              return;
+            }
+            const tag = node.tagName.toLowerCase();
 
+            if (tag === "h1") {
+              docDefinition.content.push({ text: parseTextRunsForPdf(node), style: 'header' });
+            } else if (tag === "h2") {
+              const isBreak = node.classList.contains("page-break-before") || node.previousElementSibling?.classList.contains("page-break-before");
+              docDefinition.content.push({ 
+                text: node.textContent.trim(), 
+                style: 'subheader', 
+                pageBreak: isBreak ? 'before' : undefined 
+              });
+            } else if (tag === "h3") {
+              docDefinition.content.push({ text: node.textContent.trim(), style: 'heading3' });
+            } else if (tag === "p") {
+              docDefinition.content.push({ text: parseTextRunsForPdf(node), style: 'paragraph' });
+            } else if (tag === "hr") {
+              docDefinition.content.push({
+                canvas: [{ type: 'line', x1: 0, y1: 5, x2: 515, y2: 5, lineWidth: 0.5, strokeColor: '#cbd5e0' }]
+              });
+            } else if (tag === "ol" || tag === "ul") {
+              const listItems = [];
+              node.querySelectorAll("li").forEach(li => {
+                listItems.push({ text: parseTextRunsForPdf(li) });
+              });
+              if (tag === "ol") {
+                docDefinition.content.push({ ol: listItems, style: 'list' });
+              } else {
+                docDefinition.content.push({ ul: listItems, style: 'list' });
+              }
+            } else if (tag === "table") {
+              const tableData = [];
+              const rows = node.querySelectorAll("tr");
+              rows.forEach((tr) => {
+                const rowData = [];
+                const cells = tr.querySelectorAll("th, td");
+                cells.forEach((cell) => {
+                  const isHeader = cell.tagName.toLowerCase() === "th";
+                  const colSpan = parseInt(cell.getAttribute("colspan") || 1);
+                  
+                  const cellData = {
+                    text: parseTextRunsForPdf(cell),
+                    style: isHeader ? 'tableHeader' : 'tableCell'
+                  };
+                  if (colSpan > 1) cellData.colSpan = colSpan;
+                  rowData.push(cellData);
+                  
+                  for (let i = 1; i < colSpan; i++) {
+                    rowData.push({});
+                  }
+                });
+                tableData.push(rowData);
+              });
 
-    /* =====================================================
-       DOCX PATCH: WRAP CONTENT FOR DUAL LAYOUT
-       ===================================================== */
-    const docxWrapper = document.createElement("div");
-    docxWrapper.className = "docx-export";
+              if (tableData.length > 0) {
+                const colCount = tableData[0].length;
+                const widths = Array(colCount).fill('*');
+                if (colCount === 2) {
+                  widths[0] = 130;
+                }
+                docDefinition.content.push({
+                  table: {
+                    headerRows: node.querySelector("thead") ? 1 : 0,
+                    widths: widths,
+                    body: tableData
+                  },
+                  layout: {
+                    hLineWidth: function (i, node) {
+                      return 0.5;
+                    },
+                    vLineWidth: function (i) {
+                      return 0;
+                    },
+                    hLineColor: function (i, node) {
+                      return (i === 0 || i === 1) ? '#0f172a' : '#cbd5e0';
+                    }
+                  },
+                  margin: [0, 4, 0, 8]
+                });
+              }
+            } else if (tag === "div") {
+              node.childNodes.forEach(child => parseNode(child));
+            }
+          };
 
-    while (tempDiv.firstChild) {
-      docxWrapper.appendChild(tempDiv.firstChild);
-    }
-    tempDiv.appendChild(docxWrapper);
+          rootEl.childNodes.forEach(node => parseNode(node));
+          return docDefinition;
+        };
 
-    /* =====================================================
-       FINAL WORD HTML (PATCHED STYLE ONLY)
-       ===================================================== */
-    const wordDoc = `<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta charset="UTF-8">
-<style>
-  * { margin: 0; padding: 0; }
+        const docDefinition = compileHtmlToPdfMake(previewElement);
+        pdfMake.createPdf(docDefinition).download(filename || "SOP_Document.pdf");
+        UtilsModule.log("✅ Vector PDF exported successfully");
+        alert("✅ PDF saved successfully (Vector Format)!");
+      } catch (error) {
+        UtilsModule.error("❌ PDF export failed:", error);
+        alert(`❌ PDF export failed: ${error.message}`);
+      }
+    },
 
-  body {
-    font-family: ${this.CONFIG.WORD_FONT_FAMILY};
-    font-size: ${this.CONFIG.WORD_FONT_SIZE};
-    line-height: 1.5;
-    color: #333;
-  }
+    // ────── 3. WORD EXPORT (NATIVE DOCX BUILDER - docx.js) ──────
+    async exportDOCX(filename) {
+      if (!this.hasContent()) {
+        alert("❌ No content to export. Please generate a document first.");
+        return;
+      }
 
-  h1, h2, h3, h4 {
-    margin-top: 12pt;
-    margin-bottom: 6pt;
-    font-weight: bold;
-  }
+      if (typeof window.docx === "undefined") {
+        UtilsModule.error("❌ docx.js library not found");
+        return this.showLibraryMissingError("docx");
+      }
 
-  h1 { font-size: 16pt; }
-  h2 { font-size: 14pt; }
-  h3 { font-size: 13pt; }
+      if (typeof saveAs === "undefined") {
+        UtilsModule.error("❌ FileSaver.js library not found");
+        return this.showLibraryMissingError("FileSaver");
+      }
 
-  p {
-    margin-bottom: 6pt;
-    text-align: justify;
-  }
+      try {
+        UtilsModule.log("📝 Generating Native DOCX...");
+        const previewElement = this.getPreviewElement();
 
-  ul, ol {
-    margin-left: 20pt;
-    margin-bottom: 6pt;
-  }
+        const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, HeadingLevel } = window.docx;
+        const children = [];
 
-  li {
-    margin-bottom: 4pt;
-  }
+        // Helper to parse formatting runs (bold/italic)
+        const parseTextRunsForDocx = (element, isHeader = false) => {
+          const runs = [];
+          element.childNodes.forEach((child) => {
+            if (child.nodeType === Node.TEXT_NODE) {
+              runs.push(new TextRun({ 
+                text: child.textContent, 
+                size: 22, 
+                font: "Times New Roman", 
+                color: isHeader ? "FFFFFF" : undefined 
+              }));
+            } else if (child.nodeType === Node.ELEMENT_NODE) {
+              const tag = child.tagName.toLowerCase();
+              const isBold = tag === "b" || tag === "strong";
+              const isItalic = tag === "i" || tag === "em";
+              runs.push(new TextRun({
+                text: child.textContent,
+                bold: isBold || isHeader,
+                italics: isItalic,
+                size: 22,
+                font: "Times New Roman",
+                color: isHeader ? "FFFFFF" : undefined
+              }));
+            }
+          });
+          return runs.length > 0 ? runs : [new TextRun({ 
+            text: element.textContent.trim(), 
+            size: 22, 
+            font: "Times New Roman", 
+            color: isHeader ? "FFFFFF" : undefined,
+            bold: isHeader 
+          })];
+        };
 
-  strong { font-weight: bold; }
+        const parseNode = (node) => {
+          if (node.nodeType !== Node.ELEMENT_NODE) return;
+          const tag = node.tagName.toLowerCase();
 
-  /* ================= DOCX DUAL LAYOUT ================= */
+          if (tag === "h1") {
+            children.push(new Paragraph({
+              children: [new TextRun({ text: node.textContent.trim(), bold: true, size: 28, font: "Times New Roman" })],
+              spacing: { before: 240, after: 120 },
+              alignment: "center"
+            }));
+          } else if (tag === "h2") {
+            const isBreak = node.classList.contains("page-break-before") || node.previousElementSibling?.classList.contains("page-break-before");
+            children.push(new Paragraph({
+              children: [new TextRun({ text: node.textContent.trim(), bold: true, size: 24, font: "Times New Roman" })],
+              spacing: { before: 200, after: 100 },
+              pageBreakBefore: isBreak ? true : undefined
+            }));
+          } else if (tag === "h3") {
+            children.push(new Paragraph({
+              children: [new TextRun({ text: node.textContent.trim(), bold: true, size: 22, font: "Times New Roman" })],
+              spacing: { before: 160, after: 80 }
+            }));
+          } else if (tag === "p") {
+            children.push(new Paragraph({
+              children: parseTextRunsForDocx(node),
+              spacing: { after: 120 }
+            }));
+          } else if (tag === "ol" || tag === "ul") {
+            node.querySelectorAll("li").forEach((li, idx) => {
+              children.push(new Paragraph({
+                children: parseTextRunsForDocx(li),
+                bullet: tag === "ul" ? { level: 0 } : undefined,
+                numbering: tag === "ol" ? { reference: "decimal", level: 0 } : undefined,
+                spacing: { after: 80 }
+              }));
+            });
+          } else if (tag === "table") {
+            const rows = [];
+            node.querySelectorAll("tr").forEach((tr) => {
+              const cells = [];
+              tr.querySelectorAll("th, td").forEach((cell) => {
+                const isHeader = cell.tagName.toLowerCase() === "th";
+                const colSpan = parseInt(cell.getAttribute("colspan") || 1);
+                
+                cells.push(new TableCell({
+                  children: [new Paragraph({
+                    children: parseTextRunsForDocx(cell, isHeader),
+                    spacing: { before: 80, after: 80 }
+                  })],
+                  columnSpan: colSpan > 1 ? colSpan : undefined,
+                  shading: isHeader ? { fill: "1E293B" } : undefined
+                }));
+              });
+              rows.push(new TableRow({ children: cells }));
+            });
 
-  /* Hide problematic tables */
-  .docx-export .doc-control-table,
-  .docx-export .change-history-table {
-    display: none !important;
-  }
+            if (rows.length > 0) {
+              children.push(new Table({
+                rows: rows,
+                width: { size: 100, type: WidthType.PERCENTAGE },
+                borders: {
+                  top: { style: BorderStyle.SINGLE, size: 4, color: "CBD5E0" },
+                  bottom: { style: BorderStyle.SINGLE, size: 4, color: "CBD5E0" },
+                  left: { style: BorderStyle.NONE },
+                  right: { style: BorderStyle.NONE },
+                  insideHorizontal: { style: BorderStyle.SINGLE, size: 4, color: "CBD5E0" },
+                  insideVertical: { style: BorderStyle.NONE }
+                }
+              }));
+              children.push(new Paragraph({ spacing: { after: 120 } }));
+            }
+          } else if (tag === "div") {
+            node.childNodes.forEach(child => parseNode(child));
+          }
+        };
 
-  /* Show Word-friendly text blocks */
-  .docx-export .doc-control-text,
-  .docx-export .change-history-text {
-    display: block !important;
-  }
+        previewElement.childNodes.forEach(node => parseNode(node));
 
-  /* Keep signature table only */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 10pt 0;
-  }
+        const doc = new Document({
+          sections: [{
+            properties: {},
+            children: children
+          }]
+        });
 
-  table, td, th {
-    border: 1px solid #000;
-  }
-
-  th, td {
-    padding: 4pt;
-    text-align: left;
-    vertical-align: top;
-  }
-</style>
-</head>
-<body>
-  ${tempDiv.innerHTML}
-</body>
-</html>`;
-
-    const blob = htmlDocx.asBlob(wordDoc, {
-      orientation: "portrait",
-      margins: { top: 720, right: 720, bottom: 720, left: 720 },
-    });
-
-    saveAs(blob, filename || "SOP_Document.docx");
-    UtilsModule.log("✅ DOCX exported successfully");
-    alert("✅ Word document saved successfully!");
-  } catch (error) {
-    UtilsModule.error("❌ DOCX export failed:", error);
-    alert(
-      `❌ Word export failed: ${error.message}\n\nTry using PDF export instead.`
-    );
-  }
-},
+        const blob = await Packer.toBlob(doc);
+        saveAs(blob, filename || "SOP_Document.docx");
+        UtilsModule.log("✅ DOCX exported successfully");
+        alert("✅ Word document saved successfully (Native Format)!");
+      } catch (error) {
+        UtilsModule.error("❌ DOCX export failed:", error);
+        alert(`❌ Word export failed: ${error.message}`);
+      }
+    },
 
     showLibraryMissingError(libName) {
       const message = `❌ Missing Library: ${libName}
-
-To use this feature, add these scripts to your index.html <head>:
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html-docx-js/0.3.9/html-docx.min.js"></script>`;
+      
+To use this feature, make sure the scripts are loaded in your index.html.`;
       alert(message);
     },
   };
@@ -503,6 +562,8 @@ To use this feature, add these scripts to your index.html <head>:
         tmplSelect: UtilsModule.$("templateSelect"),
         printBtn: UtilsModule.$("browser-print-btn"),
         pdfBtn: UtilsModule.$("print-btn"),
+        zoomToggleBtn: UtilsModule.$("zoom-toggle-btn"),
+        uploader: UtilsModule.$("uploadSopJson"),
       };
 
       // DYNAMIC BUTTON: DOCX Export
@@ -556,6 +617,30 @@ To use this feature, add these scripts to your index.html <head>:
       approvedBy: "approvedBy",
       approvedDesig: "approvedDesig",
       approvedDate: "approvedDate",
+      // PCI
+      pciCourseCode: "pciCourseCode",
+      pciExperimentRef: "pciExperimentRef",
+      pciLabCategory: "pciLabCategory",
+      pciDocumentationClause: "pciDocumentationClause",
+      // NAAC
+      naacAssetPage: "naacAssetPage",
+      naacLedgerId: "naacLedgerId",
+      naacLogbookRef: "naacLogbookRef",
+      naacAmcRef: "naacAmcRef",
+      naacCalibrationCert: "naacCalibrationCert",
+      naacWasteProtocol: "naacWasteProtocol",
+      naacReviewClause: "naacReviewClause",
+      // ISO
+      isoReferenceStandard: "isoReferenceStandard",
+      isoToleranceLimit: "isoToleranceLimit",
+      isoCapaAction: "isoCapaAction",
+      isoRecordRetentionClause: "isoRecordRetentionClause",
+      // GMP
+      gmpSupersedesId: "gmpSupersedesId",
+      gmpLineClearance: "gmpLineClearance",
+      gmpCleaningProtocol: "gmpCleaningProtocol",
+      gmpOosDirective: "gmpOosDirective",
+      gmpDataIntegrityStamp: "gmpDataIntegrityStamp",
     },
 
     toggleMap: {
@@ -566,9 +651,27 @@ To use this feature, add these scripts to your index.html <head>:
       toggleAnnexures: "annexures",
       toggleChangeHistory: "changeHistory",
       toggleSopNumber: "sopNumber",
+      toggleRevisionNo: "revisionNo",
       toggleEffectiveDate: "effectiveDate",
       toggleRevisionDate: "revisionDate",
+      toggleNextReviewDate: "nextReviewDate",
       toggleCopyType: "copyType",
+      // PCI
+      togglePciDetails: "pciDetails",
+      togglePciDocumentation: "pciDocumentation",
+      // NAAC
+      toggleNaacDetails: "naacDetails",
+      toggleNaacWaste: "naacWaste",
+      toggleNaacReview: "naacReview",
+      // ISO
+      toggleIsoCalibration: "isoCalibration",
+      toggleIsoCapa: "isoCapa",
+      toggleIsoRetention: "isoRetention",
+      // GMP
+      toggleGmpClearance: "gmpClearance",
+      toggleGmpCleaning: "gmpCleaning",
+      toggleGmpOos: "gmpOos",
+      toggleGmpFootnote: "gmpFootnote",
     },
 
     populateDepartments(list) {
@@ -628,8 +731,10 @@ To use this feature, add these scripts to your index.html <head>:
         // Handle individual field visibility
         const fieldIds = [
           "sopNumber",
+          "revisionNo",
           "effectiveDate",
           "revisionDate",
+          "nextReviewDate",
           "copyType",
         ];
         if (fieldIds.includes(key)) {
@@ -654,6 +759,10 @@ To use this feature, add these scripts to your index.html <head>:
       sopData: null,
       templateName: "sop-a4-classic",
       debounce: null,
+      isExpertMode: false,
+      isZoomedIn: false,
+      activeInlineKey: null,
+      activeInlineIndex: null,
     },
 
     async init() {
@@ -690,6 +799,12 @@ To use this feature, add these scripts to your index.html <head>:
         );
 
         this.bindEvents();
+        window.addEventListener("resize", () => {
+          if (window.innerWidth < 1024) {
+            this.refreshPreview();
+          }
+        });
+        this.updateSidebarVisibility();
         UtilsModule.log("✅ SOP Generator initialized successfully");
       } catch (e) {
         UtilsModule.error("❌ CRITICAL ERROR loading departments:", e);
@@ -759,11 +874,51 @@ To use this feature, add these scripts to your index.html <head>:
         });
       }
 
+      // Dynamic File Upload
+      if (UIModule.elements.uploader) {
+        UIModule.elements.uploader.addEventListener("change", (e) => {
+          const file = e.target.files[0];
+          if (!file) return;
+
+          const reader = new FileReader();
+          reader.onload = async (event) => {
+            try {
+              const data = JSON.parse(event.target.result);
+              
+              // Reset Selectors
+              if (UIModule.elements.deptSelect) UIModule.elements.deptSelect.value = "";
+              if (UIModule.elements.sopSelect) {
+                UIModule.elements.sopSelect.innerHTML = '<option value="">[Custom SOP]</option>';
+                UIModule.elements.sopSelect.value = "";
+                UIModule.elements.sopSelect.disabled = true;
+              }
+
+              await this.loadSOP(null, null, data);
+              UtilsModule.log("✅ Custom SOP uploaded and loaded successfully");
+            } catch (err) {
+              UtilsModule.error("Failed to parse uploaded JSON:", err);
+              alert(`Failed to load JSON file: ${err.message}`);
+            }
+          };
+          reader.readAsText(file);
+        });
+      }
+
       // Template Selection
       if (UIModule.elements.tmplSelect) {
         UIModule.elements.tmplSelect.addEventListener("change", (e) => {
           this.state.templateName = e.target.value;
+          this.updateSidebarVisibility();
           this.refreshPreview();
+        });
+      }
+
+      // Expert Mode Toggle Selection
+      const expertModeToggle = UtilsModule.$("expertModeToggle");
+      if (expertModeToggle) {
+        expertModeToggle.addEventListener("change", (e) => {
+          this.state.isExpertMode = e.target.checked;
+          this.updateSidebarVisibility();
         });
       }
 
@@ -788,6 +943,19 @@ To use this feature, add these scripts to your index.html <head>:
         UIModule.elements.printBtn.addEventListener("click", () =>
           ExportModule.print()
         );
+      }
+
+      // Zoom Toggle Button
+      if (UIModule.elements.zoomToggleBtn) {
+        UIModule.elements.zoomToggleBtn.addEventListener("click", () => {
+          this.state.isZoomedIn = !this.state.isZoomedIn;
+          if (this.state.isZoomedIn) {
+            UIModule.elements.zoomToggleBtn.innerHTML = "🔍 Fit Screen";
+          } else {
+            UIModule.elements.zoomToggleBtn.innerHTML = "🔍 Zoom 100%";
+          }
+          this.refreshPreview();
+        });
       }
 
       // PDF Button
@@ -823,51 +991,347 @@ To use this feature, add these scripts to your index.html <head>:
           UIModule.elements.docxBtn.disabled = false;
         });
       }
+
+      // ════════════════════════════════════════════════════════════════
+      // WYSIWYG INTERACTIVE INLINE EDITOR & TWO-WAY SYNC
+      // ════════════════════════════════════════════════════════════════
+      
+      // Create global Action Bar dynamically if it doesn't exist
+      if (!document.getElementById("wysiwyg-action-bar")) {
+        const bar = document.createElement("div");
+        bar.id = "wysiwyg-action-bar";
+        bar.innerHTML = `
+          <button class="wysiwyg-action-btn btn-add" title="Add Step Below">➕</button>
+          <button class="wysiwyg-action-btn btn-delete" title="Delete Step">🗑️</button>
+        `;
+        document.body.appendChild(bar);
+
+        // Bind clicks on Action Bar
+        bar.querySelector(".btn-add").addEventListener("mousedown", (e) => {
+          e.preventDefault(); // Prevent focusout triggers
+          const key = this.state.activeInlineKey;
+          const idx = parseInt(this.state.activeInlineIndex);
+          if (key && !isNaN(idx)) {
+            const arr = this.state.sopData[key];
+            if (Array.isArray(arr)) {
+              arr.splice(idx + 1, 0, "New step");
+              this.refreshPreview(true);
+              bar.classList.remove("active");
+              
+              // Focus the newly added step
+              setTimeout(() => {
+                const newLi = document.querySelector(`#preview [data-key="${key}"][data-index="${idx + 1}"]`);
+                if (newLi) {
+                  newLi.focus();
+                  // Move text caret to the end
+                  const range = document.createRange();
+                  const sel = window.getSelection();
+                  range.selectNodeContents(newLi);
+                  range.collapse(false);
+                  sel.removeAllRanges();
+                  sel.addRange(range);
+                }
+              }, 150);
+            }
+          }
+        });
+
+        bar.querySelector(".btn-delete").addEventListener("mousedown", (e) => {
+          e.preventDefault(); // Prevent focusout triggers
+          const key = this.state.activeInlineKey;
+          const idx = parseInt(this.state.activeInlineIndex);
+          if (key && !isNaN(idx)) {
+            const arr = this.state.sopData[key];
+            if (Array.isArray(arr)) {
+              arr.splice(idx, 1);
+              if (arr.length === 0) arr.push("New step");
+              this.refreshPreview(true);
+              bar.classList.remove("active");
+            }
+          }
+        });
+      }
+
+      const previewElement = ExportModule.getPreviewElement();
+      if (previewElement) {
+        // 1. Two-way data sync on inline input
+        previewElement.addEventListener("input", (e) => {
+          const target = e.target;
+          if (target && target.hasAttribute("contenteditable")) {
+            const key = target.getAttribute("data-key");
+            const index = target.getAttribute("data-index");
+            
+            let val = target.textContent;
+            if (target.classList.contains("wysiwyg-block")) {
+              val = target.innerHTML;
+            }
+
+            if (key === "procedure") {
+              const idx = parseInt(index);
+              if (this.state.sopData.procedure) {
+                this.state.sopData.procedure[idx] = val;
+              }
+            } else if (key === "precautions") {
+              const idx = parseInt(index);
+              if (this.state.sopData.precautions) {
+                this.state.sopData.precautions[idx] = val;
+              }
+            } else {
+              this.state.sopData[key] = val;
+            }
+
+            // Sync back to sidebar inputs in real time
+            const sidebarEl = UtilsModule.$(key);
+            if (sidebarEl) {
+              sidebarEl.value = val;
+            }
+          }
+        });
+
+        // 2. Full re-render on focusout (applies formatting & sanitization)
+        previewElement.addEventListener("focusout", (e) => {
+          const target = e.target;
+          if (target && target.hasAttribute("contenteditable")) {
+            setTimeout(() => {
+              // Hide action bar if we clicked outside
+              const active = document.activeElement;
+              const isActionClick = active && (active.closest("#wysiwyg-action-bar") || active.classList.contains("wysiwyg-action-btn"));
+              if (!isActionClick) {
+                document.getElementById("wysiwyg-action-bar").classList.remove("active");
+                this.refreshPreview();
+              }
+            }, 200);
+          }
+        });
+
+        // 3. Focus tracking to position Touch Actions Bar (Add/Delete Steps)
+        const showActionBar = (target) => {
+          const key = target.getAttribute("data-key");
+          const index = target.getAttribute("data-index");
+          
+          if ((key === "procedure" || key === "precautions") && index !== null) {
+            this.state.activeInlineKey = key;
+            this.state.activeInlineIndex = index;
+
+            const bar = document.getElementById("wysiwyg-action-bar");
+            const rect = target.getBoundingClientRect();
+            
+            // Absolute positioning (accounting for body scroll)
+            const top = rect.top + window.scrollY;
+            const left = rect.left + rect.width / 2 + window.scrollX;
+
+            bar.style.top = `${top}px`;
+            bar.style.left = `${left}px`;
+            bar.classList.add("active");
+          } else {
+            document.getElementById("wysiwyg-action-bar").classList.remove("active");
+          }
+        };
+
+        previewElement.addEventListener("focusin", (e) => {
+          const target = e.target;
+          if (target && target.hasAttribute("contenteditable")) {
+            showActionBar(target);
+          }
+        });
+
+        previewElement.addEventListener("click", (e) => {
+          const target = e.target;
+          if (target && target.hasAttribute("contenteditable")) {
+            showActionBar(target);
+          }
+        });
+      }
     },
 
-    async loadSOP(dept, sopId) {
+    async loadSOP(dept, sopId, customSopObject = null) {
       try {
-        UtilsModule.log(`📄 Loading SOP: ${dept}/${sopId}`);
-        const raw = await DataModule.getSOP(dept, sopId);
+        let raw;
+        if (customSopObject) {
+          UtilsModule.log(`📄 Loading custom uploaded SOP...`);
+          raw = customSopObject;
+        } else {
+          UtilsModule.log(`📄 Loading SOP: ${dept}/${sopId}`);
+          raw = await DataModule.getSOP(dept, sopId);
+        }
+
+        // Validate JSON Structure
+        if (!raw) {
+          throw new Error("SOP data is empty or invalid JSON.");
+        }
+        const title = raw.meta?.title || raw.title || "";
+        const purpose = raw.sections?.purpose || raw.purpose || "";
+        const procedure = raw.sections?.procedure || raw.procedure || [];
+        
+        if (!title.trim()) {
+          throw new Error("SOP JSON is missing 'meta.title' or 'title' field.");
+        }
+        if (!purpose.trim()) {
+          throw new Error("SOP JSON is missing 'sections.purpose' or 'purpose' field.");
+        }
+        if (!Array.isArray(procedure) || procedure.length === 0) {
+          throw new Error("SOP JSON is missing 'sections.procedure' or 'procedure' array, or it is empty.");
+        }
+
+        const rawSections = raw.sections || raw;
 
         this.state.sopData = {
           ...raw,
-          title: raw.meta?.title || raw.title || "",
-          department: dept,
-          sopNumber: "",
-          revisionNo: "00",
-          effectiveDate: "",
-          revisionDate: "",
-          nextReviewDate: "",
-          copyType: "CONTROLLED",
-          responsibility: ConfigModule.DEFAULTS.RESPONSIBILITY,
+          title: title,
+          department: dept || raw.department || "General",
+          sopNumber: raw.sopNumber || "",
+          revisionNo: raw.revisionNo || "",
+          effectiveDate: raw.effectiveDate || "",
+          revisionDate: raw.revisionDate || "",
+          nextReviewDate: raw.nextReviewDate || "",
+          copyType: raw.copyType || "CONTROLLED",
+          responsibility: rawSections.responsibility || ConfigModule.DEFAULTS.RESPONSIBILITY,
           sectionsEnabled: {
             docControl: true,
-            applicability: false,
-            abbreviations: false,
-            references: false,
-            annexures: false,
-            changeHistory: false,
+            applicability: !!rawSections.applicability,
+            abbreviations: !!rawSections.abbreviations,
+            references: !!rawSections.references,
+            annexures: !!rawSections.annexures,
+            changeHistory: !!(raw.changeHistory && raw.changeHistory.length > 0),
             sopNumber: true,
+            revisionNo: true,
             effectiveDate: true,
             revisionDate: true,
+            nextReviewDate: true,
             copyType: true,
+            
+            // Professional Template Sections
+            definitions: !!rawSections.definitions,
+            materials: !!(rawSections.materials || rawSections.equipment || rawSections.reagents || rawSections.glassware),
+            equipment: !!rawSections.equipment,
+            reagents: !!rawSections.reagents,
+            glassware: !!rawSections.glassware,
+            safety: !!(rawSections.safety || rawSections.ppe || rawSections.precautions || rawSections.hazards),
+            ppe: !!rawSections.ppe,
+            hazards: !!rawSections.hazards,
+            preparation: !!rawSections.preparation,
+            calculations: !!rawSections.calculations,
+            postOperation: !!rawSections.postOperation,
+            dataRecording: !!rawSections.dataRecording,
+            records: !!rawSections.records,
+            acceptanceCriteria: !!rawSections.acceptanceCriteria,
+            troubleshooting: !!rawSections.troubleshooting,
+            maintenance: !!rawSections.maintenance,
+            calibration: !!rawSections.calibration,
+            qualityControl: !!rawSections.qualityControl,
+            deviations: !!rawSections.deviations,
+            training: !!rawSections.training,
+            trainingRecords: !!rawSections.trainingRecords,
+            environmental: !!rawSections.environmental,
+            wasteDisposal: !!rawSections.wasteDisposal,
+            distribution: !!rawSections.distribution,
+
+            // New compliance sections (toggled ON by default if the respective template uses them)
+            pciDetails: true,
+            pciDocumentation: true,
+            naacDetails: true,
+            naacWaste: true,
+            naacReview: true,
+            isoCalibration: true,
+            isoCapa: true,
+            isoRetention: true,
+            gmpClearance: true,
+            gmpCleaning: true,
+            gmpOos: true,
+            gmpFootnote: true,
           },
 
           fieldsEnabled: {
             sopNumber: true,
+            revisionNo: true,
             effectiveDate: true,
             revisionDate: true,
+            nextReviewDate: true,
             copyType: true,
           },
-          procedure: raw.sections?.procedure || raw.procedure || [],
-          purpose: raw.sections?.purpose || raw.purpose || "",
-          scope: raw.sections?.scope || raw.scope || "",
-          precautions: raw.sections?.precautions || raw.precautions || "",
+          procedure: procedure,
+          purpose: purpose,
+          scope: rawSections.scope || "",
+          precautions: rawSections.precautions || [],
+
+          // Additional Professional fields
+          location: raw.location || "",
+          category: raw.category || "",
+          applicableDepartments: raw.applicableDepartments || "",
+          supersedes: raw.supersedes || "",
+          responsibilityRows: rawSections.responsibilityRows || "",
+          definitionsRows: rawSections.definitionsRows || "",
+          equipmentRows: rawSections.equipmentRows || "",
+          reagentsRows: rawSections.reagentsRows || "",
+          glasswareList: rawSections.glasswareList || "",
+          ppeList: rawSections.ppeList || "",
+          hazardsRows: rawSections.hazardsRows || "",
+          preparationSteps: rawSections.preparationSteps || "",
+          calculationsFormula: rawSections.calculations || "",
+          postOperationSteps: rawSections.postOperationSteps || "",
+          recordsRows: rawSections.recordsRows || "",
+          acceptanceCriteriaRows: rawSections.acceptanceCriteriaRows || "",
+          troubleshootingRows: rawSections.troubleshootingRows || "",
+          maintenanceRows: rawSections.maintenanceRows || "",
+          calibrationInfo: rawSections.calibration || "",
+          qcChecksRows: rawSections.qcChecksRows || "",
+          deviationHandling: rawSections.deviationHandling || "",
+          trainingRequirements: rawSections.trainingRequirements || "",
+          environmentalRows: rawSections.environmentalRows || "",
+          wasteDisposalInfo: rawSections.wasteDisposal || "",
+          distributionRows: rawSections.distributionRows || "",
+          preparedBy: raw.preparedBy || "",
+          preparedDesig: raw.preparedDesig || "",
+          preparedDate: raw.preparedDate || "",
+          preparedDept: raw.preparedDept || "",
+          checkedBy: raw.checkedBy || "",
+          checkedDesig: raw.checkedDesig || "",
+          checkedDate: raw.checkedDate || "",
+          checkedDept: raw.checkedDept || "",
+          approvedBy: raw.approvedBy || "",
+          approvedDesig: raw.approvedDesig || "",
+          approvedDate: raw.approvedDate || "",
+          approvedDept: raw.approvedDept || "",
+          reviewedBy: raw.reviewedBy || "",
+          reviewedDesig: raw.reviewedDesig || "",
+          reviewedDate: raw.reviewedDate || "",
+          reviewedDept: raw.reviewedDept || "",
+          approvedByQA: raw.approvedByQA || "",
+          approvedDesigQA: raw.approvedDesigQA || "",
+          approvedDateQA: raw.approvedDateQA || "",
+          approvedByMgmt: raw.approvedByMgmt || "",
+          approvedDesigMgmt: raw.approvedDesigMgmt || "",
+          approvedDateMgmt: raw.approvedDateMgmt || "",
+
+          // Pre-filled dynamically editable compliance content
+          pciCourseCode: raw.pciCourseCode || "",
+          pciExperimentRef: raw.pciExperimentRef || "",
+          pciLabCategory: raw.pciLabCategory || "",
+          pciDocumentationClause: raw.pciDocumentationClause || "All activities performed under this SOP shall be appropriately documented in the practical registry and retained for inspection and syllabus compliance verification by the Pharmacy Council of India.",
+          
+          naacAssetPage: raw.naacAssetPage || "",
+          naacLedgerId: raw.naacLedgerId || "",
+          naacLogbookRef: raw.naacLogbookRef || "",
+          naacAmcRef: raw.naacAmcRef || "",
+          naacCalibrationCert: raw.naacCalibrationCert || "",
+          naacWasteProtocol: raw.naacWasteProtocol || "Disinfect microbial media by autoclaving at 121°C for 20 minutes before disposal. Chemical residues and acidic/basic solutions must be neutralized to pH 6-8 and diluted with excess water before draining. Solid waste must be segregated into color-coded NAAC waste containers.",
+          naacReviewClause: raw.naacReviewClause || "This SOP shall be reviewed annually by the Academic Quality Assurance Cell (IQAC) to align with infrastructure updates, student utilization metrics, and NAAC accreditation criteria.",
+
+          isoReferenceStandard: raw.isoReferenceStandard || "",
+          isoToleranceLimit: raw.isoToleranceLimit || "",
+          isoCapaAction: raw.isoCapaAction || "If instrument calibration values drift beyond the acceptable tolerance limit, immediately suspend student analysis, label the instrument 'OUT OF CALIBRATION', and initiate a CAPA (Corrective and Preventive Action) report.",
+          isoRecordRetentionClause: raw.isoRecordRetentionClause || "All analytical data sheets, calibration certificates, and raw records generated during this procedure must be archived and retained for a minimum period of 5 years as per ISO 17025 record-retention policy.",
+
+          gmpSupersedesId: raw.gmpSupersedesId || "",
+          gmpLineClearance: raw.gmpLineClearance || "1. Verify that the work area is free of any previous products, raw materials, or labels.\n2. Confirm that the instrument and surrounding bench are clean and dry.\n3. Check that the calibration label is current and valid.",
+          gmpCleaningProtocol: raw.gmpCleaningProtocol || "1. Switch off and disconnect the power supply.\n2. Wipe the external surfaces and parts with a lint-free cloth moistened with 70% Isopropyl Alcohol (IPA).\n3. Allow surfaces to air dry fully. Attach 'CLEANED' status tag.",
+          gmpOosDirective: raw.gmpOosDirective || "In the event of a calibration failure or measurement out-of-specification (OOS), immediately halt work, apply an 'OUT OF SERVICE' label, and report the occurrence to the QA Department. Initiate an OOS investigation form.",
+          gmpDataIntegrityStamp: raw.gmpDataIntegrityStamp || "This is a GMP controlled document. Any printout is considered an uncontrolled copy and is valid for reference only. Daily execution must comply with ALCOA+ data integrity rules.",
         };
 
         UIModule.syncInputs(this.state.sopData);
         UIModule.syncToggles(this.state.sopData);
+        this.updateSidebarVisibility();
         await this.refreshPreview();
 
         UtilsModule.log("✅ SOP loaded successfully");
@@ -901,8 +1365,10 @@ To use this feature, add these scripts to your index.html <head>:
       // Handle Field Visibility
       const fieldIds = [
         "sopNumber",
+        "revisionNo",
         "effectiveDate",
         "revisionDate",
+        "nextReviewDate",
         "copyType",
       ];
       if (fieldIds.includes(key)) {
@@ -934,22 +1400,70 @@ To use this feature, add these scripts to your index.html <head>:
       this.state.debounce = setTimeout(() => this.refreshPreview(), 50);
     },
 
-    async refreshPreview() {
+    updateSidebarVisibility() {
+      const templateName = this.state.templateName;
+      const isExpert = this.state.isExpertMode;
+
+      // Define compliance mappings: which group classes are visible in which template
+      const templateGroups = {
+        "sop-a4-classic": [],
+        "sop-a4-pci": ["pci"],
+        "sop-a4-naac": ["naac"],
+        "sop-a4-iso": ["iso"],
+        "sop-a4-master-professional": ["gmp"]
+      };
+
+      const activeGroups = templateGroups[templateName] || [];
+
+      // Update compliance inputs section wrappers
+      const sections = ["pci", "naac", "iso", "gmp"];
+      let hasAnyVisible = false;
+
+      sections.forEach(group => {
+        const isVisible = isExpert || activeGroups.includes(group);
+        if (isVisible) hasAnyVisible = true;
+
+        // Toggle input section
+        const inputBlocks = document.querySelectorAll(`.compliance-section.group-${group}`);
+        inputBlocks.forEach(el => {
+          el.style.display = isVisible ? "block" : "none";
+        });
+
+        // Toggle visibility switch item
+        const toggleItems = document.querySelectorAll(`.toggle-item.group-${group}`);
+        toggleItems.forEach(el => {
+          el.style.display = isVisible ? "flex" : "none";
+        });
+      });
+
+      // Toggle the parent card container
+      const parentCard = UtilsModule.$("sectionInspection");
+      if (parentCard) {
+        parentCard.style.display = hasAnyVisible ? "block" : "none";
+      }
+    },
+
+    async refreshPreview(force = false) {
       if (!this.state.sopData) return;
+
+      const activeEl = document.activeElement;
+      if (!force && activeEl && activeEl.hasAttribute("contenteditable")) {
+        UtilsModule.log("🔍 Skipping refreshPreview: User is typing inline");
+        return;
+      }
 
       try {
         const tmpl = await DataModule.fetchTemplate(this.state.templateName);
         const viewData = { ...this.state.sopData };
 
         viewData.procedure = TemplateModule.formatProcedure(viewData.procedure);
-        viewData.precautions = TemplateModule.formatProcedure(viewData.precautions);
+        viewData.precautions = TemplateModule.formatPrecautions(viewData.precautions);
         viewData.changeHistoryRows = TemplateModule.formatHistory(
           viewData.changeHistory
         );
 
-        // ✅ ADD THIS BLOCK HERE ↓↓↓
         // Smart format other fields if they're strings
-        ["precautions", "responsibility"].forEach((key) => {
+        ["precautions", "responsibility", "gmpLineClearance", "gmpCleaningProtocol"].forEach((key) => {
           if (
             typeof viewData[key] === "string" &&
             viewData[key].includes("\n")
@@ -968,6 +1482,13 @@ To use this feature, add these scripts to your index.html <head>:
           "abbreviations",
           "references",
           "annexures",
+          "pciDocumentationClause",
+          "naacWasteProtocol",
+          "naacReviewClause",
+          "isoCapaAction",
+          "isoRecordRetentionClause",
+          "gmpOosDirective",
+          "gmpDataIntegrityStamp",
         ].forEach((key) => {
           if (
             typeof viewData[key] === "string" &&
@@ -979,7 +1500,6 @@ To use this feature, add these scripts to your index.html <head>:
             );
           }
         });
-        // ✅ END OF NEW CODE ↑↑↑
 
         if (viewData.sectionsEnabled) {
           Object.keys(viewData.sectionsEnabled).forEach((k) => {
@@ -1001,6 +1521,31 @@ To use this feature, add these scripts to your index.html <head>:
         html = html.replace(/\{\s*([^{}]+?)\s*\}/g, "$1");
 
         UIModule.renderPreview(html);
+
+        // Dynamic Scale Calculation on mobile devices (< 1024px width)
+        const preview = UtilsModule.$("preview");
+        const wrapper = UtilsModule.$("preview-wrapper");
+        if (preview && wrapper) {
+          if (window.innerWidth < 1024 && !this.state.isZoomedIn) {
+            const wrapperWidth = wrapper.offsetWidth;
+            const targetWidth = 794; // A4 width at 96 dpi
+            const scale = Math.max(0.1, (wrapperWidth - 16) / targetWidth);
+
+            preview.style.transform = `scale(${scale})`;
+            preview.style.transformOrigin = "top center";
+
+            // Recalculate negative margin-bottom dynamically after DOM layout is ready
+            setTimeout(() => {
+              const previewHeight = preview.offsetHeight;
+              preview.style.marginBottom = `-${previewHeight * (1 - scale)}px`;
+            }, 50);
+          } else {
+            // Reset for desktop view or when Zoomed In
+            preview.style.transform = "";
+            preview.style.transformOrigin = "";
+            preview.style.marginBottom = "";
+          }
+        }
       } catch (e) {
         UtilsModule.error("Failed to refresh preview:", e);
       }

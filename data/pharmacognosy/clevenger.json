@@ -1,19 +1,36 @@
 {
   "meta": {
-    "title": "Operation of Clevenger Apparatus"
+    "title": "Operation of Clevenger Apparatus in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for isolation of volatile oils using a Clevenger apparatus.",
-    "scope": "Applicable to volatile oil estimation in the Pharmacognosy laboratory.",
+    "purpose": "To determine the volatile oil content of crude drugs by hydro-distillation using a Clevenger apparatus as per Indian Pharmacopoeia (IP) and WHO monograph requirements for essential oil-bearing crude drugs.",
+    "scope": "Applicable to Pharmacognosy laboratory for quantitative determination of volatile oil in aromatic crude drugs such as clove, coriander, fennel, cardamom, eucalyptus, and peppermint.",
     "procedure": [
-      "Assemble the Clevenger apparatus correctly.",
-      "Place the plant material and water in the distillation flask.",
-      "Heat the assembly gently.",
-      "Allow distillation to proceed for the specified time.",
-      "Collect the condensed oil in the graduated arm.",
-      "Measure the volume of volatile oil obtained.",
-      "After completion, switch OFF heating and dismantle the apparatus."
+      "Weigh accurately 20–50 g of coarsely powdered crude drug (as specified in the IP monograph) and place in a 1 L round-bottom flask.",
+      "Add 300–500 mL of distilled water to the flask — the drug material should be well submerged.",
+      "Add boiling chips (anti-bumping granules) to the flask.",
+      "Connect the Clevenger apparatus to the flask: attach the distillation tube to the flask neck; connect the reflux condenser on top.",
+      "Fill the graduated tube of the Clevenger apparatus with distilled water using a small funnel until water just overflows into the flask — this ensures no air pockets.",
+      "Connect the condenser cooling water supply (inlet at bottom, outlet at top) and confirm steady flow.",
+      "Heat the flask using a heating mantle (preferred) or sand bath — begin heating slowly.",
+      "Bring to a gentle boil — steam carries volatile oil vapours through the apparatus.",
+      "Condensed water and oil collect in the graduated tube: oils lighter than water float above; oils heavier than water (e.g., clove) sink below.",
+      "Maintain distillation for the time specified in the monograph (typically 3–4 hours from the first drop of distillate).",
+      "After the required time, reduce heat and allow to cool for 30 minutes.",
+      "Read the volume of oil collected in the graduated tube to the nearest 0.05 mL.",
+      "Calculate the % volatile oil content: % v/w = (Volume of oil / Weight of drug) × 100.",
+      "Compare with IP/WHO specified limits for the crude drug.",
+      "Record: drug name, weight, distillation time, volume of oil, and % content in the logbook.",
+      "Clean the Clevenger apparatus with acetone, then water; dry thoroughly before storing."
     ],
-    "precautions": "Avoid excessive heating. Handle glassware carefully to prevent breakage."
+    "precautions": [
+      "Use only distilled water — tap water mineral content interferes with measurement.",
+      "Ensure all glass joints are airtight — volatile oil losses from joints give falsely low results.",
+      "Do not heat too vigorously — violent boiling causes bumping and physical carry-over of plant material into the graduated tube.",
+      "Ensure coolant water flows throughout — stopping coolant allows uncondensed vapours to escape.",
+      "For oils denser than water: use the modified Clevenger apparatus for heavy oils or use a small volume of xylene to float the oil for reading.",
+      "Allow adequate cooling before reading the oil volume — hot oil is less dense and gives an artificially high volume reading.",
+      "Work in a well-ventilated area — aromatic vapours can cause headache with prolonged exposure."
+    ]
   }
 }

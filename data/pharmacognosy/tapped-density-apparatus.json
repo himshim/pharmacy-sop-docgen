@@ -1,19 +1,36 @@
 {
   "meta": {
-    "title": "Operation of Tapped Density Apparatus"
+    "title": "Operation of Tapped Density Apparatus in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To determine tapped density.",
-    "scope": "Applicable to powder characterization.",
+    "purpose": "To determine the tapped density and Carr's Index (compressibility index) of powdered crude drugs to assess powder flow characteristics and predict behavior during encapsulation or tableting.",
+    "scope": "Applicable to Pharmacognosy laboratory for standardization of powdered crude drugs as per Indian Pharmacopoeia (IP) and WHO guidelines on crude drug quality assessment.",
     "procedure": [
-      "Fill cylinder.",
-      "Tap 1250 times.",
-      "Measure volume.",
-      "Calculate."
+      "Ensure the tapped density apparatus is clean, dry, and properly calibrated.",
+      "Weigh the empty graduated measuring cylinder (100 mL) and record the weight (W₁).",
+      "Pass the drug powder through a 1000 µm (No. 18) sieve to break agglomerates without compressing the powder.",
+      "Carefully pour the sieved powder into the graduated measuring cylinder without compacting — fill to approximately 100 mL or as per method.",
+      "Level the powder surface gently with a spatula — avoid pressing down.",
+      "Record the initial volume (V₀) — this is used to calculate bulk density: Bulk density = Mass / V₀.",
+      "Place the cylinder on the tapped density apparatus and set the number of taps to 500 (or as per the method: IP recommends 100, 500, 1250 taps).",
+      "Start the machine — it will mechanically tap the cylinder at a fixed rate (typically 250 ± 15 taps per minute, 14 ± 2 mm drop height).",
+      "After 500 taps, record the volume (V₅₀₀).",
+      "Continue tapping to 1250 taps and record the volume (V₁₂₅₀).",
+      "If the difference between V₅₀₀ and V₁₂₅₀ is less than 2 mL, use V₅₀₀ as the tapped volume (Vₜ).",
+      "If the difference is greater than 2 mL, continue tapping in increments of 1250 taps until constant volume is achieved.",
+      "Weigh the cylinder with powder (W₂); calculate mass of powder = W₂ − W₁.",
+      "Calculate: Tapped density = Mass / Vₜ; Carr's Index (%) = [(Vₜ − V₀) / Vₜ] × 100.",
+      "Interpret Carr's Index: <15% = excellent flow; 15–25% = acceptable; >35% = very poor flow.",
+      "Record all values in the practical register with drug name, batch, and calculated indices."
     ],
     "precautions": [
-      "Consistent tapping.",
-      "Clean."
+      "Do not compress or compact the powder during filling — this artificially inflates bulk density.",
+      "Ensure the cylinder is clean and dry before each determination — residual moisture or previous drug residue alters results.",
+      "Check the drop height (14 ± 2 mm) and tap rate (250 ± 15 taps/min) as per apparatus specification.",
+      "Calibrate the tapped density apparatus regularly using standard reference powder (e.g., microcrystalline cellulose).",
+      "Allow the cylinder to cool to room temperature if used previously for a different run.",
+      "Use the same cylinder throughout the experiment — different cylinders have different weights and calibrations.",
+      "Wear a dust mask when working with fine powders."
     ]
   }
 }

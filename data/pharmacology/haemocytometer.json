@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Operation of Haemocytometer"
+  },
+  "sections": {
+    "purpose": "To count blood cells (RBC, WBC) or microbial cells accurately using a Neubauer haemocytometer as per standard pharmacological and clinical practices.",
+    "scope": "Applicable to Pharmacology laboratory for blood cell counting experiments and clinical pharmacology practicals.",
+    "procedure": [
+      "Clean the haemocytometer chamber and coverslip thoroughly with 70% ethanol and wipe dry with lens paper.",
+      "Place the coverslip over the counting chamber and press gently until Newton's rings are visible at the edges.",
+      "Prepare blood dilution as per requirement: for RBC count dilute 1:200 with Hayem's solution; for WBC count dilute 1:20 with Turk's fluid.",
+      "Mix the diluted sample thoroughly by rotating the mixing vial for 2 minutes.",
+      "Discard the first 3–4 drops from the pipette tip.",
+      "Touch the tip of the pipette to the edge of the coverslip and allow the chamber to fill by capillary action — do not overfill.",
+      "Allow the cells to settle for 2–3 minutes before counting.",
+      "Place the haemocytometer under the microscope and focus using low power (10×), then switch to high power (40×) for counting.",
+      "For RBC: Count cells in the central square (5 small squares × 16 = 80 smallest squares); For WBC: Count cells in all 4 corner squares.",
+      "Apply standard counting rule: count cells touching the top and right boundaries; exclude cells touching bottom and left boundaries.",
+      "Record cell counts and apply appropriate formula to calculate cells per mm³.",
+      "Clean the haemocytometer immediately after use with distilled water followed by 70% ethanol.",
+      "Document results in the practical record book."
+    ],
+    "precautions": [
+      "Ensure the haemocytometer and coverslip are grease-free before use.",
+      "Do not overfill or underfill the counting chamber.",
+      "Allow adequate settling time before counting to ensure cells are in focus.",
+      "Wear gloves when handling blood samples; follow universal precautions.",
+      "Dispose of all blood-contaminated materials in biohazard waste containers.",
+      "Calibrate the microscope and verify the ruling before use.",
+      "Avoid using cracked or scratched haemocytometers."
+    ]
+  }
+}

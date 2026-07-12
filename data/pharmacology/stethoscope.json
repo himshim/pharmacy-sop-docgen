@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Operation of Stethoscope"
+  },
+  "sections": {
+    "purpose": "To correctly use a stethoscope for auscultation of heart sounds, lung sounds, and bowel sounds as part of clinical pharmacology and pharmacy practice training.",
+    "scope": "Applicable to Pharmacology laboratory for clinical skills development, including cardiac and pulmonary auscultation practicals.",
+    "procedure": [
+      "Insert the earpieces of the stethoscope into the ear canals with the tips angled slightly forward to seal the ear canal.",
+      "Tap the diaphragm gently to confirm you can hear the sound through the earpieces.",
+      "Select the appropriate chest piece side: Diaphragm (flat side, firm pressure) for high-frequency sounds (normal heart/lung sounds, bowel sounds); Bell (cup side, light pressure) for low-frequency sounds (S3, S4 gallops, mitral stenosis murmurs).",
+      "Ask the subject to sit or lie comfortably and expose the area to be auscultated.",
+      "Place the chest piece directly on the skin — do not auscultate over clothing.",
+      "For heart sounds: Auscultate at the 4 standard positions — Aortic (2nd right ICS), Pulmonic (2nd left ICS), Tricuspid (4th left ICS), Mitral/Apex (5th left ICS, mid-clavicular line).",
+      "Listen for S1 (lub) and S2 (dub) sounds at each position; note any abnormal sounds (murmurs, clicks, rubs).",
+      "For lung sounds: Ask the subject to breathe deeply and slowly through the mouth while auscultating all lung fields bilaterally.",
+      "Listen for normal breath sounds (vesicular, bronchial, bronchovesicular) and note any adventitious sounds (crackles, wheezes, rhonchi).",
+      "Record all auscultatory findings systematically with the position and nature of sounds heard.",
+      "Clean the earpieces and chest piece with a 70% alcohol swab after each use.",
+      "Store the stethoscope in its designated case or hanging rack — avoid coiling tightly around the neck for storage."
+    ],
+    "precautions": [
+      "Always warm the chest piece with your hands before placing on a subject's skin.",
+      "Maintain complete silence during auscultation — ambient noise significantly affects sound quality.",
+      "Use appropriate pressure: firm pressure for diaphragm, light pressure for bell — pressing the bell too hard converts it to a diaphragm.",
+      "Never auscultate over clothing, hair, or wound dressings — place directly on skin.",
+      "Clean the stethoscope between subjects to prevent cross-contamination — use 70% isopropyl alcohol.",
+      "Inspect tubing for cracks or holes regularly — damaged tubing reduces sound transmission.",
+      "Check earpiece fit and angle — improperly fitted earpieces significantly reduce sound quality.",
+      "Do not expose the stethoscope to extreme heat, organic solvents, or oils."
+    ]
+  }
+}

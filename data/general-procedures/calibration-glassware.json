@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "title": "Calibration of Volumetric Glassware"
+  },
+  "sections": {
+    "purpose": "To define the procedure for calibrating and verifying the accuracy of volumetric glassware (pipettes, burettes, volumetric flasks, and measuring cylinders) by gravimetric determination of water volume to ensure high analytical accuracy in pharmacy laboratories.",
+    "scope": "Applicable to all pharmacy laboratory departments for calibrating and verifying Class A and Class B volumetric glassware used in quantitative analysis, preparation of standard solutions, and quality control tests.",
+    "procedure": [
+      "Ensure the analytical balance is calibrated, levelled, and clean. Record the ambient air temperature and water temperature before starting the calibration.",
+      "Clean the volumetric glassware to be calibrated thoroughly with detergent, rinse with distilled water, and dry completely. Liquid must drain uniformly from glass surfaces without leaving water droplets (droplets indicate grease or contamination).",
+      "Place a clean, dry weighing bottle or beaker with a lid on the analytical balance pan and tare it to 0.000 g.",
+      "For pipettes: Fill the pipette with distilled water to the calibration mark. Keep the pipette vertical, touch the tip to the side of the container to remove the hanging drop, and dispense the water into the tared weighing container. Cover and weigh immediately to the nearest 0.1 mg. Record weight (W).",
+      "For burettes: Fill the burette with distilled water to the 0.00 mL mark. Dispense water in 10 mL increments into the tared weighing container, weighing and recording the weight of water dispensed for each interval.",
+      "For volumetric flasks: Weigh the empty, dry flask with its stopper (W₁). Fill the flask with distilled water exactly to the calibration mark, ensuring no air bubbles are trapped. Wipe the outside dry and weigh the filled flask (W₂). The weight of water is W = W₂ − W₁.",
+      "Calculate the actual volume of water (V) at the measured temperature: V = W × Z, where Z is the temperature correction factor (correcting for density of water and air buoyancy at the measured temperature).",
+      "Repeat the calibration measurement at least 3 times for each piece of glassware; calculate the mean volume and standard deviation.",
+      "Determine the error: Error = Measured Mean Volume − Nominal Volume.",
+      "Compare the calculated error against the official pharmacopeial tolerance limits (e.g., Class A 10 mL pipette tolerance: ±0.02 mL; 25 mL burette tolerance: ±0.03 mL).",
+      "If the glassware meets the tolerance limits: label it as 'CALIBRATED' with calibration date, error value, and next calibration due date.",
+      "If the glassware exceeds the tolerance limits: label as 'FAILED' or 'DE-COMMISSIONED' and remove from service immediately.",
+      "Record all calibration data in the Glassware Calibration Register: glassware ID, nominal volume, temperature, weights recorded, calculated volumes, error, compliance status, and date."
+    ],
+    "precautions": [
+      "Ensure the distilled water used for calibration has been kept in the balance room for at least 2 hours to reach thermal equilibrium before starting.",
+      "Never use heat to dry volumetric glassware as heating can cause dimensional changes in the glass, permanently altering the volume calibration.",
+      "Close the analytical balance draft shield doors before taking any weight readings to prevent air currents from causing errors.",
+      "Do not touch the weighing vessels or glassware with bare fingers — use clean cotton gloves or forceps to avoid transfer of oils.",
+      "Ensure the meniscus is read correctly at eye level — the bottom of the curved meniscus must align with the calibration line.",
+      "Clean all volumetric glassware immediately after use to prevent contamination buildup."
+    ]
+  }
+}

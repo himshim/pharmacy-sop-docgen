@@ -1,19 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Rotary Vacuum Evaporator"
+    "title": "Operation of Rotary Vacuum Evaporator in Pharmaceutical Chemistry Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for solvent evaporation using a rotary vacuum evaporator.",
-    "scope": "Applicable to concentration of solutions in the Pharmaceutical Chemistry laboratory.",
+    "purpose": "To remove organic solvents from reaction mixtures and purified product solutions under reduced pressure and controlled temperature, enabling gentle recovery of thermolabile pharmaceutical compounds.",
+    "scope": "Applicable to Pharmaceutical Chemistry laboratory for solvent removal from organic synthesis reaction workups, concentration of extracts, and recovery of recrystallization solvents.",
     "procedure": [
-      "Ensure the rotary evaporator is clean and properly assembled.",
-      "Transfer the solution into the evaporation flask.",
-      "Set the required temperature of the water bath.",
-      "Apply vacuum gradually.",
-      "Start rotation of the flask.",
-      "Continue evaporation until solvent is removed.",
-      "Release vacuum, stop rotation, and remove the flask."
+      "Check water bath level — fill with distilled water to the recommended level; set the required temperature (typically 30–40°C for low-boiling solvents; 50–60°C for higher-boiling solvents).",
+      "Verify cold water or chilled water supply to the condenser (5–15°C) and confirm it is flowing.",
+      "Fill the cold trap with ice water or dry ice/acetone mixture to protect the vacuum pump.",
+      "Attach the receiving flask and evaporating flask with Keck clips.",
+      "Pour the solution to be evaporated into the evaporating flask (maximum 2/3 volume).",
+      "Lower the flask into the water bath.",
+      "Set rotation speed to 40–80 RPM and switch on rotation.",
+      "Open the vacuum valve slowly — monitor the vacuum gauge, target 50–200 mbar.",
+      "Once solvent begins to evaporate visibly into the receiving flask, confirm the system is working correctly.",
+      "Periodically empty the receiving flask — drain solvent to a labelled waste container.",
+      "Continue until evaporation stops (no more solvent visible dripping into the receiving flask).",
+      "To finish: close vacuum valve; bleed air back slowly; stop rotation; raise flask from water bath.",
+      "Remove the evaporating flask containing the product residue; transfer to a pre-weighed container.",
+      "Record: solvent evaporated, temperature, vacuum, duration, and residue weight in the notebook."
     ],
-    "precautions": "Do not apply sudden vacuum. Ensure proper cooling water circulation."
+    "precautions": [
+      "Use only round-bottom flasks — never flat-bottomed or conical flasks under vacuum.",
+      "Always use a cold trap — solvent vapours destroy vacuum pump oil.",
+      "Bleed vacuum slowly — rapid pressure change causes bumping and sample loss.",
+      "Inspect all glassware for cracks before use — vacuum amplifies failure risk of damaged glass.",
+      "Do not exceed 60°C bath temperature for heat-sensitive compounds.",
+      "Ensure the cold condenser is functioning before starting — warm condenser allows vapours to reach the pump.",
+      "Keep anti-bumping chips in the evaporating flask for foaming solutions."
+    ]
   }
 }

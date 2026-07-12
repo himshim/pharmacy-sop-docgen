@@ -1,20 +1,37 @@
 {
   "meta": {
-    "title": "Operation of Mechanical Sieve Shaker"
+    "title": "Operation of Mechanical Sieve Shaker in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To separate powdered drugs into size fractions.",
-    "scope": "Applicable to particle size analysis.",
+    "purpose": "To separate crude drug powders into defined particle size fractions using mechanically oscillated standard test sieves for pharmacopeial powder grade determination and particle size analysis.",
+    "scope": "Applicable to Pharmacognosy laboratory for pharmacopeial sieve analysis of crude drug powders and verification of powder grade (coarse, fine, very fine) per IP/WHO standards.",
     "procedure": [
-      "Stack sieves with sample on top.",
-      "Secure stack.",
-      "Set time and amplitude.",
-      "Weigh fractions."
+      "Select the standard sieve set corresponding to the required IP powder grades (typically No. 10, No. 22, No. 44, No. 85, No. 120 sieves).",
+      "Clean all sieves with a soft natural-bristle brush to remove any residue from previous use.",
+      "Inspect sieves for damaged mesh, holes, or bent frames — replace damaged sieves before use.",
+      "Stack sieves in descending aperture order (largest at top, smallest at bottom) with a collecting pan at the base.",
+      "Mount the sieve stack securely in the mechanical sieve shaker clamps.",
+      "Accurately weigh the drug powder sample (typically 50 g) and record the weight.",
+      "Place the sample on the topmost sieve and place the lid on top.",
+      "Set the shaker amplitude and operating time: typically 10–15 minutes at standard amplitude for pharmacopeial analysis.",
+      "Switch on the mechanical shaker and allow the full programmed run to complete.",
+      "After completion, switch off and wait for all movement to cease before handling the sieves.",
+      "Carefully dismantle the sieve stack; transfer the retained material from each sieve to a pre-weighed container.",
+      "Weigh the material retained on each sieve and in the collecting pan.",
+      "Verify: sum of all fractions should equal the initial sample weight ± 1% (loss acceptable limit).",
+      "Calculate the percentage retained on each sieve; record against IP specifications for the tested drug.",
+      "Clean all sieves immediately with a soft brush after use; wash if needed and dry completely.",
+      "Record sieve numbers, retained weights, percentages, and powder grade conclusion in the logbook."
     ],
     "precautions": [
-      "Clean sieves.",
-      "Avoid overloading.",
-      "Wear mask."
+      "Never clean sieves with metal brushes or wire — this distorts the mesh apertures.",
+      "Wear a dust mask when loading and unloading powders.",
+      "Do not overload sieves — excessive sample weight prevents proper separation.",
+      "Ensure the sieve stack is securely clamped — loose sieves during mechanical shaking can fall.",
+      "Do not use damaged or corroded sieves for official pharmacopeial testing — results will be invalid.",
+      "Store sieves in individual protective containers to preserve mesh integrity.",
+      "Calibrate sieve apertures annually using reference wire gauges or optical measurement.",
+      "Allow the shaker to come to a complete stop before removing the sieve assembly."
     ]
   }
 }

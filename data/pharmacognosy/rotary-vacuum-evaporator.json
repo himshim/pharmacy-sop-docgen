@@ -1,22 +1,36 @@
 {
   "meta": {
-    "title": "Operation of Rotary Vacuum Evaporator"
+    "title": "Operation of Rotary Vacuum Evaporator in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To concentrate plant extracts under vacuum.",
-    "scope": "Applicable to extract concentration.",
+    "purpose": "To efficiently concentrate or completely evaporate organic solvents from crude plant extracts under reduced pressure and controlled temperature, preserving heat-sensitive phytochemicals during solvent removal.",
+    "scope": "Applicable to Pharmacognosy laboratory for concentration of alcoholic, hydroalcoholic, and other solvent extracts from Soxhlet extraction, maceration, or percolation processes.",
     "procedure": [
-      "Fill flask less than half.",
-      "Rotate and apply vacuum.",
-      "Heat water bath.",
-      "Evaporate and collect.",
-      "Clean flask."
+      "Ensure the water bath is filled with distilled water and set to the required temperature: 40°C for methanol/ethanol extracts; 30–35°C for ether or highly volatile solvents; maximum 60°C for aqueous extracts.",
+      "Check that the condenser is connected to the cold water supply (5–15°C) and water is flowing before starting.",
+      "Connect the vacuum pump to the rotary evaporator via the cold trap; ensure the cold trap is filled with ice or dry ice/acetone mixture.",
+      "Attach the receiving flask (500 mL or 1 L) to the outlet port — use a Keck clip to secure.",
+      "Pour the plant extract (max 2/3 volume of the evaporating flask) into the evaporating flask.",
+      "Attach the evaporating flask to the rotary joint using a Keck clip — ensure it is secure.",
+      "Lower the evaporating flask into the water bath.",
+      "Set the rotation speed: typically 40–80 RPM — rotation ensures even heating and increases evaporation surface area.",
+      "Apply vacuum gradually: open the vacuum valve slowly; target vacuum 50–200 mbar depending on solvent.",
+      "Switch on the rotation motor — the flask should rotate smoothly.",
+      "Monitor distillate collection in the receiving flask; periodically empty the receiving flask if it fills.",
+      "Continue until no more solvent drips into the receiving flask.",
+      "To stop: first turn off the vacuum pump; slowly open the bleed valve to restore atmospheric pressure; stop rotation; raise flask out of water bath.",
+      "Remove the evaporating flask and transfer the concentrate to a tared container.",
+      "Record: solvent, volume, bath temperature, vacuum, and final extract weight/volume in the logbook."
     ],
     "precautions": [
-      "Foaming prevention.",
-      "Vacuum release slowly.",
-      "Fume hood.",
-      "Cold trap."
+      "Never apply vacuum to a warm, sealed, or glued joint — sudden pressure drop can cause implosion.",
+      "Always use round-bottom flasks — flat-bottomed flasks implode under vacuum.",
+      "Ensure all glass joints and connections are intact — cracked glassware is an implosion hazard under vacuum.",
+      "Always release vacuum slowly using the bleed valve before stopping the pump.",
+      "Keep the cold trap filled — solvent vapours entering the vacuum pump destroy the pump oil.",
+      "Do not heat above 60°C — most phytochemicals begin to degrade above this temperature.",
+      "Use appropriate bump protection (boiling chips) for bumping-prone extracts.",
+      "Wear goggles — glassware under vacuum can shatter unexpectedly."
     ]
   }
 }

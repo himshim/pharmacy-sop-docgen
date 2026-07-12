@@ -1,19 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Laminar Air Flow Bench"
+    "title": "Operation of Laminar Air Flow Cabinet in Microbiology Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for aseptic operations using a Laminar Air Flow bench.",
-    "scope": "Applicable to aseptic handling of microbiological samples in the Microbiology laboratory.",
+    "purpose": "To provide a sterile working environment with HEPA-filtered unidirectional air flow for aseptic manipulation of microbiological cultures, preparation of sterile culture media, and sterility testing of pharmaceutical products.",
+    "scope": "Applicable to Pharmaceutical Microbiology laboratory for all aseptic operations including transfer of microbial cultures, sterility testing, antimicrobial sensitivity disc preparation, and reconstitution of parenteral samples for sterility testing.",
     "procedure": [
-      "Switch ON the laminar air flow blower.",
-      "Allow the air flow to stabilize for at least 10 minutes.",
-      "Wipe the working surface with suitable disinfectant.",
-      "Arrange materials required for aseptic operation.",
-      "Carry out work within the sterile zone.",
-      "After completion, clean the work surface.",
-      "Switch OFF the blower after use."
+      "Switch on the blower (fan) of the LAF cabinet at least 15–20 minutes before use to allow the HEPA filter to establish unidirectional air flow and purge any particulates.",
+      "Simultaneously switch on the UV lamp for 15–20 minutes to decontaminate the work surface — ensure no personnel are present in the room during UV exposure.",
+      "Switch OFF the UV lamp before entering the room or beginning work — UV radiation causes severe eye and skin injury.",
+      "Put on clean lab coat, gloves, mask, and hair cover before approaching the cabinet.",
+      "Wipe the work surface of the LAF cabinet with a 70% isopropyl alcohol-dampened, lint-free wipe — wipe from back to front in a single motion.",
+      "Allow the alcohol to evaporate completely (30–60 seconds) before placing materials inside.",
+      "Arrange all required materials (cultures, media, pipettes, loops) in the cabinet before starting to minimize arm movements in and out during the procedure.",
+      "Work at least 15 cm inside the cabinet front opening — the air curtain at the front opening is the critical containment barrier.",
+      "Flame all loops and instruments before and after each use if using an open flame (use a micro-incinerator inside the LAF to avoid disrupting air flow).",
+      "Avoid excessive arm movements across the work zone — lateral movements disrupt laminar flow.",
+      "Perform all aseptic manipulations with deliberate, slow movements.",
+      "After use, remove all materials; wipe the work surface with 70% isopropyl alcohol.",
+      "Allow the blower to run for 5 minutes after work is completed before switching off.",
+      "Log each use: date, operator, procedures performed, and any incidents in the LAF usage register."
     ],
-    "precautions": "Do not block air grills. Avoid rapid movements that disturb laminar air flow."
+    "precautions": [
+      "Never use the LAF cabinet as a biosafety cabinet (BSC) for handling pathogenic organisms — LAF protects the product, not the operator. BSC is required for biological hazards.",
+      "Switch off the UV lamp before entering the work area — UV causes photokeratitis (eye damage) and skin burns.",
+      "Do not obstruct the rear grille — blocking air intake breaks laminar flow.",
+      "Do not work at the very front edge — the air curtain is weaker at the front and contamination can enter.",
+      "Replace HEPA filters when airflow velocity drops below 0.45 m/s or per manufacturer's schedule.",
+      "Validate the LAF cabinet annually with particle count testing and airflow velocity measurement.",
+      "Do not use aerosol-generating sprays inside the LAF — they disrupt laminar flow and deposit on HEPA filter."
+    ]
   }
 }

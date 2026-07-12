@@ -1,25 +1,31 @@
 {
   "meta": {
-    "title": "Operation of Water Bath"
+    "title": "Operation of Water Bath in Pharmaceutical Analysis Laboratory"
   },
   "sections": {
-    "purpose": "To provide a constant temperature for heating laboratory samples.",
-    "scope": "Applicable to general heating in Pharmaceutical Analysis.",
+    "purpose": "To provide controlled temperature water bath conditions for colour development reactions in colorimetric assays, heating of sample solutions, and maintenance of sample temperature during analytical procedures.",
+    "scope": "Applicable to Pharmaceutical Analysis laboratory for sample preparation in colorimetric assays, dissolution medium temperature maintenance, and heating of standard solutions.",
     "procedure": [
-      "Fill the bath with distilled water to the operating level.",
-      "Power ON and set the required temperature.",
-      "Allow the water to reach the set temperature.",
-      "Place the containers in the bath and close the lid.",
-      "Check the water level periodically and top up if necessary.",
-      "Turn OFF the power and unplug the unit after use.",
-      "Drain and clean the bath weekly."
+      "Fill the water bath with distilled water to the recommended level; switch on and set the thermostat to the required temperature.",
+      "Allow the bath to reach and stabilize at the set temperature (typically 37°C for colorimetric reactions; 37 ± 0.5°C for dissolution testing).",
+      "Verify temperature with a calibrated thermometer placed inside the bath.",
+      "Place sample containers (test tubes, beakers, volumetric flasks) in the bath using appropriate supports (tube racks, wire gauze).",
+      "Ensure sample containers are submerged to the level of the solution inside — not just the bottom.",
+      "Incubate for the specified time per the assay method.",
+      "For colorimetric assays: after colour development, remove samples promptly and measure absorbance within the specified time window.",
+      "Replenish evaporated water periodically with warm distilled water.",
+      "After use, switch off the bath and allow to cool before draining.",
+      "Clean the bath monthly with mild disinfectant and flush with distilled water.",
+      "Log temperature, duration, application, and operator name in the equipment register."
     ],
     "precautions": [
-      "Never run the heater without water.",
-      "Use distilled water to avoid scale build-up.",
-      "Wait for the water to cool before draining.",
-      "Ensure the power cord is kept dry.",
-      "Do not use for temperatures above 95°C."
+      "Always use distilled water — tap water mineral deposits foul the heating element.",
+      "Never allow water level to drop below the heating element — dry heating damages the element.",
+      "Use tongs or heat-resistant gloves when removing containers from hot water.",
+      "For dissolution testing baths: validate temperature uniformity (±0.5°C across all vessel positions) as per pharmacopeial requirements.",
+      "Calibrate the thermostat against a certified thermometer regularly.",
+      "Do not leave the bath on unattended at high temperature — evaporation can expose the heating element.",
+      "Drain, clean and refill with fresh water weekly during continuous use — stagnant water grows algae and supports microbial contamination."
     ]
   }
 }

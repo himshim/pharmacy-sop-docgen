@@ -1,22 +1,30 @@
 {
   "meta": {
-    "title": "Operation of Glassware Dryer"
+    "title": "Use and Maintenance of Glassware Dryer in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To dry cleaned glassware used for extraction, distillation, and sample preparation.",
-    "scope": "Applicable to drying of volumetric flasks, pipettes, and extraction apparatus.",
+    "purpose": "To dry washed laboratory glassware quickly and effectively after washing to ensure it is moisture-free before use in extraction, standardization, and phytochemical analysis experiments.",
+    "scope": "Applicable to Pharmacognosy laboratory for drying all categories of washed glassware including beakers, flasks, measuring cylinders, pipettes, and Petri dishes.",
     "procedure": [
-      "Load clean, rinsed glassware upright on the drying racks.",
-      "Close the door and set the temperature to 50–70°C.",
-      "Set drying time or use automatic cycle.",
-      "Allow glassware to cool before removal.",
-      "Inspect for dryness and store in clean cabinets."
+      "After washing glassware with detergent and rinsing with distilled water, place items inverted on the appropriate pegs of the glassware dryer immediately — do not leave wet glassware standing upright as moisture pools inside.",
+      "Arrange glassware with openings facing downward so water drains and air circulates inside the vessel.",
+      "Place smaller items (test tubes, centrifuge tubes) in the appropriate tube holder slots.",
+      "Pipettes should be placed tip-down in the designated pipette holder section.",
+      "For forced-air drying (heated glassware dryer): switch on the blower; set temperature to 60–80°C; allow 30–45 minutes for complete drying.",
+      "For ambient air drying: allow 1–2 hours minimum for complete drying at room temperature.",
+      "Do not use oven drying for volumetric glassware (measuring cylinders, volumetric flasks, pipettes) — heat causes dimensional changes and invalidates calibration.",
+      "After drying, inspect glassware for residual moisture by tilting — if water droplets are visible inside, return to the dryer.",
+      "Transfer dry glassware to the storage cupboard immediately — do not leave on the dryer indefinitely as it collects dust.",
+      "Clean the glassware dryer pegs and tray monthly with mild detergent to remove mineral deposits and organic residues.",
+      "Inspect pegs for damage or missing tips — broken pegs scratch glassware; replace immediately."
     ],
     "precautions": [
-      "Do not overload racks.",
-      "Avoid drying plasticware or heat-sensitive glass.",
-      "Ensure good air circulation.",
-      "Clean lint filters regularly."
+      "Do not dry volumetric glassware in a heated dryer or oven — heat permanently alters calibration marks.",
+      "Do not place hot glassware (just removed from oven or hot plate) directly on plastic-tipped pegs — heat deforms the plastic and the glassware can tip over.",
+      "Ensure glassware is stable on the pegs — falling wet glassware causes breakage and cuts.",
+      "Do not overcrowd the dryer — inadequate air circulation leaves inner surfaces wet.",
+      "Inspect each piece of glassware for cracks before placing on the dryer — cracked glassware should be discarded, not washed and returned.",
+      "Replace any corroded or broken pegs promptly — metal corrosion contaminates glassware."
     ]
   }
 }

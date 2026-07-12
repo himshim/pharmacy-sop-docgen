@@ -1,20 +1,30 @@
 {
   "meta": {
-    "title": "Operation of Hygrometer"
+    "title": "Operation of Hygrometer in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To measure relative humidity for crude drug storage conditions.",
-    "scope": "Applicable to environmental monitoring in Pharmacognosy.",
+    "purpose": "To monitor and record relative humidity in the Pharmacognosy laboratory and crude drug storage areas to ensure optimal storage conditions and prevent moisture-induced degradation of crude drugs.",
+    "scope": "Applicable to Pharmacognosy laboratory, crude drug repository, herbarium rooms, and sample storage areas where humidity control is critical for drug stability.",
     "procedure": [
-      "Place in representative location.",
-      "Read after stabilization.",
-      "Record daily.",
-      "Calibrate periodically."
+      "Place the hygrometer at a representative location in the room — at bench level (1.0–1.5 m height), away from direct sunlight, air conditioning vents, or heat sources which give localised false readings.",
+      "For digital hygrometers: switch on and allow 10–15 minutes to stabilize before recording readings.",
+      "For analogue (hair or bimetallic) hygrometers: mount vertically and allow 30 minutes for equilibration after placement.",
+      "Read the relative humidity (RH%) from the display or dial.",
+      "Record the RH% and temperature readings in the environmental monitoring logbook at the required frequency: minimum twice daily (morning and afternoon) for GMP-grade storage areas.",
+      "Also read and record the ambient temperature simultaneously — RH and temperature data are interdependent.",
+      "If RH exceeds the acceptable range (typically 40–65% RH for general crude drug storage), take corrective action: activate dehumidifier, improve ventilation, or relocate moisture-sensitive samples.",
+      "If the hygrometer displays an alarm or out-of-range symbol, investigate the cause and take corrective action before the next reading.",
+      "Calibrate the hygrometer at specified intervals using a salt calibration kit or by comparison against a reference calibrated instrument.",
+      "Record calibration dates and results in the instrument calibration log.",
+      "Replace batteries when indicated; for analogue instruments, have the instrument serviced annually."
     ],
     "precautions": [
-      "Avoid direct sunlight.",
-      "Do not expose to liquids.",
-      "Store dry."
+      "Do not expose the hygrometer to direct liquid water or condensation — sensor damage is irreversible.",
+      "Do not place near heat sources, windows, or HVAC outlets — these give localised false readings unrepresentative of the room.",
+      "Allow adequate equilibration time before recording — insufficient equilibration gives inaccurate baseline readings.",
+      "Calibrate at least once every 6 months or per institutional policy — hygrometer sensors drift over time.",
+      "For critical storage areas (stability chambers, reference standard storage), install continuous data-logging hygrometers and set alarms.",
+      "Document all out-of-specification readings and the corrective actions taken."
     ]
   }
 }

@@ -1,20 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Serological Water Bath"
+    "title": "Operation of Serological Water Bath in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To incubate samples at 37°C.",
-    "scope": "Applicable to enzymatic assays.",
+    "purpose": "To provide controlled temperature water bath conditions for incubating phytochemical reactions, warming extraction solvents, and performing colour development reactions in crude drug analysis.",
+    "scope": "Applicable to Pharmacognosy laboratory for temperature-controlled incubations in qualitative phytochemical tests, Fehling's test, Millon's test, and Biuret reactions.",
     "procedure": [
-      "Fill with water.",
-      "Set to 37°C.",
-      "Place tubes.",
-      "Incubate."
+      "Fill the serological water bath tank with distilled water to the recommended fill level.",
+      "Switch on the unit and set the required temperature using the thermostat: typically 37°C for enzyme reactions; 60–80°C for heating extracts; 100°C for boiling water bath.",
+      "Allow the bath to reach and stabilize at the set temperature — verify with a calibrated thermometer placed inside the water.",
+      "Place test tubes, flasks, or bottles containing the reaction mixture into the bath rack or tube holders.",
+      "Ensure the sample level in the tubes is below the water level in the bath for effective heat transfer.",
+      "Begin timing the incubation once the bath has reached the set temperature and samples are inserted.",
+      "Monitor the temperature periodically — note any drift and correct using the thermostat.",
+      "After the incubation period, remove samples using tongs or heatproof gloves.",
+      "Immediately proceed to the next step of the phytochemical test (e.g., colour observation).",
+      "After use, switch off the water bath.",
+      "If the bath is to be stored, drain the water, clean the tank with dilute disinfectant, and dry thoroughly.",
+      "Refill with fresh distilled water before the next use.",
+      "Log temperature, duration, samples processed, and operator name in the equipment register."
     ],
     "precautions": [
-      "Distilled water.",
-      "Clean regularly.",
-      "No dry operation."
+      "Never allow the water level to drop below the minimum fill line — dry heating damages the heating element.",
+      "Do not use tap water — mineral deposits foul the heating element; always use distilled water.",
+      "Use stainless steel or glass vessels — plastic containers may deform at high temperatures.",
+      "Do not heat sealed, air-tight containers — pressure build-up can cause explosive venting.",
+      "Use tongs or heatproof gloves when removing samples from hot water baths.",
+      "Regularly check the temperature with a calibrated thermometer — thermostat calibration drifts over time.",
+      "Drain and clean the bath weekly when in continuous use — algae and mineral deposits accumulate.",
+      "Do not leave the water bath switched on unattended at temperatures above 80°C."
     ]
   }
 }

@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Operation of UV-Visible Spectrophotometer (Microbiology)"
+  },
+  "sections": {
+    "purpose": "To measure optical density (OD) of microbial cultures and absorbance of coloured solutions for growth curve analysis, cell count estimation, and colorimetric assays in the Microbiology laboratory.",
+    "scope": "Applicable to Microbiology laboratory for turbidity measurements (OD₆₀₀), enzyme assay absorbance readings, and colorimetric test analysis.",
+    "procedure": [
+      "Switch on the spectrophotometer and allow it to warm up for a minimum of 15–20 minutes before use.",
+      "Set the required wavelength using the wavelength selector: OD₆₀₀ for bacterial growth; specific wavelengths for colorimetric assays.",
+      "Select the appropriate measurement mode: Absorbance (A) for most microbiology measurements.",
+      "Clean a pair of matched cuvettes thoroughly and rinse with the blank solution (uninoculated broth or buffer).",
+      "Fill the reference cuvette with the blank solution and wipe the exterior with lens paper.",
+      "Insert the reference (blank) cuvette into the reference beam holder and press 'Zero' or 'Blank' to set the baseline.",
+      "Prepare the sample: For turbidity, pipette the microbial suspension directly; dilute if OD exceeds 1.0.",
+      "Fill the sample cuvette with the bacterial suspension or test solution, wipe the exterior, and insert into the sample holder.",
+      "Close the sample compartment lid and record the absorbance value displayed.",
+      "For growth curves: measure OD at regular time intervals; correlate OD values with cell counts using a pre-established calibration curve.",
+      "After measurements, remove cuvettes, rinse with distilled water and dry or store in appropriate solvent.",
+      "Record all wavelengths, readings, dilution factors, and sample details in the laboratory register.",
+      "Switch off the instrument after use and cover it with the dust cover."
+    ],
+    "precautions": [
+      "Allow adequate warm-up time before measurements — readings taken before stabilization are inaccurate.",
+      "Use the correct type of cuvette: Quartz cuvettes for UV range (below 340 nm); glass or plastic for visible range (340–900 nm).",
+      "Always blank the instrument with the appropriate reference solution before sample measurements.",
+      "Keep OD readings in the linear range (0.1–0.8 AU) for accurate Beer-Lambert law compliance — dilute if above this range.",
+      "Wipe cuvette exterior with lens tissue only — rough tissues scratch optical surfaces.",
+      "Do not allow microbial suspensions to sit in cuvettes for extended periods — this causes biofilm formation.",
+      "Decontaminate all cuvettes and pipette tips used with microbial cultures before washing.",
+      "Check wavelength accuracy periodically using standard reference solutions.",
+      "Keep the sample compartment free of dust and liquid spills — clean immediately if spillage occurs."
+    ]
+  }
+}

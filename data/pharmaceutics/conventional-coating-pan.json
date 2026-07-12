@@ -1,18 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Conventional Coating Pan"
+    "title": "Operation of Conventional Coating Pan in Pharmaceutics Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Conventional Coating Pan.",
-    "scope": "Applicable to activities carried out in the Pharmaceutics.",
+    "purpose": "To apply sugar or film coatings to tablet cores to improve palatability, provide moisture protection, control drug release, and achieve a desired appearance as part of solid dosage form manufacturing.",
+    "scope": "Applicable to Pharmaceutics laboratory for coating of tablet cores with sugar coating, film coating, or enteric coating solutions as part of formulation development and scale-up studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Inspect the coating pan, spray system, and air supply for cleanliness and correct assembly.",
+      "Warm the coating pan to 40–50°C using the hot air supply for 10–15 minutes before loading tablets.",
+      "Weigh the tablet cores accurately; record the pre-coating weight.",
+      "Load tablet cores into the rotating coating pan — typically 60–75% of the pan capacity.",
+      "Set the pan rotation speed: 20–40 RPM for sugar coating; 10–20 RPM for film coating — tablets should cascade freely without flying.",
+      "Prepare the coating solution as per the formulation: dissolve sugar, film polymer (HPMC, EC, Eudragit), or enteric polymer in the specified solvent system.",
+      "For film coating: begin applying the coating solution by ladle or spray gun in small portions, pausing between applications to allow drying.",
+      "Blow warm air (40–60°C) continuously onto the tablet bed during coating.",
+      "Monitor tablet weight gain at regular intervals — the required coating weight gain is specified in the formulation (typically 2–5% for film coating; 30–50% for sugar coating).",
+      "Observe tablet surfaces: coated tablets should be smooth, uniformly coloured, and non-adherent.",
+      "After achieving target weight gain, apply a polishing coat (beeswax/carnauba wax blend) if required.",
+      "Cool the tablets by blowing room-temperature air for 10–15 minutes before removing from pan.",
+      "Remove tablets, weigh, and inspect for coating defects: peeling, orange peel texture, colour variation, logo bridging.",
+      "Package coated tablets in moisture-proof containers immediately.",
+      "Record coating solution composition, weight gain at each stage, temperature, and pan speed in the batch manufacturing record."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Ensure tablets have adequate hardness (minimum 5–6 kp) before coating — soft tablets crumble in the rotating pan.",
+      "Maintain correct inlet air temperature and dew point — too hot causes film cracking; too cool causes picking and sticking.",
+      "Do not overload the pan — insufficient cascading causes uneven coating.",
+      "For organic solvent-based film coating: work in a fume hood; ensure solvent vapour extraction is functioning.",
+      "Use grounded equipment and non-sparking tools for flammable solvent coating solutions.",
+      "Inspect spray nozzles for clogging at regular intervals during operation — a clogged nozzle creates coating-free zones.",
+      "Clean the coating pan immediately after use — dried coating solution is very difficult to remove."
+    ]
   }
 }

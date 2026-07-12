@@ -284,6 +284,14 @@
     {
       "key": "water-bath",
       "name": "Water Bath"
+    },
+    {
+      "key": "microtome",
+      "name": "Microtome"
+    },
+    {
+      "key": "tlc-developing-chamber",
+      "name": "TLC Developing Chamber"
     }
   ]
 }

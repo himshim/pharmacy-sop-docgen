@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Reagent Preparation Procedure"
+  },
+  "sections": {
+    "purpose": "To establish a standardized procedure for the preparation, labelling, storage, and expiry management of reagents and indicator solutions used in pharmaceutical laboratory analyses to ensure accuracy, traceability, and compliance with GLP requirements.",
+    "scope": "Applicable to all pharmacy laboratory departments for preparation of all reagents, indicators, staining solutions, and chemical solutions used in routine analysis and quality control testing.",
+    "procedure": [
+      "Before preparing any reagent, consult the approved method, IP/BP/USP monograph, or standard reference to verify the exact formulation.",
+      "Check the purity, grade, and expiry of all raw chemicals to be used — use only analytical reagent (AR) grade chemicals unless the method specifies otherwise.",
+      "Weigh or measure all components on a calibrated balance or volumetric glassware appropriate for the required precision.",
+      "Prepare reagents in clean, dry glassware that has been rinsed with the same solvent to be used.",
+      "Use freshly distilled or purified water (conductivity ≤ 4.3 µS/cm) as the diluent for all aqueous reagents unless otherwise specified.",
+      "For exothermic preparations (e.g., sulphuric acid solutions, concentrated acid dilutions): always add acid to water slowly with stirring — never add water to acid.",
+      "After preparation, mix thoroughly and allow to cool to room temperature before final volume adjustment.",
+      "Transfer the prepared reagent to an appropriate, clean, labelled container.",
+      "Label every reagent container with: Reagent name and concentration, Preparation date, Expiry date, Batch/Preparation number, Prepared by (name), Hazard symbols (corrosive, flammable, toxic) as applicable.",
+      "Determine the expiry date based on the reagent stability: commonly used reagents — 1 month for aqueous solutions; 3–6 months for organic solvent solutions; or as specified in the pharmacopoeia.",
+      "Inspect prepared reagents before use: check clarity, colour, and absence of precipitate; discard any reagent showing visible deterioration.",
+      "For critical reagents (e.g., Fehling's solution, Dragendroff reagent, Karl Fischer reagent): perform a verification test using a known standard before use.",
+      "Record all preparations in the Reagent Preparation Register: reagent name, amount prepared, raw material lot numbers, preparation date, expiry date, and preparer's signature.",
+      "Discard expired reagents immediately as per the chemical waste disposal procedure."
+    ],
+    "precautions": [
+      "Never prepare reagents in unlabelled containers — unlabelled reagents must be discarded immediately.",
+      "Always add acid to water (not water to acid) when preparing dilute acid solutions — reverse addition causes violent exothermic reaction and splashing.",
+      "Wear appropriate PPE (gloves, goggles, acid-resistant apron) when handling concentrated acids, bases, or toxic chemicals.",
+      "Prepare reagents containing volatile or toxic compounds (e.g., KCN, chloroform, formaldehyde) in a fume hood.",
+      "Segregate and clearly mark reagents containing hazardous substances (carcinogens, highly toxic agents) — restrict access.",
+      "Do not use a reagent after its expiry date regardless of visual appearance — chemical degradation may not be visually apparent.",
+      "Perform a system suitability or blank check with each new batch of critical reagent before use in analysis."
+    ]
+  }
+}

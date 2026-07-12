@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Operation of BOD Incubator"
+  },
+  "sections": {
+    "purpose": "To maintain controlled temperature conditions (typically 20°C or 37°C) for Biochemical Oxygen Demand (BOD) testing, microbiological incubation, and stability testing of pharmaceutical preparations.",
+    "scope": "Applicable to Pharmaceutics laboratory for microbial limit testing of pharmaceutical preparations and stability studies requiring controlled low-temperature incubation.",
+    "procedure": [
+      "Connect the BOD incubator to a stable power supply and switch it ON.",
+      "Allow the incubator to equilibrate to the set temperature before placing samples inside.",
+      "Set the desired temperature using the digital controller: Standard BOD test requires 20°C ± 1°C; Microbiological tests may require 37°C.",
+      "Open the inner glass door carefully to place samples — minimize the time the door is open.",
+      "Arrange samples with adequate spacing to allow uniform airflow around all containers.",
+      "Record the incubation start time, temperature, and sample details in the logbook.",
+      "Monitor the temperature every 24 hours and log the readings.",
+      "Do not open the incubator unnecessarily — each opening disturbs the equilibrium.",
+      "At the end of the incubation period, remove samples promptly and proceed with analysis.",
+      "After use, clean the inner surfaces with a suitable disinfectant (70% ethanol) and allow to dry before closing.",
+      "Switch off the incubator if not in use for extended periods.",
+      "Document all temperature records and sample details in the equipment logbook."
+    ],
+    "precautions": [
+      "Do not overload the incubator — overcrowding prevents proper air circulation and temperature uniformity.",
+      "Ensure the temperature controller and alarm systems are calibrated regularly.",
+      "Place a calibrated thermometer inside as an independent temperature check.",
+      "Do not store volatile or flammable chemicals in the incubator — the internal fan can generate sparks.",
+      "Clean spills immediately to prevent contamination and corrosion.",
+      "Ensure the incubator is levelled properly for uniform temperature distribution.",
+      "Place the incubator away from direct sunlight, heat sources, and drafts.",
+      "Keep the door gasket clean and in good condition — worn gaskets cause temperature fluctuation."
+    ]
+  }
+}

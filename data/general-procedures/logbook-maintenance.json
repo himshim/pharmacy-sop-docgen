@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Laboratory Logbook Maintenance Procedure"
+  },
+  "sections": {
+    "purpose": "To establish a uniform, GLP-compliant procedure for maintaining laboratory logbooks, raw data records, and instrument logs to ensure data integrity, traceability, and readiness for PCI and regulatory inspection.",
+    "scope": "Applicable to all pharmacy laboratory departments and all personnel generating, recording, or reviewing primary analytical data — including students, research scholars, technicians, and teaching staff.",
+    "procedure": [
+      "Issue a new laboratory logbook through the authorized stationery/store with a unique serial number; record the issue in the logbook register maintained by the Laboratory In-charge.",
+      "On the first page of every logbook, fill in: Department name, Subject/Course/Project title, Academic year/Project period, Logbook serial number, Name and designation of the user, and Name of the supervising staff.",
+      "Number all pages consecutively before use — pre-numbering prevents insertion or removal of pages.",
+      "Record all experimental data directly and immediately in the logbook in permanent blue or black ink — never use pencil.",
+      "Record data in real time as the experiment progresses — do not record data on loose paper for later transfer into the logbook.",
+      "Record all raw observations first (instrument readings, balance readings, times, temperatures, volumes) — then perform calculations.",
+      "Every page entry must include: date, experiment number/name, and the analyst's initials.",
+      "For corrections: draw a single horizontal line through the incorrect entry; write the correct value adjacent to it; initial and date the correction. Never use correction fluid, eraser, or write over the original entry.",
+      "Leave no blank spaces or lines in the logbook — draw a diagonal line through any unused space before proceeding.",
+      "All significant figures must be recorded as observed — do not round off raw data at the point of recording.",
+      "Attach or affix all instrument printouts, chromatograms, and spectral data securely to the logbook or cross-reference by page number.",
+      "At the end of each practical session or experiment, the supervisor/in-charge signs and dates the completed pages.",
+      "Completed logbooks must be submitted to the Laboratory In-charge for review, endorsement, and storage — do not retain completed logbooks with individual users.",
+      "Store completed logbooks in a designated, locked, fire-resistant cabinet — retain for a minimum of 5 years or as per institutional policy.",
+      "Instrument logbooks (usage, calibration, maintenance records) must be kept with the instrument at all times — these are primary inspection documents."
+    ],
+    "precautions": [
+      "Data integrity is a regulatory and ethical obligation — falsification, backdating, or fabrication of records in a laboratory logbook constitutes scientific misconduct and may have legal consequences.",
+      "Never tear out pages from the logbook — a missing page is treated as data falsification during inspection.",
+      "Never use correction fluid (Wite-Out, Tipex) — obscuring original data is a critical GLP violation.",
+      "Never record data in pencil — pencil entries can be erased and constitute a data integrity risk.",
+      "Never transfer data from a loose paper scratchpad into the logbook after the experiment — this is backdating and a GLP violation.",
+      "Electronic data (from computerized instruments) must be backed up, time-stamped, access-controlled, and audit-trailed — electronic logbooks must meet 21 CFR Part 11 equivalent standards.",
+      "Supervisors are responsible for ensuring their students/staff maintain logbooks correctly — logbook quality is assessed during PCI inspections."
+    ]
+  }
+}

@@ -1,19 +1,37 @@
 {
   "meta": {
-    "title": "Operation of Reflux Condenser Setup"
+    "title": "Operation of Reflux Setup in Pharmaceutical Chemistry Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for carrying out reactions under reflux conditions.",
-    "scope": "Applicable to chemical reactions performed under reflux in the Pharmaceutical Chemistry laboratory.",
+    "purpose": "To heat reaction mixtures at or above the boiling point of the solvent for extended periods without solvent loss, enabling completion of organic synthesis reactions that require prolonged heating.",
+    "scope": "Applicable to Pharmaceutical Chemistry laboratory for organic synthesis reactions including esterification, amide bond formation, condensation reactions, and preparation of pharmaceutical intermediates.",
     "procedure": [
-      "Assemble the reflux condenser setup securely.",
-      "Add reactants and solvent to the round bottom flask.",
-      "Connect the condenser and ensure proper water flow.",
-      "Heat the reaction mixture using a heating mantle.",
-      "Maintain gentle boiling during reflux.",
-      "After completion, switch OFF heating and allow cooling.",
-      "Dismantle the setup carefully."
+      "Choose the correct round-bottom flask size — fill to no more than 2/3 capacity.",
+      "Add all reactants and solvent to the flask; add boiling chips or a magnetic stir bar.",
+      "Mount the flask securely in a heating mantle or on a water bath using an appropriate flask support.",
+      "Attach a Liebig condenser vertically above the flask using a rubber bung or B24 ground glass joint.",
+      "Connect the cold water supply to the condenser lower inlet; outlet at the top.",
+      "Confirm steady coolant water flow before applying heat.",
+      "Attach a drying tube (calcium chloride or silica gel) to the top of the condenser if the reaction is moisture-sensitive.",
+      "Begin heating slowly — gradually increase heating mantle voltage or water bath temperature.",
+      "Once reflux begins, adjust heating to maintain a steady reflux rate — solvent condensing dripping back 1–2 drops/second at the base of the condenser is the target.",
+      "If using a magnetic stirrer, maintain slow stirring throughout for uniform temperature.",
+      "Monitor the reaction mixture for colour change, precipitation, or clarification as indicators of reaction progress.",
+      "Maintain reflux for the specified reaction time (per protocol).",
+      "After the reaction time, reduce heat to zero; allow to cool to room temperature naturally.",
+      "Stop the coolant water only after the flask has cooled to room temperature.",
+      "Disassemble, collect the reaction mixture, and proceed to workup and isolation steps.",
+      "Record: reactants, volumes, solvent, temperature, duration, observations, and yield in the laboratory notebook."
     ],
-    "precautions": "Ensure tight connections. Do not allow condenser to run dry."
+    "precautions": [
+      "Always start coolant water flow before applying heat — without coolant, vapours escape from the top of the condenser and create fire risk.",
+      "Use boiling chips in every reflux — smooth boiling prevents dangerous bumping.",
+      "Never heat a completely sealed apparatus — pressure buildup causes explosion.",
+      "Do not add flammable solvents to an already hot flask — add all solvents at room temperature.",
+      "Use a heating mantle or water/sand bath — never an open flame with organic solvents.",
+      "Work in a fume hood for all reflux involving volatile organic solvents.",
+      "Inspect all glassware joints before use — cracked joints leak solvent vapour.",
+      "Do not leave reflux unattended if coolant supply may fail."
+    ]
   }
 }

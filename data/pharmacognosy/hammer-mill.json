@@ -1,23 +1,36 @@
 {
   "meta": {
-    "title": "Operation of Hammer Mill"
+    "title": "Operation of Hammer Mill in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To rapidly reduce particle size of hard plant materials by high-speed impact.",
-    "scope": "Applicable to size reduction of seeds, roots, and barks in Pharmacognosy.",
+    "purpose": "To reduce the particle size of hard, fibrous, and tough crude drugs including bark, roots, seeds, and woody stems using high-speed rotating hammers for preparation of uniform coarse to medium powders.",
+    "scope": "Applicable to Pharmacognosy laboratory for primary size reduction of hard crude drugs that cannot be processed by a simple mechanical grinder, prior to Soxhlet extraction or powder standardization.",
     "procedure": [
-      "Install appropriate screen size for desired particle size.",
-      "Feed dried material gradually into the hopper.",
-      "Collect powder from discharge chute.",
-      "Clean chamber and hammers after use.",
-      "Sieve powder if further size classification is needed."
+      "Inspect the hammer mill chamber, hammers, screen, and feed hopper for cleanliness and absence of residue from previous use.",
+      "Select and fit the appropriate perforated screen at the discharge outlet: large holes (3–5 mm) for coarse reduction; medium holes (1–2 mm) for moderate reduction.",
+      "Ensure the crude drug material is dry — moisture above 10% causes jamming.",
+      "Pre-cut large pieces of drug material (bark, roots) to fragments < 5 cm using cutting tools before loading the hammer mill.",
+      "Ensure the collection vessel (bag or tray) is properly fitted at the discharge outlet.",
+      "Switch on the hammer mill motor and allow it to reach full operating speed before feeding material (approximately 10 seconds).",
+      "Feed the drug material slowly and continuously into the feed hopper in small handfuls — do not dump large quantities at once.",
+      "Monitor the motor current/sound — if the motor strains or slows, reduce the feed rate.",
+      "Collect the discharged powder in a clean, labelled container.",
+      "After all material is processed, allow the mill to run for 30 seconds empty to discharge remaining material.",
+      "Switch off the mill and wait for all moving parts to stop completely before opening.",
+      "Remove the screen and clean the chamber with a compressed air jet, then a soft brush.",
+      "Sieve the collected powder through the appropriate IP sieve to verify particle size and remove any unground pieces.",
+      "Weigh and label the final powder with drug name, particle size range, and date.",
+      "Record batch weight, screen size, and powder yield in the logbook."
     ],
     "precautions": [
-      "Wear PPE (mask, goggles, ear protection).",
-      "Do not open hopper while running.",
-      "Check hammers for wear regularly.",
-      "Avoid metal contamination.",
-      "Ground the mill to prevent static sparks."
+      "Never insert hands or any object into the feed hopper while the mill is running.",
+      "Wear a dust mask (N95), safety goggles, and hearing protection — hammer mills generate significant dust and noise.",
+      "Do not process wet or oil-rich materials — they clog the screen and cause heat buildup.",
+      "Wait for complete stop before opening the chamber — hammers continue spinning after switch-off.",
+      "Inspect hammers and screen for wear before each batch — worn hammers reduce efficiency and produce inconsistent particle sizes.",
+      "Ground the equipment to prevent static charge accumulation when processing fine powders.",
+      "Never process stones, metal fragments, or non-drug material — foreign objects damage the hammers and screen at high speed.",
+      "Clean thoroughly between different drug materials to prevent cross-contamination."
     ]
   }
 }

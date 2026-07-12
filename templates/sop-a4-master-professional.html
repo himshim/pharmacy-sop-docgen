@@ -66,14 +66,16 @@
             <td>{{revisionDate}}</td>
         </tr>
         {{/if}}
+        {{#if sectionRevisionNo}}
         <tr>
             <th>Revision Number</th>
             <td>{{revisionNo}}</td>
         </tr>
-        {{#if sectionReviewDate}}
+        {{/if}}
+        {{#if sectionNextReviewDate}}
         <tr>
             <th>Next Review Date</th>
-            <td>{{reviewDate}}</td>
+            <td>{{nextReviewDate}}</td>
         </tr>
         {{/if}}
         {{#if sectionCopyType}}
@@ -82,10 +84,10 @@
             <td>{{copyType}}</td>
         </tr>
         {{/if}}
-        {{#if sectionSupersedes}}
+        {{#if gmpSupersedesId}}
         <tr>
             <th>Supersedes</th>
-            <td>{{supersedes}}</td>
+            <td>{{gmpSupersedesId}}</td>
         </tr>
         {{/if}}
     </tbody>
@@ -216,6 +218,11 @@
 <!-- ═══════════════════ 7. PROCEDURE ═══════════════════ -->
 <h2>PROCEDURE</h2>
 
+{{#if sectionGmpClearance}}
+<h3>Line Clearance Checklist</h3>
+{{{gmpLineClearance}}}
+{{/if}}
+
 {{#if sectionPreparation}}
 <h3>Preparation</h3>
 <ol>
@@ -238,6 +245,11 @@
 <ol>
     {{postOperationSteps}}
 </ol>
+{{/if}}
+
+{{#if sectionGmpCleaning}}
+<h3>Cleaning &amp; Sanitation Protocol</h3>
+{{{gmpCleaningProtocol}}}
 {{/if}}
 
 {{#if sectionDataRecording}}
@@ -378,6 +390,12 @@
 <p>{{wasteDisposal}}</p>
 {{/if}}
 
+{{#if sectionGmpOos}}
+<!-- ═══════════════════ OUT OF SPECIFICATION (OOS) ═══════════════════ -->
+<h2>OUT OF SPECIFICATION (OOS) / DEVIATION</h2>
+{{{gmpOosDirective}}}
+{{/if}}
+
 {{#if sectionReferences}}
 <!-- ═══════════════════ 17. REFERENCES ═══════════════════ -->
 <h2>REFERENCES</h2>
@@ -484,5 +502,9 @@
 <!-- ═══════════════════ END OF SOP ═══════════════════ -->
 <div style="text-align: center; margin-top: 30pt; padding-top: 10pt; border-top: 2px solid #000; font-size: 10pt; color: #666;">
     <b>END OF DOCUMENT</b><br/>
+    {{#if sectionGmpFootnote}}
+    {{{gmpDataIntegrityStamp}}}
+    {{else}}
     This is a controlled document. Any printed copy is uncontrolled and for reference only.
+    {{/if}}
 </div>

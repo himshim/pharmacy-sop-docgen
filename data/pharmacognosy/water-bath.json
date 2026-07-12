@@ -1,20 +1,33 @@
 {
   "meta": {
-    "title": "Operation of Water Bath"
+    "title": "Operation of Water Bath in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To maintain constant temperature for extractions.",
-    "scope": "Applicable to heating.",
+    "purpose": "To provide controlled temperature heating for pharmacognosy experiments including phytochemical tests, extraction procedures, and evaporation of solvents from plant extracts.",
+    "scope": "Applicable to Pharmacognosy laboratory for all procedures requiring controlled temperature water heating from room temperature to 100°C.",
     "procedure": [
-      "Fill with distilled water.",
-      "Set temperature.",
-      "Place vessels.",
-      "Monitor."
+      "Fill the water bath with distilled water up to the recommended fill level (typically 2/3 full).",
+      "Switch on the water bath and set the thermostat to the required temperature.",
+      "Allow the water to reach and equilibrate at the set temperature before inserting samples.",
+      "Verify temperature using a calibrated laboratory thermometer placed in the bath.",
+      "Place beakers, flasks, or test tubes in the water bath — use appropriate bath rings or wire gauze to prevent tipping.",
+      "Ensure the submerged level of the sample vessel's contents is at or below the water bath level for effective heat transfer.",
+      "For evaporation of extracts: place round-bottom flasks on the bath surface and allow gentle warming to evaporate solvent.",
+      "Monitor the temperature at regular intervals and adjust the thermostat to maintain the set temperature.",
+      "Replenish water lost by evaporation with warm distilled water to maintain the fill level.",
+      "After use, switch off the water bath.",
+      "For extended storage, drain, clean the tank with dilute disinfectant, and refill before next use.",
+      "Record temperature, duration, and purpose in the equipment logbook."
     ],
     "precautions": [
-      "No dry operation.",
-      "Clean weekly.",
-      "Overflow prevention."
+      "Never allow the water level to drop below the heating element — dry heating burns the element.",
+      "Use distilled water only — tap water causes limescale deposits on the heating element, reducing efficiency.",
+      "Do not heat sealed containers — pressure build-up can cause breakage or expulsion of contents.",
+      "Use tongs or heat-resistant gloves when removing hot vessels from the bath.",
+      "Keep electrical connections away from water — ensure the unit is properly earthed.",
+      "Do not heat volatile organic solvents in an open vessel on the water bath in a poorly ventilated area.",
+      "Calibrate the thermostat against a NIST-traceable thermometer regularly.",
+      "Clean the bath monthly — algal growth and mineral deposits degrade heating performance."
     ]
   }
 }

@@ -1,21 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Digital Photoactometer"
+    "title": "Operation of Digital Photoactometer in Pharmacology Laboratory"
   },
   "sections": {
-    "purpose": "To record movement using photoelectric cells.",
-    "scope": "Applicable to locomotor activity studies.",
+    "purpose": "To quantify spontaneous locomotor activity in rodents (mice/rats) using light beam interruption technology for evaluation of CNS stimulant and depressant drugs in experimental pharmacology.",
+    "scope": "Applicable to Pharmacology laboratory for assessment of drug effects on motor activity, sedation screening, psychostimulant evaluation, and CNS drug profiling as per standard pharmacological methods.",
     "procedure": [
-      "Turn ON and calibrate photoelectric cells.",
-      "Place animal in arena.",
-      "Record activity count for test period.",
-      "Clean and disinfect between animals."
+      "Switch on the digital photoactometer and allow it to complete the self-test sequence.",
+      "Confirm the display shows zero counts before starting.",
+      "Clean the activity chamber with 70% ethanol and allow to dry completely — residual odour from previous animals affects behaviour of the test animal.",
+      "Acclimatize the laboratory animal (mouse: 20–25 g; rat: 150–200 g) to the laboratory environment for 30–60 minutes before the experiment.",
+      "Administer the test drug or vehicle control by the specified route (oral, i.p., i.v.) and note the administration time.",
+      "Place the animal in the activity chamber at the specified time post-administration (e.g., 30 minutes after oral administration).",
+      "Start the digital count timer in the photoactometer immediately.",
+      "Record the number of photobeam interruptions for each specified observation interval (typically 5 or 10 minute periods; total session 30–60 minutes).",
+      "Note the count on the digital display at the end of each interval and reset for the next interval if using cumulative mode.",
+      "Observe and record any qualitative behaviours (grooming, rearing, stereotypy, sedation, ataxia).",
+      "At the end of the session, remove the animal and return to its cage.",
+      "Record total counts, interval counts, and behavioural observations in the laboratory data sheet.",
+      "Clean the chamber thoroughly with 70% ethanol between animals.",
+      "Analyze data statistically: compare drug group vs. control group using unpaired t-test or ANOVA."
     ],
     "precautions": [
-      "Check all photoelectric cells functioning.",
-      "Consistent lighting conditions.",
-      "Daily calibration.",
-      "Proper animal handling."
+      "Ensure background lighting is consistent for all animals — photobeam-based activity measurement is sensitive to ambient light changes.",
+      "Perform all experiments at the same time of day — rodent locomotor activity follows a circadian rhythm.",
+      "Acclimatize animals adequately — stress from handling inflates baseline activity counts.",
+      "Use the same handler for all animals in a study to minimize inter-handler stress variability.",
+      "Clean chambers between animals — olfactory cues from previous animals significantly alter behaviour.",
+      "Keep the room quiet during recording — sudden sounds increase activity counts artificially.",
+      "Follow CPCSEA and IAEC guidelines for use of laboratory animals."
     ]
   }
 }

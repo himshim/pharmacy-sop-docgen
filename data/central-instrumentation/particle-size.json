@@ -1,19 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Particle Size Analyzer"
+    "title": "Operation of Particle Size Analyzer in Central Instrumentation Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for determination of particle size using a particle size analyzer.",
-    "scope": "Applicable to particle size analysis carried out in the Central Instrumentation Facility.",
+    "purpose": "To determine the particle size distribution of drug powders, nanoparticles, and pharmaceutical excipients using dynamic light scattering (DLS) or laser diffraction technology for formulation development and quality control.",
+    "scope": "Applicable to Central Instrumentation Laboratory for particle size characterization of drug suspensions, colloidal systems, nanoparticulate drug delivery systems, and bulk pharmaceutical powders.",
     "procedure": [
-      "Switch ON the particle size analyzer.",
-      "Allow the instrument to initialize and stabilize.",
-      "Prepare the sample dispersion as per guidelines.",
-      "Load the sample into the measurement cell.",
-      "Set analysis parameters using the software.",
-      "Start the measurement and record particle size distribution.",
-      "After analysis, clean the sample cell and switch OFF the instrument."
+      "Switch on the particle size analyzer and the associated PC; open the instrument software.",
+      "Allow 20–30 minutes warm-up for laser stabilization.",
+      "For DLS (nano-range, 1 nm–10 µm): prepare the sample in the appropriate dispersant (purified water, buffer, or organic solvent); ensure the sample is at a suitable concentration (optically translucent, not turbid).",
+      "Filter the dispersant through a 0.2 µm membrane filter to remove dust particles before use.",
+      "Set the refractive index and absorption parameters for the sample material in the software.",
+      "Clean the DLS cuvette with filtered dispersant (3 rinses); fill with sample.",
+      "Place the cuvette in the sample holder; ensure it is positioned correctly.",
+      "Set temperature to 25°C; equilibrate for 2 minutes.",
+      "Start the measurement; the software will run multiple acquisition cycles (typically 3–5 runs of 10–30 seconds each).",
+      "Record the Z-average diameter (mean hydrodynamic diameter), PDI (polydispersity index), and zeta potential if measured.",
+      "For laser diffraction (macro-range, 0.1–3500 µm): add the sample to the dispersant in the sample cell; set the appropriate optical model (Fraunhofer or Mie theory); start the measurement.",
+      "Record D10, D50, D90 values and the full size distribution graph.",
+      "Clean the cuvette or sample cell with 3–4 rinses of filtered dispersant immediately after use.",
+      "Record sample name, dispersant, temperature, results, and instrument parameters in the register."
     ],
-    "precautions": "Ensure proper dispersion of sample. Avoid air bubbles during measurement."
+    "precautions": [
+      "Dust contamination is the most common source of error — always filter dispersants and prepare samples in a clean environment.",
+      "Use only scratch-free cuvettes — scratches cause laser scattering artefacts.",
+      "For DLS: sample concentration must be in the correct range — too concentrated causes multiple scattering; too dilute gives poor signal.",
+      "Allow temperature equilibration before each measurement — temperature affects Brownian motion and thus the calculated size.",
+      "Select the appropriate optical model (Fraunhofer vs. Mie) for the sample — incorrect model gives systematically wrong size distributions.",
+      "Clean the cuvette immediately after use — dried sample deposits are difficult to remove.",
+      "Calibrate the instrument with certified polystyrene size standards regularly."
+    ]
   }
 }

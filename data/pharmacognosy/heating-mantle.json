@@ -1,24 +1,36 @@
 {
   "meta": {
-    "title": "Operation of Heating Mantle"
+    "title": "Operation of Heating Mantle in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To safely heat round-bottom flasks during extraction and concentration.",
-    "scope": "Applicable to Soxhlet extraction and reflux operations.",
+    "purpose": "To provide uniform, flameless heating to round-bottom flasks during Soxhlet extraction, reflux, and distillation operations involving organic solvents in the Pharmacognosy laboratory.",
+    "scope": "Applicable to Pharmacognosy laboratory for heating round-bottom flasks during solvent extraction, reflux extraction of crude drugs, and distillation of essential oils where direct flame is prohibited.",
     "procedure": [
-      "Place round-bottom flask inside the mantle ensuring good fit.",
-      "Add boiling chips if appropriate.",
-      "Set temperature control and switch ON.",
-      "Monitor heating and adjust as needed.",
-      "Allow cooling before removal.",
-      "Unplug after use."
+      "Select a heating mantle of the correct volume that matches the round-bottom flask to be used — the flask must sit flush inside the mantle bowl.",
+      "Inspect the mantle for damaged or exposed heating wires, burnt fabric, or cracked bowl — replace if damaged.",
+      "Place the heating mantle on a stable, heat-resistant surface or mount it on a ring stand at an appropriate height.",
+      "Fill the round-bottom flask with the material to be heated (maximum 2/3 full) and add boiling chips if required.",
+      "Seat the flask in the heating mantle bowl — the flask base must make full contact with the mantle fabric.",
+      "Connect the heating mantle to a variable voltage controller (variac) — never connect directly to mains voltage without a voltage controller.",
+      "Connect the variac to the mains power.",
+      "Set the variac to the minimum setting; switch on and gradually increase the voltage to achieve the desired heating rate.",
+      "Monitor the temperature using a thermometer or thermocouple inserted into the flask via an appropriate adapter.",
+      "For reflux: ensure the condenser is connected and coolant is flowing before applying heat.",
+      "Maintain the required temperature throughout the extraction/distillation period.",
+      "At the end of the process: reduce the variac to zero, switch off, and disconnect from mains.",
+      "Raise the flask out of the mantle using a lab jack or ring stand adjustment — do not leave the flask sitting in the hot mantle.",
+      "Allow the mantle to cool completely before handling.",
+      "Store in a clean, dry place — do not coil the power cord tightly around the hot mantle."
     ],
     "precautions": [
-      "Never heat empty mantles.",
-      "Use heat-resistant gloves for hot flasks.",
-      "Ensure good ventilation.",
-      "Do not exceed rated wattage.",
-      "Inspect cords regularly."
+      "Never connect the heating mantle directly to 220 V mains without a voltage controller — instant burnout of the heating element.",
+      "Never heat a dry empty mantle — immediately destroys the heating fabric.",
+      "The exterior of the mantle becomes very hot — never touch during operation; use tongs to handle.",
+      "Ensure the flask fits the mantle correctly — a flask too small will tip and spill; too large overhangs and heats unevenly.",
+      "Do not use with flammable solvents in an open flask without a condenser and in a fume hood.",
+      "Inspect the mantle fabric before each use — broken wires generate sparks; replace the mantle if wires are exposed.",
+      "Lower the flask into the mantle gently — impact can crack the flask.",
+      "Do not allow solvent spills onto the mantle — spills cause immediate fire risk and destroy the heating element."
     ]
   }
 }

@@ -1,20 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Mechanical Grinder"
+    "title": "Operation of Mechanical Grinder in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To grind small quantities of crude drugs.",
-    "scope": "Applicable to sample preparation.",
+    "purpose": "To rapidly reduce the particle size of dried crude drugs and plant materials using high-speed mechanical grinding blades for preparation of uniform powders for extraction and standardization.",
+    "scope": "Applicable to Pharmacognosy laboratory for size reduction of moderately hard dried plant materials including leaves, flowers, stems, seeds, and barks prior to extraction or powder characterization.",
     "procedure": [
-      "Load dry material.",
-      "Close securely.",
-      "Grind for specified time.",
-      "Sieve and clean."
+      "Ensure the crude drug material is thoroughly dried before grinding — moisture content above 8% causes clogging and uneven grinding.",
+      "Break large pieces of dried plant material into smaller fragments (< 3 cm) manually before loading.",
+      "Remove the grinding bowl from the grinder and confirm it is clean and dry.",
+      "Place the dried drug material into the grinding bowl — fill to not more than 1/3 capacity.",
+      "Secure the lid firmly on the grinding bowl — check the lock mechanism.",
+      "Place the bowl assembly in the grinder unit and lock into place.",
+      "Switch on the grinder using short pulses (2–3 second bursts) initially to break the material, then continuous run for fine grinding.",
+      "After 30–60 seconds of grinding, switch off and allow the blades to stop completely.",
+      "Unclip and open the bowl carefully — avoid inhaling the fine dust cloud released.",
+      "Check the particle size by passing through the target sieve; return coarse fraction for further grinding.",
+      "Repeat grinding-sieving cycles until the desired powder grade is achieved.",
+      "Collect the final powder in a labelled airtight container.",
+      "Clean the grinding bowl with a dry brush, then rinse with the extraction solvent to be used; finally wash with water and dry completely.",
+      "Record: drug name, initial and final weights, sieve size used, and grinding time in the logbook."
     ],
     "precautions": [
-      "Wear PPE.",
-      "Avoid metal contamination.",
-      "Clean thoroughly."
+      "Wear a dust mask (N95), safety goggles, and gloves during operation.",
+      "Never open the grinding bowl while the blades are still moving — wait for complete stop.",
+      "Do not grind wet or fresh plant material — moisture corrodes the blade and causes jamming.",
+      "Do not grind resinous materials for extended periods — resin heats up, melts, and coats the blades.",
+      "Clean thoroughly between different drug materials to prevent cross-contamination.",
+      "Do not exceed the rated capacity of the grinder — overloading stresses the motor.",
+      "Inspect blades before each use — dull or nicked blades give non-uniform particle sizes.",
+      "Ground the grinder to prevent static charge accumulation when processing fine, dry powders."
     ]
   }
 }

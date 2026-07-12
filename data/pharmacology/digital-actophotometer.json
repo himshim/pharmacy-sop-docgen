@@ -1,22 +1,33 @@
 {
   "meta": {
-    "title": "Operation of Digital Actophotometer"
+    "title": "Operation of Digital Actophotometer in Pharmacology Laboratory"
   },
   "sections": {
-    "purpose": "To digitally measure locomotor activity through IR beam interruptions.",
-    "scope": "Applicable to CNS drug screening.",
+    "purpose": "To measure spontaneous locomotor activity of rodents by counting photocell beam interruptions to assess CNS drug effects on motor activity in pharmacological screening experiments.",
+    "scope": "Applicable to Pharmacology laboratory for locomotor activity studies, sedation screening, drug abuse potential assessment, and CNS pharmacology experiments.",
     "procedure": [
-      "Power ON and perform self-calibration.",
-      "Place animal in test chamber.",
-      "Set test duration and start.",
-      "Record digital count after test.",
-      "Clean chamber between tests."
+      "Switch on the digital actophotometer and confirm the display initializes to zero.",
+      "Allow the instrument to complete self-diagnostic tests.",
+      "Clean the transparent animal activity cage with 70% ethanol and allow to dry — lingering odour from prior animal markedly biases exploratory behaviour.",
+      "Acclimatize the test animal (mouse 20–25 g or rat 150–200 g) for a minimum of 30–60 minutes in the testing room before any procedure.",
+      "Administer the drug or vehicle as per protocol; note exact administration time.",
+      "Place the animal in the actophotometer chamber at the designated time post-administration.",
+      "Press the start button and begin counting.",
+      "Record the photocell interruption count at specified intervals (typically every 5 minutes for 30 minutes).",
+      "Observe and document qualitative behaviour: level of arousal, sedation, ataxia, stereotypy, Straub tail response.",
+      "After the session, remove the animal promptly; return to housing cage.",
+      "Decontaminate the chamber with 70% ethanol between all animals.",
+      "Calculate the mean ± SEM counts for each group; compare drug groups vs. control using appropriate statistics.",
+      "Document all data in the experimental protocol sheet."
     ],
     "precautions": [
-      "Calibrate daily.",
-      "Clean IR beams.",
-      "Consistent testing environment.",
-      "Handle animals gently."
+      "Perform experiments in a low-noise, stable light environment — ambient noise and light fluctuations distort photocell readings.",
+      "Use the same time of day for all experiments to control for circadian rhythm variation in activity.",
+      "Animals must be food and water satiated before testing unless fasting is part of the protocol.",
+      "Follow CPCSEA guidelines for use and care of laboratory animals.",
+      "Acclimatize animals properly — stressed or naïve animals show elevated baseline activity that masks drug effects.",
+      "Disinfect cages between animals — odour from previous animals elicits defensive behaviour that elevates counts.",
+      "Record the room temperature (ideally 22–24°C) at each experiment — activity varies significantly with temperature."
     ]
   }
 }

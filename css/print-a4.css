@@ -101,7 +101,7 @@
 
     /* HIDE UI COMPONENTS (NOT app-container!) */
     .app-header, .controls-panel, .status-bar, 
-    .toolbar-buttons, .preview-toolbar,
+    .toolbar-buttons, .preview-toolbar, .bottom-action-bar,
     .mobile-header, .tab-navigation,
     .page-break-indicator, .tab-panel:not(#tab-preview),
     header, nav, footer, aside {
@@ -158,16 +158,46 @@
 }
 
 /* ============ 6. JS PRINT HELPER ============ */
-body.printing-mode .app-container,
+body.printing-mode .app-header,
+body.printing-mode .controls-panel,
+body.printing-mode .tab-navigation,
+body.printing-mode .status-bar,
+body.printing-mode .bottom-action-bar,
 body.printing-mode header,
 body.printing-mode nav,
-body.printing-mode aside { display: none !important; }
+body.printing-mode footer,
+body.printing-mode aside {
+    display: none !important;
+}
+
+body.printing-mode .app-container,
+body.printing-mode .main-layout,
+body.printing-mode .preview-panel {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: white !important;
+    box-shadow: none !important;
+    border: none !important;
+}
 
 body.printing-mode #preview-wrapper {
     position: static !important;
     display: block !important;
     height: auto !important;
     overflow: visible !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body.printing-mode #preview {
+    transform: none !important;
+    margin: 0 auto !important;
+    margin-bottom: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 /* ════════════════════════════════════════════════════════════════
    PROFESSIONAL ENHANCEMENTS - Auto-Numbering & Typography
@@ -238,6 +268,11 @@ body.printing-mode #preview-wrapper {
 
 #preview table {
     page-break-inside: avoid;
+}
+
+.keep-together {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
 }
 
 /* Print Color Preservation */

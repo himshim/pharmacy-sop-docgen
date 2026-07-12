@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "title": "Personal Protective Equipment (PPE) Usage"
+  },
+  "sections": {
+    "purpose": "To define the requirements, selection, donning, doffing, disposal, and maintenance of Personal Protective Equipment (PPE) in pharmacy laboratories to minimize occupational exposure to chemical, biological, and physical hazards.",
+    "scope": "Applicable to all students, faculty, laboratory staff, researchers, and visitors in all laboratories of the institution.",
+    "procedure": [
+      "Select appropriate PPE based on the specific hazards of the laboratory and experiment being conducted, as detailed in the Safety Data Sheet (SDS) and lab safety guidelines.",
+      "Inspect all PPE items for damage, wear, or defects prior to donning. Do not use compromised PPE.",
+      "Donning sequence: (1) Perform hand hygiene; (2) Put on laboratory coat/gown and button it completely; (3) Put on safety goggles/face shield; (4) Put on appropriate gloves, ensuring the cuffs extend over the lab coat sleeves.",
+      "Ensure lab coats are long-sleeved, knee-length, and remain fully buttoned at all times while in the laboratory.",
+      "Choose gloves compatible with the chemicals being handled (e.g., nitrile for general chemistry, latex for biology, neoprene/butyl for strong solvents/acids, heat-resistant for autoclaves/furnaces).",
+      "Wear safety goggles with side shields that meet safety standards (e.g., ANSI Z87.1) for all activities involving chemicals, heat, or glassware under pressure/vacuum.",
+      "Use respiratory protection (N95 or chemical cartridge respirators) when handling volatile, toxic powders or working in environments with airborne particulate hazards.",
+      "Avoid touching personal items (phones, laptops, keys) or door handles with contaminated gloves.",
+      "Doffing sequence: (1) Remove gloves using the glove-to-glove and skin-to-skin technique to prevent self-contamination; (2) Perform hand hygiene; (3) Remove safety goggles/face shield; (4) Remove lab coat; (5) Perform hand hygiene again.",
+      "Dispose of single-use PPE (gloves, masks) in designated biohazard or chemical waste containers. Never mix with regular office trash.",
+      "Wash reusable PPE (lab coats, safety goggles, face shields) regularly. Store them in clean, designated lockers or cabinets outside the main working lab space.",
+      "Report any skin contact or exposure resulting from PPE failure immediately to the Laboratory In-charge."
+    ],
+    "precautions": [
+      "PPE is the last line of defense; it does not eliminate hazards but only provides a barrier.",
+      "Never wear open-toed shoes, sandals, or high heels in the laboratory. Shoes must be fully closed and slip-resistant.",
+      "Tie back long hair and secure loose clothing or jewelry before entering the laboratory.",
+      "Do not wear contact lenses in chemical laboratories unless splash goggles are worn constantly.",
+      "Never wear laboratory coats, gloves, or other protective gear in non-laboratory areas (e.g., cafeterias, libraries, offices, restrooms).",
+      "Change gloves immediately if they become torn, punctured, or contaminated with a chemical splash.",
+      "Wash hands thoroughly with soap and water after removing gloves and before leaving the laboratory."
+    ]
+  }
+}

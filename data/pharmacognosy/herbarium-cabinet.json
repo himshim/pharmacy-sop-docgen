@@ -1,22 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Herbarium Cabinet"
+    "title": "Use and Maintenance of Herbarium Cabinet in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To store pressed and dried plant specimens for permanent reference collections.",
-    "scope": "Applicable to maintenance of Pharmacognosy herbarium collections.",
+    "purpose": "To safely store, organize, and preserve authenticated herbarium voucher specimens of medicinal plants and crude drug samples for long-term reference, teaching, and pharmacognostic authentication.",
+    "scope": "Applicable to Pharmacognosy laboratory herbarium for permanent storage of authenticated plant specimens used as reference standards for crude drug identification.",
     "procedure": [
-      "Place dried, pressed specimens in labeled folders.",
-      "File specimens alphabetically by genus or family.",
-      "Close drawers and ensure tight seal.",
-      "Control temperature (20–25°C) and humidity (<50% RH).",
-      "Inspect periodically for pests."
+      "Ensure the herbarium cabinet is clean, dry, and free of insects before placing new specimens.",
+      "Fumigate the cabinet quarterly using paradichlorobenzene (naphthalene) crystals or thymol to prevent insect damage — place fumigant in small cloth bags in the top corners of each drawer.",
+      "Organize herbarium sheets alphabetically by family and genus-species name within each drawer.",
+      "Assign a unique accession number to each mounted herbarium sheet before filing.",
+      "Place a printed herbarium label firmly on each sheet: botanical name, family, local name, collection number, date, location, collector name, and determiner name.",
+      "File sheets horizontally in drawers — do not overfill drawers (maximum 5–8 cm height of sheets per drawer).",
+      "Place a separator card (Kraft paper) between each species to prevent abrasion between mounted specimens.",
+      "Insert a 'POISON' label inside drawers containing specimens of toxic plants.",
+      "Keep a cross-reference index register: accession number, botanical name, family, collection date, and drawer/row location.",
+      "Check specimens every 6 months for: insect damage (holes, frass), mould (white powdery growth), label deterioration, and mounting paper damage.",
+      "Repair damaged mounting paper and reattach loose specimens immediately using archival PVA glue.",
+      "Replace deteriorated labels with new printed labels maintaining all original data.",
+      "Record all additions, withdrawals, and condition checks in the herbarium register.",
+      "Restrict access to authorized personnel only — log all specimen withdrawals for study or comparison."
     ],
     "precautions": [
-      "Use naphthalene balls or paradichlorobenzene for pest control.",
-      "Avoid direct sunlight.",
-      "Handle specimens with forceps.",
-      "Maintain access log for rare specimens."
+      "Never allow food or drinks near the herbarium — food attracts insects.",
+      "Maintain relative humidity between 45–55% and temperature between 15–20°C — high humidity causes mould; high temperature causes brittleness.",
+      "Install a data-logging hygrometer inside the cabinet to continuously monitor humidity.",
+      "Do not store fresh or incompletely dried specimens — moisture causes mould that destroys adjacent specimens.",
+      "Handle dried herbarium specimens with extreme care — they are very brittle.",
+      "Fumigate new incoming specimens for 2 weeks in an isolation area before adding to the main collection.",
+      "Keep the cabinet tightly closed when not in use to exclude insects and dust.",
+      "Do not expose herbarium specimens to direct sunlight — UV causes rapid fading of colours and deterioration of paper."
     ]
   }
 }

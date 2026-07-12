@@ -1,19 +1,34 @@
 {
   "meta": {
-    "title": "Use of Sample Storage Cabinet"
+    "title": "Operation of Sample Storage Cabinet in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To store working samples.",
-    "scope": "Applicable to routine storage.",
+    "purpose": "To store crude drug samples, reference standards, herbarium voucher specimens, and extract samples in an organized, secure, and climate-appropriate manner to ensure traceability and sample integrity.",
+    "scope": "Applicable to Pharmacognosy laboratory for systematic storage and retrieval of crude drug repository samples, authenticated specimens, and working reference materials.",
     "procedure": [
-      "Label clearly.",
-      "Organize by type.",
-      "Inventory log.",
-      "Inspect regularly."
+      "Assign a unique accession number to every sample before placing it in the storage cabinet.",
+      "Label each sample container with: accession number, drug name (botanical name and family), plant part, collection location, collection date, collector name, and storage condition.",
+      "Select the appropriate container type: airtight glass jars for powders; cloth bags for whole crude drugs; amber glass vials for extracts and standards.",
+      "Place desiccant (silica gel sachets) inside containers or shelves where moisture-sensitive drugs are stored.",
+      "Organize samples alphabetically by botanical name or by drug category on dedicated, labelled shelves.",
+      "Maintain a master inventory register (physical + digital) recording all samples with their location code (shelf-row-position).",
+      "Perform a monthly inventory check — verify physical samples against the register; report and investigate discrepancies.",
+      "Inspect all stored samples monthly for signs of: insect infestation, mould growth, moisture damage, or label deterioration.",
+      "Replace damaged labels immediately using waterproof permanent markers.",
+      "Fumigate the cabinet quarterly using thymol crystals or approved fumigant to prevent insect infestation.",
+      "Withdraw samples using the FIFO principle; log all withdrawals in the inventory register with date, quantity, purpose, and user.",
+      "Return unused portions of withdrawn samples promptly in correctly labelled containers.",
+      "Discard degraded, contaminated, or expired samples as per institutional waste disposal protocols.",
+      "Restrict access to authorized personnel only — maintain an access log."
     ],
     "precautions": [
-      "No expired samples.",
-      "Clean shelves."
+      "Never store unlabelled or inadequately labelled samples — this violates GLP and PCI inspection requirements.",
+      "Keep the storage cabinet locked when not in use — access must be controlled and logged.",
+      "Maintain temperature and humidity within recommended limits: crude drugs generally 15–25°C, relative humidity < 60%.",
+      "Inspect regularly for insects (particularly dermestid beetles and moths) which are the primary pest threat to crude drug repositories.",
+      "Do not mix authenticated reference samples with unverified samples on the same shelf.",
+      "Store volatile drug materials (camphor, menthol-containing drugs) separately in sealed containers to prevent contamination of adjacent materials.",
+      "Ensure the cabinet is away from direct sunlight, moisture, and heat sources."
     ]
   }
 }

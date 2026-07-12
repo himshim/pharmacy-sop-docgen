@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "Operation of Autoclave"
+  },
+  "sections": {
+    "purpose": "To sterilize pharmaceutical preparations, glassware, and equipment using saturated steam under pressure as per pharmacopeial and cGMP requirements.",
+    "scope": "Applicable to Pharmaceutics laboratory for sterilization of all materials requiring moist heat sterilization, including parenteral preparations, culture media, and labware.",
+    "procedure": [
+      "Inspect the autoclave chamber, door gasket, pressure gauge, and safety valve for any damage before operation.",
+      "Fill the inner chamber with distilled water to the recommended level (usually up to the lower basket level — not above).",
+      "Load the materials to be sterilized: wrap glassware in aluminium foil; pack media/preparations in sealed containers; do not overfill the chamber.",
+      "Ensure all items are loosely packed to allow steam penetration to all surfaces.",
+      "Do not mix liquids and dry goods in the same sterilization cycle.",
+      "Close the autoclave door firmly and secure the locking mechanism.",
+      "Select the appropriate sterilization cycle: Standard cycle — 121°C, 15 psi (103 kPa), 15–20 minutes for most pharmaceutical materials.",
+      "Start the cycle: the autoclave will first exhaust air from the chamber (if vacuum-assisted) or vent steam through the air exhaust valve.",
+      "Monitor the temperature and pressure gauges to confirm the set point is reached.",
+      "Maintain sterilization conditions for the full required time after the set temperature is achieved.",
+      "After the hold time, allow pressure to fall naturally — do not force-open the door while pressure is above zero.",
+      "After pressure reaches zero and temperature drops to 80–90°C, open the door slightly (5 cm) and allow steam to escape for 5 minutes.",
+      "Using heat-resistant gloves and tongs, remove sterilized items carefully.",
+      "Allow items to cool before handling; check biological indicators or chemical indicators placed inside the load.",
+      "Record cycle details in the autoclave logbook: date, operator, cycle parameters, load description, indicator result.",
+      "Clean the chamber interior monthly or as per schedule using an approved cleaner."
+    ],
+    "precautions": [
+      "Never open the autoclave door while pressure is above zero — risk of severe steam burns.",
+      "Do not overload the autoclave chamber — proper steam circulation is essential for sterilization.",
+      "Never autoclave materials sealed in non-autoclavable plastics or airtight metal containers.",
+      "Use appropriate wrapping/packaging that is permeable to steam.",
+      "Check and calibrate temperature sensors and pressure gauges regularly.",
+      "Perform biological indicator testing (Geobacillus stearothermophilus spore strips) periodically to validate sterilization efficacy.",
+      "Wear heat-resistant gloves and face shield when unloading hot materials.",
+      "Ensure the safety valve is functional — test as per maintenance schedule.",
+      "Keep the area around the autoclave clear of obstruction; mark as a restricted area during operation."
+    ]
+  }
+}

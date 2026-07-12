@@ -1,20 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Ultrasonic Cleaner"
+    "title": "Operation of Ultrasonic Cleaner in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To clean small glassware and tools.",
-    "scope": "Applicable to cleaning.",
+    "purpose": "To clean laboratory glassware, instruments, and botanical extraction vessels thoroughly using ultrasonic cavitation, and to assist in sonication-based extraction of phytochemicals from plant materials.",
+    "scope": "Applicable to Pharmacognosy laboratory for cleaning resin-contaminated glassware, soaking plant material for enhanced extraction, and degassing solvents.",
     "procedure": [
-      "Add cleaning solution.",
-      "Place items.",
-      "Sonicate.",
-      "Rinse thoroughly."
+      "Fill the ultrasonic cleaner tank with the appropriate liquid: distilled water with 1–2% laboratory detergent for glassware cleaning; extraction solvent (e.g., ethanol, methanol) for sonication-assisted extraction.",
+      "Do not fill above the maximum fill line marked on the tank.",
+      "Switch on the unit and allow it to reach the set operating temperature if temperature control is available (typically 40–60°C for cleaning; room temperature for extraction).",
+      "For glassware cleaning: submerge items fully in the cleaning solution using the provided basket — do not place glassware directly on the tank bottom.",
+      "For sonication extraction: place the sample and solvent in a sealed conical flask or tube and submerge in the water bath — do not place open vessels of organic solvents directly in the tank.",
+      "Set the timer for the required duration: 10–20 minutes for glassware cleaning; 20–30 minutes for sonication extraction.",
+      "Switch on the ultrasonic transducers — you will hear a distinctive buzzing/hissing sound and see surface agitation.",
+      "At the end of the cycle, switch off and carefully remove items — tank contents may be hot.",
+      "Rinse cleaned glassware three times with fresh distilled water to remove detergent residues.",
+      "Allow glassware to drain and dry on a clean drying rack.",
+      "For extraction: filter the sonicated mixture immediately through a Buchner funnel or Whatman filter paper.",
+      "Drain and clean the tank after use — do not leave dirty solution in the tank.",
+      "Wipe the outer surface of the unit and cover when not in use.",
+      "Log usage: date, operator, material processed, solution used, and duration."
     ],
     "precautions": [
-      "Compatible materials.",
-      "No powders.",
-      "Ventilation."
+      "Never operate the ultrasonic cleaner without liquid in the tank — dry running destroys the transducers.",
+      "Do not use flammable organic solvents directly in the tank — the electrical components can ignite vapours; always use an indirect method (sealed flask inside water bath).",
+      "Do not submerge glassware with ground glass joints in hot alkaline solutions — etching damages the joints.",
+      "Do not place hands in the tank during operation — ultrasonic cavitation causes tissue damage.",
+      "Ensure the tank liquid level is always above the minimum level line.",
+      "Do not use strong acids or caustic solutions in the tank — they corrode the stainless steel tank.",
+      "Replace the cleaning solution when it becomes visibly contaminated — dirty solution reduces cleaning efficiency.",
+      "Drain and clean the tank weekly when in regular use."
     ]
   }
 }

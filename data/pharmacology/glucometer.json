@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Operation of Glucometer"
+  },
+  "sections": {
+    "purpose": "To measure blood glucose concentration using a portable glucometer as part of clinical pharmacology and pharmacy practice sessions.",
+    "scope": "Applicable to Pharmacology laboratory for blood glucose monitoring practicals and clinical skills training.",
+    "procedure": [
+      "Wash hands thoroughly with soap and water and dry completely before testing.",
+      "Insert a fresh test strip into the glucometer — the device should power on automatically.",
+      "Verify the code on the test strip vial matches the code displayed on the glucometer (if applicable to model).",
+      "Clean the finger site with 70% isopropyl alcohol and allow to dry completely — do not blow to dry.",
+      "Prick the side of the fingertip using a sterile single-use lancet fitted in the lancing device.",
+      "Apply gentle pressure at the base of the finger to encourage a small drop of blood — do not squeeze hard.",
+      "Wipe away the first drop of blood.",
+      "Touch the edge of the test strip (not the top) to the blood drop and allow the strip to absorb the sample.",
+      "Wait for the result (typically 5–10 seconds depending on the model).",
+      "Read the glucose value displayed on the screen in mg/dL or mmol/L.",
+      "Record the value along with time, fasting/postprandial status, and subject details.",
+      "Remove and dispose of the test strip and lancet in appropriate waste containers.",
+      "Turn off the glucometer if it does not switch off automatically.",
+      "Normal fasting blood glucose: 70–100 mg/dL; postprandial (2 hours): <140 mg/dL."
+    ],
+    "precautions": [
+      "Use only compatible test strips for the specific glucometer model.",
+      "Check expiry date on test strips before use — expired strips give erroneous results.",
+      "Store test strips in their original vial with the cap tightly closed; avoid humidity and direct sunlight.",
+      "Never reuse lancets — use a fresh sterile lancet for each test.",
+      "Ensure the finger site is fully dry after alcohol cleaning before pricking.",
+      "Extremely high or low haematocrit can affect readings — note this limitation.",
+      "Certain medications (paracetamol, ascorbic acid) may interfere with some glucometer readings.",
+      "Calibrate or perform quality control checks with glucometer control solution as per manufacturer's guidelines.",
+      "Dispose of lancets in approved sharps containers immediately; dispose of strips as biohazard waste."
+    ]
+  }
+}

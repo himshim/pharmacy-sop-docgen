@@ -1,19 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Tablet Compression Machine"
+    "title": "Operation of Single Station Tablet Press in Pharmaceutics Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the tablet compression machine.",
-    "scope": "Applicable to tablet manufacturing practicals in the Pharmaceutics laboratory.",
+    "purpose": "To compress granulated or directly compressible pharmaceutical powders into tablets of uniform weight, thickness, hardness, and content as part of formulation development and small-scale production in the Pharmaceutics laboratory.",
+    "scope": "Applicable to Pharmaceutics laboratory for development and optimization of tablet formulations and preparation of tablet samples for pharmacopeial quality control tests.",
     "procedure": [
-      "Ensure the machine is clean and free from previous residues.",
-      "Install punches and dies of required size.",
-      "Set compression force and fill depth.",
-      "Feed granules into the hopper.",
-      "Switch ON the machine and begin compression.",
-      "Collect tablets and check for defects.",
-      "After completion, clean the machine thoroughly."
+      "Inspect and clean all die and punch sets before use — check for worn edges, pits, or corrosion; replace damaged tooling.",
+      "Install the lower punch, die, and upper punch in the tablet press tooling holder, ensuring secure fitting.",
+      "Lubricate punch and die surfaces lightly with approved lubricant (magnesium stearate dusted on surfaces or diluted in IPA solution).",
+      "Weigh the granulated/powder blend accurately; record total weight.",
+      "Adjust the lower punch depth to the required tablet weight using the weight adjustment knob; verify by ejecting a few tablets and weighing.",
+      "Adjust the compression force to achieve the target hardness: set the upper punch descent depth using the hardness adjustment knob.",
+      "Compress a series of 10–20 tablets at the initial setting; evaluate for correct weight (± 5% of target per IP), hardness (target range), thickness, and appearance.",
+      "Fine-adjust weight and hardness settings as needed after initial evaluation.",
+      "Once settings are confirmed, compress the full batch; periodically check tablet weight (every 50–100 tablets) during the run.",
+      "Collect all tablets in a labelled, clean container.",
+      "After compression, perform in-process quality checks: weight uniformity, hardness, friability, disintegration, and physical appearance.",
+      "Disassemble the tooling, clean with a dry brush, then wipe with IPA-dampened cloth; dry and store in tooling boxes.",
+      "Clean the die turret and powder contact surfaces with a vacuum and IPA wipe.",
+      "Record: blend weight, tablet weight (mean and range), hardness (mean), compression force, and any tablet defects observed."
     ],
-    "precautions": "Do not place hands near moving parts. Ensure proper lubrication before operation."
+    "precautions": [
+      "Never place fingers near the die-punch area during operation — the compression force (up to several tons) will cause severe crush injury.",
+      "Do not operate with damaged, pitted, or corroded punches and dies — defective tooling causes capping, lamination, and sticking.",
+      "Ensure all safety guards are in place before starting the press.",
+      "Clean thoroughly between different products — cross-contamination is a critical GMP failure.",
+      "Do not compress at excessive force — over-compression causes lamination (layers separating) and may damage tooling.",
+      "Keep a record of all tooling — track usage and retire worn tooling per manufacturer schedule.",
+      "For potent drugs, wear appropriate respiratory protection (N95) and use a closed system or enclosure."
+    ]
   }
 }

@@ -332,6 +332,14 @@
     {
       "key": "weighing-balance",
       "name": "Weighing Balance"
+    },
+    {
+      "key": "haemocytometer",
+      "name": "Haemocytometer"
+    },
+    {
+      "key": "uv-visible-spectrophotometer",
+      "name": "UV Visible Spectrophotometer"
     }
   ]
 }

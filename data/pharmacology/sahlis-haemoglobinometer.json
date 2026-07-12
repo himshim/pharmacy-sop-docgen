@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Operation of Sahli's Haemoglobinometer"
+  },
+  "sections": {
+    "purpose": "To estimate haemoglobin concentration in blood using the acid haematin method with Sahli's haemoglobinometer as part of pharmacology and clinical pharmacy practicals.",
+    "scope": "Applicable to Pharmacology laboratory for haemoglobin estimation experiments in clinical pharmacology practicals.",
+    "procedure": [
+      "Fill the graduated tube of the haemoglobinometer with N/10 HCl up to the 2 g% mark (lower graduation).",
+      "Clean the fingertip of the subject with 70% alcohol and allow it to dry.",
+      "Prick the fingertip firmly with a sterile lancet to obtain a free-flowing drop of blood.",
+      "Wipe away the first drop of blood.",
+      "Draw blood into the Sahli pipette exactly up to the 20 cubic mm (0.02 mL) mark — avoid air bubbles.",
+      "Wipe the outside of the pipette immediately with a clean tissue.",
+      "Blow the blood from the pipette into the acid in the graduated tube immediately.",
+      "Rinse the pipette 2–3 times with the acid solution in the tube.",
+      "Mix gently by stirring with a glass rod.",
+      "Allow the tube to stand for 10 minutes to ensure complete conversion of haemoglobin to acid haematin.",
+      "Add distilled water drop by drop using a dropper, stirring after each addition, until the colour of the solution matches the standard brown glass colour of the comparator.",
+      "Read the haemoglobin value directly from the scale on the graduated tube (in g/dL or % value).",
+      "Record the reading and note normal reference ranges: Male 13–17 g/dL; Female 12–15 g/dL.",
+      "Clean all glassware with distilled water followed by 70% ethanol after use.",
+      "Dispose of lancets in sharps containers and blood-contaminated materials in biohazard waste."
+    ],
+    "precautions": [
+      "Ensure the graduated tube is filled with N/10 HCl to the correct starting mark before adding blood.",
+      "Draw exactly 20 mm³ of blood — excess or deficit blood will give inaccurate results.",
+      "Allow exactly 10 minutes for complete acid haematin formation before colour matching.",
+      "Perform colour matching in diffuse natural daylight — avoid direct sunlight or artificial light.",
+      "Wear gloves when handling blood samples; follow universal blood/body fluid precautions.",
+      "Use sterile disposable lancets — never reuse lancets.",
+      "Dispose of all sharps in approved sharps containers immediately after use.",
+      "Note that Sahli's method has limited accuracy compared to photometric methods; results may vary ±10%."
+    ]
+  }
+}

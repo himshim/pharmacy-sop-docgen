@@ -10,6 +10,18 @@
     { "key": "weighing-procedure", "name": "General Weighing Procedure" },
     { "key": "waste-disposal", "name": "Laboratory Waste Disposal Procedure" },
     { "key": "chemical-storage", "name": "Chemical Storage Procedure" },
-    { "key": "chemical-issuing", "name": "Chemical Issuing Procedure" }
+    { "key": "chemical-issuing", "name": "Chemical Issuing Procedure" },
+    { "key": "reagent-preparation", "name": "Reagent Preparation Procedure" },
+    { "key": "standard-solution-preparation", "name": "Standard Solution Preparation" },
+    { "key": "incident-reporting", "name": "Incident and Accident Reporting" },
+    { "key": "fire-safety", "name": "Fire Safety and Emergency Evacuation" },
+    { "key": "oos-investigation", "name": "Out-of-Specification (OOS) Investigation" },
+    { "key": "logbook-maintenance", "name": "Laboratory Logbook Maintenance" },
+    { "key": "sample-receipt", "name": "Sample Receipt and Labelling" },
+    { "key": "reference-standard-management", "name": "Reference Standard Management" },
+    { "key": "ppe-usage", "name": "Personal Protective Equipment (PPE) Usage" },
+    { "key": "hazardous-chemical-handling", "name": "Handling of Corrosive and Hazardous Chemicals" },
+    { "key": "first-aid-procedure", "name": "Laboratory First Aid Procedure" },
+    { "key": "calibration-glassware", "name": "Calibration of Volumetric Glassware" }
   ]
 }

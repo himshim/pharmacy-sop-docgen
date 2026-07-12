@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Out-of-Specification (OOS) Result Investigation Procedure"
+  },
+  "sections": {
+    "purpose": "To establish a systematic procedure for investigating, documenting, and resolving analytical results that fall outside established specifications or acceptance criteria, ensuring that root causes are identified and appropriate corrective actions are implemented as per GLP and PCI inspection requirements.",
+    "scope": "Applicable to all pharmacy laboratory departments whenever an analytical result for any test (assay, purity, dissolution, microbial limit, physical test) falls outside the established specification or acceptance criteria.",
+    "procedure": [
+      "Phase 1 — Initial Assessment (Laboratory Investigation): When an OOS result is obtained, the analyst must immediately notify the Laboratory In-charge without delay.",
+      "The analyst reviews the raw data, instrument printouts, and calculations for obvious errors: arithmetic errors, incorrect formula, wrong dilution factor, instrument malfunction codes.",
+      "Check instrument performance: verify calibration status, last calibration certificate validity, and whether any error codes or alarms were triggered during the analysis.",
+      "Check reference standard and reagent status: verify expiry dates, correct preparation, and storage conditions.",
+      "Check sample preparation: verify correct sample weight, dissolution, dilution steps, and filtration.",
+      "If a clear assignable laboratory error is identified and documented (e.g., calculation error, incorrect pipette, wrong standard used): invalidate the OOS result, document the specific error in the investigation record, and re-analyse the sample.",
+      "If no laboratory error is found: proceed immediately to Phase 2.",
+      "Phase 2 — Full OOS Investigation: Notify the Department Head formally in writing (email or OOS Investigation Form) within 24 hours.",
+      "Retain all original sample preparations, standard solutions, and consumables used in the OOS analysis.",
+      "Collect information about the sample: batch history, storage conditions since receipt, appearance, any known handling concerns.",
+      "Perform a re-test: a second analyst independently re-analyses the sample using a fresh sample preparation and fresh standard solution.",
+      "If re-test passes: document thoroughly; investigate why original result was OOS; if a laboratory error is subsequently identified, invalidate original result with full justification.",
+      "If re-test also fails: the OOS result is confirmed as a genuine product failure.",
+      "Phase 3 — Confirmed OOS: Document the confirmed OOS result in the OOS investigation report.",
+      "Complete the OOS Investigation Report within 5 working days: Sample details, Test performed, Specification, OOS result obtained, Laboratory investigation findings, Re-test results, Root cause (if determined), Conclusion, Recommended action (reject batch, additional testing, notify relevant authority).",
+      "Submit the signed report to the Department Head and Quality team for review and approval.",
+      "Retain all OOS investigation records, raw data, and supporting documentation for a minimum of 5 years."
+    ],
+    "precautions": [
+      "Never discard OOS data, erase instrument printouts, or alter raw data — tampering with analytical records is a criminal offence under pharmaceutical regulations.",
+      "Do not initiate any re-testing or invalidation without documented justification — re-testing to obtain a passing result without identified error is regulatory fraud (data integrity violation).",
+      "The decision to invalidate an OOS result must be scientifically justified and documented — it cannot be based solely on the desire to pass a specification.",
+      "All phases of OOS investigation must be completed and documented — an incomplete investigation is a critical PCI inspection finding.",
+      "Notify the Principal/Head of Institution for all confirmed product OOS results — regulatory escalation may be required.",
+      "Ensure all analysts understand that OOS reporting is mandatory and non-punitive — fear of consequences must not prevent timely reporting.",
+      "Maintain a summary OOS trend log — a pattern of OOS results for the same test or product indicates a systemic problem requiring CAPA."
+    ]
+  }
+}

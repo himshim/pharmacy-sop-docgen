@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Operation of Microtome"
+  },
+  "sections": {
+    "purpose": "To prepare thin uniform sections of plant tissue, embedded specimens, or paraffin blocks for microscopic examination in pharmacognosy and histology practicals.",
+    "scope": "Applicable to Pharmacognosy laboratory for preparation of transverse sections (T.S.) and longitudinal sections (L.S.) of plant materials for identification and histological studies.",
+    "procedure": [
+      "Ensure the microtome blade is sharp and securely clamped in the blade holder — use appropriate blade type (rotary or sledge microtome).",
+      "Fix the tissue block (paraffin-embedded or hand-sectioning tissue) securely in the specimen clamp.",
+      "Set the desired section thickness using the micrometer dial: for plant tissues 10–15 µm is typical; for general histology 5–10 µm.",
+      "Advance the specimen slowly toward the blade using the coarse advance wheel to trim the block face until a full section is obtained.",
+      "Rotate the handwheel of the rotary microtome steadily and evenly to cut a ribbon of sections.",
+      "Use a fine brush to guide the ribbon off the blade and transfer to a water bath at 40–45°C to allow sections to flatten.",
+      "Lift the section from the warm water bath using a glass slide, positioning the section centrally.",
+      "Drain excess water and place slides on a slide warmer (37–40°C) to allow sections to adhere and dry for at least 30 minutes.",
+      "For hand sections of fresh plant tissue: Use a sharp razor blade to cut free-hand sections as thin as possible, then transfer to a watch glass with water.",
+      "Transfer sections to staining solutions (e.g., safranin for cell walls, alcian blue for mucilage) as per staining protocol.",
+      "Mount stained sections in glycerine or DPX mounting medium and apply a coverslip.",
+      "Allow mounting medium to set before viewing under microscope.",
+      "Label all slides with material, staining method, section type, and date.",
+      "Clean the microtome blade area with a soft brush to remove wax residue after sectioning."
+    ],
+    "precautions": [
+      "Exercise extreme caution when handling and changing microtome blades — blades are razor sharp.",
+      "Use blade-handling forceps or blade removal tools — never touch the cutting edge with bare fingers.",
+      "Lock the specimen holder and engage the blade safety mechanism before adjusting blade or specimen.",
+      "Wear cut-resistant gloves when handling blades and mounting them into the holder.",
+      "Keep fingers away from the cutting path at all times during operation.",
+      "Ensure the microtome is placed on a stable, vibration-free surface for thin sections.",
+      "Dispose of used blades in a sharps container — never in general waste.",
+      "Keep the water bath temperature controlled — too hot causes sections to disintegrate.",
+      "Lubricate the microtome moving parts as per manufacturer's maintenance schedule."
+    ]
+  }
+}

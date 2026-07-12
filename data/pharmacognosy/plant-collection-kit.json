@@ -1,19 +1,38 @@
 {
   "meta": {
-    "title": "Use of Plant Collection Kit"
+    "title": "Use of Plant Collection Kit in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To collect plant specimens for herbarium preparation.",
-    "scope": "Applicable to field collection.",
+    "purpose": "To systematically collect, press, preserve, and document wild plant specimens for pharmacognostic authentication, herbarium preparation, and crude drug source verification as per standard botanical collection protocols.",
+    "scope": "Applicable to Pharmacognosy laboratory and field collection trips for systematic collection of medicinal plant specimens for identification, voucher deposition, and teaching herbaria.",
     "procedure": [
-      "Record collection data.",
-      "Collect representative parts.",
-      "Press immediately."
+      "Obtain required permissions before collection — check for forest department clearances or landowner permissions as applicable.",
+      "Select healthy, mature plants showing characteristic features: leaves, flowers, fruits, and roots where possible.",
+      "Use sharp secateurs or pruning shears to make clean cuts without tearing — collect a representative branch (30–45 cm) bearing multiple leaves, buds, and flowers.",
+      "For root/underground parts: use a digging trowel; collect the minimum required while leaving enough for plant survival.",
+      "Place fresh specimens immediately in a polythene collection bag to prevent wilting.",
+      "Record field data immediately at the time of collection in the field notebook: date, location (GPS coordinates), altitude, habitat type, plant name (local/botanical), collector name, collection number.",
+      "Photograph the plant in situ: whole plant, leaves (upper and lower surface), flowers/fruits, bark, and habitat.",
+      "On return to the laboratory, remove specimens from bags and spread on clean, dry newspapers.",
+      "Remove excess soil from roots using a soft brush.",
+      "Arrange specimens on herbarium-size blotting paper (28 × 42 cm) — straighten leaves showing both surfaces; open flowers to display reproductive parts.",
+      "Fold the blotting paper around the specimen and place between several layers of newspaper.",
+      "Stack pressed specimens with additional newspaper layers and place in a plant press; tighten the press firmly.",
+      "Change blotting paper every 24 hours for the first 3–4 days.",
+      "Once dried (7–14 days), mount specimens on herbarium sheets with gum or adhesive tape.",
+      "Attach a printed herbarium label with all collection data.",
+      "Deposit authenticated voucher specimens in the institutional herbarium; record the voucher number.",
+      "Process collected material for crude drug preparation: clean, dry, and powder as per protocol."
     ],
     "precautions": [
-      "Follow ethical collection.",
-      "Avoid contamination.",
-      "Label properly."
+      "Never collect from protected, endangered, or CITES-listed species without proper authorization.",
+      "Do not collect more plant material than required — minimize ecological impact.",
+      "Wear gloves when collecting plants with irritant latex or thorns.",
+      "Label specimens immediately at the time of collection — never rely on memory.",
+      "Photograph all specimens before pressing — fresh specimens provide better photographic quality.",
+      "Do not collect from roadside or polluted areas for chemical analysis — atmospheric deposition contaminates samples.",
+      "Handle pressed specimens with care once dry — they are extremely brittle.",
+      "Treat all specimens with pest repellent (paradichlorobenzene or thymol) before herbarium storage."
     ]
   }
 }

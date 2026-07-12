@@ -1,18 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Pulverizer"
+    "title": "Operation of Pulverizer in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To pulverize tough plant materials.",
-    "scope": "Applicable to size reduction.",
+    "purpose": "To reduce the particle size of crude drugs and plant materials to a uniform powder suitable for extraction, standardization, and phytochemical screening.",
+    "scope": "Applicable to Pharmacognosy laboratory for size reduction of dried plant materials, bark, roots, seeds, and resins before further processing.",
     "procedure": [
-      "Load material.",
-      "Pulverize.",
-      "Collect and sieve."
+      "Ensure the crude drug material is thoroughly dried before pulverization — moisture content above 10% clogs the pulverizer.",
+      "Inspect the pulverizer blades, chamber, and discharge sieve for cleanliness and absence of previous material residue.",
+      "Select and fix the appropriate mesh sieve at the discharge outlet as per required particle size.",
+      "Break large lumps of dried plant material manually into smaller pieces (< 2 cm) before loading.",
+      "Load the dried plant material into the pulverizer hopper — do not exceed the rated capacity (typically 500 g per batch).",
+      "Ensure the collection vessel is properly fitted at the outlet before switching ON.",
+      "Switch on the pulverizer and allow it to reach full operating speed before feeding material continuously.",
+      "Collect the powder from the discharge outlet in a clean, dry, labelled container.",
+      "After processing, switch OFF and allow the blades to come to a complete stop before opening the chamber.",
+      "Remove remaining material from the chamber using a soft brush — do not use metal tools near the blades.",
+      "Clean the chamber, sieve, and blades with a dry brush followed by compressed air; wash with water if switching materials.",
+      "Pass the collected powder through the target mesh sieve manually to verify particle size uniformity.",
+      "Label the powder with plant name, part used, date of pulverization, and batch number.",
+      "Record batch details, weight before and after pulverization, and sieve size used in the logbook."
     ],
     "precautions": [
-      "PPE.",
-      "Clean."
+      "Wear a dust mask (N95), safety goggles, and gloves during operation — plant dust can be allergenic.",
+      "Never insert hands or any object into the pulverizer chamber during operation.",
+      "Do not overload — excess material causes motor overheating and blade damage.",
+      "Ensure the material is completely dry — wet material clogs the sieve and damages the motor.",
+      "Woody and fibrous materials (e.g., bark, roots) may require pre-cutting with a cutter mill first.",
+      "Clean the pulverizer thoroughly between different plant materials to avoid cross-contamination.",
+      "Inspect blades for wear, nicks, or damage before each use — replace worn blades immediately.",
+      "Ground the pulverizer to prevent static charge buildup when processing fine powders."
     ]
   }
 }

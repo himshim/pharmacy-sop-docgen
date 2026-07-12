@@ -1,23 +1,35 @@
 {
   "meta": {
-    "title": "Use of Herbarium Press"
+    "title": "Use and Maintenance of Herbarium Press in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To dry and flatten plant specimens for permanent herbarium storage.",
-    "scope": "Applicable to preparation of herbarium sheets.",
+    "purpose": "To press and dry freshly collected plant specimens into flat, preserved forms suitable for mounting on herbarium sheets as permanent voucher specimens for pharmacognostic identification and authentication.",
+    "scope": "Applicable to Pharmacognosy laboratory and field collection activities for preparation of authenticated herbarium specimens from fresh medicinal plant collections.",
     "procedure": [
-      "Arrange plant parts between blotting paper sheets.",
-      "Place in newspaper or herbarium paper.",
-      "Stack in the press with cardboard separators.",
-      "Tighten wing nuts evenly.",
-      "Leave for 2–4 weeks, changing blotting paper weekly.",
-      "Mount dried specimens on herbarium sheets."
+      "Assemble the herbarium press: place one wooden lattice board flat on the floor or table.",
+      "Place 2–3 layers of newspaper followed by one sheet of blotting paper on the board.",
+      "Arrange the fresh plant specimen on the blotting paper — straighten leaves and stems to display all diagnostic features; show both upper and lower leaf surfaces (fold some leaves to expose undersurface).",
+      "Open flowers and fruits to show internal structures; use additional blotting paper strips to separate overlapping parts.",
+      "If the specimen is too long (> 42 cm), fold in a V or N shape.",
+      "Cover with another sheet of blotting paper and 2–3 layers of newspaper.",
+      "Add the next specimen layer repeating steps 3–6; the press can hold 20–30 specimens in a stack.",
+      "Place the second wooden lattice board on top of the stack.",
+      "Tighten the press straps or wingnut bolts firmly and evenly — compress until snug; do not over-tighten immediately.",
+      "Re-tighten after 2–4 hours as the compressed specimens relax.",
+      "Change the blotting paper daily for the first 3–4 days — this is the most critical step for rapid drying and mould prevention.",
+      "For succulent specimens: change blotting paper every 6–8 hours initially.",
+      "Drying is complete in 7–14 days when specimens are stiff, no longer cool to touch, and do not bend when lifted.",
+      "Carefully remove dried specimens and transfer to herbarium mounting.",
+      "Air-dry the press boards and blotting paper after use before storing."
     ],
     "precautions": [
-      "Use absorbent blotting paper to prevent mold.",
-      "Avoid excessive pressure causing tissue damage.",
-      "Label specimens before pressing.",
-      "Store press in dry, ventilated area."
+      "Do not press wet or heavily succulent specimens without first blotting excess surface moisture — excessive moisture promotes rapid mould growth.",
+      "Change blotting paper frequently — leaving wet paper too long causes browning, mould, and specimen deterioration.",
+      "For very succulent plants (cactus, aloe): make incisions in thick parts before pressing to allow interior moisture to escape.",
+      "Label specimens with collection number immediately before pressing — labels placed after drying may be confused.",
+      "Keep pressed specimens away from insects — treat newly pressed specimens with insect repellent (naphthalene sachets placed in the press).",
+      "Do not over-tighten immediately — initial firm tightening is sufficient; re-tighten after first hour as specimens compress.",
+      "Inspect the press daily — address mould or insect infestation immediately to save specimens."
     ]
   }
 }

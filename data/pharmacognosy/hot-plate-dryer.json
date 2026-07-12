@@ -1,21 +1,32 @@
 {
   "meta": {
-    "title": "Operation of Hot Plate Dryer"
+    "title": "Operation of Hot Plate Dryer in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To dry small quantities of samples and glassware.",
-    "scope": "Applicable to rapid drying in Pharmacognosy.",
+    "purpose": "To provide controlled surface heating for evaporating small volumes of plant extracts on TLC plates, evaporating spot residues, and gentle warming of reagent solutions in Pharmacognosy practicals.",
+    "scope": "Applicable to Pharmacognosy laboratory for TLC spot drying, gentle evaporation of solvent extract portions on watch glasses, and warming of reaction mixtures in phytochemical screening.",
     "procedure": [
-      "Place samples on heat-resistant dishes.",
-      "Set moderate temperature.",
-      "Monitor and stir if needed.",
-      "Remove when dry, allow cooling.",
-      "Clean surface after use."
+      "Place the hot plate dryer on a stable, heat-resistant bench surface.",
+      "Connect to the power supply and set the temperature control dial to the required setting.",
+      "Allow the hot plate surface to reach the set temperature — this typically takes 5–10 minutes.",
+      "Verify the surface temperature using an infrared thermometer or a calibrated bimetallic probe before placing samples.",
+      "For TLC plate drying: place the spotted TLC plate face-up on the hot plate surface at a low setting (40–50°C) for 1–2 minutes to drive off application solvent before development.",
+      "For extract evaporation: place the watch glass or evaporating dish with extract on the hot plate at 60–80°C; monitor continuously and stir with a glass rod.",
+      "Do not leave heating operations unattended — extract overheating causes decomposition and fire risk.",
+      "After the required drying or warming, remove samples using tongs or heat-resistant gloves.",
+      "Set the temperature control to zero and switch off after use.",
+      "Allow the hot plate surface to cool completely before cleaning.",
+      "Clean the plate surface with a damp cloth when cool — remove any dried residues carefully.",
+      "Record usage in the equipment logbook: date, operator, temperature used, and application."
     ],
     "precautions": [
-      "Avoid overheating samples.",
-      "Use tongs for hot items.",
-      "Keep away from flammable materials."
+      "Never place flammable organic solvents in open containers on a hot plate dryer — use a water bath inside a fume hood instead.",
+      "Always verify the surface temperature before placing heat-sensitive samples — thermostat readings may not accurately reflect actual surface temperature.",
+      "Use heat-resistant mats or ceramic tiles as intermediate surface for large or heavy objects.",
+      "Do not use on uneven or tilted surfaces — vessels can slide off.",
+      "The hot plate surface remains very hot after switch-off — place a 'HOT' warning sign on the unit until cool.",
+      "Never cover the hot plate surface — heat buildup can damage the heating element.",
+      "Do not use near flammable materials or near the edge of the bench."
     ]
   }
 }

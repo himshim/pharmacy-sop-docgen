@@ -1,19 +1,39 @@
 {
   "meta": {
-    "title": "Operation of Soxhlet Extraction Apparatus"
+    "title": "Operation of Soxhlet Extraction Apparatus in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for extraction of constituents using Soxhlet apparatus.",
-    "scope": "Applicable to extraction of crude drugs in the Pharmacognosy laboratory.",
+    "purpose": "To perform continuous hot solvent extraction of phytochemicals from crude drugs using the Soxhlet method for determination of extractive values and isolation of specific compound classes as per IP/WHO requirements.",
+    "scope": "Applicable to Pharmacognosy laboratory for determination of alcohol-soluble, water-soluble, and ether-soluble extractive values of crude drugs, and for preparative isolation of specific phytochemical classes.",
     "procedure": [
-      "Assemble the Soxhlet extraction apparatus properly.",
-      "Place the powdered drug in the extraction thimble.",
-      "Add suitable solvent to the round bottom flask.",
-      "Heat the assembly gently using a heating mantle.",
-      "Allow the extraction cycle to continue for the required duration.",
-      "After extraction, allow the apparatus to cool.",
-      "Collect the extract for further analysis."
+      "Weigh the dried, powdered crude drug accurately (typically 2–5 g for extractive value; 20–50 g for preparative extraction) and record the weight.",
+      "Prepare the thimble: place a small plug of cotton wool at the bottom of the extraction thimble, then pack the drug powder uniformly; place another cotton plug on top — the drug should not be packed so tightly as to prevent solvent flow.",
+      "Ensure the thimble height does not exceed the siphon arm level of the Soxhlet extractor.",
+      "Assemble the apparatus from bottom to top: round-bottom flask → Soxhlet extractor body → Liebig condenser.",
+      "Add the extraction solvent to the round-bottom flask: typically 1.5–2× the extractor volume (e.g., 150–200 mL for a 100 mL Soxhlet); add boiling chips.",
+      "Insert the filled thimble into the Soxhlet extractor body.",
+      "Connect coolant water to the condenser (inlet at bottom, outlet at top) and confirm steady flow.",
+      "Heat the flask using a heating mantle or water bath — bring solvent to a gentle boil.",
+      "As the solvent evaporates, condenses, and fills the Soxhlet chamber, it contacts the drug in the thimble, extracting soluble compounds.",
+      "When the Soxhlet chamber fills to the siphon level, the solution automatically siphons back into the flask — this completes one cycle.",
+      "Maintain extraction for the required number of cycles or time per the IP method (typically 16–25 cycles or 4–8 hours for extractive values).",
+      "Monitor the solvent level in the flask periodically — add more solvent if it falls below 1/3 flask volume.",
+      "After extraction, reduce heat and allow the extractor to cool; allow one final siphon cycle.",
+      "Remove the thimble with forceps (it is hot); allow to cool.",
+      "Transfer the flask extract to a pre-weighed evaporating dish.",
+      "Evaporate the solvent on a water bath at appropriate temperature; dry in an oven at 105°C to constant weight.",
+      "Calculate extractive value (%): [(Weight of extract) / (Weight of drug)] × 100.",
+      "Record extraction solvent, number of cycles, time, initial drug weight, and extractive value in the logbook."
     ],
-    "precautions": "Ensure proper assembly to prevent solvent leakage. Handle hot apparatus carefully."
+    "precautions": [
+      "Never use flammable solvents (ether, petroleum ether) without a spark-free heating source — use a water bath, not a heating mantle, for highly flammable solvents.",
+      "Work in a fume hood for all volatile organic solvents.",
+      "Do not pack the thimble too tight — restricted flow prevents proper extraction cycles.",
+      "Ensure the drug level in the thimble is below the siphon arm — drug above the siphon arm does not get extracted.",
+      "Use boiling chips to prevent bumping — bumping causes spillage of hot solvent.",
+      "Never leave the Soxhlet extraction unattended for prolonged periods — coolant supply failure causes uncondensed vapours to escape.",
+      "Ensure all joints are tight — leaking joints allow solvent vapour escape and fire risk.",
+      "Cool the apparatus before disassembling — hot ground glass joints may seize."
+    ]
   }
 }

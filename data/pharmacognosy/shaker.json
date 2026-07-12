@@ -1,19 +1,33 @@
 {
   "meta": {
-    "title": "Operation of Shaker"
+    "title": "Operation of Mechanical Shaker / Orbital Shaker in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To shake maceration flasks.",
-    "scope": "Applicable to maceration.",
+    "purpose": "To provide continuous mechanical agitation for extraction, maceration, and dissolution processes of plant materials and crude drugs to ensure uniform mixing and enhanced solute transfer.",
+    "scope": "Applicable to Pharmacognosy laboratory for maceration extraction, solubility testing, and preparation of herbal extracts requiring controlled agitation.",
     "procedure": [
-      "Secure flasks.",
-      "Set speed.",
-      "Shake time.",
-      "Remove."
+      "Inspect the shaker platform and clamps for cleanliness and mechanical integrity before use.",
+      "Place sample flasks or bottles on the shaker platform — ensure they are of uniform size and symmetrically arranged to balance the load.",
+      "Secure each flask/bottle firmly using the spring clamps or holddown clips to prevent displacement during shaking.",
+      "Cap all flasks tightly to prevent solvent evaporation — use PTFE-lined caps for organic solvents.",
+      "Set the desired speed (RPM) using the speed control knob — typical range for plant extraction: 100–200 RPM.",
+      "Set the required time on the timer if the shaker has a built-in timer; otherwise use an external stopwatch.",
+      "Switch ON the shaker and verify it starts smoothly without excessive vibration or wobble.",
+      "Allow the shaker to run for the specified extraction duration without unnecessary interruption.",
+      "At the end of the shaking period, switch OFF and allow the platform to come to a complete stop.",
+      "Carefully remove all flasks — caution if contents are under pressure (seal tightly before shaking volatile solvents).",
+      "Proceed immediately to filtration or further processing of the extract.",
+      "Clean the platform with a damp cloth; wipe with 70% alcohol if any spillage occurred.",
+      "Record speed, duration, solvent system, plant material, and extract yield in the laboratory logbook."
     ],
     "precautions": [
-      "Balance.",
-      "Secure lids."
+      "Balance the load symmetrically on the platform — asymmetric loading causes excessive vibration and motor damage.",
+      "Do not exceed the rated load capacity of the shaker platform.",
+      "Ensure all flasks are tightly stoppered before shaking — solvent spillage is a fire and health hazard.",
+      "For flammable organic solvents, use explosion-proof motors or perform extraction in a fume hood.",
+      "Secure the shaker on a stable, vibration-resistant bench surface.",
+      "Do not leave the shaker unattended for long periods when using volatile solvents.",
+      "Allow the platform to stop completely before removing flasks — remove flasks while platform is moving is dangerous."
     ]
   }
 }

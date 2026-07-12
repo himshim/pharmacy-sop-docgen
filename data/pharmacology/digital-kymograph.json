@@ -1,22 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Digital Kymograph"
+    "title": "Operation of Digital Kymograph in Pharmacology Laboratory"
   },
   "sections": {
-    "purpose": "To record isolated tissue contractions digitally.",
-    "scope": "Applicable to smooth muscle pharmacology.",
+    "purpose": "To digitally record and display physiological signals including isotonic and isometric contractions of isolated tissues, nerve-muscle preparations, and cardiovascular responses during pharmacology experiments.",
+    "scope": "Applicable to Pharmacology laboratory for recording smooth muscle contractions, cardiac preparations, nerve-muscle experiments, and drug dose-response data in isolated organ experiments.",
     "procedure": [
-      "Connect tissue bath and transducer.",
-      "Calibrate tension scale.",
-      "Start recording baseline.",
-      "Add drugs and record responses.",
-      "Save digital traces."
+      "Connect the digital kymograph to the power supply and to the data acquisition system or PC via USB/RS-232 interface.",
+      "Install and open the appropriate recording software (LabChart, PowerLab, or equivalent).",
+      "Connect the transducer output cable from the force transducer or isotonic lever to the appropriate input channel of the digital kymograph.",
+      "Calibrate the system: apply a known force (e.g., 1 g, 2 g weights) to the transducer and note the corresponding digital readout to establish the calibration factor.",
+      "Set the recording parameters in software: sampling rate (typically 100–1000 Hz for muscle contractions), time axis scale, and amplitude scale.",
+      "Zero the baseline: with no load applied, set the baseline to zero on the recording channel.",
+      "Set up the organ bath or muscle preparation as per the experimental protocol.",
+      "Start the recording session in the software before administering drugs.",
+      "Apply test doses of drugs and observe the digitally recorded contraction or relaxation responses.",
+      "Mark each drug addition event using the event marker channel in the software.",
+      "After the experiment, stop the recording and save the data file.",
+      "Analyze the recorded traces: measure amplitude, duration, latency, and calculate dose-response parameters.",
+      "Export data for statistical analysis or prepare printed kymograph traces for the laboratory record.",
+      "Disconnect the transducer gently; clean and store as per protocol.",
+      "Log the experiment details, drug doses, and observations in the laboratory notebook."
     ],
     "precautions": [
-      "Proper transducer calibration.",
-      "Avoid air bubbles in tubing.",
-      "Stable temperature control.",
-      "Humane tissue handling."
+      "Handle transducer connections with care — excessive force on the transducer cable connector damages the input socket.",
+      "Do not exceed the maximum input voltage/force rating of the transducer — overloading damages the sensor element.",
+      "Ensure the grounding of all electronic equipment is proper — ground loops cause 50 Hz electrical noise in recordings.",
+      "Calibrate at the beginning of every experimental session — transducer sensitivity can drift.",
+      "Save data files frequently — an unexpected software or power failure will lose unsaved recordings.",
+      "Keep the electronic unit away from water and Tyrode's solution — moisture causes irreversible damage.",
+      "Back up all experimental data files to a secondary location (USB/network drive) at the end of each session."
     ]
   }
 }

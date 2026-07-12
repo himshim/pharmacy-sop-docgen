@@ -1,19 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Melting Point Apparatus"
+    "title": "Operation of Melting Point Apparatus in Pharmaceutical Chemistry Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for determining melting point using a melting point apparatus.",
-    "scope": "Applicable to determination of melting point of solid substances in the Pharmaceutical Chemistry laboratory.",
+    "purpose": "To determine the melting point of synthesized pharmaceutical compounds and pure drug substances as a key identity, purity, and characterization parameter as per IP/BP/USP pharmacopeial standards.",
+    "scope": "Applicable to Pharmaceutical Chemistry laboratory for melting point determination of synthesized drug intermediates, final products, and reference standard verification.",
     "procedure": [
-      "Ensure the melting point apparatus is clean and switched OFF.",
-      "Fill the capillary tube with finely powdered sample.",
-      "Place the capillary tube in the heating block.",
-      "Switch ON the apparatus and start heating gradually.",
-      "Observe the temperature at which the sample starts melting.",
-      "Record the melting point range.",
-      "Switch OFF the apparatus after use."
+      "Switch on the melting point apparatus and set the starting temperature approximately 10°C below the expected melting point of the compound.",
+      "Dry the compound thoroughly — moisture presence lowers the observed melting point significantly.",
+      "Grind a small quantity of the compound to fine powder using a mortar and pestle.",
+      "Fill a capillary tube (1 mm internal diameter, sealed at one end) by pressing the open end into the powder heap repeatedly.",
+      "Compact the powder by dropping the capillary tube (closed end down) repeatedly through a long glass tube onto the bench — compact to 2–3 mm column height.",
+      "Place the capillary tube in the heating block or silicon oil bath of the apparatus.",
+      "Set the heating rate to 1–2°C/minute as the expected melting point is approached — slow heating rates give more accurate results.",
+      "Observe the capillary tube through the magnifying eyepiece.",
+      "Note the temperature when the compound first begins to soften or shows the first drop of liquid at the edges (onset of melting, T₁).",
+      "Note the temperature when the compound becomes completely liquid (complete melting, T₂).",
+      "The melting range is reported as T₁–T₂ (e.g., 154–156°C).",
+      "A narrow melting range (≤ 2°C) indicates high purity; a wide range suggests impurities or mixed crystal forms.",
+      "Compare the observed melting point with the reference value from the pharmacopoeia or literature.",
+      "Allow the apparatus to cool before the next determination.",
+      "Record: compound name, batch, expected MP, observed MP range, and purity inference in the laboratory notebook."
     ],
-    "precautions": "Do not heat rapidly. Handle capillary tubes carefully to avoid breakage."
+    "precautions": [
+      "For capillary tube method, use only calibrated, clean capillary tubes — reusing tubes introduces contamination.",
+      "Ensure the compound is finely powdered and packed tightly — loosely packed powder gives a wide, inaccurate melting range.",
+      "Use a slow heating rate (1–2°C/min) near the expected melting point — fast heating gives results 2–5°C higher than the true value.",
+      "Do not touch the capillary tube with bare hands while loading — skin oils contaminate the compound.",
+      "Do not overfill the capillary tube — the compound column should be 2–3 mm; taller columns cause slow heat transfer.",
+      "Allow the apparatus to cool completely between runs if re-running at a lower temperature.",
+      "Calibrate the apparatus regularly using reference standards (e.g., phenacetin MP 134–135°C; acetanilide 114–116°C)."
+    ]
   }
 }

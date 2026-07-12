@@ -1,21 +1,36 @@
 {
   "meta": {
-    "title": "Operation of Infrared Moisture Balance"
+    "title": "Operation of Infrared Moisture Balance in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To determine moisture content of crude drugs by loss on drying.",
-    "scope": "Applicable to moisture determination in Pharmacognosy.",
+    "purpose": "To rapidly determine the moisture content of crude drugs, powdered herbs, and plant extracts using infrared radiation heating with simultaneous gravimetric weight measurement for standardization and quality control.",
+    "scope": "Applicable to Pharmacognosy laboratory for rapid moisture determination during crude drug procurement, processing, and before long-term storage — supplementary to the pharmacopeial loss on drying method.",
     "procedure": [
-      "Tare the pan.",
-      "Add sample (2–3g).",
-      "Set temperature and time.",
-      "Record initial and final weight.",
-      "Calculate % moisture."
+      "Switch on the infrared moisture balance and allow 15 minutes warm-up time before the first measurement.",
+      "Level the instrument using the built-in spirit level and adjusting the levelling feet.",
+      "Clean the sample pan with a dry lint-free cloth; place it on the pan holder.",
+      "Tare the empty pan by pressing 'Tare' — the display should show 0.00 g and 0.00% moisture.",
+      "Set the infrared lamp drying temperature: 105°C for most crude drugs; 60–80°C for essential oil-containing drugs or thermolabile materials.",
+      "Select the automatic shut-off mode (recommended): the balance stops when weight change is < 1 mg per minute.",
+      "Grind or powder the sample finely to maximize surface area exposure.",
+      "Spread 2–3 g of the sample uniformly across the sample pan in a thin, even layer — do not heap in the centre.",
+      "Close the lid — the IR lamp activates and the display shows real-time moisture loss percentage.",
+      "Wait for the automatic completion signal or until the reading stabilizes.",
+      "Record the final moisture content (%) shown on the display.",
+      "Open the lid carefully — the pan and sample are very hot.",
+      "Use forceps to remove the hot pan; allow to cool before discarding the sample.",
+      "Clean the pan immediately with a dry brush.",
+      "Record: sample name, initial weight, temperature, method (auto/timed), final moisture % in the logbook.",
+      "Compare against IP/WHO/institutional specification limits for the specific crude drug."
     ],
     "precautions": [
-      "Use dry pans.",
-      "Avoid volatile materials.",
-      "Calibrate regularly."
+      "The sample pan becomes extremely hot (>100°C) during operation — always use tongs or forceps to handle.",
+      "Do not look directly at the infrared lamp during operation — intense infrared radiation causes eye injury.",
+      "Spread sample uniformly — uneven layering causes inconsistent drying and inaccurate results.",
+      "Allow the balance to cool between successive determinations — minimum 5 minutes between runs.",
+      "Calibrate using a reference standard material (certified moisture reference or sodium tartrate dihydrate) periodically.",
+      "Do not use for samples with reactive or corrosive components — they damage the IR lamp and load cell.",
+      "The infrared moisture balance gives rapid results but may differ slightly from pharmacopeial LOD values — use IP method for official reporting."
     ]
   }
 }

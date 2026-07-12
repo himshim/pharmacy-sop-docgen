@@ -1,19 +1,30 @@
 {
   "meta": {
-    "title": "Use of Stop Watch"
+    "title": "Use of Stop Watch in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To time procedures.",
-    "scope": "Applicable to timed operations.",
+    "purpose": "To accurately measure and record time intervals during pharmacognosy experiments including extraction, maceration, percolation, and distillation procedures.",
+    "scope": "Applicable to all timed operations in the Pharmacognosy laboratory including extraction procedures, sedimentation tests, and stability assessments.",
     "procedure": [
-      "Reset.",
-      "Start.",
-      "Stop.",
-      "Record."
+      "Verify battery level before use — replace if display is dim or shows low battery warning.",
+      "Press the 'Reset' button to set the display to 00:00:00 before starting any timing procedure.",
+      "At the precise moment the timed event begins (e.g., addition of solvent, start of heating), press 'Start'.",
+      "Allow the stopwatch to run without disturbance during the timed procedure.",
+      "Press 'Stop' at the exact end of the timed event.",
+      "Read the elapsed time from the display immediately and note it in the laboratory record.",
+      "For lap timing (e.g., recording multiple time points in an extraction), use the 'Lap' button to record intermediate times without stopping the main timer.",
+      "After all readings are recorded, press 'Reset' to clear the display for the next use.",
+      "If the stopwatch is battery-operated, check battery voltage at the beginning of each practical session.",
+      "For critical timing experiments, use two stopwatches in parallel as a cross-check.",
+      "Store the stopwatch in a clean, dry location away from corrosive chemical vapours."
     ],
     "precautions": [
-      "Calibrated.",
-      "Battery."
+      "Calibrate the stopwatch against a reference time signal (e.g., IST broadcast) periodically.",
+      "Do not expose the stopwatch to water, acids, or organic solvents.",
+      "Replace batteries as soon as low-battery warning appears — never use with a failing battery for critical measurements.",
+      "For very precise timing (< 1 second accuracy required), use a calibrated digital timer instead.",
+      "Do not drop or subject the stopwatch to mechanical shock.",
+      "Record the stopwatch ID in the experiment record if multiple stopwatches are in use."
     ]
   }
 }

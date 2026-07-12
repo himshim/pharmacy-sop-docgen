@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Laboratory First Aid Procedure"
+  },
+  "sections": {
+    "purpose": "To define the immediate first aid steps to be taken in the event of minor or major injuries, chemical exposure, burns, or inhalation of toxic gases in the pharmacy laboratories until professional medical help arrives.",
+    "scope": "Applicable to all pharmacy laboratory staff, students, and research personnel who may need to administer or receive first aid in a laboratory setting.",
+    "procedure": [
+      "In any emergency, remain calm, assess the situation for continuing hazards, and call for help immediately. Contact the campus health clinic and/or dial national emergency services (e.g., 108).",
+      "For minor cuts and abrasions: wash the wound thoroughly with clean water; apply an antiseptic solution or ointment; cover with a sterile adhesive bandage.",
+      "For major bleeding: apply direct pressure to the wound using a clean sterile dressing; elevate the injured limb if possible; keep the victim lying down and warm to prevent shock.",
+      "For thermal burns (minor): immediately flush the burned area with cool, running tap water for at least 10-15 minutes. Do not apply ice, grease, butter, or ointments.",
+      "For thermal burns (major): do not remove clothing stuck to the burn; cover the area loosely with a sterile, dry dressing; seek emergency medical assistance immediately.",
+      "For chemical splashes to the skin: immediately wash the affected area under the safety shower or running tap water for at least 15 minutes while removing contaminated clothing. Do not attempt to neutralize the chemical on the skin.",
+      "For chemical splashes to the eyes: immediately flush the eyes at the eyewash station for at least 15-20 minutes, holding the eyelids open. Blink frequently during flushing.",
+      "For chemical inhalation: immediately move the victim to an area with fresh air. If the victim is not breathing, perform CPR if trained, and seek urgent medical help.",
+      "For chemical ingestion: identify the substance ingested; contact poison control or seek immediate medical help. Do not induce vomiting unless specifically instructed by medical professionals or the SDS.",
+      "For electrical shock: switch off the main power source before touching the victim. If safe, check breathing, perform CPR if needed, and call emergency services.",
+      "Document the first aid administered and complete an Incident Report Form within 24 hours of the occurrence."
+    ],
+    "precautions": [
+      "Always wear appropriate protective gloves when administering first aid to avoid contact with blood or body fluids.",
+      "Never apply oils, ointments, or home remedies to severe chemical or thermal burns as they trap heat and increase infection risk.",
+      "Never attempt to neutralize chemical spills on the skin or eyes (e.g., adding weak base to acid) because the heat of neutralization can cause additional thermal burns.",
+      "Ensure the first aid kit is fully stocked, checked monthly, and all expired items are replaced immediately.",
+      "Keep emergency contact numbers posted prominently near the laboratory phone and entrance.",
+      "Never leave an injured person alone in the laboratory while seeking help."
+    ]
+  }
+}

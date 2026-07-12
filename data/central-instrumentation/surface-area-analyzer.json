@@ -1,18 +1,33 @@
 {
   "meta": {
-    "title": "Operation of Surface Area Analyzer"
+    "title": "Operation of BET Surface Area Analyzer in Central Instrumentation Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Surface Area Analyzer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To determine the specific surface area and pore size distribution of pharmaceutical powders and porous excipients using the BET (Brunauer-Emmett-Teller) nitrogen adsorption method for preformulation characterization.",
+    "scope": "Applicable to Central Instrumentation Laboratory for surface area characterization of active pharmaceutical ingredients (APIs), excipients, and nanoparticulate systems as part of preformulation and formulation development studies.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch on the BET surface area analyzer and the vacuum pump; allow 30 minutes system warm-up.",
+      "Accurately weigh 0.1–2 g of the dry sample into the clean, dried analysis tube (weight depends on expected surface area — high SA materials require less).",
+      "Connect the analysis tube to the degassing port.",
+      "Degas the sample: heat to the appropriate degas temperature (typically 80–120°C for most pharmaceutical powders; lower for heat-sensitive materials) under vacuum for 1–4 hours to remove adsorbed water and gases.",
+      "Allow the tube to cool under vacuum after degassing; weigh the degassed sample to get the accurate dry mass.",
+      "Connect the analysis tube to the analysis port.",
+      "Set the analysis parameters in the software: BET multipoint (at least 5 P/P₀ points between 0.05 and 0.35 recommended); adsorbate gas — nitrogen at 77 K (liquid nitrogen bath).",
+      "Fill the dewar with liquid nitrogen and position under the analysis tube.",
+      "Start the analysis — the instrument automatically measures adsorption at multiple relative pressures.",
+      "After completion, remove the liquid nitrogen dewar; allow the tube to warm before disconnection.",
+      "The software calculates and reports: specific surface area (m²/g), BET C constant, and optionally pore volume and pore size distribution.",
+      "Validate the result using a certified reference material (alumina or silica standard) periodically.",
+      "Record sample name, degassing conditions, dry mass, BET surface area, and run date in the register."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Degas the sample thoroughly before analysis — adsorbed moisture or gas interferes with the measurement and gives falsely low surface areas.",
+      "Handle liquid nitrogen with cryogenic gloves and face shield — contact causes frostbite; liquid nitrogen rapidly vaporizes in enclosed spaces causing oxygen displacement.",
+      "Do not degas heat-sensitive samples at high temperatures — use the minimum effective temperature.",
+      "Ensure the analysis tube is leak-free — a leaking tube causes false high surface area values.",
+      "Use the correct sample mass — too little sample gives poor signal; too much may require long analysis times.",
+      "Never allow liquid nitrogen to enter the analysis tube — it will cause the sample to compact and block the tube.",
+      "Calibrate against certified BET reference standards (NIST SRM 1976b or equivalent) at least annually."
+    ]
   }
 }

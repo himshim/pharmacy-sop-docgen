@@ -1,20 +1,37 @@
 {
   "meta": {
-    "title": "Operation of Microscope with Camera Attachment"
+    "title": "Operation of Microscope with Camera Attachment in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To capture digital images of microscopical characters.",
-    "scope": "Applicable to documentation and teaching.",
+    "purpose": "To capture high-resolution photomicrographs of plant tissue sections, pollen grains, trichomes, and cellular structures for documentation, publication, herbarium records, and teaching in Pharmacognosy.",
+    "scope": "Applicable to Pharmacognosy laboratory for digital photodocumentation of microscopic drug characteristics, authentication records, and preparation of teaching materials.",
     "procedure": [
-      "Focus specimen.",
-      "Connect camera.",
-      "Capture images.",
-      "Save with labels."
+      "Mount the digital camera or C-mount camera adapter securely on the trinocular or camera port of the microscope.",
+      "Connect the camera to the PC/laptop via USB cable or wireless connection.",
+      "Open the camera imaging software on the PC and verify the camera is detected and live preview is visible.",
+      "Switch on the microscope illumination and set the light path to the camera port using the trinocular prism switch.",
+      "Prepare the slide and locate the structure of interest using the eyepieces (10× objective first).",
+      "Switch the live view to the camera preview on the monitor.",
+      "Optimize illumination for imaging: use Köhler illumination if available; adjust condenser aperture for best contrast.",
+      "Focus precisely using the fine focus knob — use live preview zoom-in feature if the software supports it.",
+      "Adjust white balance in the software using a blank field (empty slide area under same illumination).",
+      "Set appropriate exposure settings — use auto-exposure as starting point then adjust manually to avoid over/under exposure.",
+      "Navigate the slide to the structure to be photographed.",
+      "Capture the image using the software capture button (avoid touching the microscope during capture to prevent motion blur).",
+      "Add calibration scale bar using the software's scale bar tool — calibrate using a stage micrometer slide.",
+      "Save images with systematic file names: DrugName_Structure_Magnification_Date (e.g., Neem_Leaf_TS_40x_2026-07-12).",
+      "Print or export annotated images for records and laboratory practical files.",
+      "Clean the camera port and cover after use; store the camera in its case.",
+      "Log all imaging sessions in the equipment register."
     ],
     "precautions": [
-      "Avoid direct light on sensor.",
-      "Clean lens.",
-      "Backup data."
+      "Ensure the camera adapter is securely fastened to the trinocular port before use — a dropped camera is a catastrophic loss.",
+      "Never exceed the rated camera weight on the trinocular port — heavy cameras require a separate support stand.",
+      "Calibrate the scale bar using a certified stage micrometer slide — uncalibrated scale bars in publications are a serious scientific error.",
+      "Protect the camera sensor from direct illumination without a specimen in place — bright direct light can permanently damage camera sensors.",
+      "Use a remote shutter release or software trigger to avoid camera shake during image capture.",
+      "Back up all photomicrographic images immediately to a networked or cloud storage location.",
+      "Do not use cleaning solvents directly on the camera body or lens — use only lens paper and approved lens cleaner."
     ]
   }
 }

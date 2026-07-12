@@ -1,19 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Friability Test Apparatus"
+    "title": "Operation of Friability Testing Apparatus in Pharmaceutics Laboratory"
   },
   "sections": {
-    "purpose": "To describe the method for determining friability of tablets.",
-    "scope": "Applicable to evaluation of tablet dosage forms in the Pharmaceutics laboratory.",
+    "purpose": "To determine the friability of uncoated tablets by measuring the percentage weight loss due to abrasion during rotation in a drum, as a quality control test as per IP/BP/USP pharmacopeial specifications.",
+    "scope": "Applicable to Pharmaceutics laboratory for friability testing of uncoated tablets as a release control and formulation development test — a mandatory IP/BP parameter for tablet quality.",
     "procedure": [
-      "Clean and dry the friabilator drum.",
-      "Weigh the sample tablets accurately.",
-      "Place tablets in the friabilator.",
-      "Set the apparatus for the specified number of rotations.",
-      "Start the apparatus and allow it to run.",
-      "Remove tablets, dust them, and reweigh.",
-      "Calculate percentage friability."
+      "Weigh 20 tablets (for tablets weighing < 650 mg each) or 10 tablets (for tablets ≥ 650 mg) on an analytical balance accurate to 1 mg; record the initial total weight (W₁).",
+      "If applicable, use a de-dusting brush to remove loose dust from the tablet surfaces before weighing.",
+      "Place the weighed tablets in the drum of the friability apparatus.",
+      "Set the rotation counter to 100 rotations (as per IP/BP/USP).",
+      "Switch on the friability tester — the drum should rotate at 25 ± 1 RPM.",
+      "Allow the drum to complete 100 rotations (4 minutes at 25 RPM).",
+      "After 100 rotations, switch off and remove tablets from the drum.",
+      "Remove tablet fragments and dust by de-dusting (brush or blow with compressed air).",
+      "Weigh all remaining intact tablets on the same analytical balance; record the final weight (W₂).",
+      "Calculate friability (%): F = [(W₁ − W₂) / W₁] × 100.",
+      "Acceptance criterion: Friability should not exceed 1.0% for a single run (IP/BP/USP).",
+      "If any tablet shows cracks, chips, or completely breaks, the batch fails regardless of weight loss percentage.",
+      "Repeat the test if the friability value is between 0.8–1.0% — use the mean of two runs.",
+      "Record tablet identity, weight before and after, number of rotations, and calculated % friability in the batch record."
     ],
-    "precautions": "Ensure tablets are free from moisture before testing."
+    "precautions": [
+      "Tablets should not be pre-treated (no humidification unless specified) — testing must reflect as-is tablet quality.",
+      "Ensure the drum is clean and dry before loading — residual powder from previous test adds to initial weight.",
+      "Verify the rotation speed is 25 ± 1 RPM — over-speed gives falsely high friability, under-speed gives falsely low.",
+      "For tablets containing large amounts of lubricant (e.g., hard, waxy tablets), pre-wipe the drum to remove static attraction.",
+      "Do not mix different product tablets in a single run.",
+      "Record all chipped or cracked tablets as failures regardless of weight loss.",
+      "Calibrate the tachometer/RPM display of the friability tester regularly."
+    ]
   }
 }

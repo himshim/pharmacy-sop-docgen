@@ -1,19 +1,33 @@
 {
   "meta": {
-    "title": "Use of Mortar and Pestle"
+    "title": "Use of Mortar and Pestle in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To manually grind small quantities of crude drugs.",
-    "scope": "Applicable to routine grinding.",
+    "purpose": "To manually grind, triturate, and reduce the particle size of crude drugs, plant materials, and chemical reagents for phytochemical screening, extract preparation, and microscopic examination.",
+    "scope": "Applicable to Pharmacognosy laboratory for small-scale grinding of crude drugs, preparation of aqueous suspensions, and maceration of fresh plant material.",
     "procedure": [
-      "Place material in mortar.",
-      "Grind with pestle.",
-      "Sieve if needed."
+      "Select the appropriate mortar and pestle type: porcelain for general grinding; agate or glass for fine pharmaceutical work; stone (granite) for heavy grinding of hard materials; brass for traditional preparation.",
+      "Inspect the mortar and pestle for cracks, chips, or residue from previous use before starting.",
+      "Clean with a damp cloth or rinse with the same solvent to be used in the experiment — dry thoroughly.",
+      "Cut or break the crude drug material into small pieces (< 1 cm) before placing in the mortar to reduce grinding effort.",
+      "Place a small quantity of the drug in the mortar — do not overfill (fill to < 1/3 capacity).",
+      "Grip the pestle firmly and apply downward pressure combined with a circular rotating motion.",
+      "Grind steadily and systematically — after every 2–3 rotations, use a spatula to push material from the sides to the centre.",
+      "Sieve the ground material periodically through the target mesh sieve; return any coarse fraction to the mortar for further grinding.",
+      "For wet grinding (preparation of extracts for phytochemical tests): add the extraction solvent in small portions while grinding.",
+      "After grinding, collect all material, label, and transfer to a suitable container.",
+      "Clean the mortar and pestle: rinse with the used solvent; wash with soap and water; dry completely before storage.",
+      "For highly aromatic or coloured drugs (turmeric, saffron), clean with ethanol before washing with water.",
+      "Record material name, quantity, grinding method, and target particle size in the logbook."
     ],
     "precautions": [
-      "Clean thoroughly.",
-      "Avoid contamination.",
-      "Use appropriate size."
+      "Wear a dust mask when grinding fine or aromatic powders — airborne drug dust can cause respiratory sensitization.",
+      "Do not grind strongly corrosive chemicals (concentrated acids/bases) in porcelain mortars — corrosion contaminates subsequent samples.",
+      "Never grind reactive combinations (e.g., oxidizers with organic material) together — risk of explosion or fire.",
+      "Handle agate and glass mortars with care — they are brittle and expensive.",
+      "Dedicate separate mortars for: aromatic drugs (retain odour), coloured drugs (staining), toxic plants — label clearly.",
+      "Wet the mortar lightly with solvent before grinding hygroscopic materials to prevent electrostatic loss of fine powder.",
+      "Do not use chipped or cracked mortars — sharp edges and contamination from mortar material affect results."
     ]
   }
 }

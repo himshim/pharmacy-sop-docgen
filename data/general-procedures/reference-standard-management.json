@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Reference Standard Management Procedure"
+  },
+  "sections": {
+    "purpose": "To establish a controlled procedure for procurement, receipt, storage, usage, and retirement of reference standards used in pharmaceutical analysis to ensure the accuracy, traceability, and integrity of all analytical results generated in the pharmacy laboratory.",
+    "scope": "Applicable to all pharmacy laboratory departments using reference standards for drug identification, assay, and purity testing — including primary reference standards (IP/BP/USP certified), secondary standards, and working standards.",
+    "procedure": [
+      "Classify reference standards before procurement: Primary Reference Standard (PRS) — certified by an official pharmacopoeia (IP Reference Substance, USP Reference Standard, EP Reference Standard); Secondary Reference Standard (SRS) — characterized against a PRS; Working Standard (WS) — in-house standard calibrated against SRS for routine use.",
+      "Procure PRS only from official sources: Indian Pharmacopoeia Commission (IPC), USP, EDQM (EP), or authorized distributors — never from commercial chemical suppliers.",
+      "On receipt, inspect: container integrity, label completeness, certificate of analysis (CoA), lot number, assigned potency/purity, and expiry date.",
+      "Record receipt in the Reference Standard Register: standard name, source, lot number, quantity received, potency %, expiry date, storage condition required, and date of receipt.",
+      "Assign a unique internal Reference Standard Code (RSC) to each lot: e.g., RS-PA-2026-012.",
+      "Store as per CoA instructions: most PRS in a cool, dry, dark place (15–25°C); moisture-sensitive standards in a desiccator or under nitrogen; photosensitive standards in amber vials.",
+      "Maintain a dedicated, locked reference standard storage area — access restricted to authorized analysts only.",
+      "Before use, equilibrate the reference standard to room temperature in a sealed container — never open a cold container immediately (moisture condensation contamination).",
+      "Weigh the reference standard using an analytical balance accurate to 0.01 mg in a clean, dry tared container.",
+      "Record every usage in the Reference Standard Usage Log: date, experiment, analyst, weight used, remaining quantity, and lot number.",
+      "Prepare working standards by dilution from PRS or SRS — record dilution scheme, preparation date, and expiry of working standard solution (typically 1 month).",
+      "Re-assay working standards against PRS periodically (minimum every 6 months) to verify stability.",
+      "Do not use any reference standard beyond its expiry date — even visually unchanged standards may have degraded analytically.",
+      "Retirement: when a standard is expired, nearly exhausted, or compromised — label as 'RETIRED — DO NOT USE'; remove from active storage; dispose as chemical waste per waste disposal SOP.",
+      "Record retirement in the Reference Standard Register with the reason and date."
+    ],
+    "precautions": [
+      "Never substitute a reference standard with a commercial chemical reagent — commercial grade chemicals lack the certified purity and traceability required for pharmacopeial analysis.",
+      "Open reference standard containers only when necessary — minimize air exposure; re-seal immediately and store as required.",
+      "Segregate expired and active standards physically — keep expired standards in a separate 'RETIRED' area until disposal to prevent accidental use.",
+      "For hygroscopic reference standards: weigh quickly; store over desiccant; equilibrate to room temperature before opening.",
+      "Maintain traceability: every analytical result must be traceable back to the reference standard lot number used — record the RSC number in all analytical worksheets.",
+      "A single batch of PRS must be used throughout a single study or validation exercise — changing reference standard lots mid-study requires re-qualification.",
+      "Loss, theft, or damage of certified reference standards must be reported immediately to the Laboratory In-charge and recorded — reference standards have significant monetary and analytical value."
+    ]
+  }
+}

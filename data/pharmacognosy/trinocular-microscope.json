@@ -1,19 +1,36 @@
 {
   "meta": {
-    "title": "Operation of Trinocular Microscope"
+    "title": "Operation of Trinocular Microscope in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To photograph microscopical features.",
-    "scope": "Applicable to documentation.",
+    "purpose": "To perform detailed microscopic examination of plant tissue sections, pollen, trichomes, and cellular structures with simultaneous viewing through eyepieces and camera port for documentation and teaching.",
+    "scope": "Applicable to Pharmacognosy laboratory for histological examination of drug materials, photomicrography, and teaching demonstrations using the camera port.",
     "procedure": [
-      "Focus image.",
-      "Attach camera.",
-      "Capture.",
-      "Save."
+      "Clean the stage, objectives, and eyepieces of the trinocular microscope with lens paper before use.",
+      "Connect the microscope to the power supply and switch on the halogen/LED illumination.",
+      "Set the light intensity to medium using the brightness control.",
+      "If a camera is attached to the trinocular port, connect it to the PC/monitor and open the imaging software.",
+      "Place the prepared slide (stained section or whole mount) on the mechanical stage and secure with the stage clips.",
+      "Start with the lowest power objective (4× or 10×) to locate the area of interest.",
+      "Adjust the coarse focus to bring the specimen into approximate focus, then use fine focus for sharp imaging.",
+      "Adjust the interpupillary distance so the two fields of view merge into one circular field.",
+      "Correct for individual eye differences using the diopter adjustment on the eyepieces.",
+      "For photomicrography: switch the light path to the camera port (trinocular prism); adjust exposure and white balance in the imaging software.",
+      "Progressively increase magnification (10×, 40×) as needed; use the mechanical stage controls to navigate the slide.",
+      "Adjust the condenser aperture diaphragm for optimal contrast at each magnification.",
+      "Capture and save images with appropriate file names including slide number, magnification, stain, and date.",
+      "After use, return to the lowest power objective, remove the slide, and clean the stage.",
+      "Clean all objectives gently with lens paper; cover the microscope with its dust cover.",
+      "Log usage in the equipment register."
     ],
     "precautions": [
-      "Clean optics.",
-      "Backup images."
+      "Never allow the objective to touch the slide — approach from the side when focusing with high-power objectives.",
+      "Always start focusing with the lowest power objective — switching to high power without focusing on low power risks crashing the objective into the slide.",
+      "Clean objectives with lens paper only — regular tissue or cotton scratches the anti-reflection coating.",
+      "Keep the 100× oil-immersion objective clean — immediately remove immersion oil after use with lens paper and lens cleaning solvent.",
+      "Do not force the coarse focus knob when resistance is felt — this indicates the objective is close to the slide.",
+      "Handle slides with care — broken slides cause cuts and contamination.",
+      "Store the microscope covered and in a dry, dust-free area when not in use."
     ]
   }
 }

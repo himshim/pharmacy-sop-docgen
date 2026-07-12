@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Operation of Pulse Oximeter"
+  },
+  "sections": {
+    "purpose": "To non-invasively measure arterial oxygen saturation (SpO₂) and pulse rate using a pulse oximeter as part of clinical pharmacology and pharmacy practice training.",
+    "scope": "Applicable to Pharmacology laboratory for clinical monitoring practicals and patient assessment skills training.",
+    "procedure": [
+      "Ensure the pulse oximeter battery is fully charged or insert fresh batteries if applicable.",
+      "Turn on the device and verify it passes self-test (screen should show '---' or start-up animation).",
+      "Ask the subject to remove nail polish or artificial nails from the finger to be tested.",
+      "Ensure the subject's hand is warm — cold fingers reduce perfusion and give inaccurate readings.",
+      "Insert the subject's index or middle finger fully into the probe/clip, ensuring the LED emitter faces the fingernail side.",
+      "Instruct the subject to hold still and breathe normally.",
+      "Allow 10–15 seconds for the reading to stabilize.",
+      "Read the SpO₂ percentage and pulse rate from the display.",
+      "Normal SpO₂ range: 95–100%; Normal pulse rate: 60–100 bpm at rest.",
+      "Note the plethysmography waveform quality if displayed — a poor waveform indicates unreliable readings.",
+      "Record values along with subject details, time, and clinical context.",
+      "Remove the finger from the probe gently.",
+      "Clean the probe with a 70% alcohol swab and allow to dry before storing.",
+      "Turn off the device and store in its protective case."
+    ],
+    "precautions": [
+      "Ensure the finger is inserted properly — partial insertion leads to inaccurate readings.",
+      "Bright ambient light (especially fluorescent or direct sunlight) can interfere with readings — shade the probe if necessary.",
+      "Motion artifacts can produce spurious readings — ensure the subject remains still.",
+      "Poorly perfused fingers (cold hands, peripheral vascular disease) may give falsely low SpO₂ readings.",
+      "Carbon monoxide poisoning can cause falsely normal SpO₂ despite actual hypoxia.",
+      "Dark nail polish (especially blue, black, green) can interfere with readings.",
+      "Do not use the device on subjects with severe peripheral oedema or Raynaud's disease without clinical supervision.",
+      "Service the device and replace probes as per manufacturer's maintenance schedule.",
+      "Values below 90% SpO₂ indicate hypoxia — refer immediately for clinical evaluation."
+    ]
+  }
+}

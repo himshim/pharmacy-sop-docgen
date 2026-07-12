@@ -19,7 +19,13 @@
 <tr><td><strong>Institute</strong></td><td>{{institute}}</td></tr>
 <tr><td><strong>Department</strong></td><td>{{department}}</td></tr>
 {{#if sectionSopNumber}}<tr><td><strong>SOP No.</strong></td><td>{{sopNumber}}</td></tr>{{/if}}
-{{#if revisionNo}}<tr><td><strong>Revision</strong></td><td>{{revisionNo}}</td></tr>{{/if}}
+{{#if sectionRevisionNo}}<tr><td><strong>Revision</strong></td><td>{{revisionNo}}</td></tr>{{/if}}
+
+{{#if sectionPciDetails}}
+{{#if pciCourseCode}}<tr><td><strong>PCI Course Code</strong></td><td>{{pciCourseCode}}</td></tr>{{/if}}
+{{#if pciExperimentRef}}<tr><td><strong>Experiment Ref</strong></td><td>{{pciExperimentRef}}</td></tr>{{/if}}
+{{#if pciLabCategory}}<tr><td><strong>PCI Lab Category</strong></td><td>{{pciLabCategory}}</td></tr>{{/if}}
+{{/if}}
 </table>
 </div>
 
@@ -27,7 +33,13 @@
 <p><strong>Institute:</strong> {{institute}}</p>
 <p><strong>Department:</strong> {{department}}</p>
 {{#if sectionSopNumber}}<p><strong>SOP No.:</strong> {{sopNumber}}</p>{{/if}}
-{{#if revisionNo}}<p><strong>Revision:</strong> {{revisionNo}}</p>{{/if}}
+{{#if sectionRevisionNo}}<p><strong>Revision:</strong> {{revisionNo}}</p>{{/if}}
+
+{{#if sectionPciDetails}}
+{{#if pciCourseCode}}<p><strong>PCI Course Code:</strong> {{pciCourseCode}}</p>{{/if}}
+{{#if pciExperimentRef}}<p><strong>Experiment Ref:</strong> {{pciExperimentRef}}</p>{{/if}}
+{{#if pciLabCategory}}<p><strong>PCI Lab Category:</strong> {{pciLabCategory}}</p>{{/if}}
+{{/if}}
 </div>
 
 <hr>
@@ -51,11 +63,13 @@
   {{{precautions}}}
 </ol>
 
-<h2>Documentation</h2>
-<p>All activities performed under this SOP shall be appropriately documented and retained for inspection and reference.</p>
+{{#if sectionPciDocumentation}}
+<h2>Documentation & Syllabus Reference</h2>
+{{{pciDocumentationClause}}}
+{{/if}}
 
-<div class="keep-together approvals-block"></div>
-<h2 class="no-counter" style="margin-top:22pt;">Approvals</h2>
+<div class="keep-together approvals-block">
+<h2 class="no-counter" style="margin-top:22pt;">Academic Sign-offs</h2>
 
 <table style="width:100%; border-collapse:collapse; margin-top:12pt;">
   <colgroup>
@@ -65,19 +79,19 @@
   </colgroup>
   <tr>
     <td style="padding:8pt;">
-      <strong>Prepared By</strong><br><br>
+      <strong>Prepared By (Lab Assistant)</strong><br><br>
       <strong>Name:</strong> {{preparedBy}}<br>
       <strong>Designation:</strong> {{preparedDesig}}<br>
       <strong>Date:</strong> {{preparedDate}}
     </td>
     <td style="padding:8pt;">
-      <strong>Checked By</strong><br><br>
+      <strong>Verified By (Subject Faculty)</strong><br><br>
       <strong>Name:</strong> {{checkedBy}}<br>
       <strong>Designation:</strong> {{checkedDesig}}<br>
       <strong>Date:</strong> {{checkedDate}}
     </td>
     <td style="padding:8pt;">
-      <strong>Approved By</strong><br><br>
+      <strong>Approved By (Head of Department)</strong><br><br>
       <strong>Name:</strong> {{approvedBy}}<br>
       <strong>Designation:</strong> {{approvedDesig}}<br>
       <strong>Date:</strong> {{approvedDate}}

@@ -1,19 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Dissolution Test Apparatus"
+    "title": "Operation of Dissolution Test Apparatus in Pharmaceutics Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for conducting dissolution testing of solid dosage forms.",
-    "scope": "Applicable to dissolution studies in the Pharmaceutics laboratory.",
+    "purpose": "To determine the rate and extent of drug release from solid oral dosage forms (tablets, capsules) using pharmacopeial dissolution testing methods (Apparatus I — Basket, Apparatus II — Paddle) for formulation development and quality control.",
+    "scope": "Applicable to Pharmaceutics laboratory for dissolution testing as per IP/BP/USP specifications — a mandatory release test for oral solid dosage forms.",
     "procedure": [
-      "Fill dissolution vessels with specified dissolution medium.",
-      "Set temperature to 37 ± 0.5°C.",
-      "Fix paddles or baskets at specified height.",
-      "Place dosage form in each vessel.",
-      "Start the apparatus at specified speed.",
-      "Withdraw samples at specified time intervals.",
-      "Analyze samples using suitable analytical method."
+      "Fill each dissolution vessel with the specified volume of freshly prepared dissolution medium (typically 900 mL of phosphate buffer pH 6.8 or 0.1 N HCl for tablets) pre-warmed to 37 ± 0.5°C.",
+      "Verify the temperature of the medium in each vessel using a calibrated thermometer — must be 37 ± 0.5°C before starting.",
+      "Degas the dissolution medium by sonication for 10–15 minutes or by vacuum filtration to remove dissolved air (air bubbles attach to tablet surfaces and give erroneously high dissolution rates).",
+      "Select and assemble the appropriate apparatus: Apparatus I (basket) or Apparatus II (paddle) as per the product specification.",
+      "For Apparatus I: place the tablet/capsule in the stainless steel basket; lower the basket to the specified distance from the vessel bottom (25 ± 2 mm).",
+      "For Apparatus II: drop the tablet/capsule directly into the vessel (use sinkers for low-density or floating formulations).",
+      "Set the rotation speed: typically 50–100 RPM for Apparatus II (paddle); 100 RPM for Apparatus I (basket).",
+      "Start all dissolution vessels simultaneously.",
+      "Withdraw samples at the specified time points (e.g., 15, 30, 45, 60 minutes) from each vessel using a pipette or automatic sampling probe — filter through 0.45 µm filter immediately.",
+      "Replace withdrawn sample volume with equal volume of fresh, pre-warmed dissolution medium.",
+      "Measure absorbance of each sample at the specified wavelength using a UV-Vis spectrophotometer.",
+      "Calculate percentage drug dissolved at each time point using a standard calibration curve.",
+      "Accept the batch if % dissolution meets the Q-value criterion (typically Q = 75% in 45 minutes for IP/USP).",
+      "Record all temperature, rpm, time point, absorbance, and % dissolved values in the dissolution test record."
     ],
-    "precautions": "Ensure temperature uniformity. Avoid vibration of the apparatus during operation."
+    "precautions": [
+      "Temperature control is critical — even 1°C deviation significantly affects dissolution rate; verify all vessels before starting.",
+      "Degas the dissolution medium — undegassed medium with dissolved CO₂ causes bubble formation on the tablet surface and falsely high early dissolution readings.",
+      "Ensure the shaft is centred in the vessel — off-centre shafts cause wobble that increases dissolution rate variability.",
+      "Use sinkers for formulations that float — floating tablets give erratically high or low results depending on their position in the vessel.",
+      "Withdraw samples from the defined sampling zone (midway between the paddle and the vessel surface, 10 mm from the vessel wall) — position affects readings.",
+      "Filter samples immediately after withdrawal — unfiltered samples contain fine particles that give falsely high absorbance.",
+      "Calibrate the dissolution apparatus annually: temperature uniformity, shaft wobble, and rpm accuracy as per USP General Chapter ‹711›."
+    ]
   }
 }

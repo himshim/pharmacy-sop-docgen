@@ -1,19 +1,37 @@
 {
   "meta": {
-    "title": "Operation of Distillation Unit"
+    "title": "Operation of Distillation Unit in Pharmaceutical Chemistry Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for separation of liquids using a distillation unit.",
-    "scope": "Applicable to simple and fractional distillation in the Pharmaceutical Chemistry laboratory.",
+    "purpose": "To separate and purify liquid pharmaceutical compounds and solvents based on differences in boiling point through simple or fractional distillation as part of pharmaceutical chemistry synthesis and purification procedures.",
+    "scope": "Applicable to Pharmaceutical Chemistry laboratory for purification of synthesized pharmaceutical compounds, solvent recovery, preparation of distilled water, and determination of boiling points.",
     "procedure": [
-      "Assemble the distillation unit properly.",
-      "Add the liquid mixture to the distillation flask.",
-      "Fix thermometer and condenser securely.",
-      "Start heating gradually.",
-      "Collect the distillate in a receiving flask.",
-      "Monitor temperature during distillation.",
-      "After completion, switch OFF heating and dismantle the setup."
+      "Assemble the distillation apparatus on a stable retort stand: round-bottom distillation flask → distillation head/Claisen adapter → Liebig condenser at 30–45° angle → adapter → receiving flask.",
+      "Ensure all ground glass joints are clean, correctly sized, and lightly greased if needed.",
+      "Connect the condenser coolant water supply: inlet at the bottom; outlet at the top.",
+      "Confirm steady coolant water flow before heating.",
+      "Add the liquid to be distilled to the distillation flask — fill to no more than 2/3 capacity.",
+      "Add boiling chips to the flask to ensure smooth boiling.",
+      "Position the thermometer in the distillation head so the bulb is just below the side-arm opening — this measures vapour temperature.",
+      "Place a heating mantle or water bath under the distillation flask; connect to a voltage controller.",
+      "Place a receiving flask (graduated if volume measurement is needed) at the condenser outlet.",
+      "Begin heating slowly — observe and wait for distillate to begin.",
+      "Record the temperature at which distillation begins (first drop) and when distillate flows steadily — this is the boiling point of the predominant component.",
+      "Collect fractions in separate labelled receiving flasks by switching receivers at defined temperature ranges.",
+      "After distillation, switch off heat; allow to cool; stop coolant water.",
+      "Weigh or measure volume of each fraction; record observations and boiling point ranges.",
+      "Characterize the distillate fractions (refractive index, density, IR) as required.",
+      "Document all distillation data in the laboratory notebook."
     ],
-    "precautions": "Do not overheat. Ensure continuous water flow through condenser."
+    "precautions": [
+      "Never distil to dryness unless specifically required — residual peroxides in ethers can cause explosion on concentration.",
+      "Always use boiling chips — bumping in distillation causes dangerous superheating and ejection of liquid.",
+      "Do not use open flame with organic solvents — use heating mantle or water bath.",
+      "Ensure coolant water is flowing before heating — vapours escaping from the condenser top are a major fire risk.",
+      "Never heat a closed system — all distillation apparatus must be open at the receiving end.",
+      "Work in a fume hood for all organic solvent distillations.",
+      "Use the correct joint sizes throughout — mismatched joints cause vapour leaks.",
+      "Do not allow distillation flask to overheat when nearly dry — hot concentrated residues can decompose explosively."
+    ]
   }
 }

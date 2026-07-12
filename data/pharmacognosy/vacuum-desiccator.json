@@ -1,20 +1,37 @@
 {
   "meta": {
-    "title": "Operation of Vacuum Desiccator"
+    "title": "Operation of Vacuum Desiccator in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To rapidly dry moisture-sensitive samples.",
-    "scope": "Applicable to drying.",
+    "purpose": "To store hygroscopic crude drug powders, phytochemical isolates, and dried extracts under vacuum in the presence of a desiccant to prevent moisture re-absorption and maintain sample integrity.",
+    "scope": "Applicable to Pharmacognosy laboratory for post-drying storage of moisture-sensitive samples and cooling hot samples to room temperature without moisture uptake prior to weighing.",
     "procedure": [
-      "Place samples.",
-      "Add desiccant.",
-      "Apply vacuum.",
-      "Release slowly."
+      "Inspect the vacuum desiccator for cracks in the glass dome, chip or damage on the ground glass rim, and integrity of the stopcock.",
+      "Renew the desiccant in the base compartment if it has changed colour (silica gel changes from blue to pink when saturated).",
+      "Apply a thin, uniform layer of high-vacuum grease (silicone or Apiezon) to the ground glass rim to ensure an airtight seal.",
+      "Place the porcelain plate inside the desiccator body above the desiccant.",
+      "Place the dried or hot samples in open containers (watch glasses, Petri dishes, weighing boats) on the porcelain plate — do not stack samples.",
+      "Place the glass dome on the ground glass rim and rotate slightly to distribute the grease evenly and ensure an airtight seal.",
+      "Close the stopcock fully.",
+      "Connect the vacuum pump to the desiccator outlet with a vacuum tubing.",
+      "Switch on the vacuum pump and slowly open the stopcock — draw vacuum gradually to avoid disturbing sample.",
+      "Monitor the vacuum gauge — typically maintain 20–50 mbar vacuum.",
+      "Once the required vacuum is achieved, close the stopcock and switch off the vacuum pump.",
+      "Store the desiccator in a secure position on a flat surface — do not move while under vacuum.",
+      "To remove samples: slowly open the stopcock to bleed air in gradually — rapid air entry can disturb fine powders.",
+      "Once pressure equalizes, lift the dome carefully.",
+      "Remove samples promptly and weigh immediately to minimize moisture re-absorption.",
+      "Log sample name, date stored, vacuum level, and desiccant condition in the register."
     ],
     "precautions": [
-      "Cool samples first.",
-      "Check seals.",
-      "Vacuum pump safety."
+      "Handle glass vacuum desiccators with great care — they are under external atmospheric pressure when evacuated and implode if cracked.",
+      "Never place desiccators on the edge of a bench — a fall under vacuum is an implosion hazard.",
+      "Bleed air back slowly — rapid air entry scatters fine powders and can crack hot glass vessels.",
+      "Renew desiccant regularly — saturated desiccant provides no moisture protection.",
+      "Do not apply excessive vacuum grease — excess grease contaminates samples.",
+      "For large desiccators, wrap the glass dome with a towel during evacuation as added implosion protection.",
+      "Check the stopcock for smooth operation and absence of leaks before each use.",
+      "Do not evacuate when the dome shows any cracks, chips, or opacification."
     ]
   }
 }

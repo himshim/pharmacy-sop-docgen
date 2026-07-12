@@ -1,18 +1,33 @@
 {
   "meta": {
-    "title": "Use of Specimen Drying Rack"
+    "title": "Use of Specimen Drying Rack in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To dry plant specimens.",
-    "scope": "Applicable to herbarium prep.",
+    "purpose": "To air-dry freshly collected plant specimens, herbarium sheets, and washed glassware in an organized manner to preserve morphological integrity and prevent mould growth prior to herbarium mounting or storage.",
+    "scope": "Applicable to Pharmacognosy laboratory for drying field-collected plant specimens, freshly pressed herbarium materials, and laboratory glassware after washing.",
     "procedure": [
-      "Arrange specimens.",
-      "Dry in ventilated area.",
-      "Monitor drying."
+      "Inspect the specimen drying rack for cleanliness, structural integrity, and absence of rust or mould before use.",
+      "For fresh plant specimens: Remove excess moisture by gently blotting with absorbent paper (not rubbing — to preserve surface features).",
+      "For flat specimens (leaves, flowers): Arrange specimens on absorbent blotting paper and place between multiple layers of folded newspaper before hanging or spreading on the rack.",
+      "Position specimens on the rack with adequate spacing (at least 2–3 cm) between specimens to allow airflow on all sides.",
+      "Place the drying rack in a well-ventilated area — avoid high humidity environments.",
+      "Label each specimen position immediately with the collection number, plant name, collection site, and date.",
+      "Change the blotting paper every 24 hours for the first 3–4 days to speed up drying and prevent mould.",
+      "For succulent specimens (thick leaves, stems): Change blotting paper every 6–8 hours for the first 2 days.",
+      "Check specimens daily for signs of mould — remove affected specimens immediately and treat with 2% thymol in alcohol.",
+      "Drying is complete when specimens are stiff, crackle when bent, and have a constant weight.",
+      "For glassware: Place washed glassware inverted on the rack with adequate support — do not stack wet glassware.",
+      "Clean the rack after use with a damp cloth; dry thoroughly before storing.",
+      "Record all specimen accession numbers, drying dates, and final disposition in the herbarium logbook."
     ],
     "precautions": [
-      "Avoid direct sun.",
-      "Prevent pests."
+      "Place the drying rack away from direct sunlight — UV radiation and heat cause rapid colour loss and brittleness in herbarium specimens.",
+      "Maintain good air circulation — poor airflow causes mould growth within 24–48 hours in humid conditions.",
+      "Never use a hot oven for drying herbarium specimens — it destroys colour and makes specimens too brittle.",
+      "Label specimens before drying — wet labels cannot be written on and dry specimens may become confused.",
+      "Treat mould-affected specimens promptly — mould spreads rapidly in humid conditions.",
+      "Handle dried specimens with care — they are extremely brittle and break easily.",
+      "Fumigate the drying area periodically to prevent insect infestation of herbarium materials."
     ]
   }
 }

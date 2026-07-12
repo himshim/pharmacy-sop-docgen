@@ -1,20 +1,32 @@
 {
   "meta": {
-    "title": "Use of Laboratory Thermometer"
+    "title": "Use of Laboratory Thermometer in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To measure temperature of extraction baths and drying ovens.",
-    "scope": "Applicable to routine temperature monitoring.",
+    "purpose": "To accurately measure temperature in pharmacognosy experiments including water baths, extraction processes, drying operations, and storage areas to ensure process control and sample integrity.",
+    "scope": "Applicable to Pharmacognosy laboratory for all temperature measurement operations in equipment verification, extraction monitoring, and storage condition recording.",
     "procedure": [
-      "Immerse bulb in medium.",
-      "Wait for stabilization.",
-      "Read at eye level.",
-      "Clean after use."
+      "Select the correct thermometer range for the application: 0–100°C for water baths and general use; 0–250°C for high-temperature operations (oven, heating mantle); −20 to +40°C for cold storage monitoring.",
+      "Inspect the thermometer for visible damage: cracks in the glass, separation of the liquid column (for mercury/spirit thermometers), or error codes (for digital thermometers).",
+      "For liquid-in-glass thermometers with a separated column: carefully warm the bulb in your hand or briefly in warm water to rejoin the column before use.",
+      "Immerse the thermometer to at least the immersion mark (usually indicated by a ring or '76 mm' mark on the stem) into the medium being measured — partial immersion gives significantly wrong readings.",
+      "Allow at least 2–3 minutes for the thermometer to reach thermal equilibrium with the medium before reading.",
+      "Read the temperature at eye level with the meniscus (for mercury: read the top of the mercury column; for spirit/alcohol: read the bottom of the meniscus).",
+      "For digital thermometers: simply read the stable display value after equilibration.",
+      "Record the temperature to the nearest 0.1°C for precise measurements.",
+      "After use, remove from the medium and allow to cool before cleaning — do not plunge hot thermometers into cold liquid (thermal shock causes breakage).",
+      "Clean with a damp cloth or appropriate solvent; store in a protective case vertically.",
+      "Record thermometer ID, reading, date, and application in the laboratory register.",
+      "Calibrate annually against a NIST-traceable reference thermometer using ice water (0°C) and boiling water (100°C at sea level) as two-point check."
     ],
     "precautions": [
-      "Avoid breakage.",
-      "Do not use beyond range.",
-      "Handle mercury carefully if applicable."
+      "Handle glass thermometers with great care — breakage releases mercury (toxic) or spirit (flammable); broken thermometers must be cleaned up per hazardous material protocol.",
+      "Never use a mercury thermometer near open flames — mercury is extremely toxic and non-biodegradable; prefer digital or spirit thermometers.",
+      "Never use a thermometer as a stirring rod — mechanical stress on the glass causes breakage.",
+      "Ensure the thermometer range is appropriate — measuring above the maximum range causes bursting of the bulb reservoir.",
+      "Do not leave glass thermometers unsupported horizontally — they bend and break under their own weight at elevated temperatures.",
+      "Ensure the immersion depth is correct — partial immersion introduces systematic error of 1–5°C.",
+      "Calibrate all thermometers used for official pharmacopeial testing annually."
     ]
   }
 }

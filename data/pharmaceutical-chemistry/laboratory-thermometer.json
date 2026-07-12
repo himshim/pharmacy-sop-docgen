@@ -1,18 +1,30 @@
 {
   "meta": {
-    "title": "Operation of Laboratory Thermometer"
+    "title": "Use of Laboratory Thermometer in Pharmaceutical Chemistry Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Laboratory Thermometer.",
-    "scope": "Applicable to activities carried out in the Pharmaceutical Chemistry.",
+    "purpose": "To accurately measure temperatures during synthesis reactions, distillations, recrystallizations, and melting point determinations in pharmaceutical chemistry experiments.",
+    "scope": "Applicable to Pharmaceutical Chemistry laboratory for all temperature measurement operations including reaction monitoring, boiling point determination, and bath temperature verification.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Select the correct thermometer range: 0–100°C for water baths; 0–250°C for oil baths and high-temperature reactions; −20 to +50°C for cold bath monitoring.",
+      "Inspect the thermometer for liquid column continuity, cracks, and calibration marks.",
+      "For mercury thermometers with separated columns: gently warm the bulb to rejoin the column before use.",
+      "Immerse to the correct depth: partial-immersion thermometers have a ring mark (usually 76 mm); full-immersion thermometers must be immersed to the meniscus level.",
+      "Clamp the thermometer securely using a thermometer clamp on a retort stand — do not allow it to rest against the flask wall or bottom.",
+      "For distillation: position the thermometer bulb at the side-arm junction of the distillation flask — this gives the true vapour temperature.",
+      "Allow 2–3 minutes for equilibration before reading.",
+      "Read at eye level with the meniscus: top of column for mercury; bottom of meniscus for coloured spirit.",
+      "Record temperature to the nearest 0.1°C in the laboratory register.",
+      "Remove, allow to cool, clean with solvent, then distilled water, and store in protective case.",
+      "Calibrate annually at ice point (0°C) and steam point (100°C) against reference."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Never use mercury thermometers near open flames or in reactions that might superheat — mercury toxicity is severe.",
+      "Never use as a stirring rod — mechanical stress cracks the glass and releases toxic mercury.",
+      "Ensure correct immersion depth — partial vs. full immersion gives temperature errors of 1–5°C.",
+      "Place in the correct position for distillations — bulb at side-arm junction gives true vapour temperature, not flask liquid temperature.",
+      "Allow hot thermometers to cool before plunging into cold liquid — thermal shock causes breakage.",
+      "If mercury thermometer breaks: evacuate the area, do not vacuum up mercury — follow mercury spill protocol."
+    ]
   }
 }

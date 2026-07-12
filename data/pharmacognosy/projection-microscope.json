@@ -1,18 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Projection Microscope"
+    "title": "Operation of Projection Microscope in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To project microscopical characters for demonstration.",
-    "scope": "Applicable to teaching.",
+    "purpose": "To project magnified microscopic images of plant tissue sections onto a screen or drawing surface for group observation, photomicrography demonstration, and camera lucida-type tracings for teaching purposes.",
+    "scope": "Applicable to Pharmacognosy laboratory for group teaching demonstrations, size measurement of cellular structures, and projected image tracings for histological identification.",
     "procedure": [
-      "Focus specimen.",
-      "Adjust projector.",
-      "Project image."
+      "Place the projection microscope on a stable bench in a darkened room or in partial darkness.",
+      "Connect to the power supply and switch on the high-intensity projection lamp.",
+      "Allow the lamp to warm up for 3–5 minutes before inserting slides.",
+      "Place the prepared stained slide on the mechanical stage and secure with stage clips.",
+      "Begin with the lowest power objective (4×) to locate the structure of interest.",
+      "Project the image onto a white screen placed at the calibrated working distance from the microscope.",
+      "Focus the projected image using the coarse and fine focus knobs.",
+      "Adjust the lamp intensity and condenser to obtain a bright, evenly illuminated field.",
+      "Switch to higher magnification as required — refocus after each objective change.",
+      "For measurements on the projected image, use a calibrated ruler placed on the projection screen and apply the projection factor (actual distance = measured distance / magnification × projection ratio).",
+      "For class demonstrations, ensure all students can see the projected field clearly — adjust screen position or room lighting as needed.",
+      "Document significant projections by photography of the screen.",
+      "After use, switch off the projection lamp first and allow cooling fan to run for 3–5 minutes before full power off.",
+      "Remove slide and clean the stage; cover the microscope.",
+      "Record usage in the equipment logbook."
     ],
     "precautions": [
-      "Clean lenses.",
-      "Dark room."
+      "Never switch off the projection microscope abruptly — always turn off the lamp and let the fan run to cool the lamp before full shutdown.",
+      "Do not look directly into the projection beam — the projection lamp is extremely bright and causes eye damage.",
+      "Handle the high-intensity lamp with gloves — fingerprints on the bulb cause premature failure from thermal stress.",
+      "Ensure the room has adequate ventilation — the projection lamp generates significant heat.",
+      "Keep combustible materials away from the lamp housing.",
+      "Use only slides without cover slips for projection to avoid image distortion.",
+      "Clean optical surfaces only with approved lens paper — never with regular tissue or cloth."
     ]
   }
 }

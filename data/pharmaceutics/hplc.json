@@ -1,19 +1,34 @@
 {
   "meta": {
-    "title": "Operation of HPLC System"
+    "title": "Operation of HPLC System in Pharmaceutics Laboratory"
   },
   "sections": {
-    "purpose": "To outline the procedure for operating the High Performance Liquid Chromatography system.",
-    "scope": "Applicable to analysis carried out in the Pharmaceutics laboratory.",
+    "purpose": "To perform High Performance Liquid Chromatography for quantitative assay, purity determination, and content uniformity testing of pharmaceutical formulations as per validated pharmacopeial and in-house analytical methods.",
+    "scope": "Applicable to Pharmaceutics laboratory for drug content assay in tablets, capsules, and liquid formulations, and for related substance determination as part of product quality control.",
     "procedure": [
-      "Switch ON the HPLC system and associated modules.",
-      "Prepare and filter mobile phase.",
-      "Prime the pump with mobile phase.",
-      "Set chromatographic conditions in the software.",
-      "Inject the sample solution.",
-      "Record and analyze the chromatogram.",
-      "After analysis, flush the system with suitable solvent."
+      "Switch on the HPLC pump, detector (UV/PDA), column oven, and autosampler; open the workstation software.",
+      "Allow the system to warm up for 20–30 minutes before analysis.",
+      "Prepare mobile phase as per the validated method: filter through 0.45 µm membrane filter and degas by sonication for 15 minutes.",
+      "Prime all mobile phase lines: purge each pump head for 5 minutes to remove air bubbles.",
+      "Flush the column with the starting mobile phase composition at 1 mL/min for at least 15–20 column volumes.",
+      "Set the column oven temperature as per the method (typically 25–40°C).",
+      "Set detector wavelength as per the validated method.",
+      "Establish a stable baseline — wait until drift is < 0.001 AU/min for UV detection.",
+      "Prepare sample and standard solutions as per the method: dissolve in the specified diluent; filter through 0.45 µm PTFE filter before injection.",
+      "Inject the system suitability solution: verify theoretical plates (N ≥ 2000), tailing factor (≤ 2.0), and resolution (≥ 2.0 for adjacent peaks).",
+      "Inject blank, standard, and then sample solutions in sequence.",
+      "Calculate drug content: % assay = (Area of sample / Area of standard) × (Standard concentration / Sample concentration) × Label claim × 100.",
+      "After analysis: flush column with mobile phase, then with 60–70% methanol/water, then store in methanol/acetonitrile.",
+      "Record all system suitability parameters, peak areas, retention times, and calculated results in the analytical register."
     ],
-    "precautions": "Ensure mobile phase is free from air bubbles. Do not exceed pressure limits."
+    "precautions": [
+      "Filter all mobile phases and samples through 0.45 µm filters — particulates block the HPLC column and pump check valves irreversibly.",
+      "Degas mobile phases thoroughly — dissolved gases cause baseline noise and ghost peaks.",
+      "Never switch the pump off abruptly while at high pressure — always reduce flow gradually.",
+      "Use HPLC-grade solvents only — analytical grade solvents contain UV-absorbing impurities.",
+      "Flush the column with at least 10 column volumes after a high-salt buffer analysis before switching to organic mobile phase.",
+      "Never allow a reversed-phase column to run dry — introduces air and permanently damages the stationary phase.",
+      "Document all system suitability results — failing system suitability invalidates the entire run."
+    ]
   }
 }

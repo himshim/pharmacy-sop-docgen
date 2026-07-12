@@ -18,14 +18,30 @@
 <table style="width:100%; border-collapse:collapse; margin-bottom:12pt;">
 <tr><td><strong>Institution</strong></td><td>{{institute}}</td></tr>
 <tr><td><strong>Department</strong></td><td>{{department}}</td></tr>
-{{#if revisionNo}}<tr><td><strong>Revision</strong></td><td>{{revisionNo}}</td></tr>{{/if}}
+{{#if sectionRevisionNo}}<tr><td><strong>Revision</strong></td><td>{{revisionNo}}</td></tr>{{/if}}
+
+{{#if sectionNaacDetails}}
+{{#if naacAssetPage}}<tr><td><strong>Stock Register Page</strong></td><td>{{naacAssetPage}}</td></tr>{{/if}}
+{{#if naacLedgerId}}<tr><td><strong>Equipment Ledger ID</strong></td><td>{{naacLedgerId}}</td></tr>{{/if}}
+{{#if naacLogbookRef}}<tr><td><strong>Utilization Logbook Ref</strong></td><td>{{naacLogbookRef}}</td></tr>{{/if}}
+{{#if naacAmcRef}}<tr><td><strong>AMC / Maintenance Ref</strong></td><td>{{naacAmcRef}}</td></tr>{{/if}}
+{{#if naacCalibrationCert}}<tr><td><strong>Calibration Certificate No</strong></td><td>{{naacCalibrationCert}}</td></tr>{{/if}}
+{{/if}}
 </table>
 </div>
 
 <div class="doc-control-text">
 <p><strong>Institution:</strong> {{institute}}</p>
 <p><strong>Department:</strong> {{department}}</p>
-{{#if revisionNo}}<p><strong>Revision:</strong> {{revisionNo}}</p>{{/if}}
+{{#if sectionRevisionNo}}<p><strong>Revision:</strong> {{revisionNo}}</p>{{/if}}
+
+{{#if sectionNaacDetails}}
+{{#if naacAssetPage}}<p><strong>Stock Register Page:</strong> {{naacAssetPage}}</p>{{/if}}
+{{#if naacLedgerId}}<p><strong>Equipment Ledger ID:</strong> {{naacLedgerId}}</p>{{/if}}
+{{#if naacLogbookRef}}<p><strong>Utilization Logbook Ref:</strong> {{naacLogbookRef}}</p>{{/if}}
+{{#if naacAmcRef}}<p><strong>AMC / Maintenance Ref:</strong> {{naacAmcRef}}</p>{{/if}}
+{{#if naacCalibrationCert}}<p><strong>Calibration Certificate No:</strong> {{naacCalibrationCert}}</p>{{/if}}
+{{/if}}
 </div>
 
 <hr>
@@ -44,15 +60,22 @@
   {{{procedure}}}
 </ol>
 
+{{#if sectionNaacReview}}
 <h2>Quality Assurance and Monitoring</h2>
-<p>The implementation of this SOP shall be periodically reviewed to ensure effectiveness, relevance, and continuous improvement.</p>
+{{{naacReviewClause}}}
+{{/if}}
+
+{{#if sectionNaacWaste}}
+<h2>Eco-Waste &amp; Chemical Disposal Protocol</h2>
+{{{naacWasteProtocol}}}
+{{/if}}
 
 {{#if sectionApplicability}}
 <h2>Applicability</h2>
 {{{applicability}}}
 {{/if}}
 
-<div class="keep-together approvals-block"></div>
+<div class="keep-together approvals-block">
 <h2 class="no-counter" style="margin-top:22pt;">Approvals</h2>
 
 <table style="width:100%; border-collapse:collapse; margin-top:12pt;">

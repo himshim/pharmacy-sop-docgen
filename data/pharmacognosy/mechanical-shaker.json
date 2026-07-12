@@ -1,20 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Mechanical Shaker"
+    "title": "Operation of Mechanical Shaker in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To shake extraction flasks or maceration vessels.",
-    "scope": "Applicable to maceration and percolation.",
+    "purpose": "To provide continuous controlled mechanical agitation for maceration extraction, percolation, and solubility testing of crude drugs and plant extracts in the Pharmacognosy laboratory.",
+    "scope": "Applicable to Pharmacognosy laboratory for cold maceration extraction, dissolution testing, and preparation of filtered herbal solutions where extended mechanical agitation improves yield.",
     "procedure": [
-      "Secure flasks.",
-      "Set speed.",
-      "Shake for time.",
-      "Remove carefully."
+      "Inspect the mechanical shaker platform, clamps, and spring holders for wear and cleanliness before use.",
+      "Select appropriate flasks or bottles for the extraction — ensure they fit securely in the available clamps.",
+      "Prepare the plant material + solvent mixture in the flasks: add the weighed powdered drug, then add the specified volume of extraction solvent.",
+      "Cap the flasks tightly with PTFE-lined caps or parafilm-wrapped stoppers to prevent evaporation.",
+      "Place flasks symmetrically on the shaker platform to distribute the load evenly.",
+      "Secure each flask with the spring clips or holddown brackets — test by gently pushing each flask to confirm it is locked.",
+      "Set the speed using the RPM control knob: 100–150 RPM for maceration extraction; 200–250 RPM for vigorous mixing.",
+      "Set the timer for the required extraction duration: typically 24–72 hours for maceration extraction; 1–4 hours for dissolution/solubility tests.",
+      "Switch on the shaker and confirm it operates smoothly without excessive vibration or erratic movement.",
+      "Periodically check that all flasks remain secured during extended runs — check every few hours for long extractions.",
+      "At the end of the extraction, switch off and wait for the platform to stop completely.",
+      "Remove flasks carefully — contents may be under slight pressure; loosen caps slowly.",
+      "Filter the extract immediately through Whatman No. 1 or No. 41 filter paper in a Buchner funnel.",
+      "Measure and record the filtrate volume and note the yield.",
+      "Clean the platform with a damp cloth; use 70% ethanol for solvent residues."
     ],
     "precautions": [
-      "Balance load.",
-      "Secure containers.",
-      "Avoid glass breakage."
+      "Load the shaker platform symmetrically — asymmetric loads cause dangerous vibration and motor strain.",
+      "Do not exceed the rated weight capacity of the platform.",
+      "Ensure all flasks are tightly stoppered before shaking — solvent leaks create hazardous wet patches on the platform and floor.",
+      "For flammable organic solvents, use the shaker inside a fume hood or ensure the lab is well ventilated.",
+      "Do not operate at maximum speed for extended periods continuously — allow cooling breaks.",
+      "Always wait for the platform to stop before removing flasks.",
+      "Do not use cracked flasks — mechanical agitation exacerbates existing cracks leading to failure during shaking."
     ]
   }
 }

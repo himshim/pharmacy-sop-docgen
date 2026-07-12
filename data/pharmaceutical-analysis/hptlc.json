@@ -1,19 +1,36 @@
 {
   "meta": {
-    "title": "Operation of HPTLC System"
+    "title": "Operation of HPTLC System in Pharmaceutical Analysis Laboratory"
   },
   "sections": {
-    "purpose": "To outline the procedure for performing analysis using High Performance Thin Layer Chromatography.",
-    "scope": "Applicable to qualitative and quantitative analysis in Pharmaceutical Analysis laboratory.",
+    "purpose": "To perform High Performance Thin Layer Chromatography for qualitative identification, semi-quantitative estimation, and purity assessment of pharmaceutical substances and herbal drug extracts using automated sample application and densitometric scanning.",
+    "scope": "Applicable to Pharmaceutical Analysis laboratory for drug identity testing, herbal fingerprinting, stability studies, and identification of related substances as per IP/BP/USP methods.",
     "procedure": [
-      "Prepare the mobile phase as per experimental requirement.",
-      "Activate and mark the TLC plate.",
-      "Apply standard and sample solutions using applicator.",
-      "Saturate the development chamber with mobile phase.",
-      "Develop the plate to the specified distance.",
-      "Dry the plate and scan using densitometer.",
-      "Record and interpret chromatographic data."
+      "Prepare the HPTLC silica gel 60 F254 plates (10 × 10 cm or 20 × 10 cm, aluminium-backed) by activation in an oven at 110°C for 10 minutes immediately before use.",
+      "Allow the activated plates to cool in a desiccator before use.",
+      "Program the automatic sample applicator (CAMAG Linomat or ATS) with: application volume, band width (5–10 mm), track spacing, and start position.",
+      "Prepare sample and standard solutions at the specified concentrations in appropriate solvents.",
+      "Load the syringe of the applicator with sample/standard; apply as bands at defined positions on the plate.",
+      "Saturate the twin-trough developing chamber with the mobile phase for 20 minutes with a filter paper lining.",
+      "Place the plate in the chamber — liquid level must be 5 mm below the application bands.",
+      "Develop to the specified migration distance (typically 80 mm from the application point).",
+      "Remove plate immediately when the solvent front reaches the mark; mark the solvent front in pencil.",
+      "Dry the plate in a current of warm air or in the drying oven at 60°C for 5 minutes.",
+      "Visualize under UV 254 nm (fluorescence quenching) and 366 nm (fluorescence) using the CAMAG UV cabinet.",
+      "Document UV images using the densitometer or UV cabinet camera.",
+      "Apply derivatization reagent (if required): spray in fume hood; heat per method.",
+      "Scan the plate using the densitometer at specified wavelengths; record peak areas and Rf values.",
+      "Calculate purity or content using peak area ratios: Sample area / Standard area × Standard concentration.",
+      "Document all parameters, images, and numerical results in the analytical register."
     ],
-    "precautions": "Avoid touching the plate surface. Ensure uniform application of samples."
+    "precautions": [
+      "Wear UV-protective goggles when examining plates under UV light — short-wave UV (254 nm) causes severe eye damage.",
+      "Handle spray reagents (H₂SO₄, vanillin, anisaldehyde) in a fume hood; wear acid-resistant gloves.",
+      "Activate HPTLC plates immediately before use — moisture uptake from air reduces efficiency.",
+      "Ensure uniform application of sample bands — uneven bands cause asymmetric peaks and quantification errors.",
+      "Chamber saturation is critical — unsaturated chambers give reproducibility failures.",
+      "Mark the solvent front immediately on plate removal — it moves rapidly after removal.",
+      "Do not touch the plate surface in the chromatographic region — fingerprints cause background fluorescence."
+    ]
   }
 }

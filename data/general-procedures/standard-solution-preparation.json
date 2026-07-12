@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Standard Solution Preparation and Standardization Procedure"
+  },
+  "sections": {
+    "purpose": "To establish a uniform procedure for preparation, standardization, and management of volumetric standard solutions used in titrimetric analysis in pharmaceutical laboratories, ensuring accuracy and traceability as per IP/BP/USP requirements.",
+    "scope": "Applicable to all pharmacy laboratory departments for preparation of primary and secondary standard solutions including N/10 HCl, N/10 NaOH, N/10 H₂SO₄, 0.1 M sodium thiosulphate, and all other volumetric solutions used in official pharmacopeial methods.",
+    "procedure": [
+      "Identify the standard solution required and consult the approved IP/BP/USP method for the exact preparation protocol.",
+      "Classify the standard as: Primary standard — prepared from a reference-grade chemical of known high purity (e.g., anhydrous sodium carbonate, potassium hydrogen phthalate, potassium dichromate); Secondary standard — prepared approximately and standardized against a primary standard.",
+      "For primary standard solutions: dry the primary standard chemical at the specified temperature (e.g., anhydrous Na₂CO₃ at 270°C for 1 hour); allow to cool in a desiccator; weigh the exact amount on an analytical balance (4 decimal places).",
+      "Dissolve the primary standard in freshly boiled and cooled distilled water in a volumetric flask; make up to the exact volume.",
+      "For secondary standard solutions (e.g., NaOH, HCl): prepare the solution of approximately the required normality by dissolving or diluting the chemical; transfer to a graduated storage bottle.",
+      "Standardize the secondary solution: titrate 3 separate aliquots of the prepared solution against the appropriate primary standard; calculate the exact normality/molarity from each titration.",
+      "Calculate the factor F: Actual normality = Weighed amount / (Equivalent weight × Volume); Factor F = Actual normality / Theoretical normality.",
+      "Accept if the factor F is within 0.98–1.02 (i.e., the solution concentration is within 2% of the nominal value) — if not, adjust the solution and re-standardize.",
+      "Label the standardized solution bottle: Solution name, Nominal concentration, Actual concentration/Factor F, Standardization date, Expiry date (typically 1 month), Standardized by, and Batch number.",
+      "Verify the standardization by a second analyst performing an independent titration — both analysts' results must agree within 0.2% relative.",
+      "Record all standardization details in the Standard Solution Register: chemical name and lot, preparation details, all individual titration volumes, calculated factor, second analyst verification, and approver's signature.",
+      "Re-standardize the solution at the specified frequency (monthly or as per the pharmacopoeia) and whenever there is doubt about the solution's integrity.",
+      "Discard expired or failed standardizations and prepare fresh solution."
+    ],
+    "precautions": [
+      "Use only pharmacopeial-grade or certified reference standard chemicals for primary standards — never use ordinary laboratory reagent grade chemicals.",
+      "Dry primary standards at the exact temperature and duration specified — incomplete drying or over-drying introduces systematic weighing errors.",
+      "Use Class A volumetric glassware for all standard solution preparations — Class B glassware has unacceptable tolerance for standard solutions.",
+      "Use freshly boiled and cooled distilled water for all aqueous standard solutions — dissolved CO₂ reacts with NaOH, altering its normality.",
+      "Store NaOH standard solution in plastic (polyethylene) bottles — glass leaches silicates that precipitate and alter normality.",
+      "Never use a standard solution beyond its expiry date — even if clarified and apparently unchanged, degradation may have occurred.",
+      "All standard solution preparations must be witnessed and countersigned by a second qualified person — GLP requirement."
+    ]
+  }
+}

@@ -1,18 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Moisture Balance"
+    "title": "Operation of Moisture Balance in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To measure loss on drying.",
-    "scope": "Applicable to moisture determination.",
+    "purpose": "To determine the moisture content of crude drugs and herbal powders by gravimetric loss-on-drying method using an infrared moisture balance.",
+    "scope": "Applicable to Pharmacognosy laboratory for standardization of crude drugs — moisture content is a key IP/BP parameter for official drugs.",
     "procedure": [
-      "Load sample.",
-      "Set temperature.",
-      "Dry to constant weight."
+      "Switch on the moisture balance and allow it to warm up for at least 10 minutes before use.",
+      "Level the balance using the spirit level and adjusting feet — ensure the balance is perfectly horizontal.",
+      "Clean the sample pan with a dry, lint-free cloth and place it on the pan holder.",
+      "Tare the pan by pressing the 'Tare' button — the display should read 0.00 g.",
+      "Set the drying temperature as per the pharmacopeial requirement for the specific drug: typically 100–105°C for most crude drugs; 60–80°C for heat-sensitive materials.",
+      "Set the drying mode: Auto-off (stops when weight change is less than 1 mg in 30 seconds) or timed mode.",
+      "Spread approximately 2–5 g of the finely powdered drug sample uniformly across the entire sample pan surface.",
+      "Close the lid of the moisture balance to commence heating.",
+      "The balance displays weight loss as a percentage in real time.",
+      "When drying is complete (auto-stop or timer expires), record the final moisture content displayed.",
+      "Open the lid carefully — the sample pan and contents are very hot.",
+      "Allow the pan to cool, remove the dry sample, and clean the pan immediately.",
+      "Record the sample name, weight taken, temperature used, drying time, and moisture content in the logbook.",
+      "Compare the moisture content against pharmacopeial standards (e.g., IP limits)."
     ],
     "precautions": [
-      "Clean pan.",
-      "Calibrate."
+      "Do not overload the sample pan — samples piled too thick dry unevenly giving false low readings.",
+      "Spread the sample uniformly across the entire pan area for consistent drying.",
+      "Allow the balance to cool completely between successive determinations.",
+      "The sample pan and heating element are very hot during and immediately after analysis — use forceps to handle.",
+      "Calibrate the moisture balance using a standard substance (e.g., sodium tartrate dihydrate) periodically.",
+      "Keep the balance on a stable, vibration-free bench away from drafts.",
+      "Do not use for strongly acidic, alkaline, or corrosive materials — they damage the heating element."
     ]
   }
 }

@@ -1,24 +1,33 @@
 {
   "meta": {
-    "title": "Operation of Deep Freezer"
+    "title": "Operation of Deep Freezer in Pharmacology Laboratory"
   },
   "sections": {
-    "purpose": "To store biological samples and drugs at ultra-low temperatures.",
-    "scope": "Applicable to long-term storage in pharmacology.",
+    "purpose": "To store biological samples, drug solutions, serum, plasma, tissue homogenates, and heat-labile reference standards at −20°C or −80°C to prevent degradation during long-term storage in the Pharmacology laboratory.",
+    "scope": "Applicable to Pharmacology laboratory for long-term preservation of biological specimens, sera, plasma samples, stock drug solutions, and biochemical assay reagents requiring sub-zero temperature storage.",
     "procedure": [
-      "Set temperature to required level (typically -20°C or -80°C).",
-      "Organize samples in labeled racks.",
-      "Monitor temperature daily and log readings.",
-      "Limit door openings and minimize time.",
-      "Defrost and clean periodically.",
-      "Maintain inventory records."
+      "Set the deep freezer to the required temperature: −20°C for most biological samples and drug stock solutions; −80°C for long-term storage of enzymes, nucleic acids, and plasma proteins.",
+      "Allow the unit to reach and stabilize at the set temperature before loading samples — verify with an internal calibrated thermometer or built-in display.",
+      "Label all samples before storage: sample name/ID, concentration, date, experimenter, and study/project number.",
+      "Store samples in appropriately sealed cryogenic tubes or polypropylene tubes — never use glass at −80°C (glass cracks).",
+      "Group and organize samples in labelled freezer boxes: one box per experiment or per date.",
+      "Maintain an inventory log: record sample ID, storage date, freezer location (rack-box-position), and volume.",
+      "Segregate samples by category: reference standards, experimental samples, biological specimens.",
+      "Monitor temperature daily and record in the temperature monitoring log.",
+      "Set up temperature alarms — alert level: −15°C for −20°C units; −70°C for −80°C units.",
+      "In case of power failure: do not open the freezer; a properly sealed deep freezer maintains temperature for 4–8 hours without power.",
+      "Defrost the unit when ice build-up exceeds 2 cm or as per manufacturer schedule — transfer samples to a backup freezer during defrosting.",
+      "After defrosting, clean interior with mild disinfectant and dry completely before restarting.",
+      "Record all temperature deviations and corrective actions taken in the equipment logbook."
     ],
     "precautions": [
-      "Wear protective gloves when accessing.",
-      "Ensure backup power.",
-      "Do not overload.",
-      "Check door seals regularly.",
-      "Ventilate the room properly."
+      "Never store food in the laboratory deep freezer — risk of accidental ingestion and contamination.",
+      "Wear insulated cryogenic gloves when accessing −80°C material — contact frostbite occurs rapidly.",
+      "Allow samples taken from −80°C to thaw at −20°C first, then on ice — direct room-temperature thawing degrades labile components.",
+      "Do not store aerosols, flammable solvents, or reactive chemicals in the deep freezer.",
+      "Ensure the power supply to the deep freezer is on a priority/UPS circuit — power failure causes catastrophic sample loss.",
+      "Do not use the deep freezer as a step to reach upper shelves — overloading the door and compressor vibration disrupts temperature.",
+      "Clean condenser coils every 6 months to maintain cooling efficiency."
     ]
   }
 }

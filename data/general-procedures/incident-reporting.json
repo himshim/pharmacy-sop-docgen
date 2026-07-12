@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Laboratory Incident and Accident Reporting Procedure"
+  },
+  "sections": {
+    "purpose": "To establish a clear, mandatory procedure for reporting, documenting, investigating, and correcting all accidents, incidents, near-misses, and unsafe conditions in pharmacy laboratories to ensure personnel safety and regulatory compliance.",
+    "scope": "Applicable to all pharmacy laboratory personnel, including students, teaching staff, laboratory technicians, and visitors — any person present in the laboratory at the time of an incident.",
+    "procedure": [
+      "Ensure immediate safety first: if there is ongoing danger (fire, chemical spill, person injured), address the immediate hazard — activate the fire alarm, use the eyewash/safety shower, or call emergency services (108 / campus emergency) before initiating paperwork.",
+      "Provide first aid to the injured person: chemical burns — flush with water for 15 minutes; cuts — apply pressure with sterile gauze; inhalation — move to fresh air immediately.",
+      "Do not move the injured person unless they are in immediate danger.",
+      "Inform the Laboratory In-charge and Department Head immediately — verbal notification within 15 minutes of the incident.",
+      "Secure the incident scene if safe to do so — do not clean up or disturb evidence until the incident has been documented and investigated.",
+      "Complete the Laboratory Accident/Incident Report Form within 24 hours of the incident: Date, time, and exact location of incident; Names of all persons involved and witnesses; Detailed description of what happened; Substances or equipment involved; Injuries sustained; First aid or emergency response provided; Immediate corrective action taken.",
+      "Near-miss incidents (no injury but potential hazard) must also be reported on the same form — near-miss reporting is mandatory and non-punitive.",
+      "Submit the completed form to the Department Head and Safety Officer.",
+      "The Safety Officer initiates a formal Root Cause Analysis (RCA) within 48 hours for all accidents involving injury or significant property damage.",
+      "RCA findings and recommended corrective actions must be documented and presented to the department within 7 days.",
+      "Implement corrective and preventive actions (CAPA) — assign responsibility and target completion date for each action.",
+      "Verify completion of CAPA by the Safety Officer within the specified timeline.",
+      "Maintain all incident reports, investigation records, and CAPA documentation in the laboratory safety file for a minimum of 5 years.",
+      "Conduct a departmental safety review meeting at the end of each semester to review all incidents, trends, and CAPA status."
+    ],
+    "precautions": [
+      "Incident reporting is mandatory — failure to report an incident is a disciplinary offence under institutional regulations and PCI inspection requirements.",
+      "Never alter, delete, or conceal incident information — falsification of safety records is a serious regulatory violation.",
+      "Near-miss reporting is non-punitive — the purpose is hazard correction, not blame.",
+      "All serious injuries (fractures, chemical burns covering > 5% body surface, eye injuries, loss of consciousness) require immediate notification to the institutional medical officer and Principal.",
+      "Maintain a first-aid kit in every laboratory — inspect and replenish monthly; record inspection in the safety register.",
+      "Post emergency contact numbers (hospital, fire, poison control, campus security) prominently in every laboratory.",
+      "Conduct safety drills (fire evacuation, chemical spill response) at least once per semester — record attendance and drill outcome."
+    ]
+  }
+}

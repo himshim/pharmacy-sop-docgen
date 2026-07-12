@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Operation of Clarity Test Apparatus"
+  },
+  "sections": {
+    "purpose": "To inspect parenteral preparations (injections, infusions) for the presence of visible particulate matter and clarity as per pharmacopeial requirements (IP, BP, USP).",
+    "scope": "Applicable to Pharmaceutics laboratory for quality control of injectable formulations — mandatory test before batch release.",
+    "procedure": [
+      "Ensure the clarity test apparatus is clean and the black/white background panel and LED light source are functioning correctly.",
+      "Switch on the illuminated background and allow the light to stabilize for 5 minutes.",
+      "Wipe the exterior of each parenteral container (vial, ampoule, infusion bag) with a lint-free cloth to remove fingerprints.",
+      "Hold the container by the neck or base — do not touch the body of the container.",
+      "Gently swirl the container to resuspend any settled particles — do not introduce air bubbles.",
+      "Inspect against the white background for dark particles (glass fragments, rubber particles, precipitates).",
+      "Inspect against the black background for light-coloured or translucent particles.",
+      "Examine each container for a minimum of 5 seconds against each background.",
+      "Classify each unit: Pass — clear solution, free from visible particles; Reject — any visible particle, cloudiness, discolouration, or leakage.",
+      "For ampoule inspection: check for correct fill volume (compare against reference ampoule) and seal integrity.",
+      "Record the number of units inspected, number rejected, and reason for rejection.",
+      "After inspection, clean the viewing area with a damp cloth and cover the lamp when not in use.",
+      "Document results as per batch record requirements."
+    ],
+    "precautions": [
+      "Perform the test in a draught-free area with a controlled background — stray light affects visibility.",
+      "Illumination intensity must comply with pharmacopeial requirements: 2000–3750 lux for small volume parenterals (IP/USP).",
+      "The inspector's visual acuity must be corrected to 6/6 (with or without corrective lenses).",
+      "Do not inspect with bare hands that may contaminate the outer surface of containers.",
+      "Do not introduce vigorous agitation — this may dissolve fine particulates or generate air bubbles that mimic particles.",
+      "Inspect under both black and white backgrounds as different particles are visible against different backgrounds.",
+      "Calibrate the light source intensity periodically using a calibrated lux meter.",
+      "Train and qualify all personnel performing clarity inspection — inter-operator variability must be controlled."
+    ]
+  }
+}

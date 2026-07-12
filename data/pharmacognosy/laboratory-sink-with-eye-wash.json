@@ -1,20 +1,32 @@
 {
   "meta": {
-    "title": "Use of Laboratory Sink with Eye Wash"
+    "title": "Use of Laboratory Sink with Eye Wash in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To provide rinsing water for chemical exposure and routine glassware washing.",
-    "scope": "Applicable to all wet operations in Pharmacognosy.",
+    "purpose": "To provide immediate first-aid decontamination of eyes and face following chemical splash or accidental exposure to plant saps, irritant latex, or chemical reagents in the Pharmacognosy laboratory.",
+    "scope": "Applicable to Pharmacognosy laboratory as an emergency first-aid station for ocular and facial decontamination, and for routine glassware washing operations.",
     "procedure": [
-      "Test eye wash weekly.",
-      "Use for rinsing eyes 15 minutes if exposed.",
-      "Wash glassware with detergent, rinse thoroughly.",
-      "Drain properly."
+      "For eye wash emergency use: do not delay — immediately guide the affected person to the eye wash station.",
+      "Activate the eye wash by pushing the handle forward or upward (plumbed eye wash) — water should flow automatically.",
+      "The affected person should hold their eyelids open with their fingers (overcome the reflex to close eyes) and position their eyes directly over the nozzles.",
+      "Allow clean water to flow continuously over both eyes simultaneously for a minimum of 15 minutes as per ANSI Z358.1.",
+      "Instruct the person to rotate their eyes up, down, and sideways during flushing to ensure complete washing of all eye surfaces.",
+      "After 15 minutes of flushing, have the person seek immediate medical evaluation — even if eyes appear clear, chemical injury may develop later.",
+      "For routine glassware washing: place dirty glassware in the sink; use laboratory detergent solution and a bottle brush for interior surfaces and a soft sponge for exterior.",
+      "Rinse with tap water three times, then final rinse with distilled water.",
+      "Invert washed glassware on the drying rack adjacent to the sink.",
+      "After each use, rinse the sink basin and eye wash nozzles with clean water.",
+      "Activate the plumbed eye wash briefly once a week (10–15 seconds) to flush stagnant water from the lines and verify function.",
+      "Log weekly activation checks in the safety equipment register."
     ],
     "precautions": [
-      "Keep area clear.",
-      "Use cold water for eyes.",
-      "Seek medical help after eye wash."
+      "Test the eye wash station weekly — stagnant water in the supply line becomes contaminated with bacteria and causes additional injury.",
+      "Keep the area around the sink and eye wash completely free of obstruction — the affected person must reach it within 10 seconds in an emergency.",
+      "Post clear signage (green cross / eye wash symbol) visible from all parts of the laboratory.",
+      "Train all laboratory staff in the location and operation of the eye wash during safety induction.",
+      "Do not use contact lenses when working with chemical reagents — lenses trap chemicals against the eye; remove before flushing if possible.",
+      "Do not use the emergency eye wash for routine glassware washing — contamination of the nozzle compromises its sterility.",
+      "For chemical burns involving HF acid, immediately flush then apply calcium gluconate gel — specialized protocol applies."
     ]
   }
 }

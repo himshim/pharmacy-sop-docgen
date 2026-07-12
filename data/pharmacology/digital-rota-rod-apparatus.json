@@ -1,23 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Digital Rota Rod Apparatus"
+    "title": "Operation of Digital Rota Rod Apparatus in Pharmacology Laboratory"
   },
   "sections": {
-    "purpose": "To assess motor coordination and muscle strength.",
-    "scope": "Applicable to neuropharmacology screening.",
+    "purpose": "To assess motor coordination, balance, and muscle relaxant effects of CNS-active drugs in rodents by measuring the ability of animals to remain on a rotating rod.",
+    "scope": "Applicable to Pharmacology laboratory for screening muscle relaxant activity, sedative-hypnotic toxicity (motor incoordination), and neurological drug effects in mice and rats.",
     "procedure": [
-      "Set rod speed and cutoff time.",
-      "Place animal gently on rotating rod.",
-      "Start timer and record fall time.",
-      "Repeat trials with consistent conditions.",
-      "Calculate mean retention time."
+      "Switch on the digital rota rod apparatus; allow the motor to warm up for 2–3 minutes.",
+      "Set the rotation speed using the digital control panel: typically 10–25 RPM for mice; 5–15 RPM for rats.",
+      "Select operating mode: fixed speed (constant rotation); accelerating mode (gradual increase from low to high RPM over set time).",
+      "Set the cut-off time to prevent injury to animals (typically 180 seconds maximum).",
+      "Pre-train animals on the rota rod for 3 consecutive days before the experiment — select animals that can remain on the rod for ≥ 180 seconds.",
+      "On experiment day: record the pre-drug baseline performance (fall-off time) for each animal.",
+      "Administer the test drug or vehicle by the specified route.",
+      "Test animals at the specified time points post-administration (e.g., 30, 60, 90 minutes).",
+      "Place the animal on the rotating rod — the automatic fall sensor starts the timer when the animal is placed, stops when it falls.",
+      "Record the fall-off time (time until the animal falls or makes 3 complete passive rotations).",
+      "Return the animal to its cage after each test; test again at the next time point.",
+      "Disinfect the rod section between animals with 70% ethanol and allow to dry.",
+      "Calculate mean fall-off time for each group; compare drug vs. control using statistical analysis.",
+      "Record all data in the experimental record sheet."
     ],
     "precautions": [
-      "Train animals to avoid learning effects.",
-      "Prevent injury from falls.",
-      "Clean rod between animals.",
-      "Consistent rod diameter and surface.",
-      "Monitor animal welfare."
+      "Do not force animals to stay on the rod — they must fall naturally for the test to be valid.",
+      "Ensure the fall-detection platform/photobeam is correctly set to detect animal falls.",
+      "Place a soft cushion below the apparatus to protect animals from fall-related injury.",
+      "Pre-train animals adequately — untrained animals do not show reliable baseline performance, making drug effects undetectable.",
+      "Clean the rod between animals — odour from a previous animal causes the next animal stress.",
+      "Set a humane cut-off time (180 seconds) — do not allow animals to attempt continuously without rest.",
+      "Follow CPCSEA and IAEC guidelines for care and use of laboratory animals."
     ]
   }
 }

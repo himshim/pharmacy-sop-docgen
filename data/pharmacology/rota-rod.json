@@ -1,19 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Rota Rod Apparatus"
+    "title": "Operation of Rota Rod Apparatus in Pharmacology Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for evaluating motor coordination using the Rota Rod apparatus.",
-    "scope": "Applicable to pharmacological experiments conducted in the Pharmacology laboratory.",
+    "purpose": "To evaluate motor coordination impairment, neurotoxicity, and muscle relaxant properties of CNS-active drugs in rodents using a rotating rod on which the animal must maintain its balance.",
+    "scope": "Applicable to Pharmacology laboratory for assessment of drug-induced ataxia, sedation, and muscle relaxant activity as part of CNS pharmacology and neuropharmacology experiments.",
     "procedure": [
-      "Ensure the apparatus is clean and properly installed.",
-      "Switch ON the Rota Rod apparatus.",
-      "Set the desired rotation speed.",
-      "Place the animal gently on the rotating rod.",
-      "Start the timer and observe the fall-off time.",
-      "Record the time taken for the animal to fall.",
-      "After completion, switch OFF the apparatus."
+      "Inspect the rota rod apparatus before use: verify the rod rotates smoothly and the fall timer functions correctly.",
+      "Set the rod rotation speed to the protocol requirement: typically 10–20 RPM for mice; 5–15 RPM for rats.",
+      "Set the maximum test duration cut-off (180 seconds for mice; 120 seconds for rats) to prevent fatigue injury.",
+      "Pre-train animals for 3 consecutive days before the test day — select only animals that consistently remain on the rod for 3 minutes (cut-off time) as experimental subjects.",
+      "On test day, record baseline fall-off time before drug administration.",
+      "Administer the test compound or vehicle by the appropriate route.",
+      "At the specified time intervals post-administration, place the animal on the rotating rod.",
+      "Observe and record the time until the animal falls off the rod.",
+      "Allow the animal to rest for at least 10 minutes between consecutive measurements on the same animal.",
+      "Clean and disinfect the rod between animals with 70% ethanol.",
+      "Compare fall-off times: drug group vs. vehicle control group.",
+      "Calculate percentage impairment: [(Control time − Drug time) / Control time] × 100.",
+      "Determine ED₅₀ if dose-response data are collected.",
+      "Document all individual animal times, mean ± SEM, and statistical results in the data sheet."
     ],
-    "precautions": "Handle animals gently. Do not expose animals to unnecessary stress."
+    "precautions": [
+      "Place padded cushioning below the apparatus to protect animals from fall injury.",
+      "Do not re-test animals that appear severely sedated or ataxic — this is endpoint for that time point.",
+      "Pre-train animals adequately — untrained animals show high variability and cannot demonstrate drug effects reliably.",
+      "Set a cut-off time and never force animals to continue beyond it.",
+      "Disinfect the rod between animals to remove odour cues.",
+      "Observe animals post-test for signs of excessive distress; return promptly to housing.",
+      "Follow CPCSEA and institutional IAEC-approved protocol."
+    ]
   }
 }

@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Fire Safety and Emergency Evacuation Procedure"
+  },
+  "sections": {
+    "purpose": "To establish a clear, practiced procedure for fire prevention, early detection, safe evacuation, and fire suppression response in pharmacy laboratories to protect personnel, protect property, and ensure regulatory compliance with institutional and fire safety regulations.",
+    "scope": "Applicable to all pharmacy laboratory personnel and visitors. All laboratory users must be trained in this procedure as part of laboratory safety induction — no exceptions.",
+    "procedure": [
+      "On discovery of fire or smell of smoke: immediately activate the nearest manual fire alarm call point — do not assume others have noticed.",
+      "Shout 'FIRE' clearly to alert all persons in the immediate area.",
+      "Call the campus fire emergency number and/or 101 (fire brigade) immediately — provide your exact location, nature of the fire, and whether persons are trapped.",
+      "If the fire is small, contained, and you have been trained in fire extinguisher use: select the correct extinguisher type (CO₂ for electrical/flammable liquid fires; Dry powder for Class A/B/C fires; Water mist for Class A fires — NEVER use water on electrical or flammable liquid fires).",
+      "Use the PASS technique: Pull the pin; Aim the nozzle at the base of the fire; Squeeze the handle; Sweep side-to-side.",
+      "Attempt fire suppression only if the fire is small (confined to a single container), you have a clear escape route behind you, and you are not inhaling smoke.",
+      "If the fire is large, spreading, or producing heavy smoke: DO NOT attempt to fight it — evacuate immediately.",
+      "Close laboratory doors and windows as you exit — do not lock doors; closed doors slow fire spread significantly.",
+      "Proceed to the designated emergency exit — do not use the lift/elevator.",
+      "Assist any mobility-impaired persons to the nearest fire refuge area (stairwell landing with fire-resistant construction); notify fire brigade of their location.",
+      "Proceed to the designated assembly point for your building — a minimum of 50 metres from the building.",
+      "Report to the Fire Warden at the assembly point for headcount.",
+      "Do not re-enter the building under any circumstances until the all-clear is given by the Fire Officer or Principal.",
+      "After the incident: complete an incident report; conduct a debrief with all laboratory users; identify and correct the root cause of the fire."
+    ],
+    "precautions": [
+      "Post fire evacuation route maps and assembly point directions in every laboratory — maps must be visible from any point in the lab.",
+      "All fire extinguishers must be inspected monthly (check pressure gauge, pin, and hose) and serviced annually by a certified technician.",
+      "Conduct fire evacuation drills at least twice per year — record date, evacuation time, participants, and observations.",
+      "Never block fire exit doors, fire extinguisher locations, or fire alarm call points with equipment or furniture.",
+      "Remove all sources of unnecessary ignition from the laboratory: extinguish Bunsen burners before leaving any area; switch off heating equipment when unattended.",
+      "Store flammable solvents in approved flammable material storage cabinets — never more than one day's working quantity on the bench.",
+      "Display the fire action notice prominently at every laboratory entrance.",
+      "Identify and nominate a Fire Warden for each laboratory — the Fire Warden must receive annual fire marshal training."
+    ]
+  }
+}

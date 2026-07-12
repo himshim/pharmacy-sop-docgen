@@ -1,22 +1,33 @@
 {
   "meta": {
-    "title": "Operation of Glassware Washer"
+    "title": "Use of Glassware Washer in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To clean and dry glassware contaminated with plant extracts and solvents.",
-    "scope": "Applicable to routine glassware cleaning in Pharmacognosy.",
+    "purpose": "To clean and decontaminate laboratory glassware used in crude drug extraction, phytochemical analysis, and standardization to prevent cross-contamination between experiments.",
+    "scope": "Applicable to Pharmacognosy laboratory for cleaning all non-volumetric glassware after use in extraction, phytochemical screening, and histological staining procedures.",
     "procedure": [
-      "Load glassware securely in racks designed for the washer.",
-      "Add appropriate detergent for pharmaceutical glassware.",
-      "Select cycle (pre-wash, wash, rinse, dry) and start.",
-      "Remove and inspect glassware after cycle.",
-      "Store in clean, dust-free cabinets."
+      "Collect all used glassware in a designated sink area — separate glassware by contamination type: organic solvent residue, coloured stain, acid/base, and general aqueous.",
+      "Pre-rinse all glassware with the same solvent used in the experiment before washing with water — this dissolves residues that are insoluble in water (resinous extracts, oil-based stains).",
+      "For glassware with coloured plant stains (turmeric, phenolics): soak in 70% ethanol for 15–30 minutes before washing.",
+      "For glassware with resin or wax residue: soak in petroleum ether or hexane, discard solvent as chemical waste, then wash with detergent.",
+      "Prepare warm (40–50°C) detergent solution using laboratory-grade glassware cleaning detergent (e.g., Extran, Decon).",
+      "Scrub inner surfaces vigorously with appropriate size bottle brushes; swab test tubes with cotton-tipped swabs for narrow necks.",
+      "Scrub exterior surfaces with a sponge or cloth.",
+      "Rinse three times with warm tap water — ensure all detergent traces are removed (residual detergent affects phytochemical colour reactions).",
+      "Perform final rinse with distilled water — at least two rinses.",
+      "Inspect each piece for cleanliness: water should drain uniformly without forming droplets; droplet formation indicates residual organic contamination.",
+      "Place cleaned glassware inverted on the glassware dryer rack.",
+      "Discard wash water containing organic solvents as chemical waste.",
+      "Clean the washing sink and surrounding area after each washing session."
     ],
     "precautions": [
-      "Follow detergent manufacturer's dilution instructions.",
-      "Use only pharmaceutical-grade detergents.",
-      "Do not overload racks.",
-      "Inspect for breakage after each cycle."
+      "Wear thick rubber gloves, safety goggles, and apron during glassware washing — risk of cuts from broken glass and chemical splashes.",
+      "Never use steel wool or abrasive scrubbers on volumetric markings — abrasion removes calibration graduations.",
+      "Inspect all glassware for cracks and chips before washing — cracked glassware should be discarded in a puncture-proof sharps bin, not the regular trash.",
+      "Do not mix incompatible wash solvents (acids and organic solvents) in the same wash basin.",
+      "Use chromic acid mixture (dichromate/sulfuric acid) only when absolutely necessary — it is highly toxic and carcinogenic; dispose of as hazardous waste.",
+      "Dispose of all solvent-contaminated wash water as chemical waste per institutional protocols.",
+      "Wash hands thoroughly with soap and water after glassware washing — even after wearing gloves."
     ]
   }
 }

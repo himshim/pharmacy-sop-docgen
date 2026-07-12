@@ -1,19 +1,33 @@
 {
   "meta": {
-    "title": "Operation of DSC / TGA Analyzer"
+    "title": "Operation of DSC/TGA Thermal Analyzer in Central Instrumentation Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for thermal analysis using DSC or TGA analyzer.",
-    "scope": "Applicable to thermal analysis performed in the Central Instrumentation Facility.",
+    "purpose": "To characterize the thermal behaviour of pharmaceutical compounds and drug-excipient mixtures by measuring heat flow (DSC) and mass change (TGA) as a function of temperature, for polymorphism studies, compatibility testing, and purity determination.",
+    "scope": "Applicable to Central Instrumentation Laboratory for thermal characterization of pharmaceutical substances, excipients, and formulations for preformulation studies and stability profiling.",
     "procedure": [
-      "Ensure the instrument is clean and properly calibrated.",
-      "Switch ON the DSC/TGA analyzer and associated software.",
-      "Weigh the sample accurately and place it in the sample pan.",
-      "Load the sample pan into the instrument.",
-      "Set the temperature program as per requirement.",
-      "Start the analysis and monitor the run.",
-      "After completion, save the data and remove the sample pan."
+      "Switch on the DSC/TGA instrument and the associated cooling system (liquid nitrogen or Peltier cooling); allow 30–60 minutes warm-up.",
+      "Purge the furnace with dry nitrogen gas (20–50 mL/min) to provide an inert atmosphere and remove moisture.",
+      "For DSC: weigh 2–10 mg of the sample on a microbalance accurate to 0.01 mg; record the exact weight.",
+      "Place the sample in an aluminum DSC pan; seal using the encapsulating press (hermetically sealed for volatile samples; crimped/pierced for non-volatile).",
+      "Weigh an empty reference pan of the same type and lot.",
+      "Place the sample and reference pans on the DSC cell; close the furnace lid.",
+      "For TGA: weigh 5–20 mg of sample; place in the TGA platinum pan on the balance arm; close the furnace.",
+      "Program the temperature scan in the software: starting temperature (typically 25°C), heating rate (10°C/min standard; 5°C/min for higher resolution), end temperature (as per expected range, typically up to 300–400°C).",
+      "Start the run from the software — system will record the thermal events automatically.",
+      "After the run, allow the furnace to cool to room temperature under nitrogen purge.",
+      "Analyze the thermogram: DSC — identify Tg (glass transition), Tm (melting peak, onset temperature), ΔH (enthalpy); TGA — identify mass loss steps, onset temperatures, and residue.",
+      "Export the thermogram data and annotate all thermal events.",
+      "Record sample name, batch, exact weight, temperature program, and analysis results in the register."
     ],
-    "precautions": "Do not overload sample pans. Handle hot components carefully."
+    "precautions": [
+      "Always purge with dry nitrogen — oxygen causes oxidative decomposition of pharmaceutical compounds above 200°C.",
+      "Weigh the sample accurately — DSC results are weight-normalized; weighing error directly affects enthalpy values.",
+      "Use appropriate pan type: open pans for volatile-containing samples (allow vapour escape); sealed pans for pressure-sensitive measurement.",
+      "Do not heat above the rated furnace temperature — overheating permanently damages the DSC sensor.",
+      "Allow full cool-down under nitrogen before opening the furnace — thermal shock damages the sensor.",
+      "For explosive or peroxide-forming materials, consult the safety officer before running DSC — sealed pans can rupture.",
+      "Calibrate the DSC annually using certified melting point standards (indium, zinc, lead)."
+    ]
   }
 }

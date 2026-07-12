@@ -1,18 +1,35 @@
 {
   "meta": {
-    "title": "Operation of Tray Dryer"
+    "title": "Operation of Tray Dryer in Pharmacognosy Laboratory"
   },
   "sections": {
-    "purpose": "To dry bulk plant material.",
-    "scope": "Applicable to drying.",
+    "purpose": "To dry crude drugs, plant powders, and herbal extracts at controlled temperatures to achieve the required moisture content for standardization and long-term storage.",
+    "scope": "Applicable to Pharmacognosy laboratory for drying freshly collected plant materials, post-extraction marc, and powdered drugs prior to standardization tests.",
     "procedure": [
-      "Load trays.",
-      "Set temperature.",
-      "Dry to constant weight."
+      "Inspect the tray dryer for cleanliness; clean all trays with a dry cloth and ensure heating elements and fans are functional.",
+      "Switch ON the tray dryer and set the desired temperature using the thermostat: typical range for crude drugs is 40–60°C; heat-sensitive materials at 40°C or below.",
+      "Allow the dryer to reach and stabilize at the set temperature for at least 15–20 minutes before loading.",
+      "Spread the plant material evenly on the clean SS trays in a thin layer (not more than 2–3 cm depth) to ensure uniform drying.",
+      "Do not mix different plant materials on the same tray to avoid cross-contamination.",
+      "Place the loaded trays inside the dryer and close the door.",
+      "Record the start time, temperature setting, and material details in the logbook.",
+      "At regular intervals (every 30–60 minutes), turn and stir the material to expose all surfaces to hot air uniformly.",
+      "Periodically remove a small sample and weigh to monitor moisture loss — continue drying until constant weight is achieved.",
+      "Calculate the loss on drying (LOD): LOD (%) = [(Initial weight − Final weight) / Initial weight] × 100.",
+      "When the target LOD is achieved, remove trays from the dryer using heat-resistant gloves.",
+      "Allow the dried material to cool to room temperature in a desiccator before weighing and packing.",
+      "Pack the dried material in airtight containers, label with plant name, part, date, LOD, and batch number.",
+      "Switch OFF the tray dryer and record end time and final temperature in the logbook.",
+      "Clean trays after each batch with a dry brush and wipe with 70% ethanol."
     ],
     "precautions": [
-      "Air circulation.",
-      "Uniform loading."
+      "Do not exceed the recommended temperature for heat-sensitive volatile-containing drugs (e.g., aromatic plants) — essential oils are lost above 40°C.",
+      "Never dry flammable solvents or solvent-wet extracts in a tray dryer — use a vacuum oven instead.",
+      "Ensure adequate spacing between trays for proper hot air circulation.",
+      "Use calibrated thermometers placed inside the drying chamber to verify actual vs. set temperature.",
+      "Do not open the dryer door frequently — each opening causes temperature drop and extends drying time.",
+      "Wear heat-resistant gloves when handling hot trays.",
+      "Ensure the exhaust vent of the tray dryer is not blocked."
     ]
   }
 }

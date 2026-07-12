@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Handling of Corrosive and Hazardous Chemicals"
+  },
+  "sections": {
+    "purpose": "To establish safe practices for the storage, transfer, use, and disposal of corrosive, toxic, flammable, and reactive chemicals in pharmacy laboratories to protect personnel and prevent accidents.",
+    "scope": "Applicable to all chemistry, pharmaceutics, pharmacognosy, and research laboratories where hazardous chemicals are utilized.",
+    "procedure": [
+      "Consult the Safety Data Sheet (SDS) for any chemical before handling it to understand its specific hazards, personal protective equipment requirements, and spill response protocol.",
+      "Wear appropriate PPE including chemical splash goggles, a buttoned lab coat, long pants, closed-toe shoes, and chemical-resistant gloves.",
+      "Perform all operations involving volatile, toxic, corrosive, or foul-smelling chemicals inside a certified chemical fume hood. Verify the fume hood blower is operating before starting.",
+      "Transport chemicals in secondary containment buckets or carriers to prevent accidental spills due to dropped containers.",
+      "When diluting concentrated acids, always add the acid to water slowly with constant stirring. Never add water to concentrated acid, as it can cause violent boiling and acid projection.",
+      "Pour chemicals carefully, keeping the container opening away from the body and others.",
+      "Use pipette fillers or bulbs for measuring liquid reagents. Never use mouth suction to pipette any chemical.",
+      "Label all secondary containers (beakers, flasks, reagent bottles) immediately with the chemical name, concentration, date, and appropriate hazard warnings.",
+      "Store hazardous chemicals in compatible groups as per chemical compatibility guidelines (e.g., store acids separately from bases, flammables separately from oxidizers).",
+      "Keep all chemical storage cabinet doors closed and locked when not in use.",
+      "Report any spill, exposure, or near-miss to the Laboratory In-charge immediately and follow the spill control protocol.",
+      "Dispose of chemical waste in designated, clearly labeled waste carboys. Never pour hazardous chemicals down the laboratory sink."
+    ],
+    "precautions": [
+      "Never mix incompatible chemicals (e.g., concentrated nitric acid and organic solvents) as this can lead to violent explosions or toxic gas release.",
+      "Do not heat flammable solvents using an open flame; use a water bath, oil bath, or heating mantle.",
+      "Ensure eyewash stations and safety showers are unobstructed and tested weekly.",
+      "Avoid direct skin or eye contact with all chemicals; wash hands immediately if contact occurs.",
+      "Never eat, drink, apply cosmetics, or store food in areas where hazardous chemicals are used or stored.",
+      "Keep chemical containers closed tightly when not actively dispensing to prevent vapor release."
+    ]
+  }
+}

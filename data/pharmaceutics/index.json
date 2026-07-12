@@ -292,6 +292,18 @@
     {
       "key": "vibratory-sieve-shaker",
       "name": "Vibratory Sieve Shaker"
+    },
+    {
+      "key": "autoclave",
+      "name": "Autoclave"
+    },
+    {
+      "key": "bod-incubator",
+      "name": "BOD Incubator"
+    },
+    {
+      "key": "clarity-test-apparatus",
+      "name": "Clarity Test Apparatus"
     }
   ]
 }

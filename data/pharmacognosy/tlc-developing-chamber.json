@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Operation of TLC Developing Chamber and UV Lamp"
+  },
+  "sections": {
+    "purpose": "To perform Thin Layer Chromatography (TLC) for qualitative identification and purity testing of plant extracts, drugs, and chemical compounds using a TLC developing chamber and UV lamp visualization.",
+    "scope": "Applicable to Pharmacognosy laboratory for phytochemical screening, drug identification, and purity assessment practicals.",
+    "procedure": [
+      "Select appropriate TLC plates (Silica gel 60 F254 aluminium sheets or glass plates) and cut to required size using a sharp cutter.",
+      "Draw a light pencil line 1 cm from the bottom of the plate as the origin line and 1 cm from the top as the solvent front line.",
+      "Using a capillary tube or micropipette, spot the sample solutions at marked positions on the origin line — spot diameter should be 2–3 mm.",
+      "Allow the spots to dry completely; re-spot if higher concentration is needed (allow drying between applications).",
+      "Prepare the mobile phase (solvent system) as per the pharmacopeial or standard method and pour into the TLC chamber to a depth of 0.5 cm.",
+      "Saturate the TLC chamber by placing a filter paper lining inside — allow 15–20 minutes for chamber saturation.",
+      "Place the spotted TLC plate vertically in the developing chamber — ensure spots are above the solvent level.",
+      "Close the lid of the developing chamber and allow chromatography to proceed until the solvent front reaches the marked line.",
+      "Remove the plate immediately when the solvent front reaches the upper line.",
+      "Mark the solvent front with a pencil immediately.",
+      "Allow the plate to dry completely in a fume hood.",
+      "Visualize the spots under UV lamp: Short wave (254 nm) for quenching fluorescence; Long wave (365 nm) for fluorescent compounds.",
+      "Mark the visible spots with a pencil under UV light — use appropriate UV-protective goggles.",
+      "Apply appropriate spray reagents (e.g., vanillin-sulphuric acid, ninhydrin, iodine) in the fume hood if further visualization is needed.",
+      "Calculate the Rf value for each spot: Rf = Distance travelled by spot / Distance travelled by solvent front.",
+      "Compare Rf values with reference standards and document observations with plate sketches or photographs.",
+      "Record all observations in the practical record book."
+    ],
+    "precautions": [
+      "Always wear UV-protective goggles when examining plates under UV light — UV radiation causes serious eye injury.",
+      "Never look directly at the UV lamp without proper UV-blocking safety goggles.",
+      "Handle spray reagents (concentrated acids) in a fume hood while wearing gloves and safety glasses.",
+      "Ensure the developing chamber is properly saturated before inserting the TLC plate.",
+      "Spots must be above the solvent level — submerging spots in the mobile phase destroys the chromatogram.",
+      "Mark origin and solvent front lines in pencil only — ink dissolves in mobile phases.",
+      "Allow spots to dry completely between applications to keep spot size minimal.",
+      "Dispose of used solvents and spray reagents as chemical waste as per institutional protocol.",
+      "Keep UV lamp surfaces clean and avoid touching the lamp bulb with bare hands."
+    ]
+  }
+}

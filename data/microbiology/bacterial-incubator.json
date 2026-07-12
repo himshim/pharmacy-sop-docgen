@@ -1,19 +1,33 @@
 {
   "meta": {
-    "title": "Operation of Bacterial Incubator"
+    "title": "Operation of Bacterial Incubator in Microbiology Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for incubation of microbial cultures using a bacterial incubator.",
-    "scope": "Applicable to incubation of microbial cultures in the Microbiology laboratory.",
+    "purpose": "To maintain controlled temperature conditions (35–37°C for bacterial cultures; 25–28°C for fungal cultures) for optimal growth of microorganisms in pharmaceutical microbiology experiments.",
+    "scope": "Applicable to Pharmaceutical Microbiology laboratory for incubation of bacterial and fungal cultures, sterility testing incubation, antimicrobial susceptibility testing plates, and microbial limit testing samples.",
     "procedure": [
-      "Switch ON the incubator.",
-      "Set the required incubation temperature.",
-      "Allow the incubator to stabilize at set temperature.",
-      "Place inoculated culture plates or tubes inside.",
-      "Close the incubator door securely.",
-      "Incubate for the specified time period.",
-      "Remove cultures after incubation and switch OFF the incubator if not required."
+      "Switch on the bacterial incubator and set the thermostat to the required temperature: 35–37°C for pathogenic and pharmaceutical bacteria; 30–32°C for environmental bacteria; 25–28°C for fungi and yeasts.",
+      "Allow the incubator to equilibrate at the set temperature for a minimum of 30 minutes before loading cultures.",
+      "Verify the internal temperature with a calibrated thermometer placed at mid-shelf level — do not rely solely on the thermostat dial.",
+      "Before loading, ensure all culture vessels are labelled: organism name/code, culture medium, date of inoculation, expected incubation period, and operator.",
+      "Place inoculated Petri dishes inverted (agar side up) to prevent condensation from dropping onto colonies.",
+      "Space plates and tubes with adequate clearance to allow air circulation — do not overcrowd.",
+      "Do not mix different organism categories in the same incubator during critical experiments (e.g., sterility testing cultures should be isolated).",
+      "Record loading time, organisms, and incubation parameters in the incubator log.",
+      "Record temperature twice daily (morning and afternoon) in the temperature monitoring log.",
+      "After the incubation period, remove cultures and proceed to examination without delay.",
+      "Log the removal time and observations (confluent growth, colony count, colour, morphology).",
+      "After use, wipe the interior of the incubator with a 70% ethanol-dampened cloth; allow to dry before the next use.",
+      "Perform deep cleaning with an appropriate disinfectant monthly."
     ],
-    "precautions": "Avoid frequent opening of the incubator door. Handle cultures carefully."
+    "precautions": [
+      "Never place open or unsealed culture containers in the incubator — aerosol generation causes cross-contamination.",
+      "All incubation of potential pathogens must be in sealed containers.",
+      "Do not open the incubator door frequently — each opening causes temperature fluctuation and extends equilibration time.",
+      "Install a temperature alarm (min/max thermometer with alarm) to alert if temperature deviates outside the set range.",
+      "Calibrate the incubator thermostat against a reference thermometer every 6 months.",
+      "Maintain the incubator humidity by placing a tray of water inside if drying of agar plates is a concern.",
+      "Restrict access to authorized personnel — keep incubator door locked when not in supervised use."
+    ]
   }
 }

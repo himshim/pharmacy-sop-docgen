@@ -1,18 +1,34 @@
 {
   "meta": {
-    "title": "Operation of Refractometer"
+    "title": "Operation of Refractometer in Central Instrumentation Laboratory"
   },
   "sections": {
-    "purpose": "To describe the procedure for operating the Refractometer.",
-    "scope": "Applicable to activities carried out in the Central Instrumentation.",
+    "purpose": "To measure the refractive index and Brix (sugar content) of pharmaceutical solutions, syrups, oils, and liquid preparations for identity, purity assessment, and concentration determination as per pharmacopeial requirements.",
+    "scope": "Applicable to Central Instrumentation Laboratory for refractive index determination of liquid pharmaceuticals, essential oils, vegetable oils, and sugar-based preparations as per IP/BP identity tests.",
     "procedure": [
-      "Ensure the instrument is clean and in working condition.",
-      "Switch ON the instrument and allow it to stabilize.",
-      "Prepare the sample as per standard laboratory practice.",
-      "Perform the analysis using appropriate settings.",
-      "Record observations and save results.",
-      "Switch OFF the instrument after completion."
+      "Switch on the digital refractometer (or allow the Abbe refractometer to equilibrate to room temperature).",
+      "Set the temperature to 20°C using the thermostatic water circulation unit (for Abbe refractometer); digital refractometers with built-in ATC are ready after self-calibration.",
+      "Calibrate the refractometer with distilled water: nD₂₀ of water = 1.3330. Adjust if the reading does not match.",
+      "Clean the prism surface with a single pass of lens paper dampened with distilled water; blot dry — never rub.",
+      "Apply 2–3 drops of the sample to the illuminated prism using a clean, dry dropper or glass rod.",
+      "Close the sample lid (Abbe) to spread the sample in a thin film; for digital — simply apply and wait.",
+      "Adjust the illumination (Abbe: rotate the lamp arm) to obtain a clear light-dark boundary in the eyepiece field.",
+      "Bring the crosshair onto the light-dark boundary using the micrometer screw.",
+      "Read the refractive index on the scale (to 4 decimal places) or the digital display.",
+      "Record the temperature simultaneously.",
+      "Repeat the measurement two more times; report the mean.",
+      "Clean the prism after each sample: wipe with a lens paper dampened with ethanol; allow to dry.",
+      "Compare the measured refractive index against the pharmacopeial value for the sample.",
+      "Record: sample name, refractive index (mean), temperature, and compliance status in the register."
     ],
-    "precautions": "Handle the equipment carefully and follow laboratory safety guidelines."
+    "precautions": [
+      "Clean the prism with lens paper only — rough tissues and cotton scratch the prism surface permanently.",
+      "Never apply pressure to the prism cover when closing — cracking the prism is a costly irreversible damage.",
+      "Rinse with distilled water and dry the prism between different samples — residue from the previous sample contaminates the next reading.",
+      "Apply temperature correction if measuring at a temperature other than 20°C — refractive index changes approximately 0.00045 per °C for most liquids.",
+      "Use small sample volumes — 2–3 drops is sufficient; excess sample runs off the prism and wastes material.",
+      "Calibrate at the beginning of each day using distilled water.",
+      "Store the refractometer with the prism clean and dry; cover the prism with the protective cover."
+    ]
   }
 }
