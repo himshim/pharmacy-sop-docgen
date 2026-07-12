@@ -877,7 +877,7 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
           }
         });
         window.addEventListener("resize", () => {
-          if (window.innerWidth < 1024) {
+          if (window.innerWidth < 768) {
             this.refreshPreview();
           }
         });
@@ -1614,11 +1614,11 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
 
         UIModule.renderPreview(html);
 
-        // Dynamic Scale Calculation on mobile devices (< 1024px width)
+        // Dynamic Scale Calculation on mobile devices (< 768px width)
         const preview = UtilsModule.$("preview");
         const wrapper = UtilsModule.$("preview-wrapper");
         if (preview && wrapper) {
-          if (window.innerWidth < 1024 && !this.state.isZoomedIn) {
+          if (window.innerWidth < 768 && !this.state.isZoomedIn) {
             const wrapperWidth = wrapper.offsetWidth;
             const targetWidth = 794; // A4 width at 96 dpi
             const scale = Math.max(0.1, (wrapperWidth - 16) / targetWidth);

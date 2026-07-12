@@ -527,7 +527,7 @@ body {
 /* ═══════════════════════════════════════════════════════════════
    DESKTOP RESPONSIVE LAYOUT (UNLOCKED SPLIT VIEW)
    ═══════════════════════════════════════════════════════════ */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     body {
         padding: 24px;
         background: var(--primary-gradient);
@@ -805,7 +805,7 @@ body {
 /* ═══════════════════════════════════════════════════════════
    MOBILE-SPECIFIC CUSTOMIZATIONS (ZOOM & ACCESSIBILITY)
    ═══════════════════════════════════════════════════════════ */
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     /* Prevent iOS browser auto-zoom on input focus */
     .form-group input[type="text"],
     .form-group input[type="date"],
@@ -834,7 +834,7 @@ body {
     justify-content: center;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     #zoom-toggle-btn {
         display: none !important;
     }
