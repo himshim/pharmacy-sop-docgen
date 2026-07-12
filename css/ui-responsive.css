@@ -11,25 +11,47 @@
 }
 
 :root {
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --accent-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --primary-color: #667eea;
-    --primary-dark: #5568d3;
-    --accent-color: #f5576c;
-    --bg-light: #f8f9fa;
+    --primary-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    --accent-gradient: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    --primary-color: #10b981;
+    --primary-dark: #059669;
+    --accent-color: #0284c7;
+    --bg-light: #f3f7f5;
     --bg-white: #ffffff;
-    --text-dark: #2d3748;
-    --text-medium: #4a5568;
-    --text-light: #718096;
-    --border-color: #e2e8f0;
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-    --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+    --text-dark: #0f2e1e;
+    --text-medium: #1c3f2d;
+    --text-light: #476657;
+    --border-color: rgba(16, 185, 129, 0.12);
+    --shadow-sm: 0 1px 2px rgba(15, 46, 30, 0.05);
+    --shadow-md: 0 4px 12px rgba(15, 46, 30, 0.08);
+    --shadow-lg: 0 12px 24px rgba(15, 46, 30, 0.12);
+    --shadow-hover: 0 16px 28px rgba(16, 185, 129, 0.12), 0 4px 12px rgba(15, 46, 30, 0.04);
+    --ring: rgba(16, 185, 129, 0.35);
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease, border-color 0.15s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-gradient: linear-gradient(135deg, #10b981 0%, #047857 100%);
+        --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+        --primary-color: #10b981;
+        --primary-dark: #047857;
+        --accent-color: #38bdf8;
+        --bg-light: #070a10;
+        --bg-white: #0f131a;
+        --text-dark: #f1f5f9;
+        --text-medium: #cbd5e1;
+        --text-light: #94a3b8;
+        --border-color: rgba(52, 211, 153, 0.15);
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.5);
+        --shadow-hover: 0 16px 28px rgba(52, 211, 153, 0.20), 0 4px 12px rgba(0, 0, 0, 0.3);
+        --ring: rgba(52, 211, 153, 0.45);
+    }
 }
 
 body {
@@ -161,6 +183,17 @@ body {
     padding: 20px;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.control-section:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.control-section:active {
+    transform: translateY(0) scale(0.99);
 }
 
 .section-title {
@@ -213,12 +246,12 @@ body {
     transition: var(--transition);
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+    box-shadow: 0 0 0 3px var(--ring);
 }
 
 .form-group textarea {
@@ -463,7 +496,14 @@ body {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-primary:active,
+.btn-secondary:active,
+.action-btn:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary {
@@ -474,6 +514,8 @@ body {
 
 .btn-secondary:hover {
     background: var(--bg-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
 }
 
 /* Status Bar */
