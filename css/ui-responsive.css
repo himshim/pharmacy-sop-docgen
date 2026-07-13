@@ -666,6 +666,7 @@ body {
 
     .control-section {
         border-radius: var(--radius-sm);
+        flex-shrink: 0;
     }
 
     /* Right Preview Sidebar Styling */

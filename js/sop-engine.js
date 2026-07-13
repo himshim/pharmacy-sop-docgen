@@ -831,7 +831,7 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
       templateName: "sop-a4-classic",
       debounce: null,
       isExpertMode: false,
-      isFluidPreview: true,
+      isFluidPreview: false,
       activeInlineKey: null,
       activeInlineIndex: null,
     },
