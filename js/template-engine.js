@@ -128,10 +128,18 @@ function evaluate(nodes, data, escapeFn, sanitizeFn) {
     return result;
 }
 
+const templateCache = new Map();
+
 window.renderTemplate = function(template, data) {
     if (!template) return "";
     const sanitizeFn = typeof window.sanitizeHtml === "function" ? window.sanitizeHtml : (x => x);
-    const tokens = tokenize(template);
-    const nodes = parse(tokens);
+    
+    let nodes = templateCache.get(template);
+    if (!nodes) {
+        const tokens = tokenize(template);
+        nodes = parse(tokens);
+        templateCache.set(template, nodes);
+    }
+    
     return evaluate(nodes, data, escapeHtml, sanitizeFn);
 };

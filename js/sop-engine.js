@@ -1439,12 +1439,35 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
     handleInput(id, value) {
       if (!this.state.sopData) return;
       const key = UIModule.inputMap[id];
-      if (key === "procedure") {
+      
+      // Update state data store
+      if (key === "procedure" || key === "precautions") {
         this.state.sopData[key] = value.split("\n").filter((l) => l.trim());
       } else {
         this.state.sopData[key] = value;
       }
-      this.debouncedRender();
+
+      // Check if we can apply fine-grained reactive DOM binding
+      const complexKeys = ["procedure", "precautions", "changeHistoryRows"];
+      const isComplex = complexKeys.includes(key);
+      
+      const preview = UtilsModule.$("preview");
+      const targetElements = preview ? preview.querySelectorAll(`[data-key="${key}"]`) : [];
+
+      if (!isComplex && targetElements.length > 0) {
+        // Fast path: target exact node mutations without repainting the entire page
+        targetElements.forEach((el) => {
+          if (el.classList.contains("wysiwyg-block")) {
+            const sanitizeFn = typeof window.sanitizeHtml === "function" ? window.sanitizeHtml : (x => x);
+            el.innerHTML = sanitizeFn(value);
+          } else {
+            el.textContent = value;
+          }
+        });
+      } else {
+        // Slow path fallback: trigger full template parse and redraw
+        this.debouncedRender();
+      }
     },
 
     handleToggle(id, isChecked) {
