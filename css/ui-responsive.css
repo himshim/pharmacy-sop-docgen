@@ -392,6 +392,16 @@ body {
     margin-bottom: -600px; /* Offset the scale shrink space */
 }
 
+#preview.fluid-preview {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 24px 16px !important;
+    box-shadow: none !important;
+    transform: none !important;
+    margin-bottom: 0 !important;
+}
+
 /* ═══════════════════════════════════════════════════════════
    DOCUMENT PREVIEW TYPOGRAPHY & LAYOUT (Times New Roman)
    ═══════════════════════════════════════════════════════════ */

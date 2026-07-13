@@ -831,7 +831,7 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
       templateName: "sop-a4-classic",
       debounce: null,
       isExpertMode: false,
-      isZoomedIn: false,
+      isFluidPreview: true,
       activeInlineKey: null,
       activeInlineIndex: null,
     },
@@ -1024,12 +1024,15 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
 
       // Zoom Toggle Button
       if (UIModule.elements.zoomToggleBtn) {
+        // Set initial label
+        UIModule.elements.zoomToggleBtn.innerHTML = this.state.isFluidPreview ? "📐 Page Layout" : "📄 Fluid View";
+
         UIModule.elements.zoomToggleBtn.addEventListener("click", () => {
-          this.state.isZoomedIn = !this.state.isZoomedIn;
-          if (this.state.isZoomedIn) {
-            UIModule.elements.zoomToggleBtn.innerHTML = "🔍 Fit Screen";
+          this.state.isFluidPreview = !this.state.isFluidPreview;
+          if (this.state.isFluidPreview) {
+            UIModule.elements.zoomToggleBtn.innerHTML = "📐 Page Layout";
           } else {
-            UIModule.elements.zoomToggleBtn.innerHTML = "🔍 Zoom 100%";
+            UIModule.elements.zoomToggleBtn.innerHTML = "📄 Fluid View";
           }
           this.refreshPreview();
         });
@@ -1618,7 +1621,14 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
         const preview = UtilsModule.$("preview");
         const wrapper = UtilsModule.$("preview-wrapper");
         if (preview && wrapper) {
-          if (window.innerWidth < 768 && !this.state.isZoomedIn) {
+          // Apply fluid-preview class dynamically based on viewport and toggle state
+          if (window.innerWidth < 768 && this.state.isFluidPreview) {
+            preview.classList.add("fluid-preview");
+          } else {
+            preview.classList.remove("fluid-preview");
+          }
+
+          if (window.innerWidth < 768 && !this.state.isFluidPreview) {
             const wrapperWidth = wrapper.offsetWidth;
             const targetWidth = 794; // A4 width at 96 dpi
             const scale = Math.max(0.1, (wrapperWidth - 16) / targetWidth);
@@ -1632,7 +1642,7 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
               preview.style.marginBottom = `-${previewHeight * (1 - scale)}px`;
             }, 50);
           } else {
-            // Reset for desktop view or when Zoomed In
+            // Reset for desktop view or when Fluid View is active
             preview.style.transform = "";
             preview.style.transformOrigin = "";
             preview.style.marginBottom = "";

@@ -354,3 +354,30 @@ body.printing-mode [contenteditable="true"]:empty::before {
   content: "" !important;
   display: none !important;
 }
+
+/* Ensure fluid preview is normalized to standard A4 on print/PDF save */
+@media print {
+  #preview.fluid-preview {
+    width: 210mm !important;
+    min-width: 210mm !important;
+    min-height: 297mm !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 20mm !important;
+    background: white !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+}
+
+body.printing-mode #preview.fluid-preview {
+  width: 210mm !important;
+  min-width: 210mm !important;
+  min-height: 297mm !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  padding: 20mm !important;
+  background: white !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
