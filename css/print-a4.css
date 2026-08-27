@@ -368,6 +368,11 @@ body.printing-mode [contenteditable="true"]:empty::before {
     box-shadow: none !important;
     transform: none !important;
   }
+
+  table, tr, td, th, .sop-signoff-grid, .doc-header-table, .change-history {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
 }
 
 body.printing-mode #preview.fluid-preview {
@@ -380,4 +385,15 @@ body.printing-mode #preview.fluid-preview {
   background: white !important;
   box-shadow: none !important;
   transform: none !important;
+}
+
+body.printing-mode table,
+body.printing-mode tr,
+body.printing-mode td,
+body.printing-mode th,
+body.printing-mode .sop-signoff-grid,
+body.printing-mode .doc-header-table,
+body.printing-mode .change-history {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
 }

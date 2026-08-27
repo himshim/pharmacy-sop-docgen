@@ -237,6 +237,18 @@ window.initSOPApp = function () {
 
         const compileHtmlToPdfMake = (rootEl) => {
           const docDefinition = {
+            pageSize: 'A4',
+            pageOrientation: 'portrait',
+            pageMargins: [40, 45, 40, 45],
+            footer: function (currentPage, pageCount) {
+              return {
+                text: `Page ${currentPage} of ${pageCount}`,
+                alignment: 'center',
+                fontSize: 8.5,
+                color: '#64748b',
+                margin: [0, 12, 0, 0]
+              };
+            },
             content: [],
             styles: {
               header: { fontSize: 16, bold: true, alignment: 'center', margin: [0, 0, 0, 12] },
@@ -327,7 +339,8 @@ window.initSOPApp = function () {
                 }
                 docDefinition.content.push({
                   table: {
-                    headerRows: node.querySelector("thead") ? 1 : 0,
+                    headerRows: node.querySelector("thead") || node.querySelector("th") ? 1 : 0,
+                    dontBreakRows: true,
                     widths: widths,
                     body: tableData
                   },
@@ -380,7 +393,7 @@ window.initSOPApp = function () {
         UtilsModule.log("📝 Generating Native DOCX...");
         const previewElement = this.getPreviewElement();
 
-        const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, HeadingLevel } = window.docx;
+        const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, HeadingLevel, ShadingType } = window.docx;
         const children = [];
 
         // Helper to parse formatting runs (bold/italic)
@@ -513,7 +526,12 @@ window.initSOPApp = function () {
                   width: { size: cellWidthDxa, type: WidthType.DXA }
                 };
                 if (colSpan > 1) cellOpts.columnSpan = colSpan;
-                if (isHeader) cellOpts.shading = { fill: "1E293B" };
+                if (isHeader) {
+                  cellOpts.shading = {
+                    type: typeof ShadingType !== "undefined" ? ShadingType.CLEAR : undefined,
+                    fill: "1E293B"
+                  };
+                }
                 
                 cells.push(new TableCell(cellOpts));
               });
@@ -521,8 +539,10 @@ window.initSOPApp = function () {
             });
 
             if (rows.length > 0) {
+              const colWidths = Array(totalCols).fill(Math.round(9000 / totalCols));
               children.push(new Table({
                 rows: rows,
+                columnWidths: colWidths,
                 width: { size: 9000, type: WidthType.DXA },
                 borders: {
                   top: { style: BorderStyle.SINGLE, size: 4, color: "CBD5E0" },
@@ -568,7 +588,20 @@ window.initSOPApp = function () {
             config: numberingConfig
           },
           sections: [{
-            properties: {},
+            properties: {
+              page: {
+                size: {
+                  width: 11906, // A4 width in DXA (210mm)
+                  height: 16838 // A4 height in DXA (297mm)
+                },
+                margin: {
+                  top: 1440, // 1 inch
+                  right: 1440,
+                  bottom: 1440,
+                  left: 1440
+                }
+              }
+            },
             children: children
           }]
         });
