@@ -22,8 +22,8 @@ window.initSOPApp = function () {
   const ConfigModule = {
     DEBUG: true,
     PATHS: {
-      DATA: null, // Auto-detected
-      TEMPLATES: null, // Auto-detected
+      DATA: "./data/",
+      TEMPLATES: "./templates/",
     },
     DEFAULTS: {
       RESPONSIBILITY:
@@ -59,29 +59,6 @@ window.initSOPApp = function () {
       templates: {},
       sops: {},
       departments: null,
-    },
-
-    async resolvePaths() {
-      const candidates = ["../", "./"];
-      for (const prefix of candidates) {
-        try {
-          const res = await fetch(
-            `${prefix}data/departments.json?v=${Date.now()}`
-          );
-          if (res.ok) {
-            ConfigModule.PATHS.DATA = `${prefix}data/`;
-            ConfigModule.PATHS.TEMPLATES = `${prefix}templates/`;
-            UtilsModule.log(`✅ Paths Resolved: ${ConfigModule.PATHS.DATA}`);
-            return true;
-          }
-        } catch (e) {
-          /* continue */
-        }
-      }
-      // Fallback
-      ConfigModule.PATHS.DATA = "../data/";
-      ConfigModule.PATHS.TEMPLATES = "../templates/";
-      return false;
     },
 
     async fetchJSON(endpoint) {
@@ -399,11 +376,6 @@ window.initSOPApp = function () {
         return this.showLibraryMissingError("docx");
       }
 
-      if (typeof saveAs === "undefined") {
-        UtilsModule.error("❌ FileSaver.js library not found");
-        return this.showLibraryMissingError("FileSaver");
-      }
-
       try {
         UtilsModule.log("📝 Generating Native DOCX...");
         const previewElement = this.getPreviewElement();
@@ -602,7 +574,11 @@ window.initSOPApp = function () {
         });
 
         const blob = await Packer.toBlob(doc);
-        saveAs(blob, filename || "SOP_Document.docx");
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = filename || "SOP_Document.docx";
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
         UtilsModule.log("✅ DOCX exported successfully");
         alert("✅ Word document saved successfully (Native Format)!");
       } catch (error) {
@@ -632,30 +608,11 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
         sopSelect: UtilsModule.$("sopSelect"),
         tmplSelect: UtilsModule.$("templateSelect"),
         printBtn: UtilsModule.$("browser-print-btn"),
+        docxBtn: UtilsModule.$("docx-btn"),
         pdfBtn: UtilsModule.$("print-btn"),
         zoomToggleBtn: UtilsModule.$("zoom-toggle-btn"),
         uploader: UtilsModule.$("uploadSopJson"),
       };
-
-      // DYNAMIC BUTTON: DOCX Export
-      const toolbar =
-        document.querySelector(".toolbar-buttons") ||
-        document.querySelector(".bottom-action-bar");
-      if (toolbar && !document.getElementById("docx-btn")) {
-        const btn = document.createElement("button");
-        btn.id = "docx-btn";
-        btn.className = this.elements.pdfBtn
-          ? this.elements.pdfBtn.className
-          : "action-btn";
-        btn.style.marginLeft = "10px";
-        btn.style.backgroundColor = "#2b5797";
-        btn.style.color = "white";
-        btn.innerHTML = "💾 Word";
-        if (this.elements.pdfBtn)
-          toolbar.insertBefore(btn, this.elements.pdfBtn);
-        else toolbar.appendChild(btn);
-        this.elements.docxBtn = btn;
-      }
 
       return !!this.elements.deptSelect;
     },
@@ -845,10 +802,6 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
         );
         return;
       }
-
-      UtilsModule.log("🔍 Resolving data paths...");
-      const pathResolved = await DataModule.resolvePaths();
-      UtilsModule.log(`📂 Using data path: ${ConfigModule.PATHS.DATA}`);
 
       try {
         UtilsModule.log("⏳ Fetching departments.json...");

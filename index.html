@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/print-a4.css" />
 
     <!-- External CDNs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docx@8.2.4/build/index.umd.js"></script>
@@ -497,6 +496,7 @@
           <div class="bottom-action-bar">
             <button id="zoom-toggle-btn" class="action-btn btn-secondary">🔍 Zoom 100%</button>
             <button id="browser-print-btn" class="action-btn btn-secondary">🖨️ Print</button>
+            <button id="docx-btn" class="action-btn btn-secondary">💾 Word</button>
             <button id="print-btn" class="action-btn btn-primary">💾 Save PDF</button>
           </div>
 
@@ -520,13 +520,9 @@
         </button>
       </nav>
 
-      <!-- Footer Status (Desktop only) -->
-      <footer class="status-bar">
-        <div class="status-left">
-          <div class="status-indicator">
-            <span class="status-dot"></span>
-            <span>Ready</span>
-          </div>
+      <!-- Bottom Footer -->
+      <footer class="app-footer">
+        <div class="footer-info">
           <span>SOP Generator Pharma Edition</span>
         </div>
         <div class="credit-footer">
@@ -536,9 +532,9 @@
       </footer>
     </div>
 
-    <script src="js/security-sanitizer.js?v=5"></script>
-    <script src="js/template-engine.js?v=5"></script>
-    <script src="js/sop-engine.js?v=5"></script>
+    <script src="js/security-sanitizer.js?v=6"></script>
+    <script src="js/template-engine.js?v=6"></script>
+    <script src="js/sop-engine.js?v=6"></script>
 
     <!-- Tab Switching Logic (Mobile First) -->
     <script>
