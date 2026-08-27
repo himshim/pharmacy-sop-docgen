@@ -223,10 +223,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 7px;
     border-radius: var(--radius-pill);
     cursor: pointer;
     transition: var(--transition);
+}
+
+.tab-btn svg {
+    flex-shrink: 0;
 }
 
 .tab-btn.active {
@@ -235,8 +239,8 @@ body {
     box-shadow: var(--shadow-primary);
 }
 
-.tab-btn::before {
-    font-size: 18px;
+.tab-btn.active svg {
+    stroke: #ffffff;
 }
 
 /* Main Layout Area */
@@ -331,12 +335,28 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 26px;
-    height: 26px;
+    width: 28px;
+    height: 28px;
     background: rgba(16, 185, 129, 0.1);
     border: 1px solid rgba(16, 185, 129, 0.2);
     border-radius: 6px;
-    font-size: 13px;
+    color: var(--primary-color);
+}
+
+.section-icon svg {
+    stroke: var(--primary-color);
+    flex-shrink: 0;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spin-icon {
+    animation: spin 0.8s linear infinite;
+    display: inline-block;
+    flex-shrink: 0;
 }
 
 /* Form Styling */

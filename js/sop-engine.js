@@ -1028,16 +1028,20 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
 
       // Zoom Toggle Button
       if (UIModule.elements.zoomToggleBtn) {
+        const setZoomBtnContent = (isFluid) => {
+          if (isFluid) {
+            UIModule.elements.zoomToggleBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg><span>Page Layout</span>`;
+          } else {
+            UIModule.elements.zoomToggleBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9"></line></svg><span>Fluid View</span>`;
+          }
+        };
+
         // Set initial label
-        UIModule.elements.zoomToggleBtn.innerHTML = this.state.isFluidPreview ? "📐 Page Layout" : "📄 Fluid View";
+        setZoomBtnContent(this.state.isFluidPreview);
 
         UIModule.elements.zoomToggleBtn.addEventListener("click", () => {
           this.state.isFluidPreview = !this.state.isFluidPreview;
-          if (this.state.isFluidPreview) {
-            UIModule.elements.zoomToggleBtn.innerHTML = "📐 Page Layout";
-          } else {
-            UIModule.elements.zoomToggleBtn.innerHTML = "📄 Fluid View";
-          }
+          setZoomBtnContent(this.state.isFluidPreview);
           this.refreshPreview();
         });
       }
@@ -1045,34 +1049,38 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
       // PDF Button
       if (UIModule.elements.pdfBtn) {
         UIModule.elements.pdfBtn.addEventListener("click", async () => {
-          const originalText = UIModule.elements.pdfBtn.innerHTML;
-          UIModule.elements.pdfBtn.innerHTML = "⏳ Generating...";
+          const originalHTML = UIModule.elements.pdfBtn.innerHTML;
+          UIModule.elements.pdfBtn.innerHTML = `<svg class="spin-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg><span>Generating...</span>`;
           UIModule.elements.pdfBtn.disabled = true;
 
-          const filename = `SOP_${
-            this.state.sopData?.sopNumber || "Draft"
-          }.pdf`;
-          await ExportModule.exportPDF(filename);
-
-          UIModule.elements.pdfBtn.innerHTML = originalText;
-          UIModule.elements.pdfBtn.disabled = false;
+          try {
+            const filename = `SOP_${
+              this.state.sopData?.sopNumber || "Draft"
+            }.pdf`;
+            await ExportModule.exportPDF(filename);
+          } finally {
+            UIModule.elements.pdfBtn.innerHTML = originalHTML;
+            UIModule.elements.pdfBtn.disabled = false;
+          }
         });
       }
 
       // DOCX Button
       if (UIModule.elements.docxBtn) {
         UIModule.elements.docxBtn.addEventListener("click", async () => {
-          const originalText = UIModule.elements.docxBtn.innerHTML;
-          UIModule.elements.docxBtn.innerHTML = "⏳ Generating...";
+          const originalHTML = UIModule.elements.docxBtn.innerHTML;
+          UIModule.elements.docxBtn.innerHTML = `<svg class="spin-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg><span>Exporting...</span>`;
           UIModule.elements.docxBtn.disabled = true;
 
-          const filename = `SOP_${
-            this.state.sopData?.sopNumber || "Draft"
-          }.docx`;
-          await ExportModule.exportDOCX(filename);
-
-          UIModule.elements.docxBtn.innerHTML = originalText;
-          UIModule.elements.docxBtn.disabled = false;
+          try {
+            const filename = `SOP_${
+              this.state.sopData?.sopNumber || "Draft"
+            }.docx`;
+            await ExportModule.exportDOCX(filename);
+          } finally {
+            UIModule.elements.docxBtn.innerHTML = originalHTML;
+            UIModule.elements.docxBtn.disabled = false;
+          }
         });
       }
 
@@ -1085,8 +1093,12 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
         const bar = document.createElement("div");
         bar.id = "wysiwyg-action-bar";
         bar.innerHTML = `
-          <button class="wysiwyg-action-btn btn-add" title="Add Step Below">➕</button>
-          <button class="wysiwyg-action-btn btn-delete" title="Delete Step">🗑️</button>
+          <button class="wysiwyg-action-btn btn-add" title="Add Step Below">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          </button>
+          <button class="wysiwyg-action-btn btn-delete" title="Delete Step">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          </button>
         `;
         document.body.appendChild(bar);
 
