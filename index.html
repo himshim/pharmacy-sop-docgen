@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SOPgen by PharmRepo</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>" />
     
     <!-- Styles -->
     <link rel="stylesheet" href="css/ui-responsive.css" />
@@ -532,15 +533,15 @@
       </footer>
     </div>
 
-    <script src="js/security-sanitizer.js?v=8"></script>
-    <script src="js/template-engine.js?v=8"></script>
-    <script src="js/sop-engine.js?v=8"></script>
+    <script src="js/security-sanitizer.js?v=9"></script>
+    <script src="js/template-engine.js?v=9"></script>
+    <script src="js/sop-engine.js?v=9"></script>
 
     <!-- Tab Switching Logic (Mobile First) -->
     <script>
       function switchTab(index) {
-        // On desktop (≥768px), both panels are always side-by-side — no tab switching needed
-        if (window.innerWidth >= 768) return;
+        // On desktop (≥992px), both panels are always side-by-side — no tab switching needed
+        if (window.innerWidth >= 992) return;
 
         const createTabBtn = document.getElementById("mobile-tab-create");
         const previewTabBtn = document.getElementById("mobile-tab-preview");

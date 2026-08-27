@@ -863,7 +863,7 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
           }
         });
         window.addEventListener("resize", () => {
-          if (window.innerWidth < 768) {
+          if (window.innerWidth < 992) {
             this.refreshPreview();
           }
         });
@@ -1631,13 +1631,13 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
         const wrapper = UtilsModule.$("preview-wrapper");
         if (preview && wrapper) {
           // Apply fluid-preview class dynamically based on viewport and toggle state
-          if (window.innerWidth < 768 && this.state.isFluidPreview) {
+          if (window.innerWidth < 992 && this.state.isFluidPreview) {
             preview.classList.add("fluid-preview");
           } else {
             preview.classList.remove("fluid-preview");
           }
 
-          if (window.innerWidth < 768 && !this.state.isFluidPreview) {
+          if (window.innerWidth < 992 && !this.state.isFluidPreview) {
             const wrapperWidth = wrapper.offsetWidth;
             const targetWidth = 794; // A4 width at 96 dpi
             const scale = Math.max(0.1, (wrapperWidth - 16) / targetWidth);
