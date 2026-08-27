@@ -463,15 +463,19 @@ window.initSOPApp = function () {
               alignment: "center"
             }));
           } else if (tag === "h2") {
-            h2Counter++;
+            const isNoCounter = node.classList.contains("no-counter");
             const isBreak = node.classList.contains("page-break-before") || node.previousElementSibling?.classList.contains("page-break-before");
-            const headingText = `${h2Counter}. ${node.textContent.trim().toUpperCase()}`;
+            if (!isNoCounter) h2Counter++;
+            const headingText = isNoCounter
+              ? node.textContent.trim().toUpperCase()
+              : `${h2Counter}. ${node.textContent.trim().toUpperCase()}`;
             const paragraphOpts = {
-              children: [new TextRun({ text: headingText, bold: true, size: 24, font: "Times New Roman" })],
+              children: [new TextRun({ text: headingText, bold: true, size: isNoCounter ? 22 : 24, font: "Times New Roman" })],
               spacing: { before: 200, after: 100 }
             };
             if (isBreak) paragraphOpts.pageBreakBefore = true;
             children.push(new Paragraph(paragraphOpts));
+
           } else if (tag === "h3") {
             children.push(new Paragraph({
               children: [new TextRun({ text: node.textContent.trim(), bold: true, size: 22, font: "Times New Roman" })],
@@ -517,12 +521,28 @@ window.initSOPApp = function () {
                 
                 // Calculate DXA width: Standard full table body width is 9000 DXA (twentieths of a point)
                 const cellWidthDxa = Math.round((9000 / totalCols) * colSpan);
-                
-                const cellOpts = {
-                  children: [new Paragraph({
+
+                // Build cell paragraphs — support multi-line cells (signature blocks)
+                const cellParagraphs = [];
+                const childDivs = cell.querySelectorAll(":scope > div, :scope > p");
+                if (childDivs.length > 0) {
+                  // Multi-paragraph cell: each <div>/<p> child → its own Paragraph
+                  childDivs.forEach((childEl) => {
+                    cellParagraphs.push(new Paragraph({
+                      children: parseTextRunsForDocx(childEl, isHeader),
+                      spacing: { before: 40, after: 40 }
+                    }));
+                  });
+                } else {
+                  // Single-paragraph cell (default)
+                  cellParagraphs.push(new Paragraph({
                     children: parseTextRunsForDocx(cell, isHeader),
                     spacing: { before: 80, after: 80 }
-                  })],
+                  }));
+                }
+                
+                const cellOpts = {
+                  children: cellParagraphs,
                   width: { size: cellWidthDxa, type: WidthType.DXA }
                 };
                 if (colSpan > 1) cellOpts.columnSpan = colSpan;

@@ -16,17 +16,21 @@
 
 <div class="doc-control-table">
 <table style="width:100%; border-collapse:collapse; margin-bottom:12pt;">
-<tr><td><strong>Institution</strong></td><td>{{institute}}</td></tr>
-<tr><td><strong>Department</strong></td><td>{{department}}</td></tr>
-{{#if sectionRevisionNo}}<tr><td><strong>Revision</strong></td><td>{{revisionNo}}</td></tr>{{/if}}
+  <colgroup>
+    <col style="width:30%;">
+    <col style="width:70%;">
+  </colgroup>
+  <tr><td style="padding:6pt 8pt;"><strong>Institution</strong></td><td style="padding:6pt 8pt;">{{institute}}</td></tr>
+  <tr><td style="padding:6pt 8pt;"><strong>Department</strong></td><td style="padding:6pt 8pt;">{{department}}</td></tr>
+  {{#if sectionRevisionNo}}<tr><td style="padding:6pt 8pt;"><strong>Revision</strong></td><td style="padding:6pt 8pt;">{{revisionNo}}</td></tr>{{/if}}
 
-{{#if sectionNaacDetails}}
-{{#if naacAssetPage}}<tr><td><strong>Stock Register Page</strong></td><td>{{naacAssetPage}}</td></tr>{{/if}}
-{{#if naacLedgerId}}<tr><td><strong>Equipment Ledger ID</strong></td><td>{{naacLedgerId}}</td></tr>{{/if}}
-{{#if naacLogbookRef}}<tr><td><strong>Utilization Logbook Ref</strong></td><td>{{naacLogbookRef}}</td></tr>{{/if}}
-{{#if naacAmcRef}}<tr><td><strong>AMC / Maintenance Ref</strong></td><td>{{naacAmcRef}}</td></tr>{{/if}}
-{{#if naacCalibrationCert}}<tr><td><strong>Calibration Certificate No</strong></td><td>{{naacCalibrationCert}}</td></tr>{{/if}}
-{{/if}}
+  {{#if sectionNaacDetails}}
+  {{#if naacAssetPage}}<tr><td style="padding:6pt 8pt;"><strong>Stock Register Page</strong></td><td style="padding:6pt 8pt;">{{naacAssetPage}}</td></tr>{{/if}}
+  {{#if naacLedgerId}}<tr><td style="padding:6pt 8pt;"><strong>Equipment Ledger ID</strong></td><td style="padding:6pt 8pt;">{{naacLedgerId}}</td></tr>{{/if}}
+  {{#if naacLogbookRef}}<tr><td style="padding:6pt 8pt;"><strong>Utilization Logbook Ref</strong></td><td style="padding:6pt 8pt;">{{naacLogbookRef}}</td></tr>{{/if}}
+  {{#if naacAmcRef}}<tr><td style="padding:6pt 8pt;"><strong>AMC / Maintenance Ref</strong></td><td style="padding:6pt 8pt;">{{naacAmcRef}}</td></tr>{{/if}}
+  {{#if naacCalibrationCert}}<tr><td style="padding:6pt 8pt;"><strong>Calibration Certificate No</strong></td><td style="padding:6pt 8pt;">{{naacCalibrationCert}}</td></tr>{{/if}}
+  {{/if}}
 </table>
 </div>
 
@@ -85,23 +89,23 @@
     <col style="width:33.33%;">
   </colgroup>
   <tr>
-    <td style="padding:8pt;">
-      <strong>Prepared By</strong><br><br>
-      <strong>Name:</strong> {{preparedBy}}<br>
-      <strong>Designation:</strong> {{preparedDesig}}<br>
-      <strong>Date:</strong> {{preparedDate}}
+    <td style="padding:8pt; vertical-align:top;">
+      <div><strong>Prepared By</strong></div>
+      <div><strong>Name:</strong> {{preparedBy}}</div>
+      <div><strong>Designation:</strong> {{preparedDesig}}</div>
+      <div><strong>Date:</strong> {{preparedDate}}</div>
     </td>
-    <td style="padding:8pt;">
-      <strong>Checked By</strong><br><br>
-      <strong>Name:</strong> {{checkedBy}}<br>
-      <strong>Designation:</strong> {{checkedDesig}}<br>
-      <strong>Date:</strong> {{checkedDate}}
+    <td style="padding:8pt; vertical-align:top;">
+      <div><strong>Checked By</strong></div>
+      <div><strong>Name:</strong> {{checkedBy}}</div>
+      <div><strong>Designation:</strong> {{checkedDesig}}</div>
+      <div><strong>Date:</strong> {{checkedDate}}</div>
     </td>
-    <td style="padding:8pt;">
-      <strong>Approved By</strong><br><br>
-      <strong>Name:</strong> {{approvedBy}}<br>
-      <strong>Designation:</strong> {{approvedDesig}}<br>
-      <strong>Date:</strong> {{approvedDate}}
+    <td style="padding:8pt; vertical-align:top;">
+      <div><strong>Approved By</strong></div>
+      <div><strong>Name:</strong> {{approvedBy}}</div>
+      <div><strong>Designation:</strong> {{approvedDesig}}</div>
+      <div><strong>Date:</strong> {{approvedDate}}</div>
     </td>
   </tr>
 </table>

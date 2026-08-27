@@ -19,7 +19,7 @@
 </h1>
 
 <!-- =====================================================
-     DOCUMENT CONTROL (TABLE VERSION – PREVIEW / PDF)
+     DOCUMENT CONTROL (TABLE VERSION - PREVIEW / PDF)
 ===================================================== -->
 <div class="doc-control-table">
   <table style="width:100%; border-collapse:collapse; margin-bottom:12pt; page-break-inside:avoid;">
@@ -29,61 +29,61 @@
     </colgroup>
 
     <tr>
-      <td style="padding:4pt 6pt;"><strong>Institute</strong></td>
-      <td style="padding:4pt 6pt;">{{institute}}</td>
+      <td style="padding:6pt 8pt;"><strong>Institute</strong></td>
+      <td style="padding:6pt 8pt;">{{institute}}</td>
     </tr>
 
     <tr>
-      <td style="padding:4pt 6pt;"><strong>Department</strong></td>
-      <td style="padding:4pt 6pt;">{{department}}</td>
+      <td style="padding:6pt 8pt;"><strong>Department</strong></td>
+      <td style="padding:6pt 8pt;">{{department}}</td>
     </tr>
 
     {{#if sectionSopNumber}}
     <tr>
-      <td style="padding:4pt 6pt;"><strong>SOP Number</strong></td>
-      <td style="padding:4pt 6pt;">{{sopNumber}}</td>
+      <td style="padding:6pt 8pt;"><strong>SOP Number</strong></td>
+      <td style="padding:6pt 8pt;">{{sopNumber}}</td>
     </tr>
     {{/if}}
 
     {{#if sectionRevisionNo}}
     <tr>
-      <td style="padding:4pt 6pt;"><strong>Revision Number</strong></td>
-      <td style="padding:4pt 6pt;">{{revisionNo}}</td>
+      <td style="padding:6pt 8pt;"><strong>Revision Number</strong></td>
+      <td style="padding:6pt 8pt;">{{revisionNo}}</td>
     </tr>
     {{/if}}
 
     {{#if sectionEffectiveDate}}
     <tr>
-      <td style="padding:4pt 6pt;"><strong>Effective Date</strong></td>
-      <td style="padding:4pt 6pt;">{{effectiveDate}}</td>
+      <td style="padding:6pt 8pt;"><strong>Effective Date</strong></td>
+      <td style="padding:6pt 8pt;">{{effectiveDate}}</td>
     </tr>
     {{/if}}
 
     {{#if sectionRevisionDate}}
     <tr>
-      <td style="padding:4pt 6pt;"><strong>Revision Date</strong></td>
-      <td style="padding:4pt 6pt;">{{revisionDate}}</td>
+      <td style="padding:6pt 8pt;"><strong>Revision Date</strong></td>
+      <td style="padding:6pt 8pt;">{{revisionDate}}</td>
     </tr>
     {{/if}}
 
     {{#if sectionNextReviewDate}}
     <tr>
-      <td style="padding:4pt 6pt;"><strong>Next Review Date</strong></td>
-      <td style="padding:4pt 6pt;">{{nextReviewDate}}</td>
+      <td style="padding:6pt 8pt;"><strong>Next Review Date</strong></td>
+      <td style="padding:6pt 8pt;">{{nextReviewDate}}</td>
     </tr>
     {{/if}}
 
     {{#if sectionCopyType}}
     <tr>
-      <td style="padding:4pt 6pt;"><strong>Copy Type</strong></td>
-      <td style="padding:4pt 6pt;">{{copyType}}</td>
+      <td style="padding:6pt 8pt;"><strong>Copy Type</strong></td>
+      <td style="padding:6pt 8pt;">{{copyType}}</td>
     </tr>
     {{/if}}
   </table>
 </div>
 
 <!-- =====================================================
-     DOCUMENT CONTROL (TEXT VERSION – DOCX ONLY)
+     DOCUMENT CONTROL (TEXT VERSION - DOCX ONLY)
 ===================================================== -->
 <div class="doc-control-text">
   <p><strong>Institute:</strong> {{institute}}</p>
@@ -191,7 +191,7 @@
 {{/if}}
 
 <!-- =====================================================
-     APPROVALS (KEEP TABLE – WORD FRIENDLY)
+     APPROVALS (KEEP TABLE - WORD FRIENDLY)
 ===================================================== -->
 <div class="keep-together approvals-block">
 <h2 class="no-counter" style="margin-top:22pt;">Approvals</h2>
@@ -203,23 +203,23 @@
     <col style="width:33.33%;">
   </colgroup>
   <tr>
-    <td style="padding:8pt;">
-      <strong>Prepared By</strong><br><br>
-      <strong>Name:</strong> {{preparedBy}}<br>
-      <strong>Designation:</strong> {{preparedDesig}}<br>
-      <strong>Date:</strong> {{preparedDate}}
+    <td style="padding:8pt; vertical-align:top;">
+      <div><strong>Prepared By</strong></div>
+      <div><strong>Name:</strong> {{preparedBy}}</div>
+      <div><strong>Designation:</strong> {{preparedDesig}}</div>
+      <div><strong>Date:</strong> {{preparedDate}}</div>
     </td>
-    <td style="padding:8pt;">
-      <strong>Checked By</strong><br><br>
-      <strong>Name:</strong> {{checkedBy}}<br>
-      <strong>Designation:</strong> {{checkedDesig}}<br>
-      <strong>Date:</strong> {{checkedDate}}
+    <td style="padding:8pt; vertical-align:top;">
+      <div><strong>Checked By</strong></div>
+      <div><strong>Name:</strong> {{checkedBy}}</div>
+      <div><strong>Designation:</strong> {{checkedDesig}}</div>
+      <div><strong>Date:</strong> {{checkedDate}}</div>
     </td>
-    <td style="padding:8pt;">
-      <strong>Approved By</strong><br><br>
-      <strong>Name:</strong> {{approvedBy}}<br>
-      <strong>Designation:</strong> {{approvedDesig}}<br>
-      <strong>Date:</strong> {{approvedDate}}
+    <td style="padding:8pt; vertical-align:top;">
+      <div><strong>Approved By</strong></div>
+      <div><strong>Name:</strong> {{approvedBy}}</div>
+      <div><strong>Designation:</strong> {{approvedDesig}}</div>
+      <div><strong>Date:</strong> {{approvedDate}}</div>
     </td>
   </tr>
 </table>

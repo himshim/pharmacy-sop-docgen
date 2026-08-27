@@ -17,33 +17,37 @@
 <!-- DOCUMENT CONTROL -->
 <div class="doc-control-table">
 <table style="width:100%; border-collapse:collapse; margin-bottom:12pt;">
-<tr><td><strong>Institute</strong></td><td>{{institute}}</td></tr>
-<tr><td><strong>Department</strong></td><td>{{department}}</td></tr>
+  <colgroup>
+    <col style="width:30%;">
+    <col style="width:70%;">
+  </colgroup>
+  <tr><td style="padding:6pt 8pt;"><strong>Institute</strong></td><td style="padding:6pt 8pt;">{{institute}}</td></tr>
+  <tr><td style="padding:6pt 8pt;"><strong>Department</strong></td><td style="padding:6pt 8pt;">{{department}}</td></tr>
 
-{{#if sectionSopNumber}}
-<tr><td><strong>Document No.</strong></td><td>{{sopNumber}}</td></tr>
-{{/if}}
+  {{#if sectionSopNumber}}
+  <tr><td style="padding:6pt 8pt;"><strong>Document No.</strong></td><td style="padding:6pt 8pt;">{{sopNumber}}</td></tr>
+  {{/if}}
 
-{{#if sectionRevisionNo}}
-<tr><td><strong>Revision No.</strong></td><td>{{revisionNo}}</td></tr>
-{{/if}}
+  {{#if sectionRevisionNo}}
+  <tr><td style="padding:6pt 8pt;"><strong>Revision No.</strong></td><td style="padding:6pt 8pt;">{{revisionNo}}</td></tr>
+  {{/if}}
 
-{{#if sectionEffectiveDate}}
-<tr><td><strong>Effective Date</strong></td><td>{{effectiveDate}}</td></tr>
-{{/if}}
+  {{#if sectionEffectiveDate}}
+  <tr><td style="padding:6pt 8pt;"><strong>Effective Date</strong></td><td style="padding:6pt 8pt;">{{effectiveDate}}</td></tr>
+  {{/if}}
 
-{{#if sectionRevisionDate}}
-<tr><td><strong>Revision Date</strong></td><td>{{revisionDate}}</td></tr>
-{{/if}}
+  {{#if sectionRevisionDate}}
+  <tr><td style="padding:6pt 8pt;"><strong>Revision Date</strong></td><td style="padding:6pt 8pt;">{{revisionDate}}</td></tr>
+  {{/if}}
 
-{{#if sectionIsoCalibration}}
-{{#if isoReferenceStandard}}
-<tr><td><strong>Reference Standards</strong></td><td>{{isoReferenceStandard}}</td></tr>
-{{/if}}
-{{#if isoToleranceLimit}}
-<tr><td><strong>Acceptable Tolerance</strong></td><td>{{isoToleranceLimit}}</td></tr>
-{{/if}}
-{{/if}}
+  {{#if sectionIsoCalibration}}
+  {{#if isoReferenceStandard}}
+  <tr><td style="padding:6pt 8pt;"><strong>Reference Standards</strong></td><td style="padding:6pt 8pt;">{{isoReferenceStandard}}</td></tr>
+  {{/if}}
+  {{#if isoToleranceLimit}}
+  <tr><td style="padding:6pt 8pt;"><strong>Acceptable Tolerance</strong></td><td style="padding:6pt 8pt;">{{isoToleranceLimit}}</td></tr>
+  {{/if}}
+  {{/if}}
 </table>
 </div>
 
@@ -93,12 +97,17 @@
 {{#if changeHistoryRows}}
 <h2>Revision History</h2>
 <table style="width:100%; border-collapse:collapse;">
-<thead>
-<tr><th>Revision</th><th>Date</th><th>Description</th></tr>
-</thead>
-<tbody>
-{{{changeHistoryRows}}}
-</tbody>
+  <colgroup>
+    <col style="width:15%;">
+    <col style="width:20%;">
+    <col style="width:65%;">
+  </colgroup>
+  <thead>
+  <tr><th>Revision</th><th>Date</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+  {{{changeHistoryRows}}}
+  </tbody>
 </table>
 {{/if}}
 
@@ -112,23 +121,23 @@
     <col style="width:33.33%;">
   </colgroup>
   <tr>
-    <td style="padding:8pt;">
-      <strong>Prepared By</strong><br><br>
-      <strong>Name:</strong> {{preparedBy}}<br>
-      <strong>Designation:</strong> {{preparedDesig}}<br>
-      <strong>Date:</strong> {{preparedDate}}
+    <td style="padding:8pt; vertical-align:top;">
+      <div><strong>Prepared By</strong></div>
+      <div><strong>Name:</strong> {{preparedBy}}</div>
+      <div><strong>Designation:</strong> {{preparedDesig}}</div>
+      <div><strong>Date:</strong> {{preparedDate}}</div>
     </td>
-    <td style="padding:8pt;">
-      <strong>Checked By</strong><br><br>
-      <strong>Name:</strong> {{checkedBy}}<br>
-      <strong>Designation:</strong> {{checkedDesig}}<br>
-      <strong>Date:</strong> {{checkedDate}}
+    <td style="padding:8pt; vertical-align:top;">
+      <div><strong>Checked By</strong></div>
+      <div><strong>Name:</strong> {{checkedBy}}</div>
+      <div><strong>Designation:</strong> {{checkedDesig}}</div>
+      <div><strong>Date:</strong> {{checkedDate}}</div>
     </td>
-    <td style="padding:8pt;">
-      <strong>Approved By</strong><br><br>
-      <strong>Name:</strong> {{approvedBy}}<br>
-      <strong>Designation:</strong> {{approvedDesig}}<br>
-      <strong>Date:</strong> {{approvedDate}}
+    <td style="padding:8pt; vertical-align:top;">
+      <div><strong>Approved By</strong></div>
+      <div><strong>Name:</strong> {{approvedBy}}</div>
+      <div><strong>Designation:</strong> {{approvedDesig}}</div>
+      <div><strong>Date:</strong> {{approvedDate}}</div>
     </td>
   </tr>
 </table>

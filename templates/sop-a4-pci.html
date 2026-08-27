@@ -16,16 +16,20 @@
 
 <div class="doc-control-table">
 <table style="width:100%; border-collapse:collapse; margin-bottom:12pt;">
-<tr><td><strong>Institute</strong></td><td>{{institute}}</td></tr>
-<tr><td><strong>Department</strong></td><td>{{department}}</td></tr>
-{{#if sectionSopNumber}}<tr><td><strong>SOP No.</strong></td><td>{{sopNumber}}</td></tr>{{/if}}
-{{#if sectionRevisionNo}}<tr><td><strong>Revision</strong></td><td>{{revisionNo}}</td></tr>{{/if}}
+  <colgroup>
+    <col style="width:30%;">
+    <col style="width:70%;">
+  </colgroup>
+  <tr><td style="padding:6pt 8pt;"><strong>Institute</strong></td><td style="padding:6pt 8pt;">{{institute}}</td></tr>
+  <tr><td style="padding:6pt 8pt;"><strong>Department</strong></td><td style="padding:6pt 8pt;">{{department}}</td></tr>
+  {{#if sectionSopNumber}}<tr><td style="padding:6pt 8pt;"><strong>SOP No.</strong></td><td style="padding:6pt 8pt;">{{sopNumber}}</td></tr>{{/if}}
+  {{#if sectionRevisionNo}}<tr><td style="padding:6pt 8pt;"><strong>Revision</strong></td><td style="padding:6pt 8pt;">{{revisionNo}}</td></tr>{{/if}}
 
-{{#if sectionPciDetails}}
-{{#if pciCourseCode}}<tr><td><strong>PCI Course Code</strong></td><td>{{pciCourseCode}}</td></tr>{{/if}}
-{{#if pciExperimentRef}}<tr><td><strong>Experiment Ref</strong></td><td>{{pciExperimentRef}}</td></tr>{{/if}}
-{{#if pciLabCategory}}<tr><td><strong>PCI Lab Category</strong></td><td>{{pciLabCategory}}</td></tr>{{/if}}
-{{/if}}
+  {{#if sectionPciDetails}}
+  {{#if pciCourseCode}}<tr><td style="padding:6pt 8pt;"><strong>PCI Course Code</strong></td><td style="padding:6pt 8pt;">{{pciCourseCode}}</td></tr>{{/if}}
+  {{#if pciExperimentRef}}<tr><td style="padding:6pt 8pt;"><strong>Experiment Ref</strong></td><td style="padding:6pt 8pt;">{{pciExperimentRef}}</td></tr>{{/if}}
+  {{#if pciLabCategory}}<tr><td style="padding:6pt 8pt;"><strong>PCI Lab Category</strong></td><td style="padding:6pt 8pt;">{{pciLabCategory}}</td></tr>{{/if}}
+  {{/if}}
 </table>
 </div>
 
@@ -64,7 +68,7 @@
 </ol>
 
 {{#if sectionPciDocumentation}}
-<h2>Documentation & Syllabus Reference</h2>
+<h2>Documentation &amp; Syllabus Reference</h2>
 {{{pciDocumentationClause}}}
 {{/if}}
 
@@ -78,23 +82,23 @@
     <col style="width:33.33%;">
   </colgroup>
   <tr>
-    <td style="padding:8pt;">
-      <strong>Prepared By (Lab Assistant)</strong><br><br>
-      <strong>Name:</strong> {{preparedBy}}<br>
-      <strong>Designation:</strong> {{preparedDesig}}<br>
-      <strong>Date:</strong> {{preparedDate}}
+    <td style="padding:8pt; vertical-align:top;">
+      <div><strong>Prepared By (Lab Assistant)</strong></div>
+      <div><strong>Name:</strong> {{preparedBy}}</div>
+      <div><strong>Designation:</strong> {{preparedDesig}}</div>
+      <div><strong>Date:</strong> {{preparedDate}}</div>
     </td>
-    <td style="padding:8pt;">
-      <strong>Verified By (Subject Faculty)</strong><br><br>
-      <strong>Name:</strong> {{checkedBy}}<br>
-      <strong>Designation:</strong> {{checkedDesig}}<br>
-      <strong>Date:</strong> {{checkedDate}}
+    <td style="padding:8pt; vertical-align:top;">
+      <div><strong>Verified By (Subject Faculty)</strong></div>
+      <div><strong>Name:</strong> {{checkedBy}}</div>
+      <div><strong>Designation:</strong> {{checkedDesig}}</div>
+      <div><strong>Date:</strong> {{checkedDate}}</div>
     </td>
-    <td style="padding:8pt;">
-      <strong>Approved By (Head of Department)</strong><br><br>
-      <strong>Name:</strong> {{approvedBy}}<br>
-      <strong>Designation:</strong> {{approvedDesig}}<br>
-      <strong>Date:</strong> {{approvedDate}}
+    <td style="padding:8pt; vertical-align:top;">
+      <div><strong>Approved By (Head of Department)</strong></div>
+      <div><strong>Name:</strong> {{approvedBy}}</div>
+      <div><strong>Designation:</strong> {{approvedDesig}}</div>
+      <div><strong>Date:</strong> {{approvedDate}}</div>
     </td>
   </tr>
 </table>

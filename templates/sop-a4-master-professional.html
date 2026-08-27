@@ -1,15 +1,15 @@
 <!-- 
 ═══════════════════════════════════════════════════════════════════════
-  PHARMA QA MASTER SOP TEMPLATE - v4.0 PROFESSIONAL
+  PHARMA QA MASTER SOP TEMPLATE - v5.0 PROFESSIONAL
 
   Designed by: Quality Assurance Expert
   Standards: WHO GMP, ICH Guidelines, ISO 17025, cGMP
   Features: 
     - Full dynamic field support with toggles
-    - DOCX-friendly clean markup
-    - Equipment/Testing/Validation ready
-    - Professional formatting
-    - Easy to edit after export
+    - DOCX-friendly clean markup (border-collapse + colgroup on every table)
+    - Multi-paragraph signature cells render correctly in Word
+    - Consistent dark-slate table headers across preview/PDF/DOCX
+    - Approvals/Distribution marked no-counter to prevent numbering gaps
 
   Use this as the MODEL for all other SOP templates
 ═══════════════════════════════════════════════════════════════════════
@@ -25,16 +25,20 @@
 </div>
 
 <!-- ═══════════════════ TITLE & METADATA BLOCK ═══════════════════ -->
-<table cellspacing="0" style="margin-bottom: 15pt;">
+<table style="width:100%; border-collapse:collapse; margin-bottom: 15pt;">
+    <colgroup>
+        <col style="width:30%;">
+        <col style="width:70%;">
+    </colgroup>
     <thead>
-        <tr style="background-color: #f0f0f0;">
+        <tr>
             <th colspan="2" style="text-align: center; font-size: 13pt; padding: 10pt;">STANDARD OPERATING PROCEDURE</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th width="30%">Title</th>
-            <td width="70%"><b>{{title}}</b></td>
+            <th>Title</th>
+            <td><b>{{title}}</b></td>
         </tr>
         {{#if sectionSopNumber}}
         <tr>
@@ -108,11 +112,15 @@
 
 <!-- ═══════════════════ 3. RESPONSIBILITY ═══════════════════ -->
 <h2>RESPONSIBILITY</h2>
-<table cellspacing="0">
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:30%;">
+        <col style="width:70%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="30%">Designation</th>
-            <th width="70%">Responsibilities</th>
+            <th>Designation</th>
+            <th>Responsibilities</th>
         </tr>
     </thead>
     <tbody>
@@ -122,12 +130,16 @@
 
 {{#if sectionDefinitions}}
 <!-- ═══════════════════ 4. DEFINITIONS & ABBREVIATIONS ═══════════════════ -->
-<h2>DEFINITIONS & ABBREVIATIONS</h2>
-<table cellspacing="0">
+<h2>DEFINITIONS &amp; ABBREVIATIONS</h2>
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:25%;">
+        <col style="width:75%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="25%">Term/Abbreviation</th>
-            <th width="75%">Definition</th>
+            <th>Term/Abbreviation</th>
+            <th>Definition</th>
         </tr>
     </thead>
     <tbody>
@@ -138,17 +150,23 @@
 
 {{#if sectionMaterials}}
 <!-- ═══════════════════ 5. MATERIALS & EQUIPMENT ═══════════════════ -->
-<h2>MATERIALS & EQUIPMENT</h2>
+<h2>MATERIALS &amp; EQUIPMENT</h2>
 
 {{#if sectionEquipment}}
 <h3>Equipment Required</h3>
-<table cellspacing="0">
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:10%;">
+        <col style="width:35%;">
+        <col style="width:25%;">
+        <col style="width:30%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="10%">S.No.</th>
-            <th width="35%">Equipment Name</th>
-            <th width="25%">ID/Code</th>
-            <th width="30%">Specification</th>
+            <th>S.No.</th>
+            <th>Equipment Name</th>
+            <th>ID/Code</th>
+            <th>Specification</th>
         </tr>
     </thead>
     <tbody>
@@ -158,14 +176,20 @@
 {{/if}}
 
 {{#if sectionReagents}}
-<h3>Reagents & Chemicals</h3>
-<table cellspacing="0">
+<h3>Reagents &amp; Chemicals</h3>
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:10%;">
+        <col style="width:40%;">
+        <col style="width:25%;">
+        <col style="width:25%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="10%">S.No.</th>
-            <th width="40%">Name</th>
-            <th width="25%">Grade/Specification</th>
-            <th width="25%">Quantity</th>
+            <th>S.No.</th>
+            <th>Name</th>
+            <th>Grade/Specification</th>
+            <th>Quantity</th>
         </tr>
     </thead>
     <tbody>
@@ -175,7 +199,7 @@
 {{/if}}
 
 {{#if sectionGlassware}}
-<h3>Glassware & Consumables</h3>
+<h3>Glassware &amp; Consumables</h3>
 <ul>
     {{glasswareList}}
 </ul>
@@ -184,7 +208,7 @@
 
 {{#if sectionSafety}}
 <!-- ═══════════════════ 6. SAFETY & PRECAUTIONS ═══════════════════ -->
-<h2>SAFETY & PRECAUTIONS</h2>
+<h2>SAFETY &amp; PRECAUTIONS</h2>
 
 {{#if sectionPPE}}
 <h3>Personal Protective Equipment (PPE)</h3>
@@ -200,12 +224,17 @@
 
 {{#if sectionHazards}}
 <h3>Hazard Identification</h3>
-<table cellspacing="0">
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:30%;">
+        <col style="width:40%;">
+        <col style="width:30%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="30%">Hazard Type</th>
-            <th width="40%">Description</th>
-            <th width="30%">Control Measure</th>
+            <th>Hazard Type</th>
+            <th>Description</th>
+            <th>Control Measure</th>
         </tr>
     </thead>
     <tbody>
@@ -236,7 +265,7 @@
 </ol>
 
 {{#if sectionCalculations}}
-<h3>Calculations & Formulas</h3>
+<h3>Calculations &amp; Formulas</h3>
 {{calculations}}
 {{/if}}
 
@@ -254,17 +283,22 @@
 
 {{#if sectionDataRecording}}
 <!-- ═══════════════════ 8. DATA RECORDING & DOCUMENTATION ═══════════════════ -->
-<h2>DATA RECORDING & DOCUMENTATION</h2>
+<h2>DATA RECORDING &amp; DOCUMENTATION</h2>
 <p>{{dataRecording}}</p>
 
 {{#if sectionRecords}}
 <h3>Records to be Maintained</h3>
-<table cellspacing="0">
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:40%;">
+        <col style="width:30%;">
+        <col style="width:30%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="40%">Record Name</th>
-            <th width="30%">Format/Code</th>
-            <th width="30%">Retention Period</th>
+            <th>Record Name</th>
+            <th>Format/Code</th>
+            <th>Retention Period</th>
         </tr>
     </thead>
     <tbody>
@@ -277,12 +311,17 @@
 {{#if sectionAcceptanceCriteria}}
 <!-- ═══════════════════ 9. ACCEPTANCE CRITERIA ═══════════════════ -->
 <h2>ACCEPTANCE CRITERIA</h2>
-<table cellspacing="0">
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:40%;">
+        <col style="width:30%;">
+        <col style="width:30%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="40%">Parameter</th>
-            <th width="30%">Specification</th>
-            <th width="30%">Action if Out-of-Spec</th>
+            <th>Parameter</th>
+            <th>Specification</th>
+            <th>Action if Out-of-Spec</th>
         </tr>
     </thead>
     <tbody>
@@ -294,12 +333,17 @@
 {{#if sectionTroubleshooting}}
 <!-- ═══════════════════ 10. TROUBLESHOOTING ═══════════════════ -->
 <h2>TROUBLESHOOTING</h2>
-<table cellspacing="0">
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:35%;">
+        <col style="width:35%;">
+        <col style="width:30%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="35%">Problem</th>
-            <th width="35%">Possible Cause</th>
-            <th width="30%">Corrective Action</th>
+            <th>Problem</th>
+            <th>Possible Cause</th>
+            <th>Corrective Action</th>
         </tr>
     </thead>
     <tbody>
@@ -310,16 +354,22 @@
 
 {{#if sectionMaintenance}}
 <!-- ═══════════════════ 11. MAINTENANCE & CALIBRATION ═══════════════════ -->
-<h2>MAINTENANCE & CALIBRATION</h2>
+<h2>MAINTENANCE &amp; CALIBRATION</h2>
 
 <h3>Maintenance Schedule</h3>
-<table cellspacing="0">
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:30%;">
+        <col style="width:25%;">
+        <col style="width:25%;">
+        <col style="width:20%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="30%">Activity</th>
-            <th width="25%">Frequency</th>
-            <th width="25%">Responsible Person</th>
-            <th width="20%">Reference SOP</th>
+            <th>Activity</th>
+            <th>Frequency</th>
+            <th>Responsible Person</th>
+            <th>Reference SOP</th>
         </tr>
     </thead>
     <tbody>
@@ -336,12 +386,17 @@
 {{#if sectionQualityControl}}
 <!-- ═══════════════════ 12. QUALITY CONTROL CHECKS ═══════════════════ -->
 <h2>QUALITY CONTROL CHECKS</h2>
-<table cellspacing="0">
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:40%;">
+        <col style="width:30%;">
+        <col style="width:30%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="40%">QC Check</th>
-            <th width="30%">Frequency</th>
-            <th width="30%">Acceptance Limit</th>
+            <th>QC Check</th>
+            <th>Frequency</th>
+            <th>Acceptance Limit</th>
         </tr>
     </thead>
     <tbody>
@@ -370,12 +425,17 @@
 {{#if sectionEnvironmental}}
 <!-- ═══════════════════ 15. ENVIRONMENTAL CONDITIONS ═══════════════════ -->
 <h2>ENVIRONMENTAL CONDITIONS</h2>
-<table cellspacing="0">
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:40%;">
+        <col style="width:30%;">
+        <col style="width:30%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="40%">Parameter</th>
-            <th width="30%">Required Range</th>
-            <th width="30%">Monitoring Frequency</th>
+            <th>Parameter</th>
+            <th>Required Range</th>
+            <th>Monitoring Frequency</th>
         </tr>
     </thead>
     <tbody>
@@ -416,14 +476,21 @@
 <!-- ═══════════════════ 19. CHANGE HISTORY ═══════════════════ -->
 <div class="page-break-before"></div>
 <h2>CHANGE HISTORY</h2>
-<table cellspacing="0">
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:10%;">
+        <col style="width:15%;">
+        <col style="width:20%;">
+        <col style="width:40%;">
+        <col style="width:15%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="10%">Rev. No.</th>
-            <th width="15%">Date</th>
-            <th width="20%">Section(s) Changed</th>
-            <th width="40%">Description of Changes</th>
-            <th width="15%">Changed By</th>
+            <th>Rev. No.</th>
+            <th>Date</th>
+            <th>Section(s) Changed</th>
+            <th>Description of Changes</th>
+            <th>Changed By</th>
         </tr>
     </thead>
     <tbody>
@@ -434,15 +501,21 @@
 
 <!-- ═══════════════════ 20. APPROVAL SIGNATURES ═══════════════════ -->
 <div class="page-break-before"></div>
-<h2>APPROVAL SIGNATURES</h2>
+<h2 class="no-counter">APPROVAL SIGNATURES</h2>
 
-<table cellspacing="0">
+<table style="width:100%; border-collapse:collapse;">
+    <colgroup>
+        <col style="width:25%;">
+        <col style="width:25%;">
+        <col style="width:25%;">
+        <col style="width:25%;">
+    </colgroup>
     <thead>
         <tr>
-            <th width="25%">Prepared By</th>
-            <th width="25%">Reviewed By</th>
-            <th width="25%">Approved By (QA)</th>
-            <th width="25%">Approved By (Management)</th>
+            <th>Prepared By</th>
+            <th>Reviewed By</th>
+            <th>Approved By (QA)</th>
+            <th>Approved By (Management)</th>
         </tr>
     </thead>
     <tbody>
@@ -483,13 +556,19 @@
 {{#if sectionDistribution}}
 <div style="margin-top: 20pt;">
     <h3>Distribution List</h3>
-    <table cellspacing="0">
+    <table style="width:100%; border-collapse:collapse;">
+        <colgroup>
+            <col style="width:10%;">
+            <col style="width:30%;">
+            <col style="width:30%;">
+            <col style="width:30%;">
+        </colgroup>
         <thead>
             <tr>
-                <th width="10%">Copy No.</th>
-                <th width="30%">Department</th>
-                <th width="30%">Location</th>
-                <th width="30%">Controlled/Uncontrolled</th>
+                <th>Copy No.</th>
+                <th>Department</th>
+                <th>Location</th>
+                <th>Controlled/Uncontrolled</th>
             </tr>
         </thead>
         <tbody>

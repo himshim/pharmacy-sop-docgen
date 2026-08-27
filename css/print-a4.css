@@ -255,19 +255,31 @@ body.printing-mode #preview {
 
 #preview table th,
 #preview table td {
-    border: 1px solid #333;
+    border: 1px solid #cbd5e0;
     padding: 8pt;
     text-align: left;
     vertical-align: top;
 }
 
 #preview table th {
-    background-color: #f0f0f0;
+    background-color: #1E293B;
+    color: #ffffff;
     font-weight: bold;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
-#preview table tr:nth-child(even) {
-    background-color: #fafafa;
+#preview table tr:nth-child(even) td {
+    background-color: #f8fafc;
+}
+
+@media print {
+    #preview table th {
+        background-color: #1E293B !important;
+        color: #ffffff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
 }
 
 /* Professional Page Break Control */
