@@ -568,29 +568,27 @@ body {
     width: 100% !important;
     border-collapse: collapse !important;
     margin: 14px 0 !important;
-    border: none !important;
 }
 
 #preview th,
 #preview td {
-    padding: 6px 8px !important;
+    padding: 7px 10px !important;
     text-align: left !important;
     vertical-align: top !important;
-    border: none !important;
+    border: 1px solid #cbd5e0 !important;
 }
 
 #preview th {
-    background-color: #1e293b !important;
+    background-color: #1E293B !important;
     color: #ffffff !important;
     font-weight: bold !important;
     font-size: 10.5pt !important;
-    border-bottom: 2px solid #0f172a !important;
+    border: 1px solid #1E293B !important;
 }
 
 #preview td {
     font-size: 10pt !important;
-    border-bottom: 1px solid #cbd5e0 !important;
-    color: #2d3748 !important;
+    color: #1e293b !important;
 }
 
 #preview tbody tr:nth-child(even) td {

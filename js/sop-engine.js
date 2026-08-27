@@ -883,9 +883,7 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
           }
         });
         window.addEventListener("resize", () => {
-          if (window.innerWidth < 992) {
-            this.refreshPreview();
-          }
+          this.refreshPreview();
         });
         this.updateSidebarVisibility();
         UtilsModule.log("✅ SOP Generator initialized successfully");
@@ -1646,35 +1644,41 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
 
         UIModule.renderPreview(html);
 
-        // Dynamic Scale Calculation on mobile devices (< 768px width)
+        // Dynamic Scale Calculation on mobile devices (< 992px width)
         const preview = UtilsModule.$("preview");
         const wrapper = UtilsModule.$("preview-wrapper");
         if (preview && wrapper) {
-          // Apply fluid-preview class dynamically based on viewport and toggle state
-          if (window.innerWidth < 992 && this.state.isFluidPreview) {
-            preview.classList.add("fluid-preview");
-          } else {
+          if (window.innerWidth >= 992) {
+            // Desktop (≥992px): Clean 100% full A4 document in side-by-side view
             preview.classList.remove("fluid-preview");
-          }
-
-          if (window.innerWidth < 992 && !this.state.isFluidPreview) {
-            const wrapperWidth = wrapper.offsetWidth;
-            const targetWidth = 794; // A4 width at 96 dpi
-            const scale = Math.max(0.1, (wrapperWidth - 16) / targetWidth);
-
-            preview.style.transform = `scale(${scale})`;
-            preview.style.transformOrigin = "top center";
-
-            // Recalculate negative margin-bottom dynamically after DOM layout is ready
-            setTimeout(() => {
-              const previewHeight = preview.offsetHeight;
-              preview.style.marginBottom = `-${previewHeight * (1 - scale)}px`;
-            }, 50);
-          } else {
-            // Reset for desktop view or when Fluid View is active
-            preview.style.transform = "";
+            preview.style.transform = "none";
             preview.style.transformOrigin = "";
-            preview.style.marginBottom = "";
+            preview.style.marginBottom = "0px";
+          } else {
+            // Mobile & Tablet (<992px)
+            if (this.state.isFluidPreview) {
+              preview.classList.add("fluid-preview");
+              preview.style.transform = "none";
+              preview.style.transformOrigin = "";
+              preview.style.marginBottom = "0px";
+            } else {
+              preview.classList.remove("fluid-preview");
+              const wrapperWidth = wrapper.offsetWidth;
+              if (wrapperWidth > 50) {
+                const targetWidth = 794; // A4 width at 96 dpi (210mm)
+                const scale = Math.min(1, Math.max(0.35, (wrapperWidth - 24) / targetWidth));
+
+                preview.style.transform = `scale(${scale})`;
+                preview.style.transformOrigin = "top center";
+
+                setTimeout(() => {
+                  const previewHeight = preview.offsetHeight;
+                  if (previewHeight > 0) {
+                    preview.style.marginBottom = `-${previewHeight * (1 - scale)}px`;
+                  }
+                }, 50);
+              }
+            }
           }
         }
       } catch (e) {
@@ -1682,6 +1686,9 @@ To use this feature, make sure the scripts are loaded in your index.html.`;
       }
     },
   };
+
+  // Expose SOPApp globally
+  window.SOPApp = CoreModule;
 
   // Bootstrap
   if (document.readyState === "loading") {

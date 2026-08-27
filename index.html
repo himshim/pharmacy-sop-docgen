@@ -547,6 +547,13 @@
           previewTabBtn.classList.add("active");
           createPanel.classList.remove("active");
           previewPanel.classList.add("active");
+
+          // Refresh preview scale now that preview wrapper is visible
+          if (window.SOPApp && typeof window.SOPApp.refreshPreview === "function") {
+            setTimeout(() => {
+              window.SOPApp.refreshPreview();
+            }, 30);
+          }
         }
       }
     </script>
